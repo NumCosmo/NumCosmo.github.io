@@ -1,0 +1,4086 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmMSet: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s07.html" title="Models and Parameters" />
+<link rel="prev" href="NcmModelBuilder.html" title="NcmModelBuilder" />
+<link rel="next" href="NcmMSetFunc.html" title="NcmMSetFunc" />
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmMSet.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmMSet.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmMSet.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s07.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcmModelBuilder.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmMSetFunc.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmMSet" id="NcmMSet"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmMSet.top_of_page" id="NcmMSet.top_of_page"></a>NcmMSet</span></h2>
+<p>NcmMSet — A set of different NcmModel objects.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmMSet.functions" id="NcmMSet.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return" />
+<col class="functions_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#NCM-MSET-GET-BASE-MID:CAPS" title="NCM_MSET_GET_BASE_MID()">NCM_MSET_GET_BASE_MID</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#NCM-MSET-MID:CAPS" title="NCM_MSET_MID()">NCM_MSET_MID</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-model-register-id" title="ncm_mset_model_register_id ()">ncm_mset_model_register_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#NCM-MSET-MODEL-ID-FUNC:CAPS" title="NCM_MSET_MODEL_ID_FUNC()">NCM_MSET_MODEL_ID_FUNC</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#NCM-MSET-MODEL-DECLARE-ID:CAPS" title="NCM_MSET_MODEL_DECLARE_ID()">NCM_MSET_MODEL_DECLARE_ID</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#NCM-MSET-MODEL-REGISTER-ID:CAPS" title="NCM_MSET_MODEL_REGISTER_ID()">NCM_MSET_MODEL_REGISTER_ID</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="returnvalue">NcmMSetPIndex</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-pindex-new" title="ncm_mset_pindex_new ()">ncm_mset_pindex_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="returnvalue">NcmMSetPIndex</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-pindex-dup" title="ncm_mset_pindex_dup ()">ncm_mset_pindex_dup</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-pindex-free" title="ncm_mset_pindex_free ()">ncm_mset_pindex_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-empty-new" title="ncm_mset_empty_new ()">ncm_mset_empty_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-new" title="ncm_mset_new ()">ncm_mset_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-newv" title="ncm_mset_newv ()">ncm_mset_newv</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-new-array" title="ncm_mset_new_array ()">ncm_mset_new_array</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-ref" title="ncm_mset_ref ()">ncm_mset_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-dup" title="ncm_mset_dup ()">ncm_mset_dup</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-shallow-copy" title="ncm_mset_shallow_copy ()">ncm_mset_shallow_copy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-free" title="ncm_mset_free ()">ncm_mset_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-clear" title="ncm_mset_clear ()">ncm_mset_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmModel.html" title="NcmModel"><span class="returnvalue">NcmModel</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-peek" title="ncm_mset_peek ()">ncm_mset_peek</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmModel.html" title="NcmModel"><span class="returnvalue">NcmModel</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-peek-pos" title="ncm_mset_peek_pos ()">ncm_mset_peek_pos</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmModel.html" title="NcmModel"><span class="returnvalue">NcmModel</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-get" title="ncm_mset_get ()">ncm_mset_get</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmModel.html" title="NcmModel"><span class="returnvalue">NcmModel</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-peek-array-pos" title="ncm_mset_peek_array_pos ()">ncm_mset_peek_array_pos</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="returnvalue">NcmModelID</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-get-mid-array-pos" title="ncm_mset_get_mid_array_pos ()">ncm_mset_get_mid_array_pos</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-remove" title="ncm_mset_remove ()">ncm_mset_remove</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-set" title="ncm_mset_set ()">ncm_mset_set</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-push" title="ncm_mset_push ()">ncm_mset_push</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-set-pos" title="ncm_mset_set_pos ()">ncm_mset_set_pos</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-exists" title="ncm_mset_exists ()">ncm_mset_exists</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-exists-pos" title="ncm_mset_exists_pos ()">ncm_mset_exists_pos</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-is-subset" title="ncm_mset_is_subset ()">ncm_mset_is_subset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-cmp-all" title="ncm_mset_cmp_all ()">ncm_mset_cmp_all</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-get-id-by-type" title="ncm_mset_get_id_by_type ()">ncm_mset_get_id_by_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-get-id-by-ns" title="ncm_mset_get_id_by_ns ()">ncm_mset_get_id_by_ns</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-get-ns-by-id" title="ncm_mset_get_ns_by_id ()">ncm_mset_get_ns_by_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-get-type-by-id" title="ncm_mset_get_type_by_id ()">ncm_mset_get_type_by_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-set-fmap" title="ncm_mset_set_fmap ()">ncm_mset_set_fmap</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-get-fmap" title="ncm_mset_get_fmap ()">ncm_mset_get_fmap</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-prepare-fparam-map" title="ncm_mset_prepare_fparam_map ()">ncm_mset_prepare_fparam_map</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-total-len" title="ncm_mset_total_len ()">ncm_mset_total_len</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-len" title="ncm_mset_fparam_len ()">ncm_mset_fparam_len</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-max-param-name" title="ncm_mset_max_param_name ()">ncm_mset_max_param_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-max-fparam-name" title="ncm_mset_max_fparam_name ()">ncm_mset_max_fparam_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-max-model-nick" title="ncm_mset_max_model_nick ()">ncm_mset_max_model_nick</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-nmodels" title="ncm_mset_nmodels ()">ncm_mset_nmodels</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-pretty-log" title="ncm_mset_pretty_log ()">ncm_mset_pretty_log</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-params-pretty-print" title="ncm_mset_params_pretty_print ()">ncm_mset_params_pretty_print</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-params-log-vals" title="ncm_mset_params_log_vals ()">ncm_mset_params_log_vals</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-params-print-vals" title="ncm_mset_params_print_vals ()">ncm_mset_params_print_vals</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparams-log-covar" title="ncm_mset_fparams_log_covar ()">ncm_mset_fparams_log_covar</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-params-valid" title="ncm_mset_params_valid ()">ncm_mset_params_valid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-params-valid-bounds" title="ncm_mset_params_valid_bounds ()">ncm_mset_params_valid_bounds</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-cmp" title="ncm_mset_cmp ()">ncm_mset_cmp</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-set" title="ncm_mset_param_set ()">ncm_mset_param_set</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-get" title="ncm_mset_param_get ()">ncm_mset_param_get</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-orig-param-get" title="ncm_mset_orig_param_get ()">ncm_mset_orig_param_get</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-name" title="ncm_mset_param_name ()">ncm_mset_param_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-symbol" title="ncm_mset_param_symbol ()">ncm_mset_param_symbol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-set-ftype" title="ncm_mset_param_set_ftype ()">ncm_mset_param_set_ftype</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-set-all-ftype" title="ncm_mset_param_set_all_ftype ()">ncm_mset_param_set_all_ftype</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-set-mid-ftype" title="ncm_mset_param_set_mid_ftype ()">ncm_mset_param_set_mid_ftype</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-set-all-but-mid-ftype" title="ncm_mset_param_set_all_but_mid_ftype ()">ncm_mset_param_set_all_but_mid_ftype</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-set-ftype-from-fmap" title="ncm_mset_param_set_ftype_from_fmap ()">ncm_mset_param_set_ftype_from_fmap</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-set-vector" title="ncm_mset_param_set_vector ()">ncm_mset_param_set_vector</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-get-vector" title="ncm_mset_param_get_vector ()">ncm_mset_param_get_vector</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-set-mset" title="ncm_mset_param_set_mset ()">ncm_mset_param_set_mset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-get-scale" title="ncm_mset_param_get_scale ()">ncm_mset_param_get_scale</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-get-lower-bound" title="ncm_mset_param_get_lower_bound ()">ncm_mset_param_get_lower_bound</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-get-upper-bound" title="ncm_mset_param_get_upper_bound ()">ncm_mset_param_get_upper_bound</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-get-abstol" title="ncm_mset_param_get_abstol ()">ncm_mset_param_get_abstol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSParam.html#NcmParamType" title="enum NcmParamType"><span class="returnvalue">NcmParamType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-get-ftype" title="ncm_mset_param_get_ftype ()">ncm_mset_param_get_ftype</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-set-scale" title="ncm_mset_param_set_scale ()">ncm_mset_param_set_scale</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-set-pi" title="ncm_mset_param_set_pi ()">ncm_mset_param_set_pi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-get-pi" title="ncm_mset_param_get_pi ()">ncm_mset_param_get_pi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparams-get-vector" title="ncm_mset_fparams_get_vector ()">ncm_mset_fparams_get_vector</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparams-get-vector-offset" title="ncm_mset_fparams_get_vector_offset ()">ncm_mset_fparams_get_vector_offset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparams-set-vector" title="ncm_mset_fparams_set_vector ()">ncm_mset_fparams_set_vector</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparams-set-vector-offset" title="ncm_mset_fparams_set_vector_offset ()">ncm_mset_fparams_set_vector_offset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparams-set-array" title="ncm_mset_fparams_set_array ()">ncm_mset_fparams_set_array</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparams-set-gsl-vector" title="ncm_mset_fparams_set_gsl_vector ()">ncm_mset_fparams_set_gsl_vector</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparams-len" title="ncm_mset_fparams_len ()">ncm_mset_fparams_len</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-name" title="ncm_mset_fparam_name ()">ncm_mset_fparam_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-symbol" title="ncm_mset_fparam_symbol ()">ncm_mset_fparam_symbol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-full-name" title="ncm_mset_fparam_full_name ()">ncm_mset_fparam_full_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="returnvalue">NcmMSetPIndex</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-param-get-by-full-name" title="ncm_mset_param_get_by_full_name ()">ncm_mset_param_get_by_full_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-get-scale" title="ncm_mset_fparam_get_scale ()">ncm_mset_fparam_get_scale</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-get-lower-bound" title="ncm_mset_fparam_get_lower_bound ()">ncm_mset_fparam_get_lower_bound</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-get-upper-bound" title="ncm_mset_fparam_get_upper_bound ()">ncm_mset_fparam_get_upper_bound</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-get-abstol" title="ncm_mset_fparam_get_abstol ()">ncm_mset_fparam_get_abstol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-set-scale" title="ncm_mset_fparam_set_scale ()">ncm_mset_fparam_set_scale</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-valid-bounds" title="ncm_mset_fparam_valid_bounds ()">ncm_mset_fparam_valid_bounds</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-valid-bounds-offset" title="ncm_mset_fparam_valid_bounds_offset ()">ncm_mset_fparam_valid_bounds_offset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-get" title="ncm_mset_fparam_get ()">ncm_mset_fparam_get</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-set" title="ncm_mset_fparam_set ()">ncm_mset_fparam_set</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="returnvalue">NcmMSetPIndex</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-get-pi" title="ncm_mset_fparam_get_pi ()">ncm_mset_fparam_get_pi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-get-fpi" title="ncm_mset_fparam_get_fpi ()">ncm_mset_fparam_get_fpi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="returnvalue">NcmMSetPIndex</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-fparam-get-pi-by-name" title="ncm_mset_fparam_get_pi_by_name ()">ncm_mset_fparam_get_pi_by_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-save" title="ncm_mset_save ()">ncm_mset_save</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSet.html#ncm-mset-load" title="ncm_mset_load ()">ncm_mset_load</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmMSet.properties" id="NcmMSet.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="../glib/glib-String-Utility-Functions.html#GStrv"><span class="type">GStrv</span></a></td>
+<td class="property_name"><a class="link" href="NcmMSet.html#NcmMSet--fmap" title="The “fmap” property">fmap</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmMSet.html#NcmMSet--model-array" title="The “model-array” property">model-array</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="NcmMSet.html#NcmMSet--valid-map" title="The “valid-map” property">valid-map</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="NcmMSetPIndex" id="NcmMSetPIndex"></a><div class="refsect1">
+<a name="NcmMSet.other" id="NcmMSet.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name" />
+<col class="description" />
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmMSet.html#NCM-MSET-MAX-STACKSIZE:CAPS" title="NCM_MSET_MAX_STACKSIZE">NCM_MSET_MAX_STACKSIZE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmMSet.html#NCM-MSET-INIT-MARRAY:CAPS" title="NCM_MSET_INIT_MARRAY">NCM_MSET_INIT_MARRAY</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmMSet.html#NcmMSetModelDesc" title="struct NcmMSetModelDesc">NcmMSetModelDesc</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmMSet.html#NCM-MSET-MODEL-MAIN:CAPS" title="NCM_MSET_MODEL_MAIN">NCM_MSET_MODEL_MAIN</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmMSet.object-hierarchy" id="NcmMSet.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
+    <span class="lineart">╰──</span> NcmMSetPIndex
+    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcmMSet
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmMSet.description" id="NcmMSet.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcmMSet.functions_details" id="NcmMSet.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="NCM-MSET-GET-BASE-MID:CAPS" id="NCM-MSET-GET-BASE-MID:CAPS"></a><h3>NCM_MSET_GET_BASE_MID()</h3>
+<pre class="programlisting">#define NCM_MSET_GET_BASE_MID(mid) (mid / NCM_MSET_MAX_STACKSIZE)
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MSET-MID:CAPS" id="NCM-MSET-MID:CAPS"></a><h3>NCM_MSET_MID()</h3>
+<pre class="programlisting">#define NCM_MSET_MID(id,pos) ((id) + pos)
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-model-register-id" id="ncm-mset-model-register-id"></a><h3>ncm_mset_model_register_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_model_register_id (<em class="parameter"><code><span class="type">NcmModelClass</span> *model_class</code></em>,
+                            <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *ns</code></em>,
+                            <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *desc</code></em>,
+                            <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *long_desc</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> can_stack</code></em>,
+                            <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> main_model_id</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="ncm-mset-model-register-id.parameters" id="ncm-mset-model-register-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>model_class</p></td>
+<td class="parameter_description"><p>a <span class="type">NcmModelClass</span></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ns</p></td>
+<td class="parameter_description"><p>model namespace</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>desc</p></td>
+<td class="parameter_description"><p>short description</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>long_desc</p></td>
+<td class="parameter_description"><p>long description</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>can_stack</p></td>
+<td class="parameter_description"><p>whether the models can stack in a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>main_model_id</p></td>
+<td class="parameter_description"><p>main model id, use -1 if this is a main model</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MSET-MODEL-ID-FUNC:CAPS" id="NCM-MSET-MODEL-ID-FUNC:CAPS"></a><h3>NCM_MSET_MODEL_ID_FUNC()</h3>
+<pre class="programlisting">#define NCM_MSET_MODEL_ID_FUNC(model_ns) model_ns##_id
+</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="NCM-MSET-MODEL-ID-FUNC.parameters" id="NCM-MSET-MODEL-ID-FUNC.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>model_ns</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MSET-MODEL-DECLARE-ID:CAPS" id="NCM-MSET-MODEL-DECLARE-ID:CAPS"></a><h3>NCM_MSET_MODEL_DECLARE_ID()</h3>
+<pre class="programlisting">#define NCM_MSET_MODEL_DECLARE_ID(model_ns) gint32 NCM_MSET_MODEL_ID_FUNC(model_ns) (void) G_GNUC_CONST
+</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="NCM-MSET-MODEL-DECLARE-ID.parameters" id="NCM-MSET-MODEL-DECLARE-ID.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>model_ns</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MSET-MODEL-REGISTER-ID:CAPS" id="NCM-MSET-MODEL-REGISTER-ID:CAPS"></a><h3>NCM_MSET_MODEL_REGISTER_ID()</h3>
+<pre class="programlisting">#define             NCM_MSET_MODEL_REGISTER_ID(model_ns,typemacro)</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="NCM-MSET-MODEL-REGISTER-ID.parameters" id="NCM-MSET-MODEL-REGISTER-ID.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>model_ns</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>typemacro</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-pindex-new" id="ncm-mset-pindex-new"></a><h3>ncm_mset_pindex_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="returnvalue">NcmMSetPIndex</span></a> *
+ncm_mset_pindex_new (<em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-pindex-new.parameters" id="ncm-mset-pindex-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>Model id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>Parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-pindex-new.returns" id="ncm-mset-pindex-new.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-pindex-dup" id="ncm-mset-pindex-dup"></a><h3>ncm_mset_pindex_dup ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="returnvalue">NcmMSetPIndex</span></a> *
+ncm_mset_pindex_dup (<em class="parameter"><code><a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a> *pi</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-pindex-dup.parameters" id="ncm-mset-pindex-dup.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pi</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-pindex-dup.returns" id="ncm-mset-pindex-dup.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-pindex-free" id="ncm-mset-pindex-free"></a><h3>ncm_mset_pindex_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_pindex_free (<em class="parameter"><code><a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a> *pi</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-pindex-free.parameters" id="ncm-mset-pindex-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pi</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-empty-new" id="ncm-mset-empty-new"></a><h3>ncm_mset_empty_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+ncm_mset_empty_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-empty-new.returns" id="ncm-mset-empty-new.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-new" id="ncm-mset-new"></a><h3>ncm_mset_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+ncm_mset_new (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> model0</code></em>,
+              <em class="parameter"><code>...</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-new.parameters" id="ncm-mset-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>model0</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-new.returns" id="ncm-mset-new.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-newv" id="ncm-mset-newv"></a><h3>ncm_mset_newv ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+ncm_mset_newv (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> model0</code></em>,
+               <em class="parameter"><code><span class="type">va_list</span> ap</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-newv.parameters" id="ncm-mset-newv.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>model0</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ap</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-newv.returns" id="ncm-mset-newv.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-new-array" id="ncm-mset-new-array"></a><h3>ncm_mset_new_array ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+ncm_mset_new_array (<em class="parameter"><code><a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *model_array</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-new-array.parameters" id="ncm-mset-new-array.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>model_array</p></td>
+<td class="parameter_description"><p> a <a href="../glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> of <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> NcmModel]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-new-array.returns" id="ncm-mset-new-array.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-ref" id="ncm-mset-ref"></a><h3>ncm_mset_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+ncm_mset_ref (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-ref.parameters" id="ncm-mset-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-ref.returns" id="ncm-mset-ref.returns"></a><h4>Returns</h4>
+<p> a new <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-dup" id="ncm-mset-dup"></a><h3>ncm_mset_dup ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+ncm_mset_dup (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+              <em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-dup.parameters" id="ncm-mset-dup.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-dup.returns" id="ncm-mset-dup.returns"></a><h4>Returns</h4>
+<p> a new <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-shallow-copy" id="ncm-mset-shallow-copy"></a><h3>ncm_mset_shallow_copy ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+ncm_mset_shallow_copy (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-shallow-copy.parameters" id="ncm-mset-shallow-copy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-shallow-copy.returns" id="ncm-mset-shallow-copy.returns"></a><h4>Returns</h4>
+<p> a new <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-free" id="ncm-mset-free"></a><h3>ncm_mset_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_free (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-free.parameters" id="ncm-mset-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-clear" id="ncm-mset-clear"></a><h3>ncm_mset_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_clear (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> **mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-clear.parameters" id="ncm-mset-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-peek" id="ncm-mset-peek"></a><h3>ncm_mset_peek ()</h3>
+<pre class="programlisting"><a class="link" href="NcmModel.html" title="NcmModel"><span class="returnvalue">NcmModel</span></a> *
+ncm_mset_peek (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+               <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-peek.parameters" id="ncm-mset-peek.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-peek.returns" id="ncm-mset-peek.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-peek-pos" id="ncm-mset-peek-pos"></a><h3>ncm_mset_peek_pos ()</h3>
+<pre class="programlisting"><a class="link" href="NcmModel.html" title="NcmModel"><span class="returnvalue">NcmModel</span></a> *
+ncm_mset_peek_pos (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                   <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> base_mid</code></em>,
+                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> stackpos_id</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-peek-pos.parameters" id="ncm-mset-peek-pos.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>base_mid</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>stackpos_id</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-peek-pos.returns" id="ncm-mset-peek-pos.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-get" id="ncm-mset-get"></a><h3>ncm_mset_get ()</h3>
+<pre class="programlisting"><a class="link" href="NcmModel.html" title="NcmModel"><span class="returnvalue">NcmModel</span></a> *
+ncm_mset_get (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+              <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-get.parameters" id="ncm-mset-get.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-get.returns" id="ncm-mset-get.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-peek-array-pos" id="ncm-mset-peek-array-pos"></a><h3>ncm_mset_peek_array_pos ()</h3>
+<pre class="programlisting"><a class="link" href="NcmModel.html" title="NcmModel"><span class="returnvalue">NcmModel</span></a> *
+ncm_mset_peek_array_pos (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-peek-array-pos.parameters" id="ncm-mset-peek-array-pos.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>array position</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-peek-array-pos.returns" id="ncm-mset-peek-array-pos.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-get-mid-array-pos" id="ncm-mset-get-mid-array-pos"></a><h3>ncm_mset_get_mid_array_pos ()</h3>
+<pre class="programlisting"><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="returnvalue">NcmModelID</span></a>
+ncm_mset_get_mid_array_pos (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-get-mid-array-pos.parameters" id="ncm-mset-get-mid-array-pos.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>array position</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-get-mid-array-pos.returns" id="ncm-mset-get-mid-array-pos.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-remove" id="ncm-mset-remove"></a><h3>ncm_mset_remove ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_remove (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                 <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-remove.parameters" id="ncm-mset-remove.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-set" id="ncm-mset-set"></a><h3>ncm_mset_set ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_set (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+              <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-set.parameters" id="ncm-mset-set.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-push" id="ncm-mset-push"></a><h3>ncm_mset_push ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_push (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+               <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-push.parameters" id="ncm-mset-push.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-set-pos" id="ncm-mset-set-pos"></a><h3>ncm_mset_set_pos ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_set_pos (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                  <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
+                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> stackpos_id</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-set-pos.parameters" id="ncm-mset-set-pos.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>stackpos_id</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-exists" id="ncm-mset-exists"></a><h3>ncm_mset_exists ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_mset_exists (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                 <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-exists.parameters" id="ncm-mset-exists.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-exists.returns" id="ncm-mset-exists.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-exists-pos" id="ncm-mset-exists-pos"></a><h3>ncm_mset_exists_pos ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_mset_exists_pos (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                     <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> stackpos_id</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-exists-pos.parameters" id="ncm-mset-exists-pos.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>stackpos_id</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-exists-pos.returns" id="ncm-mset-exists-pos.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-is-subset" id="ncm-mset-is-subset"></a><h3>ncm_mset_is_subset ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_mset_is_subset (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                    <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *sub_mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-is-subset.parameters" id="ncm-mset-is-subset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sub_mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-is-subset.returns" id="ncm-mset-is-subset.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-cmp-all" id="ncm-mset-cmp-all"></a><h3>ncm_mset_cmp_all ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+ncm_mset_cmp_all (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset0</code></em>,
+                  <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset1</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-cmp-all.parameters" id="ncm-mset-cmp-all.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset0</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset1</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-cmp-all.returns" id="ncm-mset-cmp-all.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-get-id-by-type" id="ncm-mset-get-id-by-type"></a><h3>ncm_mset_get_id_by_type ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+ncm_mset_get_id_by_type (<em class="parameter"><code><a href="../gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> model_type</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-get-id-by-type.parameters" id="ncm-mset-get-id-by-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>model_type</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-get-id-by-type.returns" id="ncm-mset-get-id-by-type.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-get-id-by-ns" id="ncm-mset-get-id-by-ns"></a><h3>ncm_mset_get_id_by_ns ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+ncm_mset_get_id_by_ns (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *ns</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-get-id-by-ns.parameters" id="ncm-mset-get-id-by-ns.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ns</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-get-id-by-ns.returns" id="ncm-mset-get-id-by-ns.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-get-ns-by-id" id="ncm-mset-get-ns-by-id"></a><h3>ncm_mset_get_ns_by_id ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_mset_get_ns_by_id (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> id</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-mset-get-ns-by-id.parameters" id="ncm-mset-get-ns-by-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>id</p></td>
+<td class="parameter_description"><p>namespace id</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-get-ns-by-id.returns" id="ncm-mset-get-ns-by-id.returns"></a><h4>Returns</h4>
+<p> namespace for <em class="parameter"><code>id</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-get-type-by-id" id="ncm-mset-get-type-by-id"></a><h3>ncm_mset_get_type_by_id ()</h3>
+<pre class="programlisting"><a href="../gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>
+ncm_mset_get_type_by_id (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> id</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-mset-get-type-by-id.parameters" id="ncm-mset-get-type-by-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>id</p></td>
+<td class="parameter_description"><p>namespace id</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-get-type-by-id.returns" id="ncm-mset-get-type-by-id.returns"></a><h4>Returns</h4>
+<p> GType of model <em class="parameter"><code>id</code></em>
+</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-set-fmap" id="ncm-mset-set-fmap"></a><h3>ncm_mset_set_fmap ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_set_fmap (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                   <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *const *fmap</code></em>,
+                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> update_models</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-set-fmap.parameters" id="ncm-mset-set-fmap.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>fmap</p></td>
+<td class="parameter_description"><p> an array of strings. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>update_models</p></td>
+<td class="parameter_description"><p>a boolean</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-get-fmap" id="ncm-mset-get-fmap"></a><h3>ncm_mset_get_fmap ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+ncm_mset_get_fmap (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-get-fmap.parameters" id="ncm-mset-get-fmap.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-get-fmap.returns" id="ncm-mset-get-fmap.returns"></a><h4>Returns</h4>
+<p> an array of strings. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-prepare-fparam-map" id="ncm-mset-prepare-fparam-map"></a><h3>ncm_mset_prepare_fparam_map ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_prepare_fparam_map (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-prepare-fparam-map.parameters" id="ncm-mset-prepare-fparam-map.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-total-len" id="ncm-mset-total-len"></a><h3>ncm_mset_total_len ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_mset_total_len (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-total-len.parameters" id="ncm-mset-total-len.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-total-len.returns" id="ncm-mset-total-len.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-len" id="ncm-mset-fparam-len"></a><h3>ncm_mset_fparam_len ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_mset_fparam_len (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-len.parameters" id="ncm-mset-fparam-len.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-fparam-len.returns" id="ncm-mset-fparam-len.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-max-param-name" id="ncm-mset-max-param-name"></a><h3>ncm_mset_max_param_name ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_mset_max_param_name (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-max-param-name.parameters" id="ncm-mset-max-param-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-max-param-name.returns" id="ncm-mset-max-param-name.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-max-fparam-name" id="ncm-mset-max-fparam-name"></a><h3>ncm_mset_max_fparam_name ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_mset_max_fparam_name (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-max-fparam-name.parameters" id="ncm-mset-max-fparam-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-max-fparam-name.returns" id="ncm-mset-max-fparam-name.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-max-model-nick" id="ncm-mset-max-model-nick"></a><h3>ncm_mset_max_model_nick ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_mset_max_model_nick (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-max-model-nick.parameters" id="ncm-mset-max-model-nick.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-max-model-nick.returns" id="ncm-mset-max-model-nick.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-nmodels" id="ncm-mset-nmodels"></a><h3>ncm_mset_nmodels ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_mset_nmodels (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-nmodels.parameters" id="ncm-mset-nmodels.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-nmodels.returns" id="ncm-mset-nmodels.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-pretty-log" id="ncm-mset-pretty-log"></a><h3>ncm_mset_pretty_log ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_pretty_log (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-pretty-log.parameters" id="ncm-mset-pretty-log.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-params-pretty-print" id="ncm-mset-params-pretty-print"></a><h3>ncm_mset_params_pretty_print ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_params_pretty_print (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                              <em class="parameter"><code><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#FILE:CAPS" title="FILE"><span class="type">FILE</span></a> *out</code></em>,
+                              <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *header</code></em>);</pre>
+<p>This function print the command line (first line, commented), the model nick and parameters' names (second line, commented)
+and their values indicating if they are fixed or free.</p>
+<div class="refsect3">
+<a name="ncm-mset-params-pretty-print.parameters" id="ncm-mset-params-pretty-print.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>name of the file</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>header</p></td>
+<td class="parameter_description"><p>pointer to the command line</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-params-log-vals" id="ncm-mset-params-log-vals"></a><h3>ncm_mset_params_log_vals ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_params_log_vals (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-params-log-vals.parameters" id="ncm-mset-params-log-vals.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-params-print-vals" id="ncm-mset-params-print-vals"></a><h3>ncm_mset_params_print_vals ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_params_print_vals (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                            <em class="parameter"><code><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#FILE:CAPS" title="FILE"><span class="type">FILE</span></a> *out</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-params-print-vals.parameters" id="ncm-mset-params-print-vals.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparams-log-covar" id="ncm-mset-fparams-log-covar"></a><h3>ncm_mset_fparams_log_covar ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_fparams_log_covar (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                            <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *covar</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparams-log-covar.parameters" id="ncm-mset-fparams-log-covar.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>covar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-params-valid" id="ncm-mset-params-valid"></a><h3>ncm_mset_params_valid ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_mset_params_valid (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-params-valid.parameters" id="ncm-mset-params-valid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-params-valid.returns" id="ncm-mset-params-valid.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-params-valid-bounds" id="ncm-mset-params-valid-bounds"></a><h3>ncm_mset_params_valid_bounds ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_mset_params_valid_bounds (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-cmp" id="ncm-mset-cmp"></a><h3>ncm_mset_cmp ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_mset_cmp (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset0</code></em>,
+              <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset1</code></em>,
+              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> cmp_model</code></em>);</pre>
+<p>Compares <em class="parameter"><code>mset0</code></em>
+ and <em class="parameter"><code>mset1</code></em>
+ and returns TRUE if both coitains the same models types.
+If <em class="parameter"><code>cmp_model</code></em>
+ is TRUE compare also if the models correspond to the same objects.</p>
+<div class="refsect3">
+<a name="ncm-mset-cmp.parameters" id="ncm-mset-cmp.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset0</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset1</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cmp_model</p></td>
+<td class="parameter_description"><p>whether to compare if the models correspond to the same objects</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-cmp.returns" id="ncm-mset-cmp.returns"></a><h4>Returns</h4>
+<p> TRUE if <em class="parameter"><code>mset0</code></em>
+== <em class="parameter"><code>mset1</code></em>
+.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-set" id="ncm-mset-param-set"></a><h3>ncm_mset_param_set ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_param_set (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                    <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>,
+                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-param-set.parameters" id="ncm-mset-param-set.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>model id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-get" id="ncm-mset-param-get"></a><h3>ncm_mset_param_get ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_mset_param_get (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                    <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-param-get.parameters" id="ncm-mset-param-get.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>model id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-param-get.returns" id="ncm-mset-param-get.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-orig-param-get" id="ncm-mset-orig-param-get"></a><h3>ncm_mset_orig_param_get ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_mset_orig_param_get (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                         <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-orig-param-get.parameters" id="ncm-mset-orig-param-get.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>model id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-orig-param-get.returns" id="ncm-mset-orig-param-get.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-name" id="ncm-mset-param-name"></a><h3>ncm_mset_param_name ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_mset_param_name (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                     <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-param-name.parameters" id="ncm-mset-param-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>model id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-param-name.returns" id="ncm-mset-param-name.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-symbol" id="ncm-mset-param-symbol"></a><h3>ncm_mset_param_symbol ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_mset_param_symbol (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                       <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-param-symbol.parameters" id="ncm-mset-param-symbol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>model id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-param-symbol.returns" id="ncm-mset-param-symbol.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-set-ftype" id="ncm-mset-param-set-ftype"></a><h3>ncm_mset_param_set_ftype ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_param_set_ftype (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                          <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>,
+                          <em class="parameter"><code><a class="link" href="NcmSParam.html#NcmParamType" title="enum NcmParamType"><span class="type">NcmParamType</span></a> ftype</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-param-set-ftype.parameters" id="ncm-mset-param-set-ftype.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>model id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ftype</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSParam.html#NcmParamType" title="enum NcmParamType"><span class="type">NcmParamType</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-set-all-ftype" id="ncm-mset-param-set-all-ftype"></a><h3>ncm_mset_param_set_all_ftype ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_param_set_all_ftype (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                              <em class="parameter"><code><a class="link" href="NcmSParam.html#NcmParamType" title="enum NcmParamType"><span class="type">NcmParamType</span></a> ftype</code></em>);</pre>
+<p>Set all parameters of all models to <em class="parameter"><code>ftype</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-mset-param-set-all-ftype.parameters" id="ncm-mset-param-set-all-ftype.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ftype</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSParam.html#NcmParamType" title="enum NcmParamType"><span class="type">NcmParamType</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-set-mid-ftype" id="ncm-mset-param-set-mid-ftype"></a><h3>ncm_mset_param_set_mid_ftype ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_param_set_mid_ftype (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                              <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                              <em class="parameter"><code><a class="link" href="NcmSParam.html#NcmParamType" title="enum NcmParamType"><span class="type">NcmParamType</span></a> ftype</code></em>);</pre>
+<p>Set all parameters of <em class="parameter"><code>mid</code></em>
+ model to <em class="parameter"><code>ftype</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-mset-param-set-mid-ftype.parameters" id="ncm-mset-param-set-mid-ftype.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>model id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ftype</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSParam.html#NcmParamType" title="enum NcmParamType"><span class="type">NcmParamType</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-set-all-but-mid-ftype" id="ncm-mset-param-set-all-but-mid-ftype"></a><h3>ncm_mset_param_set_all_but_mid_ftype ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_param_set_all_but_mid_ftype (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcmSParam.html#NcmParamType" title="enum NcmParamType"><span class="type">NcmParamType</span></a> ftype</code></em>);</pre>
+<p>Set all parameters of all models but <em class="parameter"><code>mid</code></em>
+ to <em class="parameter"><code>ftype</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-mset-param-set-all-but-mid-ftype.parameters" id="ncm-mset-param-set-all-but-mid-ftype.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>model id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ftype</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSParam.html#NcmParamType" title="enum NcmParamType"><span class="type">NcmParamType</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-set-ftype-from-fmap" id="ncm-mset-param-set-ftype-from-fmap"></a><h3>ncm_mset_param_set_ftype_from_fmap ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_param_set_ftype_from_fmap (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>Set all parameters of all models inside <em class="parameter"><code>mset</code></em>
+ in order
+to reflect the current fmap.</p>
+<div class="refsect3">
+<a name="ncm-mset-param-set-ftype-from-fmap.parameters" id="ncm-mset-param-set-ftype-from-fmap.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-set-vector" id="ncm-mset-param-set-vector"></a><h3>ncm_mset_param_set_vector ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_param_set_vector (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *params</code></em>);</pre>
+<p>Sets the models parameters using values from the <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> <em class="parameter"><code>params</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-mset-param-set-vector.parameters" id="ncm-mset-param-set-vector.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>params</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-get-vector" id="ncm-mset-param-get-vector"></a><h3>ncm_mset_param_get_vector ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_param_get_vector (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *params</code></em>);</pre>
+<p>Sets the compontents of <em class="parameter"><code>params</code></em>
+ using the models parameters.</p>
+<div class="refsect3">
+<a name="ncm-mset-param-get-vector.parameters" id="ncm-mset-param-get-vector.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>params</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-set-mset" id="ncm-mset-param-set-mset"></a><h3>ncm_mset_param_set_mset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_param_set_mset (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset_dest</code></em>,
+                         <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset_src</code></em>);</pre>
+<p>Copy parameters from <em class="parameter"><code>mset_src</code></em>
+ to <em class="parameter"><code>mset_dest</code></em>
+, both <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> must
+be compatible.</p>
+<div class="refsect3">
+<a name="ncm-mset-param-set-mset.parameters" id="ncm-mset-param-set-mset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset_dest</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset_src</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-get-scale" id="ncm-mset-param-get-scale"></a><h3>ncm_mset_param_get_scale ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_mset_param_get_scale (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                          <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-param-get-scale.parameters" id="ncm-mset-param-get-scale.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>model id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-param-get-scale.returns" id="ncm-mset-param-get-scale.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-get-lower-bound" id="ncm-mset-param-get-lower-bound"></a><h3>ncm_mset_param_get_lower_bound ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_mset_param_get_lower_bound (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-param-get-lower-bound.parameters" id="ncm-mset-param-get-lower-bound.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>model id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-param-get-lower-bound.returns" id="ncm-mset-param-get-lower-bound.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-get-upper-bound" id="ncm-mset-param-get-upper-bound"></a><h3>ncm_mset_param_get_upper_bound ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_mset_param_get_upper_bound (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-param-get-upper-bound.parameters" id="ncm-mset-param-get-upper-bound.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>model id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-param-get-upper-bound.returns" id="ncm-mset-param-get-upper-bound.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-get-abstol" id="ncm-mset-param-get-abstol"></a><h3>ncm_mset_param_get_abstol ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_mset_param_get_abstol (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-param-get-abstol.parameters" id="ncm-mset-param-get-abstol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>model id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-param-get-abstol.returns" id="ncm-mset-param-get-abstol.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-get-ftype" id="ncm-mset-param-get-ftype"></a><h3>ncm_mset_param_get_ftype ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSParam.html#NcmParamType" title="enum NcmParamType"><span class="returnvalue">NcmParamType</span></a>
+ncm_mset_param_get_ftype (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                          <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-param-get-ftype.parameters" id="ncm-mset-param-get-ftype.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-param-get-ftype.returns" id="ncm-mset-param-get-ftype.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-set-scale" id="ncm-mset-param-set-scale"></a><h3>ncm_mset_param_set_scale ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_param_set_scale (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                          <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> scale</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-param-set-scale.parameters" id="ncm-mset-param-set-scale.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>model id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>scale</p></td>
+<td class="parameter_description"><p>new scale</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-set-pi" id="ncm-mset-param-set-pi"></a><h3>ncm_mset_param_set_pi ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_param_set_pi (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                       <em class="parameter"><code><a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a> *pi</code></em>,
+                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *x</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-param-set-pi.parameters" id="ncm-mset-param-set-pi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pi</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-get-pi" id="ncm-mset-param-get-pi"></a><h3>ncm_mset_param_get_pi ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_param_get_pi (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                       <em class="parameter"><code><a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a> *pi</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *x</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-param-get-pi.parameters" id="ncm-mset-param-get-pi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pi</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparams-get-vector" id="ncm-mset-fparams-get-vector"></a><h3>ncm_mset_fparams_get_vector ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_fparams_get_vector (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *x</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparams-get-vector.parameters" id="ncm-mset-fparams-get-vector.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparams-get-vector-offset" id="ncm-mset-fparams-get-vector-offset"></a><h3>ncm_mset_fparams_get_vector_offset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_fparams_get_vector_offset (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                    <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *x</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> offset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparams-get-vector-offset.parameters" id="ncm-mset-fparams-get-vector-offset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>starting index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparams-set-vector" id="ncm-mset-fparams-set-vector"></a><h3>ncm_mset_fparams_set_vector ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_fparams_set_vector (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                             <em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *x</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparams-set-vector.parameters" id="ncm-mset-fparams-set-vector.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparams-set-vector-offset" id="ncm-mset-fparams-set-vector-offset"></a><h3>ncm_mset_fparams_set_vector_offset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_fparams_set_vector_offset (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                    <em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *x</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> offset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparams-set-vector-offset.parameters" id="ncm-mset-fparams-set-vector-offset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>starting index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparams-set-array" id="ncm-mset-fparams-set-array"></a><h3>ncm_mset_fparams_set_array ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_fparams_set_array (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                            <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *x</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparams-set-array.parameters" id="ncm-mset-fparams-set-array.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p> FIXME. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparams-set-gsl-vector" id="ncm-mset-fparams-set-gsl-vector"></a><h3>ncm_mset_fparams_set_gsl_vector ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_fparams_set_gsl_vector (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                 <em class="parameter"><code>const <span class="type">gsl_vector</span> *x</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="ncm-mset-fparams-set-gsl-vector.parameters" id="ncm-mset-fparams-set-gsl-vector.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparams-len" id="ncm-mset-fparams-len"></a><h3>ncm_mset_fparams_len ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_mset_fparams_len (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparams-len.parameters" id="ncm-mset-fparams-len.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-fparams-len.returns" id="ncm-mset-fparams-len.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-name" id="ncm-mset-fparam-name"></a><h3>ncm_mset_fparam_name ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_mset_fparam_name (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-name.parameters" id="ncm-mset-fparam-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>free parameter index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-fparam-name.returns" id="ncm-mset-fparam-name.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-symbol" id="ncm-mset-fparam-symbol"></a><h3>ncm_mset_fparam_symbol ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_mset_fparam_symbol (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-symbol.parameters" id="ncm-mset-fparam-symbol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>free parameter index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-fparam-symbol.returns" id="ncm-mset-fparam-symbol.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-full-name" id="ncm-mset-fparam-full-name"></a><h3>ncm_mset_fparam_full_name ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_mset_fparam_full_name (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-full-name.parameters" id="ncm-mset-fparam-full-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>free parameter index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-fparam-full-name.returns" id="ncm-mset-fparam-full-name.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-param-get-by-full-name" id="ncm-mset-param-get-by-full-name"></a><h3>ncm_mset_param_get_by_full_name ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="returnvalue">NcmMSetPIndex</span></a> *
+ncm_mset_param_get_by_full_name (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *fullname</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-param-get-by-full-name.parameters" id="ncm-mset-param-get-by-full-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>fullname</p></td>
+<td class="parameter_description"><p>param's full name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-param-get-by-full-name.returns" id="ncm-mset-param-get-by-full-name.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-get-scale" id="ncm-mset-fparam-get-scale"></a><h3>ncm_mset_fparam_get_scale ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_mset_fparam_get_scale (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get-scale.parameters" id="ncm-mset-fparam-get-scale.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>free parameter index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get-scale.returns" id="ncm-mset-fparam-get-scale.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-get-lower-bound" id="ncm-mset-fparam-get-lower-bound"></a><h3>ncm_mset_fparam_get_lower_bound ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_mset_fparam_get_lower_bound (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get-lower-bound.parameters" id="ncm-mset-fparam-get-lower-bound.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>free parameter index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get-lower-bound.returns" id="ncm-mset-fparam-get-lower-bound.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-get-upper-bound" id="ncm-mset-fparam-get-upper-bound"></a><h3>ncm_mset_fparam_get_upper_bound ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_mset_fparam_get_upper_bound (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get-upper-bound.parameters" id="ncm-mset-fparam-get-upper-bound.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>free parameter index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get-upper-bound.returns" id="ncm-mset-fparam-get-upper-bound.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-get-abstol" id="ncm-mset-fparam-get-abstol"></a><h3>ncm_mset_fparam_get_abstol ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_mset_fparam_get_abstol (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get-abstol.parameters" id="ncm-mset-fparam-get-abstol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>free parameter index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get-abstol.returns" id="ncm-mset-fparam-get-abstol.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-set-scale" id="ncm-mset-fparam-set-scale"></a><h3>ncm_mset_fparam_set_scale ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_fparam_set_scale (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> scale</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-set-scale.parameters" id="ncm-mset-fparam-set-scale.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>free parameter index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>scale</p></td>
+<td class="parameter_description"><p>new scale</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-valid-bounds" id="ncm-mset-fparam-valid-bounds"></a><h3>ncm_mset_fparam_valid_bounds ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_mset_fparam_valid_bounds (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                              <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *theta</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-valid-bounds.parameters" id="ncm-mset-fparam-valid-bounds.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>theta</p></td>
+<td class="parameter_description"><p>free parameters vector</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-fparam-valid-bounds.returns" id="ncm-mset-fparam-valid-bounds.returns"></a><h4>Returns</h4>
+<p> whether <em class="parameter"><code>theta</code></em>
+contain values respecting the parameter bounds.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-valid-bounds-offset" id="ncm-mset-fparam-valid-bounds-offset"></a><h3>ncm_mset_fparam_valid_bounds_offset ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_mset_fparam_valid_bounds_offset (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                     <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *theta</code></em>,
+                                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> offset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-valid-bounds-offset.parameters" id="ncm-mset-fparam-valid-bounds-offset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>theta</p></td>
+<td class="parameter_description"><p>free parameters vector</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>starting index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-fparam-valid-bounds-offset.returns" id="ncm-mset-fparam-valid-bounds-offset.returns"></a><h4>Returns</h4>
+<p> whether <em class="parameter"><code>theta</code></em>
+contain values respecting the parameter bounds.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-get" id="ncm-mset-fparam-get"></a><h3>ncm_mset_fparam_get ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_mset_fparam_get (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get.parameters" id="ncm-mset-fparam-get.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>free parameter index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get.returns" id="ncm-mset-fparam-get.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-set" id="ncm-mset-fparam-set"></a><h3>ncm_mset_fparam_set ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_fparam_set (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>,
+                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-set.parameters" id="ncm-mset-fparam-set.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>free parameter index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-get-pi" id="ncm-mset-fparam-get-pi"></a><h3>ncm_mset_fparam_get_pi ()</h3>
+<pre class="programlisting">const <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="returnvalue">NcmMSetPIndex</span></a> *
+ncm_mset_fparam_get_pi (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get-pi.parameters" id="ncm-mset-fparam-get-pi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>free parameter index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get-pi.returns" id="ncm-mset-fparam-get-pi.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-get-fpi" id="ncm-mset-fparam-get-fpi"></a><h3>ncm_mset_fparam_get_fpi ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+ncm_mset_fparam_get_fpi (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                         <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get-fpi.parameters" id="ncm-mset-fparam-get-fpi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get-fpi.returns" id="ncm-mset-fparam-get-fpi.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-fparam-get-pi-by-name" id="ncm-mset-fparam-get-pi-by-name"></a><h3>ncm_mset_fparam_get_pi_by_name ()</h3>
+<pre class="programlisting">const <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="returnvalue">NcmMSetPIndex</span></a> *
+ncm_mset_fparam_get_pi_by_name (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get-pi-by-name.parameters" id="ncm-mset-fparam-get-pi-by-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-fparam-get-pi-by-name.returns" id="ncm-mset-fparam-get-pi-by-name.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-save" id="ncm-mset-save"></a><h3>ncm_mset_save ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_save (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+               <em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+               <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>,
+               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> save_comment</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-save.parameters" id="ncm-mset-save.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>save_comment</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-load" id="ncm-mset-load"></a><h3>ncm_mset_load ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="returnvalue">NcmMSet</span></a> *
+ncm_mset_load (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>,
+               <em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-mset-load.parameters" id="ncm-mset-load.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>mset filename</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-load.returns" id="ncm-mset-load.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmMSet.other_details" id="NcmMSet.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NCM-MSET-MAX-STACKSIZE:CAPS" id="NCM-MSET-MAX-STACKSIZE:CAPS"></a><h3>NCM_MSET_MAX_STACKSIZE</h3>
+<pre class="programlisting">#define NCM_MSET_MAX_STACKSIZE 1000
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MSET-INIT-MARRAY:CAPS" id="NCM-MSET-INIT-MARRAY:CAPS"></a><h3>NCM_MSET_INIT_MARRAY</h3>
+<pre class="programlisting">#define NCM_MSET_INIT_MARRAY 32
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmMSetModelDesc" id="NcmMSetModelDesc"></a><h3>struct NcmMSetModelDesc</h3>
+<pre class="programlisting">struct NcmMSetModelDesc {
+};
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MSET-MODEL-MAIN:CAPS" id="NCM-MSET-MODEL-MAIN:CAPS"></a><h3>NCM_MSET_MODEL_MAIN</h3>
+<pre class="programlisting">#define NCM_MSET_MODEL_MAIN (-1)
+</pre>
+<p>FIXME</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmMSet.property-details" id="NcmMSet.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmMSet--fmap" id="NcmMSet--fmap"></a><h3>The <code class="literal">“fmap”</code> property</h3>
+<pre class="programlisting">  “fmap”                     <a href="../glib/glib-String-Utility-Functions.html#GStrv"><span class="type">GStrv</span></a></pre>
+<p>Free params map.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmMSet--model-array" id="NcmMSet--model-array"></a><h3>The <code class="literal">“model-array”</code> property</h3>
+<pre class="programlisting">  “model-array”              <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</pre>
+<p>NcmModel array.</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmMSet--valid-map" id="NcmMSet--valid-map"></a><h3>The <code class="literal">“valid-map”</code> property</h3>
+<pre class="programlisting">  “valid-map”                <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Valid properties map.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.25.1</div>
+</div></div></body>
+</html>

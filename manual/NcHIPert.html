@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcHIPert: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch07.html" title="Perturbations" />
+<link rel="prev" href="numcosmo-NcLinearPertCov.html" title="NcLinearPertCov" />
+<link rel="next" href="NcHIPertWKB.html" title="NcHIPertWKB" />
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcHIPert.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcHIPert.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcHIPert.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch07.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="numcosmo-NcLinearPertCov.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcHIPertWKB.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcHIPert" id="NcHIPert"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcHIPert.top_of_page" id="NcHIPert.top_of_page"></a>NcHIPert</span></h2>
+<p>NcHIPert — Abstract class for perturbation in homogeneous and isotropic cosmologies.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcHIPert.functions" id="NcHIPert.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return" />
+<col class="functions_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPert.html#nc-hipert-set-mode-k" title="nc_hipert_set_mode_k ()">nc_hipert_set_mode_k</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPert.html#nc-hipert-set-reltol" title="nc_hipert_set_reltol ()">nc_hipert_set_reltol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPert.html#nc-hipert-set-abstol" title="nc_hipert_set_abstol ()">nc_hipert_set_abstol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPert.html#nc-hipert-get-reltol" title="nc_hipert_get_reltol ()">nc_hipert_get_reltol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPert.html#nc-hipert-get-abstol" title="nc_hipert_get_abstol ()">nc_hipert_get_abstol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPert.html#nc-hipert-set-sys-size" title="nc_hipert_set_sys_size ()">nc_hipert_set_sys_size</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPert.html#nc-hipert-set-stiff-solver" title="nc_hipert_set_stiff_solver ()">nc_hipert_set_stiff_solver</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPert.html#nc-hipert-reset-solver" title="nc_hipert_reset_solver ()">nc_hipert_reset_solver</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcHIPert.properties" id="NcHIPert.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="NcHIPert.html#NcHIPert--abstol" title="The “abstol” property">abstol</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="NcHIPert.html#NcHIPert--alphai" title="The “alphai” property">alphai</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="NcHIPert.html#NcHIPert--k" title="The “k” property">k</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="NcHIPert.html#NcHIPert--reltol" title="The “reltol” property">reltol</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcHIPert.html#NcHIPert--sys-size" title="The “sys-size” property">sys-size</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcHIPert.object-hierarchy" id="NcHIPert.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcHIPert
+        <span class="lineart">├──</span> <a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann">NcHIPertBoltzmann</a>
+        <span class="lineart">├──</span> <a class="link" href="NcHIPertTwoFluids.html" title="NcHIPertTwoFluids">NcHIPertTwoFluids</a>
+        <span class="lineart">╰──</span> <a class="link" href="NcHIPertWKB.html" title="NcHIPertWKB">NcHIPertWKB</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcHIPert.description" id="NcHIPert.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcHIPert.functions_details" id="NcHIPert.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="nc-hipert-set-mode-k" id="nc-hipert-set-mode-k"></a><h3>nc_hipert_set_mode_k ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_set_mode_k (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>,
+                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>);</pre>
+<p>Sets the value of the mode to be computed.</p>
+<div class="refsect3">
+<a name="nc-hipert-set-mode-k.parameters" id="nc-hipert-set-mode-k.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>pert</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>the mode value.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-set-reltol" id="nc-hipert-set-reltol"></a><h3>nc_hipert_set_reltol ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_set_reltol (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>,
+                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>);</pre>
+<p>Sets the value of the relative tolerance.</p>
+<div class="refsect3">
+<a name="nc-hipert-set-reltol.parameters" id="nc-hipert-set-reltol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>pert</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>reltol</p></td>
+<td class="parameter_description"><p>the relative tolarance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-set-abstol" id="nc-hipert-set-abstol"></a><h3>nc_hipert_set_abstol ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_set_abstol (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>,
+                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> abstol</code></em>);</pre>
+<p>Sets the value of the absolute tolerance.</p>
+<div class="refsect3">
+<a name="nc-hipert-set-abstol.parameters" id="nc-hipert-set-abstol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>pert</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>abstol</p></td>
+<td class="parameter_description"><p>the absolute tolarance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-get-reltol" id="nc-hipert-get-reltol"></a><h3>nc_hipert_get_reltol ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_hipert_get_reltol (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>);</pre>
+<p>Gets the value of the relative tolerance.</p>
+<div class="refsect3">
+<a name="nc-hipert-get-reltol.parameters" id="nc-hipert-get-reltol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pert</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-get-reltol.returns" id="nc-hipert-get-reltol.returns"></a><h4>Returns</h4>
+<p> reltol</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-get-abstol" id="nc-hipert-get-abstol"></a><h3>nc_hipert_get_abstol ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_hipert_get_abstol (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>);</pre>
+<p>Gets the value of the relative tolerance.</p>
+<div class="refsect3">
+<a name="nc-hipert-get-abstol.parameters" id="nc-hipert-get-abstol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pert</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-set-sys-size" id="nc-hipert-set-sys-size"></a><h3>nc_hipert_set_sys_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_set_sys_size (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sys_size</code></em>);</pre>
+<p>Sets the system size.</p>
+<div class="refsect3">
+<a name="nc-hipert-set-sys-size.parameters" id="nc-hipert-set-sys-size.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>pert</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sys_size</p></td>
+<td class="parameter_description"><p>the system size.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-set-stiff-solver" id="nc-hipert-set-stiff-solver"></a><h3>nc_hipert_set_stiff_solver ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_set_stiff_solver (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> stiff</code></em>);</pre>
+<p>Sets the ode algorithm to use.</p>
+<div class="refsect3">
+<a name="nc-hipert-set-stiff-solver.parameters" id="nc-hipert-set-stiff-solver.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>pert</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>stiff</p></td>
+<td class="parameter_description"><p>whenever to enable or disable a stiff solver.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-reset-solver" id="nc-hipert-reset-solver"></a><h3>nc_hipert_reset_solver ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_reset_solver (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>);</pre>
+<p>Destroy and recreates the solver.</p>
+<div class="refsect3">
+<a name="nc-hipert-reset-solver.parameters" id="nc-hipert-reset-solver.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pert</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcHIPert.other_details" id="NcHIPert.other_details"></a><h2>Types and Values</h2>
+</div>
+<div class="refsect1">
+<a name="NcHIPert.property-details" id="NcHIPert.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcHIPert--abstol" id="NcHIPert--abstol"></a><h3>The <code class="literal">“abstol”</code> property</h3>
+<pre class="programlisting">  “abstol”                   <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>Absolute tolerance.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [0,1]</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPert--alphai" id="NcHIPert--alphai"></a><h3>The <code class="literal">“alphai”</code> property</h3>
+<pre class="programlisting">  “alphai”                   <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>Initial time.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPert--k" id="NcHIPert--k"></a><h3>The <code class="literal">“k”</code> property</h3>
+<pre class="programlisting">  “k”                        <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>Mode k.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 1</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPert--reltol" id="NcHIPert--reltol"></a><h3>The <code class="literal">“reltol”</code> property</h3>
+<pre class="programlisting">  “reltol”                   <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>Relative tolerance.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [0,1]</p>
+<p>Default value: 1e-07</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPert--sys-size" id="NcHIPert--sys-size"></a><h3>The <code class="literal">“sys-size”</code> property</h3>
+<pre class="programlisting">  “sys-size”                 <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>System size.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: &gt;= 1</p>
+<p>Default value: 1</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.25.1</div>
+</div></div></body>
+</html>

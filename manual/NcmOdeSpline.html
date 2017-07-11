@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmOdeSpline: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s02.html" title="Splines 1D" />
+<link rel="prev" href="numcosmo-NcmSplineFunc.html" title="NcmSplineFunc" />
+<link rel="next" href="ch02s03.html" title="Splines 2D" />
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmOdeSpline.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmOdeSpline.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmOdeSpline.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s02.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="numcosmo-NcmSplineFunc.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="ch02s03.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmOdeSpline" id="NcmOdeSpline"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmOdeSpline.top_of_page" id="NcmOdeSpline.top_of_page"></a>NcmOdeSpline</span></h2>
+<p>NcmOdeSpline — Automatic generation of splines from ODE solvers.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmOdeSpline.functions" id="NcmOdeSpline.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return" />
+<col class="functions_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="NcmOdeSpline.html#NcmOdeSplineDydx" title="NcmOdeSplineDydx ()">*NcmOdeSplineDydx</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="returnvalue">NcmOdeSpline</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmOdeSpline.html#ncm-ode-spline-new" title="ncm_ode_spline_new ()">ncm_ode_spline_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="returnvalue">NcmOdeSpline</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmOdeSpline.html#ncm-ode-spline-new-full" title="ncm_ode_spline_new_full ()">ncm_ode_spline_new_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmOdeSpline.html#ncm-ode-spline-prepare" title="ncm_ode_spline_prepare ()">ncm_ode_spline_prepare</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmOdeSpline.html#ncm-ode-spline-free" title="ncm_ode_spline_free ()">ncm_ode_spline_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmOdeSpline.html#ncm-ode-spline-clear" title="ncm_ode_spline_clear ()">ncm_ode_spline_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmOdeSpline.html#ncm-ode-spline-set-interval" title="ncm_ode_spline_set_interval ()">ncm_ode_spline_set_interval</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmOdeSpline.html#ncm-ode-spline-set-reltol" title="ncm_ode_spline_set_reltol ()">ncm_ode_spline_set_reltol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmOdeSpline.html#ncm-ode-spline-set-abstol" title="ncm_ode_spline_set_abstol ()">ncm_ode_spline_set_abstol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmOdeSpline.html#ncm-ode-spline-set-xi" title="ncm_ode_spline_set_xi ()">ncm_ode_spline_set_xi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmOdeSpline.html#ncm-ode-spline-set-xf" title="ncm_ode_spline_set_xf ()">ncm_ode_spline_set_xf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmOdeSpline.html#ncm-ode-spline-set-yi" title="ncm_ode_spline_set_yi ()">ncm_ode_spline_set_yi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmOdeSpline.properties" id="NcmOdeSpline.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="NcmOdeSpline.html#NcmOdeSpline--abs" title="The “abs” property">abs</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
+<td class="property_name"><a class="link" href="NcmOdeSpline.html#NcmOdeSpline--dydx" title="The “dydx” property">dydx</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="NcmOdeSpline.html#NcmOdeSpline--reltol" title="The “reltol” property">reltol</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmOdeSpline.html#NcmOdeSpline--spline" title="The “spline” property">spline</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="NcmOdeSpline.html#NcmOdeSpline--stop-hnil" title="The “stop-hnil” property">stop-hnil</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="NcmOdeSpline.html#NcmOdeSpline--xf" title="The “xf” property">xf</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="NcmOdeSpline.html#NcmOdeSpline--xi" title="The “xi” property">xi</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="NcmOdeSpline.html#NcmOdeSpline--yi" title="The “yi” property">yi</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmOdeSpline.other" id="NcmOdeSpline.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name" />
+<col class="description" />
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmOdeSpline.html#NCM-ODE-SPLINE-DEFAULT-RELTOL:CAPS" title="NCM_ODE_SPLINE_DEFAULT_RELTOL">NCM_ODE_SPLINE_DEFAULT_RELTOL</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmOdeSpline.html#NCM-ODE-SPLINE-DEFAULT-ABSTOL:CAPS" title="NCM_ODE_SPLINE_DEFAULT_ABSTOL">NCM_ODE_SPLINE_DEFAULT_ABSTOL</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmOdeSpline.html#NCM-ODE-SPLINE-MIN-STEP:CAPS" title="NCM_ODE_SPLINE_MIN_STEP">NCM_ODE_SPLINE_MIN_STEP</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmOdeSpline.object-hierarchy" id="NcmOdeSpline.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcmOdeSpline
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmOdeSpline.description" id="NcmOdeSpline.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcmOdeSpline.functions_details" id="NcmOdeSpline.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="NcmOdeSplineDydx" id="NcmOdeSplineDydx"></a><h3>NcmOdeSplineDydx ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="c_punctuation">(</span>*NcmOdeSplineDydx<span class="c_punctuation">)</span> (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> y</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> userdata</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-ode-spline-new" id="ncm-ode-spline-new"></a><h3>ncm_ode_spline_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="returnvalue">NcmOdeSpline</span></a> *
+ncm_ode_spline_new (<em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>,
+                    <em class="parameter"><code><a class="link" href="NcmOdeSpline.html#NcmOdeSplineDydx" title="NcmOdeSplineDydx ()"><span class="type">NcmOdeSplineDydx</span></a> dydx</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-ode-spline-new.parameters" id="ncm-ode-spline-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>s</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dydx</p></td>
+<td class="parameter_description"><p> a <a class="link" href="NcmOdeSpline.html#NcmOdeSplineDydx" title="NcmOdeSplineDydx ()"><span class="type">NcmOdeSplineDydx</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-ode-spline-new.returns" id="ncm-ode-spline-new.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-ode-spline-new-full" id="ncm-ode-spline-new-full"></a><h3>ncm_ode_spline_new_full ()</h3>
+<pre class="programlisting"><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="returnvalue">NcmOdeSpline</span></a> *
+ncm_ode_spline_new_full (<em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>,
+                         <em class="parameter"><code><a class="link" href="NcmOdeSpline.html#NcmOdeSplineDydx" title="NcmOdeSplineDydx ()"><span class="type">NcmOdeSplineDydx</span></a> dydx</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> yi</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-ode-spline-new-full.parameters" id="ncm-ode-spline-new-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>s</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dydx</p></td>
+<td class="parameter_description"><p> a <a class="link" href="NcmOdeSpline.html#NcmOdeSplineDydx" title="NcmOdeSplineDydx ()"><span class="type">NcmOdeSplineDydx</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yi</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xi</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xf</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-ode-spline-new-full.returns" id="ncm-ode-spline-new-full.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-ode-spline-prepare" id="ncm-ode-spline-prepare"></a><h3>ncm_ode_spline_prepare ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_ode_spline_prepare (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> userdata</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-ode-spline-prepare.parameters" id="ncm-ode-spline-prepare.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>os</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>userdata</p></td>
+<td class="parameter_description"><p> FIXME. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-ode-spline-free" id="ncm-ode-spline-free"></a><h3>ncm_ode_spline_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_ode_spline_free (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-ode-spline-free.parameters" id="ncm-ode-spline-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>os</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-ode-spline-clear" id="ncm-ode-spline-clear"></a><h3>ncm_ode_spline_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_ode_spline_clear (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> **os</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-ode-spline-clear.parameters" id="ncm-ode-spline-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>os</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-ode-spline-set-interval" id="ncm-ode-spline-set-interval"></a><h3>ncm_ode_spline_set_interval ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_ode_spline_set_interval (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> yi</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-ode-spline-set-interval.parameters" id="ncm-ode-spline-set-interval.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>os</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yi</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xi</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xf</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-ode-spline-set-reltol" id="ncm-ode-spline-set-reltol"></a><h3>ncm_ode_spline_set_reltol ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_ode_spline_set_reltol (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-ode-spline-set-reltol.parameters" id="ncm-ode-spline-set-reltol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>os</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>reltol</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-ode-spline-set-abstol" id="ncm-ode-spline-set-abstol"></a><h3>ncm_ode_spline_set_abstol ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_ode_spline_set_abstol (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> abstol</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-ode-spline-set-abstol.parameters" id="ncm-ode-spline-set-abstol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>os</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>abstol</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-ode-spline-set-xi" id="ncm-ode-spline-set-xi"></a><h3>ncm_ode_spline_set_xi ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_ode_spline_set_xi (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-ode-spline-set-xi.parameters" id="ncm-ode-spline-set-xi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>os</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xi</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-ode-spline-set-xf" id="ncm-ode-spline-set-xf"></a><h3>ncm_ode_spline_set_xf ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_ode_spline_set_xf (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-ode-spline-set-xf.parameters" id="ncm-ode-spline-set-xf.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>os</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xf</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-ode-spline-set-yi" id="ncm-ode-spline-set-yi"></a><h3>ncm_ode_spline_set_yi ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_ode_spline_set_yi (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> yi</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-ode-spline-set-yi.parameters" id="ncm-ode-spline-set-yi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>os</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yi</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmOdeSpline.other_details" id="NcmOdeSpline.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NCM-ODE-SPLINE-DEFAULT-RELTOL:CAPS" id="NCM-ODE-SPLINE-DEFAULT-RELTOL:CAPS"></a><h3>NCM_ODE_SPLINE_DEFAULT_RELTOL</h3>
+<pre class="programlisting">#define NCM_ODE_SPLINE_DEFAULT_RELTOL (1.0e-13)
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-ODE-SPLINE-DEFAULT-ABSTOL:CAPS" id="NCM-ODE-SPLINE-DEFAULT-ABSTOL:CAPS"></a><h3>NCM_ODE_SPLINE_DEFAULT_ABSTOL</h3>
+<pre class="programlisting">#define NCM_ODE_SPLINE_DEFAULT_ABSTOL (1.0e-80)
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-ODE-SPLINE-MIN-STEP:CAPS" id="NCM-ODE-SPLINE-MIN-STEP:CAPS"></a><h3>NCM_ODE_SPLINE_MIN_STEP</h3>
+<pre class="programlisting">#define NCM_ODE_SPLINE_MIN_STEP (1.0e-10)
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmOdeSpline.property-details" id="NcmOdeSpline.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmOdeSpline--abs" id="NcmOdeSpline--abs"></a><h3>The <code class="literal">“abs”</code> property</h3>
+<pre class="programlisting">  “abs”                      <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>Absolute tolerance.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [0,1]</p>
+<p>Default value: 1e-80</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmOdeSpline--dydx" id="NcmOdeSpline--dydx"></a><h3>The <code class="literal">“dydx”</code> property</h3>
+<pre class="programlisting">  “dydx”                     <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
+<p>Pointer to the dydx function.</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmOdeSpline--reltol" id="NcmOdeSpline--reltol"></a><h3>The <code class="literal">“reltol”</code> property</h3>
+<pre class="programlisting">  “reltol”                   <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>Relative tolerance.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [0,1]</p>
+<p>Default value: 1e-13</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmOdeSpline--spline" id="NcmOdeSpline--spline"></a><h3>The <code class="literal">“spline”</code> property</h3>
+<pre class="programlisting">  “spline”                   <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *</pre>
+<p>Spline algorithm to be used.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmOdeSpline--stop-hnil" id="NcmOdeSpline--stop-hnil"></a><h3>The <code class="literal">“stop-hnil”</code> property</h3>
+<pre class="programlisting">  “stop-hnil”                <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether treat hnil as error.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: TRUE</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmOdeSpline--xf" id="NcmOdeSpline--xf"></a><h3>The <code class="literal">“xf”</code> property</h3>
+<pre class="programlisting">  “xf”                       <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>Final point.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmOdeSpline--xi" id="NcmOdeSpline--xi"></a><h3>The <code class="literal">“xi”</code> property</h3>
+<pre class="programlisting">  “xi”                       <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>Initial point.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmOdeSpline--yi" id="NcmOdeSpline--yi"></a><h3>The <code class="literal">“yi”</code> property</h3>
+<pre class="programlisting">  “yi”                       <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>Initial Value.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.25.1</div>
+</div></div></body>
+</html>

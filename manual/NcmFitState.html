@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmFitState: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s10.html" title="Statistical Analysis" />
+<link rel="prev" href="NcmMSetTransKernCat.html" title="NcmMSetTransKernCat" />
+<link rel="next" href="NcmFit.html" title="NcmFit" />
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmFitState.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmFitState.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmFitState.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s10.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcmMSetTransKernCat.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmFit.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmFitState" id="NcmFitState"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmFitState.top_of_page" id="NcmFitState.top_of_page"></a>NcmFitState</span></h2>
+<p>NcmFitState — State of a NcmFit object.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmFitState.functions" id="NcmFitState.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return" />
+<col class="functions_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmFitState.html" title="NcmFitState"><span class="returnvalue">NcmFitState</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-new" title="ncm_fit_state_new ()">ncm_fit_state_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmFitState.html" title="NcmFitState"><span class="returnvalue">NcmFitState</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-ref" title="ncm_fit_state_ref ()">ncm_fit_state_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-free" title="ncm_fit_state_free ()">ncm_fit_state_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-clear" title="ncm_fit_state_clear ()">ncm_fit_state_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-set-all" title="ncm_fit_state_set_all ()">ncm_fit_state_set_all</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-reset" title="ncm_fit_state_reset ()">ncm_fit_state_reset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-realloc" title="ncm_fit_state_realloc ()">ncm_fit_state_realloc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-set-ls" title="ncm_fit_state_set_ls ()">ncm_fit_state_set_ls</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-set-niter" title="ncm_fit_state_set_niter ()">ncm_fit_state_set_niter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-get-niter" title="ncm_fit_state_get_niter ()">ncm_fit_state_get_niter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-set-m2lnL-prec" title="ncm_fit_state_set_m2lnL_prec ()">ncm_fit_state_set_m2lnL_prec</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-get-m2lnL-prec" title="ncm_fit_state_get_m2lnL_prec ()">ncm_fit_state_get_m2lnL_prec</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-set-params-prec" title="ncm_fit_state_set_params_prec ()">ncm_fit_state_set_params_prec</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-get-params-prec" title="ncm_fit_state_get_params_prec ()">ncm_fit_state_get_params_prec</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-set-m2lnL-curval" title="ncm_fit_state_set_m2lnL_curval ()">ncm_fit_state_set_m2lnL_curval</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitState.html#ncm-fit-state-get-m2lnL-curval" title="ncm_fit_state_get_m2lnL_curval ()">ncm_fit_state_get_m2lnL_curval</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmFitState.properties" id="NcmFitState.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitState.html#NcmFitState--data-len" title="The “data-len” property">data-len</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitState.html#NcmFitState--dof" title="The “dof” property">dof</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitState.html#NcmFitState--fparam-len" title="The “fparam-len” property">fparam-len</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitState.html#NcmFitState--func-eval" title="The “func-eval” property">func-eval</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitState.html#NcmFitState--grad-eval" title="The “grad-eval” property">grad-eval</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitState.html#NcmFitState--is-best-fit" title="The “is-best-fit” property">is-best-fit</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitState.html#NcmFitState--is-least-squares" title="The “is-least-squares” property">is-least-squares</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitState.html#NcmFitState--niters" title="The “niters” property">niters</a></td>
+<td class="property_flags">Read</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmFitState.object-hierarchy" id="NcmFitState.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcmFitState
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmFitState.description" id="NcmFitState.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcmFitState.functions_details" id="NcmFitState.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-fit-state-new" id="ncm-fit-state-new"></a><h3>ncm_fit_state_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="returnvalue">NcmFitState</span></a> *
+ncm_fit_state_new (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> data_len</code></em>,
+                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> fparam_len</code></em>,
+                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> dof</code></em>,
+                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> is_least_squares</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-new.parameters" id="ncm-fit-state-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data_len</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>fparam_len</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dof</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>is_least_squares</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-state-new.returns" id="ncm-fit-state-new.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-state-ref" id="ncm-fit-state-ref"></a><h3>ncm_fit_state_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="returnvalue">NcmFitState</span></a> *
+ncm_fit_state_ref (<em class="parameter"><code><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *fstate</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-ref.parameters" id="ncm-fit-state-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fstate</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-state-ref.returns" id="ncm-fit-state-ref.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-state-free" id="ncm-fit-state-free"></a><h3>ncm_fit_state_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_state_free (<em class="parameter"><code><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *fstate</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-free.parameters" id="ncm-fit-state-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fstate</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-state-clear" id="ncm-fit-state-clear"></a><h3>ncm_fit_state_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_state_clear (<em class="parameter"><code><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> **fstate</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-clear.parameters" id="ncm-fit-state-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fstate</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-state-set-all" id="ncm-fit-state-set-all"></a><h3>ncm_fit_state_set_all ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_state_set_all (<em class="parameter"><code><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *fstate</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> data_len</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> fparam_len</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> dof</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> is_least_squares</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-set-all.parameters" id="ncm-fit-state-set-all.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fstate</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_len</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>fparam_len</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dof</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>is_least_squares</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-state-reset" id="ncm-fit-state-reset"></a><h3>ncm_fit_state_reset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_state_reset (<em class="parameter"><code><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *fstate</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-reset.parameters" id="ncm-fit-state-reset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fstate</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-state-realloc" id="ncm-fit-state-realloc"></a><h3>ncm_fit_state_realloc ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_state_realloc (<em class="parameter"><code><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *fstate</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-realloc.parameters" id="ncm-fit-state-realloc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fstate</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-state-set-ls" id="ncm-fit-state-set-ls"></a><h3>ncm_fit_state_set_ls ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_state_set_ls (<em class="parameter"><code><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *fstate</code></em>,
+                      <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *f</code></em>,
+                      <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *J</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-set-ls.parameters" id="ncm-fit-state-set-ls.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fstate</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>f</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>J</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-state-set-niter" id="ncm-fit-state-set-niter"></a><h3>ncm_fit_state_set_niter ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_state_set_niter (<em class="parameter"><code><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *fstate</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> niter</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-set-niter.parameters" id="ncm-fit-state-set-niter.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fstate</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>niter</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-state-get-niter" id="ncm-fit-state-get-niter"></a><h3>ncm_fit_state_get_niter ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_fit_state_get_niter (<em class="parameter"><code><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *fstate</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-get-niter.parameters" id="ncm-fit-state-get-niter.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fstate</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-state-get-niter.returns" id="ncm-fit-state-get-niter.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-state-set-m2lnL-prec" id="ncm-fit-state-set-m2lnL-prec"></a><h3>ncm_fit_state_set_m2lnL_prec ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_state_set_m2lnL_prec (<em class="parameter"><code><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *fstate</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> prec</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-set-m2lnL-prec.parameters" id="ncm-fit-state-set-m2lnL-prec.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fstate</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prec</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-state-get-m2lnL-prec" id="ncm-fit-state-get-m2lnL-prec"></a><h3>ncm_fit_state_get_m2lnL_prec ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_fit_state_get_m2lnL_prec (<em class="parameter"><code><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *fstate</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-get-m2lnL-prec.parameters" id="ncm-fit-state-get-m2lnL-prec.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fstate</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-state-get-m2lnL-prec.returns" id="ncm-fit-state-get-m2lnL-prec.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-state-set-params-prec" id="ncm-fit-state-set-params-prec"></a><h3>ncm_fit_state_set_params_prec ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_state_set_params_prec (<em class="parameter"><code><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *fstate</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> prec</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-set-params-prec.parameters" id="ncm-fit-state-set-params-prec.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fstate</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prec</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-state-get-params-prec" id="ncm-fit-state-get-params-prec"></a><h3>ncm_fit_state_get_params_prec ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_fit_state_get_params_prec (<em class="parameter"><code><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *fstate</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-get-params-prec.parameters" id="ncm-fit-state-get-params-prec.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fstate</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-state-get-params-prec.returns" id="ncm-fit-state-get-params-prec.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-state-set-m2lnL-curval" id="ncm-fit-state-set-m2lnL-curval"></a><h3>ncm_fit_state_set_m2lnL_curval ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_state_set_m2lnL_curval (<em class="parameter"><code><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *fstate</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> m2lnL</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-set-m2lnL-curval.parameters" id="ncm-fit-state-set-m2lnL-curval.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fstate</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>m2lnL</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-state-get-m2lnL-curval" id="ncm-fit-state-get-m2lnL-curval"></a><h3>ncm_fit_state_get_m2lnL_curval ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_fit_state_get_m2lnL_curval (<em class="parameter"><code><a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *fstate</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-state-get-m2lnL-curval.parameters" id="ncm-fit-state-get-m2lnL-curval.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fstate</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-state-get-m2lnL-curval.returns" id="ncm-fit-state-get-m2lnL-curval.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmFitState.other_details" id="NcmFitState.other_details"></a><h2>Types and Values</h2>
+</div>
+<div class="refsect1">
+<a name="NcmFitState.property-details" id="NcmFitState.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmFitState--data-len" id="NcmFitState--data-len"></a><h3>The <code class="literal">“data-len”</code> property</h3>
+<pre class="programlisting">  “data-len”                 <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>Data length.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitState--dof" id="NcmFitState--dof"></a><h3>The <code class="literal">“dof”</code> property</h3>
+<pre class="programlisting">  “dof”                      <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>Degrees of freedom.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitState--fparam-len" id="NcmFitState--fparam-len"></a><h3>The <code class="literal">“fparam-len”</code> property</h3>
+<pre class="programlisting">  “fparam-len”               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>Free parameters length.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitState--func-eval" id="NcmFitState--func-eval"></a><h3>The <code class="literal">“func-eval”</code> property</h3>
+<pre class="programlisting">  “func-eval”                <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>Number of function evaluations.</p>
+<p>Flags: Read</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitState--grad-eval" id="NcmFitState--grad-eval"></a><h3>The <code class="literal">“grad-eval”</code> property</h3>
+<pre class="programlisting">  “grad-eval”                <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>Number of gradient evaluations.</p>
+<p>Flags: Read</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitState--is-best-fit" id="NcmFitState--is-best-fit"></a><h3>The <code class="literal">“is-best-fit”</code> property</h3>
+<pre class="programlisting">  “is-best-fit”              <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Is a best fit state.</p>
+<p>Flags: Read</p>
+<p>Default value: FALSE</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitState--is-least-squares" id="NcmFitState--is-least-squares"></a><h3>The <code class="literal">“is-least-squares”</code> property</h3>
+<pre class="programlisting">  “is-least-squares”         <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Is a least squares fit state.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: FALSE</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitState--niters" id="NcmFitState--niters"></a><h3>The <code class="literal">“niters”</code> property</h3>
+<pre class="programlisting">  “niters”                   <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>Number of interations.</p>
+<p>Flags: Read</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.25.1</div>
+</div></div></body>
+</html>

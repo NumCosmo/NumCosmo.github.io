@@ -1,0 +1,2005 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcDataSNIACov: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch09.html" title="Cosmological Data" />
+<link rel="prev" href="NcDataDistMu.html" title="NcDataDistMu" />
+<link rel="next" href="NcDataClusterNCount.html" title="NcDataClusterNCount" />
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcDataSNIACov.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcDataSNIACov.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcDataSNIACov.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch09.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcDataDistMu.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcDataClusterNCount.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcDataSNIACov" id="NcDataSNIACov"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcDataSNIACov.top_of_page" id="NcDataSNIACov.top_of_page"></a>NcDataSNIACov</span></h2>
+<p>NcDataSNIACov — Supernovae Ia Data with covariance error matrix.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcDataSNIACov.functions" id="NcDataSNIACov.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return" />
+<col class="functions_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmData.html" title="NcmData"><span class="returnvalue">NcmData</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-new" title="nc_data_snia_cov_new ()">nc_data_snia_cov_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmData.html" title="NcmData"><span class="returnvalue">NcmData</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-new-full" title="nc_data_snia_cov_new_full ()">nc_data_snia_cov_new_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-sigma-int-len" title="nc_data_snia_cov_sigma_int_len ()">nc_data_snia_cov_sigma_int_len</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-peek-z-cmb" title="nc_data_snia_cov_peek_z_cmb ()">nc_data_snia_cov_peek_z_cmb</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-peek-z-he" title="nc_data_snia_cov_peek_z_he ()">nc_data_snia_cov_peek_z_he</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-peek-sigma-z" title="nc_data_snia_cov_peek_sigma_z ()">nc_data_snia_cov_peek_sigma_z</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-peek-mag" title="nc_data_snia_cov_peek_mag ()">nc_data_snia_cov_peek_mag</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-peek-width" title="nc_data_snia_cov_peek_width ()">nc_data_snia_cov_peek_width</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-peek-colour" title="nc_data_snia_cov_peek_colour ()">nc_data_snia_cov_peek_colour</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-peek-thirdpar" title="nc_data_snia_cov_peek_thirdpar ()">nc_data_snia_cov_peek_thirdpar</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-peek-abs-mag-set" title="nc_data_snia_cov_peek_abs_mag_set ()">nc_data_snia_cov_peek_abs_mag_set</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="returnvalue">NcmMatrix</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-peek-cov-full" title="nc_data_snia_cov_peek_cov_full ()">nc_data_snia_cov_peek_cov_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-set-z-cmb" title="nc_data_snia_cov_set_z_cmb ()">nc_data_snia_cov_set_z_cmb</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-set-z-he" title="nc_data_snia_cov_set_z_he ()">nc_data_snia_cov_set_z_he</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-set-sigma-z" title="nc_data_snia_cov_set_sigma_z ()">nc_data_snia_cov_set_sigma_z</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-set-mag" title="nc_data_snia_cov_set_mag ()">nc_data_snia_cov_set_mag</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-set-width" title="nc_data_snia_cov_set_width ()">nc_data_snia_cov_set_width</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-set-colour" title="nc_data_snia_cov_set_colour ()">nc_data_snia_cov_set_colour</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-set-thirdpar" title="nc_data_snia_cov_set_thirdpar ()">nc_data_snia_cov_set_thirdpar</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-set-abs-mag-set" title="nc_data_snia_cov_set_abs_mag_set ()">nc_data_snia_cov_set_abs_mag_set</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-set-cov-full" title="nc_data_snia_cov_set_cov_full ()">nc_data_snia_cov_set_cov_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-load-txt" title="nc_data_snia_cov_load_txt ()">nc_data_snia_cov_load_txt</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-load" title="nc_data_snia_cov_load ()">nc_data_snia_cov_load</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-save" title="nc_data_snia_cov_save ()">nc_data_snia_cov_save</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-estimate-width-colour" title="nc_data_snia_cov_estimate_width_colour ()">nc_data_snia_cov_estimate_width_colour</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-get-estimated-mag" title="nc_data_snia_cov_get_estimated_mag ()">nc_data_snia_cov_get_estimated_mag</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-get-estimated-width" title="nc_data_snia_cov_get_estimated_width ()">nc_data_snia_cov_get_estimated_width</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataSNIACov.html#nc-data-snia-cov-get-estimated-colour" title="nc_data_snia_cov_get_estimated_colour ()">nc_data_snia_cov_get_estimated_colour</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcDataSNIACov.properties" id="NcDataSNIACov.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *</td>
+<td class="property_name"><a class="link" href="NcDataSNIACov.html#NcDataSNIACov--absmag-set" title="The “absmag-set” property">absmag-set</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</td>
+<td class="property_name"><a class="link" href="NcDataSNIACov.html#NcDataSNIACov--colour" title="The “colour” property">colour</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *</td>
+<td class="property_name"><a class="link" href="NcDataSNIACov.html#NcDataSNIACov--cov-full" title="The “cov-full” property">cov-full</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="NcDataSNIACov.html#NcDataSNIACov--has-complete-cov" title="The “has-complete-cov” property">has-complete-cov</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</td>
+<td class="property_name"><a class="link" href="NcDataSNIACov.html#NcDataSNIACov--magnitudes" title="The “magnitudes” property">magnitudes</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</td>
+<td class="property_name"><a class="link" href="NcDataSNIACov.html#NcDataSNIACov--sigma-thirdpar" title="The “sigma-thirdpar” property">sigma-thirdpar</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</td>
+<td class="property_name"><a class="link" href="NcDataSNIACov.html#NcDataSNIACov--sigma-z" title="The “sigma-z” property">sigma-z</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</td>
+<td class="property_name"><a class="link" href="NcDataSNIACov.html#NcDataSNIACov--thirdpar" title="The “thirdpar” property">thirdpar</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</td>
+<td class="property_name"><a class="link" href="NcDataSNIACov.html#NcDataSNIACov--width" title="The “width” property">width</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</td>
+<td class="property_name"><a class="link" href="NcDataSNIACov.html#NcDataSNIACov--z-He" title="The “z-He” property">z-He</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</td>
+<td class="property_name"><a class="link" href="NcDataSNIACov.html#NcDataSNIACov--z-cmb" title="The “z-cmb” property">z-cmb</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcDataSNIACov.other" id="NcDataSNIACov.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name" />
+<col class="description" />
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NcDataSNIACovData" title="enum NcDataSNIACovData">NcDataSNIACovData</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-LENGTH:CAPS" title="NC_DATA_SNIA_COV_LENGTH">NC_DATA_SNIA_COV_LENGTH</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NcDataSNIACovDataV1" title="enum NcDataSNIACovDataV1">NcDataSNIACovDataV1</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-V1-LENGTH:CAPS" title="NC_DATA_SNIA_COV_V1_LENGTH">NC_DATA_SNIA_COV_V1_LENGTH</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NcDataSNIACovDataInit" title="enum NcDataSNIACovDataInit">NcDataSNIACovDataInit</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-INIT-ALL:CAPS" title="NC_DATA_SNIA_COV_INIT_ALL">NC_DATA_SNIA_COV_INIT_ALL</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NcDataSNIACovOrder" title="enum NcDataSNIACovOrder">NcDataSNIACovOrder</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-SYMM-TOL:CAPS" title="NC_DATA_SNIA_COV_SYMM_TOL">NC_DATA_SNIA_COV_SYMM_TOL</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-CAT-LAST-VERSION:CAPS" title="NC_DATA_SNIA_COV_CAT_LAST_VERSION">NC_DATA_SNIA_COV_CAT_LAST_VERSION</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-CAT-DESC:CAPS" title="NC_DATA_SNIA_COV_CAT_DESC">NC_DATA_SNIA_COV_CAT_DESC</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-DATA-DESC:CAPS" title="NC_DATA_SNIA_COV_DATA_DESC">NC_DATA_SNIA_COV_DATA_DESC</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-CAT-DESC-COMMENT:CAPS" title="NC_DATA_SNIA_COV_CAT_DESC_COMMENT">NC_DATA_SNIA_COV_CAT_DESC_COMMENT</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-CAT-VERSION:CAPS" title="NC_DATA_SNIA_COV_CAT_VERSION">NC_DATA_SNIA_COV_CAT_VERSION</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-CAT-VERSION-COMMENT:CAPS" title="NC_DATA_SNIA_COV_CAT_VERSION_COMMENT">NC_DATA_SNIA_COV_CAT_VERSION_COMMENT</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-DATA-GROUP:CAPS" title="NC_DATA_SNIA_COV_DATA_GROUP">NC_DATA_SNIA_COV_DATA_GROUP</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-DATA-LEN-KEY:CAPS" title="NC_DATA_SNIA_COV_DATA_LEN_KEY">NC_DATA_SNIA_COV_DATA_LEN_KEY</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-DATA-KEY:CAPS" title="NC_DATA_SNIA_COV_DATA_KEY">NC_DATA_SNIA_COV_DATA_KEY</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-DATA-HAS-COMPLETE-COV-KEY:CAPS" title="NC_DATA_SNIA_COV_DATA_HAS_COMPLETE_COV_KEY">NC_DATA_SNIA_COV_DATA_HAS_COMPLETE_COV_KEY</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-CAT-HAS-COMPLETE-COV:CAPS" title="NC_DATA_SNIA_COV_CAT_HAS_COMPLETE_COV">NC_DATA_SNIA_COV_CAT_HAS_COMPLETE_COV</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-CAT-HAS-COMPLETE-COV-COMMENT:CAPS" title="NC_DATA_SNIA_COV_CAT_HAS_COMPLETE_COV_COMMENT">NC_DATA_SNIA_COV_CAT_HAS_COMPLETE_COV_COMMENT</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-MAG-KEY:CAPS" title="NC_DATA_SNIA_COV_MAG_KEY">NC_DATA_SNIA_COV_MAG_KEY</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-WIDTH-KEY:CAPS" title="NC_DATA_SNIA_COV_WIDTH_KEY">NC_DATA_SNIA_COV_WIDTH_KEY</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-COLOUR-KEY:CAPS" title="NC_DATA_SNIA_COV_COLOUR_KEY">NC_DATA_SNIA_COV_COLOUR_KEY</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-MAG-WIDTH-KEY:CAPS" title="NC_DATA_SNIA_COV_MAG_WIDTH_KEY">NC_DATA_SNIA_COV_MAG_WIDTH_KEY</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-MAG-COLOUR-KEY:CAPS" title="NC_DATA_SNIA_COV_MAG_COLOUR_KEY">NC_DATA_SNIA_COV_MAG_COLOUR_KEY</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataSNIACov.html#NC-DATA-SNIA-COV-WIDTH-COLOUR-KEY:CAPS" title="NC_DATA_SNIA_COV_WIDTH_COLOUR_KEY">NC_DATA_SNIA_COV_WIDTH_COLOUR_KEY</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcDataSNIACov.object-hierarchy" id="NcDataSNIACov.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">├──</span> NcDataSNIACovData
+    <span class="lineart">├──</span> NcDataSNIACovDataV1
+    <span class="lineart">╰──</span> NcDataSNIACovOrder
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GFlags</a>
+    <span class="lineart">╰──</span> NcDataSNIACovDataInit
+    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcmData.html" title="NcmData">NcmData</a>
+        <span class="lineart">╰──</span> <a class="link" href="NcmDataGaussCov.html" title="NcmDataGaussCov">NcmDataGaussCov</a>
+            <span class="lineart">╰──</span> NcDataSNIACov
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcDataSNIACov.description" id="NcDataSNIACov.description"></a><h2>Description</h2>
+<p>See <a class="link" href="NcSNIADistCov.html" title="NcSNIADistCov"><span class="type">NcSNIADistCov</span></a>.</p>
+</div>
+<div class="refsect1">
+<a name="NcDataSNIACov.functions_details" id="NcDataSNIACov.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="nc-data-snia-cov-new" id="nc-data-snia-cov-new"></a><h3>nc_data_snia_cov_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmData.html" title="NcmData"><span class="returnvalue">NcmData</span></a> *
+nc_data_snia_cov_new (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_norma</code></em>);</pre>
+<p>Creates a new empty <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> object. If <em class="parameter"><code>use_norma</code></em>
+ is 
+true the object will use the correct Likelihood normalzation 
+when calculating $-2\ln(L)$</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-new.parameters" id="nc-data-snia-cov-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>use_norma</p></td>
+<td class="parameter_description"><p>Whether to use the correct Likelihood normalzation</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-new.returns" id="nc-data-snia-cov-new.returns"></a><h4>Returns</h4>
+<p> the newly created instance of <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-new-full" id="nc-data-snia-cov-new-full"></a><h3>nc_data_snia_cov_new_full ()</h3>
+<pre class="programlisting"><a class="link" href="NcmData.html" title="NcmData"><span class="returnvalue">NcmData</span></a> *
+nc_data_snia_cov_new_full (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_norma</code></em>);</pre>
+<p>Creates a new <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> object and load with the catalog
+in <em class="parameter"><code>filename</code></em>
+. If <em class="parameter"><code>use_norma</code></em>
+ is true the object will use the 
+correct Likelihood normalzation when calculating $-2\ln(L)$</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-new-full.parameters" id="nc-data-snia-cov-new-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>catalog file name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>use_norma</p></td>
+<td class="parameter_description"><p>Whether to use the correct Likelihood normalzation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-new-full.returns" id="nc-data-snia-cov-new-full.returns"></a><h4>Returns</h4>
+<p> the newly created instance of <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-sigma-int-len" id="nc-data-snia-cov-sigma-int-len"></a><h3>nc_data_snia_cov_sigma_int_len ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+nc_data_snia_cov_sigma_int_len (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>);</pre>
+<p>Gets the number of different intrinsic sigma parameters in the
+catalog.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-sigma-int-len.parameters" id="nc-data-snia-cov-sigma-int-len.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-sigma-int-len.returns" id="nc-data-snia-cov-sigma-int-len.returns"></a><h4>Returns</h4>
+<p> The number of different sigma_int.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-peek-z-cmb" id="nc-data-snia-cov-peek-z-cmb"></a><h3>nc_data_snia_cov_peek_z_cmb ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+nc_data_snia_cov_peek_z_cmb (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>);</pre>
+<p>Gets the $z_\mathrm{cmb}$ <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-z-cmb.parameters" id="nc-data-snia-cov-peek-z-cmb.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-z-cmb.returns" id="nc-data-snia-cov-peek-z-cmb.returns"></a><h4>Returns</h4>
+<p> the $z_\mathrm{cmb}$ <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-peek-z-he" id="nc-data-snia-cov-peek-z-he"></a><h3>nc_data_snia_cov_peek_z_he ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+nc_data_snia_cov_peek_z_he (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>);</pre>
+<p>Gets the $z_\mathrm{he}$ <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-z-he.parameters" id="nc-data-snia-cov-peek-z-he.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-z-he.returns" id="nc-data-snia-cov-peek-z-he.returns"></a><h4>Returns</h4>
+<p> the $z_\mathrm{he}$ <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-peek-sigma-z" id="nc-data-snia-cov-peek-sigma-z"></a><h3>nc_data_snia_cov_peek_sigma_z ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+nc_data_snia_cov_peek_sigma_z (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>);</pre>
+<p>Gets the $\sigma_z$ <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-sigma-z.parameters" id="nc-data-snia-cov-peek-sigma-z.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-sigma-z.returns" id="nc-data-snia-cov-peek-sigma-z.returns"></a><h4>Returns</h4>
+<p> the $\sigma_z$ <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-peek-mag" id="nc-data-snia-cov-peek-mag"></a><h3>nc_data_snia_cov_peek_mag ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+nc_data_snia_cov_peek_mag (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>);</pre>
+<p>Gets the magnitude <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-mag.parameters" id="nc-data-snia-cov-peek-mag.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-mag.returns" id="nc-data-snia-cov-peek-mag.returns"></a><h4>Returns</h4>
+<p> the magnitude <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-peek-width" id="nc-data-snia-cov-peek-width"></a><h3>nc_data_snia_cov_peek_width ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+nc_data_snia_cov_peek_width (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>);</pre>
+<p>Gets the width <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-width.parameters" id="nc-data-snia-cov-peek-width.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-width.returns" id="nc-data-snia-cov-peek-width.returns"></a><h4>Returns</h4>
+<p> the width <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-peek-colour" id="nc-data-snia-cov-peek-colour"></a><h3>nc_data_snia_cov_peek_colour ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+nc_data_snia_cov_peek_colour (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>);</pre>
+<p>Gets the colour <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-colour.parameters" id="nc-data-snia-cov-peek-colour.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-colour.returns" id="nc-data-snia-cov-peek-colour.returns"></a><h4>Returns</h4>
+<p> the colour <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-peek-thirdpar" id="nc-data-snia-cov-peek-thirdpar"></a><h3>nc_data_snia_cov_peek_thirdpar ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+nc_data_snia_cov_peek_thirdpar (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>);</pre>
+<p>Gets the thirdpar <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-thirdpar.parameters" id="nc-data-snia-cov-peek-thirdpar.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-thirdpar.returns" id="nc-data-snia-cov-peek-thirdpar.returns"></a><h4>Returns</h4>
+<p> the thirdpar <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-peek-abs-mag-set" id="nc-data-snia-cov-peek-abs-mag-set"></a><h3>nc_data_snia_cov_peek_abs_mag_set ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
+nc_data_snia_cov_peek_abs_mag_set (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>);</pre>
+<p>Gets the dataset array.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-abs-mag-set.parameters" id="nc-data-snia-cov-peek-abs-mag-set.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-abs-mag-set.returns" id="nc-data-snia-cov-peek-abs-mag-set.returns"></a><h4>Returns</h4>
+<p> the dataset array. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint32]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-peek-cov-full" id="nc-data-snia-cov-peek-cov-full"></a><h3>nc_data_snia_cov_peek_cov_full ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="returnvalue">NcmMatrix</span></a> *
+nc_data_snia_cov_peek_cov_full (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>);</pre>
+<p>Gets the cov_full <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a>.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-cov-full.parameters" id="nc-data-snia-cov-peek-cov-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-peek-cov-full.returns" id="nc-data-snia-cov-peek-cov-full.returns"></a><h4>Returns</h4>
+<p> the cov_full <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-set-z-cmb" id="nc-data-snia-cov-set-z-cmb"></a><h3>nc_data_snia_cov_set_z_cmb ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_snia_cov_set_z_cmb (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                            <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *z_cmb</code></em>);</pre>
+<p>Sets the $z_\mathrm{cmb}$ vector to <em class="parameter"><code>z_cmb</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-set-z-cmb.parameters" id="nc-data-snia-cov-set-z-cmb.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z_cmb</p></td>
+<td class="parameter_description"><p>the $z_\mathrm{cmb}$ <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-set-z-he" id="nc-data-snia-cov-set-z-he"></a><h3>nc_data_snia_cov_set_z_he ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_snia_cov_set_z_he (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *z_he</code></em>);</pre>
+<p>Sets the $z_\mathrm{he}$ vector to <em class="parameter"><code>z_he</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-set-z-he.parameters" id="nc-data-snia-cov-set-z-he.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z_he</p></td>
+<td class="parameter_description"><p>the $z_\mathrm{he}$ <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-set-sigma-z" id="nc-data-snia-cov-set-sigma-z"></a><h3>nc_data_snia_cov_set_sigma_z ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_snia_cov_set_sigma_z (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                              <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *sigma_z</code></em>);</pre>
+<p>Sets the $\sigma_z$ vector to <em class="parameter"><code>sigma_z</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-set-sigma-z.parameters" id="nc-data-snia-cov-set-sigma-z.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sigma_z</p></td>
+<td class="parameter_description"><p>the $\sigma_z$ <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-set-mag" id="nc-data-snia-cov-set-mag"></a><h3>nc_data_snia_cov_set_mag ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_snia_cov_set_mag (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                          <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *mag</code></em>);</pre>
+<p>Sets the magnitude vector to <em class="parameter"><code>mag</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-set-mag.parameters" id="nc-data-snia-cov-set-mag.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mag</p></td>
+<td class="parameter_description"><p>the magnitude <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-set-width" id="nc-data-snia-cov-set-width"></a><h3>nc_data_snia_cov_set_width ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_snia_cov_set_width (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                            <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *width</code></em>);</pre>
+<p>Sets the width vector to <em class="parameter"><code>width</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-set-width.parameters" id="nc-data-snia-cov-set-width.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>the width <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-set-colour" id="nc-data-snia-cov-set-colour"></a><h3>nc_data_snia_cov_set_colour ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_snia_cov_set_colour (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *colour</code></em>);</pre>
+<p>Sets the colour vector to <em class="parameter"><code>colour</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-set-colour.parameters" id="nc-data-snia-cov-set-colour.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>colour</p></td>
+<td class="parameter_description"><p>the colour <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-set-thirdpar" id="nc-data-snia-cov-set-thirdpar"></a><h3>nc_data_snia_cov_set_thirdpar ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_snia_cov_set_thirdpar (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *thirdpar</code></em>);</pre>
+<p>Sets the thirdpar vector to <em class="parameter"><code>thirdpar</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-set-thirdpar.parameters" id="nc-data-snia-cov-set-thirdpar.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>thirdpar</p></td>
+<td class="parameter_description"><p>the thirdpar <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-set-abs-mag-set" id="nc-data-snia-cov-set-abs-mag-set"></a><h3>nc_data_snia_cov_set_abs_mag_set ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_snia_cov_set_abs_mag_set (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Arrays.html#GArray"><span class="type">GArray</span></a> *abs_mag_set</code></em>);</pre>
+<p>Sets the array containing the indexes labeling to which set each SNIa
+belongs.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-set-abs-mag-set.parameters" id="nc-data-snia-cov-set-abs-mag-set.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>abs_mag_set</p></td>
+<td class="parameter_description"><p> the full convariance <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint32]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-set-cov-full" id="nc-data-snia-cov-set-cov-full"></a><h3>nc_data_snia_cov_set_cov_full ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_snia_cov_set_cov_full (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cov_full</code></em>);</pre>
+<p>Sets the full covariance for the system, the size of <em class="parameter"><code>cov_full</code></em>
+,
+must match the system size.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-set-cov-full.parameters" id="nc-data-snia-cov-set-cov-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cov_full</p></td>
+<td class="parameter_description"><p>the full convariance <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-load-txt" id="nc-data-snia-cov-load-txt"></a><h3>nc_data_snia_cov_load_txt ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_snia_cov_load_txt (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-load-txt.parameters" id="nc-data-snia-cov-load-txt.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-load" id="nc-data-snia-cov-load"></a><h3>nc_data_snia_cov_load ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_snia_cov_load (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>Loads the catalog from <em class="parameter"><code>filename</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-load.parameters" id="nc-data-snia-cov-load.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>file name of the catalog</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-save" id="nc-data-snia-cov-save"></a><h3>nc_data_snia_cov_save ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_snia_cov_save (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> overwrite</code></em>);</pre>
+<p>Saves the catalog in fits (cfitsio) format using <em class="parameter"><code>filename</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-save.parameters" id="nc-data-snia-cov-save.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>file name of the catalog</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>overwrite</p></td>
+<td class="parameter_description"><p>whether to overwrite an already existing catalog</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-estimate-width-colour" id="nc-data-snia-cov-estimate-width-colour"></a><h3>nc_data_snia_cov_estimate_width_colour ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_data_snia_cov_estimate_width_colour
+                               (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>Estimate the values of width and colour from the catalog using the models in <em class="parameter"><code>mset</code></em>
+
+and fitting the width and colour as free parameters.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-estimate-width-colour.parameters" id="nc-data-snia-cov-estimate-width-colour.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-estimate-width-colour.returns" id="nc-data-snia-cov-estimate-width-colour.returns"></a><h4>Returns</h4>
+<p> the value of the chisq for the fit.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-get-estimated-mag" id="nc-data-snia-cov-get-estimated-mag"></a><h3>nc_data_snia_cov_get_estimated_mag ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+nc_data_snia_cov_get_estimated_mag (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                                    <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>Estimate the values of width and colour from the catalog using the models in <em class="parameter"><code>mset</code></em>
+
+and fitting the width and colour as free parameters.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-get-estimated-mag.parameters" id="nc-data-snia-cov-get-estimated-mag.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-get-estimated-mag.returns" id="nc-data-snia-cov-get-estimated-mag.returns"></a><h4>Returns</h4>
+<p> the magnitude vector. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-get-estimated-width" id="nc-data-snia-cov-get-estimated-width"></a><h3>nc_data_snia_cov_get_estimated_width ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+nc_data_snia_cov_get_estimated_width (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>Estimate the values of width and colour from the catalog using the models in <em class="parameter"><code>mset</code></em>
+
+and fitting the width and colour as free parameters.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-get-estimated-width.parameters" id="nc-data-snia-cov-get-estimated-width.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-get-estimated-width.returns" id="nc-data-snia-cov-get-estimated-width.returns"></a><h4>Returns</h4>
+<p> the width vector. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-snia-cov-get-estimated-colour" id="nc-data-snia-cov-get-estimated-colour"></a><h3>nc_data_snia_cov_get_estimated_colour ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+nc_data_snia_cov_get_estimated_colour (<em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
+                                       <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>Estimate the values of width and colour from the catalog using the models in <em class="parameter"><code>mset</code></em>
+
+and fitting the width and colour as free parameters.</p>
+<div class="refsect3">
+<a name="nc-data-snia-cov-get-estimated-colour.parameters" id="nc-data-snia-cov-get-estimated-colour.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>snia_cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-snia-cov-get-estimated-colour.returns" id="nc-data-snia-cov-get-estimated-colour.returns"></a><h4>Returns</h4>
+<p> the colour vector. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcDataSNIACov.other_details" id="NcDataSNIACov.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcDataSNIACovData" id="NcDataSNIACovData"></a><h3>enum NcDataSNIACovData</h3>
+<p>Data ordering of Version 0 (V0) data format.</p>
+<div class="refsect3">
+<a name="NcDataSNIACovData.members" id="NcDataSNIACovData.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-ZCMB:CAPS" id="NC-DATA-SNIA-COV-ZCMB:CAPS"></a>NC_DATA_SNIA_COV_ZCMB</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-ZHE:CAPS" id="NC-DATA-SNIA-COV-ZHE:CAPS"></a>NC_DATA_SNIA_COV_ZHE</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-SIGMA-Z:CAPS" id="NC-DATA-SNIA-COV-SIGMA-Z:CAPS"></a>NC_DATA_SNIA_COV_SIGMA_Z</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-MAG:CAPS" id="NC-DATA-SNIA-COV-MAG:CAPS"></a>NC_DATA_SNIA_COV_MAG</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-SIGMA-MAG:CAPS" id="NC-DATA-SNIA-COV-SIGMA-MAG:CAPS"></a>NC_DATA_SNIA_COV_SIGMA_MAG</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-WIDTH:CAPS" id="NC-DATA-SNIA-COV-WIDTH:CAPS"></a>NC_DATA_SNIA_COV_WIDTH</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-SIGMA-WIDTH:CAPS" id="NC-DATA-SNIA-COV-SIGMA-WIDTH:CAPS"></a>NC_DATA_SNIA_COV_SIGMA_WIDTH</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-COLOUR:CAPS" id="NC-DATA-SNIA-COV-COLOUR:CAPS"></a>NC_DATA_SNIA_COV_COLOUR</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-SIGMA-COLOUR:CAPS" id="NC-DATA-SNIA-COV-SIGMA-COLOUR:CAPS"></a>NC_DATA_SNIA_COV_SIGMA_COLOUR</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-THIRDPAR:CAPS" id="NC-DATA-SNIA-COV-THIRDPAR:CAPS"></a>NC_DATA_SNIA_COV_THIRDPAR</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-SIGMA-THIRDPAR:CAPS" id="NC-DATA-SNIA-COV-SIGMA-THIRDPAR:CAPS"></a>NC_DATA_SNIA_COV_SIGMA_THIRDPAR</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-DIAG-MAG-WIDTH:CAPS" id="NC-DATA-SNIA-COV-DIAG-MAG-WIDTH:CAPS"></a>NC_DATA_SNIA_COV_DIAG_MAG_WIDTH</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-DIAG-MAG-COLOUR:CAPS" id="NC-DATA-SNIA-COV-DIAG-MAG-COLOUR:CAPS"></a>NC_DATA_SNIA_COV_DIAG_MAG_COLOUR</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-DIAG-WIDTH-COLOUR:CAPS" id="NC-DATA-SNIA-COV-DIAG-WIDTH-COLOUR:CAPS"></a>NC_DATA_SNIA_COV_DIAG_WIDTH_COLOUR</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-ABSMAG-SET:CAPS" id="NC-DATA-SNIA-COV-ABSMAG-SET:CAPS"></a>NC_DATA_SNIA_COV_ABSMAG_SET</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-VAR-MAG:CAPS" id="NC-DATA-SNIA-COV-VAR-MAG:CAPS"></a>NC_DATA_SNIA_COV_VAR_MAG</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-VAR-WIDTH:CAPS" id="NC-DATA-SNIA-COV-VAR-WIDTH:CAPS"></a>NC_DATA_SNIA_COV_VAR_WIDTH</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-VAR-COLOUR:CAPS" id="NC-DATA-SNIA-COV-VAR-COLOUR:CAPS"></a>NC_DATA_SNIA_COV_VAR_COLOUR</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-VAR-MAG-WIDTH:CAPS" id="NC-DATA-SNIA-COV-VAR-MAG-WIDTH:CAPS"></a>NC_DATA_SNIA_COV_VAR_MAG_WIDTH</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-VAR-MAG-COLOUR:CAPS" id="NC-DATA-SNIA-COV-VAR-MAG-COLOUR:CAPS"></a>NC_DATA_SNIA_COV_VAR_MAG_COLOUR</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-VAR-WIDTH-COLOUR:CAPS" id="NC-DATA-SNIA-COV-VAR-WIDTH-COLOUR:CAPS"></a>NC_DATA_SNIA_COV_VAR_WIDTH_COLOUR</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-LENGTH:CAPS" id="NC-DATA-SNIA-COV-LENGTH:CAPS"></a><h3>NC_DATA_SNIA_COV_LENGTH</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_LENGTH NC_DATA_SNIA_COV_ABSMAG_SET
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcDataSNIACovDataV1" id="NcDataSNIACovDataV1"></a><h3>enum NcDataSNIACovDataV1</h3>
+<p>Data ordering of Version 1 (V1) data format.</p>
+<div class="refsect3">
+<a name="NcDataSNIACovDataV1.members" id="NcDataSNIACovDataV1.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-V1-ZCMB:CAPS" id="NC-DATA-SNIA-COV-V1-ZCMB:CAPS"></a>NC_DATA_SNIA_COV_V1_ZCMB</p></td>
+<td class="enum_member_description">
+<p>Redshift in the CMB frame.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-V1-ZHE:CAPS" id="NC-DATA-SNIA-COV-V1-ZHE:CAPS"></a>NC_DATA_SNIA_COV_V1_ZHE</p></td>
+<td class="enum_member_description">
+<p>Redshift in sun's frame.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-V1-SIGMA-Z:CAPS" id="NC-DATA-SNIA-COV-V1-SIGMA-Z:CAPS"></a>NC_DATA_SNIA_COV_V1_SIGMA_Z</p></td>
+<td class="enum_member_description">
+<p>Redshift error.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-V1-MAG:CAPS" id="NC-DATA-SNIA-COV-V1-MAG:CAPS"></a>NC_DATA_SNIA_COV_V1_MAG</p></td>
+<td class="enum_member_description">
+<p>Magnitude.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-V1-WIDTH:CAPS" id="NC-DATA-SNIA-COV-V1-WIDTH:CAPS"></a>NC_DATA_SNIA_COV_V1_WIDTH</p></td>
+<td class="enum_member_description">
+<p>Width (strecth).</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-V1-COLOUR:CAPS" id="NC-DATA-SNIA-COV-V1-COLOUR:CAPS"></a>NC_DATA_SNIA_COV_V1_COLOUR</p></td>
+<td class="enum_member_description">
+<p>Colour.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-V1-THIRDPAR:CAPS" id="NC-DATA-SNIA-COV-V1-THIRDPAR:CAPS"></a>NC_DATA_SNIA_COV_V1_THIRDPAR</p></td>
+<td class="enum_member_description">
+<p>Third parameter.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-V1-SIGMA-THIRDPAR:CAPS" id="NC-DATA-SNIA-COV-V1-SIGMA-THIRDPAR:CAPS"></a>NC_DATA_SNIA_COV_V1_SIGMA_THIRDPAR</p></td>
+<td class="enum_member_description">
+<p>Error on third parameter.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-V1-ABSMAG-SET:CAPS" id="NC-DATA-SNIA-COV-V1-ABSMAG-SET:CAPS"></a>NC_DATA_SNIA_COV_V1_ABSMAG_SET</p></td>
+<td class="enum_member_description">
+<p>Data set index.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-V1-MAG-MAG:CAPS" id="NC-DATA-SNIA-COV-V1-MAG-MAG:CAPS"></a>NC_DATA_SNIA_COV_V1_MAG_MAG</p></td>
+<td class="enum_member_description">
+<p>Covariance mag-mag.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-V1-MAG-WIDTH:CAPS" id="NC-DATA-SNIA-COV-V1-MAG-WIDTH:CAPS"></a>NC_DATA_SNIA_COV_V1_MAG_WIDTH</p></td>
+<td class="enum_member_description">
+<p>Covariance mag-width.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-V1-MAG-COLOUR:CAPS" id="NC-DATA-SNIA-COV-V1-MAG-COLOUR:CAPS"></a>NC_DATA_SNIA_COV_V1_MAG_COLOUR</p></td>
+<td class="enum_member_description">
+<p>Covariance mag-colour.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-V1-WIDTH-WIDTH:CAPS" id="NC-DATA-SNIA-COV-V1-WIDTH-WIDTH:CAPS"></a>NC_DATA_SNIA_COV_V1_WIDTH_WIDTH</p></td>
+<td class="enum_member_description">
+<p>Covariance width-width.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-V1-WIDTH-COLOUR:CAPS" id="NC-DATA-SNIA-COV-V1-WIDTH-COLOUR:CAPS"></a>NC_DATA_SNIA_COV_V1_WIDTH_COLOUR</p></td>
+<td class="enum_member_description">
+<p>Covariance width-colour.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-V1-COLOUR-COLOUR:CAPS" id="NC-DATA-SNIA-COV-V1-COLOUR-COLOUR:CAPS"></a>NC_DATA_SNIA_COV_V1_COLOUR_COLOUR</p></td>
+<td class="enum_member_description">
+<p>Covariance colour-colour.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-V1-LENGTH:CAPS" id="NC-DATA-SNIA-COV-V1-LENGTH:CAPS"></a><h3>NC_DATA_SNIA_COV_V1_LENGTH</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_V1_LENGTH NC_DATA_SNIA_COV_V1_ABSMAG_SET
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcDataSNIACovDataInit" id="NcDataSNIACovDataInit"></a><h3>enum NcDataSNIACovDataInit</h3>
+<p>Bitwise control of data initialization.</p>
+<div class="refsect3">
+<a name="NcDataSNIACovDataInit.members" id="NcDataSNIACovDataInit.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-INIT-ZCMB:CAPS" id="NC-DATA-SNIA-COV-INIT-ZCMB:CAPS"></a>NC_DATA_SNIA_COV_INIT_ZCMB</p></td>
+<td class="enum_member_description">
+<p>Redshift in the CMB frame.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-INIT-ZHE:CAPS" id="NC-DATA-SNIA-COV-INIT-ZHE:CAPS"></a>NC_DATA_SNIA_COV_INIT_ZHE</p></td>
+<td class="enum_member_description">
+<p>Redshift in sun's frame.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-INIT-SIGMA-Z:CAPS" id="NC-DATA-SNIA-COV-INIT-SIGMA-Z:CAPS"></a>NC_DATA_SNIA_COV_INIT_SIGMA_Z</p></td>
+<td class="enum_member_description">
+<p>Redshift error.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-INIT-MAG:CAPS" id="NC-DATA-SNIA-COV-INIT-MAG:CAPS"></a>NC_DATA_SNIA_COV_INIT_MAG</p></td>
+<td class="enum_member_description">
+<p>Magnitude.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-INIT-WIDTH:CAPS" id="NC-DATA-SNIA-COV-INIT-WIDTH:CAPS"></a>NC_DATA_SNIA_COV_INIT_WIDTH</p></td>
+<td class="enum_member_description">
+<p>Width (strecth).</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-INIT-COLOUR:CAPS" id="NC-DATA-SNIA-COV-INIT-COLOUR:CAPS"></a>NC_DATA_SNIA_COV_INIT_COLOUR</p></td>
+<td class="enum_member_description">
+<p>Colour.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-INIT-THIRDPAR:CAPS" id="NC-DATA-SNIA-COV-INIT-THIRDPAR:CAPS"></a>NC_DATA_SNIA_COV_INIT_THIRDPAR</p></td>
+<td class="enum_member_description">
+<p>Third parameter.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-INIT-ABSMAG-SET:CAPS" id="NC-DATA-SNIA-COV-INIT-ABSMAG-SET:CAPS"></a>NC_DATA_SNIA_COV_INIT_ABSMAG_SET</p></td>
+<td class="enum_member_description">
+<p>Data set index.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-INIT-COV-FULL:CAPS" id="NC-DATA-SNIA-COV-INIT-COV-FULL:CAPS"></a>NC_DATA_SNIA_COV_INIT_COV_FULL</p></td>
+<td class="enum_member_description">
+<p>Full covariance matrix.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-INIT-ALL:CAPS" id="NC-DATA-SNIA-COV-INIT-ALL:CAPS"></a><h3>NC_DATA_SNIA_COV_INIT_ALL</h3>
+<pre class="programlisting">#define             NC_DATA_SNIA_COV_INIT_ALL</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcDataSNIACovOrder" id="NcDataSNIACovOrder"></a><h3>enum NcDataSNIACovOrder</h3>
+<p>Data ordering for covariance.</p>
+<div class="refsect3">
+<a name="NcDataSNIACovOrder.members" id="NcDataSNIACovOrder.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-ORDER-MAG-MAG:CAPS" id="NC-DATA-SNIA-COV-ORDER-MAG-MAG:CAPS"></a>NC_DATA_SNIA_COV_ORDER_MAG_MAG</p></td>
+<td class="enum_member_description">
+<p>mag-mag.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-ORDER-MAG-WIDTH:CAPS" id="NC-DATA-SNIA-COV-ORDER-MAG-WIDTH:CAPS"></a>NC_DATA_SNIA_COV_ORDER_MAG_WIDTH</p></td>
+<td class="enum_member_description">
+<p>mag-width.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-ORDER-MAG-COLOUR:CAPS" id="NC-DATA-SNIA-COV-ORDER-MAG-COLOUR:CAPS"></a>NC_DATA_SNIA_COV_ORDER_MAG_COLOUR</p></td>
+<td class="enum_member_description">
+<p>mag-colour.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-ORDER-WIDTH-WIDTH:CAPS" id="NC-DATA-SNIA-COV-ORDER-WIDTH-WIDTH:CAPS"></a>NC_DATA_SNIA_COV_ORDER_WIDTH_WIDTH</p></td>
+<td class="enum_member_description">
+<p>width-width.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-ORDER-WIDTH-COLOUR:CAPS" id="NC-DATA-SNIA-COV-ORDER-WIDTH-COLOUR:CAPS"></a>NC_DATA_SNIA_COV_ORDER_WIDTH_COLOUR</p></td>
+<td class="enum_member_description">
+<p>width-colour.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-SNIA-COV-ORDER-COLOUR-COLOUR:CAPS" id="NC-DATA-SNIA-COV-ORDER-COLOUR-COLOUR:CAPS"></a>NC_DATA_SNIA_COV_ORDER_COLOUR_COLOUR</p></td>
+<td class="enum_member_description">
+<p>colour-colour.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-SYMM-TOL:CAPS" id="NC-DATA-SNIA-COV-SYMM-TOL:CAPS"></a><h3>NC_DATA_SNIA_COV_SYMM_TOL</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_SYMM_TOL (1.0e-13)
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-CAT-LAST-VERSION:CAPS" id="NC-DATA-SNIA-COV-CAT-LAST-VERSION:CAPS"></a><h3>NC_DATA_SNIA_COV_CAT_LAST_VERSION</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_CAT_LAST_VERSION 1
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-CAT-DESC:CAPS" id="NC-DATA-SNIA-COV-CAT-DESC:CAPS"></a><h3>NC_DATA_SNIA_COV_CAT_DESC</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_CAT_DESC "DESC"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-DATA-DESC:CAPS" id="NC-DATA-SNIA-COV-DATA-DESC:CAPS"></a><h3>NC_DATA_SNIA_COV_DATA_DESC</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_DATA_DESC "Description"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-CAT-DESC-COMMENT:CAPS" id="NC-DATA-SNIA-COV-CAT-DESC-COMMENT:CAPS"></a><h3>NC_DATA_SNIA_COV_CAT_DESC_COMMENT</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_CAT_DESC_COMMENT "Catalog data description"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-CAT-VERSION:CAPS" id="NC-DATA-SNIA-COV-CAT-VERSION:CAPS"></a><h3>NC_DATA_SNIA_COV_CAT_VERSION</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_CAT_VERSION "VERSION"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-CAT-VERSION-COMMENT:CAPS" id="NC-DATA-SNIA-COV-CAT-VERSION-COMMENT:CAPS"></a><h3>NC_DATA_SNIA_COV_CAT_VERSION_COMMENT</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_CAT_VERSION_COMMENT "Version number"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-DATA-GROUP:CAPS" id="NC-DATA-SNIA-COV-DATA-GROUP:CAPS"></a><h3>NC_DATA_SNIA_COV_DATA_GROUP</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_DATA_GROUP "Supernovae Ia Data"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-DATA-LEN-KEY:CAPS" id="NC-DATA-SNIA-COV-DATA-LEN-KEY:CAPS"></a><h3>NC_DATA_SNIA_COV_DATA_LEN_KEY</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_DATA_LEN_KEY "data-length"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-DATA-KEY:CAPS" id="NC-DATA-SNIA-COV-DATA-KEY:CAPS"></a><h3>NC_DATA_SNIA_COV_DATA_KEY</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_DATA_KEY "snia-data"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-DATA-HAS-COMPLETE-COV-KEY:CAPS" id="NC-DATA-SNIA-COV-DATA-HAS-COMPLETE-COV-KEY:CAPS"></a><h3>NC_DATA_SNIA_COV_DATA_HAS_COMPLETE_COV_KEY</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_DATA_HAS_COMPLETE_COV_KEY "has-complete-cov"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-CAT-HAS-COMPLETE-COV:CAPS" id="NC-DATA-SNIA-COV-CAT-HAS-COMPLETE-COV:CAPS"></a><h3>NC_DATA_SNIA_COV_CAT_HAS_COMPLETE_COV</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_CAT_HAS_COMPLETE_COV "CMPL_COV"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-CAT-HAS-COMPLETE-COV-COMMENT:CAPS" id="NC-DATA-SNIA-COV-CAT-HAS-COMPLETE-COV-COMMENT:CAPS"></a><h3>NC_DATA_SNIA_COV_CAT_HAS_COMPLETE_COV_COMMENT</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_CAT_HAS_COMPLETE_COV_COMMENT "Whether the covariance matrix is complete"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-MAG-KEY:CAPS" id="NC-DATA-SNIA-COV-MAG-KEY:CAPS"></a><h3>NC_DATA_SNIA_COV_MAG_KEY</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_MAG_KEY "magnitude"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-WIDTH-KEY:CAPS" id="NC-DATA-SNIA-COV-WIDTH-KEY:CAPS"></a><h3>NC_DATA_SNIA_COV_WIDTH_KEY</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_WIDTH_KEY "width"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-COLOUR-KEY:CAPS" id="NC-DATA-SNIA-COV-COLOUR-KEY:CAPS"></a><h3>NC_DATA_SNIA_COV_COLOUR_KEY</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_COLOUR_KEY "colour"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-MAG-WIDTH-KEY:CAPS" id="NC-DATA-SNIA-COV-MAG-WIDTH-KEY:CAPS"></a><h3>NC_DATA_SNIA_COV_MAG_WIDTH_KEY</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_MAG_WIDTH_KEY "magnitude-width"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-MAG-COLOUR-KEY:CAPS" id="NC-DATA-SNIA-COV-MAG-COLOUR-KEY:CAPS"></a><h3>NC_DATA_SNIA_COV_MAG_COLOUR_KEY</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_MAG_COLOUR_KEY "magnitude-colour"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-DATA-SNIA-COV-WIDTH-COLOUR-KEY:CAPS" id="NC-DATA-SNIA-COV-WIDTH-COLOUR-KEY:CAPS"></a><h3>NC_DATA_SNIA_COV_WIDTH_COLOUR_KEY</h3>
+<pre class="programlisting">#define NC_DATA_SNIA_COV_WIDTH_COLOUR_KEY "width-colour"
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcDataSNIACov.property-details" id="NcDataSNIACov.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcDataSNIACov--absmag-set" id="NcDataSNIACov--absmag-set"></a><h3>The <code class="literal">“absmag-set”</code> property</h3>
+<pre class="programlisting">  “absmag-set”               <a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *</pre>
+<p>Absolute magnitude set.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: GVariant&lt;au&gt;</p>
+<p>Default value: NULL</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcDataSNIACov--colour" id="NcDataSNIACov--colour"></a><h3>The <code class="literal">“colour”</code> property</h3>
+<pre class="programlisting">  “colour”                   <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
+<p>Colour.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcDataSNIACov--cov-full" id="NcDataSNIACov--cov-full"></a><h3>The <code class="literal">“cov-full”</code> property</h3>
+<pre class="programlisting">  “cov-full”                 <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *</pre>
+<p>Full covariance matrix.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcDataSNIACov--has-complete-cov" id="NcDataSNIACov--has-complete-cov"></a><h3>The <code class="literal">“has-complete-cov”</code> property</h3>
+<pre class="programlisting">  “has-complete-cov”         <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the covariance matrix is complete.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: FALSE</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcDataSNIACov--magnitudes" id="NcDataSNIACov--magnitudes"></a><h3>The <code class="literal">“magnitudes”</code> property</h3>
+<pre class="programlisting">  “magnitudes”               <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
+<p>Magnitudes.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcDataSNIACov--sigma-thirdpar" id="NcDataSNIACov--sigma-thirdpar"></a><h3>The <code class="literal">“sigma-thirdpar”</code> property</h3>
+<pre class="programlisting">  “sigma-thirdpar”           <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
+<p>Thirdpar standard deviation.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcDataSNIACov--sigma-z" id="NcDataSNIACov--sigma-z"></a><h3>The <code class="literal">“sigma-z”</code> property</h3>
+<pre class="programlisting">  “sigma-z”                  <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
+<p>Redshifts standard deviation.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcDataSNIACov--thirdpar" id="NcDataSNIACov--thirdpar"></a><h3>The <code class="literal">“thirdpar”</code> property</h3>
+<pre class="programlisting">  “thirdpar”                 <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
+<p>Thirdpar.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcDataSNIACov--width" id="NcDataSNIACov--width"></a><h3>The <code class="literal">“width”</code> property</h3>
+<pre class="programlisting">  “width”                    <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
+<p>Width.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcDataSNIACov--z-He" id="NcDataSNIACov--z-He"></a><h3>The <code class="literal">“z-He”</code> property</h3>
+<pre class="programlisting">  “z-He”                     <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
+<p>Data He redshifts.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcDataSNIACov--z-cmb" id="NcDataSNIACov--z-cmb"></a><h3>The <code class="literal">“z-cmb”</code> property</h3>
+<pre class="programlisting">  “z-cmb”                    <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
+<p>Data cmb redshifts.</p>
+<p>Flags: Read / Write</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.25.1</div>
+</div></div></body>
+</html>

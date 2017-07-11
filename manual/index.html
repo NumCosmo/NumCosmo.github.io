@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NumCosmo Reference Manual: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="next" href="ch01.html" title="NumCosmo Overview" />
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<div class="book">
+<div class="titlepage">
+<div>
+<div><table class="navigation" id="top" width="100%" cellpadding="2" cellspacing="0"><tr><th valign="middle"><p class="title">NumCosmo Reference Manual</p></th></tr></table></div>
+<div><p class="releaseinfo">
+      for NumCosmo 0.13.3.
+      The latest version of this documentation can be found on-line at
+      <a class="ulink" href="http://www.nongnu.org/numcosmo/manual/index.html" target="_top">http://www.nongnu.org/numcosmo/manual/index.html</a>.
+    </p></div>
+</div>
+<hr />
+</div>
+<div class="toc"><dl class="toc">
+<dt><span class="chapter"><a href="ch01.html">NumCosmo Overview</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="introduction.html">Introduction</a></span><span class="refpurpose"> — A general description of the library functionality</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="refs.html">Bibliography</a></span><span class="refpurpose"> — The set of books and papers used in the library</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NumCosmo-building-configuration.html">NumCosmo building configuration</a></span><span class="refpurpose"> — Macros describing the current building configuration</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch02.html">Numcosmo Math</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ch02.html#id-1.3.2">Miscellaneous Objects</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcmC.html">NcmC</a></span><span class="refpurpose"> — Numerical and physical constants.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmCfg.html">NcmCfg</a></span><span class="refpurpose"> — Library configuration and helper functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmUtil.html">NcmUtil</a></span><span class="refpurpose"> — Miscellaneous utilities.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmVector.html">NcmVector</a></span><span class="refpurpose"> — Vector object representing arrays of doubles.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmMatrix.html">NcmMatrix</a></span><span class="refpurpose"> — Matrix object representing an array of doubles.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmSerialize.html">NcmSerialize</a></span><span class="refpurpose"> — Serialization, deserialization and duplication object.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmObjArray.html">NcmObjArray</a></span><span class="refpurpose"> — GObjects array with serialization support.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmIntegral1d.html">NcmIntegral1d</a></span><span class="refpurpose"> — One dimensional integration object.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmIntegral1dPtr.html">NcmIntegral1dPtr</a></span><span class="refpurpose"> — Function pointer one dimensional integration object.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmLapack.html">NcmLapack</a></span><span class="refpurpose"> — Encapsulated LAPACK functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmFuncEval.html">NcmFuncEval</a></span><span class="refpurpose"> — A general purpose multi-threaded function evaluator.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFftlog.html">NcmFftlog</a></span><span class="refpurpose"> — Abstract class for implementing logarithm fast fourier transform.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFftlogTophatwin2.html">NcmFftlogTophatwin2</a></span><span class="refpurpose"> — Logarithm fast fourier transform for a kernel given by the square of the spherical Bessel function of order one.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFftlogGausswin2.html">NcmFftlogGausswin2</a></span><span class="refpurpose"> — Logarithm fast fourier transform for a kernel given by the square of a Gaussian window function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmTimer.html">NcmTimer</a></span><span class="refpurpose"> — A timer with ETA support.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmRNG.html">NcmRNG</a></span><span class="refpurpose"> — Encapsulated GSL random number generator with support for multhreading.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmQuaternion.html">NcmQuaternion</a></span><span class="refpurpose"> — Quaternions algebra, three-vectors and mapping to matrix.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch02s02.html">Splines 1D</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcmSpline.html">NcmSpline</a></span><span class="refpurpose"> — Abstract class for implementing splines.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmSplineGsl.html">NcmSplineGsl</a></span><span class="refpurpose"> — GSL spline object wrapper.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmSplineCubic.html">NcmSplineCubic</a></span><span class="refpurpose"> — Abstract class for implementing cubic splines.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmSplineCubicNotaknot.html">NcmSplineCubicNotaknot</a></span><span class="refpurpose"> — Cubic spline implementation with 'not a knot' boundary conditions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmSplineFunc.html">NcmSplineFunc</a></span><span class="refpurpose"> — Automatic generation of the knots for a spline.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmOdeSpline.html">NcmOdeSpline</a></span><span class="refpurpose"> — Automatic generation of splines from ODE solvers.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch02s03.html">Splines 2D</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcmSpline2d.html">NcmSpline2d</a></span><span class="refpurpose"> — Abstract class for implementing bidimensional splines.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmSpline2dSpline.html">NcmSpline2dSpline</a></span><span class="refpurpose"> — Implements bidimensional splines from splines method.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmSpline2dBicubic.html">NcmSpline2dBicubic</a></span><span class="refpurpose"> — Bidimensional bicubic spline.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmSpline2dGsl.html">NcmSpline2dGsl</a></span><span class="refpurpose"> — Implements spline from spline method using GSL as base splines.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch02s04.html">Power spectrum functions</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcmPowspec.html">NcmPowspec</a></span><span class="refpurpose"> — Abstrac class for power spectrum implementation.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmPowspecFilter.html">NcmPowspecFilter</a></span><span class="refpurpose"> — Class to compute filtered power spectrum</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch02s05.html">Harmonic Oscillator</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="NcmHOAA.html">NcmHOAA</a></span><span class="refpurpose"> — Abstract class for Harmonic Oscillator calculation through AA variables.</span>
+</dt></dl></dd>
+<dt><span class="section"><a href="ch02s06.html">Special Functions</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmMpsfTrigInt.html">NcmMpsfTrigInt</a></span><span class="refpurpose"> — Multiple precision sin integral implementation.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmMpsf0F1.html">NcmMpsf0F1</a></span><span class="refpurpose"> — Multiple precision implementation of the hypergeometric 0F1.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmMpsfSBessel.html">NcmMpsfSBessel</a></span><span class="refpurpose"> — Multiple precision spherical bessel implementation.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmMpsfSBesselInt.html">NcmMpsfSBesselInt</a></span><span class="refpurpose"> — Multiple precision spherical bessel integrals implementation.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmSFSBessel.html">NcmSFSBessel</a></span><span class="refpurpose"> — Double precision spherical bessel implementation.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmSFSphericalBesselInteg.html">NcmSFSphericalBesselInteg</a></span><span class="refpurpose"> — Double precision spherical bessel integrals implementation.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch02s07.html">Models and Parameters</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcmModel.html">NcmModel</a></span><span class="refpurpose"> — Abstract class for implementing models.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmSParam.html">NcmSParam</a></span><span class="refpurpose"> — Properties of a scalar parameter.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmVParam.html">NcmVParam</a></span><span class="refpurpose"> — Properties of a vector-like parameter.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmModelCtrl.html">NcmModelCtrl</a></span><span class="refpurpose"> — Control object for testing updates on model status.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmModelBuilder.html">NcmModelBuilder</a></span><span class="refpurpose"> — A <span class="type">NcmModel</span> builder</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmMSet.html">NcmMSet</a></span><span class="refpurpose"> — A set of different NcmModel objects.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmMSetFunc.html">NcmMSetFunc</a></span><span class="refpurpose"> — A function of NcmMSet.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmMSetFuncList.html">NcmMSetFuncList</a></span><span class="refpurpose"> — NcmMSet Functions list.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmCalc.html">NcmData</a></span><span class="refpurpose"> — Abstract class for implementing calculator objects.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch02s08.html">Reparametrization</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcmReparam.html">NcmReparam</a></span><span class="refpurpose"> — Abstract class for model reparametrization.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmReparamLinear.html">NcmReparamLinear</a></span><span class="refpurpose"> — Linear reparametrization object.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch02s09.html">Data Objects</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcmData.html">NcmData</a></span><span class="refpurpose"> — Abstract class for implementing data objects.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmDataset.html">NcmDataset</a></span><span class="refpurpose"> — A set of NcmData objects</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmDataGauss.html">NcmDataGauss</a></span><span class="refpurpose"> — Gaussian data -- inverse covariance provided.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmDataGaussDiag.html">NcmDataGaussDiag</a></span><span class="refpurpose"> — Gaussian data -- diagonal covariance provided.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmDataGaussCov.html">NcmDataGaussCov</a></span><span class="refpurpose"> — Gaussian data -- covariance provided.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmDataPoisson.html">NcmDataPoisson</a></span><span class="refpurpose"> — Abstract class for implementing poisson distributed data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmDataDist1d.html">NcmDataDist1d</a></span><span class="refpurpose"> — Abstract class for one variable distribution data.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch02s10.html">Statistical Analysis</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcmStatsVec.html">NcmStatsVec</a></span><span class="refpurpose"> — An online statistics vector.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmStatsDist1d.html">NcmStatsDist1d</a></span><span class="refpurpose"> — Abstract class for implementing 1d probability distributions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmStatsDist1dSpline.html">NcmStatsDist1dSpline</a></span><span class="refpurpose"> — One dimensional probability distribution based on a spline.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmStatsDist1dEPDF.html">NcmStatsDist1dEPDF</a></span><span class="refpurpose"> — One dimensional probability distribution based on an EPDF.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmBootstrap.html">NcmBootstrap</a></span><span class="refpurpose"> — Generic index bootstrap.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmLikelihood.html">NcmLikelihood</a></span><span class="refpurpose"> — Likelihood combining a NcmDataset and priors.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmPrior.html">NcmPrior</a></span><span class="refpurpose"> — A prior for NcmLikelihood</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmPriorGauss.html">NcmPriorGauss</a></span><span class="refpurpose"> — A gaussian prior for NcmLikelihood</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmPriorGaussParam.html">NcmPriorGaussParam</a></span><span class="refpurpose"> — a gaussian prior on a parameter</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmPriorGaussFunc.html">NcmPriorGaussFunc</a></span><span class="refpurpose"> — a gaussian prior on a parameter</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmPriorFlat.html">NcmPriorFlat</a></span><span class="refpurpose"> — A flat prior for NcmLikelihood</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmPriorFlatParam.html">NcmPriorFlatParam</a></span><span class="refpurpose"> — a flat prior on a parameter</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmPriorFlatFunc.html">NcmPriorFlatFunc</a></span><span class="refpurpose"> — a flat prior on a parameter</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmMSetCatalog.html">NcmMSetCatalog</a></span><span class="refpurpose"> — Ordered catalog of different NcmMSet parameter values.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmMSetTransKern.html">NcmMSetTransKern</a></span><span class="refpurpose"> — Abstract Class for a transition kernel and prior.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmMSetTransKernFlat.html">NcmMSetTransKernFlat</a></span><span class="refpurpose"> — Multivariate flat sampler.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmMSetTransKernGauss.html">NcmMSetTransKernGauss</a></span><span class="refpurpose"> — A multivariate gaussian sampler.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmMSetTransKernCat.html">NcmMSetTransKernCat</a></span><span class="refpurpose"> — Catalog sampler.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFitState.html">NcmFitState</a></span><span class="refpurpose"> — State of a NcmFit object.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFit.html">NcmFit</a></span><span class="refpurpose"> — Abstract class for implementing fitting methods.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFitNLOpt.html">NLopt Interface Object</a></span><span class="refpurpose"> — Interface for NLopt optmization library</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmFitNLOptEnum.html">NcmFitNLOptEnum</a></span><span class="refpurpose"> — Automaticaly imported enum from NLOpt library.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFitGSLLS.html">NcmFitGSLLS</a></span><span class="refpurpose"> — Best-fit finder -- GSL least squares algorithms.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFitGSLMM.html">NcmFitGSLMM</a></span><span class="refpurpose"> — Best-fit finder -- GSL non-linear minimization algorithms.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFitGSLMMS.html">NcmFitGSLMMS</a></span><span class="refpurpose"> — Best-fit finder -- GSL non-linear minimization (simplex) algorithms.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFitLevmar.html">NcmFitLevmar</a></span><span class="refpurpose"> — Best-fit finder -- Levenberg-Marquardt nonlinear least squares algorithm library.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFitMC.html">NcmFitMC</a></span><span class="refpurpose"> — Monte Carlo analysis.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFitMCBS.html">NcmFitMCBS</a></span><span class="refpurpose"> — Monte Carlo and bootstrap analysis.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFitMCMC.html">NcmFitMCMC</a></span><span class="refpurpose"> — Markov Chain Monte Carlo analysis.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFitESMCMC.html">NcmFitESMCMC</a></span><span class="refpurpose"> — Ensemble sampler Markov Chain Monte Carlo analysis.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFitESMCMCWalker.html">NcmFitESMCMCWalker</a></span><span class="refpurpose"> — Ensemble sampler Markov Chain Monte Carlo walker class.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFitESMCMCWalkerStretch.html">NcmFitESMCMCWalkerStretch</a></span><span class="refpurpose"> — Ensemble sampler Markov Chain Monte Carlo walker - stretch move.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmFitESMCMCWalkerWalk.html">NcmFitESMCMCWalkerWalk</a></span><span class="refpurpose"> — Ensemble sampler Markov Chain Monte Carlo walker - walk move.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmLHRatio1d.html">NcmLHRatio1d</a></span><span class="refpurpose"> — Likelihood ratio for one dimensional parameter analysis.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmLHRatio2d.html">NcmLHRatio2d</a></span><span class="refpurpose"> — Likelihood ratio object for bidimensional parameter analysis.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmABC.html">NcmABC</a></span><span class="refpurpose"> — Abstract class for Approximate Bayesian Computation (ABC).</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch02s11.html">Spherical maps and Healpix</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcmSphereMapPix.html">NcmSphereMapPix</a></span><span class="refpurpose"> — An re-implementation of Healpix.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmSphereHealpix.html">NcmSphereHealpix</a></span><span class="refpurpose"> — Healpix re-implementation</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmSphereMap.html">NcmSphereMap</a></span><span class="refpurpose"> — A spherical shell map.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch02s12.html">GObject introspection compatibility</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="numcosmo-Gir-Scanning-Compatibility.html">Gir Scanning Compatibility</a></span><span class="refpurpose"> — Gir scanning types stubs.</span>
+</dt></dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch03.html">Cosmological Models</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcHICosmo.html">NcHICosmo</a></span><span class="refpurpose"> — Abstract class for implementing homogeneous and isotropic cosmological models</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcHICosmoPrior.html">NcHICosmoPrior</a></span><span class="refpurpose"> — Collection of priors for NcHICosmo models</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHICosmoLCDM.html">NcHICosmoLCDM</a></span><span class="refpurpose"> — $\Lambda$CDM model</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHICosmoGCGReparamOk.html">NcHICosmoGCG</a></span><span class="refpurpose"> — Generalized Chaplygin Gas</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHICosmoIDEM2ReparamOk.html">NcHICosmoIDEM2</a></span><span class="refpurpose"> — Interacting Dark Energy Model</span>
+</dt>
+<dt><span class="section"><a href="ch03.html#id-1.4.7">Darkenergy</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcHICosmoDE.html">NcHICosmoDE</a></span><span class="refpurpose"> — Abstract class for implementing dark energy models</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHICosmoDEReparamOk.html">NcHICosmoDEReparamOk</a></span><span class="refpurpose"> — Dark Energy -- reparametrization $\Omega_{x0} \to \Omega_{k0}$</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHICosmoDEReparamCMB.html">NcHICosmoDEReparamCMB</a></span><span class="refpurpose"> — Dark Energy -- CMB reparametrization</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHICosmoDEXcdm.html">NcHICosmoDEXcdm</a></span><span class="refpurpose"> — Dark Energy -- constant equation of state</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHICosmoDECpl.html">NcHICosmoDECpl</a></span><span class="refpurpose"> — Dark Energy -- Chevallier–Polarski–Linder equation of state</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHICosmoDEJbp.html">NcHICosmoDEJbp</a></span><span class="refpurpose"> — Dark Energy -- Jassal-Bagla-Padmanabhan equation of state</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch03s02.html">Quantum Gravity Bounce</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcHICosmoQGRW.html">NcHICosmoQGRW</a></span><span class="refpurpose"> — Radiation plus $w$-fluid model with a quantum generated bounce phase model.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHICosmoVexp.html">NcHICosmoVexp</a></span><span class="refpurpose"> — $\Lambda$CDM model</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcHICosmoQG.html">NcHICosmoQG</a></span><span class="refpurpose"> — Quantum gravity bouncing model.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch03s03.html">Kinematic Models</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcHICosmoQConst.html">NcHICosmoQConst</a></span><span class="refpurpose"> — Kinetic model -- Constant deceleration function</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHICosmoQLinear.html">NcHICosmoQLinear</a></span><span class="refpurpose"> — Kinetic model -- Linear deceleration function</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcPriorQSplineCont.html">NcHICosmoQSpline</a></span><span class="refpurpose"> — Kinetic model -- Spline deceleration function</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch04.html">Primordial Cosmology Models</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcHIPrim.html">NcHIPrim</a></span><span class="refpurpose"> — Abstract class for implementing homogeneous and isotropic primordial cosmological models.</span>
+</dt>
+<dt><span class="section"><a href="ch04.html#id-1.5.3">Inflationary</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcHIPrimPowerLaw.html">NcHIPrimPowerLaw</a></span><span class="refpurpose"> — Power law implementation for primordial spectra.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPrimAtan.html">NcHIPrimAtan</a></span><span class="refpurpose"> — Arctangent modification of the power law primordial spectrum</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPrimExpc.html">NcHIPrimExpc</a></span><span class="refpurpose"> — Exponential cutoff modification of the power law primordial spectrum</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPrimBPL.html">NcHIPrimBPL</a></span><span class="refpurpose"> — Broken power law modification of the power law primordial spectrum</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch05.html">Observational Cosmology Models</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ch05.html#id-1.6.2">Planck Foreground and Instrument Models</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcPlanckFI.html">NcPlanckFI</a></span><span class="refpurpose"> — Abstract class for Planck Foreground and Instrument models.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcPlanckFICorTT.html">NcPlanckFICorTT</a></span><span class="refpurpose"> — Planck Foreground and Instrument model for TT correlation maps</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcPlanckFICorTTTEEE.html">NcPlanckFICorTTTEEE</a></span><span class="refpurpose"> — Planck Foreground and Instrument model for TT correlation maps</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch05s02.html">Supernova Covariance Models</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="NcSNIADistCov.html">NcSNIADistCov</a></span><span class="refpurpose"> — Supernovae distance covariance between distance estimates.</span>
+</dt></dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch06.html">Cosmological Calculators</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcDistance.html">NcDistance</a></span><span class="refpurpose"> — Cosmological distance and time related quantities.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcScalefactor.html">NcScalefactor</a></span><span class="refpurpose"> — Scale factor as a function of the conformal time.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcRecomb.html">NcRecomb</a></span><span class="refpurpose"> — Abstract class for cosmic recombination.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcRecombSeager.html">NcRecombSeager</a></span><span class="refpurpose"> — Cosmic recombination implementing Seager (1999).</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcRecombCBE.html">NcRecombCBE</a></span><span class="refpurpose"> — Cosmic recombination by Class.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIReion.html">NcHIReion</a></span><span class="refpurpose"> — Abstract class for implementing homogeneous and isotropic reionization models.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIReionCamb.html">NcHIReionCamb</a></span><span class="refpurpose"> — CAMB-like reionization object.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIReionCambReparamTau.html">NcHIReionCambReparamTau</a></span><span class="refpurpose"> — CAMB reionization reparametrization $z_\mathrm{reion} \to \tau_\mathrm{reion}$.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch07.html">Perturbations</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcLinearPert.html">NcLinearPert</a></span><span class="refpurpose"> — Linear perturbations.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcLinearPertCov.html">NcLinearPertCov</a></span><span class="refpurpose"> — Perturbations covariance.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPert.html">NcHIPert</a></span><span class="refpurpose"> — Abstract class for perturbation in homogeneous and isotropic cosmologies.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertWKB.html">NcHIPertWKB</a></span><span class="refpurpose"> — WKB perturbation object.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertAdiab.html">NcHIPertAdiab</a></span><span class="refpurpose"> — Perturbation object for adiabatic mode only.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertGW.html">NcHIPertGW</a></span><span class="refpurpose"> — Perturbation object for gwatic mode only.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertTwoFluids.html">NcHIPertTwoFluids</a></span><span class="refpurpose"> — Perturbation object for a two fluids system.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertBoltzmann.html">NcHIPertBoltzmann</a></span><span class="refpurpose"> — Abstract class for perturbative Boltzmann hierarchy.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertBoltzmannStd.html">NcHIPertBoltzmannStd</a></span><span class="refpurpose"> — Perturbations object for standard Boltzmann hierarchy model.</span>
+</dt>
+<dt><span class="section"><a href="ch07.html#id-1.8.11">CLASS Backend</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcCBEPrecision.html">NcCBEPrecision</a></span><span class="refpurpose"> — CLASS (Cosmic Linear Anisotropy Solving System) backend for perturbations</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcCBE.html">NcCBE</a></span><span class="refpurpose"> — CLASS (Cosmic Linear Anisotropy Solving System) backend</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertBoltzmannCBE.html">NcHIPertBoltzmannCBE</a></span><span class="refpurpose"> — CLASS (Cosmic Linear Anisotropy Solving System) backend for perturbations</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch07s02.html">Perturbation Interfaces</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="NcHIPertITwoFluids.html">NcHIPertITwoFluids</a></span><span class="refpurpose"> — Perturbation interface for two fluids system.</span>
+</dt></dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch08.html">Large Scale Structure</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="ch08.html#id-1.9.2">Window Function</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcWindow.html">NcWindow</a></span><span class="refpurpose"> — Abstract class for window functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcWindowTophat.html">NcWindowTophat</a></span><span class="refpurpose"> — A top-hat window function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcWindowGaussian.html">NcWindowGaussian</a></span><span class="refpurpose"> — A gaussian window function.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch08s02.html">Transfer Function</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcTransferFunc.html">NcTransferFunc</a></span><span class="refpurpose"> — Abstrac class for perturbation transfer function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcTransferFuncBBKS.html">NcTransferFuncBBKS</a></span><span class="refpurpose"> — Bardeen, Bond, Kaiser and Szalay (BBKS) transfer function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcTransferFuncEH.html">NcTransferFuncEH</a></span><span class="refpurpose"> — Eisenstein-Hu fitting function for the transfer function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcTransferFuncCAMB.html">NcTransferFuncCAMB</a></span><span class="refpurpose"> — Transfer function using CAMB as backend.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcTransferFuncPert.html">NcTransferFuncPert</a></span><span class="refpurpose"> — Transfer function using NcHIPertBoltzmann as backend.</span>
+</dt>
+</dl></dd>
+<dt>
+<span class="refentrytitle"><a href="NcGrowthFunc.html">NcGrowthFunc</a></span><span class="refpurpose"> — Growth function of linear perturbations.</span>
+</dt>
+<dt><span class="section"><a href="ch08s03.html">Matter Power Spectrum</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcPowspecML.html">NcPowspecML</a></span><span class="refpurpose"> — Abstrac class for linear matter power spectrum implementation.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcPowspecMLFixSpline.html">NcPowspecMLFixSpline</a></span><span class="refpurpose"> — Class for linear matter power spectrum from a fixed spline.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcPowspecMLTransfer.html">NcPowspecMLTransfer</a></span><span class="refpurpose"> — Class for linear matter power spectrum from a transfer function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcPowspecMLCBE.html">NcPowspecMLCBE</a></span><span class="refpurpose"> — linear matter power spectrum from CLASS backend.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcPowspecMNL.html">NcPowspecMNL</a></span><span class="refpurpose"> — Abstrac class for non-linear matter power spectrum implementation.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcPowspecMNLHaloFit.html">NcPowspecMNLHaloFit</a></span><span class="refpurpose"> — nonlinear matter power spectrum from Halofit model.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch08s04.html"> Density Profile</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcDensityProfile.html">NcDensityProfile</a></span><span class="refpurpose"> — Abstract class for density profile functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDensityProfileNFW.html">NcDensityProfileNFW</a></span><span class="refpurpose"> — Density profile of Navarro-Frenk-White type.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch08s05.html">Multiplicity Function</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFunc.html">NcMultiplicityFunc</a></span><span class="refpurpose"> — Dark matter halo multiplicity function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncPS.html">NcMultiplicityFuncPS</a></span><span class="refpurpose"> — Dark matter halo -- Press-Schechter multiplicity function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncST.html">NcMultiplicityFuncST</a></span><span class="refpurpose"> — Dark matter halo -- Sheth-Tormen multiplicity function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncJenkins.html">NcMultiplicityFuncJenkins</a></span><span class="refpurpose"> — Dark matter halo -- Jenkins multiplicity function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncWarren.html">NcMultiplicityFuncWarren</a></span><span class="refpurpose"> — Dark matter halo -- Warren multiplicity function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncTinker.html">NcMultiplicityFuncTinker</a></span><span class="refpurpose"> — Dark matter halo -- Tinker multiplicity function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncTinkerMean.html">NcMultiplicityFuncTinkerMean</a></span><span class="refpurpose"> — Dark matter halo -- Tinker multiplicity function mean matter density.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncTinkerCrit.html">NcMultiplicityFuncTinkerCrit</a></span><span class="refpurpose"> — Dark matter halo -- Tinker multiplicity function critical density.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncTinkerMeanNormalized.html">NcMultiplicityFuncTinkerMeanNormalized</a></span><span class="refpurpose"> — Dark matter halo -- Tinker normalized multiplicity function mean matter density.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncCrocce.html">NcMultiplicityFuncCrocce</a></span><span class="refpurpose"> — Dark matter halo -- Crocce multiplicity function.</span>
+</dt>
+</dl></dd>
+<dt>
+<span class="refentrytitle"><a href="NcHaloMassFunction.html">NcHaloMassFunction</a></span><span class="refpurpose"> — Clusters mass function.</span>
+</dt>
+<dt><span class="section"><a href="ch08s06.html">Halo Bias Function Type</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcHaloBiasType.html">NcHaloBiasType</a></span><span class="refpurpose"> — Abstract class for halo bias function type.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloBiasTypePS.html">NcHaloBiasTypePS</a></span><span class="refpurpose"> — Press-Schechter halo bias function type.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloBiasTypeSTSpher.html">NcHaloBiasTypeSTSpher</a></span><span class="refpurpose"> — Sheth-Tormen spherical halo bias function type.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloBiasTypeSTEllip.html">NcHaloBiasTypeSTEllip</a></span><span class="refpurpose"> — Sheth-Tormen elliptical halo bias function type.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloBiasTypeTinker.html">NcHaloBiasTypeTinker</a></span><span class="refpurpose"> — Tinker halo bias function type.</span>
+</dt>
+</dl></dd>
+<dt>
+<span class="refentrytitle"><a href="NcHaloBiasFunc.html">NcHaloBiasFunc</a></span><span class="refpurpose"> — Mean halo bias function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxyAcf.html">NcGalaxyAcf</a></span><span class="refpurpose"> — Galaxy angular correlation function.</span>
+</dt>
+<dt><span class="section"><a href="ch08s07.html">Cluster Redshift</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcClusterRedshift.html">NcClusterRedshift</a></span><span class="refpurpose"> — Abstract class for cluster redshift distributions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterRedshiftNodist.html">NcClusterRedshiftNodist</a></span><span class="refpurpose"> — Cluster abundance redshift real redshift distribution.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterPhotozGauss.html">NcClusterPhotozGauss</a></span><span class="refpurpose"> — Individual gaussian photometric distribution for clusters.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterPhotozGaussGlobal.html">NcClusterPhotozGaussGlobal</a></span><span class="refpurpose"> — Global gaussian photometric distribution for clusters.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch08s08.html">Cluster Mass</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMass.html">NcClusterMass</a></span><span class="refpurpose"> — Abstract class for cluster mass distributions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMassNodist.html">NcClusterMassNodist</a></span><span class="refpurpose"> — Cluster mass real mass distribution.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMassLnnormal.html">NcClusterMassLnnormal</a></span><span class="refpurpose"> — Cluster mass ln-normal distribution.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMassVanderlinde.html">NcClusterMassVanderlinde</a></span><span class="refpurpose"> — Sunyaev-Zel'dovich cluster mass distribution.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMassBenson.html">NcClusterMassBenson</a></span><span class="refpurpose"> — Sunyaev-Zel'dovich cluster mass distribution.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMassBensonXRay.html">NcClusterMassBensonXRay</a></span><span class="refpurpose"> — Sunyaev-Zel'dovich and x-ray cluster abundance mass distribution.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMassPlCL.html">NcClusterMassPlCL</a></span><span class="refpurpose"> — Planck-CLASH Cluster Mass Distribution</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMassAscaso.html">NcClusterMassAscaso</a></span><span class="refpurpose"> — FIXME</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch08s09.html">Cross-correlations</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcXcor.html">Cross-correlations</a></span><span class="refpurpose"> — Angular auto- and cross-spectra.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcXcorAB.html">NcXcorAB</a></span><span class="refpurpose"> — Cross-correlations data storage object.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcXcorLimberKernel.html">NcXcorLimberKernel</a></span><span class="refpurpose"> — Abstract object for the kernels of projected observables used in cross-correlations.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcXcorLimberKernelGal.html">NcXcorLimberKernelGal</a></span><span class="refpurpose"> — implementation of <span class="type">NcXcorLimberKernel</span> for galaxy density</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcXcorLimberKernelCMBLensing.html">NcXcorLimberKernelCMBLensing</a></span><span class="refpurpose"> — implementation of <span class="type">NcXcorLimberKernel</span> for CMB lensing</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcXcorLimberKernelWeakLensing.html">NcXcorLimberKernelWeakLensing</a></span><span class="refpurpose"> — implementation of <span class="type">NcXcorLimberKernel</span> for galaxy weak lensing</span>
+</dt>
+</dl></dd>
+<dt>
+<span class="refentrytitle"><a href="NcClusterAbundance.html">NcClusterAbundance</a></span><span class="refpurpose"> — Cluster abundance distribution</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterPseudoCounts.html">NcClusterPseudoCounts</a></span><span class="refpurpose"> — FIXME</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcCorClusterCmbLensLimber.html">NcCorClusterCmbLensLimber</a></span><span class="refpurpose"> — Cluster and CMB lensing correlation using halo model and Limber approximation.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch09.html">Cosmological Data</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcDataCMB.html">NcDataCMB</a></span><span class="refpurpose"> — Helper function for instantiating CMB data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataCMBShiftParam.html">NcDataCMBShiftParam</a></span><span class="refpurpose"> — Cosmic microwave background data -- shift parameter.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataCMBDistPriors.html">NcDataCMBDistPriors</a></span><span class="refpurpose"> — Cosmic microwave background data -- distance priors.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataHubble.html">NcDataHubble</a></span><span class="refpurpose"> — Hubble function data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataHubbleBao.html">NcDataHubbleBao</a></span><span class="refpurpose"> — Hubble function data from BAO.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcDataBao.html">NcDataBao</a></span><span class="refpurpose"> — Helper functions for instantiating BAO data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoA.html">NcDataBaoA</a></span><span class="refpurpose"> — Baryon oscillation data -- acoustic scale $A$.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoDV.html">NcDataBaoDV</a></span><span class="refpurpose"> — Baryon oscillation data -- volume mean $D_V$.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoRDV.html">NcDataBaoRDV</a></span><span class="refpurpose"> — Baryon Oscillation Data -- $r_s / D_V$ ratio.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoDVDV.html">NcDataBaoDVDV</a></span><span class="refpurpose"> — Baryon oscillation data -- $D_V / D_V$ ratio.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoEmpiricalFit.html">NcDataBaoEmpiricalFit</a></span><span class="refpurpose"> — Baryon oscillation data -- $D_V / r_s$ empirical likelihood.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoDHrDAr.html">NcDataBaoDHrDAr</a></span><span class="refpurpose"> — Baryon Oscillation Data -- $(D_H/r,\; D_A/r)$ data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoDMrHr.html">NcDataBaoDMrHr</a></span><span class="refpurpose"> — Baryon Oscillation Data -- $(D_M/r,\; H/r)$ data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcDataSNIAId.html">NcDataSNIAId</a></span><span class="refpurpose"> — Helper function for instantiating Supernovae Ia data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataDistMu.html">NcDataDistMu</a></span><span class="refpurpose"> — Distance modulus data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataSNIACov.html">NcDataSNIACov</a></span><span class="refpurpose"> — Supernovae Ia Data with covariance error matrix.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataClusterNCount.html">NcDataClusterNCount</a></span><span class="refpurpose"> — Cluster number count data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataClusterPoisson.html">NcDataClusterPoisson</a></span><span class="refpurpose"> — Binned cluster number count data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataClusterPseudoCounts.html">NcDataClusterPseudoCounts</a></span><span class="refpurpose"> — Galaxy clusters data -- pseudo number counts likelihood.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataClusterCountsBoxPoisson.html">NcDataClusterCountsBoxPoisson</a></span><span class="refpurpose"> — Binned (mass) cluster number count data in a box.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataPlanckLKL.html">NcDataPlanckLKL</a></span><span class="refpurpose"> — Planck Likelihood interface.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataXcor.html">NcDataXcor</a></span><span class="refpurpose"> — cross-correlation data object.</span>
+</dt>
+<dt><span class="section"><a href="ch09.html#id-1.10.24">ABC analysis</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="NcABCClusterNCount.html">NcABCClusterNCount</a></span><span class="refpurpose"> — Object implementing Approximate Bayesian Computation (ABC) for cluster number counts.</span>
+</dt></dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="ch10.html">Mathematical Utilities</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmDividedDifference.html">NcmDividedDifference</a></span><span class="refpurpose"> — Divided difference methods for function interpolation with derivatives.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmBinSplit.html">NcmBinSplit</a></span><span class="refpurpose"> — Binnary splitting algorithms used to evaluate sums fast and with arbitrary precision.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmPoly.html">NcmPoly</a></span><span class="refpurpose"> — Polynomials.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmMatrixExp.html">NcmMatrixExp</a></span><span class="refpurpose"> — Simple functions to calculate matrix exponential (only 2x2).</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmMPQTree.html">NcmMPQTree</a></span><span class="refpurpose"> — MPQ data tree.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmMIOde.html">NcmMIOde</a></span><span class="refpurpose"> — Magnus Iserles ode solver for fast oscillatory systems.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmGrid.html">NcmGrid</a></span><span class="refpurpose"> — Unidimensional grid.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmQuad.html">NcmQuad</a></span><span class="refpurpose"> — Quadrature algorithims.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmFunctionCache.html">NcmFunctionCache</a></span><span class="refpurpose"> — A generic cache for functions values</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmMemoryPool.html">NcmMemoryPool</a></span><span class="refpurpose"> — Generic memory pool.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmIntegral.html">NcmIntegral</a></span><span class="refpurpose"> — Numerical integration helpers.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch11.html">Enumeration Types</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmEnumTypes.html">NcmEnumTypes</a></span><span class="refpurpose"> — Automaticaly generated enum types from NumCosmoMath library.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcEnumTypes.html">NcEnumTypes</a></span><span class="refpurpose"> — Automaticaly generated enum types from NumCosmo library.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="object-tree.html">Objects Hierarchy</a></span></dt>
+<dt><span class="index"><a href="api-index-full-1.html">API Index</a></span></dt>
+<dt><span class="index"><a href="api-index-deprecated-1.html">API Index Deprecated</a></span></dt>
+<dt><span class="glossary"><a href="annotation-glossary.html">Annotation Glossary</a></span></dt>
+</dl></div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.25.1</div>
+</div></div></body>
+</html>

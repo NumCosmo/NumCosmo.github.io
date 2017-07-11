@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmSphereMap: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s11.html" title="Spherical maps and Healpix" />
+<link rel="prev" href="numcosmo-NcmSphereHealpix.html" title="NcmSphereHealpix" />
+<link rel="next" href="ch02s12.html" title="GObject introspection compatibility" />
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmSphereMap.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmSphereMap.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmSphereMap.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s11.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="numcosmo-NcmSphereHealpix.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="ch02s12.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmSphereMap" id="NcmSphereMap"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmSphereMap.top_of_page" id="NcmSphereMap.top_of_page"></a>NcmSphereMap</span></h2>
+<p>NcmSphereMap — A spherical shell map.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmSphereMap.functions" id="NcmSphereMap.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return" />
+<col class="functions_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="returnvalue">NcmSphereMap</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#ncm-sphere-map-new" title="ncm_sphere_map_new ()">ncm_sphere_map_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="returnvalue">NcmSphereMap</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#ncm-sphere-map-clone" title="ncm_sphere_map_clone ()">ncm_sphere_map_clone</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#ncm-sphere-map-copy" title="ncm_sphere_map_copy ()">ncm_sphere_map_copy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#ncm-sphere-map-init-coord" title="ncm_sphere_map_init_coord ()">ncm_sphere_map_init_coord</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#ncm-sphere-map-set-order" title="ncm_sphere_map_set_order ()">ncm_sphere_map_set_order</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSphereMap.html#NcmSphereMapAlm" title="struct NcmSphereMapAlm"><span class="returnvalue">NcmSphereMapAlm</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#ncm-sphere-mapalm-new" title="ncm_sphere_mapalm_new ()">ncm_sphere_mapalm_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#ncm-sphere-mapalm-init" title="ncm_sphere_mapalm_init ()">ncm_sphere_mapalm_init</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSphereMap.html#NcmSphereMapSHT" title="struct NcmSphereMapSHT"><span class="returnvalue">NcmSphereMapSHT</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#ncm-sphere-mapsht-new" title="ncm_sphere_mapsht_new ()">ncm_sphere_mapsht_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#ncm-sphere-mapsht-map2alm-circle" title="ncm_sphere_mapsht_map2alm_circle ()">ncm_sphere_mapsht_map2alm_circle</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#ncm-sphere-mapsht-alm2map-circle" title="ncm_sphere_mapsht_alm2map_circle ()">ncm_sphere_mapsht_alm2map_circle</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#ncm-sphere-mapsht-map2alm" title="ncm_sphere_mapsht_map2alm ()">ncm_sphere_mapsht_map2alm</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#ncm-sphere-mapsht-alm2map" title="ncm_sphere_mapsht_alm2map ()">ncm_sphere_mapsht_alm2map</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#ncm-sphere-map-homogenize-noise" title="ncm_sphere_map_homogenize_noise ()">ncm_sphere_map_homogenize_noise</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#ncm-sphere-map-rotate-avg" title="ncm_sphere_map_rotate_avg ()">ncm_sphere_map_rotate_avg</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#NCM-MAP-ALM-SIZE:CAPS" title="NCM_MAP_ALM_SIZE()">NCM_MAP_ALM_SIZE</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#NCM-MAP-N-IND-PLM:CAPS" title="NCM_MAP_N_IND_PLM()">NCM_MAP_N_IND_PLM</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#NCM-MAP-MAX-RING-SIZE:CAPS" title="NCM_MAP_MAX_RING_SIZE()">NCM_MAP_MAX_RING_SIZE</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#NCM-MAP-N-DIFFERENT-SIZED-RINGS:CAPS" title="NCM_MAP_N_DIFFERENT_SIZED_RINGS()">NCM_MAP_N_DIFFERENT_SIZED_RINGS</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#NCM-MAP-RING-PLAN-INDEX:CAPS" title="NCM_MAP_RING_PLAN_INDEX()">NCM_MAP_RING_PLAN_INDEX</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#NCM-MAP-RING-SIZE:CAPS" title="NCM_MAP_RING_SIZE()">NCM_MAP_RING_SIZE</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#NCM-MAP-N-RINGS:CAPS" title="NCM_MAP_N_RINGS()">NCM_MAP_N_RINGS</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#NCM-MAP-ALM-M-START:CAPS" title="NCM_MAP_ALM_M_START()">NCM_MAP_ALM_M_START</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcmSphereMap.html#NCM-MAP-ALM-INDEX:CAPS" title="NCM_MAP_ALM_INDEX()">NCM_MAP_ALM_INDEX</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmSphereMap.properties" id="NcmSphereMap.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody><tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcmSphereMap.html#NcmSphereMap--nside" title="The “nside” property">nside</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmSphereMap.other" id="NcmSphereMap.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name" />
+<col class="description" />
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcmSphereMap.html#NcmSphereMapOrder" title="enum NcmSphereMapOrder">NcmSphereMapOrder</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcmSphereMap.html#NcmSphereMapType" title="enum NcmSphereMapType">NcmSphereMapType</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmSphereMap.html#NcmSphereMap-struct" title="struct NcmSphereMap">NcmSphereMap</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmSphereMap.html#NcmSphereMapAlm" title="struct NcmSphereMapAlm">NcmSphereMapAlm</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmSphereMap.html#NcmSphereMapSHT" title="struct NcmSphereMapSHT">NcmSphereMapSHT</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmSphereMap.html#NCM-SPHERE-MAP-RNG-NAME:CAPS" title="NCM_SPHERE_MAP_RNG_NAME">NCM_SPHERE_MAP_RNG_NAME</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmSphereMap.object-hierarchy" id="NcmSphereMap.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcmSphereMapOrder
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GFlags</a>
+    <span class="lineart">╰──</span> NcmSphereMapType
+    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcmSphereMap
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmSphereMap.description" id="NcmSphereMap.description"></a><h2>Description</h2>
+<p>Map manipulation algorithms, Ylm decomposition.</p>
+</div>
+<div class="refsect1">
+<a name="NcmSphereMap.functions_details" id="NcmSphereMap.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-sphere-map-new" id="ncm-sphere-map-new"></a><h3>ncm_sphere_map_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="returnvalue">NcmSphereMap</span></a> *
+ncm_sphere_map_new (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nside</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-map-new.parameters" id="ncm-sphere-map-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>nside</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-map-new.returns" id="ncm-sphere-map-new.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-map-clone" id="ncm-sphere-map-clone"></a><h3>ncm_sphere_map_clone ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="returnvalue">NcmSphereMap</span></a> *
+ncm_sphere_map_clone (<em class="parameter"><code><a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a> *map</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-map-clone.parameters" id="ncm-sphere-map-clone.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>map</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-map-clone.returns" id="ncm-sphere-map-clone.returns"></a><h4>Returns</h4>
+<p> FIXME. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-map-copy" id="ncm-sphere-map-copy"></a><h3>ncm_sphere_map_copy ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_sphere_map_copy (<em class="parameter"><code><a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a> *dest</code></em>,
+                     <em class="parameter"><code><a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a> *orig</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-map-copy.parameters" id="ncm-sphere-map-copy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dest</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>orig</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-map-copy.returns" id="ncm-sphere-map-copy.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-map-init-coord" id="ncm-sphere-map-init-coord"></a><h3>ncm_sphere_map_init_coord ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_sphere_map_init_coord (<em class="parameter"><code><a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a> *map</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-map-init-coord.parameters" id="ncm-sphere-map-init-coord.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>map</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-map-init-coord.returns" id="ncm-sphere-map-init-coord.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-map-set-order" id="ncm-sphere-map-set-order"></a><h3>ncm_sphere_map_set_order ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_sphere_map_set_order (<em class="parameter"><code><a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a> *map</code></em>,
+                          <em class="parameter"><code><a class="link" href="NcmSphereMap.html#NcmSphereMapOrder" title="enum NcmSphereMapOrder"><span class="type">NcmSphereMapOrder</span></a> order</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> init_coord</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-map-set-order.parameters" id="ncm-sphere-map-set-order.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>map</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>order</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html#NcmSphereMapOrder" title="enum NcmSphereMapOrder"><span class="type">NcmSphereMapOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>init_coord</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-map-set-order.returns" id="ncm-sphere-map-set-order.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-mapalm-new" id="ncm-sphere-mapalm-new"></a><h3>ncm_sphere_mapalm_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSphereMap.html#NcmSphereMapAlm" title="struct NcmSphereMapAlm"><span class="returnvalue">NcmSphereMapAlm</span></a> *
+ncm_sphere_mapalm_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="ncm-sphere-mapalm-new.returns" id="ncm-sphere-mapalm-new.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-mapalm-init" id="ncm-sphere-mapalm-init"></a><h3>ncm_sphere_mapalm_init ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_sphere_mapalm_init (<em class="parameter"><code><a class="link" href="NcmSphereMap.html#NcmSphereMapAlm" title="struct NcmSphereMapAlm"><span class="type">NcmSphereMapAlm</span></a> *mapalm</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> lmax</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-mapalm-init.parameters" id="ncm-sphere-mapalm-init.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mapalm</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html#NcmSphereMapAlm" title="struct NcmSphereMapAlm"><span class="type">NcmSphereMapAlm</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lmax</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-mapalm-init.returns" id="ncm-sphere-mapalm-init.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-mapsht-new" id="ncm-sphere-mapsht-new"></a><h3>ncm_sphere_mapsht_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSphereMap.html#NcmSphereMapSHT" title="struct NcmSphereMapSHT"><span class="returnvalue">NcmSphereMapSHT</span></a> *
+ncm_sphere_mapsht_new (<em class="parameter"><code><a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a> *map</code></em>,
+                       <em class="parameter"><code><a class="link" href="NcmSphereMap.html#NcmSphereMapAlm" title="struct NcmSphereMapAlm"><span class="type">NcmSphereMapAlm</span></a> *mapalm</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> fftw_flags</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="ncm-sphere-mapsht-new.parameters" id="ncm-sphere-mapsht-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>map</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mapalm</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html#NcmSphereMapAlm" title="struct NcmSphereMapAlm"><span class="type">NcmSphereMapAlm</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>fftw_flags</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-mapsht-new.returns" id="ncm-sphere-mapsht-new.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-mapsht-map2alm-circle" id="ncm-sphere-mapsht-map2alm-circle"></a><h3>ncm_sphere_mapsht_map2alm_circle ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_sphere_mapsht_map2alm_circle (<em class="parameter"><code><a class="link" href="NcmSphereMap.html#NcmSphereMapSHT" title="struct NcmSphereMapSHT"><span class="type">NcmSphereMapSHT</span></a> *mapsht</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> ring</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> ring_size</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> norma</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> theta</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> phi</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> start_m</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> end_m</code></em>);</pre>
+<p>Transform the map to alm circle by circle using fft in each one
+Copied from gsl-1.11 specfunc/legendre_poly.c line 596
+And then adapted...</p>
+<div class="refsect3">
+<a name="ncm-sphere-mapsht-map2alm-circle.parameters" id="ncm-sphere-mapsht-map2alm-circle.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mapsht</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html#NcmSphereMapSHT" title="struct NcmSphereMapSHT"><span class="type">NcmSphereMapSHT</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ring</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ring_size</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>norma</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>theta</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>phi</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_m</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>end_m</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-mapsht-map2alm-circle.returns" id="ncm-sphere-mapsht-map2alm-circle.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-mapsht-alm2map-circle" id="ncm-sphere-mapsht-alm2map-circle"></a><h3>ncm_sphere_mapsht_alm2map_circle ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_sphere_mapsht_alm2map_circle (<em class="parameter"><code><a class="link" href="NcmSphereMap.html#NcmSphereMapSHT" title="struct NcmSphereMapSHT"><span class="type">NcmSphereMapSHT</span></a> *mapsht</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> ring</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> ring_size</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> theta</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> phi</code></em>);</pre>
+<p>Transform the map to alm circle by circle using fft in each one
+Copied from gsl-1.11 specfunc/legendre_poly.c line 596
+And then adapted...
+And then adapted again...</p>
+<div class="refsect3">
+<a name="ncm-sphere-mapsht-alm2map-circle.parameters" id="ncm-sphere-mapsht-alm2map-circle.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mapsht</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html#NcmSphereMapSHT" title="struct NcmSphereMapSHT"><span class="type">NcmSphereMapSHT</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ring</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ring_size</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>theta</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>phi</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-mapsht-alm2map-circle.returns" id="ncm-sphere-mapsht-alm2map-circle.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-mapsht-map2alm" id="ncm-sphere-mapsht-map2alm"></a><h3>ncm_sphere_mapsht_map2alm ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_sphere_mapsht_map2alm (<em class="parameter"><code><a class="link" href="NcmSphereMap.html#NcmSphereMapSHT" title="struct NcmSphereMapSHT"><span class="type">NcmSphereMapSHT</span></a> *mapsht</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> cut</code></em>);</pre>
+<p>Transform the map to alm circle by circle using fft in each one</p>
+<div class="refsect3">
+<a name="ncm-sphere-mapsht-map2alm.parameters" id="ncm-sphere-mapsht-map2alm.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mapsht</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html#NcmSphereMapSHT" title="struct NcmSphereMapSHT"><span class="type">NcmSphereMapSHT</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cut</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-mapsht-map2alm.returns" id="ncm-sphere-mapsht-map2alm.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-mapsht-alm2map" id="ncm-sphere-mapsht-alm2map"></a><h3>ncm_sphere_mapsht_alm2map ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_sphere_mapsht_alm2map (<em class="parameter"><code><a class="link" href="NcmSphereMap.html#NcmSphereMapSHT" title="struct NcmSphereMapSHT"><span class="type">NcmSphereMapSHT</span></a> *mapsht</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-mapsht-alm2map.parameters" id="ncm-sphere-mapsht-alm2map.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mapsht</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html#NcmSphereMapSHT" title="struct NcmSphereMapSHT"><span class="type">NcmSphereMapSHT</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-mapsht-alm2map.returns" id="ncm-sphere-mapsht-alm2map.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-map-homogenize-noise" id="ncm-sphere-map-homogenize-noise"></a><h3>ncm_sphere_map_homogenize_noise ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_sphere_map_homogenize_noise (<em class="parameter"><code><a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a> *map</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> base_sigma</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-map-homogenize-noise.parameters" id="ncm-sphere-map-homogenize-noise.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>map</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>base_sigma</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-map-homogenize-noise.returns" id="ncm-sphere-map-homogenize-noise.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-map-rotate-avg" id="ncm-sphere-map-rotate-avg"></a><h3>ncm_sphere_map_rotate_avg ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_sphere_map_rotate_avg (<em class="parameter"><code><a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a> *map</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#glong"><span class="type">glong</span></a> n</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-map-rotate-avg.parameters" id="ncm-sphere-map-rotate-avg.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>map</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-map-rotate-avg.returns" id="ncm-sphere-map-rotate-avg.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MAP-ALM-SIZE:CAPS" id="NCM-MAP-ALM-SIZE:CAPS"></a><h3>NCM_MAP_ALM_SIZE()</h3>
+<pre class="programlisting">#define NCM_MAP_ALM_SIZE(lmax) (((lmax)*(lmax) + 3*(lmax) + 2)/2)
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MAP-N-IND-PLM:CAPS" id="NCM-MAP-N-IND-PLM:CAPS"></a><h3>NCM_MAP_N_IND_PLM()</h3>
+<pre class="programlisting">#define NCM_MAP_N_IND_PLM(lmax) (((lmax)*(lmax) + 3*(lmax) + 2)/2)
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MAP-MAX-RING-SIZE:CAPS" id="NCM-MAP-MAX-RING-SIZE:CAPS"></a><h3>NCM_MAP_MAX_RING_SIZE()</h3>
+<pre class="programlisting">#define NCM_MAP_MAX_RING_SIZE(nside) (4*(nside))
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MAP-N-DIFFERENT-SIZED-RINGS:CAPS" id="NCM-MAP-N-DIFFERENT-SIZED-RINGS:CAPS"></a><h3>NCM_MAP_N_DIFFERENT_SIZED_RINGS()</h3>
+<pre class="programlisting">#define NCM_MAP_N_DIFFERENT_SIZED_RINGS(nside) (nside)
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MAP-RING-PLAN-INDEX:CAPS" id="NCM-MAP-RING-PLAN-INDEX:CAPS"></a><h3>NCM_MAP_RING_PLAN_INDEX()</h3>
+<pre class="programlisting">#define NCM_MAP_RING_PLAN_INDEX(nside,ring_n) (((ring_n) &lt; (nside)) ? (ring_n) : ((ring_n)&gt;=(3*(nside)) ? (4*(nside)-(ring_n)-2) : ((nside)-1)))
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MAP-RING-SIZE:CAPS" id="NCM-MAP-RING-SIZE:CAPS"></a><h3>NCM_MAP_RING_SIZE()</h3>
+<pre class="programlisting">#define NCM_MAP_RING_SIZE(nside,ring_n) (4 * (NCM_MAP_RING_PLAN_INDEX (nside,ring_n) + 1))
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MAP-N-RINGS:CAPS" id="NCM-MAP-N-RINGS:CAPS"></a><h3>NCM_MAP_N_RINGS()</h3>
+<pre class="programlisting">#define NCM_MAP_N_RINGS(nside) (4*(nside)-1)
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MAP-ALM-M-START:CAPS" id="NCM-MAP-ALM-M-START:CAPS"></a><h3>NCM_MAP_ALM_M_START()</h3>
+<pre class="programlisting">#define NCM_MAP_ALM_M_START(lmax,m) ((2*(lmax)*(m)-(m)*(m)+3*(m))/2)
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MAP-ALM-INDEX:CAPS" id="NCM-MAP-ALM-INDEX:CAPS"></a><h3>NCM_MAP_ALM_INDEX()</h3>
+<pre class="programlisting">#define NCM_MAP_ALM_INDEX(lmax,l,m) (((l) &gt;= (m)) ? (NCM_MAP_ALM_M_START(lmax,m) + (l) - (m)) : (-1))
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmSphereMap.other_details" id="NcmSphereMap.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcmSphereMapOrder" id="NcmSphereMapOrder"></a><h3>enum NcmSphereMapOrder</h3>
+<div class="refsect3">
+<a name="NcmSphereMapOrder.members" id="NcmSphereMapOrder.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-SPHERE-MAP-ORDER-NEST:CAPS" id="NC-SPHERE-MAP-ORDER-NEST:CAPS"></a>NC_SPHERE_MAP_ORDER_NEST</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-SPHERE-MAP-ORDER-RING:CAPS" id="NC-SPHERE-MAP-ORDER-RING:CAPS"></a>NC_SPHERE_MAP_ORDER_RING</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmSphereMapType" id="NcmSphereMapType"></a><h3>enum NcmSphereMapType</h3>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="NcmSphereMapType.members" id="NcmSphereMapType.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-SPHERE-MAP-TYPE-TEMPERATURE:CAPS" id="NC-SPHERE-MAP-TYPE-TEMPERATURE:CAPS"></a>NC_SPHERE_MAP_TYPE_TEMPERATURE</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-SPHERE-MAP-TYPE-Q-POLARIZATION:CAPS" id="NC-SPHERE-MAP-TYPE-Q-POLARIZATION:CAPS"></a>NC_SPHERE_MAP_TYPE_Q_POLARIZATION</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-SPHERE-MAP-TYPE-U-POLARISATION:CAPS" id="NC-SPHERE-MAP-TYPE-U-POLARISATION:CAPS"></a>NC_SPHERE_MAP_TYPE_U_POLARISATION</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-SPHERE-MAP-TYPE-SPUR-SIGNAL:CAPS" id="NC-SPHERE-MAP-TYPE-SPUR-SIGNAL:CAPS"></a>NC_SPHERE_MAP_TYPE_SPUR_SIGNAL</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-SPHERE-MAP-TYPE-N-OBS:CAPS" id="NC-SPHERE-MAP-TYPE-N-OBS:CAPS"></a>NC_SPHERE_MAP_TYPE_N_OBS</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmSphereMap-struct" id="NcmSphereMap-struct"></a><h3>struct NcmSphereMap</h3>
+<pre class="programlisting">struct NcmSphereMap;</pre>
+<p>FIXME</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmSphereMapAlm" id="NcmSphereMapAlm"></a><h3>struct NcmSphereMapAlm</h3>
+<pre class="programlisting">struct NcmSphereMapAlm {
+};
+</pre>
+<p>FIXME</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmSphereMapSHT" id="NcmSphereMapSHT"></a><h3>struct NcmSphereMapSHT</h3>
+<pre class="programlisting">struct NcmSphereMapSHT {
+};
+</pre>
+<p>FIXME</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-SPHERE-MAP-RNG-NAME:CAPS" id="NCM-SPHERE-MAP-RNG-NAME:CAPS"></a><h3>NCM_SPHERE_MAP_RNG_NAME</h3>
+<pre class="programlisting">#define NCM_SPHERE_MAP_RNG_NAME "sphere_map"
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmSphereMap.property-details" id="NcmSphereMap.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmSphereMap--nside" id="NcmSphereMap--nside"></a><h3>The <code class="literal">“nside”</code> property</h3>
+<pre class="programlisting">  “nside”                    <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>nside.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.25.1</div>
+</div></div></body>
+</html>

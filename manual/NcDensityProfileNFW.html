@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcDensityProfileNFW: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch08s04.html" title="Density Profile" />
+<link rel="prev" href="NcDensityProfile.html" title="NcDensityProfile" />
+<link rel="next" href="ch08s05.html" title="Multiplicity Function" />
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcDensityProfileNFW.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcDensityProfileNFW.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch08s04.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcDensityProfile.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="ch08s05.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcDensityProfileNFW" id="NcDensityProfileNFW"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcDensityProfileNFW.top_of_page" id="NcDensityProfileNFW.top_of_page"></a>NcDensityProfileNFW</span></h2>
+<p>NcDensityProfileNFW — Density profile of Navarro-Frenk-White type.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcDensityProfileNFW.functions" id="NcDensityProfileNFW.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return" />
+<col class="functions_name" />
+</colgroup>
+<tbody><tr>
+<td class="function_type">
+<a class="link" href="NcDensityProfile.html" title="NcDensityProfile"><span class="returnvalue">NcDensityProfile</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDensityProfileNFW.html#nc-density-profile-nfw-new" title="nc_density_profile_nfw_new ()">nc_density_profile_nfw_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcDensityProfileNFW.object-hierarchy" id="NcDensityProfileNFW.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcDensityProfile.html" title="NcDensityProfile">NcDensityProfile</a>
+        <span class="lineart">╰──</span> NcDensityProfileNFW
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcDensityProfileNFW.description" id="NcDensityProfileNFW.description"></a><h2>Description</h2>
+<p>This object implements the <a class="link" href="NcDensityProfile.html" title="NcDensityProfile"><span class="type">NcDensityProfile</span></a> class for a Navarro-Frenk-White (NFW) density profile.</p>
+<p>The NFW profile is defined as
+\begin{equation}
+\rho(r) = \frac{\rho_s}{(r/r_s)(1 + r/r_s)^2},
+\end{equation}
+where $\rho_s$ is ... and $r_s$ is the scale radius,
+\begin{equation}
+r_s \equiv \frac{r_{vir}}{c} = \left(\frac{3}{4\pi} \frac{M}{\Delta \overline{\rho}_m(z) c^3}\right)^{1/3},
+\end{equation}
+where $M$ is the virial mass, $\overline{\rho}_m(z)$ is the mean matter density, $\Delta$ is the overdensity
+parameter (as defined in <a class="link" href="NcMultiplicityFunc.html" title="NcMultiplicityFunc"><span class="type">NcMultiplicityFunc</span></a>).</p>
+<p>The normalized NFW density profile ($u_M(r) = \rho(r) / M$) in the Fourier space is given by
+\begin{equation}
+\tilde{u}_M(k) = \frac{1}{m_{nfw}(c)} \left[ \sin(x) \left[\text{Si}((1+c)x) - \text{Si}(x) \right] + \cos(x) \left[\text{Ci}((1+c)x) - \text{Ci}(x) \right] - \frac{\sin(cx)}{(1+c)x} \right],
+\end{equation}
+where $x \equiv (1+z)kr_s$, and $\text{Si}(x)$ and $\text{Ci}(x)$ are the sine and cosine integrals, namely.
+\begin{equation}
+\text{Si}(x) = \int_0^x \frac{\sin(t)}{t} dt \quad \text{and} \quad \text{Ci}(x) = - \int_x^\infty \frac{\cos(t)}{t} dt.
+\end{equation}</p>
+<p>The concentration parameter is (change this!)
+\begin{equation}
+c(M, z) = A_{vir} \left( \frac{M}{2 \times 10^{12} \text{h}^{-1}M_{\odot}}\right)^{B_{vir}} (1+z)^{C_{vir}}.
+\end{equation}</p>
+<p>References: astro-ph/0206508 and arxiv:1010.0744.</p>
+</div>
+<div class="refsect1">
+<a name="NcDensityProfileNFW.functions_details" id="NcDensityProfileNFW.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="nc-density-profile-nfw-new" id="nc-density-profile-nfw-new"></a><h3>nc_density_profile_nfw_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcDensityProfile.html" title="NcDensityProfile"><span class="returnvalue">NcDensityProfile</span></a> *
+nc_density_profile_nfw_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>This function returns a <a class="link" href="NcDensityProfile.html" title="NcDensityProfile"><span class="type">NcDensityProfile</span></a> with a <a class="link" href="NcDensityProfileNFW.html" title="NcDensityProfileNFW"><span class="type">NcDensityProfileNFW</span></a> implementation.</p>
+<div class="refsect3">
+<a name="nc-density-profile-nfw-new.returns" id="nc-density-profile-nfw-new.returns"></a><h4>Returns</h4>
+<p> A new <a class="link" href="NcDensityProfile.html" title="NcDensityProfile"><span class="type">NcDensityProfile</span></a>.</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcDensityProfileNFW.other_details" id="NcDensityProfileNFW.other_details"></a><h2>Types and Values</h2>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.25.1</div>
+</div></div></body>
+</html>

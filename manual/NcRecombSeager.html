@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcRecombSeager: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch06.html" title="Cosmological Calculators" />
+<link rel="prev" href="NcRecomb.html" title="NcRecomb" />
+<link rel="next" href="NcRecombCBE.html" title="NcRecombCBE" />
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcRecombSeager.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcRecombSeager.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcRecombSeager.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch06.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcRecomb.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcRecombCBE.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcRecombSeager" id="NcRecombSeager"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcRecombSeager.top_of_page" id="NcRecombSeager.top_of_page"></a>NcRecombSeager</span></h2>
+<p>NcRecombSeager — Cosmic recombination implementing Seager (1999).</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcRecombSeager.functions" id="NcRecombSeager.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return" />
+<col class="functions_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="NcRecombSeager.html#NcRecombSeagerKHI2p2Pmean" title="NcRecombSeagerKHI2p2Pmean ()">*NcRecombSeagerKHI2p2Pmean</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="NcRecombSeager.html#NcRecombSeagerKHeI2p" title="NcRecombSeagerKHeI2p ()">*NcRecombSeagerKHeI2p</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="NcRecombSeager.html#NcRecombSeagerKHeI2pGrad" title="NcRecombSeagerKHeI2pGrad ()">*NcRecombSeagerKHeI2pGrad</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="returnvalue">NcRecombSeager</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-new" title="nc_recomb_seager_new ()">nc_recomb_seager_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="returnvalue">NcRecombSeager</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-new-full" title="nc_recomb_seager_new_full ()">nc_recomb_seager_new_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="returnvalue">NcRecombSeager</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-ref" title="nc_recomb_seager_ref ()">nc_recomb_seager_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-free" title="nc_recomb_seager_free ()">nc_recomb_seager_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-clear" title="nc_recomb_seager_clear ()">nc_recomb_seager_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-set-options" title="nc_recomb_seager_set_options ()">nc_recomb_seager_set_options</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-set-switch" title="nc_recomb_seager_set_switch ()">nc_recomb_seager_set_switch</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcRecombSeager.html#NcRecombSeagerOpt" title="enum NcRecombSeagerOpt"><span class="returnvalue">NcRecombSeagerOpt</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-get-options" title="nc_recomb_seager_get_options ()">nc_recomb_seager_get_options</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-pequignot-HI-case-B" title="nc_recomb_seager_pequignot_HI_case_B ()">nc_recomb_seager_pequignot_HI_case_B</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-pequignot-HI-case-B-dTm" title="nc_recomb_seager_pequignot_HI_case_B_dTm ()">nc_recomb_seager_pequignot_HI_case_B_dTm</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-hummer-HeI-case-B" title="nc_recomb_seager_hummer_HeI_case_B ()">nc_recomb_seager_hummer_HeI_case_B</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-hummer-HeI-case-B-dTm" title="nc_recomb_seager_hummer_HeI_case_B_dTm ()">nc_recomb_seager_hummer_HeI_case_B_dTm</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-hummer-HeI-case-B-trip" title="nc_recomb_seager_hummer_HeI_case_B_trip ()">nc_recomb_seager_hummer_HeI_case_B_trip</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-hummer-HeI-case-B-trip-dTm" title="nc_recomb_seager_hummer_HeI_case_B_trip_dTm ()">nc_recomb_seager_hummer_HeI_case_B_trip_dTm</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcRecombSeager.properties" id="NcRecombSeager.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody><tr>
+<td class="property_type"><a class="link" href="NcRecombSeager.html#NcRecombSeagerOpt" title="enum NcRecombSeagerOpt"><span class="type">NcRecombSeagerOpt</span></a></td>
+<td class="property_name"><a class="link" href="NcRecombSeager.html#NcRecombSeager--options" title="The “options” property">options</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcRecombSeager.other" id="NcRecombSeager.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name" />
+<col class="description" />
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcRecombSeager.html#NcRecombSeagerOpt" title="enum NcRecombSeagerOpt">NcRecombSeagerOpt</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcRecombSeager.html#NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-T1:CAPS" title="NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_T1">NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_T1</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcRecombSeager.html#NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-T2:CAPS" title="NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_T2">NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_T2</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcRecombSeager.html#NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-P:CAPS" title="NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_P">NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_P</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcRecombSeager.html#NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-Q:CAPS" title="NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_Q">NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_Q</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcRecombSeager.html#NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-P-TRIP:CAPS" title="NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_P_TRIP">NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_P_TRIP</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcRecombSeager.html#NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-Q-TRIP:CAPS" title="NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_Q_TRIP">NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_Q_TRIP</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcRecombSeager.object-hierarchy" id="NcRecombSeager.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GFlags</a>
+    <span class="lineart">╰──</span> NcRecombSeagerOpt
+    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcRecomb.html" title="NcRecomb">NcRecomb</a>
+        <span class="lineart">╰──</span> NcRecombSeager
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcRecombSeager.includes" id="NcRecombSeager.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;numcosmo/nc_recomb_seager.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcRecombSeager.description" id="NcRecombSeager.description"></a><h2>Description</h2>
+<p>Cosmic recobination as initally describe in <a class="link" href="refs.html#XSeager1999">Seager (1999)</a>
+and <a class="link" href="refs.html#XSeager2000">Seager (2000)</a>. The code includes now all modifications
+as in <a class="ulink" href="http://www.astro.ubc.ca/people/scott/recfast.html" target="_top">recfast 1.5.2</a>,
+which includes the modifications discussed in <a class="link" href="refs.html#XWong2008">Wong (2008)</a>.
+Nonetheless, we do not include the modification for the matter temperature
+evolution as describe in <a class="link" href="refs.html#XScott2009">Scott (2009)</a>. Since we use a more
+robust integration method such modification for the temperature evolution
+is simply unnecessary.</p>
+<p>See <a class="link" href="NcRecomb.html#NcRecomb.description" title="Description">NcRecomb</a> for symbol definitions.</p>
+<p>$
+ \newcommand{\He}{\text{He}}
+ \newcommand{\HeI}{\text{HeI}}
+ \newcommand{\HeII}{\text{HeII}}
+ \newcommand{\HeIII}{\text{HeIII}}
+ \newcommand{\Hy}{\text{H}}
+ \newcommand{\HyI}{\text{HI}}
+ \newcommand{\HyII}{\text{HII}}
+ \newcommand{\e}{{\text{e}^-}}
+$</p>
+<p>This code solves the system of equations for the singly ionized hydrogen $X_\HyII$
+and helium $X_\HeII$ as well as for the baryon temperature $T_m$.</p>
+<p>The equations are:
+\begin{align}
+\frac{\mathrm{d}X_\HyII}{\mathrm{d}x} &amp;= \frac{X_\HyII X_\e n_\Hy - X_\HyI B_{\HyI, 1s\,{}^2\!S_{1/2}}(T_m)}{H x}\left[\alpha_\Hy(T_m)\frac{n_\Hy K_{\HyI} X_\HyI \Lambda_\Hy + 1}{n_\Hy K_{\HyI} X_\HyI \left[\Lambda_\Hy + B_{\HyI, 2s\,{}^2\!S_{1/2}}(T_m) \alpha_\Hy(T_m)\right] + 1}\right], \\
+\frac{\mathrm{d}T_m}{\mathrm{d}x} &amp;= \frac{c}{Hx}\frac{8\sigma_\mathrm{T}a_\mathrm{R} T^4_r}{3m_\mathrm{e}c^2} \frac{X_\e(T_m - T_r)}{1 + X_\He + X_\e} + \frac{2T_m}{x}, \\
+\frac{\mathrm{d}X_\HeII}{\mathrm{d}x} &amp;= \frac{X_\HeII X_\e n_\Hy - X_\HeI B_{\HeI, 1s\,{}^1\!S_{0}}(T_m)}{H x}\Bigg\{\left[\alpha_\He(T_m)\frac{n_\Hy K_{\HeI} X_\HeI \Lambda_\He + B^{\HeI, 2s\,{}^1\!S_{0}}_{\HeI, 2p\,{}^1\!P_{1}}(T_m)}{n_H K_{\HeI} X_\HeI \left[\Lambda_\He + B_{\HeI, 2s\,{}^1\!S_{0}}(T_m) \alpha_\He(T_m)\right] + B^{\HeI, 2s\,{}^1\!S_{0}}_{\HeI, 2p\,{}^1\!P_{1}}(T_m)}\right] \nonumber\\
+&amp;+ \alpha_\He^\mathrm{t}(T_m)\frac{1}{n_H K_{\HeI}^\mathrm{t} X_\HeI B_{\HeI, 2p\,{}^3\!P_\mathrm{mean}}(T_m) \alpha_\He^\mathrm{t}(T_m) + 1} \Bigg\},
+\end{align}</p>
+<p>The Boltzmann factor for hydrogen levels are given by
+$$B_{\HyI, l}(T_m) = k_\mathrm{e}^3(T_m)\,\exp\left[-E_{\HyI, l} / (k_\mathrm{B}T_m)\right],$$
+for $l = 1s\,{}^2\!S_{1/2}, 2s\,{}^2\!S_{1/2}$, see <a class="link" href="NcmC.html#ncm-c-boltzmann-factor-HI-1s-2S0-5" title="ncm_c_boltzmann_factor_HI_1s_2S0_5 ()"><code class="function">ncm_c_boltzmann_factor_HI_1s_2S0_5()</code></a>,
+<a class="link" href="NcmC.html#ncm-c-boltzmann-factor-HI-2s-2S0-5" title="ncm_c_boltzmann_factor_HI_2s_2S0_5 ()"><code class="function">ncm_c_boltzmann_factor_HI_2s_2S0_5()</code></a> and <a class="link" href="NcmC.html#ncm-c-thermal-wn-e" title="ncm_c_thermal_wn_e ()"><code class="function">ncm_c_thermal_wn_e()</code></a> for the definition
+of the electron thermal wavenumber $k_\mathrm{e}$.</p>
+<p>For the helium-I levels the Boltzmann factors are
+$$B_{\HeI, l}(T_m) = 4 k_\mathrm{e}^3(T_m)\,\exp\left[-E_{\HeI, l} / (k_\mathrm{B}T_m)\right],$$
+where the levels $l$ used are $1s\,{}^1\!S_{0}$, $2s\,{}^1\!S_{0}$ and $2p\,{}^1\!P_{1}$,
+see <a class="link" href="NcmC.html#ncm-c-HeI-ion-wn-1s-1S0" title="ncm_c_HeI_ion_wn_1s_1S0 ()"><code class="function">ncm_c_HeI_ion_wn_1s_1S0()</code></a>, <a class="link" href="NcmC.html#ncm-c-HeI-ion-wn-2s-1S0" title="ncm_c_HeI_ion_wn_2s_1S0 ()"><code class="function">ncm_c_HeI_ion_wn_2s_1S0()</code></a>,
+<a class="link" href="NcmC.html#ncm-c-HeI-ion-wn-2p-1P1" title="ncm_c_HeI_ion_wn_2p_1P1 ()"><code class="function">ncm_c_HeI_ion_wn_2p_1P1()</code></a>. The symbol $B^{\HeI, 2s\,{}^1\!S_{0}}_{\HeI, 2p\,{}^1\!P_{1}}(T_m)$
+represents the ratio of two Boltzmann factors, i.e.,
+$$B^{\HeI, 2s\,{}^1\!S_{0}}_{\HeI, 2p\,{}^1\!P_{1}}(T_m) =
+\exp\left[-(E_{\HeI, 2s\,{}^1\!S_{0}} - E_{\HeI, 2p\,{}^1\!P_{1}})/ (k_\mathrm{B}T_m)\right].$$</p>
+<p>The two photon decaying rates for $\Hy$ is $\Lambda_\Hy$ and is given by <a class="link" href="NcmC.html#ncm-c-decay-H-rate-2s-1s" title="ncm_c_decay_H_rate_2s_1s ()"><code class="function">ncm_c_decay_H_rate_2s_1s()</code></a>,
+and for helium-I is $\Lambda_\He$ given by <a class="link" href="NcmC.html#ncm-c-decay-He-rate-2s-1s" title="ncm_c_decay_He_rate_2s_1s ()"><code class="function">ncm_c_decay_He_rate_2s_1s()</code></a>.</p>
+<p>The Case B coefficient for $\Hy$, $\alpha_\Hy$ is calculated by <a class="link" href="NcRecombSeager.html#nc-recomb-seager-pequignot-HI-case-B" title="nc_recomb_seager_pequignot_HI_case_B ()"><code class="function">nc_recomb_seager_pequignot_HI_case_B()</code></a>,
+while the Case B coefficient for $\He$, $\alpha_\He$ and $\alpha_\He^\mathrm{t}$ are given
+respectively by <a class="link" href="NcRecombSeager.html#nc-recomb-seager-hummer-HeI-case-B" title="nc_recomb_seager_hummer_HeI_case_B ()"><code class="function">nc_recomb_seager_hummer_HeI_case_B()</code></a> and <a class="link" href="NcRecombSeager.html#nc-recomb-seager-hummer-HeI-case-B-trip" title="nc_recomb_seager_hummer_HeI_case_B_trip ()"><code class="function">nc_recomb_seager_hummer_HeI_case_B_trip()</code></a>.</p>
+<p>The flags in <a class="link" href="NcRecombSeager.html#NcRecombSeagerOpt" title="enum NcRecombSeagerOpt"><span class="type">NcRecombSeagerOpt</span></a> define which are the $K$ factors to be used and whether to include
+triplets factors in the $\He$ rate.</p>
+<p>The code uses <a class="link" href="NcRecomb.html#nc-recomb-HeII-ion-saha-x-by-HeIII-He" title="nc_recomb_HeII_ion_saha_x_by_HeIII_He ()"><code class="function">nc_recomb_HeII_ion_saha_x_by_HeIII_He()</code></a> to obtain the value of $\lambda$
+where the numerical integration will start. The integration is performed considering all
+components without any switching or approximation.</p>
+</div>
+<div class="refsect1">
+<a name="NcRecombSeager.functions_details" id="NcRecombSeager.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="NcRecombSeagerKHI2p2Pmean" id="NcRecombSeagerKHI2p2Pmean"></a><h3>NcRecombSeagerKHI2p2Pmean ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="c_punctuation">(</span>*NcRecombSeagerKHI2p2Pmean<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> *recomb_seager</code></em>,
+                              <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                              <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                              <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> H</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcRecombSeagerKHeI2p" id="NcRecombSeagerKHeI2p"></a><h3>NcRecombSeagerKHeI2p ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="c_punctuation">(</span>*NcRecombSeagerKHeI2p<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> *recomb_seager</code></em>,
+                         <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> XHI</code></em>,
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>,
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> XHeI</code></em>,
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> H</code></em>,
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> n_H</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcRecombSeagerKHeI2pGrad" id="NcRecombSeagerKHeI2pGrad"></a><h3>NcRecombSeagerKHeI2pGrad ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*NcRecombSeagerKHeI2pGrad<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> *recomb_seager</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                             <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                             <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> XHI</code></em>,
+                             <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>,
+                             <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> XHeI</code></em>,
+                             <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> H</code></em>,
+                             <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> n_H</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> grad[3]</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-recomb-seager-new" id="nc-recomb-seager-new"></a><h3>nc_recomb_seager_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="returnvalue">NcRecombSeager</span></a> *
+nc_recomb_seager_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> using default properties.</p>
+<div class="refsect3">
+<a name="nc-recomb-seager-new.returns" id="nc-recomb-seager-new.returns"></a><h4>Returns</h4>
+<p> a new <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-recomb-seager-new-full" id="nc-recomb-seager-new-full"></a><h3>nc_recomb_seager_new_full ()</h3>
+<pre class="programlisting"><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="returnvalue">NcRecombSeager</span></a> *
+nc_recomb_seager_new_full (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> init_frac</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zi</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> prec</code></em>);</pre>
+<p>Creates a new <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> using <em class="parameter"><code>init_frac</code></em>
+, <em class="parameter"><code>zi</code></em>
+ and <em class="parameter"><code>prec</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-recomb-seager-new-full.parameters" id="nc-recomb-seager-new-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>init_frac</p></td>
+<td class="parameter_description"><p>inital fraction of $X_{\HeIII}/X_{\He}$ where to start numerical integration</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zi</p></td>
+<td class="parameter_description"><p>inital redshift</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prec</p></td>
+<td class="parameter_description"><p>integration precision</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-recomb-seager-new-full.returns" id="nc-recomb-seager-new-full.returns"></a><h4>Returns</h4>
+<p> a new <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-recomb-seager-ref" id="nc-recomb-seager-ref"></a><h3>nc_recomb_seager_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="returnvalue">NcRecombSeager</span></a> *
+nc_recomb_seager_ref (<em class="parameter"><code><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> *recomb_seager</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>recomb_seager</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-recomb-seager-ref.parameters" id="nc-recomb-seager-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>recomb_seager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-recomb-seager-ref.returns" id="nc-recomb-seager-ref.returns"></a><h4>Returns</h4>
+<p> <em class="parameter"><code>recomb_seager</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-recomb-seager-free" id="nc-recomb-seager-free"></a><h3>nc_recomb_seager_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_recomb_seager_free (<em class="parameter"><code><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> *recomb_seager</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>recomb_seager</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-recomb-seager-free.parameters" id="nc-recomb-seager-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>recomb_seager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-recomb-seager-clear" id="nc-recomb-seager-clear"></a><h3>nc_recomb_seager_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_recomb_seager_clear (<em class="parameter"><code><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> **recomb_seager</code></em>);</pre>
+<p>Decreases the reference count of *<em class="parameter"><code>recomb_seager</code></em>
+ if
+*<em class="parameter"><code>recomb_seager</code></em>
+ is not NULL, then sets *<em class="parameter"><code>recomb_seager</code></em>
+ to NULL.</p>
+<div class="refsect3">
+<a name="nc-recomb-seager-clear.parameters" id="nc-recomb-seager-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>recomb_seager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-recomb-seager-set-options" id="nc-recomb-seager-set-options"></a><h3>nc_recomb_seager_set_options ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_recomb_seager_set_options (<em class="parameter"><code><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> *recomb_seager</code></em>,
+                              <em class="parameter"><code><a class="link" href="NcRecombSeager.html#NcRecombSeagerOpt" title="enum NcRecombSeagerOpt"><span class="type">NcRecombSeagerOpt</span></a> opts</code></em>);</pre>
+<p>Sets integration options <a class="link" href="NcRecombSeager.html#NcRecombSeagerOpt" title="enum NcRecombSeagerOpt"><span class="type">NcRecombSeagerOpt</span></a>. To set the integration
+options using the recfast compatible flags use <a class="link" href="NcRecombSeager.html#nc-recomb-seager-set-switch" title="nc_recomb_seager_set_switch ()"><code class="function">nc_recomb_seager_set_switch()</code></a>.</p>
+<div class="refsect3">
+<a name="nc-recomb-seager-set-options.parameters" id="nc-recomb-seager-set-options.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>recomb_seager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>opts</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecombSeager.html#NcRecombSeagerOpt" title="enum NcRecombSeagerOpt"><span class="type">NcRecombSeagerOpt</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-recomb-seager-set-switch" id="nc-recomb-seager-set-switch"></a><h3>nc_recomb_seager_set_switch ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_recomb_seager_set_switch (<em class="parameter"><code><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> *recomb_seager</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> H_switch</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> He_switch</code></em>);</pre>
+<p>Sets integration options <a class="link" href="NcRecombSeager.html#NcRecombSeagerOpt" title="enum NcRecombSeagerOpt"><span class="type">NcRecombSeagerOpt</span></a> using the following map:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><em class="parameter"><code>H_switch</code></em>
+ == 0 =&gt; <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HII-FUDGE:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HII_FUDGE</span></a>;</p></li>
+<li class="listitem"><p><em class="parameter"><code>H_switch</code></em>
+ == 1 =&gt; <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HII-FUDGE-GAUSS-COR:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HII_FUDGE_GAUSS_COR</span></a>;</p></li>
+<li class="listitem"><p><em class="parameter"><code>He_switch</code></em>
+ == 0 =&gt; no additional flag;</p></li>
+<li class="listitem"><p><em class="parameter"><code>He_switch</code></em>
+ == 1 =&gt; <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-1P1:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_1P1</span></a>;</p></li>
+<li class="listitem"><p><em class="parameter"><code>He_switch</code></em>
+ == 2 =&gt; <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-1P1:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_1P1</span></a> | <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-1P1-CO:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_1P1_CO</span></a>;</p></li>
+<li class="listitem"><p><em class="parameter"><code>He_switch</code></em>
+ == 3 =&gt; <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-1P1:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_1P1</span></a> | <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-3P012:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_3P012</span></a>;</p></li>
+<li class="listitem"><p><em class="parameter"><code>He_switch</code></em>
+ == 4 =&gt; <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-1P1:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_1P1</span></a> | <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-3P012:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_3P012</span></a> | <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-3P012-CO:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_3P012_CO</span></a>;</p></li>
+<li class="listitem"><p><em class="parameter"><code>He_switch</code></em>
+ == 5 =&gt; <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-1P1:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_1P1</span></a> | <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-1P1-CO:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_1P1_CO</span></a> | <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-3P012:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_3P012</span></a>;</p></li>
+<li class="listitem"><p><em class="parameter"><code>He_switch</code></em>
+ == 6 =&gt; <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-1P1:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_1P1</span></a> | <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-1P1-CO:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_1P1_CO</span></a> | <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-3P012:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_3P012</span></a> | <a class="link" href="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-3P012-CO:CAPS"><span class="type">NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_3P012_CO</span></a>;</p></li>
+</ul></div>
+<div class="refsect3">
+<a name="nc-recomb-seager-set-switch.parameters" id="nc-recomb-seager-set-switch.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>recomb_seager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>H_switch</p></td>
+<td class="parameter_description"><p>an integer between 0 and 1</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>He_switch</p></td>
+<td class="parameter_description"><p>an integer between 0 and 6</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-recomb-seager-get-options" id="nc-recomb-seager-get-options"></a><h3>nc_recomb_seager_get_options ()</h3>
+<pre class="programlisting"><a class="link" href="NcRecombSeager.html#NcRecombSeagerOpt" title="enum NcRecombSeagerOpt"><span class="returnvalue">NcRecombSeagerOpt</span></a>
+nc_recomb_seager_get_options (<em class="parameter"><code><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> *recomb_seager</code></em>);</pre>
+<p>Gets integration options.</p>
+<div class="refsect3">
+<a name="nc-recomb-seager-get-options.parameters" id="nc-recomb-seager-get-options.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>recomb_seager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-recomb-seager-get-options.returns" id="nc-recomb-seager-get-options.returns"></a><h4>Returns</h4>
+<p> currently used integration options.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-recomb-seager-pequignot-HI-case-B" id="nc-recomb-seager-pequignot-HI-case-B"></a><h3>nc_recomb_seager_pequignot_HI_case_B ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_recomb_seager_pequignot_HI_case_B (<em class="parameter"><code><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> *recomb_seager</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> Tm</code></em>);</pre>
+<p>The case B $\HyII$ recombination coefficient.</p>
+<p>The fitting formula of the case B recombination coefficient for $\HyII$ as
+in <a class="link" href="refs.html#XPequignot1991">Pequignot (1991)</a>.</p>
+<div class="refsect3">
+<a name="nc-recomb-seager-pequignot-HI-case-B.parameters" id="nc-recomb-seager-pequignot-HI-case-B.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>recomb_seager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>Tm</p></td>
+<td class="parameter_description"><p>the matter (baryons) temperature $T_m$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-recomb-seager-pequignot-HI-case-B.returns" id="nc-recomb-seager-pequignot-HI-case-B.returns"></a><h4>Returns</h4>
+<p> the value of the case B recombination coefficient for
+$\HyII$, $\alpha_H$ .</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-recomb-seager-pequignot-HI-case-B-dTm" id="nc-recomb-seager-pequignot-HI-case-B-dTm"></a><h3>nc_recomb_seager_pequignot_HI_case_B_dTm ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_recomb_seager_pequignot_HI_case_B_dTm
+                               (<em class="parameter"><code><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> *recomb_seager</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> Tm</code></em>);</pre>
+<p>The case B $\HyII$ recombination coefficient derivative with respect to $T_m$.</p>
+<p>The derivative of the fitting formula of the case B recombination coefficient for $\HyII$
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-pequignot-HI-case-B" title="nc_recomb_seager_pequignot_HI_case_B ()"><code class="function">nc_recomb_seager_pequignot_HI_case_B()</code></a>.</p>
+<div class="refsect3">
+<a name="nc-recomb-seager-pequignot-HI-case-B-dTm.parameters" id="nc-recomb-seager-pequignot-HI-case-B-dTm.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>recomb_seager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>Tm</p></td>
+<td class="parameter_description"><p>the matter (baryons) temperature $T_m$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-recomb-seager-pequignot-HI-case-B-dTm.returns" id="nc-recomb-seager-pequignot-HI-case-B-dTm.returns"></a><h4>Returns</h4>
+<p> the value of the case B recombination coefficient for $\HyII$, $d\alpha_H/dT_m$.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-recomb-seager-hummer-HeI-case-B" id="nc-recomb-seager-hummer-HeI-case-B"></a><h3>nc_recomb_seager_hummer_HeI_case_B ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_recomb_seager_hummer_HeI_case_B (<em class="parameter"><code><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> *recomb_seager</code></em>,
+                                    <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> Tm</code></em>);</pre>
+<p>The case B $\HeII$ recombination coefficient.</p>
+<p>The fitting formula of the case B recombination coefficient for $\HeII$ as
+in <a class="link" href="refs.html#XHummer1998">Hummer (1998)</a>.</p>
+<div class="refsect3">
+<a name="nc-recomb-seager-hummer-HeI-case-B.parameters" id="nc-recomb-seager-hummer-HeI-case-B.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>recomb_seager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>Tm</p></td>
+<td class="parameter_description"><p>the matter (baryons) temperature $T_m$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-recomb-seager-hummer-HeI-case-B.returns" id="nc-recomb-seager-hummer-HeI-case-B.returns"></a><h4>Returns</h4>
+<p> the value of the case B recombination coefficient for $\HeII$, $\alpha_H$ .</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-recomb-seager-hummer-HeI-case-B-dTm" id="nc-recomb-seager-hummer-HeI-case-B-dTm"></a><h3>nc_recomb_seager_hummer_HeI_case_B_dTm ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_recomb_seager_hummer_HeI_case_B_dTm
+                               (<em class="parameter"><code><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> *recomb_seager</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> Tm</code></em>);</pre>
+<p>The case B $\HeII$ recombination coefficient derivative with respect to Tm.</p>
+<p>The derivative of the fitting formula of the case B recombination coefficient for $\HeII$
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-hummer-HeI-case-B" title="nc_recomb_seager_hummer_HeI_case_B ()"><code class="function">nc_recomb_seager_hummer_HeI_case_B()</code></a>.</p>
+<div class="refsect3">
+<a name="nc-recomb-seager-hummer-HeI-case-B-dTm.parameters" id="nc-recomb-seager-hummer-HeI-case-B-dTm.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>recomb_seager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>Tm</p></td>
+<td class="parameter_description"><p>the matter (baryons) temperature $T_m$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-recomb-seager-hummer-HeI-case-B-dTm.returns" id="nc-recomb-seager-hummer-HeI-case-B-dTm.returns"></a><h4>Returns</h4>
+<p> the value of the case B recombination coefficient for $\HeII$, $d\alpha_H/dT_m$.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-recomb-seager-hummer-HeI-case-B-trip" id="nc-recomb-seager-hummer-HeI-case-B-trip"></a><h3>nc_recomb_seager_hummer_HeI_case_B_trip ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_recomb_seager_hummer_HeI_case_B_trip
+                               (<em class="parameter"><code><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> *recomb_seager</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> Tm</code></em>);</pre>
+<p>The case B via triplets $\HeII$ recombination coefficient.</p>
+<p>The fitting formula of the case B via triplets recombination coefficient for $\HeII$ as
+in <a class="link" href="refs.html#XHummer1998">Hummer (1998)</a>.</p>
+<div class="refsect3">
+<a name="nc-recomb-seager-hummer-HeI-case-B-trip.parameters" id="nc-recomb-seager-hummer-HeI-case-B-trip.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>recomb_seager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>Tm</p></td>
+<td class="parameter_description"><p>the matter (baryons) temperature $T_m$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-recomb-seager-hummer-HeI-case-B-trip.returns" id="nc-recomb-seager-hummer-HeI-case-B-trip.returns"></a><h4>Returns</h4>
+<p> the value of the case B via triplets recombination coefficient for $\HeII$, $\alpha_H$ .</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-recomb-seager-hummer-HeI-case-B-trip-dTm" id="nc-recomb-seager-hummer-HeI-case-B-trip-dTm"></a><h3>nc_recomb_seager_hummer_HeI_case_B_trip_dTm ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_recomb_seager_hummer_HeI_case_B_trip_dTm
+                               (<em class="parameter"><code><a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a> *recomb_seager</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> Tm</code></em>);</pre>
+<p>The case B via triplets $\HeII$ recombination coefficient derivative with respect to Tm.</p>
+<p>The derivative of the fitting formula of the case B via triplets recombination coefficient for $\HeII$
+<a class="link" href="NcRecombSeager.html#nc-recomb-seager-hummer-HeI-case-B-trip" title="nc_recomb_seager_hummer_HeI_case_B_trip ()"><code class="function">nc_recomb_seager_hummer_HeI_case_B_trip()</code></a>.</p>
+<div class="refsect3">
+<a name="nc-recomb-seager-hummer-HeI-case-B-trip-dTm.parameters" id="nc-recomb-seager-hummer-HeI-case-B-trip-dTm.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>recomb_seager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecombSeager.html" title="NcRecombSeager"><span class="type">NcRecombSeager</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>Tm</p></td>
+<td class="parameter_description"><p>the matter (baryons) temperature $T_m$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-recomb-seager-hummer-HeI-case-B-trip-dTm.returns" id="nc-recomb-seager-hummer-HeI-case-B-trip-dTm.returns"></a><h4>Returns</h4>
+<p> the value of the case B via triplets recombination coefficient for $\HeII$, $d\alpha_H/dT_m$.</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcRecombSeager.other_details" id="NcRecombSeager.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcRecombSeagerOpt" id="NcRecombSeagerOpt"></a><h3>enum NcRecombSeagerOpt</h3>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="NcRecombSeagerOpt.members" id="NcRecombSeagerOpt.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-RECOM-SEAGER-OPT-HII-FUDGE:CAPS" id="NC-RECOM-SEAGER-OPT-HII-FUDGE:CAPS"></a>NC_RECOM_SEAGER_OPT_HII_FUDGE</p></td>
+<td class="enum_member_description">
+<p>Includes fudge factor in the case_B recombination fitting formulas.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-RECOM-SEAGER-OPT-HII-FUDGE-GAUSS-COR:CAPS" id="NC-RECOM-SEAGER-OPT-HII-FUDGE-GAUSS-COR:CAPS"></a>NC_RECOM_SEAGER_OPT_HII_FUDGE_GAUSS_COR</p></td>
+<td class="enum_member_description">
+<p>Includes gaussian correction in the case_B recombination fitting formulas.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-1P1:CAPS" id="NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-1P1:CAPS"></a>NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_1P1</p></td>
+<td class="enum_member_description">
+<p>Includes Sobolev scape probability for the $2p\,{}^1\!P_{1} \to 1s\,{}^1\!S_{0}$.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-1P1-CO:CAPS" id="NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-1P1-CO:CAPS"></a>NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_1P1_CO</p></td>
+<td class="enum_member_description">
+<p>Also includes the continum opacity effect due to H.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-3P012:CAPS" id="NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-3P012:CAPS"></a>NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_3P012</p></td>
+<td class="enum_member_description">
+<p>Includes Sobolev scape probability for the $2p\,{}^3\!P_{0,1,2} \to 1s\,{}^1\!S_{0}$.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-3P012-CO:CAPS" id="NC-RECOM-SEAGER-OPT-HEII-SOBOLEV-3P012-CO:CAPS"></a>NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_3P012_CO</p></td>
+<td class="enum_member_description">
+<p>Also includes the continum opacity effect due to H.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-RECOM-SEAGER-OPT-ALL:CAPS" id="NC-RECOM-SEAGER-OPT-ALL:CAPS"></a>NC_RECOM_SEAGER_OPT_ALL</p></td>
+<td class="enum_member_description">
+<p>All options.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-T1:CAPS" id="NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-T1:CAPS"></a><h3>NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_T1</h3>
+<pre class="programlisting">#define NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_T1 (pow (10.0, 5.114))
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-T2:CAPS" id="NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-T2:CAPS"></a><h3>NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_T2</h3>
+<pre class="programlisting">#define NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_T2 (pow (10.0, 0.477121))
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-P:CAPS" id="NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-P:CAPS"></a><h3>NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_P</h3>
+<pre class="programlisting">#define NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_P (0.711)
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-Q:CAPS" id="NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-Q:CAPS"></a><h3>NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_Q</h3>
+<pre class="programlisting">#define NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_Q (pow (10.0, -16.744))
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-P-TRIP:CAPS" id="NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-P-TRIP:CAPS"></a><h3>NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_P_TRIP</h3>
+<pre class="programlisting">#define NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_P_TRIP (0.761)
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-Q-TRIP:CAPS" id="NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-Q-TRIP:CAPS"></a><h3>NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_Q_TRIP</h3>
+<pre class="programlisting">#define NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_Q_TRIP (pow (10.0, -16.306))
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcRecombSeager.property-details" id="NcRecombSeager.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcRecombSeager--options" id="NcRecombSeager--options"></a><h3>The <code class="literal">“options”</code> property</h3>
+<pre class="programlisting">  “options”                  <a class="link" href="NcRecombSeager.html#NcRecombSeagerOpt" title="enum NcRecombSeagerOpt"><span class="type">NcRecombSeagerOpt</span></a></pre>
+<p>Integration options.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: NC_RECOM_SEAGER_OPT_HII_FUDGE | NC_RECOM_SEAGER_OPT_HII_FUDGE_GAUSS_COR | NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_1P1 | NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_1P1_CO | NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_3P012 | NC_RECOM_SEAGER_OPT_HEII_SOBOLEV_3P012_CO</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.25.1</div>
+</div></div></body>
+</html>

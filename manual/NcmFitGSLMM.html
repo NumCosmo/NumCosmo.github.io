@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmFitGSLMM: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s10.html" title="Statistical Analysis" />
+<link rel="prev" href="NcmFitGSLLS.html" title="NcmFitGSLLS" />
+<link rel="next" href="NcmFitGSLMMS.html" title="NcmFitGSLMMS" />
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmFitGSLMM.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmFitGSLMM.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmFitGSLMM.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s10.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcmFitGSLLS.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmFitGSLMMS.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmFitGSLMM" id="NcmFitGSLMM"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmFitGSLMM.top_of_page" id="NcmFitGSLMM.top_of_page"></a>NcmFitGSLMM</span></h2>
+<p>NcmFitGSLMM — Best-fit finder -- GSL non-linear minimization algorithms.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmFitGSLMM.functions" id="NcmFitGSLMM.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return" />
+<col class="functions_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmFit.html" title="NcmFit"><span class="returnvalue">NcmFit</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitGSLMM.html#ncm-fit-gsl-mm-new" title="ncm_fit_gsl_mm_new ()">ncm_fit_gsl_mm_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmFit.html" title="NcmFit"><span class="returnvalue">NcmFit</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitGSLMM.html#ncm-fit-gsl-mm-new-default" title="ncm_fit_gsl_mm_new_default ()">ncm_fit_gsl_mm_new_default</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmFit.html" title="NcmFit"><span class="returnvalue">NcmFit</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitGSLMM.html#ncm-fit-gsl-mm-new-by-name" title="ncm_fit_gsl_mm_new_by_name ()">ncm_fit_gsl_mm_new_by_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitGSLMM.html#ncm-fit-gsl-mm-set-algo" title="ncm_fit_gsl_mm_set_algo ()">ncm_fit_gsl_mm_set_algo</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmFitGSLMM.properties" id="NcmFitGSLMM.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody><tr>
+<td class="property_type"><a class="link" href="NcmFitGSLMM.html#NcmFitGSLMMAlgos" title="enum NcmFitGSLMMAlgos"><span class="type">NcmFitGSLMMAlgos</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitGSLMM.html#NcmFitGSLMM--algorithm" title="The “algorithm” property">algorithm</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmFitGSLMM.other" id="NcmFitGSLMM.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name" />
+<col class="description" />
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcmFitGSLMM.html#NcmFitGSLMMAlgos" title="enum NcmFitGSLMMAlgos">NcmFitGSLMMAlgos</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmFitGSLMM.object-hierarchy" id="NcmFitGSLMM.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcmFitGSLMMAlgos
+    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcmFit.html" title="NcmFit">NcmFit</a>
+        <span class="lineart">╰──</span> NcmFitGSLMM
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmFitGSLMM.description" id="NcmFitGSLMM.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcmFitGSLMM.functions_details" id="NcmFitGSLMM.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-fit-gsl-mm-new" id="ncm-fit-gsl-mm-new"></a><h3>ncm_fit_gsl_mm_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmFit.html" title="NcmFit"><span class="returnvalue">NcmFit</span></a> *
+ncm_fit_gsl_mm_new (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                    <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                    <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitGradType" title="enum NcmFitGradType"><span class="type">NcmFitGradType</span></a> gtype</code></em>,
+                    <em class="parameter"><code><a class="link" href="NcmFitGSLMM.html#NcmFitGSLMMAlgos" title="enum NcmFitGSLMMAlgos"><span class="type">NcmFitGSLMMAlgos</span></a> algo</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-gsl-mm-new.parameters" id="ncm-fit-gsl-mm-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>gtype</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>algo</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-gsl-mm-new.returns" id="ncm-fit-gsl-mm-new.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-gsl-mm-new-default" id="ncm-fit-gsl-mm-new-default"></a><h3>ncm_fit_gsl_mm_new_default ()</h3>
+<pre class="programlisting"><a class="link" href="NcmFit.html" title="NcmFit"><span class="returnvalue">NcmFit</span></a> *
+ncm_fit_gsl_mm_new_default (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                            <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                            <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitGradType" title="enum NcmFitGradType"><span class="type">NcmFitGradType</span></a> gtype</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-gsl-mm-new-default.parameters" id="ncm-fit-gsl-mm-new-default.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>gtype</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-gsl-mm-new-default.returns" id="ncm-fit-gsl-mm-new-default.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-gsl-mm-new-by-name" id="ncm-fit-gsl-mm-new-by-name"></a><h3>ncm_fit_gsl_mm_new_by_name ()</h3>
+<pre class="programlisting"><a class="link" href="NcmFit.html" title="NcmFit"><span class="returnvalue">NcmFit</span></a> *
+ncm_fit_gsl_mm_new_by_name (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                            <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                            <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitGradType" title="enum NcmFitGradType"><span class="type">NcmFitGradType</span></a> gtype</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *algo_name</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-gsl-mm-new-by-name.parameters" id="ncm-fit-gsl-mm-new-by-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>gtype</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>algo_name</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-gsl-mm-new-by-name.returns" id="ncm-fit-gsl-mm-new-by-name.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-gsl-mm-set-algo" id="ncm-fit-gsl-mm-set-algo"></a><h3>ncm_fit_gsl_mm_set_algo ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_gsl_mm_set_algo (<em class="parameter"><code><a class="link" href="NcmFitGSLMM.html" title="NcmFitGSLMM"><span class="type">NcmFitGSLMM</span></a> *fit_gsl_mm</code></em>,
+                         <em class="parameter"><code><a class="link" href="NcmFitGSLMM.html#NcmFitGSLMMAlgos" title="enum NcmFitGSLMMAlgos"><span class="type">NcmFitGSLMMAlgos</span></a> algo</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-gsl-mm-set-algo.parameters" id="ncm-fit-gsl-mm-set-algo.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fit_gsl_mm</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitGSLMM.html" title="NcmFitGSLMM"><span class="type">NcmFitGSLMM</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>algo</p></td>
+<td class="parameter_description"><p>a <span class="type">gsl_mm_algorithm</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmFitGSLMM.other_details" id="NcmFitGSLMM.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcmFitGSLMMAlgos" id="NcmFitGSLMMAlgos"></a><h3>enum NcmFitGSLMMAlgos</h3>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="NcmFitGSLMMAlgos.members" id="NcmFitGSLMMAlgos.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-FIT-GSL-MM-CONJUGATE-FR:CAPS" id="NCM-FIT-GSL-MM-CONJUGATE-FR:CAPS"></a>NCM_FIT_GSL_MM_CONJUGATE_FR</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-FIT-GSL-MM-CONJUGATE-PR:CAPS" id="NCM-FIT-GSL-MM-CONJUGATE-PR:CAPS"></a>NCM_FIT_GSL_MM_CONJUGATE_PR</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-FIT-GSL-MM-VECTOR-BFGS:CAPS" id="NCM-FIT-GSL-MM-VECTOR-BFGS:CAPS"></a>NCM_FIT_GSL_MM_VECTOR_BFGS</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-FIT-GSL-MM-VECTOR-BFGS2:CAPS" id="NCM-FIT-GSL-MM-VECTOR-BFGS2:CAPS"></a>NCM_FIT_GSL_MM_VECTOR_BFGS2</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-FIT-GSL-MM-STEEPEST-DESCENT:CAPS" id="NCM-FIT-GSL-MM-STEEPEST-DESCENT:CAPS"></a>NCM_FIT_GSL_MM_STEEPEST_DESCENT</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmFitGSLMM.property-details" id="NcmFitGSLMM.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmFitGSLMM--algorithm" id="NcmFitGSLMM--algorithm"></a><h3>The <code class="literal">“algorithm”</code> property</h3>
+<pre class="programlisting">  “algorithm”                <a class="link" href="NcmFitGSLMM.html#NcmFitGSLMMAlgos" title="enum NcmFitGSLMMAlgos"><span class="type">NcmFitGSLMMAlgos</span></a></pre>
+<p>GSL multidimensional minimization algorithm.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: NCM_FIT_GSL_MM_VECTOR_BFGS2</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.25.1</div>
+</div></div></body>
+</html>

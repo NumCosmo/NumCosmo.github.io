@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmSphereHealpix: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s11.html" title="Spherical maps and Healpix" />
+<link rel="prev" href="NcmSphereMapPix.html" title="NcmSphereMapPix" />
+<link rel="next" href="NcmSphereMap.html" title="NcmSphereMap" />
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script> 
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#numcosmo-NcmSphereHealpix.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s11.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcmSphereMapPix.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmSphereMap.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="numcosmo-NcmSphereHealpix" id="numcosmo-NcmSphereHealpix"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="numcosmo-NcmSphereHealpix.top_of_page" id="numcosmo-NcmSphereHealpix.top_of_page"></a>NcmSphereHealpix</span></h2>
+<p>NcmSphereHealpix — Healpix re-implementation</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="numcosmo-NcmSphereHealpix.stability-level" id="numcosmo-NcmSphereHealpix.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+</div>
+<div class="refsect1">
+<a name="numcosmo-NcmSphereHealpix.functions" id="numcosmo-NcmSphereHealpix.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return" />
+<col class="functions_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="returnvalue">NcmSphereMap</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-read-map" title="ncm_sphere_healpix_read_map ()">ncm_sphere_healpix_read_map</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-write-map" title="ncm_sphere_healpix_write_map ()">ncm_sphere_healpix_write_map</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-nest2ring" title="ncm_sphere_healpix_nest2ring ()">ncm_sphere_healpix_nest2ring</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-ring2nest" title="ncm_sphere_healpix_ring2nest ()">ncm_sphere_healpix_ring2nest</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-pix2ang-nest" title="ncm_sphere_healpix_pix2ang_nest ()">ncm_sphere_healpix_pix2ang_nest</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-pix2ang-ring" title="ncm_sphere_healpix_pix2ang_ring ()">ncm_sphere_healpix_pix2ang_ring</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-pix2vec-nest" title="ncm_sphere_healpix_pix2vec_nest ()">ncm_sphere_healpix_pix2vec_nest</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-pix2vec-ring" title="ncm_sphere_healpix_pix2vec_ring ()">ncm_sphere_healpix_pix2vec_ring</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-vec2pix-ring" title="ncm_sphere_healpix_vec2pix_ring ()">ncm_sphere_healpix_vec2pix_ring</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmSphereHealpix.html#HEALPIX-NPIX:CAPS" title="HEALPIX_NPIX()">HEALPIX_NPIX</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmSphereHealpix.html#HEALPIX-INT-TO-XY:CAPS" title="HEALPIX_INT_TO_XY()">HEALPIX_INT_TO_XY</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmSphereHealpix.html#HEALPIX-XY-TO-INT:CAPS" title="HEALPIX_XY_TO_INT()">HEALPIX_XY_TO_INT</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="numcosmo-NcmSphereHealpix.other" id="numcosmo-NcmSphereHealpix.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name" />
+<col class="description" />
+</colgroup>
+<tbody><tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="numcosmo-NcmSphereHealpix.html#NCM-HEALPIX-NULLVAL:CAPS" title="NCM_HEALPIX_NULLVAL">NCM_HEALPIX_NULLVAL</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="numcosmo-NcmSphereHealpix.includes" id="numcosmo-NcmSphereHealpix.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;numcosmo/sphere/healpix.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="numcosmo-NcmSphereHealpix.description" id="numcosmo-NcmSphereHealpix.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="numcosmo-NcmSphereHealpix.functions_details" id="numcosmo-NcmSphereHealpix.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-sphere-healpix-read-map" id="ncm-sphere-healpix-read-map"></a><h3>ncm_sphere_healpix_read_map ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="returnvalue">NcmSphereMap</span></a> *
+ncm_sphere_healpix_read_map (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *fits_file</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a> *map</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="ncm-sphere-healpix-read-map.parameters" id="ncm-sphere-healpix-read-map.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fits_file</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>map</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-healpix-read-map.returns" id="ncm-sphere-healpix-read-map.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-healpix-write-map" id="ncm-sphere-healpix-write-map"></a><h3>ncm_sphere_healpix_write_map ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_sphere_healpix_write_map (<em class="parameter"><code><a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a> *map</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> overwrite</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-healpix-write-map.parameters" id="ncm-sphere-healpix-write-map.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>map</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSphereMap.html" title="NcmSphereMap"><span class="type">NcmSphereMap</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>FIXME </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>overwrite</p></td>
+<td class="parameter_description"><p>FIXME </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-healpix-write-map.returns" id="ncm-sphere-healpix-write-map.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-healpix-nest2ring" id="ncm-sphere-healpix-nest2ring"></a><h3>ncm_sphere_healpix_nest2ring ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>
+ncm_sphere_healpix_nest2ring (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> nside</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#glong"><span class="type">glong</span></a> nest_index</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-healpix-nest2ring.parameters" id="ncm-sphere-healpix-nest2ring.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>nside</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>nest_index</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-healpix-nest2ring.returns" id="ncm-sphere-healpix-nest2ring.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-healpix-ring2nest" id="ncm-sphere-healpix-ring2nest"></a><h3>ncm_sphere_healpix_ring2nest ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>
+ncm_sphere_healpix_ring2nest (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> nside</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#glong"><span class="type">glong</span></a> ring_index</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-healpix-ring2nest.parameters" id="ncm-sphere-healpix-ring2nest.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>nside</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ring_index</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-sphere-healpix-ring2nest.returns" id="ncm-sphere-healpix-ring2nest.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-healpix-pix2ang-nest" id="ncm-sphere-healpix-pix2ang-nest"></a><h3>ncm_sphere_healpix_pix2ang_nest ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_sphere_healpix_pix2ang_nest (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> nside</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#glong"><span class="type">glong</span></a> nest_index</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *theta</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *phi</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-healpix-pix2ang-nest.parameters" id="ncm-sphere-healpix-pix2ang-nest.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>nside</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>nest_index</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>theta</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>phi</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-healpix-pix2ang-ring" id="ncm-sphere-healpix-pix2ang-ring"></a><h3>ncm_sphere_healpix_pix2ang_ring ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_sphere_healpix_pix2ang_ring (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> nside</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#glong"><span class="type">glong</span></a> ring_index</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *theta</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *phi</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-healpix-pix2ang-ring.parameters" id="ncm-sphere-healpix-pix2ang-ring.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>nside</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ring_index</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>theta</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>phi</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-healpix-pix2vec-nest" id="ncm-sphere-healpix-pix2vec-nest"></a><h3>ncm_sphere_healpix_pix2vec_nest ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_sphere_healpix_pix2vec_nest (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> nside</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#glong"><span class="type">glong</span></a> nest_index</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmQuaternion.html#NcmTriVec"><span class="type">NcmTriVec</span></a> *vec</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-healpix-pix2vec-nest.parameters" id="ncm-sphere-healpix-pix2vec-nest.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>nside</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>nest_index</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>vec</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQuaternion.html#NcmTriVec"><span class="type">NcmTriVec</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-healpix-pix2vec-ring" id="ncm-sphere-healpix-pix2vec-ring"></a><h3>ncm_sphere_healpix_pix2vec_ring ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_sphere_healpix_pix2vec_ring (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> nside</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#glong"><span class="type">glong</span></a> ring_index</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmQuaternion.html#NcmTriVec"><span class="type">NcmTriVec</span></a> *vec</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-healpix-pix2vec-ring.parameters" id="ncm-sphere-healpix-pix2vec-ring.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>nside</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ring_index</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>vec</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQuaternion.html#NcmTriVec"><span class="type">NcmTriVec</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-sphere-healpix-vec2pix-ring" id="ncm-sphere-healpix-vec2pix-ring"></a><h3>ncm_sphere_healpix_vec2pix_ring ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_sphere_healpix_vec2pix_ring (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> nside</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmQuaternion.html#NcmTriVec"><span class="type">NcmTriVec</span></a> *vec</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#glong"><span class="type">glong</span></a> *i</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-sphere-healpix-vec2pix-ring.parameters" id="ncm-sphere-healpix-vec2pix-ring.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>nside</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>vec</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQuaternion.html#NcmTriVec"><span class="type">NcmTriVec</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>FIXME </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="HEALPIX-NPIX:CAPS" id="HEALPIX-NPIX:CAPS"></a><h3>HEALPIX_NPIX()</h3>
+<pre class="programlisting">#define HEALPIX_NPIX(nside) (12*(nside)*(nside))
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="HEALPIX-INT-TO-XY:CAPS" id="HEALPIX-INT-TO-XY:CAPS"></a><h3>HEALPIX_INT_TO_XY()</h3>
+<pre class="programlisting">#define             HEALPIX_INT_TO_XY(i,x,y)</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="HEALPIX-XY-TO-INT:CAPS" id="HEALPIX-XY-TO-INT:CAPS"></a><h3>HEALPIX_XY_TO_INT()</h3>
+<pre class="programlisting">#define             HEALPIX_XY_TO_INT(x,y,i)</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="numcosmo-NcmSphereHealpix.other_details" id="numcosmo-NcmSphereHealpix.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NCM-HEALPIX-NULLVAL:CAPS" id="NCM-HEALPIX-NULLVAL:CAPS"></a><h3>NCM_HEALPIX_NULLVAL</h3>
+<pre class="programlisting">#define NCM_HEALPIX_NULLVAL (-1.6375e30)
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.25.1</div>
+</div></div></body>
+</html>
