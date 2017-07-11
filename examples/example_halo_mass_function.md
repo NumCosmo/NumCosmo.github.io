@@ -46,13 +46,13 @@ Figure 3: Variance of the matter density contrast and its derivative with respec
 
 ![hmf_mass_function.svg]({% link examples/hmf_mass_function.svg %}):
 
-Figure 4: Halo mass function computed at z = 0.7
+Figure 4: Halo mass function computed at $z = 0.7$.
 
 ### Figure 5: Number of halos per z
 
 ![hmf_halos_redshift.svg]({% link examples/hmf_halos_redshift.svg %}):
 
-Figure 5: Number of halos with masses between 10^{14} to 10^{16} solar masses as a function of redshift, computed considering an angular area of 200 square degrees.
+Figure 5: Number of halos with masses between $10^{14}$ to $10^{16}$ solar masses as a function of redshift, computed considering an angular area of 200 square degrees.
  
 
   
