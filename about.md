@@ -1,11 +1,11 @@
 ---
-layout: page
+layout: post
 title: About NumCosmo
 menu: about
 css: ['about.css', 'sidebar-popular-repo.css', '../../bower_components/flag-icon-css/css/flag-icon.min.css']
 ---
 
-## About NumCosmo
+## Overview
 
 The library is written in C, but since it uses the [GObject](https://wiki.gnome.org/action/show/Projects/GObjectIntrospection) 
 framework, it is developed in a object oriented fashion. Moreover, it has automatic
@@ -40,7 +40,7 @@ or to extend the precision.
 * Mariana Penna-Lima <pennalima@gmail.com>
 * Cyrille Doux <cdoux@apc.in2p3.fr>
 
-### Mailing Lists
+## Mailing Lists
 
 Subscribe to the [numcosmo-help](https://lists.nongnu.org/mailman/listinfo/numcosmo-help)
 mailing list for discussion of questions and problems about using
