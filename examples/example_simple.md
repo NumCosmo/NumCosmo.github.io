@@ -1,7 +1,7 @@
 ---
 layout: example
 title: Simple C
-desc: A simple example writen in C
+desc: A simple example written in C
 category: Introduction
 tags: [intro C]
 ---
@@ -22,6 +22,7 @@ libtool --mode=link gcc -Wall example_simple.c -o example_simple  \
 ```
 
 ### [example_simple.c]({% link examples/example_simple.c %}):
+
 {% highlight C %}
 
 {% include_relative example_simple.c %}
