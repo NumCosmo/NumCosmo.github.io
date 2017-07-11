@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Download and Installation
+layout: post
+title: Download and installation
 ---
 
 ## Download
@@ -15,47 +15,47 @@ one can find the log of the compilation containing the step-by-step process.
 
 Travis-ci test build: [![Build Status](https://travis-ci.org/NumCosmo/NumCosmo.svg?branch=master)](https://travis-ci.org/NumCosmo/NumCosmo)
 
-## Requirements:
+## Requirements
 
 The requirements below can be found on most Linux distribution, click [here](#pack_deb)
 for a list of packages names for debian-like distributions and [here](#pack_rpm) for
-rpm based distributions. 
+rpm based distributions.
 
   - [Glib](http://www.gtk.org/) >= 2.28.0 --
     Data structures, threads, portability, memory allocation, etc.
   - [GSL](http://www.gnu.org/software/gsl/)  >= 1.15 --
     Several computational tools.
-  - [GMP](http://gmplib.org/)  >= 4.3.2 -- 
+  - [GMP](http://gmplib.org/)  >= 4.3.2 --
     Big integers library.
-  - [MPFR](http://www.mpfr.org/) >= 2.4.2 -- 
+  - [MPFR](http://www.mpfr.org/) >= 2.4.2 --
     Multiple precision float library.
-  - [Sundials](https://computation.llnl.gov/casc/sundials/main.html) >= 2.4.0 -- 
-    ODE solver library. 
+  - [Sundials](https://computation.llnl.gov/casc/sundials/main.html) >= 2.4.0 --
+    ODE solver library.
 
-## Recomended packages:
+## Recommended packages
 
   - [GObject-introspection](https://wiki.gnome.org/action/show/Projects/GObjectIntrospection):
     Middleware layer between C libraries (using GObject) and language bindings. It is needed to use NumCosmo from other languages.
-  - [PyGObject](https://wiki.gnome.org/action/show/Projects/PyGObject) -- 
+  - [PyGObject](https://wiki.gnome.org/action/show/Projects/PyGObject) --
     Needed to use NumCosmo from Python. Note that pygobject3 refers to the PyGObject version (not Python's version).
   - [NLOpt](http://ab-initio.mit.edu/wiki/index.php/NLopt) --
     Several general purpose minimization algorithms.
-  - [CFITSIO](http://heasarc.nasa.gov/fitsio/fitsio.html) -- 
+  - [CFITSIO](http://heasarc.nasa.gov/fitsio/fitsio.html) --
     A library of C and Fortran subroutines for reading and writing data files in FITS (Flexible Image Transport System) data format.
-  - [FFTW3](http://www.fftw.org/) >= 3.1.2 -- 
+  - [FFTW3](http://www.fftw.org/) >= 3.1.2 --
     Discrete Fourier transform library.
 
-## Optional packages:
+## Optional packages
 
   - Any optimized BLAS library (ATLAS, OpenBLAS, MKL, etc)
     Improve speed in linear algebra calculations, e.g,
     * <http://math-atlas.sourceforge.net/>
     * <http://www.openblas.net/>
     * <https://software.intel.com/en-us/intel-mkl>
-  - [Lapack](http://www.netlib.org/lapack/) -- 
+  - [Lapack](http://www.netlib.org/lapack/) --
     Linear Algebra PACKage    
   - [gtk-doc](https://www.gtk.org/gtk-doc/)
-    GTK-Doc is used to generate API documentation from comments added to 
+    GTK-Doc is used to generate API documentation from comments added to
     C code, only needed to generate new releases.
   - [ARB](http://fredrikj.net/arb/)
     C library for arbitrary-precision interval arithmetic.
@@ -82,14 +82,14 @@ To build from the git repository, you need to follow these steps before [configu
 
   - Generate the configure scripts and also run configure:
     ```bash
-    ./autogen.sh 
+    ./autogen.sh
     ```
   - Generate the configure scripts only:
     ```bash
-    NOCONFIGURE=yes ./autogen.sh 
+    NOCONFIGURE=yes ./autogen.sh
     ```
-    - The configure script is built at this point. 
-      Note that this requires the autotools developer enviroment (latest version recommended): 
+    - The configure script is built at this point.
+      Note that this requires the autotools developer enviroment (latest version recommended):
       - [autoconf](http://ftp.gnu.org/gnu/autoconf/)
       - [automake](http://ftp.gnu.org/gnu/automake/)
       - [libtool](http://ftp.gnu.org/gnu/libtool/)
@@ -101,9 +101,9 @@ To build from the git repository, you need to follow these steps before [configu
 
 ## Configuring and compiling: <a id="brelease"></a>
 
-To build from a release package or after preparing the configure script, run: 
+To build from a release package or after preparing the configure script, run:
   - Configure the project
-    ```bash 
+    ```bash
     ./configure (--help to see options)
     ```
   - Compile everything
@@ -112,7 +112,7 @@ To build from a release package or after preparing the configure script, run:
     ```
   - Optionally run the library unit testing
     ```bash
-    make check 
+    make check
     ```
   - Install the library
     ```bash
@@ -145,7 +145,7 @@ mkdir $HOME/cosmology
 cd $HOME/cosmology
 git clone https://github.com/NumCosmo/NumCosmo.git
 ```
-If you are using the github version, you need to first [generate the configure script](#brepo). 
+If you are using the github version, you need to first [generate the configure script](#brepo).
 Then, configure and compile the library as described [above](#brelease), but **don't** *make install*.
 
 We need to export some environment variables:
@@ -178,10 +178,10 @@ export NUMCOSMO_DATA_DIR="${NUMCOSMO_DIR}"
 export GI_TYPELIB_PATH="${GI_TYPELIB_PATH}:${NUMCOSMO_BUILD_DIR}/numcosmo"
 ```
 
-### Compiling example_simple.c:
+### Compiling example_simple.c
 
 ```bash
-cd $NUMCOSMO_DIR/examples 
+cd $NUMCOSMO_DIR/examples
 
 libtool --mode=link gcc -Wall example_simple.c -o example_simple  \
   ${NUMCOSMO_BUILD_DIR}/numcosmo/libnumcosmo.la -I${NUMCOSMO_DIR} \
@@ -189,4 +189,3 @@ libtool --mode=link gcc -Wall example_simple.c -o example_simple  \
 ```
 
 {% include disqus-comments.html %}
-
