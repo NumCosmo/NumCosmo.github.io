@@ -1,4 +1,4 @@
-<h3 class="sidebar-title">My Popular Repositories</h3>
+<h3 class="sidebar-title">NumCosmo Popular Repositories</h3>
 {% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse | where: "fork", "false" %}
 {% for repo in sorted_repos | limit: site.side_bar_repo_limit %}
 <div class="card text-center">
@@ -21,9 +21,9 @@
                 <span data-toggle="tooltip" class="meta-info" title="{{ repo.forks_count }} forks">
                     <span class="octicon octicon-git-branch"></span> {{ repo.forks_count }}
                 </span>
-                <span data-toggle="tooltip" class="meta-info" title="Last updated：{{ repo.updated_at }}">
+                <span data-toggle="tooltip" class="meta-info" title="Last updated：{{ repo.pushed_at }}">
                     <span class="octicon octicon-clock"></span>
-                    <time datetime="{{ repo.updated_at }}" title="{{ repo.updated_at }}">{{ repo.updated_at | date: '%Y-%m-%d' }}</time>
+                    <time datetime="{{ repo.pushed_at }}" title="{{ repo.pushed_at }}">{{ repo.pushed_at | date: '%Y-%m-%d' }}</time>
                 </span>
             </div>
         </div>
