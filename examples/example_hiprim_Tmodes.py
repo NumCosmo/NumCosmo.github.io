@@ -15,8 +15,6 @@ from gi.repository import GObject
 from gi.repository import NumCosmo as Nc
 from gi.repository import NumCosmoMath as Ncm
 
-from py_hiprim_example import PyHIPrimExample
-
 #
 #  Initializing the library objects, this must be called before
 #  any other library function.
@@ -26,21 +24,18 @@ Ncm.cfg_init ()
 #
 # Script parameters
 #
-# maximum multipole
+# Maximum multipole
 lmax = 2500
 
 #
-# Creating a new instance of PyHIPrimExample
+# Creating a new instance of HIPrimPowerLaw
 #
-prim = PyHIPrimExample ()
-
-print "# As        = ", prim.props.As
-print "# P (k = 1) = ", prim.SA_powspec_k (1.0)
-print "# (a, b, c) = ( ", prim.props.a, ", ", prim.props.b, ", ", prim.props.c, " )"
+prim = Nc.HIPrimPowerLaw.new ()
+prim.props.T_SA_ratio = 2.0e-1
 
 #
 #  New CLASS backend precision object
-#  Let's also increase k_per_decade_primordial since we are
+#  Lets also increase k_per_decade_primordial since we are
 #  dealing with a modified spectrum.
 #
 cbe_prec = Nc.CBEPrecision.new ()
@@ -51,12 +46,17 @@ cbe_prec.props.k_per_decade_primordial = 50.0
 #
 cbe = Nc.CBE.prec_new (cbe_prec)
 
+#
+#  New CLASS backend object
+#
 Bcbe = Nc.HIPertBoltzmannCBE.full_new (cbe)
 Bcbe.set_TT_lmax (lmax)
 # Setting which CMB data to use
 Bcbe.set_target_Cls (Nc.DataCMBDataType.TT)
 # Setting if the lensed Cl's are going to be used or not.
 Bcbe.set_lensed_Cls (True)
+# Setting if the tensor contribution is going to be used or not. 
+Bcbe.set_tensor (True)
 
 #
 #  New homogeneous and isotropic cosmological model NcHICosmoDEXcdm
@@ -86,7 +86,7 @@ Cls2 = Ncm.Vector.new (lmax + 1)
 
 Bcbe.get_TT_Cls (Cls1)
 
-prim.props.a = 0
+prim.props.T_SA_ratio = 1.0e-15
 Bcbe.prepare (cosmo)
 Bcbe.get_TT_Cls (Cls2)
 
@@ -105,15 +105,15 @@ Cls2_a = ell * (ell + 1.0) * Cls2_a
 #  Ploting the TT angular power spcetrum
 #
 
-plt.title (r'Modified and non-modified $C_\ell$')
+plt.title (r'With and without tensor contribution to $C_\ell$')
 plt.xscale('log')
-plt.plot (ell, Cls1_a, 'r', label="Modified")
-plt.plot (ell, Cls2_a, 'b--', label="Non-modified")
+plt.plot (ell, Cls1_a, 'r', label="with-T")
+plt.plot (ell, Cls2_a, 'b--', label="without-T")
 
 plt.xlabel(r'$\ell$')
 plt.ylabel(r'$C_\ell$')
 plt.legend(loc=2)
 
-plt.savefig ("hiprim_Cls.svg")
+plt.savefig ("hiprim_tensor_Cls.svg")
 
 plt.clf ()

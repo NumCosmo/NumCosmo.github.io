@@ -32,9 +32,10 @@ without installing follow the instructions [here]({% link download.md %}).
 
 Figure 1: Temperature-Temperature angular power spectrum assuming a
 power-law primordial power spectrum (non-modified) and a modified primordial
-spectrum described by $$P_{prim}(k) = A_s \left(\frac{k}{k_0} \right)^{n_s - 1}
-\left[1 + a^2 \cos\left(b\frac{k}{k_0} + c \right)^2 \right],$$
-where $A_s$ is the normalization and $n_s$ is the spectral index.      
+spectrum described by $$P_{prim}(k) = A_s \left(\frac{k}{k_\*} \right)^{n_s - 1}
+\left[1 + a^2 \cos\left(b\frac{k}{k_\*} + c \right)^2 \right],$$
+where $A_s$ is the normalization, $n_s$ is the spectral index and $k_\*$ is
+the pivot mode.      
 
  
 
