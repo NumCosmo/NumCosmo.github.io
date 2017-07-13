@@ -2,8 +2,8 @@
 layout: example
 title: Halo Mass Function
 desc: Example written in Python to compute the halo mass function and correlated functions. 
-category: Introduction
-tags: [intro python]
+category: Cosmology
+tags: [cosmology lss python]
 ---
 
 ##  Halo mass function and halo number per redshift
