@@ -35,6 +35,7 @@ GType nc_object_name_get_type (void) G_GNUC_CONST;
 
 /* METHODS */
 NcObjectName *nc_object_name_new (gdouble prop1_val);
+NcObjectName *nc_object_name_ref (NcObjectName *nc_object_name);
 void nc_object_name_free (NcObjectName *nc_object_name);
 void nc_object_name_clear (NcObjectName **nc_object_name);
 

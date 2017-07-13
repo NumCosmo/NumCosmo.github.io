@@ -134,6 +134,20 @@ nc_object_name_new (gdouble prop1_val)
 }
 
 /**
+ * nc_object_name_ref:
+ * @nc_object_name: a #NcObjectName
+ *
+ * Increase reference count by one.
+ * 
+ * Returns: (transfer full): @nc_object_name.
+ */
+NcObjectName *
+nc_object_name_ref (NcObjectName *nc_object_name)
+{
+  return g_object_ref (nc_object_name);
+}
+
+/**
  * nc_object_name_free:
  * @nc_object_name: a #NcObjectName
  *
