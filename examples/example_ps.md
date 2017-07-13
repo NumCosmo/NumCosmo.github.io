@@ -15,7 +15,7 @@ Example written in Python to compute: (i) the linear matter power spectrum (PS) 
 
 To try this example you must have [PyGObject installed](https://live.gnome.org/PyGObject),
 and numcosmo built with --enable-introspection option. To run the examples
-without installing follow the instructions [here]({% link download.md %})
+without installing follow the instructions [here]({% link download.md %}).
 
 ### [example_ps.py]({% link examples/example_ps.py %}):
 {% highlight Python %}

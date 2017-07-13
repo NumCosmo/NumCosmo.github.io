@@ -15,7 +15,7 @@ Example written in Python to reconstruct a one dimensional probability distribut
 
 To try this example you must have [PyGObject installed](https://live.gnome.org/PyGObject),
 and numcosmo built with --enable-introspection option. To run the examples
-without installing follow the instructions [here]({% link download.md %})
+without installing follow the instructions [here]({% link download.md %}).
 
 ### [example_epdf1d.py]({% link examples/example_epdf1d.py %}):
 {% highlight Python %}

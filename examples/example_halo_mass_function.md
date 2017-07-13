@@ -15,7 +15,7 @@ Example written in Python to compute the growth and transfer functions, the line
 
 To try this example you must have [PyGObject installed](https://live.gnome.org/PyGObject),
 and numcosmo built with --enable-introspection option. To run the examples
-without installing follow the instructions [here]({% link download.md %})
+without installing follow the instructions [here]({% link download.md %}).
 
 ### [example_halo_mass_function.py]({% link examples/example_halo_mass_function.py %}):
 {% highlight Python %}

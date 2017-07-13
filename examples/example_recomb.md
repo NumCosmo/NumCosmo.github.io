@@ -17,7 +17,7 @@ the derivative of the optical depth. For details see [NumCosmo Manual - NcRecomb
 
 To try this example you must have [PyGObject installed](https://live.gnome.org/PyGObject),
 and numcosmo built with --enable-introspection option. To run the examples
-without installing follow the instructions [here]({% link download.md %})
+without installing follow the instructions [here]({% link download.md %}).
 
 ### [example_recomb.py]({% link examples/example_recomb.py %}):
 {% highlight Python %}
