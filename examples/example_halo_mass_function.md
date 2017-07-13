@@ -26,31 +26,31 @@ without installing follow the instructions [here]({% link download.md %})
 
 ### Figure 1: Growth Function 
 
-![hmf_growth_func.svg]({% link examples/hmf_growth_func.svg %}):
+![hmf_growth_func.svg]({% link examples/hmf_growth_func.svg %})
 
 Figure 1: Growth function and its derivative with respect to the redshift.
 
 ### Figure 2: Transfer Function and PS
 
-![hmf_transfer_func.svg]({% link examples/hmf_transfer_func.svg %}):
+![hmf_transfer_func.svg]({% link examples/hmf_transfer_func.svg %})
 
 Figure 2: Transfer function and the linear matter power spectrum.
 
 ### Figure 3: Variance of the matter density contrast 
 
-![hmf_matter_variance.svg]({% link examples/hmf_matter_variance.svg %}):
+![hmf_matter_variance.svg]({% link examples/hmf_matter_variance.svg %})
 
 Figure 3: Variance of the matter density contrast and its derivative with respect to the scale R.
 
 ### Figure 4: Halo Mass Function
 
-![hmf_mass_function.svg]({% link examples/hmf_mass_function.svg %}):
+![hmf_mass_function.svg]({% link examples/hmf_mass_function.svg %})
 
 Figure 4: Halo mass function computed at $z = 0.7$.
 
 ### Figure 5: Number of halos per z
 
-![hmf_halos_redshift.svg]({% link examples/hmf_halos_redshift.svg %}):
+![hmf_halos_redshift.svg]({% link examples/hmf_halos_redshift.svg %})
 
 Figure 5: Number of halos with masses between $10^{14}$ to $10^{16}$ solar masses as a function of redshift, computed considering an angular area of 200 square degrees.
  
