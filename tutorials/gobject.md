@@ -40,7 +40,7 @@ a different meaning in the cosmological literature.
 Macros, enumerator and flags labels should be in uppercase and separated by 
 underscores. See for example [**NcHICosmoImpl**](/manual/NcHICosmo.html#NcHICosmoImpl)
 for a flag type. The flag type itself NcHICosmoImpl must be in camel-case
-but its labels are underscore separated uppercase.  
+but its labels are underscore separated uppercase.
 
 A full example of a GObject implementation inside NumCosmo can be found
 [here](/manual/NcmModel.html#NcmModel.description).
