@@ -459,22 +459,22 @@ To describe the functions we have the following definitions,
 more details in <a class="link" href="refs.html#XWeinberg2008">Weinberg (2008)</a>.</p>
 <p>We refer to the total number of hydrogen nucleus (ionized or not) as
 $n_{\Hy}$, the neutral hydrogen atoms as $n_{\HyI}$ and ionized hydrogen as
-$n_{\HyII}$ and therefore $n_{\HyI} + n_{\HyII} = n_{\Hy}$. In the same way
-for the helium the number of helium nuclei is $n_{\He}$ and the neutral,
-single and double ionized as $n_{\HeI}$, $n_{\HeII}$ and $n_{\HeIII}$
+$n_{\HyII}$ and, therefore, $n_{\HyI} + n_{\HyII} = n_{\Hy}$. Similarly,
+the number of helium nuclei is $n_{\He}$ and the neutral,
+single and double ionized are $n_{\HeI}$, $n_{\HeII}$ and $n_{\HeIII}$,
 respectively.</p>
 <p>We also define the helium primordial abundance as the ratio of the helium
 mass to the total baryonic mass, i.e.,
 \begin{align}\label{def:Yp}
 Y_p = \frac{n_{\He} m_{\He}}{(n_{\He} m_{\He} + n_{\Hy} m_{\Hy})},
 \end{align}
-where $m_{\Hy}$ and $m_{\He}$ are the hydrogen and helium mass.</p>
+where $m_{\Hy}$ and $m_{\He}$ are the hydrogen and helium masses.</p>
 <p>The element abundances are defined as the ratio of the element by the total
 number of free protons $n_p \equiv n_\Hy$:
 \begin{align}
 X_{f} = \frac{n_{f}}{n_p},
 \end{align}
-where $f$ is any one of the elements describe above and $\e$ represent
+where $f$ is any one of the elements described above and $\e$ represent
 the number of free electrons.</p>
 <p>These fractions have the following properties:
 \begin{align}\label{eq:Hy:add}
@@ -498,7 +498,7 @@ $\lambda_{\e}$ is the electron thermal wavelength, i.e.,
 \begin{equation}
 \lambda_{\e} = \sqrt{\frac{2\pi\hbar^2}{m_\e{}k_BT}},
 \end{equation}
-$k_K$ is the Boltzmann constant <a class="link" href="NcmC.html#ncm-c-kb" title="ncm_c_kb ()"><code class="function">ncm_c_kb()</code></a>, m_\e the electron mass and
+$k_K$ is the Boltzmann constant <a class="link" href="NcmC.html#ncm-c-kb" title="ncm_c_kb ()"><code class="function">ncm_c_kb()</code></a>, $m_\e$ the electron mass and
 $\hbar$ is the Planck constant <a class="link" href="NcmC.html#ncm-c-hbar" title="ncm_c_hbar ()"><code class="function">ncm_c_hbar()</code></a>.</p>
 <p>This calculation is done using the Saha equation as in
 <a class="link" href="refs.html#XWeinberg2008">Weinberg (2008)</a>.</p>
@@ -524,7 +524,7 @@ The primordial Helium fraction is define by <a class="link" href="NcHICosmo.html
 <h4>
 <a name="id-1.7.4.7.14" id="id-1.7.4.7.14"></a>Optical depth and visibility function</h4>
 <p>The derivative of the optical depth $\tau$ with respect to the redshift
-time $\lambda \equiv -\log(x) = -\log(1 + z)$ is
+time $\lambda \equiv -\ln(x) = -\ln(1 + z)$ is
 \begin{equation}\label{eq:def:dtaudlambda}
 \frac{d\tau}{d\lambda} = -\frac{c\sigma_Tn_BX_\e}{H},
 \end{equation}
@@ -546,7 +546,8 @@ v_\tau = \frac{d\tau}{d\lambda}e^{-\tau}.
 <a name="nc-recomb-new-from-name" id="nc-recomb-new-from-name"></a><h3>nc_recomb_new_from_name ()</h3>
 <pre class="programlisting"><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="returnvalue">NcRecomb</span></a> *
 nc_recomb_new_from_name (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *recomb_name</code></em>);</pre>
-<p>FIXME</p>
+<p>This function instantiates a new object of type <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> given <em class="parameter"><code>recomb_name</code></em>
+.</p>
 <div class="refsect3">
 <a name="nc-recomb-new-from-name.parameters" id="nc-recomb-new-from-name.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -557,14 +558,14 @@ nc_recomb_new_from_name (<em class="parameter"><code>const <a href="../glib/glib
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>recomb_name</p></td>
-<td class="parameter_description"><p>a string representing a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> object.</p></td>
+<td class="parameter_description"><p>a string representing a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> object</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="nc-recomb-new-from-name.returns" id="nc-recomb-new-from-name.returns"></a><h4>Returns</h4>
-<p> a new <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p>
+<p> a new <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p>
 </div>
 </div>
 <hr />
@@ -584,7 +585,7 @@ nc_recomb_ref (<em class="parameter"><code><a class="link" href="NcRecomb.html" 
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -602,7 +603,7 @@ nc_recomb_ref (<em class="parameter"><code><a class="link" href="NcRecomb.html" 
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_recomb_free (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>);</pre>
 <p>Decreases the reference count of <em class="parameter"><code>recomb</code></em>
-.</p>
+</p>
 <div class="refsect3">
 <a name="nc-recomb-free.parameters" id="nc-recomb-free.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -613,7 +614,7 @@ nc_recomb_free (<em class="parameter"><code><a class="link" href="NcRecomb.html"
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -639,7 +640,7 @@ nc_recomb_clear (<em class="parameter"><code><a class="link" href="NcRecomb.html
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -651,7 +652,7 @@ nc_recomb_clear (<em class="parameter"><code><a class="link" href="NcRecomb.html
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_recomb_prepare (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                    <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
-<p>Prepare the object using the model <em class="parameter"><code>cosmo</code></em>
+<p>Prepares the object using the model <em class="parameter"><code>cosmo</code></em>
 .</p>
 <div class="refsect3">
 <a name="nc-recomb-prepare.parameters" id="nc-recomb-prepare.parameters"></a><h4>Parameters</h4>
@@ -682,7 +683,7 @@ nc_recomb_prepare (<em class="parameter"><code><a class="link" href="NcRecomb.ht
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_recomb_prepare_if_needed (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                              <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
-<p>Prepare the object using the model <em class="parameter"><code>cosmo</code></em>
+<p>Prepares the object using the model <em class="parameter"><code>cosmo</code></em>
  if it was changed
 since last preparation.</p>
 <div class="refsect3">
@@ -715,7 +716,8 @@ since last preparation.</p>
 nc_recomb_Xe (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
               <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
               <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lambda</code></em>);</pre>
-<p>Calculates the value of $X_\e$ at $x$.</p>
+<p>Calculates the value of $X_\e$ at <em class="parameter"><code>lambda</code></em>
+.</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> Xe]</span></p>
 <div class="refsect3">
 <a name="nc-recomb-Xe.parameters" id="nc-recomb-Xe.parameters"></a><h4>Parameters</h4>
@@ -733,12 +735,12 @@ nc_recomb_Xe (<em class="parameter"><code><a class="link" href="NcRecomb.html" t
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda</p></td>
-<td class="parameter_description"><p>$\lambda$.</p></td>
+<td class="parameter_description"><p>$\lambda = - \ln(1+z)$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -746,7 +748,7 @@ nc_recomb_Xe (<em class="parameter"><code><a class="link" href="NcRecomb.html" t
 </div>
 <div class="refsect3">
 <a name="nc-recomb-Xe.returns" id="nc-recomb-Xe.returns"></a><h4>Returns</h4>
-<p> $X_\e$.</p>
+<p> $X_\e$</p>
 </div>
 </div>
 <hr />
@@ -756,7 +758,8 @@ nc_recomb_Xe (<em class="parameter"><code><a class="link" href="NcRecomb.html" t
 nc_recomb_XHII (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                 <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lambda</code></em>);</pre>
-<p>Calculates the value of $X_\HyII$ at $x$.</p>
+<p>Calculates the value of $X_\HyII$ at <em class="parameter"><code>lambda</code></em>
+.</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> XHII]</span></p>
 <div class="refsect3">
 <a name="nc-recomb-XHII.parameters" id="nc-recomb-XHII.parameters"></a><h4>Parameters</h4>
@@ -774,12 +777,12 @@ nc_recomb_XHII (<em class="parameter"><code><a class="link" href="NcRecomb.html"
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda</p></td>
-<td class="parameter_description"><p>$\lambda$.</p></td>
+<td class="parameter_description"><p>$\lambda = - \ln(1+z)$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -787,7 +790,7 @@ nc_recomb_XHII (<em class="parameter"><code><a class="link" href="NcRecomb.html"
 </div>
 <div class="refsect3">
 <a name="nc-recomb-XHII.returns" id="nc-recomb-XHII.returns"></a><h4>Returns</h4>
-<p> $X_\HyII$.</p>
+<p> $X_\HyII$</p>
 </div>
 </div>
 <hr />
@@ -797,7 +800,8 @@ nc_recomb_XHII (<em class="parameter"><code><a class="link" href="NcRecomb.html"
 nc_recomb_XHeII (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                  <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lambda</code></em>);</pre>
-<p>Calculates the value of $X_\HeII$ at $x$.</p>
+<p>Calculates the value of $X_\HeII$ at <em class="parameter"><code>lambda</code></em>
+.</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> XHeII]</span></p>
 <div class="refsect3">
 <a name="nc-recomb-XHeII.parameters" id="nc-recomb-XHeII.parameters"></a><h4>Parameters</h4>
@@ -815,12 +819,12 @@ nc_recomb_XHeII (<em class="parameter"><code><a class="link" href="NcRecomb.html
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda</p></td>
-<td class="parameter_description"><p>$\lambda$.</p></td>
+<td class="parameter_description"><p>$\lambda = - \ln(1+z)$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -828,7 +832,7 @@ nc_recomb_XHeII (<em class="parameter"><code><a class="link" href="NcRecomb.html
 </div>
 <div class="refsect3">
 <a name="nc-recomb-XHeII.returns" id="nc-recomb-XHeII.returns"></a><h4>Returns</h4>
-<p> $X_\HeII$.</p>
+<p> $X_\HeII$</p>
 </div>
 </div>
 <hr />
@@ -837,7 +841,7 @@ nc_recomb_XHeII (<em class="parameter"><code><a class="link" href="NcRecomb.html
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_recomb_HI_ion_saha (<em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
-<p>Calculate the equilibrium ionized/non-ionized hydrogen abundance ratio
+<p>Calculates the equilibrium ionized/non-ionized hydrogen abundance ratio
 $X_{\HyII}X_\e / X_{\HyI}$. See Eq. \eqref{eq:saha:HyI}.</p>
 <div class="refsect3">
 <a name="nc-recomb-HI-ion-saha.parameters" id="nc-recomb-HI-ion-saha.parameters"></a><h4>Parameters</h4>
@@ -850,12 +854,12 @@ $X_{\HyII}X_\e / X_{\HyI}$. See Eq. \eqref{eq:saha:HyI}.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>x</p></td>
-<td class="parameter_description"><p>redshift factor x.</p></td>
+<td class="parameter_description"><p>redshift factor, $x = 1+z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -863,7 +867,7 @@ $X_{\HyII}X_\e / X_{\HyI}$. See Eq. \eqref{eq:saha:HyI}.</p>
 </div>
 <div class="refsect3">
 <a name="nc-recomb-HI-ion-saha.returns" id="nc-recomb-HI-ion-saha.returns"></a><h4>Returns</h4>
-<p> the abundance ratio $X_{\HyII}X_\e / X_{\HyI}$.</p>
+<p> the abundance ratio $X_{\HyII}X_\e / X_{\HyI}$</p>
 </div>
 </div>
 <hr />
@@ -872,7 +876,7 @@ $X_{\HyII}X_\e / X_{\HyI}$. See Eq. \eqref{eq:saha:HyI}.</p>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_recomb_HeI_ion_saha (<em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
-<p>Calculate the equilibrium single/non-ionized helium ratio
+<p>Calculates the equilibrium single/non-ionized helium ratio
 $X_{\HeII}X_\e/X_{\HeI}$. See Eq. \eqref{eq:saha:HeI}.</p>
 <div class="refsect3">
 <a name="nc-recomb-HeI-ion-saha.parameters" id="nc-recomb-HeI-ion-saha.parameters"></a><h4>Parameters</h4>
@@ -885,12 +889,12 @@ $X_{\HeII}X_\e/X_{\HeI}$. See Eq. \eqref{eq:saha:HeI}.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>x</p></td>
-<td class="parameter_description"><p>redshift factor $x$.</p></td>
+<td class="parameter_description"><p>redshift factor, $x = 1+z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -898,7 +902,7 @@ $X_{\HeII}X_\e/X_{\HeI}$. See Eq. \eqref{eq:saha:HeI}.</p>
 </div>
 <div class="refsect3">
 <a name="nc-recomb-HeI-ion-saha.returns" id="nc-recomb-HeI-ion-saha.returns"></a><h4>Returns</h4>
-<p> the ratio $X_{\HeII}X_\e/X_{\HeI}$.</p>
+<p> the ratio $X_{\HeII}X_\e/X_{\HeI}$</p>
 </div>
 </div>
 <hr />
@@ -907,7 +911,7 @@ $X_{\HeII}X_\e/X_{\HeI}$. See Eq. \eqref{eq:saha:HeI}.</p>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_recomb_HeII_ion_saha (<em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                          <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
-<p>Calculate the equilibrium double/single ionized helium ratio
+<p>Calculates the equilibrium double/single ionized helium ratio
 ($X_{\HeIII}X_\e/X_{\HeII}$). See Eq. \eqref{eq:saha:HeII}.</p>
 <div class="refsect3">
 <a name="nc-recomb-HeII-ion-saha.parameters" id="nc-recomb-HeII-ion-saha.parameters"></a><h4>Parameters</h4>
@@ -920,12 +924,12 @@ nc_recomb_HeII_ion_saha (<em class="parameter"><code><a class="link" href="NcHIC
 <tbody>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>x</p></td>
-<td class="parameter_description"><p>redshift factor $x$.</p></td>
+<td class="parameter_description"><p>redshift factor, $x = 1+z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -942,7 +946,7 @@ nc_recomb_HeII_ion_saha (<em class="parameter"><code><a class="link" href="NcHIC
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_recomb_HeII_ion_saha_x (<em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                            <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> f</code></em>);</pre>
-<p>Calculate the redshift where the ratio $$X_{\HeIII}X_\e/X_{\HeII} = f.$$</p>
+<p>Calculates the redshift where the ratio $$X_{\HeIII}X_\e/X_{\HeII} = f.$$</p>
 <p>This calculation is done by finding the value of $x$ where
 $$\frac{e^{-\HeII_{1s}/(k_BT)}}{4n_{\Hy}\lambda_{\e}^3} = f.$$</p>
 <div class="refsect3">
@@ -956,7 +960,7 @@ $$\frac{e^{-\HeII_{1s}/(k_BT)}}{4n_{\Hy}\lambda_{\e}^3} = f.$$</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -970,7 +974,7 @@ $$\frac{e^{-\HeII_{1s}/(k_BT)}}{4n_{\Hy}\lambda_{\e}^3} = f.$$</p>
 <div class="refsect3">
 <a name="nc-recomb-HeII-ion-saha-x.returns" id="nc-recomb-HeII-ion-saha-x.returns"></a><h4>Returns</h4>
 <p> the value of $x$ where the ratio <em class="parameter"><code>f</code></em>
-occur.</p>
+occur</p>
 </div>
 </div>
 <hr />
@@ -979,7 +983,7 @@ occur.</p>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_recomb_HeII_ion_saha_x_by_HeIII_He (<em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> f</code></em>);</pre>
-<p>Calculate the redshift where the ratio $$X_{\HeIII}/X_{\He} = f.$$</p>
+<p>Calculates the redshift where the ratio $$X_{\HeIII}/X_{\He} = f.$$</p>
 <p>This calculation is done assuming that hydrogen and helium are
 fully ionized, i.e., $\HyI = 0 = \HeI$. In this case
 $$\frac{X_{\HeIII}X_\e}{X_{\HeII}} =
@@ -995,7 +999,7 @@ $$\frac{X_{\HeIII}X_\e}{X_{\HeII}} =
 <tbody>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1009,7 +1013,7 @@ $$\frac{X_{\HeIII}X_\e}{X_{\HeII}} =
 <div class="refsect3">
 <a name="nc-recomb-HeII-ion-saha-x-by-HeIII-He.returns" id="nc-recomb-HeII-ion-saha-x-by-HeIII-He.returns"></a><h4>Returns</h4>
 <p> the value of $x$ where the ratio <em class="parameter"><code>f</code></em>
-occur.</p>
+occur</p>
 </div>
 </div>
 <hr />
@@ -1019,7 +1023,7 @@ occur.</p>
 nc_recomb_He_fully_ionized_Xe (<em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
 <p>Assuming that all helium is single or double ionized and all hydrogen is
-ionized we have $$X_\e = 1 + X_\HeII + 2X_\HeIII,\quad X_\He = X_\HeII +
+ionized, we have $$X_\e = 1 + X_\HeII + 2X_\HeIII,\quad X_\He = X_\HeII +
 X_\HeIII,$$ thus, $$X_\HeIII = X_\e-X_\He-1,\quad X_\HeII = 1 + 2X_\He -
 X_\e.$$ Using <a class="link" href="NcRecomb.html#nc-recomb-HeII-ion-saha" title="nc_recomb_HeII_ion_saha ()"><code class="function">nc_recomb_HeII_ion_saha()</code></a> and <a class="link" href="NcHICosmo.html#nc-hicosmo-XHe" title="nc_hicosmo_XHe ()"><code class="function">nc_hicosmo_XHe()</code></a> we obtain
 $X_\e$.</p>
@@ -1034,12 +1038,12 @@ $X_\e$.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>x</p></td>
-<td class="parameter_description"><p>redshift factor $x$.</p></td>
+<td class="parameter_description"><p>redshift factor, $x = 1+z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1047,7 +1051,7 @@ $X_\e$.</p>
 </div>
 <div class="refsect3">
 <a name="nc-recomb-He-fully-ionized-Xe.returns" id="nc-recomb-He-fully-ionized-Xe.returns"></a><h4>Returns</h4>
-<p> $X_\e$.</p>
+<p> $X_\e$</p>
 </div>
 </div>
 <hr />
@@ -1072,17 +1076,17 @@ It solves the system containing all Saha's equations Eqs \eqref{eq:saha:HyI},
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>x</p></td>
-<td class="parameter_description"><p>$x$.</p></td>
+<td class="parameter_description"><p>redshift factor, $x = 1+z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1090,7 +1094,7 @@ It solves the system containing all Saha's equations Eqs \eqref{eq:saha:HyI},
 </div>
 <div class="refsect3">
 <a name="nc-recomb-equilibrium-Xe.returns" id="nc-recomb-equilibrium-Xe.returns"></a><h4>Returns</h4>
-<p> $X_\e$.</p>
+<p> $X_\e$</p>
 </div>
 </div>
 <hr />
@@ -1115,17 +1119,17 @@ It solves the system containing all Saha's equations Eqs \eqref{eq:saha:HyI},
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>x</p></td>
-<td class="parameter_description"><p>$x$.</p></td>
+<td class="parameter_description"><p>redshift factor, $x = 1+z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1133,7 +1137,7 @@ It solves the system containing all Saha's equations Eqs \eqref{eq:saha:HyI},
 </div>
 <div class="refsect3">
 <a name="nc-recomb-equilibrium-XHI.returns" id="nc-recomb-equilibrium-XHI.returns"></a><h4>Returns</h4>
-<p> $X_\HyI$.</p>
+<p> $X_\HyI$</p>
 </div>
 </div>
 <hr />
@@ -1158,17 +1162,17 @@ It solves the system containing all Saha's equations Eqs \eqref{eq:saha:HyI},
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>x</p></td>
-<td class="parameter_description"><p>$x$.</p></td>
+<td class="parameter_description"><p>redshift factor, $x = 1+z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1176,7 +1180,7 @@ It solves the system containing all Saha's equations Eqs \eqref{eq:saha:HyI},
 </div>
 <div class="refsect3">
 <a name="nc-recomb-equilibrium-XHII.returns" id="nc-recomb-equilibrium-XHII.returns"></a><h4>Returns</h4>
-<p> $X_\HyII$.</p>
+<p> $X_\HyII$</p>
 </div>
 </div>
 <hr />
@@ -1201,17 +1205,17 @@ It solves the system containing all Saha's equations Eqs \eqref{eq:saha:HyI},
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>x</p></td>
-<td class="parameter_description"><p>$x$.</p></td>
+<td class="parameter_description"><p>redshift factor, $x = 1+z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1219,7 +1223,7 @@ It solves the system containing all Saha's equations Eqs \eqref{eq:saha:HyI},
 </div>
 <div class="refsect3">
 <a name="nc-recomb-equilibrium-XHeI.returns" id="nc-recomb-equilibrium-XHeI.returns"></a><h4>Returns</h4>
-<p> $X_\HyII$.</p>
+<p> $X_\HyII$</p>
 </div>
 </div>
 <hr />
@@ -1244,17 +1248,17 @@ It solves the system containing all Saha's equations Eqs \eqref{eq:saha:HyI},
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>x</p></td>
-<td class="parameter_description"><p>$x$.</p></td>
+<td class="parameter_description"><p>redshift factor, $x = 1+z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1262,7 +1266,7 @@ It solves the system containing all Saha's equations Eqs \eqref{eq:saha:HyI},
 </div>
 <div class="refsect3">
 <a name="nc-recomb-equilibrium-XHeII.returns" id="nc-recomb-equilibrium-XHeII.returns"></a><h4>Returns</h4>
-<p> $X_\HyII$.</p>
+<p> $X_\HyII$</p>
 </div>
 </div>
 <hr />
@@ -1287,17 +1291,17 @@ It solves the system containing all Saha's equations Eqs \eqref{eq:saha:HyI},
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>x</p></td>
-<td class="parameter_description"><p>$x$.</p></td>
+<td class="parameter_description"><p>redshift factor, $x = 1+z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1305,7 +1309,7 @@ It solves the system containing all Saha's equations Eqs \eqref{eq:saha:HyI},
 </div>
 <div class="refsect3">
 <a name="nc-recomb-equilibrium-XHeIII.returns" id="nc-recomb-equilibrium-XHeIII.returns"></a><h4>Returns</h4>
-<p> $X_\HyII$.</p>
+<p> $X_\HyII$</p>
 </div>
 </div>
 <hr />
@@ -1315,7 +1319,9 @@ It solves the system containing all Saha's equations Eqs \eqref{eq:saha:HyI},
 nc_recomb_dtau_dx (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                    <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lambda</code></em>);</pre>
-<p>FIXME</p>
+<p>Computes the derivative of the optical depth with respect to $x = 1 + z$, 
+$\frac{\mathrm{d}\tau}{\mathrm{d}x}$, at <em class="parameter"><code>lambda</code></em>
+.</p>
 <div class="refsect3">
 <a name="nc-recomb-dtau-dx.parameters" id="nc-recomb-dtau-dx.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1327,17 +1333,17 @@ nc_recomb_dtau_dx (<em class="parameter"><code><a class="link" href="NcRecomb.ht
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda</p></td>
-<td class="parameter_description"><p>$\lambda$.</p></td>
+<td class="parameter_description"><p>$\lambda = - \ln(1+z)$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1345,7 +1351,7 @@ nc_recomb_dtau_dx (<em class="parameter"><code><a class="link" href="NcRecomb.ht
 </div>
 <div class="refsect3">
 <a name="nc-recomb-dtau-dx.returns" id="nc-recomb-dtau-dx.returns"></a><h4>Returns</h4>
-<p> $d\tau/dx$.</p>
+<p> $\left.\frac{\mathrm{d}\tau}{\mathrm{d}x}\right|_{\lambda}$</p>
 </div>
 </div>
 <hr />
@@ -1355,7 +1361,9 @@ nc_recomb_dtau_dx (<em class="parameter"><code><a class="link" href="NcRecomb.ht
 nc_recomb_dtau_dlambda (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                         <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lambda</code></em>);</pre>
-<p>FIXME</p>
+<p>Computes the derivative of the optical depth with respect to $\lambda$, 
+$\frac{\mathrm{d}\tau}{\mathrm{d}\lambda}$, at <em class="parameter"><code>lambda</code></em>
+.</p>
 <div class="refsect3">
 <a name="nc-recomb-dtau-dlambda.parameters" id="nc-recomb-dtau-dlambda.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1367,17 +1375,17 @@ nc_recomb_dtau_dlambda (<em class="parameter"><code><a class="link" href="NcReco
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda</p></td>
-<td class="parameter_description"><p>$\lambda$.</p></td>
+<td class="parameter_description"><p>$\lambda = - \ln(1+z)$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1385,7 +1393,7 @@ nc_recomb_dtau_dlambda (<em class="parameter"><code><a class="link" href="NcReco
 </div>
 <div class="refsect3">
 <a name="nc-recomb-dtau-dlambda.returns" id="nc-recomb-dtau-dlambda.returns"></a><h4>Returns</h4>
-<p> $d\tau/d\lambda$.</p>
+<p> $\left.\frac{\mathrm{d}\tau}{\mathrm{d}\lambda}\right|_{\lambda}$</p>
 </div>
 </div>
 <hr />
@@ -1395,7 +1403,9 @@ nc_recomb_dtau_dlambda (<em class="parameter"><code><a class="link" href="NcReco
 nc_recomb_d2tau_dlambda2 (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                           <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lambda</code></em>);</pre>
-<p>FIXME</p>
+<p>Computes the second derivative of the optical depth with respect to $\lambda$, 
+$\frac{\mathrm{d}^2\tau}{\mathrm{d}\lambda^2}$, at <em class="parameter"><code>lambda</code></em>
+.</p>
 <div class="refsect3">
 <a name="nc-recomb-d2tau-dlambda2.parameters" id="nc-recomb-d2tau-dlambda2.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1407,17 +1417,17 @@ nc_recomb_d2tau_dlambda2 (<em class="parameter"><code><a class="link" href="NcRe
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda</p></td>
-<td class="parameter_description"><p>$\lambda$.</p></td>
+<td class="parameter_description"><p>$\lambda = - \ln(1+z)$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1425,7 +1435,7 @@ nc_recomb_d2tau_dlambda2 (<em class="parameter"><code><a class="link" href="NcRe
 </div>
 <div class="refsect3">
 <a name="nc-recomb-d2tau-dlambda2.returns" id="nc-recomb-d2tau-dlambda2.returns"></a><h4>Returns</h4>
-<p> $d^2\tau/d\lambda^2$.</p>
+<p> $\left.\frac{\mathrm{d}^2\tau}{\mathrm{d}\lambda^2}\right|_{\lambda}$</p>
 </div>
 </div>
 <hr />
@@ -1435,7 +1445,9 @@ nc_recomb_d2tau_dlambda2 (<em class="parameter"><code><a class="link" href="NcRe
 nc_recomb_d3tau_dlambda3 (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                           <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lambda</code></em>);</pre>
-<p>FIXME</p>
+<p>Computes the third derivative of the optical depth with respect to $\lambda$, 
+$\frac{\mathrm{d}^3\tau}{\mathrm{d}\lambda^3}$, at <em class="parameter"><code>lambda</code></em>
+.</p>
 <div class="refsect3">
 <a name="nc-recomb-d3tau-dlambda3.parameters" id="nc-recomb-d3tau-dlambda3.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1447,17 +1459,17 @@ nc_recomb_d3tau_dlambda3 (<em class="parameter"><code><a class="link" href="NcRe
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda</p></td>
-<td class="parameter_description"><p>$\lambda$.</p></td>
+<td class="parameter_description"><p>$\lambda = - \ln(1+z)$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1465,7 +1477,7 @@ nc_recomb_d3tau_dlambda3 (<em class="parameter"><code><a class="link" href="NcRe
 </div>
 <div class="refsect3">
 <a name="nc-recomb-d3tau-dlambda3.returns" id="nc-recomb-d3tau-dlambda3.returns"></a><h4>Returns</h4>
-<p> $d^3\tau/d\lambda^3$.</p>
+<p> $\left.\frac{\mathrm{d}^3\tau}{\mathrm{d}\lambda^3}\right|_{\lambda}$</p>
 </div>
 </div>
 <hr />
@@ -1475,7 +1487,8 @@ nc_recomb_d3tau_dlambda3 (<em class="parameter"><code><a class="link" href="NcRe
 nc_recomb_tau (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lambda</code></em>);</pre>
-<p>FIXME</p>
+<p>Computes the optical depth [Eq. \eqref{eq:def:tau}] at <em class="parameter"><code>lambda</code></em>
+.</p>
 <div class="refsect3">
 <a name="nc-recomb-tau.parameters" id="nc-recomb-tau.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1487,17 +1500,17 @@ nc_recomb_tau (<em class="parameter"><code><a class="link" href="NcRecomb.html" 
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda</p></td>
-<td class="parameter_description"><p>$\lambda$.</p></td>
+<td class="parameter_description"><p>$\lambda = - \ln(1+z)$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1505,7 +1518,7 @@ nc_recomb_tau (<em class="parameter"><code><a class="link" href="NcRecomb.html" 
 </div>
 <div class="refsect3">
 <a name="nc-recomb-tau.returns" id="nc-recomb-tau.returns"></a><h4>Returns</h4>
-<p> $\tau$.</p>
+<p> $\tau$</p>
 </div>
 </div>
 <hr />
@@ -1515,7 +1528,9 @@ nc_recomb_tau (<em class="parameter"><code><a class="link" href="NcRecomb.html" 
 nc_recomb_tau_drag (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                     <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lambda</code></em>);</pre>
-<p>FIXME</p>
+<p>Computes the drag depth,
+$$\tau_d \equiv \int_0^\lambda \mathrm{d}\lambda R^{-1} \frac{n_e \sigma_T}{1+z},$$ 
+where $R = \frac{3\bar{\rho}_b}{4\bar{\rho}_\gamma}$.</p>
 <div class="refsect3">
 <a name="nc-recomb-tau-drag.parameters" id="nc-recomb-tau-drag.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1527,17 +1542,17 @@ nc_recomb_tau_drag (<em class="parameter"><code><a class="link" href="NcRecomb.h
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda</p></td>
-<td class="parameter_description"><p>$\lambda$.</p></td>
+<td class="parameter_description"><p>$\lambda = - \ln(1+z)$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1545,7 +1560,7 @@ nc_recomb_tau_drag (<em class="parameter"><code><a class="link" href="NcRecomb.h
 </div>
 <div class="refsect3">
 <a name="nc-recomb-tau-drag.returns" id="nc-recomb-tau-drag.returns"></a><h4>Returns</h4>
-<p> $\tau_\mathrm{drag}$.</p>
+<p> $\tau_\mathrm{drag}$</p>
 </div>
 </div>
 <hr />
@@ -1556,7 +1571,9 @@ nc_recomb_tau_lambda0_lambda1 (<em class="parameter"><code><a class="link" href=
                                <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lambda0</code></em>,
                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lambda1</code></em>);</pre>
-<p>FIXME</p>
+<p>Computes the optical depth between <em class="parameter"><code>lambda1</code></em>
+ and <em class="parameter"><code>lambda0</code></em>
+.</p>
 <div class="refsect3">
 <a name="nc-recomb-tau-lambda0-lambda1.parameters" id="nc-recomb-tau-lambda0-lambda1.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1568,22 +1585,22 @@ nc_recomb_tau_lambda0_lambda1 (<em class="parameter"><code><a class="link" href=
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda0</p></td>
-<td class="parameter_description"><p>$\lambda_0$.</p></td>
+<td class="parameter_description"><p>$\lambda_0$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda1</p></td>
-<td class="parameter_description"><p>$\lambda_1$.</p></td>
+<td class="parameter_description"><p>$\lambda_1$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1591,7 +1608,7 @@ nc_recomb_tau_lambda0_lambda1 (<em class="parameter"><code><a class="link" href=
 </div>
 <div class="refsect3">
 <a name="nc-recomb-tau-lambda0-lambda1.returns" id="nc-recomb-tau-lambda0-lambda1.returns"></a><h4>Returns</h4>
-<p> $\tau(\lambda_1) - \tau(\lambda_0)$.</p>
+<p> $\tau(\lambda_1) - \tau(\lambda_0)$</p>
 </div>
 </div>
 <hr />
@@ -1601,7 +1618,8 @@ nc_recomb_tau_lambda0_lambda1 (<em class="parameter"><code><a class="link" href=
 nc_recomb_log_v_tau (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                      <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lambda</code></em>);</pre>
-<p>FIXME</p>
+<p>Computes the logarithm base e of the visibility function [Eq. \eqref{eq:def:vtau}] at <em class="parameter"><code>lambda</code></em>
+.</p>
 <div class="refsect3">
 <a name="nc-recomb-log-v-tau.parameters" id="nc-recomb-log-v-tau.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1613,17 +1631,17 @@ nc_recomb_log_v_tau (<em class="parameter"><code><a class="link" href="NcRecomb.
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda</p></td>
-<td class="parameter_description"><p>$\lambda$.</p></td>
+<td class="parameter_description"><p>$\lambda = - \ln(1+z)$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1631,7 +1649,7 @@ nc_recomb_log_v_tau (<em class="parameter"><code><a class="link" href="NcRecomb.
 </div>
 <div class="refsect3">
 <a name="nc-recomb-log-v-tau.returns" id="nc-recomb-log-v-tau.returns"></a><h4>Returns</h4>
-<p> $\log(v_\tau)$.</p>
+<p> $\log(v_\tau)$</p>
 </div>
 </div>
 <hr />
@@ -1641,7 +1659,8 @@ nc_recomb_log_v_tau (<em class="parameter"><code><a class="link" href="NcRecomb.
 nc_recomb_v_tau (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                  <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lambda</code></em>);</pre>
-<p>FIXME</p>
+<p>Computes the visibility function [Eq. \eqref{eq:def:vtau}] at <em class="parameter"><code>lambda</code></em>
+.</p>
 <div class="refsect3">
 <a name="nc-recomb-v-tau.parameters" id="nc-recomb-v-tau.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1653,17 +1672,17 @@ nc_recomb_v_tau (<em class="parameter"><code><a class="link" href="NcRecomb.html
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda</p></td>
-<td class="parameter_description"><p>$\lambda$.</p></td>
+<td class="parameter_description"><p>$\lambda = - \ln(1+z)$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1671,7 +1690,7 @@ nc_recomb_v_tau (<em class="parameter"><code><a class="link" href="NcRecomb.html
 </div>
 <div class="refsect3">
 <a name="nc-recomb-v-tau.returns" id="nc-recomb-v-tau.returns"></a><h4>Returns</h4>
-<p> $v_\tau$.</p>
+<p> $v_\tau$</p>
 </div>
 </div>
 <hr />
@@ -1681,7 +1700,8 @@ nc_recomb_v_tau (<em class="parameter"><code><a class="link" href="NcRecomb.html
 nc_recomb_dv_tau_dlambda (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                           <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lambda</code></em>);</pre>
-<p>FIXME</p>
+<p>Computes the derivative of the visibility function [Eq. \eqref{eq:def:vtau}] at <em class="parameter"><code>lambda</code></em>
+.</p>
 <div class="refsect3">
 <a name="nc-recomb-dv-tau-dlambda.parameters" id="nc-recomb-dv-tau-dlambda.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1693,17 +1713,17 @@ nc_recomb_dv_tau_dlambda (<em class="parameter"><code><a class="link" href="NcRe
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda</p></td>
-<td class="parameter_description"><p>$\lambda$.</p></td>
+<td class="parameter_description"><p>$\lambda = - \ln(1+z)$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1711,7 +1731,7 @@ nc_recomb_dv_tau_dlambda (<em class="parameter"><code><a class="link" href="NcRe
 </div>
 <div class="refsect3">
 <a name="nc-recomb-dv-tau-dlambda.returns" id="nc-recomb-dv-tau-dlambda.returns"></a><h4>Returns</h4>
-<p> $dv_\tau/d\lambda$.</p>
+<p> $\left. \frac{\mathrm{d}v_\tau}{\mathrm{d}\lambda}\right|_\lambda$</p>
 </div>
 </div>
 <hr />
@@ -1721,7 +1741,8 @@ nc_recomb_dv_tau_dlambda (<em class="parameter"><code><a class="link" href="NcRe
 nc_recomb_d2v_tau_dlambda2 (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                             <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                             <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lambda</code></em>);</pre>
-<p>FIXME</p>
+<p>Computes the second derivative of the visibility function [Eq. \eqref{eq:def:vtau}] at <em class="parameter"><code>lambda</code></em>
+.</p>
 <div class="refsect3">
 <a name="nc-recomb-d2v-tau-dlambda2.parameters" id="nc-recomb-d2v-tau-dlambda2.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1733,17 +1754,17 @@ nc_recomb_d2v_tau_dlambda2 (<em class="parameter"><code><a class="link" href="Nc
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda</p></td>
-<td class="parameter_description"><p>$\lambda$.</p></td>
+<td class="parameter_description"><p>$\lambda = - \ln(1+z)$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1751,7 +1772,7 @@ nc_recomb_d2v_tau_dlambda2 (<em class="parameter"><code><a class="link" href="Nc
 </div>
 <div class="refsect3">
 <a name="nc-recomb-d2v-tau-dlambda2.returns" id="nc-recomb-d2v-tau-dlambda2.returns"></a><h4>Returns</h4>
-<p> $d2v_\tau/d\lambda^2$.</p>
+<p> $\left. \frac{\mathrm{d}^2v_\tau}{\mathrm{d}\lambda^2}\right|_\lambda$</p>
 </div>
 </div>
 <hr />
@@ -1764,10 +1785,10 @@ nc_recomb_v_tau_lambda_features (<em class="parameter"><code><a class="link" hre
                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lambda_max</code></em>,
                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lambda_l</code></em>,
                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lambda_u</code></em>);</pre>
-<p>Calculate the maximum of the visibility function [Eq \eqref{eq:def:vtau}], i.e,
+<p>Calculates the maximum of the visibility function [Eq \eqref{eq:def:vtau}], i.e,
 the value of $\lambda_\text{max}$ where
 $dv_\tau(\lambda_\text{max})/d\lambda = 0$, and the values where the
-visibility drop to $v_\tau(\lambda_\text{max})e^{-\text{logref}}$ to the left
+visibility drops to $v_\tau(\lambda_\text{max})e^{-\text{logref}}$ to the left
 $\lambda_l$ and to the right $\lambda_u$ of $\lambda_\text{max}$.</p>
 <div class="refsect3">
 <a name="nc-recomb-v-tau-lambda-features.parameters" id="nc-recomb-v-tau-lambda-features.parameters"></a><h4>Parameters</h4>
@@ -1780,17 +1801,17 @@ $\lambda_l$ and to the right $\lambda_u$ of $\lambda_\text{max}$.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>logref</p></td>
-<td class="parameter_description"><p>the logarithm of the reference scale.</p></td>
+<td class="parameter_description"><p>the logarithm of the reference scale</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1818,7 +1839,7 @@ $\lambda_l$ and to the right $\lambda_u$ of $\lambda_\text{max}$.</p>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_recomb_get_v_tau_max_lambda (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
-<p>Calculate the maximum of the visibility function [Eq. \eqref{eq:def:vtau}],
+<p>Calculates the maximum of the visibility function [Eq. \eqref{eq:def:vtau}],
 the value of $\lambda_\text{max}$ where
 $dv_\tau(\lambda_\text{max})/d\lambda = 0$.</p>
 <div class="refsect3">
@@ -1832,12 +1853,12 @@ $dv_\tau(\lambda_\text{max})/d\lambda = 0$.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1845,7 +1866,7 @@ $dv_\tau(\lambda_\text{max})/d\lambda = 0$.</p>
 </div>
 <div class="refsect3">
 <a name="nc-recomb-get-v-tau-max-lambda.returns" id="nc-recomb-get-v-tau-max-lambda.returns"></a><h4>Returns</h4>
-<p> $\lambda_\text{max}$.</p>
+<p> $\lambda_\text{max}$</p>
 </div>
 </div>
 <hr />
@@ -1854,7 +1875,7 @@ $dv_\tau(\lambda_\text{max})/d\lambda = 0$.</p>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_recomb_get_tau_lambda (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                           <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
-<p>Calculate the value of $\lambda$ where the optical depth
+<p>Calculates the value of $\lambda$ where the optical depth
 [Eq \eqref{eq:def:tau}] is equal to one, i.e., $\tau(\lambda^\star) = 1$.</p>
 <div class="refsect3">
 <a name="nc-recomb-get-tau-lambda.parameters" id="nc-recomb-get-tau-lambda.parameters"></a><h4>Parameters</h4>
@@ -1867,12 +1888,12 @@ nc_recomb_get_tau_lambda (<em class="parameter"><code><a class="link" href="NcRe
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1880,7 +1901,7 @@ nc_recomb_get_tau_lambda (<em class="parameter"><code><a class="link" href="NcRe
 </div>
 <div class="refsect3">
 <a name="nc-recomb-get-tau-lambda.returns" id="nc-recomb-get-tau-lambda.returns"></a><h4>Returns</h4>
-<p> $\lambda^\star$.</p>
+<p> $\lambda^\star$</p>
 </div>
 </div>
 <hr />
@@ -1889,7 +1910,7 @@ nc_recomb_get_tau_lambda (<em class="parameter"><code><a class="link" href="NcRe
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_recomb_get_tau_drag_lambda (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                                <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
-<p>Calculate the value of $\lambda$ where the optical depth times $R$
+<p>Calculates the value of $\lambda$ where the optical depth times $R$
 [Eq. \eqref{eq:def:tau}] is equal to one, i.e., $\tau_\mathrm{drag}(\lambda^\star) = 1$.</p>
 <div class="refsect3">
 <a name="nc-recomb-get-tau-drag-lambda.parameters" id="nc-recomb-get-tau-drag-lambda.parameters"></a><h4>Parameters</h4>
@@ -1902,12 +1923,12 @@ nc_recomb_get_tau_drag_lambda (<em class="parameter"><code><a class="link" href=
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1915,7 +1936,7 @@ nc_recomb_get_tau_drag_lambda (<em class="parameter"><code><a class="link" href=
 </div>
 <div class="refsect3">
 <a name="nc-recomb-get-tau-drag-lambda.returns" id="nc-recomb-get-tau-drag-lambda.returns"></a><h4>Returns</h4>
-<p> $\lambda^\star$.</p>
+<p> $\lambda^\star$</p>
 </div>
 </div>
 <hr />
@@ -1924,10 +1945,10 @@ nc_recomb_get_tau_drag_lambda (<em class="parameter"><code><a class="link" href=
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_recomb_get_tau_cutoff_lambda (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                                  <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
-<p>Calculate the value of $\lambda$ where the optical depth
+<p>Calculates the value of $\lambda$ where the optical depth
 [Eq \eqref{eq:def:tau}] attains a value such that
 $e^{-\tau(\lambda_\text{cutoff})} = \epsilon_\text{double}$, i.e.,
-is equal to the smallest value of a double which add to one.</p>
+equal to the smallest value of a double which add to one.</p>
 <div class="refsect3">
 <a name="nc-recomb-get-tau-cutoff-lambda.parameters" id="nc-recomb-get-tau-cutoff-lambda.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1939,12 +1960,12 @@ is equal to the smallest value of a double which add to one.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1952,7 +1973,7 @@ is equal to the smallest value of a double which add to one.</p>
 </div>
 <div class="refsect3">
 <a name="nc-recomb-get-tau-cutoff-lambda.returns" id="nc-recomb-get-tau-cutoff-lambda.returns"></a><h4>Returns</h4>
-<p> $\lambda_\text{cutoff}$.</p>
+<p> $\lambda_\text{cutoff}$</p>
 </div>
 </div>
 <hr />
@@ -1961,7 +1982,7 @@ is equal to the smallest value of a double which add to one.</p>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_recomb_get_v_tau_max_z (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                            <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
-<p>Calculate the maximum of the visibility function [Eq. \eqref{eq:def:vtau}],
+<p>Calculates the maximum of the visibility function [Eq. \eqref{eq:def:vtau}],
 the value of $z(\lambda_\text{max})$ where
 $dv_\tau(\lambda_\text{max})/d\lambda = 0$.</p>
 <div class="refsect3">
@@ -1975,12 +1996,12 @@ $dv_\tau(\lambda_\text{max})/d\lambda = 0$.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1988,7 +2009,7 @@ $dv_\tau(\lambda_\text{max})/d\lambda = 0$.</p>
 </div>
 <div class="refsect3">
 <a name="nc-recomb-get-v-tau-max-z.returns" id="nc-recomb-get-v-tau-max-z.returns"></a><h4>Returns</h4>
-<p> $z(\lambda_\text{max})$.</p>
+<p> $z(\lambda_\text{max})$</p>
 </div>
 </div>
 <hr />
@@ -1997,7 +2018,7 @@ $dv_\tau(\lambda_\text{max})/d\lambda = 0$.</p>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_recomb_get_tau_z (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                      <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
-<p>Calculate the value of $z(\lambda)$ where the optical depth
+<p>Calculates the value of $z(\lambda)$ where the optical depth
 [Eq \eqref{eq:def:tau}] is equal to one, i.e., $\tau(\lambda^\star) = 1$.</p>
 <div class="refsect3">
 <a name="nc-recomb-get-tau-z.parameters" id="nc-recomb-get-tau-z.parameters"></a><h4>Parameters</h4>
@@ -2010,12 +2031,12 @@ nc_recomb_get_tau_z (<em class="parameter"><code><a class="link" href="NcRecomb.
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2023,7 +2044,7 @@ nc_recomb_get_tau_z (<em class="parameter"><code><a class="link" href="NcRecomb.
 </div>
 <div class="refsect3">
 <a name="nc-recomb-get-tau-z.returns" id="nc-recomb-get-tau-z.returns"></a><h4>Returns</h4>
-<p> $z(\lambda^\star)$.</p>
+<p> $z(\lambda^\star)$</p>
 </div>
 </div>
 <hr />
@@ -2032,7 +2053,7 @@ nc_recomb_get_tau_z (<em class="parameter"><code><a class="link" href="NcRecomb.
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_recomb_get_tau_drag_z (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                           <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
-<p>Calculate the value of $z(\lambda)$ where the optical depth times $R$
+<p>Calculates the value of $z(\lambda)$ where the optical depth times $R$ (drag depth)
 [Eq. \eqref{eq:def:tau}] is equal to one, i.e., $\tau_\mathrm{drag}(\lambda^\star) = 1$.</p>
 <div class="refsect3">
 <a name="nc-recomb-get-tau-drag-z.parameters" id="nc-recomb-get-tau-drag-z.parameters"></a><h4>Parameters</h4>
@@ -2045,12 +2066,12 @@ nc_recomb_get_tau_drag_z (<em class="parameter"><code><a class="link" href="NcRe
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2058,7 +2079,7 @@ nc_recomb_get_tau_drag_z (<em class="parameter"><code><a class="link" href="NcRe
 </div>
 <div class="refsect3">
 <a name="nc-recomb-get-tau-drag-z.returns" id="nc-recomb-get-tau-drag-z.returns"></a><h4>Returns</h4>
-<p> $z(\lambda^\star)$.</p>
+<p> $z(\lambda^\star)$</p>
 </div>
 </div>
 <hr />
@@ -2067,10 +2088,10 @@ nc_recomb_get_tau_drag_z (<em class="parameter"><code><a class="link" href="NcRe
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_recomb_get_tau_cutoff_z (<em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                             <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
-<p>Calculate the value of $z(\lambda)$ where the optical depth
+<p>Calculates the value of $z(\lambda)$ where the optical depth
 [Eq \eqref{eq:def:tau}] attains a value such that
 $e^{-\tau(\lambda_\text{cutoff})} = \epsilon_\text{double}$, i.e.,
-is equal to the smallest value of a double which add to one.</p>
+equal to the smallest value of a double which add to one.</p>
 <div class="refsect3">
 <a name="nc-recomb-get-tau-cutoff-z.parameters" id="nc-recomb-get-tau-cutoff-z.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2082,12 +2103,12 @@ is equal to the smallest value of a double which add to one.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>recomb</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2095,7 +2116,7 @@ is equal to the smallest value of a double which add to one.</p>
 </div>
 <div class="refsect3">
 <a name="nc-recomb-get-tau-cutoff-z.returns" id="nc-recomb-get-tau-cutoff-z.returns"></a><h4>Returns</h4>
-<p> $z(\lambda_\text{cutoff})$.</p>
+<p> $z(\lambda_\text{cutoff})$</p>
 </div>
 </div>
 <hr />
@@ -2117,12 +2138,12 @@ the ionization fraction $X_\e$ [Eq. \eqref{eq:def:Xe}].</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda</p></td>
-<td class="parameter_description"><p>$\lambda$.</p></td>
+<td class="parameter_description"><p>$\lambda = - \ln(1+z)$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2130,7 +2151,7 @@ the ionization fraction $X_\e$ [Eq. \eqref{eq:def:Xe}].</p>
 </div>
 <div class="refsect3">
 <a name="nc-recomb-dtau-dlambda-Xe.returns" id="nc-recomb-dtau-dlambda-Xe.returns"></a><h4>Returns</h4>
-<p> $X_\e^{-1}d\tau/d\lambda$.</p>
+<p> $X_\e^{-1}d\tau/d\lambda$</p>
 </div>
 </div>
 <hr />
@@ -2153,12 +2174,12 @@ fully ionized helium and hydrogen [<a class="link" href="NcRecomb.html#nc-recomb
 <tbody>
 <tr>
 <td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lambda</p></td>
-<td class="parameter_description"><p>$\lambda$.</p></td>
+<td class="parameter_description"><p>$\lambda = - \ln(1+z)$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2166,7 +2187,7 @@ fully ionized helium and hydrogen [<a class="link" href="NcRecomb.html#nc-recomb
 </div>
 <div class="refsect3">
 <a name="nc-recomb-He-fully-ionized-dtau-dlambda.returns" id="nc-recomb-He-fully-ionized-dtau-dlambda.returns"></a><h4>Returns</h4>
-<p> $d\tau/d\lambda$.</p>
+<p> $d\tau/d\lambda$</p>
 </div>
 </div>
 </div>

@@ -6,9 +6,9 @@
 <title>NcmFftlog: NumCosmo Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
 <link rel="home" href="index.html" title="NumCosmo Reference Manual" />
-<link rel="up" href="ch02.html#id-1.3.2" title="Miscellaneous Objects" />
-<link rel="prev" href="numcosmo-NcmFuncEval.html" title="NcmFuncEval" />
-<link rel="next" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatwin2" />
+<link rel="up" href="ch02s02.html" title="FFTLog" />
+<link rel="prev" href="ch02s02.html" title="FFTLog" />
+<link rel="next" href="NcmFftlogSBesselJ.html" title="NcmFftlogSBesselJ" />
 <meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
@@ -34,9 +34,9 @@
                   <a href="#NcmFftlog.properties" class="shortcut">Properties</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
-<td><a accesskey="u" href="ch02.html#id-1.3.2"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
-<td><a accesskey="p" href="numcosmo-NcmFuncEval.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
-<td><a accesskey="n" href="NcmFftlogTophatwin2.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+<td><a accesskey="u" href="ch02s02.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="ch02s02.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmFftlogSBesselJ.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcmFftlog" id="NcmFftlog"></a><div class="titlepage"></div>
@@ -55,6 +55,14 @@
 <col class="functions_name" />
 </colgroup>
 <tbody>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="NcmFftlog.html#NcmFftlogFunc" title="NcmFftlogFunc ()">*NcmFftlogFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
 <tr>
 <td class="function_type">
 <a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="returnvalue">NcmFftlog</span></a> *
@@ -195,6 +203,14 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
+<a class="link" href="NcmFftlog.html#ncm-fftlog-eval-by-gsl-function" title="ncm_fftlog_eval_by_gsl_function ()">ncm_fftlog_eval_by_gsl_function</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
 <a class="link" href="NcmFftlog.html#ncm-fftlog-prepare-splines" title="ncm_fftlog_prepare_splines ()">ncm_fftlog_prepare_splines</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -236,6 +252,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="NcmFftlog.html#ncm-fftlog-calibrate-size" title="ncm_fftlog_calibrate_size ()">ncm_fftlog_calibrate_size</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFftlog.html#ncm-fftlog-calibrate-size-gsl" title="ncm_fftlog_calibrate_size_gsl ()">ncm_fftlog_calibrate_size_gsl</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -350,6 +374,7 @@
 <pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> NcmFftlog
         <span class="lineart">├──</span> <a class="link" href="NcmFftlogGausswin2.html" title="NcmFftlogGausswin2">NcmFftlogGausswin2</a>
+        <span class="lineart">├──</span> <a class="link" href="NcmFftlogSBesselJ.html" title="NcmFftlogSBesselJ">NcmFftlogSBesselJ</a>
         <span class="lineart">╰──</span> <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatwin2">NcmFftlogTophatwin2</a>
 </pre>
 </div>
@@ -390,7 +415,7 @@ $b$ and $c$ are positive integers. </p></li>
 <li class="listitem">
 <p>The function $F(k)$ can be provided as:</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
-<li class="listitem"><p>a gsl_function - <a class="link" href="NcmFftlog.html#ncm-fftlog-eval-by-function" title="ncm_fftlog_eval_by_function ()"><code class="function">ncm_fftlog_eval_by_function()</code></a> - whose values are computed at the knots 
+<li class="listitem"><p>a gsl_function - <a class="link" href="NcmFftlog.html#ncm-fftlog-eval-by-gsl-function" title="ncm_fftlog_eval_by_gsl_function ()"><code class="function">ncm_fftlog_eval_by_gsl_function()</code></a> - whose values are computed at the knots 
 within the fundamental interval, and set to zero within the padding intervals. </p></li>
 <li class="listitem"><p>as a vector - <a class="link" href="NcmFftlog.html#ncm-fftlog-eval-by-vector" title="ncm_fftlog_eval_by_vector ()"><code class="function">ncm_fftlog_eval_by_vector()</code></a> - first one must get the vector of $\ln k$ knots, <a class="link" href="NcmFftlog.html#ncm-fftlog-get-vector-lnr" title="ncm_fftlog_get_vector_lnr ()"><code class="function">ncm_fftlog_get_vector_lnr()</code></a>, 
 and then pass a vector containing the values of the function computed at each knot. </p></li>
@@ -401,6 +426,13 @@ and then pass a vector containing the values of the function computed at each kn
 </div>
 <div class="refsect1">
 <a name="NcmFftlog.functions_details" id="NcmFftlog.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="NcmFftlogFunc" id="NcmFftlogFunc"></a><h3>NcmFftlogFunc ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="c_punctuation">(</span>*NcmFftlogFunc<span class="c_punctuation">)</span> (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+</div>
+<hr />
 <div class="refsect2">
 <a name="ncm-fftlog-ref" id="ncm-fftlog-ref"></a><h3>ncm_fftlog_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="returnvalue">NcmFftlog</span></a> *
@@ -836,12 +868,50 @@ ncm_fftlog_eval_by_vector (<em class="parameter"><code><a class="link" href="Ncm
 <a name="ncm-fftlog-eval-by-function" id="ncm-fftlog-eval-by-function"></a><h3>ncm_fftlog_eval_by_function ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fftlog_eval_by_function (<em class="parameter"><code><a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a> *fftlog</code></em>,
-                             <em class="parameter"><code><span class="type">gsl_function</span> *Fk</code></em>);</pre>
+                             <em class="parameter"><code><a class="link" href="NcmFftlog.html#NcmFftlogFunc" title="NcmFftlogFunc ()"><span class="type">NcmFftlogFunc</span></a> Fk</code></em>,
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Evaluates the function <em class="parameter"><code>Fk</code></em>
+ at each knot $\ln k_m$.</p>
+<div class="refsect3">
+<a name="ncm-fftlog-eval-by-function.parameters" id="ncm-fftlog-eval-by-function.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fftlog</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>Fk</p></td>
+<td class="parameter_description"><p> a <a class="link" href="NcmFftlog.html#NcmFftlogFunc" title="NcmFftlogFunc ()"><span class="type">NcmFftlogFunc</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p><em class="parameter"><code>Fk</code></em>
+user data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fftlog-eval-by-gsl-function" id="ncm-fftlog-eval-by-gsl-function"></a><h3>ncm_fftlog_eval_by_gsl_function ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fftlog_eval_by_gsl_function (<em class="parameter"><code><a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a> *fftlog</code></em>,
+                                 <em class="parameter"><code><span class="type">gsl_function</span> *Fk</code></em>);</pre>
 <p>Evaluates the function <em class="parameter"><code>Fk</code></em>
  at each knot $\ln k_m$.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="ncm-fftlog-eval-by-function.parameters" id="ncm-fftlog-eval-by-function.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fftlog-eval-by-gsl-function.parameters" id="ncm-fftlog-eval-by-gsl-function.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name" />
@@ -1041,14 +1111,59 @@ at the point <em class="parameter"><code>lnr</code></em>
 <a name="ncm-fftlog-calibrate-size" id="ncm-fftlog-calibrate-size"></a><h3>ncm_fftlog_calibrate_size ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fftlog_calibrate_size (<em class="parameter"><code><a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a> *fftlog</code></em>,
-                           <em class="parameter"><code><span class="type">gsl_function</span> *Fk</code></em>,
-                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>);</pre>
+                           <em class="parameter"><code><a class="link" href="NcmFftlog.html#NcmFftlogFunc" title="NcmFftlogFunc ()"><span class="type">NcmFftlogFunc</span></a> Fk</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>,
+                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>);</pre>
+<p>Increases the original (input) number of knots until the $G(r)$ splines reach 
+the required precision <em class="parameter"><code>reltol</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-fftlog-calibrate-size.parameters" id="ncm-fftlog-calibrate-size.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fftlog</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>Fk</p></td>
+<td class="parameter_description"><p> a <a class="link" href="NcmFftlog.html#NcmFftlogFunc" title="NcmFftlogFunc ()"><span class="type">NcmFftlogFunc</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p><em class="parameter"><code>Fk</code></em>
+user data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>reltol</p></td>
+<td class="parameter_description"><p>relative tolerance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fftlog-calibrate-size-gsl" id="ncm-fftlog-calibrate-size-gsl"></a><h3>ncm_fftlog_calibrate_size_gsl ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fftlog_calibrate_size_gsl (<em class="parameter"><code><a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a> *fftlog</code></em>,
+                               <em class="parameter"><code><span class="type">gsl_function</span> *Fk</code></em>,
+                               <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>);</pre>
 <p>Increases the original (input) number of knots until the $G(r)$ splines reach 
 the required precision <em class="parameter"><code>reltol</code></em>
 .</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="ncm-fftlog-calibrate-size.parameters" id="ncm-fftlog-calibrate-size.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fftlog-calibrate-size-gsl.parameters" id="ncm-fftlog-calibrate-size-gsl.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name" />

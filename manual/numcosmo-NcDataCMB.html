@@ -42,7 +42,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="numcosmo-NcDataCMB.top_of_page" id="numcosmo-NcDataCMB.top_of_page"></a>NcDataCMB</span></h2>
-<p>NcDataCMB — Helper function for instantiating CMB data.</p>
+<p>NcDataCMB — Helper function for instantiating CMB data</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -101,7 +101,7 @@
 <pre class="programlisting"><a class="link" href="NcmData.html" title="NcmData"><span class="returnvalue">NcmData</span></a> *
 nc_data_cmb_create (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                     <em class="parameter"><code><a class="link" href="numcosmo-NcDataCMB.html#NcDataCMBId" title="enum NcDataCMBId"><span class="type">NcDataCMBId</span></a> id</code></em>);</pre>
-<p>FIXME</p>
+<p>Creates a new <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> of type <a class="link" href="numcosmo-NcDataCMB.html#NcDataCMBId" title="enum NcDataCMBId"><span class="type">NcDataCMBId</span></a>.</p>
 <div class="refsect3">
 <a name="nc-data-cmb-create.parameters" id="nc-data-cmb-create.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -113,12 +113,12 @@ nc_data_cmb_create (<em class="parameter"><code><a class="link" href="NcDistance
 <tbody>
 <tr>
 <td class="parameter_name"><p>dist</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>id</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-NcDataCMB.html#NcDataCMBId" title="enum NcDataCMBId"><span class="type">NcDataCMBId</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -126,7 +126,7 @@ nc_data_cmb_create (<em class="parameter"><code><a class="link" href="NcDistance
 </div>
 <div class="refsect3">
 <a name="nc-data-cmb-create.returns" id="nc-data-cmb-create.returns"></a><h4>Returns</h4>
-<p> FIXME. </p>
+<p> a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
@@ -135,7 +135,10 @@ nc_data_cmb_create (<em class="parameter"><code><a class="link" href="NcDistance
 <a name="numcosmo-NcDataCMB.other_details" id="numcosmo-NcDataCMB.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
 <a name="NcDataCMBDataType" id="NcDataCMBDataType"></a><h3>enum NcDataCMBDataType</h3>
-<p>FIXME</p>
+<p>Each type corresponds to one CMB two-point correlation function data to be used:
+TT (temperature only), EE (E-mode only), BB (B-mode only), TE (temperature and E-mode polarization),
+TB (temperature and B-mode polarization), EB (E- and B-mode polarization) and $\phi\phi$ (CMB lensing).
+The last option `ALL' selects all data listed above.</p>
 <div class="refsect3">
 <a name="NcDataCMBDataType.members" id="NcDataCMBDataType.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -208,7 +211,14 @@ nc_data_cmb_create (<em class="parameter"><code><a class="link" href="NcDistance
 <hr />
 <div class="refsect2">
 <a name="NcDataCMBId" id="NcDataCMBId"></a><h3>enum NcDataCMBId</h3>
-<p>FIXME</p>
+<p>Wilkinson Microwave Anisotropy Probe (WMAP) distance priors and shift parameter estimates.</p>
+<p>The so-called distance priors comprises the location of the first acoustic peak $l_A$ 
+and the shift parameter $R$, that is,
+$$l_A \equiv (1 + z_\star) \frac{\pi D_A(z_\star)}{r_s(z_\star)}$$
+and
+$$R = \frac{\sqrt{\Omega_m H_0^2}}{c} (1 + z_\star) D_A(z_\star),$$
+where $z_\star$ is the redshift at decoupling, $D_A(z)$ is the angular diameter distance, and
+$r_s(z_\star)$ is the sound horizon size.</p>
 <div class="refsect3">
 <a name="NcDataCMBId.members" id="NcDataCMBId.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -221,42 +231,42 @@ nc_data_cmb_create (<em class="parameter"><code><a class="link" href="NcDistance
 <tr>
 <td class="enum_member_name"><p><a name="NC-DATA-CMB-SHIFT-PARAM-WMAP3:CAPS" id="NC-DATA-CMB-SHIFT-PARAM-WMAP3:CAPS"></a>NC_DATA_CMB_SHIFT_PARAM_WMAP3</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>three-year WMAP shift parameter</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NC-DATA-CMB-SHIFT-PARAM-WMAP5:CAPS" id="NC-DATA-CMB-SHIFT-PARAM-WMAP5:CAPS"></a>NC_DATA_CMB_SHIFT_PARAM_WMAP5</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>five-year WMAP shift parameter</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NC-DATA-CMB-SHIFT-PARAM-WMAP7:CAPS" id="NC-DATA-CMB-SHIFT-PARAM-WMAP7:CAPS"></a>NC_DATA_CMB_SHIFT_PARAM_WMAP7</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>seven-year WMAP shift parameter</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NC-DATA-CMB-DIST-PRIORS-WMAP5:CAPS" id="NC-DATA-CMB-DIST-PRIORS-WMAP5:CAPS"></a>NC_DATA_CMB_DIST_PRIORS_WMAP5</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>five-year WMAP distance priors</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NC-DATA-CMB-DIST-PRIORS-WMAP7:CAPS" id="NC-DATA-CMB-DIST-PRIORS-WMAP7:CAPS"></a>NC_DATA_CMB_DIST_PRIORS_WMAP7</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>seven-year WMAP distance priors</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NC-DATA-CMB-DIST-PRIORS-WMAP9:CAPS" id="NC-DATA-CMB-DIST-PRIORS-WMAP9:CAPS"></a>NC_DATA_CMB_DIST_PRIORS_WMAP9</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>nine-year WMAP distance priors</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
