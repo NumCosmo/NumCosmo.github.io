@@ -798,7 +798,14 @@
     <keyword type="function" name="ncm_matrix_set_identity ()" link="NcmMatrix.html#ncm-matrix-set-identity"/>
     <keyword type="function" name="ncm_matrix_set_zero ()" link="NcmMatrix.html#ncm-matrix-set-zero"/>
     <keyword type="function" name="ncm_matrix_set_all ()" link="NcmMatrix.html#ncm-matrix-set-all"/>
+    <keyword type="function" name="ncm_matrix_add ()" link="NcmMatrix.html#ncm-matrix-add"/>
+    <keyword type="function" name="ncm_matrix_sub ()" link="NcmMatrix.html#ncm-matrix-sub"/>
+    <keyword type="function" name="ncm_matrix_mul_elements ()" link="NcmMatrix.html#ncm-matrix-mul-elements"/>
+    <keyword type="function" name="ncm_matrix_div_elements ()" link="NcmMatrix.html#ncm-matrix-div-elements"/>
     <keyword type="function" name="ncm_matrix_scale ()" link="NcmMatrix.html#ncm-matrix-scale"/>
+    <keyword type="function" name="ncm_matrix_add_constant ()" link="NcmMatrix.html#ncm-matrix-add-constant"/>
+    <keyword type="function" name="ncm_matrix_mul_row ()" link="NcmMatrix.html#ncm-matrix-mul-row"/>
+    <keyword type="function" name="ncm_matrix_mul_col ()" link="NcmMatrix.html#ncm-matrix-mul-col"/>
     <keyword type="function" name="ncm_matrix_memcpy ()" link="NcmMatrix.html#ncm-matrix-memcpy"/>
     <keyword type="function" name="ncm_matrix_set_col ()" link="NcmMatrix.html#ncm-matrix-set-col"/>
     <keyword type="function" name="ncm_matrix_fast_get ()" link="NcmMatrix.html#ncm-matrix-fast-get"/>
@@ -821,6 +828,7 @@
     <keyword type="function" name="ncm_matrix_const_free ()" link="NcmMatrix.html#ncm-matrix-const-free"/>
     <keyword type="function" name="ncm_matrix_copy_triangle ()" link="NcmMatrix.html#ncm-matrix-copy-triangle"/>
     <keyword type="function" name="ncm_matrix_dsymm ()" link="NcmMatrix.html#ncm-matrix-dsymm"/>
+    <keyword type="function" name="ncm_matrix_dgemm ()" link="NcmMatrix.html#ncm-matrix-dgemm"/>
     <keyword type="function" name="ncm_matrix_cholesky_decomp ()" link="NcmMatrix.html#ncm-matrix-cholesky-decomp"/>
     <keyword type="function" name="ncm_matrix_cholesky_inverse ()" link="NcmMatrix.html#ncm-matrix-cholesky-inverse"/>
     <keyword type="function" name="ncm_matrix_log_vals ()" link="NcmMatrix.html#ncm-matrix-log-vals"/>
@@ -1827,6 +1835,7 @@
     <keyword type="function" name="ncm_reparam_linear_set_compat_type ()" link="NcmReparamLinear.html#ncm-reparam-linear-set-compat-type"/>
     <keyword type="property" name="The “matrix” property" link="NcmReparamLinear.html#NcmReparamLinear--matrix"/>
     <keyword type="property" name="The “vector” property" link="NcmReparamLinear.html#NcmReparamLinear--vector"/>
+    <keyword type="function" name="NcmDataFisherMatrix ()" link="NcmData.html#NcmDataFisherMatrix"/>
     <keyword type="function" name="ncm_data_ref ()" link="NcmData.html#ncm-data-ref"/>
     <keyword type="function" name="ncm_data_free ()" link="NcmData.html#ncm-data-free"/>
     <keyword type="function" name="ncm_data_clear ()" link="NcmData.html#ncm-data-clear"/>
@@ -1852,6 +1861,10 @@
     <keyword type="function" name="ncm_data_m2lnL_val ()" link="NcmData.html#ncm-data-m2lnL-val"/>
     <keyword type="function" name="ncm_data_m2lnL_grad ()" link="NcmData.html#ncm-data-m2lnL-grad"/>
     <keyword type="function" name="ncm_data_m2lnL_val_grad ()" link="NcmData.html#ncm-data-m2lnL-val-grad"/>
+    <keyword type="function" name="ncm_data_mean_vector ()" link="NcmData.html#ncm-data-mean-vector"/>
+    <keyword type="function" name="ncm_data_sigma_vector ()" link="NcmData.html#ncm-data-sigma-vector"/>
+    <keyword type="function" name="ncm_data_inv_cov_UH ()" link="NcmData.html#ncm-data-inv-cov-UH"/>
+    <keyword type="function" name="ncm_data_fisher_matrix ()" link="NcmData.html#ncm-data-fisher-matrix"/>
     <keyword type="struct" name="struct NcmDataClass" link="NcmData.html#NcmDataClass"/>
     <keyword type="macro" name="NCM_DATA_RESAMPLE_RNG_NAME" link="NcmData.html#NCM-DATA-RESAMPLE-RNG-NAME:CAPS"/>
     <keyword type="property" name="The “bootstrap” property" link="NcmData.html#NcmData--bootstrap"/>
@@ -1895,6 +1908,7 @@
     <keyword type="function" name="ncm_dataset_m2lnL_grad ()" link="NcmDataset.html#ncm-dataset-m2lnL-grad"/>
     <keyword type="function" name="ncm_dataset_m2lnL_val_grad ()" link="NcmDataset.html#ncm-dataset-m2lnL-val-grad"/>
     <keyword type="function" name="ncm_dataset_m2lnL_i_val ()" link="NcmDataset.html#ncm-dataset-m2lnL-i-val"/>
+    <keyword type="function" name="ncm_dataset_fisher_matrix ()" link="NcmDataset.html#ncm-dataset-fisher-matrix"/>
     <keyword type="enum" name="enum NcmDatasetBStrapType" link="NcmDataset.html#NcmDatasetBStrapType"/>
     <keyword type="struct" name="struct NcmDataset" link="NcmDataset.html#NcmDataset-struct"/>
     <keyword type="property" name="The “bootstrap-type” property" link="NcmDataset.html#NcmDataset--bootstrap-type"/>
@@ -2356,6 +2370,9 @@
     <keyword type="function" name="ncm_fit_ls_f_J_nd_fo ()" link="NcmFit.html#ncm-fit-ls-f-J-nd-fo"/>
     <keyword type="function" name="ncm_fit_ls_f_J_nd_ce ()" link="NcmFit.html#ncm-fit-ls-f-J-nd-ce"/>
     <keyword type="function" name="ncm_fit_ls_f_J_nd_ac ()" link="NcmFit.html#ncm-fit-ls-f-J-nd-ac"/>
+    <keyword type="function" name="ncm_fit_fisher_to_covar ()" link="NcmFit.html#ncm-fit-fisher-to-covar"/>
+    <keyword type="function" name="ncm_fit_obs_fisher ()" link="NcmFit.html#ncm-fit-obs-fisher"/>
+    <keyword type="function" name="ncm_fit_fisher ()" link="NcmFit.html#ncm-fit-fisher"/>
     <keyword type="function" name="ncm_fit_numdiff_m2lnL_hessian ()" link="NcmFit.html#ncm-fit-numdiff-m2lnL-hessian"/>
     <keyword type="function" name="ncm_fit_numdiff_m2lnL_covar ()" link="NcmFit.html#ncm-fit-numdiff-m2lnL-covar"/>
     <keyword type="function" name="ncm_fit_ls_covar ()" link="NcmFit.html#ncm-fit-ls-covar"/>
@@ -5913,6 +5930,9 @@
     <keyword type="member" name="NcmDataClass.m2lnL-val" link="NcmData.html#NcmDataClass.m2lnL-val"/>
     <keyword type="member" name="NcmDataClass.m2lnL-grad" link="NcmData.html#NcmDataClass.m2lnL-grad"/>
     <keyword type="member" name="NcmDataClass.m2lnL-val-grad" link="NcmData.html#NcmDataClass.m2lnL-val-grad"/>
+    <keyword type="member" name="NcmDataClass.mean-vector" link="NcmData.html#NcmDataClass.mean-vector"/>
+    <keyword type="member" name="NcmDataClass.inv-cov-UH" link="NcmData.html#NcmDataClass.inv-cov-UH"/>
+    <keyword type="member" name="NcmDataClass.fisher-matrix" link="NcmData.html#NcmDataClass.fisher-matrix"/>
     <keyword type="member" name="NcmLHRatio2dRegion-struct.np" link="NcmLHRatio2d.html#NcmLHRatio2dRegion-struct.np"/>
     <keyword type="member" name="NcmLHRatio2dRegion-struct.p1" link="NcmLHRatio2d.html#NcmLHRatio2dRegion-struct.p1"/>
     <keyword type="member" name="NcmLHRatio2dRegion-struct.p2" link="NcmLHRatio2d.html#NcmLHRatio2dRegion-struct.p2"/>

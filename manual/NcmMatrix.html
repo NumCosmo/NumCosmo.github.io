@@ -328,7 +328,63 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
+<a class="link" href="NcmMatrix.html#ncm-matrix-add" title="ncm_matrix_add ()">ncm_matrix_add</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMatrix.html#ncm-matrix-sub" title="ncm_matrix_sub ()">ncm_matrix_sub</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMatrix.html#ncm-matrix-mul-elements" title="ncm_matrix_mul_elements ()">ncm_matrix_mul_elements</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMatrix.html#ncm-matrix-div-elements" title="ncm_matrix_div_elements ()">ncm_matrix_div_elements</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
 <a class="link" href="NcmMatrix.html#ncm-matrix-scale" title="ncm_matrix_scale ()">ncm_matrix_scale</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMatrix.html#ncm-matrix-add-constant" title="ncm_matrix_add_constant ()">ncm_matrix_add_constant</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMatrix.html#ncm-matrix-mul-row" title="ncm_matrix_mul_row ()">ncm_matrix_mul_row</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMatrix.html#ncm-matrix-mul-col" title="ncm_matrix_mul_col ()">ncm_matrix_mul_col</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -503,6 +559,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="NcmMatrix.html#ncm-matrix-dsymm" title="ncm_matrix_dsymm ()">ncm_matrix_dsymm</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMatrix.html#ncm-matrix-dgemm" title="ncm_matrix_dgemm ()">ncm_matrix_dgemm</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -1816,6 +1880,138 @@ ncm_matrix_set_all (<em class="parameter"><code><a class="link" href="NcmMatrix.
 </div>
 <hr />
 <div class="refsect2">
+<a name="ncm-matrix-add" id="ncm-matrix-add"></a><h3>ncm_matrix_add ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_matrix_add (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm1</code></em>,
+                <em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm2</code></em>);</pre>
+<p>This function adds the elements of the matrices <em class="parameter"><code>cm1</code></em>
+ and <em class="parameter"><code>cm2</code></em>
+.
+The two matrices must have the same size.</p>
+<div class="refsect3">
+<a name="ncm-matrix-add.parameters" id="ncm-matrix-add.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cm1</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cm2</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-matrix-sub" id="ncm-matrix-sub"></a><h3>ncm_matrix_sub ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_matrix_sub (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm1</code></em>,
+                <em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm2</code></em>);</pre>
+<p>This function subtracts the elements of the matrices <em class="parameter"><code>cm1</code></em>
+ and <em class="parameter"><code>cm2</code></em>
+.
+The two matrices must have the same size.</p>
+<div class="refsect3">
+<a name="ncm-matrix-sub.parameters" id="ncm-matrix-sub.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cm1</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cm2</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-matrix-mul-elements" id="ncm-matrix-mul-elements"></a><h3>ncm_matrix_mul_elements ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_matrix_mul_elements (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm1</code></em>,
+                         <em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm2</code></em>);</pre>
+<p>This function multiplies the elements of the matrices <em class="parameter"><code>cm1</code></em>
+ and <em class="parameter"><code>cm2</code></em>
+.
+The two matrices must have the same size.</p>
+<div class="refsect3">
+<a name="ncm-matrix-mul-elements.parameters" id="ncm-matrix-mul-elements.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cm1</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cm2</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-matrix-div-elements" id="ncm-matrix-div-elements"></a><h3>ncm_matrix_div_elements ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_matrix_div_elements (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm1</code></em>,
+                         <em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm2</code></em>);</pre>
+<p>This function divides the elements of the matrices <em class="parameter"><code>cm1</code></em>
+ and <em class="parameter"><code>cm2</code></em>
+.
+The two matrices must have the same size.</p>
+<div class="refsect3">
+<a name="ncm-matrix-div-elements.parameters" id="ncm-matrix-div-elements.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cm1</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cm2</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
 <a name="ncm-matrix-scale" id="ncm-matrix-scale"></a><h3>ncm_matrix_scale ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_matrix_scale (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>,
@@ -1837,6 +2033,116 @@ The result is stored in <em class="parameter"><code>cm</code></em>
 <tr>
 <td class="parameter_name"><p>cm</p></td>
 <td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>val</p></td>
+<td class="parameter_description"><p>a double</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-matrix-add-constant" id="ncm-matrix-add-constant"></a><h3>ncm_matrix_add_constant ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_matrix_add_constant (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>,
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> val</code></em>);</pre>
+<p>This function adds the the constant factor <em class="parameter"><code>val</code></em>
+ to the elements of the matrix <em class="parameter"><code>cm</code></em>
+.
+The result is stored in <em class="parameter"><code>cm</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-matrix-add-constant.parameters" id="ncm-matrix-add-constant.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cm</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>val</p></td>
+<td class="parameter_description"><p>a double</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-matrix-mul-row" id="ncm-matrix-mul-row"></a><h3>ncm_matrix_mul_row ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_matrix_mul_row (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>,
+                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> row_i</code></em>,
+                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> val</code></em>);</pre>
+<p>This function multiplies row <em class="parameter"><code>row_i</code></em>
+ elements by <em class="parameter"><code>val</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-matrix-mul-row.parameters" id="ncm-matrix-mul-row.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cm</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>row_i</p></td>
+<td class="parameter_description"><p>row index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>val</p></td>
+<td class="parameter_description"><p>a double</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-matrix-mul-col" id="ncm-matrix-mul-col"></a><h3>ncm_matrix_mul_col ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_matrix_mul_col (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>,
+                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> col_i</code></em>,
+                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> val</code></em>);</pre>
+<p>This function multiplies column <em class="parameter"><code>col_i</code></em>
+ elements by <em class="parameter"><code>val</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-matrix-mul-col.parameters" id="ncm-matrix-mul-col.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cm</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>col_i</p></td>
+<td class="parameter_description"><p>column index</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -2474,9 +2780,9 @@ If <em class="parameter"><code>UL</code></em>
 ncm_matrix_dsymm (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>,
                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> UL</code></em>,
                   <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> alpha</code></em>,
-                  <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *b</code></em>,
-                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> beta</code></em>,
-                  <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *c</code></em>);</pre>
+                  <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *A</code></em>,
+                  <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *B</code></em>,
+                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> beta</code></em>);</pre>
 <p>FIXME</p>
 <div class="refsect3">
 <a name="ncm-matrix-dsymm.parameters" id="ncm-matrix-dsymm.parameters"></a><h4>Parameters</h4>
@@ -2499,22 +2805,82 @@ ncm_matrix_dsymm (<em class="parameter"><code><a class="link" href="NcmMatrix.ht
 </tr>
 <tr>
 <td class="parameter_name"><p>alpha</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>$\alpha$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
-<td class="parameter_name"><p>b</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_name"><p>A</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> $A$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>B</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> $B$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>beta</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>$\beta$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-matrix-dgemm" id="ncm-matrix-dgemm"></a><h3>ncm_matrix_dgemm ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_matrix_dgemm (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>,
+                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> TransA</code></em>,
+                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> TransB</code></em>,
+                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> alpha</code></em>,
+                  <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *A</code></em>,
+                  <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *B</code></em>,
+                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> beta</code></em>);</pre>
+<p>Calculates $C = \alpha\mathrm{op}(A)\mathrm{op}(B) + \beta C$.</p>
+<div class="refsect3">
+<a name="ncm-matrix-dgemm.parameters" id="ncm-matrix-dgemm.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cm</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> $C$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
-<td class="parameter_name"><p>c</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_name"><p>TransA</p></td>
+<td class="parameter_description"><p>char indicating 'T'ranspose or 'N'ot transposed matrix </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>TransB</p></td>
+<td class="parameter_description"><p>char indicating 'T'ranspose or 'N'ot transposed matrix </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>alpha</p></td>
+<td class="parameter_description"><p>$\alpha$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>A</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> $A$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>B</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> $B$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>beta</p></td>
+<td class="parameter_description"><p>$\beta$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
