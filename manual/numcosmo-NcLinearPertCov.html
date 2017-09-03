@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>NcLinearPertCov: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
-<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
-<link rel="up" href="ch07.html" title="Perturbations" />
-<link rel="prev" href="numcosmo-NcLinearPert.html" title="NcLinearPert" />
-<link rel="next" href="NcHIPert.html" title="NcHIPert" />
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
-<link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="container.css" type="text/css" />
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="NumCosmo Reference Manual">
+<link rel="up" href="ch07.html" title="Perturbations">
+<link rel="prev" href="numcosmo-NcLinearPert.html" title="NcLinearPert">
+<link rel="next" href="NcHIPert.html" title="NcHIPert">
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="container.css" type="text/css">
 <script type="text/x-mathjax-config">
 //<![CDATA[
                 MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
@@ -24,6 +23,18 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
 </script>
+
+<script type="text/javascript">
+//
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-36056599-1', 'auto');
+  ga('send', 'pageview');
+//
+</script>
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
 <table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
@@ -31,10 +42,10 @@
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
                   <a href="#numcosmo-NcLinearPertCov.description" class="shortcut">Description</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
-<td><a accesskey="u" href="ch07.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
-<td><a accesskey="p" href="numcosmo-NcLinearPert.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
-<td><a accesskey="n" href="NcHIPert.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch07.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="numcosmo-NcLinearPert.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="NcHIPert.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
 <a name="numcosmo-NcLinearPertCov" id="numcosmo-NcLinearPertCov"></a><div class="titlepage"></div>
@@ -47,14 +58,27 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="numcosmo-NcLinearPertCov.stability-level" id="numcosmo-NcLinearPertCov.stability-level"></a><h2>Stability Level</h2>
-<acronym title="Unstable interfaces are experimental or transitional. They are typically used to&#10;give outside developers early access to new or rapidly changing technology, or&#10;to provide an interim solution to a problem where a more general solution is&#10;anticipated. No claims are made about either source or binary compatibility from&#10;one minor release to the next.&#10;&#10;The Unstable interface level is a warning that these interfaces are  subject to&#10;change without warning and should not be used in unbundled products.&#10;&#10;Given such caveats, customer impact need not be a factor when considering&#10;incompatible changes to an Unstable interface in a major or minor release.&#10;Nonetheless, when such changes are introduced, the changes should still be&#10;mentioned in the release notes for the affected release.&#10;"><span class="acronym">Unstable</span></acronym>, unless otherwise indicated
+<acronym title="Unstable interfaces are experimental or transitional. They are typically used to
+give outside developers early access to new or rapidly changing technology, or
+to provide an interim solution to a problem where a more general solution is
+anticipated. No claims are made about either source or binary compatibility from
+one minor release to the next.
+
+The Unstable interface level is a warning that these interfaces are  subject to
+change without warning and should not be used in unbundled products.
+
+Given such caveats, customer impact need not be a factor when considering
+incompatible changes to an Unstable interface in a major or minor release.
+Nonetheless, when such changes are introduced, the changes should still be
+mentioned in the release notes for the affected release.
+"><span class="acronym">Unstable</span></acronym>, unless otherwise indicated
 </div>
 <div class="refsect1">
 <a name="numcosmo-NcLinearPertCov.functions" id="numcosmo-NcLinearPertCov.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_return">
+<col class="functions_name">
 </colgroup>
 <tbody><tr>
 <td class="function_type">
@@ -88,6 +112,6 @@ nc_pert_cov_direct (<em class="parameter"><code><a class="link" href="numcosmo-N
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.25.1</div>
+<hr>Generated by GTK-Doc V1.26.1</div>
 </div></div></body>
 </html>
