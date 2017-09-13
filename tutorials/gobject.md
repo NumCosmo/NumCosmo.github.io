@@ -19,7 +19,7 @@ description of this framework. For details see:
 
 The library is divided in two main name-spaces, **Ncm** (NumCosmoMath) where all
 generic mathematical and statistical objects and functions are defined, **Nc** 
-(NumCosmo) where all cosmological related object and function are defined.
+(NumCosmo) where all cosmological related objects and functions are defined.
 All types must be labeled using the 
 [camel-case](https://en.wikipedia.org/wiki/CamelCase), 
 and start with the respective name-space. For example, 
@@ -30,16 +30,16 @@ used for the abstract object defining homogeneous and isotropic models (HICosmo)
 
 ## Methods, functions and other names
 
-Functions and method must be lower case and the terms separated by underscores,
-e.g., a method of [**NcmSpline**]({% link manual/NcmSpline.html %}) must be called *ncm_spline_method_name*. It is 
+Functions and methods must be lower case and the terms separated by underscores,
+that is, a method of [**NcmSpline**]({% link manual/NcmSpline.html %}) must be called *ncm_spline_method_name*. It is 
 acceptable for the method_name to have upper case letters when necessary.
 For example, [*nc_hicosmo_Omega_m0*](/manual/NcHICosmo.html#nc-hicosmo-Omega-m0)
-uses the capital Omega to avoid confusion with lowercase omega_m0 which has
+uses the capital Omega to avoid confusion with lowercase omega_m0, which has
 a different meaning in the cosmological literature.
 
 Macros, enumerator and flags labels should be in uppercase and separated by 
 underscores. See for example [**NcHICosmoImpl**](/manual/NcHICosmo.html#NcHICosmoImpl)
-for a flag type. The flag type itself NcHICosmoImpl must be in camel-case
+for a flag type. The flag type itself, NcHICosmoImpl, must be in camel-case
 but its labels are underscore separated uppercase.
 
 A full example of a GObject implementation inside NumCosmo can be found
@@ -52,7 +52,7 @@ All objects must implement a set of functions, for example an object named
 
 - *nc_object_name_class_init*: the methods (virtual functions) and properties are
   defined here. This is the first function called when the object is
-  instantiated, and it this will be done just _once_ in the whole program lifetime.
+  instantiated, and it is done just _once_ in the whole program lifetime.
 
 - *nc_object_name_init*: this is the first function to be called when (and
   every time) a new instance is created. This function receives an 
