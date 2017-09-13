@@ -82,6 +82,7 @@
         <sub name="NcmDataGaussCov" link="NcmDataGaussCov.html"/>
         <sub name="NcmDataPoisson" link="NcmDataPoisson.html"/>
         <sub name="NcmDataDist1d" link="NcmDataDist1d.html"/>
+        <sub name="NcmDataDist2d" link="NcmDataDist2d.html"/>
       </sub>
       <sub name="Statistical Analysis" link="ch02s11.html">
         <sub name="NcmStatsVec" link="NcmStatsVec.html"/>
@@ -297,6 +298,7 @@
       <sub name="NcDataBaoRDV" link="NcDataBaoRDV.html"/>
       <sub name="NcDataBaoDVDV" link="NcDataBaoDVDV.html"/>
       <sub name="NcDataBaoEmpiricalFit" link="NcDataBaoEmpiricalFit.html"/>
+      <sub name="NcDataBaoEmpiricalFit2d" link="NcDataBaoEmpiricalFit2d.html"/>
       <sub name="NcDataBaoDHrDAr" link="NcDataBaoDHrDAr.html"/>
       <sub name="NcDataBaoDMrHr" link="NcDataBaoDMrHr.html"/>
       <sub name="NcDataSNIAId" link="numcosmo-NcDataSNIAId.html"/>
@@ -308,7 +310,7 @@
       <sub name="NcDataClusterCountsBoxPoisson" link="NcDataClusterCountsBoxPoisson.html"/>
       <sub name="NcDataPlanckLKL" link="NcDataPlanckLKL.html"/>
       <sub name="NcDataXcor" link="NcDataXcor.html"/>
-      <sub name="ABC analysis" link="ch09.html#id-1.10.24">
+      <sub name="ABC analysis" link="ch09.html#id-1.10.25">
         <sub name="NcABCClusterNCount" link="NcABCClusterNCount.html"/>
       </sub>
     </sub>
@@ -1961,6 +1963,11 @@
     <keyword type="function" name="ncm_data_dist1d_get_data ()" link="NcmDataDist1d.html#ncm-data-dist1d-get-data"/>
     <keyword type="property" name="The “n-points” property" link="NcmDataDist1d.html#NcmDataDist1d--n-points"/>
     <keyword type="property" name="The “vector” property" link="NcmDataDist1d.html#NcmDataDist1d--vector"/>
+    <keyword type="function" name="ncm_data_dist2d_set_size ()" link="NcmDataDist2d.html#ncm-data-dist2d-set-size"/>
+    <keyword type="function" name="ncm_data_dist2d_get_size ()" link="NcmDataDist2d.html#ncm-data-dist2d-get-size"/>
+    <keyword type="function" name="ncm_data_dist2d_get_data ()" link="NcmDataDist2d.html#ncm-data-dist2d-get-data"/>
+    <keyword type="property" name="The “matrix” property" link="NcmDataDist2d.html#NcmDataDist2d--matrix"/>
+    <keyword type="property" name="The “n-points” property" link="NcmDataDist2d.html#NcmDataDist2d--n-points"/>
     <keyword type="function" name="NcmStatsVecUpdateFunc ()" link="NcmStatsVec.html#NcmStatsVecUpdateFunc"/>
     <keyword type="function" name="ncm_stats_vec_new ()" link="NcmStatsVec.html#ncm-stats-vec-new"/>
     <keyword type="function" name="ncm_stats_vec_ref ()" link="NcmStatsVec.html#ncm-stats-vec-ref"/>
@@ -2808,6 +2815,8 @@
     <keyword type="function" name="nc_hicosmo_clear ()" link="NcHICosmo.html#nc-hicosmo-clear"/>
     <keyword type="function" name="nc_hicosmo_log_all_models ()" link="NcHICosmo.html#nc-hicosmo-log-all-models"/>
     <keyword type="function" name="nc_hicosmo_zt ()" link="NcHICosmo.html#nc-hicosmo-zt"/>
+    <keyword type="function" name="nc_hicosmo_mqE2_max ()" link="NcHICosmo.html#nc-hicosmo-mqE2-max"/>
+    <keyword type="function" name="nc_hicosmo_dec_min ()" link="NcHICosmo.html#nc-hicosmo-dec-min"/>
     <keyword type="function" name="nc_hicosmo_H0 ()" link="NcHICosmo.html#nc-hicosmo-H0"/>
     <keyword type="function" name="nc_hicosmo_RH_Mpc ()" link="NcHICosmo.html#nc-hicosmo-RH-Mpc"/>
     <keyword type="function" name="nc_hicosmo_RH_planck ()" link="NcHICosmo.html#nc-hicosmo-RH-planck"/>
@@ -3789,6 +3798,7 @@
     <keyword type="function" name="nc_distance_Omega_k0 ()" link="NcDistance.html#nc-distance-Omega-k0"/>
     <keyword type="function" name="nc_distance_angular_diameter_curvature_scale ()" link="NcDistance.html#nc-distance-angular-diameter-curvature-scale"/>
     <keyword type="function" name="nc_distance_r_zd ()" link="NcDistance.html#nc-distance-r-zd"/>
+    <keyword type="function" name="nc_distance_r_zd_Mpc ()" link="NcDistance.html#nc-distance-r-zd-Mpc"/>
     <keyword type="function" name="nc_distance_comoving ()" link="NcDistance.html#nc-distance-comoving"/>
     <keyword type="function" name="nc_distance_transverse ()" link="NcDistance.html#nc-distance-transverse"/>
     <keyword type="function" name="nc_distance_dtransverse_dz ()" link="NcDistance.html#nc-distance-dtransverse-dz"/>
@@ -5034,6 +5044,18 @@
     <keyword type="property" name="The “m2lnp” property" link="NcDataBaoEmpiricalFit.html#NcDataBaoEmpiricalFit--m2lnp"/>
     <keyword type="property" name="The “rs-fiduc” property" link="NcDataBaoEmpiricalFit.html#NcDataBaoEmpiricalFit--rs-fiduc"/>
     <keyword type="property" name="The “z” property" link="NcDataBaoEmpiricalFit.html#NcDataBaoEmpiricalFit--z"/>
+    <keyword type="function" name="nc_data_bao_empirical_fit_2d_new ()" link="NcDataBaoEmpiricalFit2d.html#nc-data-bao-empirical-fit-2d-new"/>
+    <keyword type="function" name="nc_data_bao_empirical_fit_2d_new_from_file ()" link="NcDataBaoEmpiricalFit2d.html#nc-data-bao-empirical-fit-2d-new-from-file"/>
+    <keyword type="function" name="nc_data_bao_empirical_fit_2d_new_from_id ()" link="NcDataBaoEmpiricalFit2d.html#nc-data-bao-empirical-fit-2d-new-from-id"/>
+    <keyword type="function" name="nc_data_bao_empirical_fit_2d_get_mode ()" link="NcDataBaoEmpiricalFit2d.html#nc-data-bao-empirical-fit-2d-get-mode"/>
+    <keyword type="function" name="nc_data_bao_empirical_fit_2d_get_alpha_perpendicular ()" link="NcDataBaoEmpiricalFit2d.html#nc-data-bao-empirical-fit-2d-get-alpha-perpendicular"/>
+    <keyword type="function" name="nc_data_bao_empirical_fit_2d_get_alpha_parallel ()" link="NcDataBaoEmpiricalFit2d.html#nc-data-bao-empirical-fit-2d-get-alpha-parallel"/>
+    <keyword type="function" name="nc_data_bao_empirical_fit_2d_set_dist ()" link="NcDataBaoEmpiricalFit2d.html#nc-data-bao-empirical-fit-2d-set-dist"/>
+    <keyword type="property" name="The “Dh-rd-fiduc” property" link="NcDataBaoEmpiricalFit2d.html#NcDataBaoEmpiricalFit2d--Dh-rd-fiduc"/>
+    <keyword type="property" name="The “Dt-rd-fiduc” property" link="NcDataBaoEmpiricalFit2d.html#NcDataBaoEmpiricalFit2d--Dt-rd-fiduc"/>
+    <keyword type="property" name="The “dist” property" link="NcDataBaoEmpiricalFit2d.html#NcDataBaoEmpiricalFit2d--dist"/>
+    <keyword type="property" name="The “m2lnp” property" link="NcDataBaoEmpiricalFit2d.html#NcDataBaoEmpiricalFit2d--m2lnp"/>
+    <keyword type="property" name="The “z” property" link="NcDataBaoEmpiricalFit2d.html#NcDataBaoEmpiricalFit2d--z"/>
     <keyword type="function" name="nc_data_bao_dhr_dar_new_from_file ()" link="NcDataBaoDHrDAr.html#nc-data-bao-dhr-dar-new-from-file"/>
     <keyword type="function" name="nc_data_bao_dhr_dar_new_from_id ()" link="NcDataBaoDHrDAr.html#nc-data-bao-dhr-dar-new-from-id"/>
     <keyword type="function" name="nc_data_bao_dhr_dar_set_dist ()" link="NcDataBaoDHrDAr.html#nc-data-bao-dhr-dar-set-dist"/>
@@ -5873,6 +5895,7 @@
     <keyword type="constant" name="NC_DATA_BAO_RDV_KAZIN2014" link="numcosmo-NcDataBao.html#NC-DATA-BAO-RDV-KAZIN2014:CAPS"/>
     <keyword type="constant" name="NC_DATA_BAO_RDV_BOSS_QSO_ATA2017" link="numcosmo-NcDataBao.html#NC-DATA-BAO-RDV-BOSS-QSO-ATA2017:CAPS"/>
     <keyword type="constant" name="NC_DATA_BAO_EMPIRICAL_FIT_ROSS2015" link="numcosmo-NcDataBao.html#NC-DATA-BAO-EMPIRICAL-FIT-ROSS2015:CAPS"/>
+    <keyword type="constant" name="NC_DATA_BAO_EMPIRICAL_FIT_2D_BAUTISTA2017" link="numcosmo-NcDataBao.html#NC-DATA-BAO-EMPIRICAL-FIT-2D-BAUTISTA2017:CAPS"/>
     <keyword type="constant" name="NC_DATA_BAO_DHR_DAR_SDSS_DR11_2015" link="numcosmo-NcDataBao.html#NC-DATA-BAO-DHR-DAR-SDSS-DR11-2015:CAPS"/>
     <keyword type="constant" name="NC_DATA_BAO_DHR_DAR_SDSS_DR11_2015_LYAF_AUTO_CROSS" link="numcosmo-NcDataBao.html#NC-DATA-BAO-DHR-DAR-SDSS-DR11-2015-LYAF-AUTO-CROSS:CAPS"/>
     <keyword type="constant" name="NC_DATA_BAO_DMR_HR_SDSS_DR12_2016" link="numcosmo-NcDataBao.html#NC-DATA-BAO-DMR-HR-SDSS-DR12-2016:CAPS"/>

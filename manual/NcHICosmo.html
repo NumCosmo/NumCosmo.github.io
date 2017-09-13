@@ -24,7 +24,8 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
 </script>
-<script>
+
+<script type="text/javascript">
 //<![CDATA[
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -455,6 +456,22 @@
 </td>
 <td class="function_name">
 <a class="link" href="NcHICosmo.html#nc-hicosmo-zt" title="nc_hicosmo_zt ()">nc_hicosmo_zt</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHICosmo.html#nc-hicosmo-mqE2-max" title="nc_hicosmo_mqE2_max ()">nc_hicosmo_mqE2_max</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHICosmo.html#nc-hicosmo-dec-min" title="nc_hicosmo_dec_min ()">nc_hicosmo_dec_min</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -2485,6 +2502,92 @@ the function returns NAN.</p>
 <div class="refsect3">
 <a name="nc-hicosmo-zt.returns" id="nc-hicosmo-zt.returns"></a><h4>Returns</h4>
 <p> the transition redshift $z_t$ or NAN if not found.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hicosmo-mqE2-max" id="nc-hicosmo-mqE2-max"></a><h3>nc_hicosmo_mqE2_max ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hicosmo_mqE2_max (<em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z_max</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *zm</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *mqE2m</code></em>);</pre>
+<p>Computes the maximum of $-qE^2$ in the redshift interval: $[0.0, <em class="parameter"><code>z_max</code></em>
+]$.</p>
+<div class="refsect3">
+<a name="nc-hicosmo-mqE2-max.parameters" id="nc-hicosmo-mqE2-max.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z_max</p></td>
+<td class="parameter_description"><p>maximum redshift $z_\mathrm{max}$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zm</p></td>
+<td class="parameter_description"><p>redshift of the maximum $z_m$. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mqE2m</p></td>
+<td class="parameter_description"><p>$-q(z_m)E^2(z_m)$redshift of the maximum. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hicosmo-dec-min" id="nc-hicosmo-dec-min"></a><h3>nc_hicosmo_dec_min ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hicosmo_dec_min (<em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z_max</code></em>,
+                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *zm</code></em>,
+                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *mqE2m</code></em>);</pre>
+<p>Computes the maximum of dec (<a class="link" href="NcHICosmo.html#nc-hicosmo-dec" title="nc_hicosmo_dec ()"><code class="function">nc_hicosmo_dec()</code></a>) in the redshift interval: $[0.0, <em class="parameter"><code>z_max</code></em>
+]$.</p>
+<div class="refsect3">
+<a name="nc-hicosmo-dec-min.parameters" id="nc-hicosmo-dec-min.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z_max</p></td>
+<td class="parameter_description"><p>maximum redshift $z_\mathrm{max}$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zm</p></td>
+<td class="parameter_description"><p>redshift of the maximum $z_m$. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mqE2m</p></td>
+<td class="parameter_description"><p>$-q(z_m)E^2(z_m)$redshift of the maximum. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
 </div>
 </div>
 <hr />

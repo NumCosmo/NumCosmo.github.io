@@ -24,7 +24,8 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
 </script>
-<script>
+
+<script type="text/javascript">
 //<![CDATA[
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -224,6 +225,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="NcDistance.html#nc-distance-r-zd" title="nc_distance_r_zd ()">nc_distance_r_zd</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcDistance.html#nc-distance-r-zd-Mpc" title="nc_distance_r_zd_Mpc ()">nc_distance_r_zd_Mpc</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -1028,6 +1037,40 @@ nc_distance_r_zd (<em class="parameter"><code><a class="link" href="NcDistance.h
 </div>
 <hr />
 <div class="refsect2">
+<a name="nc-distance-r-zd-Mpc" id="nc-distance-r-zd-Mpc"></a><h3>nc_distance_r_zd_Mpc ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_distance_r_zd_Mpc (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
+                      <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
+<p>$r (z_d) R_H\, [\mathrm{Mpc}]$.</p>
+<div class="refsect3">
+<a name="nc-distance-r-zd-Mpc.parameters" id="nc-distance-r-zd-Mpc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dist</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-distance-r-zd-Mpc.returns" id="nc-distance-r-zd-Mpc.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
 <a name="nc-distance-comoving" id="nc-distance-comoving"></a><h3>nc_distance_comoving ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_comoving (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
@@ -1635,7 +1678,8 @@ nc_distance_bao_r_Dv (<em class="parameter"><code><a class="link" href="NcDistan
 nc_distance_DH_r (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                   <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
-<p>$H(z) / (c r_{z_d})$.</p>
+<p>Computes the ratio between the Hubble (distance) radius and the sound horizon at the drag epoch, 
+$$\frac{R_H}{r_s(z_d)} = c / (H(z) r_d).$$</p>
 <div class="refsect3">
 <a name="nc-distance-DH-r.parameters" id="nc-distance-DH-r.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1665,7 +1709,7 @@ nc_distance_DH_r (<em class="parameter"><code><a class="link" href="NcDistance.h
 </div>
 <div class="refsect3">
 <a name="nc-distance-DH-r.returns" id="nc-distance-DH-r.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> $R_H/r_d = c / (H(z) r_d)$</p>
 </div>
 </div>
 <hr />
@@ -1675,7 +1719,7 @@ nc_distance_DH_r (<em class="parameter"><code><a class="link" href="NcDistance.h
 nc_distance_DA_r (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                   <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
-<p>$D_A(z) / (c r_{z_d})$.</p>
+<p>Computes the ratio between the angular-diameter distance and the sound horizon at the drag epoch, $$D_A(z) / (c r_s(z_d)).$$</p>
 <div class="refsect3">
 <a name="nc-distance-DA-r.parameters" id="nc-distance-DA-r.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1705,7 +1749,7 @@ nc_distance_DA_r (<em class="parameter"><code><a class="link" href="NcDistance.h
 </div>
 <div class="refsect3">
 <a name="nc-distance-DA-r.returns" id="nc-distance-DA-r.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> $D_A(z) / (c r_d)$</p>
 </div>
 </div>
 <hr />
