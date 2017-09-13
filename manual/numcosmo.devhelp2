@@ -281,6 +281,9 @@
       <sub name="NcClusterAbundance" link="NcClusterAbundance.html"/>
       <sub name="NcClusterPseudoCounts" link="NcClusterPseudoCounts.html"/>
       <sub name="NcCorClusterCmbLensLimber" link="NcCorClusterCmbLensLimber.html"/>
+      <sub name="Weak Lensing" link="ch08s10.html">
+        <sub name="NcWLSurfaceMassDensity" link="NcWLSurfaceMassDensity.html"/>
+      </sub>
     </sub>
     <sub name="Cosmological Data" link="ch09.html">
       <sub name="NcDataCMB" link="numcosmo-NcDataCMB.html"/>
@@ -1088,7 +1091,10 @@
     <keyword type="function" name="ncm_fftlog_set_size ()" link="NcmFftlog.html#ncm-fftlog-set-size"/>
     <keyword type="function" name="ncm_fftlog_set_padding ()" link="NcmFftlog.html#ncm-fftlog-set-padding"/>
     <keyword type="function" name="ncm_fftlog_get_padding ()" link="NcmFftlog.html#ncm-fftlog-get-padding"/>
+    <keyword type="function" name="ncm_fftlog_set_noring ()" link="NcmFftlog.html#ncm-fftlog-set-noring"/>
+    <keyword type="function" name="ncm_fftlog_get_noring ()" link="NcmFftlog.html#ncm-fftlog-get-noring"/>
     <keyword type="function" name="ncm_fftlog_set_length ()" link="NcmFftlog.html#ncm-fftlog-set-length"/>
+    <keyword type="function" name="ncm_fftlog_get_lnk_vector ()" link="NcmFftlog.html#ncm-fftlog-get-lnk-vector"/>
     <keyword type="function" name="ncm_fftlog_eval_by_vector ()" link="NcmFftlog.html#ncm-fftlog-eval-by-vector"/>
     <keyword type="function" name="ncm_fftlog_eval_by_function ()" link="NcmFftlog.html#ncm-fftlog-eval-by-function"/>
     <keyword type="function" name="ncm_fftlog_eval_by_gsl_function ()" link="NcmFftlog.html#ncm-fftlog-eval-by-gsl-function"/>
@@ -1105,6 +1111,7 @@
     <keyword type="function" name="ncm_fftlog_get_length ()" link="NcmFftlog.html#ncm-fftlog-get-length"/>
     <keyword type="function" name="ncm_fftlog_get_full_length ()" link="NcmFftlog.html#ncm-fftlog-get-full-length"/>
     <keyword type="function" name="ncm_fftlog_get_mode_index ()" link="NcmFftlog.html#ncm-fftlog-get-mode-index"/>
+    <keyword type="function" name="ncm_fftlog_get_array_index ()" link="NcmFftlog.html#ncm-fftlog-get-array-index"/>
     <keyword type="function" name="ncm_fftlog_peek_output_vector ()" link="NcmFftlog.html#ncm-fftlog-peek-output-vector"/>
     <keyword type="property" name="The “Lk” property" link="NcmFftlog.html#NcmFftlog--Lk"/>
     <keyword type="property" name="The “N” property" link="NcmFftlog.html#NcmFftlog--N"/>
@@ -1112,13 +1119,17 @@
     <keyword type="property" name="The “lnr0” property" link="NcmFftlog.html#NcmFftlog--lnr0"/>
     <keyword type="property" name="The “name” property" link="NcmFftlog.html#NcmFftlog--name"/>
     <keyword type="property" name="The “nderivs” property" link="NcmFftlog.html#NcmFftlog--nderivs"/>
+    <keyword type="property" name="The “no-ringing” property" link="NcmFftlog.html#NcmFftlog--no-ringing"/>
     <keyword type="property" name="The “padding” property" link="NcmFftlog.html#NcmFftlog--padding"/>
     <keyword type="function" name="ncm_fftlog_sbessel_j_new ()" link="NcmFftlogSBesselJ.html#ncm-fftlog-sbessel-j-new"/>
     <keyword type="function" name="ncm_fftlog_sbessel_j_set_ell ()" link="NcmFftlogSBesselJ.html#ncm-fftlog-sbessel-j-set-ell"/>
     <keyword type="function" name="ncm_fftlog_sbessel_j_get_ell ()" link="NcmFftlogSBesselJ.html#ncm-fftlog-sbessel-j-get-ell"/>
+    <keyword type="function" name="ncm_fftlog_sbessel_j_set_q ()" link="NcmFftlogSBesselJ.html#ncm-fftlog-sbessel-j-set-q"/>
+    <keyword type="function" name="ncm_fftlog_sbessel_j_get_q ()" link="NcmFftlogSBesselJ.html#ncm-fftlog-sbessel-j-get-q"/>
     <keyword type="function" name="ncm_fftlog_sbessel_j_set_best_lnr0 ()" link="NcmFftlogSBesselJ.html#ncm-fftlog-sbessel-j-set-best-lnr0"/>
     <keyword type="function" name="ncm_fftlog_sbessel_j_set_best_lnk0 ()" link="NcmFftlogSBesselJ.html#ncm-fftlog-sbessel-j-set-best-lnk0"/>
     <keyword type="property" name="The “ell” property" link="NcmFftlogSBesselJ.html#NcmFftlogSBesselJ--ell"/>
+    <keyword type="property" name="The “q” property" link="NcmFftlogSBesselJ.html#NcmFftlogSBesselJ--q"/>
     <keyword type="function" name="ncm_fftlog_tophatwin2_new ()" link="NcmFftlogTophatwin2.html#ncm-fftlog-tophatwin2-new"/>
     <keyword type="function" name="ncm_fftlog_gausswin2_new ()" link="NcmFftlogGausswin2.html#ncm-fftlog-gausswin2-new"/>
     <keyword type="function" name="ncm_spline_copy_empty ()" link="NcmSpline.html#ncm-spline-copy-empty"/>
@@ -1183,6 +1194,7 @@
     <keyword type="function" name="ncm_ode_spline_set_xi ()" link="NcmOdeSpline.html#ncm-ode-spline-set-xi"/>
     <keyword type="function" name="ncm_ode_spline_set_xf ()" link="NcmOdeSpline.html#ncm-ode-spline-set-xf"/>
     <keyword type="function" name="ncm_ode_spline_set_yi ()" link="NcmOdeSpline.html#ncm-ode-spline-set-yi"/>
+    <keyword type="function" name="ncm_ode_spline_set_yf ()" link="NcmOdeSpline.html#ncm-ode-spline-set-yf"/>
     <keyword type="macro" name="NCM_ODE_SPLINE_DEFAULT_RELTOL" link="NcmOdeSpline.html#NCM-ODE-SPLINE-DEFAULT-RELTOL:CAPS"/>
     <keyword type="macro" name="NCM_ODE_SPLINE_DEFAULT_ABSTOL" link="NcmOdeSpline.html#NCM-ODE-SPLINE-DEFAULT-ABSTOL:CAPS"/>
     <keyword type="macro" name="NCM_ODE_SPLINE_MIN_STEP" link="NcmOdeSpline.html#NCM-ODE-SPLINE-MIN-STEP:CAPS"/>
@@ -1193,6 +1205,7 @@
     <keyword type="property" name="The “stop-hnil” property" link="NcmOdeSpline.html#NcmOdeSpline--stop-hnil"/>
     <keyword type="property" name="The “xf” property" link="NcmOdeSpline.html#NcmOdeSpline--xf"/>
     <keyword type="property" name="The “xi” property" link="NcmOdeSpline.html#NcmOdeSpline--xi"/>
+    <keyword type="property" name="The “yf” property" link="NcmOdeSpline.html#NcmOdeSpline--yf"/>
     <keyword type="property" name="The “yi” property" link="NcmOdeSpline.html#NcmOdeSpline--yi"/>
     <keyword type="function" name="ncm_spline2d_set ()" link="NcmSpline2d.html#ncm-spline2d-set"/>
     <keyword type="function" name="ncm_spline2d_set_function ()" link="NcmSpline2d.html#ncm-spline2d-set-function"/>
@@ -2004,6 +2017,8 @@
     <keyword type="function" name="ncm_stats_dist1d_free ()" link="NcmStatsDist1d.html#ncm-stats-dist1d-free"/>
     <keyword type="function" name="ncm_stats_dist1d_clear ()" link="NcmStatsDist1d.html#ncm-stats-dist1d-clear"/>
     <keyword type="function" name="ncm_stats_dist1d_prepare ()" link="NcmStatsDist1d.html#ncm-stats-dist1d-prepare"/>
+    <keyword type="function" name="ncm_stats_dist1d_get_xi ()" link="NcmStatsDist1d.html#ncm-stats-dist1d-get-xi"/>
+    <keyword type="function" name="ncm_stats_dist1d_get_xf ()" link="NcmStatsDist1d.html#ncm-stats-dist1d-get-xf"/>
     <keyword type="function" name="ncm_stats_dist1d_eval_p ()" link="NcmStatsDist1d.html#ncm-stats-dist1d-eval-p"/>
     <keyword type="function" name="ncm_stats_dist1d_eval_m2lnp ()" link="NcmStatsDist1d.html#ncm-stats-dist1d-eval-m2lnp"/>
     <keyword type="function" name="ncm_stats_dist1d_eval_pdf ()" link="NcmStatsDist1d.html#ncm-stats-dist1d-eval-pdf"/>
@@ -2040,12 +2055,18 @@
     <keyword type="function" name="ncm_stats_dist2d_free ()" link="NcmStatsDist2d.html#ncm-stats-dist2d-free"/>
     <keyword type="function" name="ncm_stats_dist2d_clear ()" link="NcmStatsDist2d.html#ncm-stats-dist2d-clear"/>
     <keyword type="function" name="ncm_stats_dist2d_prepare ()" link="NcmStatsDist2d.html#ncm-stats-dist2d-prepare"/>
+    <keyword type="function" name="ncm_stats_dist2d_xbounds ()" link="NcmStatsDist2d.html#ncm-stats-dist2d-xbounds"/>
+    <keyword type="function" name="ncm_stats_dist2d_ybounds ()" link="NcmStatsDist2d.html#ncm-stats-dist2d-ybounds"/>
     <keyword type="function" name="ncm_stats_dist2d_eval_pdf ()" link="NcmStatsDist2d.html#ncm-stats-dist2d-eval-pdf"/>
-    <keyword type="function" name="ncm_stats_dist2d_eval_m2lnL ()" link="NcmStatsDist2d.html#ncm-stats-dist2d-eval-m2lnL"/>
+    <keyword type="function" name="ncm_stats_dist2d_eval_m2lnp ()" link="NcmStatsDist2d.html#ncm-stats-dist2d-eval-m2lnp"/>
     <keyword type="function" name="ncm_stats_dist2d_eval_cdf ()" link="NcmStatsDist2d.html#ncm-stats-dist2d-eval-cdf"/>
-    <keyword type="function" name="ncm_stats_dist2d_eval_inv_pdf ()" link="NcmStatsDist2d.html#ncm-stats-dist2d-eval-inv-pdf"/>
+    <keyword type="function" name="ncm_stats_dist2d_eval_marginal_pdf ()" link="NcmStatsDist2d.html#ncm-stats-dist2d-eval-marginal-pdf"/>
+    <keyword type="function" name="ncm_stats_dist2d_eval_marginal_cdf ()" link="NcmStatsDist2d.html#ncm-stats-dist2d-eval-marginal-cdf"/>
+    <keyword type="function" name="ncm_stats_dist2d_eval_marginal_inv_cdf ()" link="NcmStatsDist2d.html#ncm-stats-dist2d-eval-marginal-inv-cdf"/>
+    <keyword type="function" name="ncm_stats_dist2d_eval_inv_cond ()" link="NcmStatsDist2d.html#ncm-stats-dist2d-eval-inv-cond"/>
     <keyword type="function" name="ncm_stats_dist2d_spline_new ()" link="NcmStatsDist2dSpline.html#ncm-stats-dist2d-spline-new"/>
-    <keyword type="property" name="The “m2lnL” property" link="NcmStatsDist2dSpline.html#NcmStatsDist2dSpline--m2lnL"/>
+    <keyword type="property" name="The “m2lnp” property" link="NcmStatsDist2dSpline.html#NcmStatsDist2dSpline--m2lnp"/>
+    <keyword type="property" name="The “marginal-x” property" link="NcmStatsDist2dSpline.html#NcmStatsDist2dSpline--marginal-x"/>
     <keyword type="function" name="ncm_bootstrap_new ()" link="NcmBootstrap.html#ncm-bootstrap-new"/>
     <keyword type="function" name="ncm_bootstrap_sized_new ()" link="NcmBootstrap.html#ncm-bootstrap-sized-new"/>
     <keyword type="function" name="ncm_bootstrap_full_new ()" link="NcmBootstrap.html#ncm-bootstrap-full-new"/>
@@ -4029,7 +4050,6 @@
     <keyword type="function" name="nc_hipert_adiab_ref ()" link="NcHIPertAdiab.html#nc-hipert-adiab-ref"/>
     <keyword type="function" name="nc_hipert_adiab_free ()" link="NcHIPertAdiab.html#nc-hipert-adiab-free"/>
     <keyword type="function" name="nc_hipert_adiab_clear ()" link="NcHIPertAdiab.html#nc-hipert-adiab-clear"/>
-    <keyword type="struct" name="struct NcHIPertIAdiabInterface" link="NcHIPertAdiab.html#NcHIPertIAdiabInterface"/>
     <keyword type="enum" name="enum NcHIPertAdiabVars" link="NcHIPertAdiab.html#NcHIPertAdiabVars"/>
     <keyword type="function" name="nc_hipert_igw_eval_mnu ()" link="NcHIPertGW.html#nc-hipert-igw-eval-mnu"/>
     <keyword type="function" name="nc_hipert_igw_eval_nu ()" link="NcHIPertGW.html#nc-hipert-igw-eval-nu"/>
@@ -4045,7 +4065,6 @@
     <keyword type="function" name="nc_hipert_gw_ref ()" link="NcHIPertGW.html#nc-hipert-gw-ref"/>
     <keyword type="function" name="nc_hipert_gw_free ()" link="NcHIPertGW.html#nc-hipert-gw-free"/>
     <keyword type="function" name="nc_hipert_gw_clear ()" link="NcHIPertGW.html#nc-hipert-gw-clear"/>
-    <keyword type="struct" name="struct NcHIPertIGWInterface" link="NcHIPertGW.html#NcHIPertIGWInterface"/>
     <keyword type="enum" name="enum NcHIPertGWVars" link="NcHIPertGW.html#NcHIPertGWVars"/>
     <keyword type="function" name="nc_hipert_two_fluids_new ()" link="NcHIPertTwoFluids.html#nc-hipert-two-fluids-new"/>
     <keyword type="function" name="nc_hipert_two_fluids_ref ()" link="NcHIPertTwoFluids.html#nc-hipert-two-fluids-ref"/>
@@ -4349,7 +4368,6 @@
     <keyword type="function" name="nc_hipert_itwo_fluids_tv_free ()" link="NcHIPertITwoFluids.html#nc-hipert-itwo-fluids-tv-free"/>
     <keyword type="function" name="nc_hipert_itwo_fluids_eom_eval ()" link="NcHIPertITwoFluids.html#nc-hipert-itwo-fluids-eom-eval"/>
     <keyword type="function" name="nc_hipert_itwo_fluids_tv_eval ()" link="NcHIPertITwoFluids.html#nc-hipert-itwo-fluids-tv-eval"/>
-    <keyword type="struct" name="struct NcHIPertITwoFluidsInterface" link="NcHIPertITwoFluids.html#NcHIPertITwoFluidsInterface"/>
     <keyword type="struct" name="struct NcHIPertITwoFluidsEOM" link="NcHIPertITwoFluids.html#NcHIPertITwoFluidsEOM-struct"/>
     <keyword type="enum" name="enum NcHIPertITwoFluidsVars" link="NcHIPertITwoFluids.html#NcHIPertITwoFluidsVars"/>
     <keyword type="macro" name="NC_HIPERT_ITWO_FLUIDS_VARS_Q_R1" link="NcHIPertITwoFluids.html#NC-HIPERT-ITWO-FLUIDS-VARS-Q-R1:CAPS"/>
@@ -4433,10 +4451,23 @@
     <keyword type="property" name="The “use-pkequal” property" link="NcPowspecMNLHaloFit.html#NcPowspecMNLHaloFit--use-pkequal"/>
     <keyword type="property" name="The “zmaxnl” property" link="NcPowspecMNLHaloFit.html#NcPowspecMNLHaloFit--zmaxnl"/>
     <keyword type="function" name="nc_density_profile_new_from_name ()" link="NcDensityProfile.html#nc-density-profile-new-from-name"/>
-    <keyword type="function" name="nc_density_profile_eval_fourier ()" link="NcDensityProfile.html#nc-density-profile-eval-fourier"/>
+    <keyword type="function" name="nc_density_profile_ref ()" link="NcDensityProfile.html#nc-density-profile-ref"/>
     <keyword type="function" name="nc_density_profile_free ()" link="NcDensityProfile.html#nc-density-profile-free"/>
     <keyword type="function" name="nc_density_profile_clear ()" link="NcDensityProfile.html#nc-density-profile-clear"/>
+    <keyword type="function" name="nc_density_profile_eval_density ()" link="NcDensityProfile.html#nc-density-profile-eval-density"/>
+    <keyword type="function" name="nc_density_profile_integral_density_los ()" link="NcDensityProfile.html#nc-density-profile-integral-density-los"/>
+    <keyword type="function" name="nc_density_profile_integral_density_2d ()" link="NcDensityProfile.html#nc-density-profile-integral-density-2d"/>
+    <keyword type="function" name="nc_density_profile_eval_fourier ()" link="NcDensityProfile.html#nc-density-profile-eval-fourier"/>
     <keyword type="function" name="nc_density_profile_nfw_new ()" link="NcDensityProfileNFW.html#nc-density-profile-nfw-new"/>
+    <keyword type="enum" name="enum NcDensityProfileNFWParams" link="NcDensityProfileNFW.html#NcDensityProfileNFWParams"/>
+    <keyword type="macro" name="NC_DENSITY_PROFILE_NFW_DEFAULT_C_DELTA" link="NcDensityProfileNFW.html#NC-DENSITY-PROFILE-NFW-DEFAULT-C-DELTA:CAPS"/>
+    <keyword type="macro" name="NC_DENSITY_PROFILE_NFW_DEFAULT_M_DELTA" link="NcDensityProfileNFW.html#NC-DENSITY-PROFILE-NFW-DEFAULT-M-DELTA:CAPS"/>
+    <keyword type="macro" name="NC_DENSITY_PROFILE_NFW_DEFAULT_PARAMS_ABSTOL" link="NcDensityProfileNFW.html#NC-DENSITY-PROFILE-NFW-DEFAULT-PARAMS-ABSTOL:CAPS"/>
+    <keyword type="property" name="The “Delta” property" link="NcDensityProfileNFW.html#NcDensityProfileNFW--Delta"/>
+    <keyword type="property" name="The “MDelta” property" link="NcDensityProfileNFW.html#NcDensityProfileNFW--MDelta"/>
+    <keyword type="property" name="The “MDelta-fit” property" link="NcDensityProfileNFW.html#NcDensityProfileNFW--MDelta-fit"/>
+    <keyword type="property" name="The “cDelta” property" link="NcDensityProfileNFW.html#NcDensityProfileNFW--cDelta"/>
+    <keyword type="property" name="The “cDelta-fit” property" link="NcDensityProfileNFW.html#NcDensityProfileNFW--cDelta-fit"/>
     <keyword type="function" name="nc_multiplicity_func_new_from_name ()" link="NcMultiplicityFunc.html#nc-multiplicity-func-new-from-name"/>
     <keyword type="function" name="nc_multiplicity_func_eval ()" link="NcMultiplicityFunc.html#nc-multiplicity-func-eval"/>
     <keyword type="function" name="nc_multiplicity_func_free ()" link="NcMultiplicityFunc.html#nc-multiplicity-func-free"/>
@@ -4931,6 +4962,17 @@
     <keyword type="function" name="nc_cor_cluster_cmb_lens_limber_twoh_int_mm ()" link="NcCorClusterCmbLensLimber.html#nc-cor-cluster-cmb-lens-limber-twoh-int-mm"/>
     <keyword type="function" name="nc_cor_cluster_cmb_lens_limber_twoh_int_mass2 ()" link="NcCorClusterCmbLensLimber.html#nc-cor-cluster-cmb-lens-limber-twoh-int-mass2"/>
     <keyword type="function" name="nc_cor_cluster_cmb_lens_limber_twoh_term ()" link="NcCorClusterCmbLensLimber.html#nc-cor-cluster-cmb-lens-limber-twoh-term"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_new ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-new"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_ref ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-ref"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_require_zf ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-require-zf"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_prepare ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-prepare"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_free ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-free"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_clear ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-clear"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_prepare_if_needed ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-prepare-if-needed"/>
+    <keyword type="property" name="The “cg” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--cg"/>
+    <keyword type="property" name="The “misc” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--misc"/>
+    <keyword type="property" name="The “nw” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--nw"/>
+    <keyword type="property" name="The “twoh” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--twoh"/>
     <keyword type="function" name="nc_data_cmb_create ()" link="numcosmo-NcDataCMB.html#nc-data-cmb-create"/>
     <keyword type="enum" name="enum NcDataCMBDataType" link="numcosmo-NcDataCMB.html#NcDataCMBDataType"/>
     <keyword type="enum" name="enum NcDataCMBId" link="numcosmo-NcDataCMB.html#NcDataCMBId"/>
@@ -5734,6 +5776,8 @@
     <keyword type="constant" name="NC_HIPERT_ITWO_FLUIDS_VARS_S_I" link="NcHIPertITwoFluids.html#NC-HIPERT-ITWO-FLUIDS-VARS-S-I:CAPS"/>
     <keyword type="constant" name="NC_HIPERT_ITWO_FLUIDS_VARS_PZETA_I" link="NcHIPertITwoFluids.html#NC-HIPERT-ITWO-FLUIDS-VARS-PZETA-I:CAPS"/>
     <keyword type="constant" name="NC_HIPERT_ITWO_FLUIDS_VARS_PS_I" link="NcHIPertITwoFluids.html#NC-HIPERT-ITWO-FLUIDS-VARS-PS-I:CAPS"/>
+    <keyword type="constant" name="NC_DENSITY_PROFILE_NFW_C_DELTA" link="NcDensityProfileNFW.html#NC-DENSITY-PROFILE-NFW-C-DELTA:CAPS"/>
+    <keyword type="constant" name="NC_DENSITY_PROFILE_NFW_M_DELTA" link="NcDensityProfileNFW.html#NC-DENSITY-PROFILE-NFW-M-DELTA:CAPS"/>
     <keyword type="constant" name="NC_HALO_MASS_FUNCTION_SPLINE_NONE" link="NcHaloMassFunction.html#NC-HALO-MASS-FUNCTION-SPLINE-NONE:CAPS"/>
     <keyword type="constant" name="NC_HALO_MASS_FUNCTION_SPLINE_LNM" link="NcHaloMassFunction.html#NC-HALO-MASS-FUNCTION-SPLINE-LNM:CAPS"/>
     <keyword type="constant" name="NC_HALO_MASS_FUNCTION_SPLINE_Z" link="NcHaloMassFunction.html#NC-HALO-MASS-FUNCTION-SPLINE-Z:CAPS"/>

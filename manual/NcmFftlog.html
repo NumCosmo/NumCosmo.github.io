@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s02.html" title="FFTLog" />
 <link rel="prev" href="ch02s02.html" title="FFTLog" />
 <link rel="next" href="NcmFftlogSBesselJ.html" title="NcmFftlogSBesselJ" />
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -23,6 +23,17 @@
 //]]>
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+<script>
+//<![CDATA[
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-36056599-1', 'auto');
+  ga('send', 'pageview');
+//]]>
 </script>
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
@@ -179,7 +190,31 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
+<a class="link" href="NcmFftlog.html#ncm-fftlog-set-noring" title="ncm_fftlog_set_noring ()">ncm_fftlog_set_noring</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFftlog.html#ncm-fftlog-get-noring" title="ncm_fftlog_get_noring ()">ncm_fftlog_get_noring</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
 <a class="link" href="NcmFftlog.html#ncm-fftlog-set-length" title="ncm_fftlog_set_length ()">ncm_fftlog_set_length</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFftlog.html#ncm-fftlog-get-lnk-vector" title="ncm_fftlog_get_lnk_vector ()">ncm_fftlog_get_lnk_vector</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -312,6 +347,14 @@
 </tr>
 <tr>
 <td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFftlog.html#ncm-fftlog-get-array-index" title="ncm_fftlog_get_array_index ()">ncm_fftlog_get_array_index</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
 </td>
 <td class="function_name">
@@ -362,6 +405,11 @@
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="NcmFftlog.html#NcmFftlog--no-ringing" title="The “no-ringing” property">no-ringing</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
 <td class="property_type"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
 <td class="property_name"><a class="link" href="NcmFftlog.html#NcmFftlog--padding" title="The “padding” property">padding</a></td>
 <td class="property_flags">Read / Write / Construct</td>
@@ -389,16 +437,36 @@ $\ln k_0$ is the center value and $K(kr)$ is a kernel function. Assuming that $F
 $N$ lowest Fourier modes, we have </p>
 <p>$$F(k) = \sum_{n} c_n e^{\frac{2\pi i n}{L} \ln\left(\frac{k}{k_0}\right)}.$$
 Substituting $F(k)$ in Eq. \eqref{eq:Gr} and changing the variable $k \rightarrow t = kr$, thus 
-\begin{eqnarray}\label{eq:Gr_decomp}
-r G(r) &amp;=&amp; \sum_n c_n \int_0^\infty \frac{k}{k_0}^{\frac{2\pi i n}{L}} K(kr)^2 d(kr) \
-&amp;=&amp; \sum_n c_n  \int_0^\infty \frac{t}{k_0 r}^{\frac{2\pi i n}{L}} K(t) dt \
-&amp;=&amp; \sum_n c_n e^{-\frac{2\pi i n}{L} \ln\left(\frac{r}{r_0}\right)} e^{-\frac{2\pi i n}{L} \ln(k_0 r_0)} Y_n, 
-\end{eqnarray}
+\begin{align}\label{eq:Gr_decomp}
+r G(r) &amp;= \sum_n c_n \int_0^\infty \frac{k}{k_0}^{\frac{2\pi i n}{L}} K(kr)^2 d(kr) \
+&amp;= \sum_n c_n  \int_0^\infty \frac{t}{k_0 r}^{\frac{2\pi i n}{L}} K(t) dt \
+&amp;= \sum_n c_n e^{-\frac{2\pi i n}{L} \ln\left(\frac{r}{r_0}\right)} e^{-\frac{2\pi i n}{L} \ln(k_0 r_0)} Y_n, 
+\end{align}
 where 
 $$Y_n = \int_0^\infty t^{\frac{2\pi i n}{L}} K(t) dt,$$
 and the Fourier coefficients are
 $$c_n = \frac{1}{N} \sum_m F(k_m) e^{- \frac{2\pi i nm}{N}}.$$
-The total number of points $N$ corresponds to the number of knots in the fundamental interval, which is equally spaced.    </p>
+The total number of points $N$ corresponds to the number of knots in the fundamental interval, which is equally spaced.</p>
+<p>The variables discretization is different depending whether $N$ is even or odd, in general
+$$ k_n = k_0 \mathrm{e}^{n L / N}, \qquad r_m = r_0 \mathrm{e}^{m L / N}. $$
+If $N$ is odd, $n$ and $m$ runs from $[-\lfloor N/2\rfloor, \lfloor N/2\rfloor]$, 
+where $\lfloor N/2\rfloor$  is the round-down (largest integer smaller than $N/2$) 
+of $N/2$. In this case 
+\begin{align}
+\ln\left(k_{-\lfloor N/2\rfloor}\right) = \ln(k_0) - \frac{(N-1)}{N} \frac{L}{2}, \
+\ln\left(k_{+\lfloor N/2\rfloor}\right) = \ln(k_0) + \frac{(N-1)}{N} \frac{L}{2}.
+\end{align}
+This means that for odd $N$ the values of $k_n$ (and $r_n$) never touches the borders $\ln(k_0) \pm L/2$
+and $\ln(r_0) \pm L/2$. On the other hand if $N$ is even ($\lfloor N/2\rfloor = N/2$) 
+\begin{align}
+\ln\left(k_{-\lfloor N/2\rfloor}\right) = \ln(k_0) - \frac{L}{2}, \
+\ln\left(k_{+\lfloor N/2\rfloor}\right) = \ln(k_0) + \frac{L}{2}.
+\end{align}
+However, since we are assuming that these functions are periodic with period $L$ these two 
+points refer to the same value of the functions. Thus, we do not need to include both points and in 
+the case of even $N$ we include the point $\ln(k_0) - \frac{L}{2}$ only. In the original <a class="link" href="refs.html#XHamilton2000">FFTLog</a> 
+paper they include both points but give them a $1/2$ weight, here we avoid this complication by using the lower 
+end point only.</p>
 <p>The user must provide the following input values: $\ln k_0$ - <a class="link" href="NcmFftlog.html#ncm-fftlog-set-lnk0" title="ncm_fftlog_set_lnk0 ()"><code class="function">ncm_fftlog_set_lnk0()</code></a>, $\ln r_0$ - <a class="link" href="NcmFftlog.html#ncm-fftlog-set-lnr0" title="ncm_fftlog_set_lnr0 ()"><code class="function">ncm_fftlog_set_lnr0()</code></a>, 
 $L$ - <a class="link" href="NcmFftlog.html#ncm-fftlog-set-length" title="ncm_fftlog_set_length ()"><code class="function">ncm_fftlog_set_length()</code></a>, padding percentage - <a class="link" href="NcmFftlog.html#ncm-fftlog-set-padding" title="ncm_fftlog_set_padding ()"><code class="function">ncm_fftlog_set_padding()</code></a>, $N$ - <a class="link" href="NcmFftlog.html#ncm-fftlog-set-size" title="ncm_fftlog_set_size ()"><code class="function">ncm_fftlog_set_size()</code></a>, 
 $F(k)$ (or $F(k_m)$ -- see description below). </p>
@@ -410,14 +478,14 @@ number of knots, i.e., $N_f = N (1 + \mathrm{padding})$. </p></li>
 <li class="listitem"><p>$N$ knots are equally distributed in the fundamental interval and $N \times \mathrm{padding}$ knots are distributed in 
 in the two simetric intervals as mentioned above. </p></li>
 <li class="listitem"><p>For the sake of optimization, the final number of points $N_f$ is substituted by the smallest number $N_f^\prime$ (bigger than $N_f$) 
-which can be decomposed as $N_f \leq N_f^\prime = N^\prime (1 + \mathrm{padding}) = 3^a 5^b 7^c$, where $a$, 
-$b$ and $c$ are positive integers. </p></li>
+which can be decomposed as $N_f \leq N_f^\prime = N^\prime (1 + \mathrm{padding}) = 2^a 3^b 5^c 7^d$, where $a$, 
+$b$, $c$ and $d$ are positive integers. </p></li>
 <li class="listitem">
 <p>The function $F(k)$ can be provided as:</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem"><p>a gsl_function - <a class="link" href="NcmFftlog.html#ncm-fftlog-eval-by-gsl-function" title="ncm_fftlog_eval_by_gsl_function ()"><code class="function">ncm_fftlog_eval_by_gsl_function()</code></a> - whose values are computed at the knots 
 within the fundamental interval, and set to zero within the padding intervals. </p></li>
-<li class="listitem"><p>as a vector - <a class="link" href="NcmFftlog.html#ncm-fftlog-eval-by-vector" title="ncm_fftlog_eval_by_vector ()"><code class="function">ncm_fftlog_eval_by_vector()</code></a> - first one must get the vector of $\ln k$ knots, <a class="link" href="NcmFftlog.html#ncm-fftlog-get-vector-lnr" title="ncm_fftlog_get_vector_lnr ()"><code class="function">ncm_fftlog_get_vector_lnr()</code></a>, 
+<li class="listitem"><p>as a vector - <a class="link" href="NcmFftlog.html#ncm-fftlog-eval-by-vector" title="ncm_fftlog_eval_by_vector ()"><code class="function">ncm_fftlog_eval_by_vector()</code></a> - first one must get the vector of $\ln k$ knots, <a class="link" href="NcmFftlog.html#ncm-fftlog-get-lnk-vector" title="ncm_fftlog_get_lnk_vector ()"><code class="function">ncm_fftlog_get_lnk_vector()</code></a>, 
 and then pass a vector containing the values of the function computed at each knot. </p></li>
 </ol></div>
 </li>
@@ -456,7 +524,7 @@ ncm_fftlog_ref (<em class="parameter"><code><a class="link" href="NcmFftlog.html
 </div>
 <div class="refsect3">
 <a name="ncm-fftlog-ref.returns" id="ncm-fftlog-ref.returns"></a><h4>Returns</h4>
-<p> <em class="parameter"><code>fftlog</code></em>
+<p><em class="parameter"><code>fftlog</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -539,7 +607,7 @@ ncm_fftlog_peek_name (<em class="parameter"><code><a class="link" href="NcmFftlo
 </div>
 <div class="refsect3">
 <a name="ncm-fftlog-peek-name.returns" id="ncm-fftlog-peek-name.returns"></a><h4>Returns</h4>
-<p> The internal string describing <a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a>. </p>
+<p>The internal string describing <a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
@@ -803,6 +871,61 @@ ncm_fftlog_get_padding (<em class="parameter"><code><a class="link" href="NcmFft
 </div>
 <hr />
 <div class="refsect2">
+<a name="ncm-fftlog-set-noring" id="ncm-fftlog-set-noring"></a><h3>ncm_fftlog_set_noring ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fftlog_set_noring (<em class="parameter"><code><a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a> *fftlog</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> active</code></em>);</pre>
+<p>Sets whether to use the no-ringing adjustment of $\ln(r_0)$.</p>
+<div class="refsect3">
+<a name="ncm-fftlog-set-noring.parameters" id="ncm-fftlog-set-noring.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fftlog</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>active</p></td>
+<td class="parameter_description"><p>whether to use the no-ringing adjustment of $\ln(r_0)$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fftlog-get-noring" id="ncm-fftlog-get-noring"></a><h3>ncm_fftlog_get_noring ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_fftlog_get_noring (<em class="parameter"><code><a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a> *fftlog</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-fftlog-get-noring.parameters" id="ncm-fftlog-get-noring.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fftlog</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fftlog-get-noring.returns" id="ncm-fftlog-get-noring.returns"></a><h4>Returns</h4>
+<p> whether no-ringing condition is activated.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
 <a name="ncm-fftlog-set-length" id="ncm-fftlog-set-length"></a><h3>ncm_fftlog_set_length ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fftlog_set_length (<em class="parameter"><code><a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a> *fftlog</code></em>,
@@ -826,6 +949,36 @@ ncm_fftlog_set_length (<em class="parameter"><code><a class="link" href="NcmFftl
 <tr>
 <td class="parameter_name"><p>Lk</p></td>
 <td class="parameter_description"><p>period in the logarithmic space</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fftlog-get-lnk-vector" id="ncm-fftlog-get-lnk-vector"></a><h3>ncm_fftlog_get_lnk_vector ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fftlog_get_lnk_vector (<em class="parameter"><code><a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a> *fftlog</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *lnk</code></em>);</pre>
+<p>Computes the $\ln k$ vector.</p>
+<div class="refsect3">
+<a name="ncm-fftlog-get-lnk-vector.parameters" id="ncm-fftlog-get-lnk-vector.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fftlog</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnk</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -888,7 +1041,7 @@ ncm_fftlog_eval_by_function (<em class="parameter"><code><a class="link" href="N
 </tr>
 <tr>
 <td class="parameter_name"><p>Fk</p></td>
-<td class="parameter_description"><p> a <a class="link" href="NcmFftlog.html#NcmFftlogFunc" title="NcmFftlogFunc ()"><span class="type">NcmFftlogFunc</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFftlog.html#NcmFftlogFunc" title="NcmFftlogFunc ()"><span class="type">NcmFftlogFunc</span></a>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -1017,7 +1170,7 @@ its <em class="parameter"><code>nderiv</code></em>
 </div>
 <div class="refsect3">
 <a name="ncm-fftlog-get-vector-Gr.returns" id="ncm-fftlog-get-vector-Gr.returns"></a><h4>Returns</h4>
-<p> a vector of $G(r)$ values or its <em class="parameter"><code>nderiv</code></em>
+<p>a vector of $G(r)$ values or its <em class="parameter"><code>nderiv</code></em>
 -th derivative. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -1057,7 +1210,7 @@ respect to $\ln r$.</p>
 </div>
 <div class="refsect3">
 <a name="ncm-fftlog-peek-spline-Gr.returns" id="ncm-fftlog-peek-spline-Gr.returns"></a><h4>Returns</h4>
-<p> the <em class="parameter"><code>nderiv</code></em>
+<p>the <em class="parameter"><code>nderiv</code></em>
 component of the spline. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -1133,7 +1286,7 @@ the required precision <em class="parameter"><code>reltol</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>Fk</p></td>
-<td class="parameter_description"><p> a <a class="link" href="NcmFftlog.html#NcmFftlogFunc" title="NcmFftlogFunc ()"><span class="type">NcmFftlogFunc</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFftlog.html#NcmFftlogFunc" title="NcmFftlogFunc ()"><span class="type">NcmFftlogFunc</span></a>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -1330,7 +1483,7 @@ ncm_fftlog_get_mode_index (<em class="parameter"><code><a class="link" href="Ncm
                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> i</code></em>);</pre>
 <p>Gets the index of the mode <em class="parameter"><code>i</code></em>
  of the Fourier decomposition. This index corresponds 
-to the lable $n$ in Eq. \eqref{eq:Gr_decomp}.</p>
+to the label $n$ in Eq. \eqref{eq:Gr_decomp}.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-mode-index.parameters" id="ncm-fftlog-get-mode-index.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1356,6 +1509,43 @@ to the lable $n$ in Eq. \eqref{eq:Gr_decomp}.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-mode-index.returns" id="ncm-fftlog-get-mode-index.returns"></a><h4>Returns</h4>
 <p> the index of the mode</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fftlog-get-array-index" id="ncm-fftlog-get-array-index"></a><h3>ncm_fftlog_get_array_index ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+ncm_fftlog_get_array_index (<em class="parameter"><code><a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a> *fftlog</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> phys_i</code></em>);</pre>
+<p>Gets the array index <em class="parameter"><code>i</code></em>
+ of the Fourier decomposition. This index corresponds the position
+in the fft array of the element $n$ in Eq. \eqref{eq:Gr_decomp}.</p>
+<div class="refsect3">
+<a name="ncm-fftlog-get-array-index.parameters" id="ncm-fftlog-get-array-index.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fftlog</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>phys_i</p></td>
+<td class="parameter_description"><p>index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fftlog-get-array-index.returns" id="ncm-fftlog-get-array-index.returns"></a><h4>Returns</h4>
+<p> the array index corresponding to <em class="parameter"><code>phys_i</code></em>
+</p>
 </div>
 </div>
 <hr />
@@ -1392,7 +1582,7 @@ its <em class="parameter"><code>comp</code></em>
 </div>
 <div class="refsect3">
 <a name="ncm-fftlog-peek-output-vector.returns" id="ncm-fftlog-peek-output-vector.returns"></a><h4>Returns</h4>
-<p> the output vector $G(r)$ or its <em class="parameter"><code>comp</code></em>
+<p>the output vector $G(r)$ or its <em class="parameter"><code>comp</code></em>
 -th derivative. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -1452,6 +1642,14 @@ its <em class="parameter"><code>comp</code></em>
 </div>
 <hr />
 <div class="refsect2">
+<a name="NcmFftlog--no-ringing" id="NcmFftlog--no-ringing"></a><h3>The <code class="literal">“no-ringing”</code> property</h3>
+<pre class="programlisting">  “no-ringing”               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>No ringing.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: TRUE</p>
+</div>
+<hr />
+<div class="refsect2">
 <a name="NcmFftlog--padding" id="NcmFftlog--padding"></a><h3>The <code class="literal">“padding”</code> property</h3>
 <pre class="programlisting">  “padding”                  <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Padding percentage.</p>
@@ -1462,6 +1660,6 @@ its <em class="parameter"><code>comp</code></em>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.25.1</div>
+<hr />Generated by GTK-Doc V1.26.1</div>
 </div></div></body>
 </html>

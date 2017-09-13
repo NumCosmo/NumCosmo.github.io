@@ -9,7 +9,7 @@
 <link rel="up" href="ch02.html#id-1.3.2" title="Miscellaneous Objects" />
 <link rel="prev" href="numcosmo-NcmUtil.html" title="NcmUtil" />
 <link rel="next" href="NcmVector.html" title="NcmVector" />
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -23,6 +23,17 @@
 //]]>
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+<script>
+//<![CDATA[
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-36056599-1', 'auto');
+  ga('send', 'pageview');
+//]]>
 </script>
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
@@ -414,7 +425,7 @@ ncm_diff_ref (<em class="parameter"><code><a class="link" href="NcmDiff.html" ti
 </div>
 <div class="refsect3">
 <a name="ncm-diff-ref.returns" id="ncm-diff-ref.returns"></a><h4>Returns</h4>
-<p> <em class="parameter"><code>diff</code></em>
+<p><em class="parameter"><code>diff</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -711,8 +722,8 @@ ncm_diff_rf_d1_N_to_M (<em class="parameter"><code><a class="link" href="NcmDiff
                        <em class="parameter"><code><a class="link" href="NcmDiff.html#NcmDiffFuncNtoM" title="NcmDiffFuncNtoM ()"><span class="type">NcmDiffFuncNtoM</span></a> f</code></em>,
                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>,
                        <em class="parameter"><code><a href="../glib/glib-Arrays.html#GArray"><span class="type">GArray</span></a> **Eerr</code></em>);</pre>
-<p>Calculates the first derivativ of <em class="parameter"><code>f</code></em>
-: $\nabla f$ using the forward method plus 
+<p>Calculates the first derivative of <em class="parameter"><code>f</code></em>
+: $\partial_i f$ using the forward method plus 
 Richardson extrapolation. The function $f$ is considered as a $f:\mathbb{R}^N\to \mathbb{R}^M$,
 where $N = $ length of <em class="parameter"><code>x_a</code></em>
  and $M = $ <em class="parameter"><code>dim</code></em>
@@ -733,7 +744,7 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>x_a</p></td>
-<td class="parameter_description"><p> function argument. </p></td>
+<td class="parameter_description"><p>function argument. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -744,17 +755,17 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>f</p></td>
-<td class="parameter_description"><p> function to differentiate. </p></td>
+<td class="parameter_description"><p>function to differentiate. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> function user data. </p></td>
+<td class="parameter_description"><p>function user data. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>Eerr</p></td>
-<td class="parameter_description"><p> estimated errors. </p></td>
+<td class="parameter_description"><p>estimated errors. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -762,7 +773,7 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </div>
 <div class="refsect3">
 <a name="ncm-diff-rf-d1-N-to-M.returns" id="ncm-diff-rf-d1-N-to-M.returns"></a><h4>Returns</h4>
-<p> The derivative of <em class="parameter"><code>f</code></em>
+<p>The derivative of <em class="parameter"><code>f</code></em>
 at <em class="parameter"><code>x_a</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
@@ -800,7 +811,7 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>x_a</p></td>
-<td class="parameter_description"><p> function argument. </p></td>
+<td class="parameter_description"><p>function argument. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -811,17 +822,17 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>f</p></td>
-<td class="parameter_description"><p> function to differentiate. </p></td>
+<td class="parameter_description"><p>function to differentiate. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> function user data. </p></td>
+<td class="parameter_description"><p>function user data. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>Eerr</p></td>
-<td class="parameter_description"><p> estimated errors. </p></td>
+<td class="parameter_description"><p>estimated errors. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -829,7 +840,7 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </div>
 <div class="refsect3">
 <a name="ncm-diff-rc-d1-N-to-M.returns" id="ncm-diff-rc-d1-N-to-M.returns"></a><h4>Returns</h4>
-<p> The derivative of <em class="parameter"><code>f</code></em>
+<p>The derivative of <em class="parameter"><code>f</code></em>
 at <em class="parameter"><code>x_a</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
@@ -867,7 +878,7 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>x_a</p></td>
-<td class="parameter_description"><p> function argument. </p></td>
+<td class="parameter_description"><p>function argument. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -878,17 +889,17 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>f</p></td>
-<td class="parameter_description"><p> function to differentiate. </p></td>
+<td class="parameter_description"><p>function to differentiate. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> function user data. </p></td>
+<td class="parameter_description"><p>function user data. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>Eerr</p></td>
-<td class="parameter_description"><p> estimated errors. </p></td>
+<td class="parameter_description"><p>estimated errors. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -896,7 +907,7 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </div>
 <div class="refsect3">
 <a name="ncm-diff-rc-d2-N-to-M.returns" id="ncm-diff-rc-d2-N-to-M.returns"></a><h4>Returns</h4>
-<p> The derivative of <em class="parameter"><code>f</code></em>
+<p>The derivative of <em class="parameter"><code>f</code></em>
 at <em class="parameter"><code>x_a</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
@@ -944,17 +955,17 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>f</p></td>
-<td class="parameter_description"><p> function to differentiate. </p></td>
+<td class="parameter_description"><p>function to differentiate. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> function user data. </p></td>
+<td class="parameter_description"><p>function user data. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>Eerr</p></td>
-<td class="parameter_description"><p> estimated errors. </p></td>
+<td class="parameter_description"><p>estimated errors. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -962,7 +973,7 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </div>
 <div class="refsect3">
 <a name="ncm-diff-rf-d1-1-to-M.returns" id="ncm-diff-rf-d1-1-to-M.returns"></a><h4>Returns</h4>
-<p> The derivative of <em class="parameter"><code>f</code></em>
+<p>The derivative of <em class="parameter"><code>f</code></em>
 at <em class="parameter"><code>x_a</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
@@ -1010,17 +1021,17 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>f</p></td>
-<td class="parameter_description"><p> function to differentiate. </p></td>
+<td class="parameter_description"><p>function to differentiate. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> function user data. </p></td>
+<td class="parameter_description"><p>function user data. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>Eerr</p></td>
-<td class="parameter_description"><p> estimated errors. </p></td>
+<td class="parameter_description"><p>estimated errors. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -1028,7 +1039,7 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </div>
 <div class="refsect3">
 <a name="ncm-diff-rc-d1-1-to-M.returns" id="ncm-diff-rc-d1-1-to-M.returns"></a><h4>Returns</h4>
-<p> The derivative of <em class="parameter"><code>f</code></em>
+<p>The derivative of <em class="parameter"><code>f</code></em>
 at <em class="parameter"><code>x_a</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
@@ -1076,17 +1087,17 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>f</p></td>
-<td class="parameter_description"><p> function to differentiate. </p></td>
+<td class="parameter_description"><p>function to differentiate. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> function user data. </p></td>
+<td class="parameter_description"><p>function user data. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>Eerr</p></td>
-<td class="parameter_description"><p> estimated errors. </p></td>
+<td class="parameter_description"><p>estimated errors. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -1094,7 +1105,7 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </div>
 <div class="refsect3">
 <a name="ncm-diff-rc-d2-1-to-M.returns" id="ncm-diff-rc-d2-1-to-M.returns"></a><h4>Returns</h4>
-<p> The derivative of <em class="parameter"><code>f</code></em>
+<p>The derivative of <em class="parameter"><code>f</code></em>
 at <em class="parameter"><code>x_a</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
@@ -1130,22 +1141,22 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>x_a</p></td>
-<td class="parameter_description"><p> function argument. </p></td>
+<td class="parameter_description"><p>function argument. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>f</p></td>
-<td class="parameter_description"><p> function to differentiate. </p></td>
+<td class="parameter_description"><p>function to differentiate. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> function user data. </p></td>
+<td class="parameter_description"><p>function user data. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>Eerr</p></td>
-<td class="parameter_description"><p> estimated errors. </p></td>
+<td class="parameter_description"><p>estimated errors. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -1153,7 +1164,7 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </div>
 <div class="refsect3">
 <a name="ncm-diff-rf-d1-N-to-1.returns" id="ncm-diff-rf-d1-N-to-1.returns"></a><h4>Returns</h4>
-<p> The derivative of <em class="parameter"><code>f</code></em>
+<p>The derivative of <em class="parameter"><code>f</code></em>
 at <em class="parameter"><code>x_a</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
@@ -1189,22 +1200,22 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>x_a</p></td>
-<td class="parameter_description"><p> function argument. </p></td>
+<td class="parameter_description"><p>function argument. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>f</p></td>
-<td class="parameter_description"><p> function to differentiate. </p></td>
+<td class="parameter_description"><p>function to differentiate. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> function user data. </p></td>
+<td class="parameter_description"><p>function user data. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>Eerr</p></td>
-<td class="parameter_description"><p> estimated errors. </p></td>
+<td class="parameter_description"><p>estimated errors. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -1212,7 +1223,7 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </div>
 <div class="refsect3">
 <a name="ncm-diff-rc-d1-N-to-1.returns" id="ncm-diff-rc-d1-N-to-1.returns"></a><h4>Returns</h4>
-<p> The derivative of <em class="parameter"><code>f</code></em>
+<p>The derivative of <em class="parameter"><code>f</code></em>
 at <em class="parameter"><code>x_a</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
@@ -1248,22 +1259,22 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>x_a</p></td>
-<td class="parameter_description"><p> function argument. </p></td>
+<td class="parameter_description"><p>function argument. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>f</p></td>
-<td class="parameter_description"><p> function to differentiate. </p></td>
+<td class="parameter_description"><p>function to differentiate. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> function user data. </p></td>
+<td class="parameter_description"><p>function user data. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>Eerr</p></td>
-<td class="parameter_description"><p> estimated errors. </p></td>
+<td class="parameter_description"><p>estimated errors. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -1271,7 +1282,7 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </div>
 <div class="refsect3">
 <a name="ncm-diff-rc-d2-N-to-1.returns" id="ncm-diff-rc-d2-N-to-1.returns"></a><h4>Returns</h4>
-<p> The derivative of <em class="parameter"><code>f</code></em>
+<p>The derivative of <em class="parameter"><code>f</code></em>
 at <em class="parameter"><code>x_a</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
@@ -1307,22 +1318,22 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>x_a</p></td>
-<td class="parameter_description"><p> function argument. </p></td>
+<td class="parameter_description"><p>function argument. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>f</p></td>
-<td class="parameter_description"><p> function to differentiate. </p></td>
+<td class="parameter_description"><p>function to differentiate. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> function user data. </p></td>
+<td class="parameter_description"><p>function user data. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>Eerr</p></td>
-<td class="parameter_description"><p> estimated errors. </p></td>
+<td class="parameter_description"><p>estimated errors. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -1330,7 +1341,7 @@ where $N = $ length of <em class="parameter"><code>x_a</code></em>
 </div>
 <div class="refsect3">
 <a name="ncm-diff-rf-Hessian-N-to-1.returns" id="ncm-diff-rf-Hessian-N-to-1.returns"></a><h4>Returns</h4>
-<p> The Hessian of <em class="parameter"><code>f</code></em>
+<p>The Hessian of <em class="parameter"><code>f</code></em>
 at <em class="parameter"><code>x_a</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
@@ -1369,17 +1380,17 @@ Richardson extrapolation. The function $f$ is considered as a $f:\mathbb{R} \to 
 </tr>
 <tr>
 <td class="parameter_name"><p>f</p></td>
-<td class="parameter_description"><p> function to differentiate. </p></td>
+<td class="parameter_description"><p>function to differentiate. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> function user data. </p></td>
+<td class="parameter_description"><p>function user data. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>err</p></td>
-<td class="parameter_description"><p> estimated error. </p></td>
+<td class="parameter_description"><p>estimated error. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -1425,17 +1436,17 @@ Richardson extrapolation. The function $f$ is considered as a $f:\mathbb{R} \to 
 </tr>
 <tr>
 <td class="parameter_name"><p>f</p></td>
-<td class="parameter_description"><p> function to differentiate. </p></td>
+<td class="parameter_description"><p>function to differentiate. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> function user data. </p></td>
+<td class="parameter_description"><p>function user data. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>err</p></td>
-<td class="parameter_description"><p> estimated error. </p></td>
+<td class="parameter_description"><p>estimated error. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -1481,17 +1492,17 @@ Richardson extrapolation. The function $f$ is considered as a $f:\mathbb{R} \to 
 </tr>
 <tr>
 <td class="parameter_name"><p>f</p></td>
-<td class="parameter_description"><p> function to differentiate. </p></td>
+<td class="parameter_description"><p>function to differentiate. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p> function user data. </p></td>
+<td class="parameter_description"><p>function user data. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>err</p></td>
-<td class="parameter_description"><p> estimated error. </p></td>
+<td class="parameter_description"><p>estimated error. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -1544,6 +1555,6 @@ at <em class="parameter"><code>x</code></em>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.25.1</div>
+<hr />Generated by GTK-Doc V1.26.1</div>
 </div></div></body>
 </html>

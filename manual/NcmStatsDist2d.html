@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s11.html" title="Statistical Analysis" />
 <link rel="prev" href="NcmStatsDist1dEPDF.html" title="NcmStatsDist1dEPDF" />
 <link rel="next" href="NcmStatsDist2dSpline.html" title="NcmStatsDist2dSpline" />
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -23,6 +23,17 @@
 //]]>
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+<script>
+//<![CDATA[
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-36056599-1', 'auto');
+  ga('send', 'pageview');
+//]]>
 </script>
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
@@ -88,6 +99,22 @@
 </tr>
 <tr>
 <td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDist2d.html#ncm-stats-dist2d-xbounds" title="ncm_stats_dist2d_xbounds ()">ncm_stats_dist2d_xbounds</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDist2d.html#ncm-stats-dist2d-ybounds" title="ncm_stats_dist2d_ybounds ()">ncm_stats_dist2d_ybounds</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
@@ -99,7 +126,7 @@
 <a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
-<a class="link" href="NcmStatsDist2d.html#ncm-stats-dist2d-eval-m2lnL" title="ncm_stats_dist2d_eval_m2lnL ()">ncm_stats_dist2d_eval_m2lnL</a> <span class="c_punctuation">()</span>
+<a class="link" href="NcmStatsDist2d.html#ncm-stats-dist2d-eval-m2lnp" title="ncm_stats_dist2d_eval_m2lnp ()">ncm_stats_dist2d_eval_m2lnp</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -115,7 +142,31 @@
 <a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
-<a class="link" href="NcmStatsDist2d.html#ncm-stats-dist2d-eval-inv-pdf" title="ncm_stats_dist2d_eval_inv_pdf ()">ncm_stats_dist2d_eval_inv_pdf</a> <span class="c_punctuation">()</span>
+<a class="link" href="NcmStatsDist2d.html#ncm-stats-dist2d-eval-marginal-pdf" title="ncm_stats_dist2d_eval_marginal_pdf ()">ncm_stats_dist2d_eval_marginal_pdf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDist2d.html#ncm-stats-dist2d-eval-marginal-cdf" title="ncm_stats_dist2d_eval_marginal_cdf ()">ncm_stats_dist2d_eval_marginal_cdf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDist2d.html#ncm-stats-dist2d-eval-marginal-inv-cdf" title="ncm_stats_dist2d_eval_marginal_inv_cdf ()">ncm_stats_dist2d_eval_marginal_inv_cdf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDist2d.html#ncm-stats-dist2d-eval-inv-cond" title="ncm_stats_dist2d_eval_inv_cond ()">ncm_stats_dist2d_eval_inv_cond</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 </tbody>
@@ -157,7 +208,7 @@ ncm_stats_dist2d_ref (<em class="parameter"><code><a class="link" href="NcmStats
 </div>
 <div class="refsect3">
 <a name="ncm-stats-dist2d-ref.returns" id="ncm-stats-dist2d-ref.returns"></a><h4>Returns</h4>
-<p> <em class="parameter"><code>sd2</code></em>
+<p><em class="parameter"><code>sd2</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -215,6 +266,7 @@ ncm_stats_dist2d_clear (<em class="parameter"><code><a class="link" href="NcmSta
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_stats_dist2d_prepare (<em class="parameter"><code><a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a> *sd2</code></em>);</pre>
 <p>Prepares the object for calculations.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> prepare]</span></p>
 <div class="refsect3">
 <a name="ncm-stats-dist2d-prepare.parameters" id="ncm-stats-dist2d-prepare.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -233,14 +285,89 @@ ncm_stats_dist2d_prepare (<em class="parameter"><code><a class="link" href="NcmS
 </div>
 <hr />
 <div class="refsect2">
+<a name="ncm-stats-dist2d-xbounds" id="ncm-stats-dist2d-xbounds"></a><h3>ncm_stats_dist2d_xbounds ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_stats_dist2d_xbounds (<em class="parameter"><code><a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a> *sd2</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *xi</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *xf</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> xbounds]</span></p>
+<div class="refsect3">
+<a name="ncm-stats-dist2d-xbounds.parameters" id="ncm-stats-dist2d-xbounds.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sd2</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xi</p></td>
+<td class="parameter_description"><p>x lower bound. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xf</p></td>
+<td class="parameter_description"><p>x upper bound. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-stats-dist2d-ybounds" id="ncm-stats-dist2d-ybounds"></a><h3>ncm_stats_dist2d_ybounds ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_stats_dist2d_ybounds (<em class="parameter"><code><a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a> *sd2</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *yi</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *yf</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> ybounds]</span></p>
+<div class="refsect3">
+<a name="ncm-stats-dist2d-ybounds.parameters" id="ncm-stats-dist2d-ybounds.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sd2</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yi</p></td>
+<td class="parameter_description"><p>y lower bound. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yf</p></td>
+<td class="parameter_description"><p>y upper bound. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
 <a name="ncm-stats-dist2d-eval-pdf" id="ncm-stats-dist2d-eval-pdf"></a><h3>ncm_stats_dist2d_eval_pdf ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_stats_dist2d_eval_pdf (<em class="parameter"><code><a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a> *sd2</code></em>,
-                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
-                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> y</code></em>);</pre>
+                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> y</code></em>);</pre>
 <p>Calculates the value of the probability density function (PDF) at <em class="parameter"><code>x</code></em>
  and <em class="parameter"><code>y</code></em>
 .</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> pdf]</span></p>
 <div class="refsect3">
 <a name="ncm-stats-dist2d-eval-pdf.parameters" id="ncm-stats-dist2d-eval-pdf.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -277,22 +404,56 @@ and <em class="parameter"><code>y</code></em>
 </div>
 <hr />
 <div class="refsect2">
-<a name="ncm-stats-dist2d-eval-m2lnL" id="ncm-stats-dist2d-eval-m2lnL"></a><h3>ncm_stats_dist2d_eval_m2lnL ()</h3>
+<a name="ncm-stats-dist2d-eval-m2lnp" id="ncm-stats-dist2d-eval-m2lnp"></a><h3>ncm_stats_dist2d_eval_m2lnp ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-ncm_stats_dist2d_eval_m2lnL (<em class="parameter"><code><a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a> *sd2</code></em>,
-                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
-                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> y</code></em>);</pre>
+ncm_stats_dist2d_eval_m2lnp (<em class="parameter"><code><a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a> *sd2</code></em>,
+                             <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                             <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> y</code></em>);</pre>
+<p>Calculates the value of the $-2\ln(p(x, y))$ for the probability density function.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> m2lnp]</span></p>
+<div class="refsect3">
+<a name="ncm-stats-dist2d-eval-m2lnp.parameters" id="ncm-stats-dist2d-eval-m2lnp.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sd2</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>random variable value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y</p></td>
+<td class="parameter_description"><p>random variable value </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-stats-dist2d-eval-m2lnp.returns" id="ncm-stats-dist2d-eval-m2lnp.returns"></a><h4>Returns</h4>
+<p> the value of $-2\ln(p(x, y))$.</p>
+</div>
 </div>
 <hr />
 <div class="refsect2">
 <a name="ncm-stats-dist2d-eval-cdf" id="ncm-stats-dist2d-eval-cdf"></a><h3>ncm_stats_dist2d_eval_cdf ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_stats_dist2d_eval_cdf (<em class="parameter"><code><a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a> *sd2</code></em>,
-                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
-                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> y</code></em>);</pre>
+                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> y</code></em>);</pre>
 <p>Calculates the value of the cumulative distribution function (CDF) within [x_i, <em class="parameter"><code>x</code></em>
 ] and [y_i, <em class="parameter"><code>y</code></em>
 ].</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> cdf]</span></p>
 <div class="refsect3">
 <a name="ncm-stats-dist2d-eval-cdf.parameters" id="ncm-stats-dist2d-eval-cdf.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -329,16 +490,93 @@ ncm_stats_dist2d_eval_cdf (<em class="parameter"><code><a class="link" href="Ncm
 </div>
 <hr />
 <div class="refsect2">
-<a name="ncm-stats-dist2d-eval-inv-pdf" id="ncm-stats-dist2d-eval-inv-pdf"></a><h3>ncm_stats_dist2d_eval_inv_pdf ()</h3>
+<a name="ncm-stats-dist2d-eval-marginal-pdf" id="ncm-stats-dist2d-eval-marginal-pdf"></a><h3>ncm_stats_dist2d_eval_marginal_pdf ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-ncm_stats_dist2d_eval_inv_pdf (<em class="parameter"><code><a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a> *sd2</code></em>,
-                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> u</code></em>,
-                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> y</code></em>);</pre>
-<p>FIXME 
-Calculates the value of the random variable $x$ for which the cumulative
-distribution satisfy $\int_{x_i}^x\mathrm{d}x^\prime p(x^\prime) = u$.</p>
+ncm_stats_dist2d_eval_marginal_pdf (<em class="parameter"><code><a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a> *sd2</code></em>,
+                                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xy</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> marginal_pdf]</span></p>
 <div class="refsect3">
-<a name="ncm-stats-dist2d-eval-inv-pdf.parameters" id="ncm-stats-dist2d-eval-inv-pdf.parameters"></a><h4>Parameters</h4>
+<a name="ncm-stats-dist2d-eval-marginal-pdf.parameters" id="ncm-stats-dist2d-eval-marginal-pdf.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sd2</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xy</p></td>
+<td class="parameter_description"><p>x or y</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-stats-dist2d-eval-marginal-pdf.returns" id="ncm-stats-dist2d-eval-marginal-pdf.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-stats-dist2d-eval-marginal-cdf" id="ncm-stats-dist2d-eval-marginal-cdf"></a><h3>ncm_stats_dist2d_eval_marginal_cdf ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_stats_dist2d_eval_marginal_cdf (<em class="parameter"><code><a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a> *sd2</code></em>,
+                                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xy</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> marginal_pdf]</span></p>
+<div class="refsect3">
+<a name="ncm-stats-dist2d-eval-marginal-cdf.parameters" id="ncm-stats-dist2d-eval-marginal-cdf.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sd2</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xy</p></td>
+<td class="parameter_description"><p>x or y</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-stats-dist2d-eval-marginal-cdf.returns" id="ncm-stats-dist2d-eval-marginal-cdf.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-stats-dist2d-eval-marginal-inv-cdf" id="ncm-stats-dist2d-eval-marginal-inv-cdf"></a><h3>ncm_stats_dist2d_eval_marginal_inv_cdf ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_stats_dist2d_eval_marginal_inv_cdf
+                               (<em class="parameter"><code><a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a> *sd2</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xy</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-stats-dist2d-eval-inv-cond" id="ncm-stats-dist2d-eval-inv-cond"></a><h3>ncm_stats_dist2d_eval_inv_cond ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_stats_dist2d_eval_inv_cond (<em class="parameter"><code><a class="link" href="NcmStatsDist2d.html" title="NcmStatsDist2d"><span class="type">NcmStatsDist2d</span></a> *sd2</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> u</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xy</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> inv_cond]</span></p>
+<div class="refsect3">
+<a name="ncm-stats-dist2d-eval-inv-cond.parameters" id="ncm-stats-dist2d-eval-inv-cond.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name" />
@@ -357,16 +595,16 @@ distribution satisfy $\int_{x_i}^x\mathrm{d}x^\prime p(x^\prime) = u$.</p>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
-<td class="parameter_name"><p>y</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_name"><p>xy</p></td>
+<td class="parameter_description"><p>x or y</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-stats-dist2d-eval-inv-pdf.returns" id="ncm-stats-dist2d-eval-inv-pdf.returns"></a><h4>Returns</h4>
-<p> the value of x.</p>
+<a name="ncm-stats-dist2d-eval-inv-cond.returns" id="ncm-stats-dist2d-eval-inv-cond.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
 </div>
 </div>
 </div>
@@ -375,6 +613,6 @@ distribution satisfy $\int_{x_i}^x\mathrm{d}x^\prime p(x^\prime) = u$.</p>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.25.1</div>
+<hr />Generated by GTK-Doc V1.26.1</div>
 </div></div></body>
 </html>
