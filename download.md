@@ -60,6 +60,11 @@ rpm based distributions.
   - [ARB](http://fredrikj.net/arb/)
     C library for arbitrary-precision interval arithmetic.
 
+## Packages from popular distributions
+
+Many prerequisites and optional packages can be found in popular distributions. 
+Below there is a small compilation of package names for some distributions.
+
 ### Packages on Debian like systems (including Ubuntu) <a id="pack_deb"></a>
 
   - For most systems the following packages can be found in the main repositories: *gobject-introspection*, *gir1.2-glib-2.0*, *libgirepository1.0-dev*, *gcc*, *pkg-config*, *libglib2.0-dev*, *libgmp3-dev*, *libmpfr-dev*, *libgsl0-dev*, *libfftw3-dev*.
@@ -106,6 +111,11 @@ To build from a release package or after preparing the configure script, run:
     ```bash
     ./configure (--help to see options)
     ```
+    - To build NumCosmo for maximum speed use the command:
+      ```bash
+      ./configure --enable-opt-cflags CFLAGS="-O3 -march=native"
+      ```
+      However, note that this will generate non-portable binaries.
   - Compile everything
     ```bash
     make (-j4 to compile using 4 parallel jobs)
