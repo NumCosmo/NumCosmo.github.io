@@ -1,0 +1,1578 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmQMProp: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02.html#id-1.3.2" title="Miscellaneous Objects" />
+<link rel="prev" href="NcmRNG.html" title="NcmRNG" />
+<link rel="next" href="NcmQuaternion.html" title="NcmQuaternion" />
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmQMProp.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmQMProp.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmQMProp.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02.html#id-1.3.2"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcmRNG.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmQuaternion.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmQMProp" id="NcmQMProp"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmQMProp.top_of_page" id="NcmQMProp.top_of_page"></a>NcmQMProp</span></h2>
+<p>NcmQMProp — Numerical QM propagator object</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmQMProp.functions" id="NcmQMProp.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return" />
+<col class="functions_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="NcmQMProp.html#NcmQMPropPsi" title="NcmQMPropPsi ()">*NcmQMPropPsi</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmQMProp.html#NcmQMPropGauss"><span class="returnvalue">NcmQMPropGauss</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-gauss-new" title="ncm_qm_prop_gauss_new ()">ncm_qm_prop_gauss_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmQMProp.html#NcmQMPropGauss"><span class="returnvalue">NcmQMPropGauss</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-gauss-dup" title="ncm_qm_prop_gauss_dup ()">ncm_qm_prop_gauss_dup</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-gauss-free" title="ncm_qm_prop_gauss_free ()">ncm_qm_prop_gauss_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-gauss-eval" title="ncm_qm_prop_gauss_eval ()">ncm_qm_prop_gauss_eval</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-gauss-eval-hermit" title="ncm_qm_prop_gauss_eval_hermit ()">ncm_qm_prop_gauss_eval_hermit</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmQMProp.html#NcmQMPropExp"><span class="returnvalue">NcmQMPropExp</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-exp-new" title="ncm_qm_prop_exp_new ()">ncm_qm_prop_exp_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmQMProp.html#NcmQMPropExp"><span class="returnvalue">NcmQMPropExp</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-exp-dup" title="ncm_qm_prop_exp_dup ()">ncm_qm_prop_exp_dup</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-exp-free" title="ncm_qm_prop_exp_free ()">ncm_qm_prop_exp_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-exp-eval" title="ncm_qm_prop_exp_eval ()">ncm_qm_prop_exp_eval</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="returnvalue">NcmQMProp</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-new" title="ncm_qm_prop_new ()">ncm_qm_prop_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="returnvalue">NcmQMProp</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-ref" title="ncm_qm_prop_ref ()">ncm_qm_prop_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-free" title="ncm_qm_prop_free ()">ncm_qm_prop_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-clear" title="ncm_qm_prop_clear ()">ncm_qm_prop_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-set-nknots" title="ncm_qm_prop_set_nknots ()">ncm_qm_prop_set_nknots</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-get-nknots" title="ncm_qm_prop_get_nknots ()">ncm_qm_prop_get_nknots</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-eval" title="ncm_qm_prop_eval ()">ncm_qm_prop_eval</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-eval-array" title="ncm_qm_prop_eval_array ()">ncm_qm_prop_eval_array</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-gauss-ini" title="ncm_qm_prop_gauss_ini ()">ncm_qm_prop_gauss_ini</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-propto" title="ncm_qm_prop_propto ()">ncm_qm_prop_propto</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-propto-norm" title="ncm_qm_prop_propto_norm ()">ncm_qm_prop_propto_norm</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-set-init-cond" title="ncm_qm_prop_set_init_cond ()">ncm_qm_prop_set_init_cond</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-set-init-cond-gauss" title="ncm_qm_prop_set_init_cond_gauss ()">ncm_qm_prop_set_init_cond_gauss</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-set-init-cond-exp" title="ncm_qm_prop_set_init_cond_exp ()">ncm_qm_prop_set_init_cond_exp</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-evolve" title="ncm_qm_prop_evolve ()">ncm_qm_prop_evolve</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-get-knots" title="ncm_qm_prop_get_knots ()">ncm_qm_prop_get_knots</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-get-psi" title="ncm_qm_prop_get_psi ()">ncm_qm_prop_get_psi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-get-spec-knots" title="ncm_qm_prop_get_spec_knots ()">ncm_qm_prop_get_spec_knots</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-get-rho" title="ncm_qm_prop_get_rho ()">ncm_qm_prop_get_rho</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-get-dS" title="ncm_qm_prop_get_dS ()">ncm_qm_prop_get_dS</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-get-Re-psi" title="ncm_qm_prop_get_Re_psi ()">ncm_qm_prop_get_Re_psi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-get-Im-psi" title="ncm_qm_prop_get_Im_psi ()">ncm_qm_prop_get_Im_psi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmQMProp.html#ncm-qm-prop-evolve-spec" title="ncm_qm_prop_evolve_spec ()">ncm_qm_prop_evolve_spec</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmQMProp.properties" id="NcmQMProp.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="NcmQMProp.html#NcmQMProp--abstol" title="The “abstol” property">abstol</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="NcmQMProp.html#NcmQMProp--lambda" title="The “lambda” property">lambda</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcmQMProp.html#NcmQMProp--nknots" title="The “nknots” property">nknots</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="NcmQMProp.html#NcmQMProp--noboundary" title="The “noboundary” property">noboundary</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcmQMProp.html#NcmQMProp--np" title="The “np” property">np</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="NcmQMProp.html#NcmQMProp--reltol" title="The “reltol” property">reltol</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="NcmQMPropGauss" id="NcmQMPropGauss"></a><a name="NcmQMPropExp" id="NcmQMPropExp"></a><div class="refsect1">
+<a name="NcmQMProp.other" id="NcmQMProp.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name" />
+<col class="description" />
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmQMProp.html#NcmQMPropGauss-struct" title="struct NcmQMPropGauss">NcmQMPropGauss</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmQMProp.html#NcmQMPropExp-struct" title="struct NcmQMPropExp">NcmQMPropExp</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmQMProp.object-hierarchy" id="NcmQMProp.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
+    <span class="lineart">├──</span> NcmQMPropExp
+    <span class="lineart">╰──</span> NcmQMPropGauss
+    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcmQMProp
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmQMProp.description" id="NcmQMProp.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcmQMProp.functions_details" id="NcmQMProp.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="NcmQMPropPsi" id="NcmQMPropPsi"></a><h3>NcmQMPropPsi ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*NcmQMPropPsi<span class="c_punctuation">)</span> (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> psi_data</code></em>,
+                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *psi</code></em>);</pre>
+<p>Wave-function</p>
+<div class="refsect3">
+<a name="NcmQMPropPsi.parameters" id="NcmQMPropPsi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>psi_data</p></td>
+<td class="parameter_description"><p>object pointer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>eval point $x$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>psi</p></td>
+<td class="parameter_description"><p>$\psi$. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out caller-allocates</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=2][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-gauss-new" id="ncm-qm-prop-gauss-new"></a><h3>ncm_qm_prop_gauss_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmQMProp.html#NcmQMPropGauss"><span class="returnvalue">NcmQMPropGauss</span></a> *
+ncm_qm_prop_gauss_new (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mean</code></em>,
+                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> alpha</code></em>,
+                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma</code></em>,
+                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> Hi</code></em>);</pre>
+<p>Creates a new Gaussian wave function.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-gauss-new.parameters" id="ncm-qm-prop-gauss-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mean</p></td>
+<td class="parameter_description"><p>gaussian mean</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>alpha</p></td>
+<td class="parameter_description"><p>power-law </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sigma</p></td>
+<td class="parameter_description"><p>Gaussian width </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>Hi</p></td>
+<td class="parameter_description"><p>linear imaginary phase</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-qm-prop-gauss-new.returns" id="ncm-qm-prop-gauss-new.returns"></a><h4>Returns</h4>
+<p>a new <a class="link" href="NcmQMProp.html#NcmQMPropGauss"><span class="type">NcmQMPropGauss</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-gauss-dup" id="ncm-qm-prop-gauss-dup"></a><h3>ncm_qm_prop_gauss_dup ()</h3>
+<pre class="programlisting"><a class="link" href="NcmQMProp.html#NcmQMPropGauss"><span class="returnvalue">NcmQMPropGauss</span></a> *
+ncm_qm_prop_gauss_dup (<em class="parameter"><code><a class="link" href="NcmQMProp.html#NcmQMPropGauss"><span class="type">NcmQMPropGauss</span></a> *qm_gauss</code></em>);</pre>
+<p>Duplicates <em class="parameter"><code>qm_gauss</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-gauss-dup.parameters" id="ncm-qm-prop-gauss-dup.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>qm_gauss</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html#NcmQMPropGauss"><span class="type">NcmQMPropGauss</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-qm-prop-gauss-dup.returns" id="ncm-qm-prop-gauss-dup.returns"></a><h4>Returns</h4>
+<p>a duplicate of <em class="parameter"><code>qm_gauss</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-gauss-free" id="ncm-qm-prop-gauss-free"></a><h3>ncm_qm_prop_gauss_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_gauss_free (<em class="parameter"><code><a class="link" href="NcmQMProp.html#NcmQMPropGauss"><span class="type">NcmQMPropGauss</span></a> *qm_gauss</code></em>);</pre>
+<p>Frees <em class="parameter"><code>qm_gauss</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-gauss-free.parameters" id="ncm-qm-prop-gauss-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>qm_gauss</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html#NcmQMPropGauss"><span class="type">NcmQMPropGauss</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-gauss-eval" id="ncm-qm-prop-gauss-eval"></a><h3>ncm_qm_prop_gauss_eval ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_gauss_eval (<em class="parameter"><code><a class="link" href="NcmQMProp.html#NcmQMPropGauss"><span class="type">NcmQMPropGauss</span></a> *qm_gauss</code></em>,
+                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *psi</code></em>);</pre>
+<p>Evaluates <em class="parameter"><code>qm_gauss</code></em>
+ at <em class="parameter"><code>x</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-gauss-eval.parameters" id="ncm-qm-prop-gauss-eval.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>qm_gauss</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html#NcmQMPropGauss"><span class="type">NcmQMPropGauss</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>the point where to evaluate $\psi(x)$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>psi</p></td>
+<td class="parameter_description"><p>$\psi$. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out caller-allocates</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=2][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-gauss-eval-hermit" id="ncm-qm-prop-gauss-eval-hermit"></a><h3>ncm_qm_prop_gauss_eval_hermit ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_gauss_eval_hermit (<em class="parameter"><code><a class="link" href="NcmQMProp.html#NcmQMPropGauss"><span class="type">NcmQMPropGauss</span></a> *qm_gauss</code></em>,
+                               <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *psi</code></em>);</pre>
+<p>Evaluates <em class="parameter"><code>qm_gauss</code></em>
+ at <em class="parameter"><code>x</code></em>
+ removing the Hemite weight.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-gauss-eval-hermit.parameters" id="ncm-qm-prop-gauss-eval-hermit.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>qm_gauss</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html#NcmQMPropGauss"><span class="type">NcmQMPropGauss</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>the point where to evaluate $\psi(x)$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>psi</p></td>
+<td class="parameter_description"><p>$\psi$. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out caller-allocates</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=2][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-exp-new" id="ncm-qm-prop-exp-new"></a><h3>ncm_qm_prop_exp_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmQMProp.html#NcmQMPropExp"><span class="returnvalue">NcmQMPropExp</span></a> *
+ncm_qm_prop_exp_new (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> n</code></em>,
+                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> V</code></em>,
+                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> pV</code></em>);</pre>
+<p>Creates a new Exponential wave function.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-exp-new.parameters" id="ncm-qm-prop-exp-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>power-law </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>V</p></td>
+<td class="parameter_description"><p>Volume </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pV</p></td>
+<td class="parameter_description"><p>Volume momentum</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-qm-prop-exp-new.returns" id="ncm-qm-prop-exp-new.returns"></a><h4>Returns</h4>
+<p>a new <a class="link" href="NcmQMProp.html#NcmQMPropExp"><span class="type">NcmQMPropExp</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-exp-dup" id="ncm-qm-prop-exp-dup"></a><h3>ncm_qm_prop_exp_dup ()</h3>
+<pre class="programlisting"><a class="link" href="NcmQMProp.html#NcmQMPropExp"><span class="returnvalue">NcmQMPropExp</span></a> *
+ncm_qm_prop_exp_dup (<em class="parameter"><code><a class="link" href="NcmQMProp.html#NcmQMPropExp"><span class="type">NcmQMPropExp</span></a> *qm_exp</code></em>);</pre>
+<p>Duplicates <em class="parameter"><code>qm_exp</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-exp-dup.parameters" id="ncm-qm-prop-exp-dup.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>qm_exp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html#NcmQMPropExp"><span class="type">NcmQMPropExp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-qm-prop-exp-dup.returns" id="ncm-qm-prop-exp-dup.returns"></a><h4>Returns</h4>
+<p>a duplicate of <em class="parameter"><code>qm_exp</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-exp-free" id="ncm-qm-prop-exp-free"></a><h3>ncm_qm_prop_exp_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_exp_free (<em class="parameter"><code><a class="link" href="NcmQMProp.html#NcmQMPropExp"><span class="type">NcmQMPropExp</span></a> *qm_exp</code></em>);</pre>
+<p>Frees <em class="parameter"><code>qm_exp</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-exp-free.parameters" id="ncm-qm-prop-exp-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>qm_exp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html#NcmQMPropExp"><span class="type">NcmQMPropExp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-exp-eval" id="ncm-qm-prop-exp-eval"></a><h3>ncm_qm_prop_exp_eval ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_exp_eval (<em class="parameter"><code><a class="link" href="NcmQMProp.html#NcmQMPropExp"><span class="type">NcmQMPropExp</span></a> *qm_exp</code></em>,
+                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *psi</code></em>);</pre>
+<p>Evaluates <em class="parameter"><code>qm_exp</code></em>
+ at <em class="parameter"><code>x</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-exp-eval.parameters" id="ncm-qm-prop-exp-eval.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>qm_exp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html#NcmQMPropExp"><span class="type">NcmQMPropExp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>the point where to evaluate $\psi(x)$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>psi</p></td>
+<td class="parameter_description"><p>$\psi$. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out caller-allocates</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=2][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-new" id="ncm-qm-prop-new"></a><h3>ncm_qm_prop_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="returnvalue">NcmQMProp</span></a> *
+ncm_qm_prop_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> object.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-new.returns" id="ncm-qm-prop-new.returns"></a><h4>Returns</h4>
+<p> a new <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a>.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-ref" id="ncm-qm-prop-ref"></a><h3>ncm_qm_prop_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="returnvalue">NcmQMProp</span></a> *
+ncm_qm_prop_ref (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>);</pre>
+<p>Increase the reference of <em class="parameter"><code>qm_prop</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-ref.parameters" id="ncm-qm-prop-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-qm-prop-ref.returns" id="ncm-qm-prop-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>qm_prop</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-free" id="ncm-qm-prop-free"></a><h3>ncm_qm_prop_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_free (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>);</pre>
+<p>Decrease the reference count of <em class="parameter"><code>qm_prop</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-free.parameters" id="ncm-qm-prop-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-clear" id="ncm-qm-prop-clear"></a><h3>ncm_qm_prop_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_clear (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> **qm_prop</code></em>);</pre>
+<p>Decrease the reference count of <em class="parameter"><code>qm_prop</code></em>
+ by one, and sets the pointer *qm_prop to
+NULL.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-clear.parameters" id="ncm-qm-prop-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-set-nknots" id="ncm-qm-prop-set-nknots"></a><h3>ncm_qm_prop_set_nknots ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_set_nknots (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>,
+                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nknots</code></em>);</pre>
+<p>Sets the initial number of knots to be used in the wave function mesh.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-set-nknots.parameters" id="ncm-qm-prop-set-nknots.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>nknots</p></td>
+<td class="parameter_description"><p>number of knots</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-get-nknots" id="ncm-qm-prop-get-nknots"></a><h3>ncm_qm_prop_get_nknots ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_qm_prop_get_nknots (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>);</pre>
+<p>Gets the current number of knots used in the wave function mesh.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-nknots.parameters" id="ncm-qm-prop-get-nknots.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-nknots.returns" id="ncm-qm-prop-get-nknots.returns"></a><h4>Returns</h4>
+<p> the current number of knots used in the wave function mesh.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-eval" id="ncm-qm-prop-eval"></a><h3>ncm_qm_prop_eval ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_eval (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>,
+                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> y</code></em>,
+                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> t</code></em>,
+                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *G</code></em>);</pre>
+<p>Calculates the propagator at $G (x,\;y;\;t)$.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-eval.parameters" id="ncm-qm-prop-eval.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>t</p></td>
+<td class="parameter_description"><p>time difference</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>$x$ coordinate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y</p></td>
+<td class="parameter_description"><p>$y$ coordinate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>G</p></td>
+<td class="parameter_description"><p>$G$. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out caller-allocates</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=2][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-eval-array" id="ncm-qm-prop-eval-array"></a><h3>ncm_qm_prop_eval_array ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_eval_array (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>,
+                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *ya</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> n</code></em>,
+                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> t</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *G</code></em>);</pre>
+<p>Calculates the propagator at $G (x,\;y;\;t)$.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-eval-array.parameters" id="ncm-qm-prop-eval-array.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>$x$ coordinate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ya</p></td>
+<td class="parameter_description"><p>$y$ coordinate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>number of elements </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>t</p></td>
+<td class="parameter_description"><p>time difference</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>G</p></td>
+<td class="parameter_description"><p>$G$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-gauss-ini" id="ncm-qm-prop-gauss-ini"></a><h3>ncm_qm_prop_gauss_ini ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_gauss_ini (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>,
+                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mean</code></em>,
+                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> alpha</code></em>,
+                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma</code></em>,
+                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> Hi</code></em>);</pre>
+<p>Calculates the propagator at $G (x,\;y;\;t)$.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-gauss-ini.parameters" id="ncm-qm-prop-gauss-ini.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mean</p></td>
+<td class="parameter_description"><p>Gaussian mean</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>alpha</p></td>
+<td class="parameter_description"><p>power-law</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sigma</p></td>
+<td class="parameter_description"><p>standard deviation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>Hi</p></td>
+<td class="parameter_description"><p>Initial $H(t_i) = H_i$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-propto" id="ncm-qm-prop-propto"></a><h3>ncm_qm_prop_propto ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_propto (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>,
+                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> t</code></em>,
+                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *psi</code></em>);</pre>
+<p>Calculates the propagator at $G (x,\;y;\;t)$.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-propto.parameters" id="ncm-qm-prop-propto.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>t</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>psi</p></td>
+<td class="parameter_description"><p>$G$. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out caller-allocates</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> fixed-size=2][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-propto-norm" id="ncm-qm-prop-propto-norm"></a><h3>ncm_qm_prop_propto_norm ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_qm_prop_propto_norm (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>,
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> t</code></em>);</pre>
+<p>Calculates the propagator at $G (x,\;y;\;t)$.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-propto-norm.parameters" id="ncm-qm-prop-propto-norm.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>t</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-set-init-cond" id="ncm-qm-prop-set-init-cond"></a><h3>ncm_qm_prop_set_init_cond ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_set_init_cond (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmQMProp.html#NcmQMPropPsi" title="NcmQMPropPsi ()"><span class="type">NcmQMPropPsi</span></a> psi0</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> psi_data</code></em>,
+                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>,
+                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>);</pre>
+<p>Sets the initial condition using <em class="parameter"><code>psi0</code></em>
+, it calculates the best
+mesh for the initial condition using the real part of <em class="parameter"><code>psi0</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-set-init-cond.parameters" id="ncm-qm-prop-set-init-cond.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>psi0</p></td>
+<td class="parameter_description"><p>Initial wave-function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>psi_data</p></td>
+<td class="parameter_description"><p>Initial wave-function data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xi</p></td>
+<td class="parameter_description"><p>initial point</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xf</p></td>
+<td class="parameter_description"><p>final point</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-set-init-cond-gauss" id="ncm-qm-prop-set-init-cond-gauss"></a><h3>ncm_qm_prop_set_init_cond_gauss ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_set_init_cond_gauss (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmQMProp.html#NcmQMPropGauss"><span class="type">NcmQMPropGauss</span></a> *qm_gauss</code></em>,
+                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>,
+                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>);</pre>
+<p>Sets the initial condition using <em class="parameter"><code>psi0</code></em>
+ and <a class="link" href="NcmQMProp.html#ncm-qm-prop-gauss-eval" title="ncm_qm_prop_gauss_eval ()"><code class="function">ncm_qm_prop_gauss_eval()</code></a>, 
+it calculates the best mesh for the initial condition using the real 
+part of <em class="parameter"><code>psi0</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-set-init-cond-gauss.parameters" id="ncm-qm-prop-set-init-cond-gauss.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>qm_gauss</p></td>
+<td class="parameter_description"><p>Initial wave-function data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xi</p></td>
+<td class="parameter_description"><p>initial point</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xf</p></td>
+<td class="parameter_description"><p>final point</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-set-init-cond-exp" id="ncm-qm-prop-set-init-cond-exp"></a><h3>ncm_qm_prop_set_init_cond_exp ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_set_init_cond_exp (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcmQMProp.html#NcmQMPropExp"><span class="type">NcmQMPropExp</span></a> *qm_exp</code></em>,
+                               <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>,
+                               <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>);</pre>
+<p>Sets the initial condition using <em class="parameter"><code>psi0</code></em>
+ and <a class="link" href="NcmQMProp.html#ncm-qm-prop-exp-eval" title="ncm_qm_prop_exp_eval ()"><code class="function">ncm_qm_prop_exp_eval()</code></a>, 
+it calculates the best mesh for the initial condition using the real 
+part of <em class="parameter"><code>psi0</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-set-init-cond-exp.parameters" id="ncm-qm-prop-set-init-cond-exp.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>qm_exp</p></td>
+<td class="parameter_description"><p>Initial wave-function data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xi</p></td>
+<td class="parameter_description"><p>initial point</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xf</p></td>
+<td class="parameter_description"><p>final point</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-evolve" id="ncm-qm-prop-evolve"></a><h3>ncm_qm_prop_evolve ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_evolve (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>,
+                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> tf</code></em>);</pre>
+<p>Evolve the wave-function to <em class="parameter"><code>tf</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-evolve.parameters" id="ncm-qm-prop-evolve.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tf</p></td>
+<td class="parameter_description"><p>final time</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-get-knots" id="ncm-qm-prop-get-knots"></a><h3>ncm_qm_prop_get_knots ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
+ncm_qm_prop_get_knots (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>);</pre>
+<p>Gets the current state knots.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-knots.parameters" id="ncm-qm-prop-get-knots.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-knots.returns" id="ncm-qm-prop-get-knots.returns"></a><h4>Returns</h4>
+<p>the knots array. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-get-psi" id="ncm-qm-prop-get-psi"></a><h3>ncm_qm_prop_get_psi ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
+ncm_qm_prop_get_psi (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>);</pre>
+<p>Gets the current state $\psi$.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-psi.parameters" id="ncm-qm-prop-get-psi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-psi.returns" id="ncm-qm-prop-get-psi.returns"></a><h4>Returns</h4>
+<p>$\psi$. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-get-spec-knots" id="ncm-qm-prop-get-spec-knots"></a><h3>ncm_qm_prop_get_spec_knots ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
+ncm_qm_prop_get_spec_knots (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>);</pre>
+<p>Gets the current state knots.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-spec-knots.parameters" id="ncm-qm-prop-get-spec-knots.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-spec-knots.returns" id="ncm-qm-prop-get-spec-knots.returns"></a><h4>Returns</h4>
+<p>the knots array. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-get-rho" id="ncm-qm-prop-get-rho"></a><h3>ncm_qm_prop_get_rho ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
+ncm_qm_prop_get_rho (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>);</pre>
+<p>Gets the current state density $\rho_\psi \equiv \psi^*\psi$.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-rho.parameters" id="ncm-qm-prop-get-rho.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-rho.returns" id="ncm-qm-prop-get-rho.returns"></a><h4>Returns</h4>
+<p>$\rho_\psi$. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-get-dS" id="ncm-qm-prop-get-dS"></a><h3>ncm_qm_prop_get_dS ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
+ncm_qm_prop_get_dS (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>);</pre>
+<p>Gets the current state phase gradient $\partial_x S \equiv -i/2(\psi^*\partial_x\psi - \partial_x\psi^*\psi)$.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-dS.parameters" id="ncm-qm-prop-get-dS.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-dS.returns" id="ncm-qm-prop-get-dS.returns"></a><h4>Returns</h4>
+<p>$\rho_\psi$. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-get-Re-psi" id="ncm-qm-prop-get-Re-psi"></a><h3>ncm_qm_prop_get_Re_psi ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
+ncm_qm_prop_get_Re_psi (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>);</pre>
+<p>Gets the current state real part $\Re\psi$.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-Re-psi.parameters" id="ncm-qm-prop-get-Re-psi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-Re-psi.returns" id="ncm-qm-prop-get-Re-psi.returns"></a><h4>Returns</h4>
+<p>$\Re\psi$. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-get-Im-psi" id="ncm-qm-prop-get-Im-psi"></a><h3>ncm_qm_prop_get_Im_psi ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
+ncm_qm_prop_get_Im_psi (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>);</pre>
+<p>Gets the current state imaginary part $\Re\psi$.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-Im-psi.parameters" id="ncm-qm-prop-get-Im-psi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-qm-prop-get-Im-psi.returns" id="ncm-qm-prop-get-Im-psi.returns"></a><h4>Returns</h4>
+<p>$\Im\psi$. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-qm-prop-evolve-spec" id="ncm-qm-prop-evolve-spec"></a><h3>ncm_qm_prop_evolve_spec ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_qm_prop_evolve_spec (<em class="parameter"><code><a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a> *qm_prop</code></em>,
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> t</code></em>);</pre>
+<p>Evolves the system using spectral methods.</p>
+<div class="refsect3">
+<a name="ncm-qm-prop-evolve-spec.parameters" id="ncm-qm-prop-evolve-spec.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>qm_prop</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmQMProp.html" title="NcmQMProp"><span class="type">NcmQMProp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>t</p></td>
+<td class="parameter_description"><p>final time</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmQMProp.other_details" id="NcmQMProp.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcmQMPropGauss-struct" id="NcmQMPropGauss-struct"></a><h3>struct NcmQMPropGauss</h3>
+<pre class="programlisting">struct NcmQMPropGauss {
+};
+</pre>
+<p>Gaussian wave-function.</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmQMPropExp-struct" id="NcmQMPropExp-struct"></a><h3>struct NcmQMPropExp</h3>
+<pre class="programlisting">struct NcmQMPropExp {
+};
+</pre>
+<p>Exponential wave-function.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmQMProp.property-details" id="NcmQMProp.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmQMProp--abstol" id="NcmQMProp--abstol"></a><h3>The <code class="literal">“abstol”</code> property</h3>
+<pre class="programlisting">  “abstol”                   <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>absolute tolerance.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 1e-50</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmQMProp--lambda" id="NcmQMProp--lambda"></a><h3>The <code class="literal">“lambda”</code> property</h3>
+<pre class="programlisting">  “lambda”                   <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>\lambda.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0.5</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmQMProp--nknots" id="NcmQMProp--nknots"></a><h3>The <code class="literal">“nknots”</code> property</h3>
+<pre class="programlisting">  “nknots”                   <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>n_k.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 6</p>
+<p>Default value: 50</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmQMProp--noboundary" id="NcmQMProp--noboundary"></a><h3>The <code class="literal">“noboundary”</code> property</h3>
+<pre class="programlisting">  “noboundary”               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>no boundary condition at x_f.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: TRUE</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmQMProp--np" id="NcmQMProp--np"></a><h3>The <code class="literal">“np”</code> property</h3>
+<pre class="programlisting">  “np”                       <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>n_p.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 10</p>
+<p>Default value: 20000</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmQMProp--reltol" id="NcmQMProp--reltol"></a><h3>The <code class="literal">“reltol”</code> property</h3>
+<pre class="programlisting">  “reltol”                   <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>relative tolerance.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [0,1]</p>
+<p>Default value: 1e-09</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.27</div>
+</div></div></body>
+</html>

@@ -7,7 +7,7 @@
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
 <link rel="home" href="index.html" title="NumCosmo Reference Manual" />
 <link rel="next" href="ch01.html" title="NumCosmo Overview" />
-<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -22,18 +22,6 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
 </script>
-
-<script type="text/javascript">
-//<![CDATA[
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-36056599-1', 'auto');
-  ga('send', 'pageview');
-//]]>
-</script>
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
 <div class="book">
@@ -41,7 +29,7 @@
 <div>
 <div><table class="navigation" id="top" width="100%" cellpadding="2" cellspacing="0"><tr><th valign="middle"><p class="title">NumCosmo Reference Manual</p></th></tr></table></div>
 <div><p class="releaseinfo">
-      for NumCosmo 0.13.3.
+      for NumCosmo 0.14.0.
       The latest version of this documentation can be found on-line at
       <a class="ulink" href="https://numcosmo.github.io/manual/" target="_top">https://numcosmo.github.io/manual/</a>,      
       <a class="ulink" href="https://numcosmo.github.io/" target="_top">NumCosmo website</a>.
@@ -107,6 +95,9 @@
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmRNG.html">NcmRNG</a></span><span class="refpurpose"> — Encapsulated GSL random number generator with support for multhreading.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmQMProp.html">NcmQMProp</a></span><span class="refpurpose"> — Numerical QM propagator object</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmQuaternion.html">NcmQuaternion</a></span><span class="refpurpose"> — Quaternions algebra, three-vectors and mapping to matrix.</span>
@@ -196,6 +187,9 @@
 <dt>
 <span class="refentrytitle"><a href="numcosmo-NcmSFSphericalBesselInteg.html">NcmSFSphericalBesselInteg</a></span><span class="refpurpose"> — Double precision spherical bessel integrals implementation.</span>
 </dt>
+<dt>
+<span class="refentrytitle"><a href="NcmSFSphericalHarmonics.html">NcmSFSphericalHarmonics</a></span><span class="refpurpose"> — Spherical Harmonics object</span>
+</dt>
 </dl></dd>
 <dt><span class="section"><a href="ch02s08.html">Models and Parameters</a></span></dt>
 <dd><dl>
@@ -255,6 +249,9 @@
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmDataPoisson.html">NcmDataPoisson</a></span><span class="refpurpose"> — Abstract class for implementing poisson distributed data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmDataVoigt.html">NcmDataVoigt</a></span><span class="refpurpose"> — Abstract class for implementing voigt distributed data.</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmDataDist1d.html">NcmDataDist1d</a></span><span class="refpurpose"> — Abstract class for one variable distribution data.</span>
@@ -381,17 +378,9 @@
 </dt>
 </dl></dd>
 <dt><span class="section"><a href="ch02s12.html">Spherical maps and Healpix</a></span></dt>
-<dd><dl>
-<dt>
-<span class="refentrytitle"><a href="NcmSphereMapPix.html">NcmSphereMapPix</a></span><span class="refpurpose"> — An re-implementation of Healpix.</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="numcosmo-NcmSphereHealpix.html">NcmSphereHealpix</a></span><span class="refpurpose"> — Healpix re-implementation</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="NcmSphereMap.html">NcmSphereMap</a></span><span class="refpurpose"> — A spherical shell map.</span>
-</dt>
-</dl></dd>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="NcmSphereMap.html">NcmSphereMap</a></span><span class="refpurpose"> — An re-implementation of Healpix.</span>
+</dt></dl></dd>
 <dt><span class="section"><a href="ch02s13.html">GObject introspection compatibility</a></span></dt>
 <dd><dl><dt>
 <span class="refentrytitle"><a href="numcosmo-Gir-Scanning-Compatibility.html">Gir Scanning Compatibility</a></span><span class="refpurpose"> — Gir scanning types stubs.</span>
@@ -442,9 +431,6 @@
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcHICosmoVexp.html">NcHICosmoVexp</a></span><span class="refpurpose"> — Single scalar field with an exponential potential</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="numcosmo-NcHICosmoQG.html">NcHICosmoQG</a></span><span class="refpurpose"> — Quantum gravity bouncing model.</span>
 </dt>
 </dl></dd>
 <dt><span class="section"><a href="ch03s03.html">Kinematic Models</a></span></dt>
@@ -533,12 +519,6 @@
 <dt><span class="chapter"><a href="ch07.html">Perturbations</a></span></dt>
 <dd><dl>
 <dt>
-<span class="refentrytitle"><a href="numcosmo-NcLinearPert.html">NcLinearPert</a></span><span class="refpurpose"> — Linear perturbations.</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="numcosmo-NcLinearPertCov.html">NcLinearPertCov</a></span><span class="refpurpose"> — Perturbations covariance.</span>
-</dt>
-<dt>
 <span class="refentrytitle"><a href="NcHIPert.html">NcHIPert</a></span><span class="refpurpose"> — Abstract class for perturbation in homogeneous and isotropic cosmologies.</span>
 </dt>
 <dt>
@@ -559,7 +539,7 @@
 <dt>
 <span class="refentrytitle"><a href="NcHIPertBoltzmannStd.html">NcHIPertBoltzmannStd</a></span><span class="refpurpose"> — Perturbations object for standard Boltzmann hierarchy model.</span>
 </dt>
-<dt><span class="section"><a href="ch07.html#id-1.8.11">CLASS Backend</a></span></dt>
+<dt><span class="section"><a href="ch07.html#id-1.8.9">CLASS Backend</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcCBEPrecision.html">NcCBEPrecision</a></span><span class="refpurpose"> — CLASS (Cosmic Linear Anisotropy Solving System) backend for perturbations</span>
@@ -603,9 +583,6 @@
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcTransferFuncCAMB.html">NcTransferFuncCAMB</a></span><span class="refpurpose"> — Transfer function using CAMB as backend.</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="NcTransferFuncPert.html">NcTransferFuncPert</a></span><span class="refpurpose"> — Transfer function using NcHIPertBoltzmann as backend.</span>
 </dt>
 </dl></dd>
 <dt>
@@ -906,6 +883,6 @@
 </dl></div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.26.1</div>
+<hr />Generated by GTK-Doc V1.27</div>
 </div></div></body>
 </html>
