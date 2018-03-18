@@ -6,7 +6,8 @@ title: Download and installation
 ## Download
 
 Version {{ site.version }} of NumCosmo is the latest release version available from our web
-[releases site](http://download.savannah.gnu.org/releases/numcosmo/).
+[releases site](http://download.savannah.gnu.org/releases/numcosmo/), the
+releases can also be found at NumCosmo github page [github releases](https://github.com/NumCosmo/NumCosmo/releases).
 You can also download the master branch [zip]({{site.github.repo}}/archive/master.zip)
 or [tarball]({{site.github.repo}}/archive/master.tar.gz).
 There are pre-compiled packages in [openSUSE Build Service](https://build.opensuse.org/project/show?project=home%3Avitenti).
