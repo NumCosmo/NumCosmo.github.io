@@ -16,6 +16,22 @@ one can find the log of the compilation containing the step-by-step process.
 
 Travis-ci test build: [![Build Status](https://travis-ci.org/NumCosmo/NumCosmo.svg?branch=master)](https://travis-ci.org/NumCosmo/NumCosmo)
 
+## Install using conda
+
+NumCosmo and all necessary dependencies can be installed using conda (for the full anaconda installation click 
+[here](https://www.anaconda.com/download/) or [here](https://conda.io/miniconda.html) for miniconda).
+It is possible to install numcosmo with and without adding conda-forge to the installation channels:
+
+  - without adding conda-forge.
+    ```bash
+    conda install -c conda-forge numcosmo
+    ```
+  - with conda-forge added to channels:
+    ```bash
+    conda config --add channels conda-forge
+    conda install numcosmo
+    ```
+
 ## Requirements
 
 The requirements below can be found on most Linux distribution, click [here](#pack_deb)
