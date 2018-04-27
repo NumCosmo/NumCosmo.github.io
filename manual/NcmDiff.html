@@ -9,7 +9,7 @@
 <link rel="up" href="ch02.html#id-1.3.2" title="Miscellaneous Objects" />
 <link rel="prev" href="numcosmo-NcmUtil.html" title="NcmUtil" />
 <link rel="next" href="NcmVector.html" title="NcmVector" />
-<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -23,18 +23,6 @@
 //]]>
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
-</script>
-
-<script type="text/javascript">
-//<![CDATA[
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-36056599-1', 'auto');
-  ga('send', 'pageview');
-//]]>
 </script>
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
@@ -157,6 +145,14 @@
 </tr>
 <tr>
 <td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmDiff.html#ncm-diff-get-ini-h" title="ncm_diff_get_ini_h ()">ncm_diff_get_ini_h</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -177,6 +173,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="NcmDiff.html#ncm-diff-set-round-off-pad" title="ncm_diff_set_round_off_pad ()">ncm_diff_set_round_off_pad</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmDiff.html#ncm-diff-set-ini-h" title="ncm_diff_set_ini_h ()">ncm_diff_set_ini_h</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -319,6 +323,11 @@
 <col width="200px" class="properties_flags" />
 </colgroup>
 <tbody>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="NcmDiff.html#NcmDiff--ini-h" title="The “ini-h” property">ini-h</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
 <tr>
 <td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcmDiff.html#NcmDiff--max-order" title="The “max-order” property">max-order</a></td>
@@ -535,7 +544,7 @@ ncm_diff_get_richardson_step (<em class="parameter"><code><a class="link" href="
 <a name="ncm-diff-get-round-off-pad" id="ncm-diff-get-round-off-pad"></a><h3>ncm_diff_get_round_off_pad ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_diff_get_round_off_pad (<em class="parameter"><code><a class="link" href="NcmDiff.html" title="NcmDiff"><span class="type">NcmDiff</span></a> *diff</code></em>);</pre>
-<p>Gets the current round-off padding used in the tables.</p>
+<p>Gets the current round-off padding used in calculations.</p>
 <div class="refsect3">
 <a name="ncm-diff-get-round-off-pad.parameters" id="ncm-diff-get-round-off-pad.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -553,7 +562,33 @@ ncm_diff_get_round_off_pad (<em class="parameter"><code><a class="link" href="Nc
 </div>
 <div class="refsect3">
 <a name="ncm-diff-get-round-off-pad.returns" id="ncm-diff-get-round-off-pad.returns"></a><h4>Returns</h4>
-<p> the maximum order.</p>
+<p> the round-off padding.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-diff-get-ini-h" id="ncm-diff-get-ini-h"></a><h3>ncm_diff_get_ini_h ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_diff_get_ini_h (<em class="parameter"><code><a class="link" href="NcmDiff.html" title="NcmDiff"><span class="type">NcmDiff</span></a> *diff</code></em>);</pre>
+<p>Gets the current initial step used in calculations.</p>
+<div class="refsect3">
+<a name="ncm-diff-get-ini-h.parameters" id="ncm-diff-get-ini-h.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>diff</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDiff.html" title="NcmDiff"><span class="type">NcmDiff</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-diff-get-ini-h.returns" id="ncm-diff-get-ini-h.returns"></a><h4>Returns</h4>
+<p> the initial step.</p>
 </div>
 </div>
 <hr />
@@ -641,6 +676,36 @@ ncm_diff_set_round_off_pad (<em class="parameter"><code><a class="link" href="Nc
 <tr>
 <td class="parameter_name"><p>roff_pad</p></td>
 <td class="parameter_description"><p>the new round-off padding</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-diff-set-ini-h" id="ncm-diff-set-ini-h"></a><h3>ncm_diff_set_ini_h ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_diff_set_ini_h (<em class="parameter"><code><a class="link" href="NcmDiff.html" title="NcmDiff"><span class="type">NcmDiff</span></a> *diff</code></em>,
+                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> ini_h</code></em>);</pre>
+<p>Sets the initial step used in the calculations.</p>
+<div class="refsect3">
+<a name="ncm-diff-set-ini-h.parameters" id="ncm-diff-set-ini-h.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>diff</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDiff.html" title="NcmDiff"><span class="type">NcmDiff</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ini_h</p></td>
+<td class="parameter_description"><p>the new initial step</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1528,6 +1593,15 @@ at <em class="parameter"><code>x</code></em>
 <div class="refsect1">
 <a name="NcmDiff.property-details" id="NcmDiff.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
+<a name="NcmDiff--ini-h" id="NcmDiff--ini-h"></a><h3>The <code class="literal">“ini-h”</code> property</h3>
+<pre class="programlisting">  “ini-h”                    <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>Initial h.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 2.22045e-16</p>
+<p>Default value: 0.0110485</p>
+</div>
+<hr />
+<div class="refsect2">
 <a name="NcmDiff--max-order" id="NcmDiff--max-order"></a><h3>The <code class="literal">“max-order”</code> property</h3>
 <pre class="programlisting">  “max-order”                <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Maximum order.</p>
@@ -1556,6 +1630,6 @@ at <em class="parameter"><code>x</code></em>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.26.1</div>
+<hr />Generated by GTK-Doc V1.27</div>
 </div></div></body>
 </html>

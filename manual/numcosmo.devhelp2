@@ -22,6 +22,7 @@
         <sub name="NcmFuncEval" link="numcosmo-NcmFuncEval.html"/>
         <sub name="NcmTimer" link="NcmTimer.html"/>
         <sub name="NcmRNG" link="NcmRNG.html"/>
+        <sub name="NcmQMProp" link="NcmQMProp.html"/>
         <sub name="NcmQuaternion" link="NcmQuaternion.html"/>
       </sub>
       <sub name="FFTLog" link="ch02s02.html">
@@ -58,6 +59,7 @@
         <sub name="NcmMpsfSBesselInt" link="numcosmo-NcmMpsfSBesselInt.html"/>
         <sub name="NcmSFSBessel" link="numcosmo-NcmSFSBessel.html"/>
         <sub name="NcmSFSphericalBesselInteg" link="numcosmo-NcmSFSphericalBesselInteg.html"/>
+        <sub name="NcmSFSphericalHarmonics" link="NcmSFSphericalHarmonics.html"/>
       </sub>
       <sub name="Models and Parameters" link="ch02s08.html">
         <sub name="NcmModel" link="NcmModel.html"/>
@@ -81,6 +83,7 @@
         <sub name="NcmDataGaussDiag" link="NcmDataGaussDiag.html"/>
         <sub name="NcmDataGaussCov" link="NcmDataGaussCov.html"/>
         <sub name="NcmDataPoisson" link="NcmDataPoisson.html"/>
+        <sub name="NcmDataVoigt" link="NcmDataVoigt.html"/>
         <sub name="NcmDataDist1d" link="NcmDataDist1d.html"/>
         <sub name="NcmDataDist2d" link="NcmDataDist2d.html"/>
       </sub>
@@ -125,8 +128,6 @@
         <sub name="NcmABC" link="NcmABC.html"/>
       </sub>
       <sub name="Spherical maps and Healpix" link="ch02s12.html">
-        <sub name="NcmSphereMapPix" link="NcmSphereMapPix.html"/>
-        <sub name="NcmSphereHealpix" link="numcosmo-NcmSphereHealpix.html"/>
         <sub name="NcmSphereMap" link="NcmSphereMap.html"/>
       </sub>
       <sub name="GObject introspection compatibility" link="ch02s13.html">
@@ -150,7 +151,6 @@
       <sub name="Quantum Gravity Bounce" link="ch03s02.html">
         <sub name="NcHICosmoQGRW" link="NcHICosmoQGRW.html"/>
         <sub name="NcHICosmoVexp" link="NcHICosmoVexp.html"/>
-        <sub name="NcHICosmoQG" link="numcosmo-NcHICosmoQG.html"/>
       </sub>
       <sub name="Kinematic Models" link="ch03s03.html">
         <sub name="NcHICosmoQConst" link="NcHICosmoQConst.html"/>
@@ -189,8 +189,6 @@
       <sub name="NcHIReionCambReparamTau" link="NcHIReionCambReparamTau.html"/>
     </sub>
     <sub name="Perturbations" link="ch07.html">
-      <sub name="NcLinearPert" link="numcosmo-NcLinearPert.html"/>
-      <sub name="NcLinearPertCov" link="numcosmo-NcLinearPertCov.html"/>
       <sub name="NcHIPert" link="NcHIPert.html"/>
       <sub name="NcHIPertWKB" link="NcHIPertWKB.html"/>
       <sub name="NcHIPertAdiab" link="NcHIPertAdiab.html"/>
@@ -198,7 +196,7 @@
       <sub name="NcHIPertTwoFluids" link="NcHIPertTwoFluids.html"/>
       <sub name="NcHIPertBoltzmann" link="NcHIPertBoltzmann.html"/>
       <sub name="NcHIPertBoltzmannStd" link="NcHIPertBoltzmannStd.html"/>
-      <sub name="CLASS Backend" link="ch07.html#id-1.8.11">
+      <sub name="CLASS Backend" link="ch07.html#id-1.8.9">
         <sub name="NcCBEPrecision" link="NcCBEPrecision.html"/>
         <sub name="NcCBE" link="NcCBE.html"/>
         <sub name="NcHIPertBoltzmannCBE" link="NcHIPertBoltzmannCBE.html"/>
@@ -218,7 +216,6 @@
         <sub name="NcTransferFuncBBKS" link="NcTransferFuncBBKS.html"/>
         <sub name="NcTransferFuncEH" link="NcTransferFuncEH.html"/>
         <sub name="NcTransferFuncCAMB" link="NcTransferFuncCAMB.html"/>
-        <sub name="NcTransferFuncPert" link="NcTransferFuncPert.html"/>
       </sub>
       <sub name="NcGrowthFunc" link="NcGrowthFunc.html"/>
       <sub name="Matter Power Spectrum" link="ch08s03.html">
@@ -578,7 +575,6 @@
     <keyword type="function" name="ncm_topology_comoving_a0_lss ()" link="numcosmo-NcmUtil.html#ncm-topology-comoving-a0-lss"/>
     <keyword type="function" name="ncm_topology_sigma_comoving_a0_lss ()" link="numcosmo-NcmUtil.html#ncm-topology-sigma-comoving-a0-lss"/>
     <keyword type="function" name="ncm_sphPlm_x ()" link="numcosmo-NcmUtil.html#ncm-sphPlm-x"/>
-    <keyword type="function" name="ncm_sphPlm_test_theta ()" link="numcosmo-NcmUtil.html#ncm-sphPlm-test-theta"/>
     <keyword type="function" name="ncm_sum ()" link="numcosmo-NcmUtil.html#ncm-sum"/>
     <keyword type="function" name="ncm_util_sqrt1px_m1 ()" link="numcosmo-NcmUtil.html#ncm-util-sqrt1px-m1"/>
     <keyword type="function" name="ncm_util_ln1pexpx ()" link="numcosmo-NcmUtil.html#ncm-util-ln1pexpx"/>
@@ -612,8 +608,14 @@
     <keyword type="function" name="ncm_complex_dup ()" link="numcosmo-NcmUtil.html#ncm-complex-dup"/>
     <keyword type="function" name="ncm_complex_free ()" link="numcosmo-NcmUtil.html#ncm-complex-free"/>
     <keyword type="function" name="ncm_complex_clear ()" link="numcosmo-NcmUtil.html#ncm-complex-clear"/>
+    <keyword type="function" name="ncm_complex_set ()" link="numcosmo-NcmUtil.html#ncm-complex-set"/>
+    <keyword type="function" name="ncm_complex_set_zero ()" link="numcosmo-NcmUtil.html#ncm-complex-set-zero"/>
     <keyword type="function" name="ncm_complex_Re ()" link="numcosmo-NcmUtil.html#ncm-complex-Re"/>
     <keyword type="function" name="ncm_complex_Im ()" link="numcosmo-NcmUtil.html#ncm-complex-Im"/>
+    <keyword type="function" name="ncm_complex_res_add_mul_real ()" link="numcosmo-NcmUtil.html#ncm-complex-res-add-mul-real"/>
+    <keyword type="function" name="ncm_complex_res_add_mul ()" link="numcosmo-NcmUtil.html#ncm-complex-res-add-mul"/>
+    <keyword type="function" name="ncm_complex_mul_real ()" link="numcosmo-NcmUtil.html#ncm-complex-mul-real"/>
+    <keyword type="function" name="ncm_complex_res_mul ()" link="numcosmo-NcmUtil.html#ncm-complex-res-mul"/>
     <keyword type="function" name="ncm_util_smooth_trans ()" link="numcosmo-NcmUtil.html#ncm-util-smooth-trans"/>
     <keyword type="function" name="ncm_util_smooth_trans_get_theta ()" link="numcosmo-NcmUtil.html#ncm-util-smooth-trans-get-theta"/>
     <keyword type="macro" name="exp10()" link="numcosmo-NcmUtil.html#exp10"/>
@@ -629,14 +631,7 @@
     <keyword type="macro" name="NCM_CEIL_TRUNC()" link="numcosmo-NcmUtil.html#NCM-CEIL-TRUNC:CAPS"/>
     <keyword type="macro" name="NCM_ROUND_TRUNC()" link="numcosmo-NcmUtil.html#NCM-ROUND-TRUNC:CAPS"/>
     <keyword type="macro" name="NCM_TEST_GSL_RESULT()" link="numcosmo-NcmUtil.html#NCM-TEST-GSL-RESULT:CAPS"/>
-    <keyword type="macro" name="NCM_COMPLEX_INC_MUL_REAL_TEST()" link="numcosmo-NcmUtil.html#NCM-COMPLEX-INC-MUL-REAL-TEST:CAPS"/>
-    <keyword type="macro" name="NCM_COMPLEX_INC_MUL_REAL()" link="numcosmo-NcmUtil.html#NCM-COMPLEX-INC-MUL-REAL:CAPS"/>
-    <keyword type="macro" name="NCM_COMPLEX_INC_MUL()" link="numcosmo-NcmUtil.html#NCM-COMPLEX-INC-MUL:CAPS"/>
-    <keyword type="macro" name="NCM_COMPLEX_INC_MUL_MUL_REAL()" link="numcosmo-NcmUtil.html#NCM-COMPLEX-INC-MUL-MUL-REAL:CAPS"/>
-    <keyword type="macro" name="NCM_COMPLEX_MUL_REAL()" link="numcosmo-NcmUtil.html#NCM-COMPLEX-MUL-REAL:CAPS"/>
-    <keyword type="macro" name="NCM_COMPLEX_MUL()" link="numcosmo-NcmUtil.html#NCM-COMPLEX-MUL:CAPS"/>
-    <keyword type="macro" name="NCM_COMPLEX_ADD()" link="numcosmo-NcmUtil.html#NCM-COMPLEX-ADD:CAPS"/>
-    <keyword type="macro" name="NCM_COMPLEX_MUL_CONJUGATE()" link="numcosmo-NcmUtil.html#NCM-COMPLEX-MUL-CONJUGATE:CAPS"/>
+    <keyword type="macro" name="NCM_COMPLEX_PTR()" link="numcosmo-NcmUtil.html#NCM-COMPLEX-PTR:CAPS"/>
     <keyword type="macro" name="NCM_WRITE_INT32()" link="numcosmo-NcmUtil.html#NCM-WRITE-INT32:CAPS"/>
     <keyword type="macro" name="NCM_WRITE_UINT32()" link="numcosmo-NcmUtil.html#NCM-WRITE-UINT32:CAPS"/>
     <keyword type="macro" name="NCM_WRITE_INT64()" link="numcosmo-NcmUtil.html#NCM-WRITE-INT64:CAPS"/>
@@ -656,6 +651,7 @@
     <keyword type="function" name="ncm_util_KScdf ()" link="numcosmo-NcmUtil.html#ncm-util-KScdf"/>
     <keyword type="function" name="ncm_util_KSfbar ()" link="numcosmo-NcmUtil.html#ncm-util-KSfbar"/>
     <keyword type="function" name="ncm_util_swilk ()" link="numcosmo-NcmUtil.html#ncm-util-swilk"/>
+    <keyword type="macro" name="NCM_COMPLEX_ZERO" link="numcosmo-NcmUtil.html#NCM-COMPLEX-ZERO:CAPS"/>
     <keyword type="macro" name="KOLMOGOROVSMIRNOVDIST_H" link="numcosmo-NcmUtil.html#KOLMOGOROVSMIRNOVDIST-H:CAPS"/>
     <keyword type="function" name="NcmDiffFuncNtoM ()" link="NcmDiff.html#NcmDiffFuncNtoM"/>
     <keyword type="function" name="NcmDiffFunc1toM ()" link="NcmDiff.html#NcmDiffFunc1toM"/>
@@ -668,9 +664,11 @@
     <keyword type="function" name="ncm_diff_get_max_order ()" link="NcmDiff.html#ncm-diff-get-max-order"/>
     <keyword type="function" name="ncm_diff_get_richardson_step ()" link="NcmDiff.html#ncm-diff-get-richardson-step"/>
     <keyword type="function" name="ncm_diff_get_round_off_pad ()" link="NcmDiff.html#ncm-diff-get-round-off-pad"/>
+    <keyword type="function" name="ncm_diff_get_ini_h ()" link="NcmDiff.html#ncm-diff-get-ini-h"/>
     <keyword type="function" name="ncm_diff_set_max_order ()" link="NcmDiff.html#ncm-diff-set-max-order"/>
     <keyword type="function" name="ncm_diff_set_richardson_step ()" link="NcmDiff.html#ncm-diff-set-richardson-step"/>
     <keyword type="function" name="ncm_diff_set_round_off_pad ()" link="NcmDiff.html#ncm-diff-set-round-off-pad"/>
+    <keyword type="function" name="ncm_diff_set_ini_h ()" link="NcmDiff.html#ncm-diff-set-ini-h"/>
     <keyword type="function" name="ncm_diff_log_central_tables ()" link="NcmDiff.html#ncm-diff-log-central-tables"/>
     <keyword type="function" name="ncm_diff_log_forward_tables ()" link="NcmDiff.html#ncm-diff-log-forward-tables"/>
     <keyword type="function" name="ncm_diff_log_backward_tables ()" link="NcmDiff.html#ncm-diff-log-backward-tables"/>
@@ -688,6 +686,7 @@
     <keyword type="function" name="ncm_diff_rc_d1_1_to_1 ()" link="NcmDiff.html#ncm-diff-rc-d1-1-to-1"/>
     <keyword type="function" name="ncm_diff_rc_d2_1_to_1 ()" link="NcmDiff.html#ncm-diff-rc-d2-1-to-1"/>
     <keyword type="macro" name="NCM_DIFF_ERR_PAD" link="NcmDiff.html#NCM-DIFF-ERR-PAD:CAPS"/>
+    <keyword type="property" name="The “ini-h” property" link="NcmDiff.html#NcmDiff--ini-h"/>
     <keyword type="property" name="The “max-order” property" link="NcmDiff.html#NcmDiff--max-order"/>
     <keyword type="property" name="The “richardson-step” property" link="NcmDiff.html#NcmDiff--richardson-step"/>
     <keyword type="property" name="The “round-off-pad” property" link="NcmDiff.html#NcmDiff--round-off-pad"/>
@@ -828,6 +827,9 @@
     <keyword type="function" name="ncm_matrix_dup ()" link="NcmMatrix.html#ncm-matrix-dup"/>
     <keyword type="function" name="ncm_matrix_substitute ()" link="NcmMatrix.html#ncm-matrix-substitute"/>
     <keyword type="function" name="ncm_matrix_add_mul ()" link="NcmMatrix.html#ncm-matrix-add-mul"/>
+    <keyword type="function" name="ncm_matrix_cmp ()" link="NcmMatrix.html#ncm-matrix-cmp"/>
+    <keyword type="function" name="ncm_matrix_cmp_diag ()" link="NcmMatrix.html#ncm-matrix-cmp-diag"/>
+    <keyword type="function" name="ncm_matrix_norma_diag ()" link="NcmMatrix.html#ncm-matrix-norma-diag"/>
     <keyword type="function" name="ncm_matrix_free ()" link="NcmMatrix.html#ncm-matrix-free"/>
     <keyword type="function" name="ncm_matrix_clear ()" link="NcmMatrix.html#ncm-matrix-clear"/>
     <keyword type="function" name="ncm_matrix_const_free ()" link="NcmMatrix.html#ncm-matrix-const-free"/>
@@ -836,7 +838,9 @@
     <keyword type="function" name="ncm_matrix_dgemm ()" link="NcmMatrix.html#ncm-matrix-dgemm"/>
     <keyword type="function" name="ncm_matrix_cholesky_decomp ()" link="NcmMatrix.html#ncm-matrix-cholesky-decomp"/>
     <keyword type="function" name="ncm_matrix_cholesky_inverse ()" link="NcmMatrix.html#ncm-matrix-cholesky-inverse"/>
+    <keyword type="function" name="ncm_matrix_cholesky_lndet ()" link="NcmMatrix.html#ncm-matrix-cholesky-lndet"/>
     <keyword type="function" name="ncm_matrix_log_vals ()" link="NcmMatrix.html#ncm-matrix-log-vals"/>
+    <keyword type="function" name="ncm_matrix_fill_rand_cov ()" link="NcmMatrix.html#ncm-matrix-fill-rand-cov"/>
     <keyword type="enum" name="enum NcmMatrixInternal" link="NcmMatrix.html#NcmMatrixInternal"/>
     <keyword type="struct" name="struct NcmMatrix" link="NcmMatrix.html#NcmMatrix-struct"/>
     <keyword type="property" name="The “values” property" link="NcmMatrix.html#NcmMatrix--values"/>
@@ -945,6 +949,8 @@
     <keyword type="function" name="ncm_integral1d_eval_gauss_hermite ()" link="NcmIntegral1d.html#ncm-integral1d-eval-gauss-hermite"/>
     <keyword type="function" name="ncm_integral1d_eval_gauss_hermite_r_p ()" link="NcmIntegral1d.html#ncm-integral1d-eval-gauss-hermite-r-p"/>
     <keyword type="function" name="ncm_integral1d_eval_gauss_hermite_mur ()" link="NcmIntegral1d.html#ncm-integral1d-eval-gauss-hermite-mur"/>
+    <keyword type="function" name="ncm_integral1d_eval_gauss_hermite1_p ()" link="NcmIntegral1d.html#ncm-integral1d-eval-gauss-hermite1-p"/>
+    <keyword type="function" name="ncm_integral1d_eval_gauss_hermite1_r_p ()" link="NcmIntegral1d.html#ncm-integral1d-eval-gauss-hermite1-r-p"/>
     <keyword type="function" name="ncm_integral1d_eval_gauss_laguerre ()" link="NcmIntegral1d.html#ncm-integral1d-eval-gauss-laguerre"/>
     <keyword type="function" name="ncm_integral1d_eval_gauss_laguerre_r ()" link="NcmIntegral1d.html#ncm-integral1d-eval-gauss-laguerre-r"/>
     <keyword type="macro" name="NCM_INTEGRAL1D_DEFAULT_PARTITION" link="NcmIntegral1d.html#NCM-INTEGRAL1D-DEFAULT-PARTITION:CAPS"/>
@@ -1043,6 +1049,47 @@
     <keyword type="property" name="The “algorithm” property" link="NcmRNG.html#NcmRNG--algorithm"/>
     <keyword type="property" name="The “seed” property" link="NcmRNG.html#NcmRNG--seed"/>
     <keyword type="property" name="The “state” property" link="NcmRNG.html#NcmRNG--state"/>
+    <keyword type="function" name="NcmQMPropPsi ()" link="NcmQMProp.html#NcmQMPropPsi"/>
+    <keyword type="function" name="ncm_qm_prop_gauss_new ()" link="NcmQMProp.html#ncm-qm-prop-gauss-new"/>
+    <keyword type="function" name="ncm_qm_prop_gauss_dup ()" link="NcmQMProp.html#ncm-qm-prop-gauss-dup"/>
+    <keyword type="function" name="ncm_qm_prop_gauss_free ()" link="NcmQMProp.html#ncm-qm-prop-gauss-free"/>
+    <keyword type="function" name="ncm_qm_prop_gauss_eval ()" link="NcmQMProp.html#ncm-qm-prop-gauss-eval"/>
+    <keyword type="function" name="ncm_qm_prop_gauss_eval_hermit ()" link="NcmQMProp.html#ncm-qm-prop-gauss-eval-hermit"/>
+    <keyword type="function" name="ncm_qm_prop_exp_new ()" link="NcmQMProp.html#ncm-qm-prop-exp-new"/>
+    <keyword type="function" name="ncm_qm_prop_exp_dup ()" link="NcmQMProp.html#ncm-qm-prop-exp-dup"/>
+    <keyword type="function" name="ncm_qm_prop_exp_free ()" link="NcmQMProp.html#ncm-qm-prop-exp-free"/>
+    <keyword type="function" name="ncm_qm_prop_exp_eval ()" link="NcmQMProp.html#ncm-qm-prop-exp-eval"/>
+    <keyword type="function" name="ncm_qm_prop_new ()" link="NcmQMProp.html#ncm-qm-prop-new"/>
+    <keyword type="function" name="ncm_qm_prop_ref ()" link="NcmQMProp.html#ncm-qm-prop-ref"/>
+    <keyword type="function" name="ncm_qm_prop_free ()" link="NcmQMProp.html#ncm-qm-prop-free"/>
+    <keyword type="function" name="ncm_qm_prop_clear ()" link="NcmQMProp.html#ncm-qm-prop-clear"/>
+    <keyword type="function" name="ncm_qm_prop_set_nknots ()" link="NcmQMProp.html#ncm-qm-prop-set-nknots"/>
+    <keyword type="function" name="ncm_qm_prop_get_nknots ()" link="NcmQMProp.html#ncm-qm-prop-get-nknots"/>
+    <keyword type="function" name="ncm_qm_prop_eval ()" link="NcmQMProp.html#ncm-qm-prop-eval"/>
+    <keyword type="function" name="ncm_qm_prop_eval_array ()" link="NcmQMProp.html#ncm-qm-prop-eval-array"/>
+    <keyword type="function" name="ncm_qm_prop_gauss_ini ()" link="NcmQMProp.html#ncm-qm-prop-gauss-ini"/>
+    <keyword type="function" name="ncm_qm_prop_propto ()" link="NcmQMProp.html#ncm-qm-prop-propto"/>
+    <keyword type="function" name="ncm_qm_prop_propto_norm ()" link="NcmQMProp.html#ncm-qm-prop-propto-norm"/>
+    <keyword type="function" name="ncm_qm_prop_set_init_cond ()" link="NcmQMProp.html#ncm-qm-prop-set-init-cond"/>
+    <keyword type="function" name="ncm_qm_prop_set_init_cond_gauss ()" link="NcmQMProp.html#ncm-qm-prop-set-init-cond-gauss"/>
+    <keyword type="function" name="ncm_qm_prop_set_init_cond_exp ()" link="NcmQMProp.html#ncm-qm-prop-set-init-cond-exp"/>
+    <keyword type="function" name="ncm_qm_prop_evolve ()" link="NcmQMProp.html#ncm-qm-prop-evolve"/>
+    <keyword type="function" name="ncm_qm_prop_get_knots ()" link="NcmQMProp.html#ncm-qm-prop-get-knots"/>
+    <keyword type="function" name="ncm_qm_prop_get_psi ()" link="NcmQMProp.html#ncm-qm-prop-get-psi"/>
+    <keyword type="function" name="ncm_qm_prop_get_spec_knots ()" link="NcmQMProp.html#ncm-qm-prop-get-spec-knots"/>
+    <keyword type="function" name="ncm_qm_prop_get_rho ()" link="NcmQMProp.html#ncm-qm-prop-get-rho"/>
+    <keyword type="function" name="ncm_qm_prop_get_dS ()" link="NcmQMProp.html#ncm-qm-prop-get-dS"/>
+    <keyword type="function" name="ncm_qm_prop_get_Re_psi ()" link="NcmQMProp.html#ncm-qm-prop-get-Re-psi"/>
+    <keyword type="function" name="ncm_qm_prop_get_Im_psi ()" link="NcmQMProp.html#ncm-qm-prop-get-Im-psi"/>
+    <keyword type="function" name="ncm_qm_prop_evolve_spec ()" link="NcmQMProp.html#ncm-qm-prop-evolve-spec"/>
+    <keyword type="struct" name="struct NcmQMPropGauss" link="NcmQMProp.html#NcmQMPropGauss-struct"/>
+    <keyword type="struct" name="struct NcmQMPropExp" link="NcmQMProp.html#NcmQMPropExp-struct"/>
+    <keyword type="property" name="The “abstol” property" link="NcmQMProp.html#NcmQMProp--abstol"/>
+    <keyword type="property" name="The “lambda” property" link="NcmQMProp.html#NcmQMProp--lambda"/>
+    <keyword type="property" name="The “nknots” property" link="NcmQMProp.html#NcmQMProp--nknots"/>
+    <keyword type="property" name="The “noboundary” property" link="NcmQMProp.html#NcmQMProp--noboundary"/>
+    <keyword type="property" name="The “np” property" link="NcmQMProp.html#NcmQMProp--np"/>
+    <keyword type="property" name="The “reltol” property" link="NcmQMProp.html#NcmQMProp--reltol"/>
     <keyword type="function" name="ncm_trivec_new ()" link="NcmQuaternion.html#ncm-trivec-new"/>
     <keyword type="function" name="ncm_trivec_new_full ()" link="NcmQuaternion.html#ncm-trivec-new-full"/>
     <keyword type="function" name="ncm_trivec_new_full_c ()" link="NcmQuaternion.html#ncm-trivec-new-full-c"/>
@@ -1455,6 +1502,54 @@
     <keyword type="function" name="ncm_sf_sbessel_jl_xj_integral_spline ()" link="numcosmo-NcmSFSphericalBesselInteg.html#ncm-sf-sbessel-jl-xj-integral-spline"/>
     <keyword type="struct" name="struct NcmSFSphericalBesselIntegRecur" link="numcosmo-NcmSFSphericalBesselInteg.html#NcmSFSphericalBesselIntegRecur"/>
     <keyword type="struct" name="struct NcmSFSphericalBesselIntSpline" link="numcosmo-NcmSFSphericalBesselInteg.html#NcmSFSphericalBesselIntSpline"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_new ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-new"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_dup ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-dup"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_free ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-free"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_get_lm ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-get-lm"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_get_lp1m ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-get-lp1m"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_get_x ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-get-x"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_get_l ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-get-l"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_get_m ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-get-m"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_next_l ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-next-l"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_next_l2 ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-next-l2"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_next_l4 ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-next-l4"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_next_l2pn ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-next-l2pn"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_next_m ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-next-m"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_reset ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-reset"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_array_new ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-array-new"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_array_dup ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-array-dup"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_array_free ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-array-free"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_array_get_lm ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-array-get-lm"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_array_get_lp1m ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-array-get-lp1m"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_array_get_x ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-array-get-x"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_array_get_l ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-array-get-l"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_array_get_m ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-array-get-m"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_array_next_l ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-array-next-l"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_array_next_l2 ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-array-next-l2"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_array_next_l4 ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-array-next-l4"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_array_next_l2pn ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-array-next-l2pn"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_array_next_m ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-array-next-m"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_Y_array_reset ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-Y-array-reset"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_new ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-new"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_ref ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-ref"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_free ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-free"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_clear ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-clear"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_set_lmax ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-set-lmax"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_get_lmax ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-get-lmax"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_start_rec ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-start-rec"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_start_rec_array ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-start-rec-array"/>
+    <keyword type="function" name="ncm_sf_spherical_harmonics_get_Klm ()" link="NcmSFSphericalHarmonics.html#ncm-sf-spherical-harmonics-get-Klm"/>
+    <keyword type="macro" name="NCM_SF_SPHERICAL_HARMONICS_ARRAY_INDEX()" link="NcmSFSphericalHarmonics.html#NCM-SF-SPHERICAL-HARMONICS-ARRAY-INDEX:CAPS"/>
+    <keyword type="macro" name="SN()" link="NcmSFSphericalHarmonics.html#SN:CAPS"/>
+    <keyword type="macro" name="SNM1()" link="NcmSFSphericalHarmonics.html#SNM1:CAPS"/>
+    <keyword type="struct" name="struct NcmSFSphericalHarmonicsK" link="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsK"/>
+    <keyword type="struct" name="struct NcmSFSphericalHarmonicsP" link="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsP"/>
+    <keyword type="macro" name="NCM_SF_SPHERICAL_HARMONICS_MAX_LEN" link="NcmSFSphericalHarmonics.html#NCM-SF-SPHERICAL-HARMONICS-MAX-LEN:CAPS"/>
+    <keyword type="macro" name="NCM_SF_SPHERICAL_HARMONICS_DEFAULT_ABSTOL" link="NcmSFSphericalHarmonics.html#NCM-SF-SPHERICAL-HARMONICS-DEFAULT-ABSTOL:CAPS"/>
+    <keyword type="macro" name="NCM_SF_SPHERICAL_HARMONICS_ARRAY_DEFAULT_ABSTOL" link="NcmSFSphericalHarmonics.html#NCM-SF-SPHERICAL-HARMONICS-ARRAY-DEFAULT-ABSTOL:CAPS"/>
+    <keyword type="macro" name="NCM_SF_SPHERICAL_HARMONICS_EPS" link="NcmSFSphericalHarmonics.html#NCM-SF-SPHERICAL-HARMONICS-EPS:CAPS"/>
+    <keyword type="macro" name="NCM_SF_SPHERICAL_HARMONICS_LATERAL_MOVE" link="NcmSFSphericalHarmonics.html#NCM-SF-SPHERICAL-HARMONICS-LATERAL-MOVE:CAPS"/>
+    <keyword type="property" name="The “lmax” property" link="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonics--lmax"/>
     <keyword type="function" name="NcmModelAddSubmodel ()" link="NcmModel.html#NcmModelAddSubmodel"/>
     <keyword type="function" name="NcmModelFunc0 ()" link="NcmModel.html#NcmModelFunc0"/>
     <keyword type="function" name="NcmModelFunc1 ()" link="NcmModel.html#NcmModelFunc1"/>
@@ -1888,6 +1983,7 @@
     <keyword type="property" name="The “long-desc” property" link="NcmData.html#NcmData--long-desc"/>
     <keyword type="property" name="The “name” property" link="NcmData.html#NcmData--name"/>
     <keyword type="function" name="ncm_dataset_new ()" link="NcmDataset.html#ncm-dataset-new"/>
+    <keyword type="function" name="ncm_dataset_new_list ()" link="NcmDataset.html#ncm-dataset-new-list"/>
     <keyword type="function" name="ncm_dataset_dup ()" link="NcmDataset.html#ncm-dataset-dup"/>
     <keyword type="function" name="ncm_dataset_ref ()" link="NcmDataset.html#ncm-dataset-ref"/>
     <keyword type="function" name="ncm_dataset_copy ()" link="NcmDataset.html#ncm-dataset-copy"/>
@@ -1958,6 +2054,19 @@
     <keyword type="struct" name="struct NcmDataPoisson" link="NcmDataPoisson.html#NcmDataPoisson-struct"/>
     <keyword type="property" name="The “mean” property" link="NcmDataPoisson.html#NcmDataPoisson--mean"/>
     <keyword type="property" name="The “n-bins” property" link="NcmDataPoisson.html#NcmDataPoisson--n-bins"/>
+    <keyword type="function" name="ncm_data_voigt_init_from_vector ()" link="NcmDataVoigt.html#ncm-data-voigt-init-from-vector"/>
+    <keyword type="function" name="ncm_data_voigt_init_from_histogram ()" link="NcmDataVoigt.html#ncm-data-voigt-init-from-histogram"/>
+    <keyword type="function" name="ncm_data_voigt_init_zero ()" link="NcmDataVoigt.html#ncm-data-voigt-init-zero"/>
+    <keyword type="function" name="ncm_data_voigt_init_from_binning ()" link="NcmDataVoigt.html#ncm-data-voigt-init-from-binning"/>
+    <keyword type="function" name="ncm_data_voigt_set_size ()" link="NcmDataVoigt.html#ncm-data-voigt-set-size"/>
+    <keyword type="function" name="ncm_data_voigt_get_size ()" link="NcmDataVoigt.html#ncm-data-voigt-get-size"/>
+    <keyword type="function" name="ncm_data_voigt_get_sum ()" link="NcmDataVoigt.html#ncm-data-voigt-get-sum"/>
+    <keyword type="function" name="ncm_data_voigt_get_hist_vals ()" link="NcmDataVoigt.html#ncm-data-voigt-get-hist-vals"/>
+    <keyword type="function" name="ncm_data_voigt_get_hist_means ()" link="NcmDataVoigt.html#ncm-data-voigt-get-hist-means"/>
+    <keyword type="enum" name="enum NcmDataVoigtType" link="NcmDataVoigt.html#NcmDataVoigtType"/>
+    <keyword type="struct" name="struct NcmDataVoigt" link="NcmDataVoigt.html#NcmDataVoigt-struct"/>
+    <keyword type="property" name="The “mean” property" link="NcmDataVoigt.html#NcmDataVoigt--mean"/>
+    <keyword type="property" name="The “n-bins” property" link="NcmDataVoigt.html#NcmDataVoigt--n-bins"/>
     <keyword type="function" name="ncm_data_dist1d_set_size ()" link="NcmDataDist1d.html#ncm-data-dist1d-set-size"/>
     <keyword type="function" name="ncm_data_dist1d_get_size ()" link="NcmDataDist1d.html#ncm-data-dist1d-get-size"/>
     <keyword type="function" name="ncm_data_dist1d_get_data ()" link="NcmDataDist1d.html#ncm-data-dist1d-get-data"/>
@@ -2189,6 +2298,8 @@
     <keyword type="function" name="ncm_mset_catalog_reset_stats ()" link="NcmMSetCatalog.html#ncm-mset-catalog-reset-stats"/>
     <keyword type="function" name="ncm_mset_catalog_reset ()" link="NcmMSetCatalog.html#ncm-mset-catalog-reset"/>
     <keyword type="function" name="ncm_mset_catalog_erase_data ()" link="NcmMSetCatalog.html#ncm-mset-catalog-erase-data"/>
+    <keyword type="function" name="ncm_mset_catalog_set_m2lnp_var ()" link="NcmMSetCatalog.html#ncm-mset-catalog-set-m2lnp-var"/>
+    <keyword type="function" name="ncm_mset_catalog_get_m2lnp_var ()" link="NcmMSetCatalog.html#ncm-mset-catalog-get-m2lnp-var"/>
     <keyword type="function" name="ncm_mset_catalog_peek_filename ()" link="NcmMSetCatalog.html#ncm-mset-catalog-peek-filename"/>
     <keyword type="function" name="ncm_mset_catalog_get_rng ()" link="NcmMSetCatalog.html#ncm-mset-catalog-get-rng"/>
     <keyword type="function" name="ncm_mset_catalog_peek_rng ()" link="NcmMSetCatalog.html#ncm-mset-catalog-peek-rng"/>
@@ -2197,6 +2308,8 @@
     <keyword type="function" name="ncm_mset_catalog_len ()" link="NcmMSetCatalog.html#ncm-mset-catalog-len"/>
     <keyword type="function" name="ncm_mset_catalog_max_time ()" link="NcmMSetCatalog.html#ncm-mset-catalog-max-time"/>
     <keyword type="function" name="ncm_mset_catalog_nchains ()" link="NcmMSetCatalog.html#ncm-mset-catalog-nchains"/>
+    <keyword type="function" name="ncm_mset_catalog_nadd_vals ()" link="NcmMSetCatalog.html#ncm-mset-catalog-nadd-vals"/>
+    <keyword type="function" name="ncm_mset_catalog_weighted ()" link="NcmMSetCatalog.html#ncm-mset-catalog-weighted"/>
     <keyword type="function" name="ncm_mset_catalog_get_row_from_time ()" link="NcmMSetCatalog.html#ncm-mset-catalog-get-row-from-time"/>
     <keyword type="function" name="ncm_mset_catalog_get_first_id ()" link="NcmMSetCatalog.html#ncm-mset-catalog-get-first-id"/>
     <keyword type="function" name="ncm_mset_catalog_get_cur_id ()" link="NcmMSetCatalog.html#ncm-mset-catalog-get-cur-id"/>
@@ -2207,16 +2320,23 @@
     <keyword type="function" name="ncm_mset_catalog_add_from_mset ()" link="NcmMSetCatalog.html#ncm-mset-catalog-add-from-mset"/>
     <keyword type="function" name="ncm_mset_catalog_add_from_mset_array ()" link="NcmMSetCatalog.html#ncm-mset-catalog-add-from-mset-array"/>
     <keyword type="function" name="ncm_mset_catalog_add_from_vector ()" link="NcmMSetCatalog.html#ncm-mset-catalog-add-from-vector"/>
+    <keyword type="function" name="ncm_mset_catalog_add_from_vector_array ()" link="NcmMSetCatalog.html#ncm-mset-catalog-add-from-vector-array"/>
     <keyword type="function" name="ncm_mset_catalog_log_current_stats ()" link="NcmMSetCatalog.html#ncm-mset-catalog-log-current-stats"/>
     <keyword type="function" name="ncm_mset_catalog_log_current_chain_stats ()" link="NcmMSetCatalog.html#ncm-mset-catalog-log-current-chain-stats"/>
     <keyword type="function" name="ncm_mset_catalog_get_mset ()" link="NcmMSetCatalog.html#ncm-mset-catalog-get-mset"/>
+    <keyword type="function" name="ncm_mset_catalog_peek_mset ()" link="NcmMSetCatalog.html#ncm-mset-catalog-peek-mset"/>
     <keyword type="function" name="ncm_mset_catalog_get_run_type ()" link="NcmMSetCatalog.html#ncm-mset-catalog-get-run-type"/>
+    <keyword type="function" name="ncm_mset_catalog_peek_pstats ()" link="NcmMSetCatalog.html#ncm-mset-catalog-peek-pstats"/>
+    <keyword type="function" name="ncm_mset_catalog_peek_e_mean_stats ()" link="NcmMSetCatalog.html#ncm-mset-catalog-peek-e-mean-stats"/>
+    <keyword type="function" name="ncm_mset_catalog_peek_chain_pstats ()" link="NcmMSetCatalog.html#ncm-mset-catalog-peek-chain-pstats"/>
     <keyword type="function" name="ncm_mset_catalog_peek_row ()" link="NcmMSetCatalog.html#ncm-mset-catalog-peek-row"/>
     <keyword type="function" name="ncm_mset_catalog_peek_current_row ()" link="NcmMSetCatalog.html#ncm-mset-catalog-peek-current-row"/>
     <keyword type="function" name="ncm_mset_catalog_peek_current_e_mean ()" link="NcmMSetCatalog.html#ncm-mset-catalog-peek-current-e-mean"/>
     <keyword type="function" name="ncm_mset_catalog_peek_current_e_var ()" link="NcmMSetCatalog.html#ncm-mset-catalog-peek-current-e-var"/>
     <keyword type="function" name="ncm_mset_catalog_peek_e_mean_t ()" link="NcmMSetCatalog.html#ncm-mset-catalog-peek-e-mean-t"/>
     <keyword type="function" name="ncm_mset_catalog_peek_e_var_t ()" link="NcmMSetCatalog.html#ncm-mset-catalog-peek-e-var-t"/>
+    <keyword type="function" name="ncm_mset_catalog_get_post_lnnorm ()" link="NcmMSetCatalog.html#ncm-mset-catalog-get-post-lnnorm"/>
+    <keyword type="function" name="ncm_mset_catalog_get_post_lnvol ()" link="NcmMSetCatalog.html#ncm-mset-catalog-get-post-lnvol"/>
     <keyword type="function" name="ncm_mset_catalog_get_mean ()" link="NcmMSetCatalog.html#ncm-mset-catalog-get-mean"/>
     <keyword type="function" name="ncm_mset_catalog_get_covar ()" link="NcmMSetCatalog.html#ncm-mset-catalog-get-covar"/>
     <keyword type="function" name="ncm_mset_catalog_get_full_covar ()" link="NcmMSetCatalog.html#ncm-mset-catalog-get-full-covar"/>
@@ -2249,6 +2369,7 @@
     <keyword type="macro" name="NCM_MSET_CATALOG_M2LNL_COLNAME" link="NcmMSetCatalog.html#NCM-MSET-CATALOG-M2LNL-COLNAME:CAPS"/>
     <keyword type="macro" name="NCM_MSET_CATALOG_M2LNL_SYMBOL" link="NcmMSetCatalog.html#NCM-MSET-CATALOG-M2LNL-SYMBOL:CAPS"/>
     <keyword type="macro" name="NCM_MSET_CATALOG_FIRST_ID_LABEL" link="NcmMSetCatalog.html#NCM-MSET-CATALOG-FIRST-ID-LABEL:CAPS"/>
+    <keyword type="macro" name="NCM_MSET_CATALOG_M2LNP_ID_LABEL" link="NcmMSetCatalog.html#NCM-MSET-CATALOG-M2LNP-ID-LABEL:CAPS"/>
     <keyword type="macro" name="NCM_MSET_CATALOG_RNG_ALGO_LABEL" link="NcmMSetCatalog.html#NCM-MSET-CATALOG-RNG-ALGO-LABEL:CAPS"/>
     <keyword type="macro" name="NCM_MSET_CATALOG_RNG_SEED_LABEL" link="NcmMSetCatalog.html#NCM-MSET-CATALOG-RNG-SEED-LABEL:CAPS"/>
     <keyword type="macro" name="NCM_MSET_CATALOG_RNG_STAT_LABEL" link="NcmMSetCatalog.html#NCM-MSET-CATALOG-RNG-STAT-LABEL:CAPS"/>
@@ -2265,6 +2386,7 @@
     <keyword type="macro" name="NCM_MSET_CATALOG_DIST_EST_SD_SCALE" link="NcmMSetCatalog.html#NCM-MSET-CATALOG-DIST-EST-SD-SCALE:CAPS"/>
     <keyword type="property" name="The “burnin” property" link="NcmMSetCatalog.html#NcmMSetCatalog--burnin"/>
     <keyword type="property" name="The “filename” property" link="NcmMSetCatalog.html#NcmMSetCatalog--filename"/>
+    <keyword type="property" name="The “m2lnp-var” property" link="NcmMSetCatalog.html#NcmMSetCatalog--m2lnp-var"/>
     <keyword type="property" name="The “mset” property" link="NcmMSetCatalog.html#NcmMSetCatalog--mset"/>
     <keyword type="property" name="The “nadd-val-names” property" link="NcmMSetCatalog.html#NcmMSetCatalog--nadd-val-names"/>
     <keyword type="property" name="The “nadd-val-symbols” property" link="NcmMSetCatalog.html#NcmMSetCatalog--nadd-val-symbols"/>
@@ -2532,6 +2654,7 @@
     <keyword type="property" name="The “sampler” property" link="NcmFitMCMC.html#NcmFitMCMC--sampler"/>
     <keyword type="function" name="ncm_fit_esmcmc_new ()" link="NcmFitESMCMC.html#ncm-fit-esmcmc-new"/>
     <keyword type="function" name="ncm_fit_esmcmc_new_funcs_array ()" link="NcmFitESMCMC.html#ncm-fit-esmcmc-new-funcs-array"/>
+    <keyword type="function" name="ncm_fit_esmcmc_ref ()" link="NcmFitESMCMC.html#ncm-fit-esmcmc-ref"/>
     <keyword type="function" name="ncm_fit_esmcmc_free ()" link="NcmFitESMCMC.html#ncm-fit-esmcmc-free"/>
     <keyword type="function" name="ncm_fit_esmcmc_clear ()" link="NcmFitESMCMC.html#ncm-fit-esmcmc-clear"/>
     <keyword type="function" name="ncm_fit_esmcmc_set_data_file ()" link="NcmFitESMCMC.html#ncm-fit-esmcmc-set-data-file"/>
@@ -2656,104 +2779,66 @@
     <keyword type="property" name="The “nparticles” property" link="NcmABC.html#NcmABC--nparticles"/>
     <keyword type="property" name="The “prior” property" link="NcmABC.html#NcmABC--prior"/>
     <keyword type="property" name="The “trans-kernel” property" link="NcmABC.html#NcmABC--trans-kernel"/>
-    <keyword type="function" name="ncm_sphere_map_pix_new ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-new"/>
-    <keyword type="function" name="ncm_sphere_map_pix_ref ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-ref"/>
-    <keyword type="function" name="ncm_sphere_map_pix_free ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-free"/>
-    <keyword type="function" name="ncm_sphere_map_pix_clear ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-clear"/>
-    <keyword type="function" name="ncm_sphere_map_pix_set_nside ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-set-nside"/>
-    <keyword type="function" name="ncm_sphere_map_pix_get_nside ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-get-nside"/>
-    <keyword type="function" name="ncm_sphere_map_pix_get_npix ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-get-npix"/>
-    <keyword type="function" name="ncm_sphere_map_pix_get_cap_size ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-get-cap-size"/>
-    <keyword type="function" name="ncm_sphere_map_pix_get_middle_size ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-get-middle-size"/>
-    <keyword type="function" name="ncm_sphere_map_pix_get_nrings ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-get-nrings"/>
-    <keyword type="function" name="ncm_sphere_map_pix_get_nrings_cap ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-get-nrings-cap"/>
-    <keyword type="function" name="ncm_sphere_map_pix_get_nrings_middle ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-get-nrings-middle"/>
-    <keyword type="function" name="ncm_sphere_map_pix_get_ring_size ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-get-ring-size"/>
-    <keyword type="function" name="ncm_sphere_map_pix_get_ring_first_index ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-get-ring-first-index"/>
-    <keyword type="function" name="ncm_sphere_map_pix_set_order ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-set-order"/>
-    <keyword type="function" name="ncm_sphere_map_pix_get_order ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-get-order"/>
-    <keyword type="function" name="ncm_sphere_map_pix_set_coordsys ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-set-coordsys"/>
-    <keyword type="function" name="ncm_sphere_map_pix_get_coordsys ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-get-coordsys"/>
-    <keyword type="function" name="ncm_sphere_map_pix_set_lmax ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-set-lmax"/>
-    <keyword type="function" name="ncm_sphere_map_pix_get_lmax ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-get-lmax"/>
-    <keyword type="function" name="ncm_sphere_map_pix_clear_pixels ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-clear-pixels"/>
-    <keyword type="function" name="ncm_sphere_map_pix_nest2ring ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-nest2ring"/>
-    <keyword type="function" name="ncm_sphere_map_pix_ring2nest ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-ring2nest"/>
-    <keyword type="function" name="ncm_sphere_map_pix_pix2ang_nest ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-pix2ang-nest"/>
-    <keyword type="function" name="ncm_sphere_map_pix_pix2ang_ring ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-pix2ang-ring"/>
-    <keyword type="function" name="ncm_sphere_map_pix_pix2vec_nest ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-pix2vec-nest"/>
-    <keyword type="function" name="ncm_sphere_map_pix_pix2vec_ring ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-pix2vec-ring"/>
-    <keyword type="function" name="ncm_sphere_map_pix_ang2pix_nest ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-ang2pix-nest"/>
-    <keyword type="function" name="ncm_sphere_map_pix_ang2pix_ring ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-ang2pix-ring"/>
-    <keyword type="function" name="ncm_sphere_map_pix_vec2pix_ring ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-vec2pix-ring"/>
-    <keyword type="function" name="ncm_sphere_map_pix_vec2pix_nest ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-vec2pix-nest"/>
-    <keyword type="function" name="ncm_sphere_map_pix_add_to_vec ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-add-to-vec"/>
-    <keyword type="function" name="ncm_sphere_map_pix_add_to_ang ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-add-to-ang"/>
-    <keyword type="function" name="ncm_sphere_map_pix_load_fits ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-load-fits"/>
-    <keyword type="function" name="ncm_sphere_map_pix_save_fits ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-save-fits"/>
-    <keyword type="function" name="ncm_sphere_map_pix_load_from_fits_catalog ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-load-from-fits-catalog"/>
-    <keyword type="function" name="ncm_sphere_map_pix_prepare_alm ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-prepare-alm"/>
-    <keyword type="function" name="ncm_sphere_map_pix_prepare_Cl ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-prepare-Cl"/>
-    <keyword type="function" name="ncm_sphere_map_pix_get_alm ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-get-alm"/>
-    <keyword type="function" name="ncm_sphere_map_pix_get_Cl ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-get-Cl"/>
-    <keyword type="function" name="ncm_sphere_map_pix_add_noise ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-add-noise"/>
-    <keyword type="function" name="ncm_sphere_map_pix_alm2map ()" link="NcmSphereMapPix.html#ncm-sphere-map-pix-alm2map"/>
-    <keyword type="macro" name="NCM_SPHERE_MAP_PIX_N()" link="NcmSphereMapPix.html#NCM-SPHERE-MAP-PIX-N:CAPS"/>
-    <keyword type="macro" name="NCM_SPHERE_MAP_PIX_INT_TO_XY()" link="NcmSphereMapPix.html#NCM-SPHERE-MAP-PIX-INT-TO-XY:CAPS"/>
-    <keyword type="macro" name="NCM_SPHERE_MAP_PIX_XY_TO_INT()" link="NcmSphereMapPix.html#NCM-SPHERE-MAP-PIX-XY-TO-INT:CAPS"/>
-    <keyword type="macro" name="NCM_SPHERE_MAP_PIX_ALM_SIZE()" link="NcmSphereMapPix.html#NCM-SPHERE-MAP-PIX-ALM-SIZE:CAPS"/>
-    <keyword type="macro" name="NCM_SPHERE_MAP_PIX_M_START()" link="NcmSphereMapPix.html#NCM-SPHERE-MAP-PIX-M-START:CAPS"/>
-    <keyword type="enum" name="enum NcmSphereMapPixOrder" link="NcmSphereMapPix.html#NcmSphereMapPixOrder"/>
-    <keyword type="enum" name="enum NcmSphereMapPixCoordSys" link="NcmSphereMapPix.html#NcmSphereMapPixCoordSys"/>
-    <keyword type="macro" name="NCM_SPHERE_MAP_PIX_HEALPIX_NULLVAL" link="NcmSphereMapPix.html#NCM-SPHERE-MAP-PIX-HEALPIX-NULLVAL:CAPS"/>
-    <keyword type="macro" name="NCM_SPHERE_MAP_PIX_DEFAULT_SIGNAL" link="NcmSphereMapPix.html#NCM-SPHERE-MAP-PIX-DEFAULT-SIGNAL:CAPS"/>
-    <keyword type="property" name="The “coordsys” property" link="NcmSphereMapPix.html#NcmSphereMapPix--coordsys"/>
-    <keyword type="property" name="The “lmax” property" link="NcmSphereMapPix.html#NcmSphereMapPix--lmax"/>
-    <keyword type="property" name="The “nside” property" link="NcmSphereMapPix.html#NcmSphereMapPix--nside"/>
-    <keyword type="property" name="The “order” property" link="NcmSphereMapPix.html#NcmSphereMapPix--order"/>
-    <keyword type="function" name="ncm_sphere_healpix_read_map ()" link="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-read-map"/>
-    <keyword type="function" name="ncm_sphere_healpix_write_map ()" link="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-write-map"/>
-    <keyword type="function" name="ncm_sphere_healpix_nest2ring ()" link="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-nest2ring"/>
-    <keyword type="function" name="ncm_sphere_healpix_ring2nest ()" link="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-ring2nest"/>
-    <keyword type="function" name="ncm_sphere_healpix_pix2ang_nest ()" link="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-pix2ang-nest"/>
-    <keyword type="function" name="ncm_sphere_healpix_pix2ang_ring ()" link="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-pix2ang-ring"/>
-    <keyword type="function" name="ncm_sphere_healpix_pix2vec_nest ()" link="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-pix2vec-nest"/>
-    <keyword type="function" name="ncm_sphere_healpix_pix2vec_ring ()" link="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-pix2vec-ring"/>
-    <keyword type="function" name="ncm_sphere_healpix_vec2pix_ring ()" link="numcosmo-NcmSphereHealpix.html#ncm-sphere-healpix-vec2pix-ring"/>
-    <keyword type="macro" name="HEALPIX_NPIX()" link="numcosmo-NcmSphereHealpix.html#HEALPIX-NPIX:CAPS"/>
-    <keyword type="macro" name="HEALPIX_INT_TO_XY()" link="numcosmo-NcmSphereHealpix.html#HEALPIX-INT-TO-XY:CAPS"/>
-    <keyword type="macro" name="HEALPIX_XY_TO_INT()" link="numcosmo-NcmSphereHealpix.html#HEALPIX-XY-TO-INT:CAPS"/>
-    <keyword type="macro" name="NCM_HEALPIX_NULLVAL" link="numcosmo-NcmSphereHealpix.html#NCM-HEALPIX-NULLVAL:CAPS"/>
     <keyword type="function" name="ncm_sphere_map_new ()" link="NcmSphereMap.html#ncm-sphere-map-new"/>
-    <keyword type="function" name="ncm_sphere_map_clone ()" link="NcmSphereMap.html#ncm-sphere-map-clone"/>
-    <keyword type="function" name="ncm_sphere_map_copy ()" link="NcmSphereMap.html#ncm-sphere-map-copy"/>
-    <keyword type="function" name="ncm_sphere_map_init_coord ()" link="NcmSphereMap.html#ncm-sphere-map-init-coord"/>
+    <keyword type="function" name="ncm_sphere_map_ref ()" link="NcmSphereMap.html#ncm-sphere-map-ref"/>
+    <keyword type="function" name="ncm_sphere_map_free ()" link="NcmSphereMap.html#ncm-sphere-map-free"/>
+    <keyword type="function" name="ncm_sphere_map_clear ()" link="NcmSphereMap.html#ncm-sphere-map-clear"/>
+    <keyword type="function" name="ncm_sphere_map_set_nside ()" link="NcmSphereMap.html#ncm-sphere-map-set-nside"/>
+    <keyword type="function" name="ncm_sphere_map_get_nside ()" link="NcmSphereMap.html#ncm-sphere-map-get-nside"/>
+    <keyword type="function" name="ncm_sphere_map_get_npix ()" link="NcmSphereMap.html#ncm-sphere-map-get-npix"/>
+    <keyword type="function" name="ncm_sphere_map_get_nsmap ()" link="NcmSphereMap.html#ncm-sphere-map-get-nsmap"/>
+    <keyword type="function" name="ncm_sphere_map_get_cap_size ()" link="NcmSphereMap.html#ncm-sphere-map-get-cap-size"/>
+    <keyword type="function" name="ncm_sphere_map_get_middle_size ()" link="NcmSphereMap.html#ncm-sphere-map-get-middle-size"/>
+    <keyword type="function" name="ncm_sphere_map_get_nrings ()" link="NcmSphereMap.html#ncm-sphere-map-get-nrings"/>
+    <keyword type="function" name="ncm_sphere_map_get_nrings_cap ()" link="NcmSphereMap.html#ncm-sphere-map-get-nrings-cap"/>
+    <keyword type="function" name="ncm_sphere_map_get_nrings_middle ()" link="NcmSphereMap.html#ncm-sphere-map-get-nrings-middle"/>
+    <keyword type="function" name="ncm_sphere_map_get_ring_size ()" link="NcmSphereMap.html#ncm-sphere-map-get-ring-size"/>
+    <keyword type="function" name="ncm_sphere_map_get_ring_first_index ()" link="NcmSphereMap.html#ncm-sphere-map-get-ring-first-index"/>
     <keyword type="function" name="ncm_sphere_map_set_order ()" link="NcmSphereMap.html#ncm-sphere-map-set-order"/>
-    <keyword type="function" name="ncm_sphere_mapalm_new ()" link="NcmSphereMap.html#ncm-sphere-mapalm-new"/>
-    <keyword type="function" name="ncm_sphere_mapalm_init ()" link="NcmSphereMap.html#ncm-sphere-mapalm-init"/>
-    <keyword type="function" name="ncm_sphere_mapsht_new ()" link="NcmSphereMap.html#ncm-sphere-mapsht-new"/>
-    <keyword type="function" name="ncm_sphere_mapsht_map2alm_circle ()" link="NcmSphereMap.html#ncm-sphere-mapsht-map2alm-circle"/>
-    <keyword type="function" name="ncm_sphere_mapsht_alm2map_circle ()" link="NcmSphereMap.html#ncm-sphere-mapsht-alm2map-circle"/>
-    <keyword type="function" name="ncm_sphere_mapsht_map2alm ()" link="NcmSphereMap.html#ncm-sphere-mapsht-map2alm"/>
-    <keyword type="function" name="ncm_sphere_mapsht_alm2map ()" link="NcmSphereMap.html#ncm-sphere-mapsht-alm2map"/>
-    <keyword type="function" name="ncm_sphere_map_homogenize_noise ()" link="NcmSphereMap.html#ncm-sphere-map-homogenize-noise"/>
-    <keyword type="function" name="ncm_sphere_map_rotate_avg ()" link="NcmSphereMap.html#ncm-sphere-map-rotate-avg"/>
-    <keyword type="macro" name="NCM_MAP_ALM_SIZE()" link="NcmSphereMap.html#NCM-MAP-ALM-SIZE:CAPS"/>
-    <keyword type="macro" name="NCM_MAP_N_IND_PLM()" link="NcmSphereMap.html#NCM-MAP-N-IND-PLM:CAPS"/>
-    <keyword type="macro" name="NCM_MAP_MAX_RING_SIZE()" link="NcmSphereMap.html#NCM-MAP-MAX-RING-SIZE:CAPS"/>
-    <keyword type="macro" name="NCM_MAP_N_DIFFERENT_SIZED_RINGS()" link="NcmSphereMap.html#NCM-MAP-N-DIFFERENT-SIZED-RINGS:CAPS"/>
-    <keyword type="macro" name="NCM_MAP_RING_PLAN_INDEX()" link="NcmSphereMap.html#NCM-MAP-RING-PLAN-INDEX:CAPS"/>
-    <keyword type="macro" name="NCM_MAP_RING_SIZE()" link="NcmSphereMap.html#NCM-MAP-RING-SIZE:CAPS"/>
-    <keyword type="macro" name="NCM_MAP_N_RINGS()" link="NcmSphereMap.html#NCM-MAP-N-RINGS:CAPS"/>
-    <keyword type="macro" name="NCM_MAP_ALM_M_START()" link="NcmSphereMap.html#NCM-MAP-ALM-M-START:CAPS"/>
-    <keyword type="macro" name="NCM_MAP_ALM_INDEX()" link="NcmSphereMap.html#NCM-MAP-ALM-INDEX:CAPS"/>
+    <keyword type="function" name="ncm_sphere_map_get_order ()" link="NcmSphereMap.html#ncm-sphere-map-get-order"/>
+    <keyword type="function" name="ncm_sphere_map_set_coordsys ()" link="NcmSphereMap.html#ncm-sphere-map-set-coordsys"/>
+    <keyword type="function" name="ncm_sphere_map_get_coordsys ()" link="NcmSphereMap.html#ncm-sphere-map-get-coordsys"/>
+    <keyword type="function" name="ncm_sphere_map_set_lmax ()" link="NcmSphereMap.html#ncm-sphere-map-set-lmax"/>
+    <keyword type="function" name="ncm_sphere_map_get_lmax ()" link="NcmSphereMap.html#ncm-sphere-map-get-lmax"/>
+    <keyword type="function" name="ncm_sphere_map_clear_smapels ()" link="NcmSphereMap.html#ncm-sphere-map-clear-smapels"/>
+    <keyword type="function" name="ncm_sphere_map_nest2ring ()" link="NcmSphereMap.html#ncm-sphere-map-nest2ring"/>
+    <keyword type="function" name="ncm_sphere_map_ring2nest ()" link="NcmSphereMap.html#ncm-sphere-map-ring2nest"/>
+    <keyword type="function" name="ncm_sphere_map_pix2ang_nest ()" link="NcmSphereMap.html#ncm-sphere-map-pix2ang-nest"/>
+    <keyword type="function" name="ncm_sphere_map_pix2ang_ring ()" link="NcmSphereMap.html#ncm-sphere-map-pix2ang-ring"/>
+    <keyword type="function" name="ncm_sphere_map_pix2vec_nest ()" link="NcmSphereMap.html#ncm-sphere-map-pix2vec-nest"/>
+    <keyword type="function" name="ncm_sphere_map_pix2vec_ring ()" link="NcmSphereMap.html#ncm-sphere-map-pix2vec-ring"/>
+    <keyword type="function" name="ncm_sphere_map_ang2pix_nest ()" link="NcmSphereMap.html#ncm-sphere-map-ang2pix-nest"/>
+    <keyword type="function" name="ncm_sphere_map_ang2pix_ring ()" link="NcmSphereMap.html#ncm-sphere-map-ang2pix-ring"/>
+    <keyword type="function" name="ncm_sphere_map_vec2pix_ring ()" link="NcmSphereMap.html#ncm-sphere-map-vec2pix-ring"/>
+    <keyword type="function" name="ncm_sphere_map_vec2pix_nest ()" link="NcmSphereMap.html#ncm-sphere-map-vec2pix-nest"/>
+    <keyword type="function" name="ncm_sphere_map_add_to_vec ()" link="NcmSphereMap.html#ncm-sphere-map-add-to-vec"/>
+    <keyword type="function" name="ncm_sphere_map_add_to_ang ()" link="NcmSphereMap.html#ncm-sphere-map-add-to-ang"/>
+    <keyword type="function" name="ncm_sphere_map_load_fits ()" link="NcmSphereMap.html#ncm-sphere-map-load-fits"/>
+    <keyword type="function" name="ncm_sphere_map_save_fits ()" link="NcmSphereMap.html#ncm-sphere-map-save-fits"/>
+    <keyword type="function" name="ncm_sphere_map_load_from_fits_catalog ()" link="NcmSphereMap.html#ncm-sphere-map-load-from-fits-catalog"/>
+    <keyword type="function" name="ncm_sphere_map_prepare_alm ()" link="NcmSphereMap.html#ncm-sphere-map-prepare-alm"/>
+    <keyword type="function" name="ncm_sphere_map_get_alm ()" link="NcmSphereMap.html#ncm-sphere-map-get-alm"/>
+    <keyword type="function" name="ncm_sphere_map_get_Cl ()" link="NcmSphereMap.html#ncm-sphere-map-get-Cl"/>
+    <keyword type="function" name="ncm_sphere_map_get_pix ()" link="NcmSphereMap.html#ncm-sphere-map-get-pix"/>
+    <keyword type="function" name="ncm_sphere_map_add_noise ()" link="NcmSphereMap.html#ncm-sphere-map-add-noise"/>
+    <keyword type="function" name="ncm_sphere_map_set_map ()" link="NcmSphereMap.html#ncm-sphere-map-set-map"/>
+    <keyword type="function" name="ncm_sphere_map_set_Cls ()" link="NcmSphereMap.html#ncm-sphere-map-set-Cls"/>
+    <keyword type="function" name="ncm_sphere_map_alm2map ()" link="NcmSphereMap.html#ncm-sphere-map-alm2map"/>
+    <keyword type="function" name="ncm_sphere_map_calc_Ctheta ()" link="NcmSphereMap.html#ncm-sphere-map-calc-Ctheta"/>
+    <keyword type="macro" name="NCM_SPHERE_MAP_N()" link="NcmSphereMap.html#NCM-SPHERE-MAP-N:CAPS"/>
+    <keyword type="macro" name="NCM_SPHERE_MAP_INT_TO_XY()" link="NcmSphereMap.html#NCM-SPHERE-MAP-INT-TO-XY:CAPS"/>
+    <keyword type="macro" name="NCM_SPHERE_MAP_XY_TO_INT()" link="NcmSphereMap.html#NCM-SPHERE-MAP-XY-TO-INT:CAPS"/>
+    <keyword type="macro" name="NCM_SPHERE_MAP_ALM_SIZE()" link="NcmSphereMap.html#NCM-SPHERE-MAP-ALM-SIZE:CAPS"/>
+    <keyword type="macro" name="NCM_SPHERE_MAP_M_START()" link="NcmSphereMap.html#NCM-SPHERE-MAP-M-START:CAPS"/>
+    <keyword type="macro" name="NCM_SPHERE_MAP_ALM_INDEX()" link="NcmSphereMap.html#NCM-SPHERE-MAP-ALM-INDEX:CAPS"/>
     <keyword type="enum" name="enum NcmSphereMapOrder" link="NcmSphereMap.html#NcmSphereMapOrder"/>
-    <keyword type="enum" name="enum NcmSphereMapType" link="NcmSphereMap.html#NcmSphereMapType"/>
-    <keyword type="struct" name="struct NcmSphereMap" link="NcmSphereMap.html#NcmSphereMap-struct"/>
-    <keyword type="struct" name="struct NcmSphereMapAlm" link="NcmSphereMap.html#NcmSphereMapAlm"/>
-    <keyword type="struct" name="struct NcmSphereMapSHT" link="NcmSphereMap.html#NcmSphereMapSHT"/>
-    <keyword type="macro" name="NCM_SPHERE_MAP_RNG_NAME" link="NcmSphereMap.html#NCM-SPHERE-MAP-RNG-NAME:CAPS"/>
+    <keyword type="enum" name="enum NcmSphereMapCoordSys" link="NcmSphereMap.html#NcmSphereMapCoordSys"/>
+    <keyword type="macro" name="NCM_SPHERE_MAP_HEALPIX_NULLVAL" link="NcmSphereMap.html#NCM-SPHERE-MAP-HEALPIX-NULLVAL:CAPS"/>
+    <keyword type="macro" name="NCM_SPHERE_MAP_DEFAULT_SIGNAL" link="NcmSphereMap.html#NCM-SPHERE-MAP-DEFAULT-SIGNAL:CAPS"/>
+    <keyword type="property" name="The “coordsys” property" link="NcmSphereMap.html#NcmSphereMap--coordsys"/>
+    <keyword type="property" name="The “lmax” property" link="NcmSphereMap.html#NcmSphereMap--lmax"/>
     <keyword type="property" name="The “nside” property" link="NcmSphereMap.html#NcmSphereMap--nside"/>
+    <keyword type="property" name="The “order” property" link="NcmSphereMap.html#NcmSphereMap--order"/>
     <keyword type="macro" name="mpq_ptr" link="numcosmo-Gir-Scanning-Compatibility.html#mpq-ptr"/>
     <keyword type="macro" name="mpq_t" link="numcosmo-Gir-Scanning-Compatibility.html#mpq-t"/>
     <keyword type="macro" name="mp_rnd_t" link="numcosmo-Gir-Scanning-Compatibility.html#mp-rnd-t"/>
@@ -2766,6 +2851,39 @@
     <keyword type="macro" name="fftw_complex" link="numcosmo-Gir-Scanning-Compatibility.html#fftw-complex"/>
     <keyword type="macro" name="FILE" link="numcosmo-Gir-Scanning-Compatibility.html#FILE:CAPS"/>
     <keyword type="macro" name="NCM_MUTEX_TYPE" link="numcosmo-Gir-Scanning-Compatibility.html#NCM-MUTEX-TYPE:CAPS"/>
+    <keyword type="macro" name="gsl_matrix" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-matrix"/>
+    <keyword type="macro" name="gsl_matrix_long_double" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-matrix-long-double"/>
+    <keyword type="macro" name="gsl_histogram2d" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-histogram2d"/>
+    <keyword type="macro" name="gsl_histogram" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-histogram"/>
+    <keyword type="macro" name="gsl_histogram_pdf" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-histogram-pdf"/>
+    <keyword type="macro" name="gsl_root_fsolver_type" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-root-fsolver-type"/>
+    <keyword type="macro" name="gsl_multifit_fdfsolver" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-multifit-fdfsolver"/>
+    <keyword type="macro" name="gsl_multimin_fminimizer" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-multimin-fminimizer"/>
+    <keyword type="macro" name="gsl_multifit_function_fdf" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-multifit-function-fdf"/>
+    <keyword type="macro" name="gsl_ran_discrete_t" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-ran-discrete-t"/>
+    <keyword type="macro" name="gsl_multimin_fdfminimizer" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-multimin-fdfminimizer"/>
+    <keyword type="macro" name="gsl_multifit_fdfsolver_type" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-multifit-fdfsolver-type"/>
+    <keyword type="macro" name="gsl_interp_accel" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-interp-accel"/>
+    <keyword type="macro" name="gsl_rng" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-rng"/>
+    <keyword type="macro" name="gsl_complex" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-complex"/>
+    <keyword type="macro" name="gsl_permutation" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-permutation"/>
+    <keyword type="macro" name="gsl_multimin_function" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-multimin-function"/>
+    <keyword type="macro" name="gsl_multimin_function_fdf" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-multimin-function-fdf"/>
+    <keyword type="macro" name="gsl_min_fminimizer" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-min-fminimizer"/>
+    <keyword type="macro" name="gsl_min_fminimizer_type" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-min-fminimizer-type"/>
+    <keyword type="macro" name="gsl_root_fsolver" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-root-fsolver"/>
+    <keyword type="macro" name="gsl_interp" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-interp"/>
+    <keyword type="macro" name="gsl_interp_type" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-interp-type"/>
+    <keyword type="macro" name="gsl_integration_workspace" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-integration-workspace"/>
+    <keyword type="macro" name="gsl_eigen_nonsymm_workspace" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-eigen-nonsymm-workspace"/>
+    <keyword type="macro" name="gsl_vector" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector"/>
+    <keyword type="macro" name="gsl_vector_view" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector-view"/>
+    <keyword type="macro" name="gsl_vector_complex" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector-complex"/>
+    <keyword type="macro" name="gsl_function" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-function"/>
+    <keyword type="macro" name="gsl_matrix_view" link="numcosmo-Gir-Scanning-Compatibility.html#gsl-matrix-view"/>
+    <keyword type="macro" name="nlopt_algorithm" link="numcosmo-Gir-Scanning-Compatibility.html#nlopt-algorithm"/>
+    <keyword type="macro" name="N_Vector" link="numcosmo-Gir-Scanning-Compatibility.html#N-Vector"/>
+    <keyword type="macro" name="fitsfile" link="numcosmo-Gir-Scanning-Compatibility.html#fitsfile"/>
     <keyword type="function" name="NcHICosmoFunc0 ()" link="NcHICosmo.html#NcHICosmoFunc0"/>
     <keyword type="function" name="NcHICosmoFunc1Z ()" link="NcHICosmo.html#NcHICosmoFunc1Z"/>
     <keyword type="function" name="NcHICosmoFunc1K ()" link="NcHICosmo.html#NcHICosmoFunc1K"/>
@@ -2817,6 +2935,7 @@
     <keyword type="function" name="nc_hicosmo_zt ()" link="NcHICosmo.html#nc-hicosmo-zt"/>
     <keyword type="function" name="nc_hicosmo_mqE2_max ()" link="NcHICosmo.html#nc-hicosmo-mqE2-max"/>
     <keyword type="function" name="nc_hicosmo_dec_min ()" link="NcHICosmo.html#nc-hicosmo-dec-min"/>
+    <keyword type="function" name="nc_hicosmo_q_min ()" link="NcHICosmo.html#nc-hicosmo-q-min"/>
     <keyword type="function" name="nc_hicosmo_H0 ()" link="NcHICosmo.html#nc-hicosmo-H0"/>
     <keyword type="function" name="nc_hicosmo_RH_Mpc ()" link="NcHICosmo.html#nc-hicosmo-RH-Mpc"/>
     <keyword type="function" name="nc_hicosmo_RH_planck ()" link="NcHICosmo.html#nc-hicosmo-RH-planck"/>
@@ -2882,6 +3001,7 @@
     <keyword type="function" name="nc_hicosmo_wec ()" link="NcHICosmo.html#nc-hicosmo-wec"/>
     <keyword type="function" name="nc_hicosmo_qp ()" link="NcHICosmo.html#nc-hicosmo-qp"/>
     <keyword type="function" name="nc_hicosmo_j ()" link="NcHICosmo.html#nc-hicosmo-j"/>
+    <keyword type="function" name="nc_hicosmo_kinetic_w ()" link="NcHICosmo.html#nc-hicosmo-kinetic-w"/>
     <keyword type="function" name="nc_hicosmo_mqE2 ()" link="NcHICosmo.html#nc-hicosmo-mqE2"/>
     <keyword type="function" name="nc_hicosmo_abs_alpha ()" link="NcHICosmo.html#nc-hicosmo-abs-alpha"/>
     <keyword type="function" name="nc_hicosmo_x_alpha ()" link="NcHICosmo.html#nc-hicosmo-x-alpha"/>
@@ -3161,59 +3281,6 @@
     <keyword type="property" name="The “sigmaphi-fit” property" link="NcHICosmoVexp.html#NcHICosmoVexp--sigmaphi-fit"/>
     <keyword type="property" name="The “xb” property" link="NcHICosmoVexp.html#NcHICosmoVexp--xb"/>
     <keyword type="property" name="The “xb-fit” property" link="NcHICosmoVexp.html#NcHICosmoVexp--xb-fit"/>
-    <keyword type="function" name="nc_hicosmo_qg_new ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-new"/>
-    <keyword type="function" name="nc_hicosmo_qg_max_z ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-max-z"/>
-    <keyword type="function" name="nc_hicosmo_qg_get_eta_b ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-get-eta-b"/>
-    <keyword type="function" name="nc_hicosmo_qg_gbar2 ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-gbar2"/>
-    <keyword type="function" name="nc_hicosmo_qg_gbarbar ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-gbarbar"/>
-    <keyword type="function" name="nc_hicosmo_qg_xbar ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-xbar"/>
-    <keyword type="function" name="nc_hicosmo_qg_xxbarzeta2 ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-xxbarzeta2"/>
-    <keyword type="function" name="nc_hicosmo_qg_dxxbarzeta2_xxbarzeta2 ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-dxxbarzeta2-xxbarzeta2"/>
-    <keyword type="function" name="nc_hicosmo_qg_d2sqrtxxbarzeta_sqrtxxbarzeta ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-d2sqrtxxbarzeta-sqrtxxbarzeta"/>
-    <keyword type="function" name="nc_hicosmo_qg_cs2_xxbar2 ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-cs2-xxbar2"/>
-    <keyword type="function" name="nc_hicosmo_qg_cs2 ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-cs2"/>
-    <keyword type="function" name="nc_hicosmo_qg_dcs2 ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-dcs2"/>
-    <keyword type="function" name="nc_hicosmo_qg_beta ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-beta"/>
-    <keyword type="function" name="nc_hicosmo_qg_zeta ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-zeta"/>
-    <keyword type="function" name="nc_hicosmo_qg_dzeta_zeta ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-dzeta-zeta"/>
-    <keyword type="function" name="nc_hicosmo_qg_ddzeta_zeta ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-ddzeta-zeta"/>
-    <keyword type="function" name="nc_hicosmo_qg_xddzeta_zeta_mxdzeta_zeta2_dzeta_zeta ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-xddzeta-zeta-mxdzeta-zeta2-dzeta-zeta"/>
-    <keyword type="function" name="nc_hicosmo_qg_V ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-V"/>
-    <keyword type="function" name="nc_hicosmo_qg_alphaprime2 ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-alphaprime2"/>
-    <keyword type="function" name="nc_hicosmo_qg_dalphaprime2_dalpha ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-dalphaprime2-dalpha"/>
-    <keyword type="function" name="nc_hicosmo_qg_lambda_x ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-lambda-x"/>
-    <keyword type="function" name="nc_hicosmo_qg_past_sol ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-past-sol"/>
-    <keyword type="function" name="nc_hicosmo_qg_h_to_R_matrix ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-h-to-R-matrix"/>
-    <keyword type="function" name="nc_hicosmo_qg_R_to_h_matrix ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-R-to-h-matrix"/>
-    <keyword type="function" name="nc_hicosmo_qg_get_lambda_f ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-get-lambda-f"/>
-    <keyword type="function" name="nc_hicosmo_qg_get_lambda_i ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-get-lambda-i"/>
-    <keyword type="function" name="nc_hicosmo_qg_get_lambda_d ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-get-lambda-d"/>
-    <keyword type="function" name="nc_hicosmo_qg_eta_lambda ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-eta-lambda"/>
-    <keyword type="function" name="nc_hicosmo_qg_x_lambda ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-x-lambda"/>
-    <keyword type="function" name="nc_hicosmo_qg_gbar_lambda ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-gbar-lambda"/>
-    <keyword type="function" name="nc_hicosmo_qg_gbarbar_lambda ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-gbarbar-lambda"/>
-    <keyword type="function" name="nc_hicosmo_qg_int_1_zeta2_lambda ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-int-1-zeta2-lambda"/>
-    <keyword type="function" name="nc_hicosmo_qg_cs2zeta2_int_1_zeta2_lambda ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-cs2zeta2-int-1-zeta2-lambda"/>
-    <keyword type="function" name="nc_hicosmo_qg_lambda_k_cross ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-lambda-k-cross"/>
-    <keyword type="function" name="nc_hicosmo_qg_cs2_lambda ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-cs2-lambda"/>
-    <keyword type="function" name="nc_hicosmo_qg_V_lambda ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-V-lambda"/>
-    <keyword type="function" name="nc_hicosmo_qg_pert_new ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-pert-new"/>
-    <keyword type="function" name="nc_hicosmo_qg_pert_set_opts ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-pert-set-opts"/>
-    <keyword type="function" name="nc_hicosmo_qg_pert_init ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-pert-init"/>
-    <keyword type="function" name="nc_hicosmo_qg_pert_evolve ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-pert-evolve"/>
-    <keyword type="function" name="nc_hicosmo_qg_pert_prepare_pw_spline ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-pert-prepare-pw-spline"/>
-    <keyword type="function" name="nc_hicosmo_qg_pert_powerspectrum ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-pert-powerspectrum"/>
-    <keyword type="function" name="nc_hicosmo_qg_modefunc ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-modefunc"/>
-    <keyword type="function" name="nc_hicosmo_qg_modefunc_set_opts ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-modefunc-set-opts"/>
-    <keyword type="function" name="nc_hicosmo_qg_modefunc_init ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-modefunc-init"/>
-    <keyword type="function" name="nc_hicosmo_qg_modefuncm_cvode_init ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-modefuncm-cvode-init"/>
-    <keyword type="function" name="nc_hicosmo_qg_modefunc_evolve ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-modefunc-evolve"/>
-    <keyword type="function" name="nc_hicosmo_qg_evolfunc ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-evolfunc"/>
-    <keyword type="function" name="nc_hicosmo_qg_modefunc_sol ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-modefunc-sol"/>
-    <keyword type="function" name="nc_hicosmo_qg_pert_R_to_h ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-pert-R-to-h"/>
-    <keyword type="function" name="nc_hicosmo_qg_pert_h_to_R ()" link="numcosmo-NcHICosmoQG.html#nc-hicosmo-qg-pert-h-to-R"/>
-    <keyword type="enum" name="enum NcHICosmoQGPertType" link="numcosmo-NcHICosmoQG.html#NcHICosmoQGPertType"/>
-    <keyword type="struct" name="struct NcHICosmoQGMode" link="numcosmo-NcHICosmoQG.html#NcHICosmoQGMode"/>
     <keyword type="function" name="nc_hicosmo_qconst_new ()" link="NcHICosmoQConst.html#nc-hicosmo-qconst-new"/>
     <keyword type="enum" name="enum NcHICosmoQConstParams" link="NcHICosmoQConst.html#NcHICosmoQConstParams"/>
     <keyword type="macro" name="NC_HICOSMO_QCONST_DEFAULT_H0" link="NcHICosmoQConst.html#NC-HICOSMO-QCONST-DEFAULT-H0:CAPS"/>
@@ -3815,6 +3882,8 @@
     <keyword type="function" name="nc_distance_bao_r_Dv ()" link="NcDistance.html#nc-distance-bao-r-Dv"/>
     <keyword type="function" name="nc_distance_DH_r ()" link="NcDistance.html#nc-distance-DH-r"/>
     <keyword type="function" name="nc_distance_DA_r ()" link="NcDistance.html#nc-distance-DA-r"/>
+    <keyword type="function" name="nc_distance_comoving_z_to_infinity ()" link="NcDistance.html#nc-distance-comoving-z-to-infinity"/>
+    <keyword type="function" name="nc_distance_transverse_z_to_infinity ()" link="NcDistance.html#nc-distance-transverse-z-to-infinity"/>
     <keyword type="function" name="nc_distance_cosmic_time ()" link="NcDistance.html#nc-distance-cosmic-time"/>
     <keyword type="function" name="nc_distance_lookback_time ()" link="NcDistance.html#nc-distance-lookback-time"/>
     <keyword type="function" name="nc_distance_conformal_time ()" link="NcDistance.html#nc-distance-conformal-time"/>
@@ -3844,6 +3913,7 @@
     <keyword type="function" name="nc_scalefactor_eval_eta_x ()" link="NcScalefactor.html#nc-scalefactor-eval-eta-x"/>
     <keyword type="function" name="nc_scalefactor_eval_t_eta ()" link="NcScalefactor.html#nc-scalefactor-eval-t-eta"/>
     <keyword type="function" name="nc_scalefactor_eval_eta_t ()" link="NcScalefactor.html#nc-scalefactor-eval-eta-t"/>
+    <keyword type="macro" name="SUN_DENSE_ACCESS" link="NcScalefactor.html#SUN-DENSE-ACCESS:CAPS"/>
     <keyword type="enum" name="enum NcScalefactorTimeType" link="NcScalefactor.html#NcScalefactorTimeType"/>
     <keyword type="macro" name="NC_SCALEFACTOR_DEFAULT_ZF" link="NcScalefactor.html#NC-SCALEFACTOR-DEFAULT-ZF:CAPS"/>
     <keyword type="macro" name="NC_SCALEFACTOR_DEFAULT_A0" link="NcScalefactor.html#NC-SCALEFACTOR-DEFAULT-A0:CAPS"/>
@@ -3901,6 +3971,7 @@
     <keyword type="function" name="nc_recomb_get_tau_cutoff_z ()" link="NcRecomb.html#nc-recomb-get-tau-cutoff-z"/>
     <keyword type="function" name="nc_recomb_dtau_dlambda_Xe ()" link="NcRecomb.html#nc-recomb-dtau-dlambda-Xe"/>
     <keyword type="function" name="nc_recomb_He_fully_ionized_dtau_dlambda ()" link="NcRecomb.html#nc-recomb-He-fully-ionized-dtau-dlambda"/>
+    <keyword type="macro" name="NC_RECOMB_STARTING_X" link="NcRecomb.html#NC-RECOMB-STARTING-X:CAPS"/>
     <keyword type="property" name="The “init-frac” property" link="NcRecomb.html#NcRecomb--init-frac"/>
     <keyword type="property" name="The “prec” property" link="NcRecomb.html#NcRecomb--prec"/>
     <keyword type="property" name="The “zi” property" link="NcRecomb.html#NcRecomb--zi"/>
@@ -3921,6 +3992,7 @@
     <keyword type="function" name="nc_recomb_seager_hummer_HeI_case_B_dTm ()" link="NcRecombSeager.html#nc-recomb-seager-hummer-HeI-case-B-dTm"/>
     <keyword type="function" name="nc_recomb_seager_hummer_HeI_case_B_trip ()" link="NcRecombSeager.html#nc-recomb-seager-hummer-HeI-case-B-trip"/>
     <keyword type="function" name="nc_recomb_seager_hummer_HeI_case_B_trip_dTm ()" link="NcRecombSeager.html#nc-recomb-seager-hummer-HeI-case-B-trip-dTm"/>
+    <keyword type="macro" name="SUN_DENSE_ACCESS" link="NcRecombSeager.html#SUN-DENSE-ACCESS:CAPS"/>
     <keyword type="enum" name="enum NcRecombSeagerOpt" link="NcRecombSeager.html#NcRecombSeagerOpt"/>
     <keyword type="macro" name="NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_T1" link="NcRecombSeager.html#NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-T1:CAPS"/>
     <keyword type="macro" name="NC_RECOMB_SEAGER_HUMMER_HEI_CASE_B_T2" link="NcRecombSeager.html#NC-RECOMB-SEAGER-HUMMER-HEI-CASE-B-T2:CAPS"/>
@@ -3966,51 +4038,6 @@
     <keyword type="property" name="The “z-re-fit” property" link="NcHIReionCamb.html#NcHIReionCamb--z-re-fit"/>
     <keyword type="function" name="nc_hireion_camb_reparam_tau_new ()" link="NcHIReionCambReparamTau.html#nc-hireion-camb-reparam-tau-new"/>
     <keyword type="property" name="The “cosmo” property" link="NcHIReionCambReparamTau.html#NcHIReionCambReparamTau--cosmo"/>
-    <keyword type="macro" name="NC_PERT_THETA()" link="numcosmo-NcLinearPert.html#NC-PERT-THETA:CAPS"/>
-    <keyword type="macro" name="NC_PERT_THETA_P()" link="numcosmo-NcLinearPert.html#NC-PERT-THETA-P:CAPS"/>
-    <keyword type="macro" name="NC_PERTURBATIONS_LAMBDA2X()" link="numcosmo-NcLinearPert.html#NC-PERTURBATIONS-LAMBDA2X:CAPS"/>
-    <keyword type="macro" name="NC_PERTURBATIONS_X2LAMBDA()" link="numcosmo-NcLinearPert.html#NC-PERTURBATIONS-X2LAMBDA:CAPS"/>
-    <keyword type="function" name="NcLinearPertCreate ()" link="numcosmo-NcLinearPert.html#NcLinearPertCreate"/>
-    <keyword type="function" name="NcLinearPertConf ()" link="numcosmo-NcLinearPert.html#NcLinearPertConf"/>
-    <keyword type="function" name="NcLinearPertEvol ()" link="numcosmo-NcLinearPert.html#NcLinearPertEvol"/>
-    <keyword type="function" name="NcLinearPertTest ()" link="numcosmo-NcLinearPert.html#NcLinearPertTest"/>
-    <keyword type="function" name="NcLinearPertSources ()" link="numcosmo-NcLinearPert.html#NcLinearPertSources"/>
-    <keyword type="function" name="NcLinearPertGet ()" link="numcosmo-NcLinearPert.html#NcLinearPertGet"/>
-    <keyword type="function" name="NcLinearPertGetN ()" link="numcosmo-NcLinearPert.html#NcLinearPertGetN"/>
-    <keyword type="macro" name="NC_LINEAR_PERTURBATIONS_GET_SPLINE()" link="numcosmo-NcLinearPert.html#NC-LINEAR-PERTURBATIONS-GET-SPLINE:CAPS"/>
-    <keyword type="macro" name="NC_LINEAR_PERTURBATIONS()" link="numcosmo-NcLinearPert.html#NC-LINEAR-PERTURBATIONS:CAPS"/>
-    <keyword type="function" name="nc_pert_linear_new ()" link="numcosmo-NcLinearPert.html#nc-pert-linear-new"/>
-    <keyword type="function" name="nc_pert_linear_splines_new ()" link="numcosmo-NcLinearPert.html#nc-pert-linear-splines-new"/>
-    <keyword type="function" name="nc_pert_linear_prepare_splines ()" link="numcosmo-NcLinearPert.html#nc-pert-linear-prepare-splines"/>
-    <keyword type="function" name="nc_pert_linear_free ()" link="numcosmo-NcLinearPert.html#nc-pert-linear-free"/>
-    <keyword type="function" name="nc_pert_linear_clear ()" link="numcosmo-NcLinearPert.html#nc-pert-linear-clear"/>
-    <keyword type="function" name="nc_pert_linear_splines_free ()" link="numcosmo-NcLinearPert.html#nc-pert-linear-splines-free"/>
-    <keyword type="function" name="nc_pert_linear_splines_clear ()" link="numcosmo-NcLinearPert.html#nc-pert-linear-splines-clear"/>
-    <keyword type="function" name="nc_pert_linear_spline_set_source_at ()" link="numcosmo-NcLinearPert.html#nc-pert-linear-spline-set-source-at"/>
-    <keyword type="function" name="nc_pert_linear_calc_Nc_spline ()" link="numcosmo-NcLinearPert.html#nc-pert-linear-calc-Nc-spline"/>
-    <keyword type="function" name="nc_pert_linear_los_integrate ()" link="numcosmo-NcLinearPert.html#nc-pert-linear-los-integrate"/>
-    <keyword type="function" name="nc_pert_linear_create_los_table ()" link="numcosmo-NcLinearPert.html#nc-pert-linear-create-los-table"/>
-    <keyword type="macro" name="nc_pert_get_default_los_table()" link="numcosmo-NcLinearPert.html#nc-pert-get-default-los-table"/>
-    <keyword type="function" name="nc_pert_transfer_function_new ()" link="numcosmo-NcLinearPert.html#nc-pert-transfer-function-new"/>
-    <keyword type="function" name="nc_pert_transfer_function_prepare ()" link="numcosmo-NcLinearPert.html#nc-pert-transfer-function-prepare"/>
-    <keyword type="function" name="nc_pert_transfer_function_get ()" link="numcosmo-NcLinearPert.html#nc-pert-transfer-function-get"/>
-    <keyword type="enum" name="enum NcLinearPertVars" link="numcosmo-NcLinearPert.html#NcLinearPertVars"/>
-    <keyword type="macro" name="NC_PERTURBATION_BASE_SIZE" link="numcosmo-NcLinearPert.html#NC-PERTURBATION-BASE-SIZE:CAPS"/>
-    <keyword type="macro" name="NC_PERT_dB0" link="numcosmo-NcLinearPert.html#NC-PERT-dB0"/>
-    <keyword type="macro" name="NC_PERT_V" link="numcosmo-NcLinearPert.html#NC-PERT-V:CAPS"/>
-    <keyword type="macro" name="NC_PERT_T" link="numcosmo-NcLinearPert.html#NC-PERT-T:CAPS"/>
-    <keyword type="macro" name="NC_PERT_dTHETA0" link="numcosmo-NcLinearPert.html#NC-PERT-dTHETA0"/>
-    <keyword type="macro" name="NC_PERT_U" link="numcosmo-NcLinearPert.html#NC-PERT-U:CAPS"/>
-    <keyword type="struct" name="struct NcLinearPert" link="numcosmo-NcLinearPert.html#NcLinearPert"/>
-    <keyword type="struct" name="struct NcLinearPertOdeSolver" link="numcosmo-NcLinearPert.html#NcLinearPertOdeSolver"/>
-    <keyword type="enum" name="enum NcLinearPertSplineTypes" link="numcosmo-NcLinearPert.html#NcLinearPertSplineTypes"/>
-    <keyword type="macro" name="NC_LINEAR_PERTURBATIONS_SPLINE_ALL" link="numcosmo-NcLinearPert.html#NC-LINEAR-PERTURBATIONS-SPLINE-ALL:CAPS"/>
-    <keyword type="struct" name="struct NcLinearPertSplines" link="numcosmo-NcLinearPert.html#NcLinearPertSplines"/>
-    <keyword type="macro" name="NC_PERTURBATION_START_X" link="numcosmo-NcLinearPert.html#NC-PERTURBATION-START-X:CAPS"/>
-    <keyword type="struct" name="struct NcLinearPertTF" link="numcosmo-NcLinearPert.html#NcLinearPertTF"/>
-    <keyword type="variable" name="cvodes_solver" link="numcosmo-NcLinearPert.html#cvodes-solver"/>
-    <keyword type="variable" name="ncm_gsl_odeiv2_solver" link="numcosmo-NcLinearPert.html#ncm-gsl-odeiv2-solver"/>
-    <keyword type="function" name="nc_pert_cov_direct ()" link="numcosmo-NcLinearPertCov.html#nc-pert-cov-direct"/>
     <keyword type="function" name="nc_hipert_set_mode_k ()" link="NcHIPert.html#nc-hipert-set-mode-k"/>
     <keyword type="function" name="nc_hipert_set_reltol ()" link="NcHIPert.html#nc-hipert-set-reltol"/>
     <keyword type="function" name="nc_hipert_set_abstol ()" link="NcHIPert.html#nc-hipert-set-abstol"/>
@@ -4019,6 +4046,8 @@
     <keyword type="function" name="nc_hipert_set_sys_size ()" link="NcHIPert.html#nc-hipert-set-sys-size"/>
     <keyword type="function" name="nc_hipert_set_stiff_solver ()" link="NcHIPert.html#nc-hipert-set-stiff-solver"/>
     <keyword type="function" name="nc_hipert_reset_solver ()" link="NcHIPert.html#nc-hipert-reset-solver"/>
+    <keyword type="macro" name="SUN_DENSE_ACCESS" link="NcHIPert.html#SUN-DENSE-ACCESS:CAPS"/>
+    <keyword type="macro" name="SUN_BAND_ACCESS" link="NcHIPert.html#SUN-BAND-ACCESS:CAPS"/>
     <keyword type="property" name="The “abstol” property" link="NcHIPert.html#NcHIPert--abstol"/>
     <keyword type="property" name="The “alphai” property" link="NcHIPert.html#NcHIPert--alphai"/>
     <keyword type="property" name="The “k” property" link="NcHIPert.html#NcHIPert--k"/>
@@ -4421,6 +4450,7 @@
     <keyword type="function" name="nc_growth_func_eval_deriv ()" link="NcGrowthFunc.html#nc-growth-func-eval-deriv"/>
     <keyword type="function" name="nc_growth_func_eval_both ()" link="NcGrowthFunc.html#nc-growth-func-eval-both"/>
     <keyword type="function" name="nc_growth_func_get_dust_norma_Da0 ()" link="NcGrowthFunc.html#nc-growth-func-get-dust-norma-Da0"/>
+    <keyword type="macro" name="SUN_DENSE_ACCESS" link="NcGrowthFunc.html#SUN-DENSE-ACCESS:CAPS"/>
     <keyword type="function" name="nc_powspec_ml_new_from_name ()" link="NcPowspecML.html#nc-powspec-ml-new-from-name"/>
     <keyword type="function" name="nc_powspec_ml_ref ()" link="NcPowspecML.html#nc-powspec-ml-ref"/>
     <keyword type="function" name="nc_powspec_ml_free ()" link="NcPowspecML.html#nc-powspec-ml-free"/>
@@ -4468,6 +4498,7 @@
     <keyword type="function" name="nc_density_profile_integral_density_los ()" link="NcDensityProfile.html#nc-density-profile-integral-density-los"/>
     <keyword type="function" name="nc_density_profile_integral_density_2d ()" link="NcDensityProfile.html#nc-density-profile-integral-density-2d"/>
     <keyword type="function" name="nc_density_profile_eval_fourier ()" link="NcDensityProfile.html#nc-density-profile-eval-fourier"/>
+    <keyword type="function" name="nc_density_profile_scale_radius ()" link="NcDensityProfile.html#nc-density-profile-scale-radius"/>
     <keyword type="function" name="nc_density_profile_nfw_new ()" link="NcDensityProfileNFW.html#nc-density-profile-nfw-new"/>
     <keyword type="enum" name="enum NcDensityProfileNFWParams" link="NcDensityProfileNFW.html#NcDensityProfileNFWParams"/>
     <keyword type="macro" name="NC_DENSITY_PROFILE_NFW_DEFAULT_C_DELTA" link="NcDensityProfileNFW.html#NC-DENSITY-PROFILE-NFW-DEFAULT-C-DELTA:CAPS"/>
@@ -4974,15 +5005,30 @@
     <keyword type="function" name="nc_cor_cluster_cmb_lens_limber_twoh_term ()" link="NcCorClusterCmbLensLimber.html#nc-cor-cluster-cmb-lens-limber-twoh-term"/>
     <keyword type="function" name="nc_wl_surface_mass_density_new ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-new"/>
     <keyword type="function" name="nc_wl_surface_mass_density_ref ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-ref"/>
-    <keyword type="function" name="nc_wl_surface_mass_density_require_zf ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-require-zf"/>
-    <keyword type="function" name="nc_wl_surface_mass_density_prepare ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-prepare"/>
     <keyword type="function" name="nc_wl_surface_mass_density_free ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-free"/>
     <keyword type="function" name="nc_wl_surface_mass_density_clear ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-clear"/>
-    <keyword type="function" name="nc_wl_surface_mass_density_prepare_if_needed ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-prepare-if-needed"/>
-    <keyword type="property" name="The “cg” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--cg"/>
-    <keyword type="property" name="The “misc” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--misc"/>
-    <keyword type="property" name="The “nw” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--nw"/>
-    <keyword type="property" name="The “twoh” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--twoh"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_set_zcluster ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-set-zcluster"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_set_zsource ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-set-zsource"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_set_zlens ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-set-zlens"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_sigma ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-sigma"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_sigma_mean ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-sigma-mean"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_sigma_critical ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-sigma-critical"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_convergence ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-convergence"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_shear ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-shear"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_reduced_shear ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-reduced-shear"/>
+    <keyword type="function" name="nc_wl_surface_mass_density_reduced_shear_infinity ()" link="NcWLSurfaceMassDensity.html#nc-wl-surface-mass-density-reduced-shear-infinity"/>
+    <keyword type="enum" name="enum NcWLSurfaceMassDensityParams" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensityParams"/>
+    <keyword type="macro" name="NC_WL_SURFACE_MASS_DENSITY_DEFAULT_PCC" link="NcWLSurfaceMassDensity.html#NC-WL-SURFACE-MASS-DENSITY-DEFAULT-PCC:CAPS"/>
+    <keyword type="macro" name="NC_WL_SURFACE_MASS_DENSITY_DEFAULT_ROFF" link="NcWLSurfaceMassDensity.html#NC-WL-SURFACE-MASS-DENSITY-DEFAULT-ROFF:CAPS"/>
+    <keyword type="macro" name="NC_WL_SURFACE_MASS_DENSITY_DEFAULT_PARAMS_ABSTOL" link="NcWLSurfaceMassDensity.html#NC-WL-SURFACE-MASS-DENSITY-DEFAULT-PARAMS-ABSTOL:CAPS"/>
+    <keyword type="property" name="The “Roff” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--Roff"/>
+    <keyword type="property" name="The “Roff-fit” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--Roff-fit"/>
+    <keyword type="property" name="The “distance” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--distance"/>
+    <keyword type="property" name="The “pcc” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--pcc"/>
+    <keyword type="property" name="The “pcc-fit” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--pcc-fit"/>
+    <keyword type="property" name="The “zcluster” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--zcluster"/>
+    <keyword type="property" name="The “zlens” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--zlens"/>
+    <keyword type="property" name="The “zsource” property" link="NcWLSurfaceMassDensity.html#NcWLSurfaceMassDensity--zsource"/>
     <keyword type="function" name="nc_data_cmb_create ()" link="numcosmo-NcDataCMB.html#nc-data-cmb-create"/>
     <keyword type="enum" name="enum NcDataCMBDataType" link="numcosmo-NcDataCMB.html#NcDataCMBDataType"/>
     <keyword type="enum" name="enum NcDataCMBId" link="numcosmo-NcDataCMB.html#NcDataCMBId"/>
@@ -5423,6 +5469,7 @@
     <keyword type="constant" name="NCM_DATASET_BSTRAP_PARTIAL" link="NcmDataset.html#NCM-DATASET-BSTRAP-PARTIAL:CAPS"/>
     <keyword type="constant" name="NCM_DATASET_BSTRAP_TOTAL" link="NcmDataset.html#NCM-DATASET-BSTRAP-TOTAL:CAPS"/>
     <keyword type="constant" name="NCM_DATA_POISSON_INT" link="NcmDataPoisson.html#NCM-DATA-POISSON-INT:CAPS"/>
+    <keyword type="constant" name="NCM_DATA_VOIGT_INT" link="NcmDataVoigt.html#NCM-DATA-VOIGT-INT:CAPS"/>
     <keyword type="constant" name="NCM_STATS_VEC_MEAN" link="NcmStatsVec.html#NCM-STATS-VEC-MEAN:CAPS"/>
     <keyword type="constant" name="NCM_STATS_VEC_VAR" link="NcmStatsVec.html#NCM-STATS-VEC-VAR:CAPS"/>
     <keyword type="constant" name="NCM_STATS_VEC_COV" link="NcmStatsVec.html#NCM-STATS-VEC-COV:CAPS"/>
@@ -5472,18 +5519,11 @@
     <keyword type="constant" name="NCM_LH_RATIO1D_ROOT_NUMDIFF" link="NcmLHRatio1d.html#NCM-LH-RATIO1D-ROOT-NUMDIFF:CAPS"/>
     <keyword type="constant" name="NCM_LH_RATIO2D_ROOT_BRACKET" link="NcmLHRatio2d.html#NCM-LH-RATIO2D-ROOT-BRACKET:CAPS"/>
     <keyword type="constant" name="NCM_LH_RATIO2D_ROOT_NUMDIFF" link="NcmLHRatio2d.html#NCM-LH-RATIO2D-ROOT-NUMDIFF:CAPS"/>
-    <keyword type="constant" name="NCM_SPHERE_MAP_PIX_ORDER_NEST" link="NcmSphereMapPix.html#NCM-SPHERE-MAP-PIX-ORDER-NEST:CAPS"/>
-    <keyword type="constant" name="NCM_SPHERE_MAP_PIX_ORDER_RING" link="NcmSphereMapPix.html#NCM-SPHERE-MAP-PIX-ORDER-RING:CAPS"/>
-    <keyword type="constant" name="NCM_SPHERE_MAP_PIX_COORD_SYS_GALACTIC" link="NcmSphereMapPix.html#NCM-SPHERE-MAP-PIX-COORD-SYS-GALACTIC:CAPS"/>
-    <keyword type="constant" name="NCM_SPHERE_MAP_PIX_COORD_SYS_ECLIPTIC" link="NcmSphereMapPix.html#NCM-SPHERE-MAP-PIX-COORD-SYS-ECLIPTIC:CAPS"/>
-    <keyword type="constant" name="NCM_SPHERE_MAP_PIX_COORD_SYS_CELESTIAL" link="NcmSphereMapPix.html#NCM-SPHERE-MAP-PIX-COORD-SYS-CELESTIAL:CAPS"/>
-    <keyword type="constant" name="NC_SPHERE_MAP_ORDER_NEST" link="NcmSphereMap.html#NC-SPHERE-MAP-ORDER-NEST:CAPS"/>
-    <keyword type="constant" name="NC_SPHERE_MAP_ORDER_RING" link="NcmSphereMap.html#NC-SPHERE-MAP-ORDER-RING:CAPS"/>
-    <keyword type="constant" name="NC_SPHERE_MAP_TYPE_TEMPERATURE" link="NcmSphereMap.html#NC-SPHERE-MAP-TYPE-TEMPERATURE:CAPS"/>
-    <keyword type="constant" name="NC_SPHERE_MAP_TYPE_Q_POLARIZATION" link="NcmSphereMap.html#NC-SPHERE-MAP-TYPE-Q-POLARIZATION:CAPS"/>
-    <keyword type="constant" name="NC_SPHERE_MAP_TYPE_U_POLARISATION" link="NcmSphereMap.html#NC-SPHERE-MAP-TYPE-U-POLARISATION:CAPS"/>
-    <keyword type="constant" name="NC_SPHERE_MAP_TYPE_SPUR_SIGNAL" link="NcmSphereMap.html#NC-SPHERE-MAP-TYPE-SPUR-SIGNAL:CAPS"/>
-    <keyword type="constant" name="NC_SPHERE_MAP_TYPE_N_OBS" link="NcmSphereMap.html#NC-SPHERE-MAP-TYPE-N-OBS:CAPS"/>
+    <keyword type="constant" name="NCM_SPHERE_MAP_ORDER_NEST" link="NcmSphereMap.html#NCM-SPHERE-MAP-ORDER-NEST:CAPS"/>
+    <keyword type="constant" name="NCM_SPHERE_MAP_ORDER_RING" link="NcmSphereMap.html#NCM-SPHERE-MAP-ORDER-RING:CAPS"/>
+    <keyword type="constant" name="NCM_SPHERE_MAP_COORD_SYS_GALACTIC" link="NcmSphereMap.html#NCM-SPHERE-MAP-COORD-SYS-GALACTIC:CAPS"/>
+    <keyword type="constant" name="NCM_SPHERE_MAP_COORD_SYS_ECLIPTIC" link="NcmSphereMap.html#NCM-SPHERE-MAP-COORD-SYS-ECLIPTIC:CAPS"/>
+    <keyword type="constant" name="NCM_SPHERE_MAP_COORD_SYS_CELESTIAL" link="NcmSphereMap.html#NCM-SPHERE-MAP-COORD-SYS-CELESTIAL:CAPS"/>
     <keyword type="constant" name="NC_HICOSMO_IMPL_H0" link="NcHICosmo.html#NC-HICOSMO-IMPL-H0:CAPS"/>
     <keyword type="constant" name="NC_HICOSMO_IMPL_Omega_b0" link="NcHICosmo.html#NC-HICOSMO-IMPL-Omega-b0"/>
     <keyword type="constant" name="NC_HICOSMO_IMPL_Omega_c0" link="NcHICosmo.html#NC-HICOSMO-IMPL-Omega-c0"/>
@@ -5575,8 +5615,6 @@
     <keyword type="constant" name="NC_HICOSMO_VEXP_D_PHI" link="NcHICosmoVexp.html#NC-HICOSMO-VEXP-D-PHI:CAPS"/>
     <keyword type="constant" name="NC_HICOSMO_VEXP_ALPHA_B" link="NcHICosmoVexp.html#NC-HICOSMO-VEXP-ALPHA-B:CAPS"/>
     <keyword type="constant" name="NC_HICOSMO_VEXP_X_B" link="NcHICosmoVexp.html#NC-HICOSMO-VEXP-X-B:CAPS"/>
-    <keyword type="constant" name="NC_HICOSMO_QG_PERT_CURVATURE" link="numcosmo-NcHICosmoQG.html#NC-HICOSMO-QG-PERT-CURVATURE:CAPS"/>
-    <keyword type="constant" name="NC_HICOSMO_QG_PERT_H" link="numcosmo-NcHICosmoQG.html#NC-HICOSMO-QG-PERT-H:CAPS"/>
     <keyword type="constant" name="NC_HICOSMO_QCONST_H0" link="NcHICosmoQConst.html#NC-HICOSMO-QCONST-H0:CAPS"/>
     <keyword type="constant" name="NC_HICOSMO_QCONST_OMEGA_T" link="NcHICosmoQConst.html#NC-HICOSMO-QCONST-OMEGA-T:CAPS"/>
     <keyword type="constant" name="NC_HICOSMO_QCONST_CD" link="NcHICosmoQConst.html#NC-HICOSMO-QCONST-CD:CAPS"/>
@@ -5741,26 +5779,6 @@
     <keyword type="constant" name="NC_RECOM_SEAGER_OPT_ALL" link="NcRecombSeager.html#NC-RECOM-SEAGER-OPT-ALL:CAPS"/>
     <keyword type="constant" name="NC_HIREION_CAMB_HII_HEII_Z" link="NcHIReionCamb.html#NC-HIREION-CAMB-HII-HEII-Z:CAPS"/>
     <keyword type="constant" name="NC_HIREION_CAMB_HEIII_Z" link="NcHIReionCamb.html#NC-HIREION-CAMB-HEIII-Z:CAPS"/>
-    <keyword type="constant" name="NC_PERT_B0" link="numcosmo-NcLinearPert.html#NC-PERT-B0:CAPS"/>
-    <keyword type="constant" name="NC_PERT_THETA0" link="numcosmo-NcLinearPert.html#NC-PERT-THETA0:CAPS"/>
-    <keyword type="constant" name="NC_PERT_C0" link="numcosmo-NcLinearPert.html#NC-PERT-C0:CAPS"/>
-    <keyword type="constant" name="NC_PERT_PHI" link="numcosmo-NcLinearPert.html#NC-PERT-PHI:CAPS"/>
-    <keyword type="constant" name="NC_PERT_B1" link="numcosmo-NcLinearPert.html#NC-PERT-B1:CAPS"/>
-    <keyword type="constant" name="NC_PERT_THETA1" link="numcosmo-NcLinearPert.html#NC-PERT-THETA1:CAPS"/>
-    <keyword type="constant" name="NC_PERT_C1" link="numcosmo-NcLinearPert.html#NC-PERT-C1:CAPS"/>
-    <keyword type="constant" name="NC_PERT_THETA2" link="numcosmo-NcLinearPert.html#NC-PERT-THETA2:CAPS"/>
-    <keyword type="constant" name="NC_PERT_THETA_P0" link="numcosmo-NcLinearPert.html#NC-PERT-THETA-P0:CAPS"/>
-    <keyword type="constant" name="NC_PERT_THETA_P1" link="numcosmo-NcLinearPert.html#NC-PERT-THETA-P1:CAPS"/>
-    <keyword type="constant" name="NC_PERT_THETA_P2" link="numcosmo-NcLinearPert.html#NC-PERT-THETA-P2:CAPS"/>
-    <keyword type="constant" name="NC_LINEAR_PERTURBATIONS_SPLINE_SOURCES" link="numcosmo-NcLinearPert.html#NC-LINEAR-PERTURBATIONS-SPLINE-SOURCES:CAPS"/>
-    <keyword type="constant" name="NC_LINEAR_PERTURBATIONS_SPLINE_PHI" link="numcosmo-NcLinearPert.html#NC-LINEAR-PERTURBATIONS-SPLINE-PHI:CAPS"/>
-    <keyword type="constant" name="NC_LINEAR_PERTURBATIONS_SPLINE_THETA0" link="numcosmo-NcLinearPert.html#NC-LINEAR-PERTURBATIONS-SPLINE-THETA0:CAPS"/>
-    <keyword type="constant" name="NC_LINEAR_PERTURBATIONS_SPLINE_C0" link="numcosmo-NcLinearPert.html#NC-LINEAR-PERTURBATIONS-SPLINE-C0:CAPS"/>
-    <keyword type="constant" name="NC_LINEAR_PERTURBATIONS_SPLINE_B0" link="numcosmo-NcLinearPert.html#NC-LINEAR-PERTURBATIONS-SPLINE-B0:CAPS"/>
-    <keyword type="constant" name="NC_LINEAR_PERTURBATIONS_SPLINE_THETA1" link="numcosmo-NcLinearPert.html#NC-LINEAR-PERTURBATIONS-SPLINE-THETA1:CAPS"/>
-    <keyword type="constant" name="NC_LINEAR_PERTURBATIONS_SPLINE_C1" link="numcosmo-NcLinearPert.html#NC-LINEAR-PERTURBATIONS-SPLINE-C1:CAPS"/>
-    <keyword type="constant" name="NC_LINEAR_PERTURBATIONS_SPLINE_B1" link="numcosmo-NcLinearPert.html#NC-LINEAR-PERTURBATIONS-SPLINE-B1:CAPS"/>
-    <keyword type="constant" name="NC_LINEAR_PERTURBATIONS_SPLINE_THETA2" link="numcosmo-NcLinearPert.html#NC-LINEAR-PERTURBATIONS-SPLINE-THETA2:CAPS"/>
     <keyword type="constant" name="NC_HIPERT_WKB_RE_Q" link="NcHIPertWKB.html#NC-HIPERT-WKB-RE-Q:CAPS"/>
     <keyword type="constant" name="NC_HIPERT_WKB_IM_Q" link="NcHIPertWKB.html#NC-HIPERT-WKB-IM-Q:CAPS"/>
     <keyword type="constant" name="NC_HIPERT_WKB_RE_P" link="NcHIPertWKB.html#NC-HIPERT-WKB-RE-P:CAPS"/>
@@ -5855,6 +5873,8 @@
     <keyword type="constant" name="NC_CLUSTER_PSEUDO_COUNTS_SD_MCUT" link="NcClusterPseudoCounts.html#NC-CLUSTER-PSEUDO-COUNTS-SD-MCUT:CAPS"/>
     <keyword type="constant" name="NC_CLUSTER_PSEUDO_COUNTS_ZMIN" link="NcClusterPseudoCounts.html#NC-CLUSTER-PSEUDO-COUNTS-ZMIN:CAPS"/>
     <keyword type="constant" name="NC_CLUSTER_PSEUDO_COUNTS_DELTAZ" link="NcClusterPseudoCounts.html#NC-CLUSTER-PSEUDO-COUNTS-DELTAZ:CAPS"/>
+    <keyword type="constant" name="NC_WL_SURFACE_MASS_DENSITY_PCC" link="NcWLSurfaceMassDensity.html#NC-WL-SURFACE-MASS-DENSITY-PCC:CAPS"/>
+    <keyword type="constant" name="NC_WL_SURFACE_MASS_DENSITY_ROFF" link="NcWLSurfaceMassDensity.html#NC-WL-SURFACE-MASS-DENSITY-ROFF:CAPS"/>
     <keyword type="constant" name="NC_DATA_CMB_TYPE_TT" link="numcosmo-NcDataCMB.html#NC-DATA-CMB-TYPE-TT:CAPS"/>
     <keyword type="constant" name="NC_DATA_CMB_TYPE_EE" link="numcosmo-NcDataCMB.html#NC-DATA-CMB-TYPE-EE:CAPS"/>
     <keyword type="constant" name="NC_DATA_CMB_TYPE_BB" link="numcosmo-NcDataCMB.html#NC-DATA-CMB-TYPE-BB:CAPS"/>
@@ -5985,6 +6005,14 @@
     <keyword type="constant" name="NC_FUNCTION_CACHE_SEARCH_BOTH" link="numcosmo-NcmFunctionCache.html#NC-FUNCTION-CACHE-SEARCH-BOTH:CAPS"/>
     <keyword type="constant" name="NC_FUNCTION_CACHE_SEARCH_GT" link="numcosmo-NcmFunctionCache.html#NC-FUNCTION-CACHE-SEARCH-GT:CAPS"/>
     <keyword type="constant" name="NC_FUNCTION_CACHE_SEARCH_LT" link="numcosmo-NcmFunctionCache.html#NC-FUNCTION-CACHE-SEARCH-LT:CAPS"/>
+    <keyword type="member" name="NcmSFSphericalHarmonicsK.l" link="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsK.l"/>
+    <keyword type="member" name="NcmSFSphericalHarmonicsK.lp1" link="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsK.lp1"/>
+    <keyword type="member" name="NcmSFSphericalHarmonicsP.x" link="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsP.x"/>
+    <keyword type="member" name="NcmSFSphericalHarmonicsP.sqrt1mx2" link="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsP.sqrt1mx2"/>
+    <keyword type="member" name="NcmSFSphericalHarmonicsP.l0m" link="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsP.l0m"/>
+    <keyword type="member" name="NcmSFSphericalHarmonicsP.l0p1m" link="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsP.l0p1m"/>
+    <keyword type="member" name="NcmSFSphericalHarmonicsP.lm" link="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsP.lm"/>
+    <keyword type="member" name="NcmSFSphericalHarmonicsP.lp1m" link="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsP.lp1m"/>
     <keyword type="member" name="NcmDataClass.bootstrap" link="NcmData.html#NcmDataClass.bootstrap"/>
     <keyword type="member" name="NcmDataClass.get-length" link="NcmData.html#NcmDataClass.get-length"/>
     <keyword type="member" name="NcmDataClass.get-dof" link="NcmData.html#NcmDataClass.get-dof"/>

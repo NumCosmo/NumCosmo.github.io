@@ -9,7 +9,7 @@
 <link rel="up" href="ch06.html" title="Cosmological Calculators" />
 <link rel="prev" href="ch06.html" title="Cosmological Calculators" />
 <link rel="next" href="NcScalefactor.html" title="NcScalefactor" />
-<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -23,18 +23,6 @@
 //]]>
 </script>
 <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
-</script>
-
-<script type="text/javascript">
-//<![CDATA[
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-36056599-1', 'auto');
-  ga('send', 'pageview');
-//]]>
 </script>
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
@@ -361,6 +349,22 @@
 </td>
 <td class="function_name">
 <a class="link" href="NcDistance.html#nc-distance-DA-r" title="nc_distance_DA_r ()">nc_distance_DA_r</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcDistance.html#nc-distance-comoving-z-to-infinity" title="nc_distance_comoving_z_to_infinity ()">nc_distance_comoving_z_to_infinity</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcDistance.html#nc-distance-transverse-z-to-infinity" title="nc_distance_transverse_z_to_infinity ()">nc_distance_transverse_z_to_infinity</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -769,7 +773,7 @@ nc_distance_drag_redshift (<em class="parameter"><code><a class="link" href="NcD
 <p>If the <em class="parameter"><code>dist</code></em>
  object constains a NcRecomb object, it calculates the drag
 redshift through the recombination history. Otherwise, it computes $z_d$ 
-using the fitting formula given in <a class="link" href="refs.html#XEisenstein1998">Eisenstein &amp; Hu (1998)</a>,
+using the fitting formula given in <a class="link" href="refs.html#XEisenstein1998">Eisenstein &amp;amp; Hu (1998)</a>,
 $$z_d = \frac{1291 (\Omega_{m0} h^2)^{0.251}}{(1 + 0.659 (\Omega_{m0} h^2)^{0.828})}
 \left(1 + b_1 (\Omega_{b0} h^2)^{b_2}\right),$$
 where $\Omega_{b0} h^2$ [<a class="link" href="NcHICosmo.html#nc-hicosmo-Omega-b0h2" title="nc_hicosmo_Omega_b0h2 ()"><code class="function">nc_hicosmo_Omega_b0h2()</code></a>] and $\Omega_{m0} h^2$ [<a class="link" href="NcHICosmo.html#nc-hicosmo-Omega-m0h2" title="nc_hicosmo_Omega_m0h2 ()"><code class="function">nc_hicosmo_Omega_m0h2()</code></a>]
@@ -1754,6 +1758,89 @@ nc_distance_DA_r (<em class="parameter"><code><a class="link" href="NcDistance.h
 </div>
 <hr />
 <div class="refsect2">
+<a name="nc-distance-comoving-z-to-infinity" id="nc-distance-comoving-z-to-infinity"></a><h3>nc_distance_comoving_z_to_infinity ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_distance_comoving_z_to_infinity (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
+                                    <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>Computes the comoving distance from <em class="parameter"><code>z</code></em>
+ to infinity.</p>
+<div class="refsect3">
+<a name="nc-distance-comoving-z-to-infinity.parameters" id="nc-distance-comoving-z-to-infinity.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dist</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z</p></td>
+<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-distance-comoving-z-to-infinity.returns" id="nc-distance-comoving-z-to-infinity.returns"></a><h4>Returns</h4>
+<p> $D_c$ from $z$ to $\infity$</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-distance-transverse-z-to-infinity" id="nc-distance-transverse-z-to-infinity"></a><h3>nc_distance_transverse_z_to_infinity ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_distance_transverse_z_to_infinity (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>Compute the transverse comoving distance $D_t (z)$ (defined in Eq. $\eqref{eq:def:Dt}$) 
+but from <em class="parameter"><code>z</code></em>
+ to infinity.</p>
+<div class="refsect3">
+<a name="nc-distance-transverse-z-to-infinity.parameters" id="nc-distance-transverse-z-to-infinity.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dist</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z</p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-distance-transverse-z-to-infinity.returns" id="nc-distance-transverse-z-to-infinity.returns"></a><h4>Returns</h4>
+<p> $D_t(z)$ from $z$ to $\infity$</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
 <a name="nc-distance-cosmic-time" id="nc-distance-cosmic-time"></a><h3>nc_distance_cosmic_time ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_cosmic_time (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
@@ -1920,6 +2007,6 @@ nc_distance_conformal_lookback_time (<em class="parameter"><code><a class="link"
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.26.1</div>
+<hr />Generated by GTK-Doc V1.27</div>
 </div></div></body>
 </html>
