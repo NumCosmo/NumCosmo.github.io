@@ -1,0 +1,1195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmMPIJob: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s02.html" title="MPI Objects" />
+<link rel="prev" href="ch02s02.html" title="MPI Objects" />
+<link rel="next" href="NcmMPIJobTest.html" title="NcmMPIJobTest" />
+<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmMPIJob.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmMPIJob.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmMPIJob.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s02.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="ch02s02.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmMPIJobTest.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmMPIJob" id="NcmMPIJob"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmMPIJob.top_of_page" id="NcmMPIJob.top_of_page"></a>NcmMPIJob</span></h2>
+<p>NcmMPIJob — Abstract class to implement MPI jobs</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmMPIJob.functions" id="NcmMPIJob.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return" />
+<col class="functions_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="returnvalue">NcmMPIJob</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-ref" title="ncm_mpi_job_ref ()">ncm_mpi_job_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-free" title="ncm_mpi_job_free ()">ncm_mpi_job_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-clear" title="ncm_mpi_job_clear ()">ncm_mpi_job_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-work-init" title="ncm_mpi_job_work_init ()">ncm_mpi_job_work_init</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-work-clear" title="ncm_mpi_job_work_clear ()">ncm_mpi_job_work_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMPIJob.html#MPI-Datatype" title="MPI_Datatype"><span class="returnvalue">MPI_Datatype</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-input-datatype" title="ncm_mpi_job_input_datatype ()">ncm_mpi_job_input_datatype</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMPIJob.html#MPI-Datatype" title="MPI_Datatype"><span class="returnvalue">MPI_Datatype</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-return-datatype" title="ncm_mpi_job_return_datatype ()">ncm_mpi_job_return_datatype</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-create-input" title="ncm_mpi_job_create_input ()">ncm_mpi_job_create_input</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-create-return" title="ncm_mpi_job_create_return ()">ncm_mpi_job_create_return</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-destroy-input" title="ncm_mpi_job_destroy_input ()">ncm_mpi_job_destroy_input</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-destroy-return" title="ncm_mpi_job_destroy_return ()">ncm_mpi_job_destroy_return</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-get-input-buffer" title="ncm_mpi_job_get_input_buffer ()">ncm_mpi_job_get_input_buffer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-get-return-buffer" title="ncm_mpi_job_get_return_buffer ()">ncm_mpi_job_get_return_buffer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-destroy-input-buffer" title="ncm_mpi_job_destroy_input_buffer ()">ncm_mpi_job_destroy_input_buffer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-destroy-return-buffer" title="ncm_mpi_job_destroy_return_buffer ()">ncm_mpi_job_destroy_return_buffer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-pack-input" title="ncm_mpi_job_pack_input ()">ncm_mpi_job_pack_input</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-pack-return" title="ncm_mpi_job_pack_return ()">ncm_mpi_job_pack_return</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-unpack-input" title="ncm_mpi_job_unpack_input ()">ncm_mpi_job_unpack_input</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-unpack-return" title="ncm_mpi_job_unpack_return ()">ncm_mpi_job_unpack_return</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-run" title="ncm_mpi_job_run ()">ncm_mpi_job_run</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-init-all-slaves" title="ncm_mpi_job_init_all_slaves ()">ncm_mpi_job_init_all_slaves</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-run-array" title="ncm_mpi_job_run_array ()">ncm_mpi_job_run_array</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#ncm-mpi-job-free-all-slaves" title="ncm_mpi_job_free_all_slaves ()">ncm_mpi_job_free_all_slaves</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJob.html#NCM-MPI-JOB-DEBUG-PRINT:CAPS" title="NCM_MPI_JOB_DEBUG_PRINT()">NCM_MPI_JOB_DEBUG_PRINT</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmMPIJob.properties" id="NcmMPIJob.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody><tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcmMPIJob.html#NcmMPIJob--placeholder" title="The “placeholder” property">placeholder</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmMPIJob.other" id="NcmMPIJob.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name" />
+<col class="description" />
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmMPIJob.html#MPI-Datatype" title="MPI_Datatype">MPI_Datatype</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmMPIJob.html#NCM-MPI-CTRL-MASTER-ID:CAPS" title="NCM_MPI_CTRL_MASTER_ID">NCM_MPI_CTRL_MASTER_ID</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcmMPIJob.html#NcmMPIJobCtrlMsg" title="enum NcmMPIJobCtrlMsg">NcmMPIJobCtrlMsg</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcmMPIJob.html#NcmMPIJobCtrlTag" title="enum NcmMPIJobCtrlTag">NcmMPIJobCtrlTag</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmMPIJob.object-hierarchy" id="NcmMPIJob.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">├──</span> NcmMPIJobCtrlMsg
+    <span class="lineart">╰──</span> NcmMPIJobCtrlTag
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcmMPIJob
+        <span class="lineart">├──</span> <a class="link" href="NcmMPIJobFit.html" title="NcmMPIJobFit">NcmMPIJobFit</a>
+        <span class="lineart">├──</span> <a class="link" href="NcmMPIJobMCMC.html" title="NcmMPIJobMCMC">NcmMPIJobMCMC</a>
+        <span class="lineart">╰──</span> <a class="link" href="NcmMPIJobTest.html" title="NcmMPIJobTest">NcmMPIJobTest</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmMPIJob.description" id="NcmMPIJob.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcmMPIJob.functions_details" id="NcmMPIJob.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-mpi-job-ref" id="ncm-mpi-job-ref"></a><h3>ncm_mpi_job_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="returnvalue">NcmMPIJob</span></a> *
+ncm_mpi_job_ref (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>);</pre>
+<p>Increase the reference of <em class="parameter"><code>mpi_job</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-mpi-job-ref.parameters" id="ncm-mpi-job-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mpi-job-ref.returns" id="ncm-mpi-job-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>mpi_job</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-free" id="ncm-mpi-job-free"></a><h3>ncm_mpi_job_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_free (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>);</pre>
+<p>Decrease the reference count of <em class="parameter"><code>mpi_job</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-mpi-job-free.parameters" id="ncm-mpi-job-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-clear" id="ncm-mpi-job-clear"></a><h3>ncm_mpi_job_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_clear (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> **mpi_job</code></em>);</pre>
+<p>Decrease the reference count of <em class="parameter"><code>mpi_job</code></em>
+ by one, and sets the pointer *<em class="parameter"><code>mpi_job</code></em>
+ to
+NULL.</p>
+<div class="refsect3">
+<a name="ncm-mpi-job-clear.parameters" id="ncm-mpi-job-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-work-init" id="ncm-mpi-job-work-init"></a><h3>ncm_mpi_job_work_init ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_work_init (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>);</pre>
+<p>Method called after <em class="parameter"><code>mpi_job</code></em>
+ is initialized at the slave
+and before start working.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> work_init]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-work-init.parameters" id="ncm-mpi-job-work-init.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-work-clear" id="ncm-mpi-job-work-clear"></a><h3>ncm_mpi_job_work_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_work_clear (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>);</pre>
+<p>Method called during the working phase of <em class="parameter"><code>mpi_job</code></em>
+ and in the
+end before object destruction. This method can be called multiple
+times during the work phase.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> work_clear]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-work-clear.parameters" id="ncm-mpi-job-work-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-input-datatype" id="ncm-mpi-job-input-datatype"></a><h3>ncm_mpi_job_input_datatype ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMPIJob.html#MPI-Datatype" title="MPI_Datatype"><span class="returnvalue">MPI_Datatype</span></a>
+ncm_mpi_job_input_datatype (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *len</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *size</code></em>);</pre>
+<p>Computes the size and datatype of the input buffer.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> input_datatype]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-input-datatype.parameters" id="ncm-mpi-job-input-datatype.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>len</p></td>
+<td class="parameter_description"><p>input length. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>input buffer size. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mpi-job-input-datatype.returns" id="ncm-mpi-job-input-datatype.returns"></a><h4>Returns</h4>
+<p> the input datatype.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-return-datatype" id="ncm-mpi-job-return-datatype"></a><h3>ncm_mpi_job_return_datatype ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMPIJob.html#MPI-Datatype" title="MPI_Datatype"><span class="returnvalue">MPI_Datatype</span></a>
+ncm_mpi_job_return_datatype (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
+                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *len</code></em>,
+                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *size</code></em>);</pre>
+<p>Computes the size and datatype of the return buffer.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> return_datatype]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-return-datatype.parameters" id="ncm-mpi-job-return-datatype.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>len</p></td>
+<td class="parameter_description"><p>input length. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>input buffer size. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mpi-job-return-datatype.returns" id="ncm-mpi-job-return-datatype.returns"></a><h4>Returns</h4>
+<p> the return datatype.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-create-input" id="ncm-mpi-job-create-input"></a><h3>ncm_mpi_job_create_input ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+ncm_mpi_job_create_input (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>);</pre>
+<p>Creates a new input object.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> create_input]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-create-input.parameters" id="ncm-mpi-job-create-input.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mpi-job-create-input.returns" id="ncm-mpi-job-create-input.returns"></a><h4>Returns</h4>
+<p> the newly input object.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-create-return" id="ncm-mpi-job-create-return"></a><h3>ncm_mpi_job_create_return ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+ncm_mpi_job_create_return (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>);</pre>
+<p>Creates a new return object.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> create_return]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-create-return.parameters" id="ncm-mpi-job-create-return.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mpi-job-create-return.returns" id="ncm-mpi-job-create-return.returns"></a><h4>Returns</h4>
+<p> the newly return object.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-destroy-input" id="ncm-mpi-job-destroy-input"></a><h3>ncm_mpi_job_destroy_input ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_destroy_input (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
+                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> input</code></em>);</pre>
+<p>Destroy the <em class="parameter"><code>input</code></em>
+ object created with <a class="link" href="NcmMPIJob.html#ncm-mpi-job-create-input" title="ncm_mpi_job_create_input ()"><code class="function">ncm_mpi_job_create_input()</code></a>.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> destroy_input]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-destroy-input.parameters" id="ncm-mpi-job-destroy-input.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>input</p></td>
+<td class="parameter_description"><p>an input object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-destroy-return" id="ncm-mpi-job-destroy-return"></a><h3>ncm_mpi_job_destroy_return ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_destroy_return (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> ret</code></em>);</pre>
+<p>Destroy the <em class="parameter"><code>return</code></em>
+ object created with <a class="link" href="NcmMPIJob.html#ncm-mpi-job-create-return" title="ncm_mpi_job_create_return ()"><code class="function">ncm_mpi_job_create_return()</code></a>.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> destroy_return]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-destroy-return.parameters" id="ncm-mpi-job-destroy-return.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ret</p></td>
+<td class="parameter_description"><p>a return object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-get-input-buffer" id="ncm-mpi-job-get-input-buffer"></a><h3>ncm_mpi_job_get_input_buffer ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+ncm_mpi_job_get_input_buffer (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
+                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> input</code></em>);</pre>
+<p>Creates a buffer from <em class="parameter"><code>input</code></em>
+ compatible with <a class="link" href="NcmMPIJob.html#ncm-mpi-job-input-datatype" title="ncm_mpi_job_input_datatype ()"><code class="function">ncm_mpi_job_input_datatype()</code></a>.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_input_buffer]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-get-input-buffer.parameters" id="ncm-mpi-job-get-input-buffer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>input</p></td>
+<td class="parameter_description"><p>an input object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mpi-job-get-input-buffer.returns" id="ncm-mpi-job-get-input-buffer.returns"></a><h4>Returns</h4>
+<p> the created buffer.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-get-return-buffer" id="ncm-mpi-job-get-return-buffer"></a><h3>ncm_mpi_job_get_return_buffer ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+ncm_mpi_job_get_return_buffer (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> ret</code></em>);</pre>
+<p>Creates a buffer from <em class="parameter"><code>ret</code></em>
+ compatible with <a class="link" href="NcmMPIJob.html#ncm-mpi-job-return-datatype" title="ncm_mpi_job_return_datatype ()"><code class="function">ncm_mpi_job_return_datatype()</code></a>.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_return_buffer]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-get-return-buffer.parameters" id="ncm-mpi-job-get-return-buffer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ret</p></td>
+<td class="parameter_description"><p>a return object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mpi-job-get-return-buffer.returns" id="ncm-mpi-job-get-return-buffer.returns"></a><h4>Returns</h4>
+<p> the created buffer.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-destroy-input-buffer" id="ncm-mpi-job-destroy-input-buffer"></a><h3>ncm_mpi_job_destroy_input_buffer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_destroy_input_buffer (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> input</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> buf</code></em>);</pre>
+<p>Destroy <em class="parameter"><code>buf</code></em>
+ created with <a class="link" href="NcmMPIJob.html#ncm-mpi-job-get-input-buffer" title="ncm_mpi_job_get_input_buffer ()"><code class="function">ncm_mpi_job_get_input_buffer()</code></a>
+or <a class="link" href="NcmMPIJob.html#ncm-mpi-job-pack-input" title="ncm_mpi_job_pack_input ()"><code class="function">ncm_mpi_job_pack_input()</code></a>.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> destroy_input_buffer]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-destroy-input-buffer.parameters" id="ncm-mpi-job-destroy-input-buffer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>input</p></td>
+<td class="parameter_description"><p>an input object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf</p></td>
+<td class="parameter_description"><p>a input buffer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-destroy-return-buffer" id="ncm-mpi-job-destroy-return-buffer"></a><h3>ncm_mpi_job_destroy_return_buffer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_destroy_return_buffer (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
+                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> ret</code></em>,
+                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> buf</code></em>);</pre>
+<p>Destroy <em class="parameter"><code>buf</code></em>
+ created with <a class="link" href="NcmMPIJob.html#ncm-mpi-job-get-return-buffer" title="ncm_mpi_job_get_return_buffer ()"><code class="function">ncm_mpi_job_get_return_buffer()</code></a>
+or <a class="link" href="NcmMPIJob.html#ncm-mpi-job-pack-return" title="ncm_mpi_job_pack_return ()"><code class="function">ncm_mpi_job_pack_return()</code></a>.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> destroy_return_buffer]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-destroy-return-buffer.parameters" id="ncm-mpi-job-destroy-return-buffer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ret</p></td>
+<td class="parameter_description"><p>a return object </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf</p></td>
+<td class="parameter_description"><p>a return buffer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-pack-input" id="ncm-mpi-job-pack-input"></a><h3>ncm_mpi_job_pack_input ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+ncm_mpi_job_pack_input (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
+                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> input</code></em>);</pre>
+<p>Packs (when necessary) the input into the input buffer.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> pack_input]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-pack-input.parameters" id="ncm-mpi-job-pack-input.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>input</p></td>
+<td class="parameter_description"><p>the input pointer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mpi-job-pack-input.returns" id="ncm-mpi-job-pack-input.returns"></a><h4>Returns</h4>
+<p> the packed buffer.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-pack-return" id="ncm-mpi-job-pack-return"></a><h3>ncm_mpi_job_pack_return ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+ncm_mpi_job_pack_return (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
+                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> ret</code></em>);</pre>
+<p>Packs (when necessary) the return into the return buffer <em class="parameter"><code>buf</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> pack_return]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-pack-return.parameters" id="ncm-mpi-job-pack-return.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ret</p></td>
+<td class="parameter_description"><p>the return pointer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mpi-job-pack-return.returns" id="ncm-mpi-job-pack-return.returns"></a><h4>Returns</h4>
+<p> the packed buffer. </p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-unpack-input" id="ncm-mpi-job-unpack-input"></a><h3>ncm_mpi_job_unpack_input ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_unpack_input (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
+                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> buf</code></em>,
+                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> input</code></em>);</pre>
+<p>Unpacks (when necessary) the buffer <em class="parameter"><code>buf</code></em>
+ into the input pointer <em class="parameter"><code>input</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> unpack_input]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-unpack-input.parameters" id="ncm-mpi-job-unpack-input.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf</p></td>
+<td class="parameter_description"><p>the received buffer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>input</p></td>
+<td class="parameter_description"><p>the unpacked buffer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-unpack-return" id="ncm-mpi-job-unpack-return"></a><h3>ncm_mpi_job_unpack_return ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_unpack_return (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
+                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> buf</code></em>,
+                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> ret</code></em>);</pre>
+<p>Unpacks (when necessary) the buffer <em class="parameter"><code>buf</code></em>
+ into the return pointer <em class="parameter"><code>return</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> unpack_return]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-unpack-return.parameters" id="ncm-mpi-job-unpack-return.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf</p></td>
+<td class="parameter_description"><p>the received buffer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ret</p></td>
+<td class="parameter_description"><p>the unpacked buffer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-run" id="ncm-mpi-job-run"></a><h3>ncm_mpi_job_run ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_run (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
+                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> input</code></em>,
+                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> ret</code></em>);</pre>
+<p>Runs job <em class="parameter"><code>mpi_job</code></em>
+ using <em class="parameter"><code>input</code></em>
+ and returns in <em class="parameter"><code>ret</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> run]</span></p>
+<div class="refsect3">
+<a name="ncm-mpi-job-run.parameters" id="ncm-mpi-job-run.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>input</p></td>
+<td class="parameter_description"><p>an input pointer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ret</p></td>
+<td class="parameter_description"><p>an return pointer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-init-all-slaves" id="ncm-mpi-job-init-all-slaves"></a><h3>ncm_mpi_job_init_all_slaves ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_init_all_slaves (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>);</pre>
+<p>Initialize all available slaves with <em class="parameter"><code>mpi_job</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-mpi-job-init-all-slaves.parameters" id="ncm-mpi-job-init-all-slaves.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-run-array" id="ncm-mpi-job-run-array"></a><h3>ncm_mpi_job_run_array ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_run_array (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
+                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *input_array</code></em>,
+                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> *ret_array</code></em>);</pre>
+<p>Send work to all slaves in a round-robin fashion. Both arrays <em class="parameter"><code>input_array</code></em>
+ and <em class="parameter"><code>ret_array</code></em>
+
+must have the same length and should be filled with the appropriated pointers.</p>
+<div class="refsect3">
+<a name="ncm-mpi-job-run-array.parameters" id="ncm-mpi-job-run-array.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>input_array</p></td>
+<td class="parameter_description"><p>an array of input pointers. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GObject]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ret_array</p></td>
+<td class="parameter_description"><p>an array of (allocated) return pointers. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GObject]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-free-all-slaves" id="ncm-mpi-job-free-all-slaves"></a><h3>ncm_mpi_job_free_all_slaves ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_free_all_slaves (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>);</pre>
+<p>Frees all available slaves used by <em class="parameter"><code>mpi_job</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-mpi-job-free-all-slaves.parameters" id="ncm-mpi-job-free-all-slaves.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mpi_job</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MPI-JOB-DEBUG-PRINT:CAPS" id="NCM-MPI-JOB-DEBUG-PRINT:CAPS"></a><h3>NCM_MPI_JOB_DEBUG_PRINT()</h3>
+<pre class="programlisting">#define NCM_MPI_JOB_DEBUG_PRINT(fmt, ...)  printf (fmt, ##__VA_ARGS__)
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmMPIJob.other_details" id="NcmMPIJob.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="MPI-Datatype" id="MPI-Datatype"></a><h3>MPI_Datatype</h3>
+<pre class="programlisting">#define MPI_Datatype gpointer
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-MPI-CTRL-MASTER-ID:CAPS" id="NCM-MPI-CTRL-MASTER-ID:CAPS"></a><h3>NCM_MPI_CTRL_MASTER_ID</h3>
+<pre class="programlisting">#define NCM_MPI_CTRL_MASTER_ID (0)
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmMPIJobCtrlMsg" id="NcmMPIJobCtrlMsg"></a><h3>enum NcmMPIJobCtrlMsg</h3>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="NcmMPIJobCtrlMsg.members" id="NcmMPIJobCtrlMsg.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MPI-CTRL-SLAVE-INIT:CAPS" id="NCM-MPI-CTRL-SLAVE-INIT:CAPS"></a>NCM_MPI_CTRL_SLAVE_INIT</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MPI-CTRL-SLAVE-FREE:CAPS" id="NCM-MPI-CTRL-SLAVE-FREE:CAPS"></a>NCM_MPI_CTRL_SLAVE_FREE</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MPI-CTRL-SLAVE-KILL:CAPS" id="NCM-MPI-CTRL-SLAVE-KILL:CAPS"></a>NCM_MPI_CTRL_SLAVE_KILL</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MPI-CTRL-SLAVE-WORK:CAPS" id="NCM-MPI-CTRL-SLAVE-WORK:CAPS"></a>NCM_MPI_CTRL_SLAVE_WORK</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmMPIJobCtrlTag" id="NcmMPIJobCtrlTag"></a><h3>enum NcmMPIJobCtrlTag</h3>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="NcmMPIJobCtrlTag.members" id="NcmMPIJobCtrlTag.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MPI-CTRL-TAG-CMD:CAPS" id="NCM-MPI-CTRL-TAG-CMD:CAPS"></a>NCM_MPI_CTRL_TAG_CMD</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MPI-CTRL-TAG-JOB:CAPS" id="NCM-MPI-CTRL-TAG-JOB:CAPS"></a>NCM_MPI_CTRL_TAG_JOB</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MPI-CTRL-TAG-WORK-INPUT:CAPS" id="NCM-MPI-CTRL-TAG-WORK-INPUT:CAPS"></a>NCM_MPI_CTRL_TAG_WORK_INPUT</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MPI-CTRL-TAG-WORK-RETURN:CAPS" id="NCM-MPI-CTRL-TAG-WORK-RETURN:CAPS"></a>NCM_MPI_CTRL_TAG_WORK_RETURN</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmMPIJob.property-details" id="NcmMPIJob.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmMPIJob--placeholder" id="NcmMPIJob--placeholder"></a><h3>The <code class="literal">“placeholder”</code> property</h3>
+<pre class="programlisting">  “placeholder”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>placeholder.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.29</div>
+</div></div></body>
+</html>

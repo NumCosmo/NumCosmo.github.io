@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmMPIJobMCMC: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s02.html" title="MPI Objects" />
+<link rel="prev" href="NcmMPIJobFit.html" title="NcmMPIJobFit" />
+<link rel="next" href="ch02s03.html" title="ODE Solvers objects" />
+<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmMPIJobMCMC.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmMPIJobMCMC.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmMPIJobMCMC.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s02.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcmMPIJobFit.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="ch02s03.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmMPIJobMCMC" id="NcmMPIJobMCMC"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmMPIJobMCMC.top_of_page" id="NcmMPIJobMCMC.top_of_page"></a>NcmMPIJobMCMC</span></h2>
+<p>NcmMPIJobMCMC — MPI job object for running <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a></p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmMPIJobMCMC.functions" id="NcmMPIJobMCMC.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return" />
+<col class="functions_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMPIJobMCMC.html" title="NcmMPIJobMCMC"><span class="returnvalue">NcmMPIJobMCMC</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJobMCMC.html#ncm-mpi-job-mcmc-new" title="ncm_mpi_job_mcmc_new ()">ncm_mpi_job_mcmc_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMPIJobMCMC.html" title="NcmMPIJobMCMC"><span class="returnvalue">NcmMPIJobMCMC</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJobMCMC.html#ncm-mpi-job-mcmc-ref" title="ncm_mpi_job_mcmc_ref ()">ncm_mpi_job_mcmc_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJobMCMC.html#ncm-mpi-job-mcmc-free" title="ncm_mpi_job_mcmc_free ()">ncm_mpi_job_mcmc_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMPIJobMCMC.html#ncm-mpi-job-mcmc-clear" title="ncm_mpi_job_mcmc_clear ()">ncm_mpi_job_mcmc_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmMPIJobMCMC.properties" id="NcmMPIJobMCMC.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmMPIJobMCMC.html#NcmMPIJobMCMC--fit" title="The “fit” property">fit</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmMPIJobMCMC.html#NcmMPIJobMCMC--function-array" title="The “function-array” property">function-array</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmMPIJobMCMC.object-hierarchy" id="NcmMPIJobMCMC.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcmMPIJob.html" title="NcmMPIJob">NcmMPIJob</a>
+        <span class="lineart">╰──</span> NcmMPIJobMCMC
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmMPIJobMCMC.description" id="NcmMPIJobMCMC.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcmMPIJobMCMC.functions_details" id="NcmMPIJobMCMC.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-mpi-job-mcmc-new" id="ncm-mpi-job-mcmc-new"></a><h3>ncm_mpi_job_mcmc_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMPIJobMCMC.html" title="NcmMPIJobMCMC"><span class="returnvalue">NcmMPIJobMCMC</span></a> *
+ncm_mpi_job_mcmc_new (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
+                      <em class="parameter"><code><a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *func_oa</code></em>);</pre>
+<p>Creates a new <a class="link" href="NcmMPIJobMCMC.html" title="NcmMPIJobMCMC"><span class="type">NcmMPIJobMCMC</span></a> object.</p>
+<div class="refsect3">
+<a name="ncm-mpi-job-mcmc-new.parameters" id="ncm-mpi-job-mcmc-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fit</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>func_oa</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> NcmMSetFunc][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mpi-job-mcmc-new.returns" id="ncm-mpi-job-mcmc-new.returns"></a><h4>Returns</h4>
+<p> a new <a class="link" href="NcmMPIJobMCMC.html" title="NcmMPIJobMCMC"><span class="type">NcmMPIJobMCMC</span></a>.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-mcmc-ref" id="ncm-mpi-job-mcmc-ref"></a><h3>ncm_mpi_job_mcmc_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMPIJobMCMC.html" title="NcmMPIJobMCMC"><span class="returnvalue">NcmMPIJobMCMC</span></a> *
+ncm_mpi_job_mcmc_ref (<em class="parameter"><code><a class="link" href="NcmMPIJobMCMC.html" title="NcmMPIJobMCMC"><span class="type">NcmMPIJobMCMC</span></a> *mjmcmc</code></em>);</pre>
+<p>Increase the reference of <em class="parameter"><code>mjmcmc</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-mpi-job-mcmc-ref.parameters" id="ncm-mpi-job-mcmc-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mjmcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJobMCMC.html" title="NcmMPIJobMCMC"><span class="type">NcmMPIJobMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mpi-job-mcmc-ref.returns" id="ncm-mpi-job-mcmc-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>mjmcmc</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-mcmc-free" id="ncm-mpi-job-mcmc-free"></a><h3>ncm_mpi_job_mcmc_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_mcmc_free (<em class="parameter"><code><a class="link" href="NcmMPIJobMCMC.html" title="NcmMPIJobMCMC"><span class="type">NcmMPIJobMCMC</span></a> *mjmcmc</code></em>);</pre>
+<p>Decrease the reference count of <em class="parameter"><code>mjmcmc</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-mpi-job-mcmc-free.parameters" id="ncm-mpi-job-mcmc-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mjmcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJobMCMC.html" title="NcmMPIJobMCMC"><span class="type">NcmMPIJobMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mpi-job-mcmc-clear" id="ncm-mpi-job-mcmc-clear"></a><h3>ncm_mpi_job_mcmc_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mpi_job_mcmc_clear (<em class="parameter"><code><a class="link" href="NcmMPIJobMCMC.html" title="NcmMPIJobMCMC"><span class="type">NcmMPIJobMCMC</span></a> **mjmcmc</code></em>);</pre>
+<p>Decrease the reference count of <em class="parameter"><code>mjmcmc</code></em>
+ by one, and sets the pointer *<em class="parameter"><code>mjmcmc</code></em>
+ to
+NULL.</p>
+<div class="refsect3">
+<a name="ncm-mpi-job-mcmc-clear.parameters" id="ncm-mpi-job-mcmc-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mjmcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMPIJobMCMC.html" title="NcmMPIJobMCMC"><span class="type">NcmMPIJobMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmMPIJobMCMC.other_details" id="NcmMPIJobMCMC.other_details"></a><h2>Types and Values</h2>
+</div>
+<div class="refsect1">
+<a name="NcmMPIJobMCMC.property-details" id="NcmMPIJobMCMC.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmMPIJobMCMC--fit" id="NcmMPIJobMCMC--fit"></a><h3>The <code class="literal">“fit”</code> property</h3>
+<pre class="programlisting">  “fit”                      <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *</pre>
+<p>Fit object.</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmMPIJobMCMC--function-array" id="NcmMPIJobMCMC--function-array"></a><h3>The <code class="literal">“function-array”</code> property</h3>
+<pre class="programlisting">  “function-array”           <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</pre>
+<p>Functions array.</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.29</div>
+</div></div></body>
+</html>
