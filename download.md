@@ -47,7 +47,7 @@ rpm based distributions.
   - [MPFR](http://www.mpfr.org/) >= 2.4.2 --
     Multiple precision float library.
   - [Sundials](https://computation.llnl.gov/casc/sundials/main.html) >= 2.4.0 --
-    ODE solver library.
+    ODE solver library. This library is now encapsulated in NumCosmo build system and it is no longer required.
 
 ## Recommended packages
 
@@ -89,14 +89,14 @@ Below there is a small compilation of package names for some distributions.
   - The other packages that are usually not found on the official repositories:
     - For atlas support on Debian see: <http://wiki.debian.org/DebianScience/LinearAlgebraLibraries>.
     - For atlas support on Ubuntu you need something similar to: *libatlas-base-dev*, *liblapack-dev*.
-    - NLopt, Sundials and cfitsio sometimes can be found with the following package names: *libnlopt-dev*, *libsundials-dev*, *libcfitsio3-dev*.
+    - NLopt and cfitsio sometimes can be found with the following package names: *libnlopt-dev*, *libcfitsio3-dev*.
 
 ### Packages on RPM based distributions (including Fedora, OpenSuse, etc) <a id="pack_rpm"></a>
 
   - For most systems the following packages can be found in the main repositories: *pkg-config*, *gobject-introspection-devel*, *glib2-devel*, *gsl-devel*, *gmp-devel*, *mpfr-devel*, *fftw3-devel*.
     - If you want to build from the repository you also need: *autoconf*, *automake*, *libtool*, *gtk-doc*.
   - The other packages that are usually not found on the official repositories:
-    - NLopt, Sundials cfitsio, lapack and atlas sometimes can be found with the following package names: *nlopt-devel*, *sundials-devel*, *libcfitsio-devel*, *lapack-devel*, *atlas-devel*, *lapack-devel*.
+    - NLopt, cfitsio, lapack and atlas sometimes can be found with the following package names: *nlopt-devel*, *libcfitsio-devel*, *lapack-devel*, *atlas-devel*, *lapack-devel*.
 
 ## Building from repository: <a id="brepo"></a>
 
