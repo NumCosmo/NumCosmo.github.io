@@ -9,7 +9,7 @@
 <link rel="up" href="ch08s03.html" title="Matter Power Spectrum" />
 <link rel="prev" href="ch08s03.html" title="Matter Power Spectrum" />
 <link rel="next" href="NcPowspecMLFixSpline.html" title="NcPowspecMLFixSpline" />
-<meta name="generator" content="GTK-Doc V1.27 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -86,12 +86,20 @@
 <a class="link" href="NcPowspecML.html#nc-powspec-ml-clear" title="nc_powspec_ml_clear ()">nc_powspec_ml_clear</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcPowspecML.html#nc-powspec-ml-sigma-R" title="nc_powspec_ml_sigma_R ()">nc_powspec_ml_sigma_R</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="NcPowspecML.object-hierarchy" id="NcPowspecML.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmPowspec.html" title="NcmPowspec">NcmPowspec</a>
         <span class="lineart">╰──</span> NcPowspecML
             <span class="lineart">├──</span> <a class="link" href="NcPowspecMLCBE.html" title="NcPowspecMLCBE">NcPowspecMLCBE</a>
@@ -113,7 +121,7 @@ where $\rho$ is the cold matter density field and $\bar{\rho}$ its mean.</p>
 <div class="refsect2">
 <a name="nc-powspec-ml-new-from-name" id="nc-powspec-ml-new-from-name"></a><h3>nc_powspec_ml_new_from_name ()</h3>
 <pre class="programlisting"><a class="link" href="NcPowspecML.html" title="NcPowspecML"><span class="returnvalue">NcPowspecML</span></a> *
-nc_powspec_ml_new_from_name (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *ps_ml_name</code></em>);</pre>
+nc_powspec_ml_new_from_name (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *ps_ml_name</code></em>);</pre>
 <p>This function returns a new <a class="link" href="NcPowspecML.html" title="NcPowspecML"><span class="type">NcPowspecML</span></a> whose type is defined by <em class="parameter"><code>ps_ml_name</code></em>
 .</p>
 <div class="refsect3">
@@ -212,12 +220,60 @@ nc_powspec_ml_clear (<em class="parameter"><code><a class="link" href="NcPowspec
 </table></div>
 </div>
 </div>
+<hr />
+<div class="refsect2">
+<a name="nc-powspec-ml-sigma-R" id="nc-powspec-ml-sigma-R"></a><h3>nc_powspec_ml_sigma_R ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_powspec_ml_sigma_R (<em class="parameter"><code><a class="link" href="NcPowspecML.html" title="NcPowspecML"><span class="type">NcPowspecML</span></a> *ps_ml</code></em>,
+                       <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
+                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>,
+                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
+                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> R</code></em>);</pre>
+<p>Computes $\sigma_R = \sqrt{}$. FIXME</p>
+<div class="refsect3">
+<a name="nc-powspec-ml-sigma-R.parameters" id="nc-powspec-ml-sigma-R.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ps_ml</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcPowspecML.html" title="NcPowspecML"><span class="type">NcPowspecML</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>reltol</p></td>
+<td class="parameter_description"><p>relative tolerance for integration</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z</p></td>
+<td class="parameter_description"><p>the value of $z$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>R</p></td>
+<td class="parameter_description"><p>the value of $R$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
 </div>
 <div class="refsect1">
 <a name="NcPowspecML.other_details" id="NcPowspecML.other_details"></a><h2>Types and Values</h2>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.27</div>
+<hr />Generated by GTK-Doc V1.29</div>
 </div></div></body>
 </html>

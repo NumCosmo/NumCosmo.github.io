@@ -7,7 +7,7 @@
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
 <link rel="home" href="index.html" title="NumCosmo Reference Manual" />
 <link rel="next" href="ch01.html" title="NumCosmo Overview" />
-<meta name="generator" content="GTK-Doc V1.27 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -29,11 +29,11 @@
 <div>
 <div><table class="navigation" id="top" width="100%" cellpadding="2" cellspacing="0"><tr><th valign="middle"><p class="title">NumCosmo Reference Manual</p></th></tr></table></div>
 <div><p class="releaseinfo">
-      for NumCosmo 0.14.0.
-      The latest version of this documentation can be found on-line at
-      <a class="ulink" href="https://numcosmo.github.io/manual/" target="_top">https://numcosmo.github.io/manual/</a>,      
-      <a class="ulink" href="https://numcosmo.github.io/" target="_top">NumCosmo website</a>.
-    </p></div>
+    for NumCosmo 0.14.2.
+    The latest version of this documentation can be found on-line at
+    <a class="ulink" href="https://numcosmo.github.io/manual/" target="_top">https://numcosmo.github.io/manual/</a>,      
+    <a class="ulink" href="https://numcosmo.github.io/" target="_top">NumCosmo website</a>.
+  </p></div>
 </div>
 <hr />
 </div>
@@ -97,13 +97,34 @@
 <span class="refentrytitle"><a href="NcmRNG.html">NcmRNG</a></span><span class="refpurpose"> — Encapsulated GSL random number generator with support for multhreading.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcmQMProp.html">NcmQMProp</a></span><span class="refpurpose"> — Numerical QM propagator object</span>
-</dt>
-<dt>
 <span class="refentrytitle"><a href="NcmQuaternion.html">NcmQuaternion</a></span><span class="refpurpose"> — Quaternions algebra, three-vectors and mapping to matrix.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s02.html">FFTLog</a></span></dt>
+<dt><span class="section"><a href="ch02s02.html">MPI Objects</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcmMPIJob.html">NcmMPIJob</a></span><span class="refpurpose"> — Abstract class to implement MPI jobs</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmMPIJobTest.html">NcmMPIJobTest</a></span><span class="refpurpose"> — Test implementation of MPI job class</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmMPIJobFit.html">NcmMPIJobFit</a></span><span class="refpurpose"> — MPI job object for running <span class="type">NcmFit</span></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmMPIJobMCMC.html">NcmMPIJobMCMC</a></span><span class="refpurpose"> — MPI job object for running <span class="type">NcmFit</span></span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch02s03.html">ODE Solvers objects</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcmODE.html">NcmODE</a></span><span class="refpurpose"> — Abstract class for ODE solvers</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmODEEval.html">NcmODEEval</a></span><span class="refpurpose"> — Abstract class for ODE system evaluation</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch02s04.html">FFTLog</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmFftlog.html">NcmFftlog</a></span><span class="refpurpose"> — Abstract class for implementing logarithm fast fourier transform.</span>
@@ -118,7 +139,7 @@
 <span class="refentrytitle"><a href="NcmFftlogGausswin2.html">NcmFftlogGausswin2</a></span><span class="refpurpose"> — Logarithm fast fourier transform for a kernel given by the square of a Gaussian window function.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s03.html">Splines 1D</a></span></dt>
+<dt><span class="section"><a href="ch02s05.html">Splines 1D</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmSpline.html">NcmSpline</a></span><span class="refpurpose"> — Abstract class for implementing splines.</span>
@@ -133,13 +154,16 @@
 <span class="refentrytitle"><a href="NcmSplineCubicNotaknot.html">NcmSplineCubicNotaknot</a></span><span class="refpurpose"> — Cubic spline implementation with 'not a knot' boundary conditions.</span>
 </dt>
 <dt>
+<span class="refentrytitle"><a href="NcmSplineRBF.html">NcmSplineRBF</a></span><span class="refpurpose"> — Radial Basis Function implementation of spline class.</span>
+</dt>
+<dt>
 <span class="refentrytitle"><a href="numcosmo-NcmSplineFunc.html">NcmSplineFunc</a></span><span class="refpurpose"> — Automatic generation of the knots for a spline.</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmOdeSpline.html">NcmOdeSpline</a></span><span class="refpurpose"> — Automatic generation of splines from ODE solvers.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s04.html">Splines 2D</a></span></dt>
+<dt><span class="section"><a href="ch02s06.html">Splines 2D</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmSpline2d.html">NcmSpline2d</a></span><span class="refpurpose"> — Abstract class for implementing bidimensional splines.</span>
@@ -154,7 +178,7 @@
 <span class="refentrytitle"><a href="NcmSpline2dGsl.html">NcmSpline2dGsl</a></span><span class="refpurpose"> — Implements spline from spline method using GSL as base splines.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s05.html">Power spectrum functions</a></span></dt>
+<dt><span class="section"><a href="ch02s07.html">Power spectrum functions</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmPowspec.html">NcmPowspec</a></span><span class="refpurpose"> — Abstrac class for power spectrum implementation.</span>
@@ -163,11 +187,11 @@
 <span class="refentrytitle"><a href="NcmPowspecFilter.html">NcmPowspecFilter</a></span><span class="refpurpose"> — Class to compute filtered power spectrum</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s06.html">Harmonic Oscillator</a></span></dt>
+<dt><span class="section"><a href="ch02s08.html">Harmonic Oscillator</a></span></dt>
 <dd><dl><dt>
 <span class="refentrytitle"><a href="NcmHOAA.html">NcmHOAA</a></span><span class="refpurpose"> — Abstract class for Harmonic Oscillator calculation through AA variables.</span>
 </dt></dl></dd>
-<dt><span class="section"><a href="ch02s07.html">Special Functions</a></span></dt>
+<dt><span class="section"><a href="ch02s09.html">Special Functions</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="numcosmo-NcmMpsfTrigInt.html">NcmMpsfTrigInt</a></span><span class="refpurpose"> — Multiple precision sin integral implementation.</span>
@@ -191,7 +215,7 @@
 <span class="refentrytitle"><a href="NcmSFSphericalHarmonics.html">NcmSFSphericalHarmonics</a></span><span class="refpurpose"> — Spherical Harmonics object</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s08.html">Models and Parameters</a></span></dt>
+<dt><span class="section"><a href="ch02s10.html">Models and Parameters</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmModel.html">NcmModel</a></span><span class="refpurpose"> — Abstract class for implementing models.</span>
@@ -209,10 +233,16 @@
 <span class="refentrytitle"><a href="NcmModelBuilder.html">NcmModelBuilder</a></span><span class="refpurpose"> — A <span class="type">NcmModel</span> builder</span>
 </dt>
 <dt>
+<span class="refentrytitle"><a href="NcmModelMVND.html">NcmModelMVND</a></span><span class="refpurpose"> — Multivariate Normal Distribution mean model.</span>
+</dt>
+<dt>
 <span class="refentrytitle"><a href="NcmMSet.html">NcmMSet</a></span><span class="refpurpose"> — A set of different NcmModel objects.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcmMSetFunc.html">NcmMSetFunc</a></span><span class="refpurpose"> — A function of NcmMSet.</span>
+<span class="refentrytitle"><a href="NcmMSetFunc.html">NcmMSetFunc</a></span><span class="refpurpose"> — Abstract class for arbitrary MSet functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmMSetFunc1.html">NcmMSetFunc</a></span><span class="refpurpose"> — Abstract class for arbitrary MSet functions - bindable version</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmMSetFuncList.html">NcmMSetFuncList</a></span><span class="refpurpose"> — NcmMSet Functions list.</span>
@@ -221,7 +251,7 @@
 <span class="refentrytitle"><a href="NcmCalc.html">NcmData</a></span><span class="refpurpose"> — Abstract class for implementing calculator objects.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s09.html">Reparametrization</a></span></dt>
+<dt><span class="section"><a href="ch02s11.html">Reparametrization</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmReparam.html">NcmReparam</a></span><span class="refpurpose"> — Abstract class for model reparametrization.</span>
@@ -230,7 +260,7 @@
 <span class="refentrytitle"><a href="NcmReparamLinear.html">NcmReparamLinear</a></span><span class="refpurpose"> — Linear reparametrization object.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s10.html">Data Objects</a></span></dt>
+<dt><span class="section"><a href="ch02s12.html">Data Objects</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmData.html">NcmData</a></span><span class="refpurpose"> — Abstract class for implementing data objects.</span>
@@ -251,16 +281,16 @@
 <span class="refentrytitle"><a href="NcmDataPoisson.html">NcmDataPoisson</a></span><span class="refpurpose"> — Abstract class for implementing poisson distributed data.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcmDataVoigt.html">NcmDataVoigt</a></span><span class="refpurpose"> — Abstract class for implementing voigt distributed data.</span>
-</dt>
-<dt>
 <span class="refentrytitle"><a href="NcmDataDist1d.html">NcmDataDist1d</a></span><span class="refpurpose"> — Abstract class for one variable distribution data.</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmDataDist2d.html">NcmDataDist2d</a></span><span class="refpurpose"> — Abstract class for two-variables distribution data.</span>
 </dt>
+<dt>
+<span class="refentrytitle"><a href="NcmDataGaussCovMVND.html">NcmDataGaussCov</a></span><span class="refpurpose"> — Multivariate Normal Distribution -- covariance provided.</span>
+</dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s11.html">Statistical Analysis</a></span></dt>
+<dt><span class="section"><a href="ch02s13.html">Statistical Analysis</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmStatsVec.html">NcmStatsVec</a></span><span class="refpurpose"> — An online statistics vector.</span>
@@ -279,6 +309,12 @@
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmStatsDist2dSpline.html">NcmStatsDist2dSpline</a></span><span class="refpurpose"> — Two-dimensional probability distribution based on a spline</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmStatsDistNd.html">NcmStatsDistNd</a></span><span class="refpurpose"> — Abstract class for implementing N dimensional probability distributions</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmStatsDistNdKDEGauss.html">NcmStatsDistNdKDEGauss</a></span><span class="refpurpose"> — An N dimensional probability distributions using gaussian KDE</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmBootstrap.html">NcmBootstrap</a></span><span class="refpurpose"> — Generic index bootstrap.</span>
@@ -368,6 +404,9 @@
 <span class="refentrytitle"><a href="NcmFitESMCMCWalkerWalk.html">NcmFitESMCMCWalkerWalk</a></span><span class="refpurpose"> — Ensemble sampler Markov Chain Monte Carlo walker - walk move.</span>
 </dt>
 <dt>
+<span class="refentrytitle"><a href="NcmFitESMCMCWalkerAPS.html">NcmFitESMCMCWalkerAPS</a></span><span class="refpurpose"> — Ensemble sampler Markov Chain Monte Carlo walker - aps move.</span>
+</dt>
+<dt>
 <span class="refentrytitle"><a href="NcmLHRatio1d.html">NcmLHRatio1d</a></span><span class="refpurpose"> — Likelihood ratio for one dimensional parameter analysis.</span>
 </dt>
 <dt>
@@ -377,11 +416,11 @@
 <span class="refentrytitle"><a href="NcmABC.html">NcmABC</a></span><span class="refpurpose"> — Abstract class for Approximate Bayesian Computation (ABC).</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s12.html">Spherical maps and Healpix</a></span></dt>
+<dt><span class="section"><a href="ch02s14.html">Spherical maps and Healpix</a></span></dt>
 <dd><dl><dt>
 <span class="refentrytitle"><a href="NcmSphereMap.html">NcmSphereMap</a></span><span class="refpurpose"> — An re-implementation of Healpix.</span>
 </dt></dl></dd>
-<dt><span class="section"><a href="ch02s13.html">GObject introspection compatibility</a></span></dt>
+<dt><span class="section"><a href="ch02s15.html">GObject introspection compatibility</a></span></dt>
 <dd><dl><dt>
 <span class="refentrytitle"><a href="numcosmo-Gir-Scanning-Compatibility.html">Gir Scanning Compatibility</a></span><span class="refpurpose"> — Gir scanning types stubs.</span>
 </dt></dl></dd>
@@ -514,6 +553,9 @@
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcHIReionCambReparamTau.html">NcHIReionCambReparamTau</a></span><span class="refpurpose"> — CAMB reionization reparametrization $z_\mathrm{reion} \to \tau_\mathrm{reion}$.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIQG1D.html">NcHIQG1D</a></span><span class="refpurpose"> — Minisuperspace 1D quantum gravity models</span>
 </dt>
 </dl></dd>
 <dt><span class="chapter"><a href="ch07.html">Perturbations</a></span></dt>
@@ -750,9 +792,36 @@
 <dt>
 <span class="refentrytitle"><a href="NcCorClusterCmbLensLimber.html">NcCorClusterCmbLensLimber</a></span><span class="refpurpose"> — Cluster and CMB lensing correlation using halo model and Limber approximation.</span>
 </dt>
-<dt><span class="section"><a href="ch08s10.html">Weak Lensing</a></span></dt>
-<dd><dl><dt>
+<dt><span class="section"><a href="ch08s10.html">Galaxy Redshift</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxyRedshift.html">NcGalaxyRedshift</a></span><span class="refpurpose"> — Abstract class describing galaxy redshifts.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxyRedshiftSpec.html">NcGalaxyRedshiftSpec</a></span><span class="refpurpose"> — Class describing spectroscopic galaxy redshifts.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxyRedshiftSpline.html">NcGalaxyRedshiftSpline</a></span><span class="refpurpose"> — Class describing spectroscopic galaxy redshifts.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch08s11.html">Weak Lensing</a></span></dt>
+<dd><dl>
+<dt>
 <span class="refentrytitle"><a href="NcWLSurfaceMassDensity.html">NcWLSurfaceMassDensity</a></span><span class="refpurpose"> — Weak lensing surface mass density</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcReducedShearClusterMass.html">NcReducedShearClusterMass</a></span><span class="refpurpose"> — FIXME cluster mass estimation via reduced shear</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcReducedShearCalib.html">NcReducedShearCalib</a></span><span class="refpurpose"> — Reduced Shear Calibration</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcReducedShearCalibWtg.html">NcReducedShearCalibWtg</a></span><span class="refpurpose"> — Reduced Shear Calibration</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch08s12.html">Galaxy ACF</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="NcGalaxySelfunc.html">NcGalaxySelfunc</a></span><span class="refpurpose"> — Galaxy phenomelogical selection function.</span>
 </dt></dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="ch09.html">Cosmological Data</a></span></dt>
@@ -821,12 +890,15 @@
 <span class="refentrytitle"><a href="NcDataClusterCountsBoxPoisson.html">NcDataClusterCountsBoxPoisson</a></span><span class="refpurpose"> — Binned (mass) cluster number count data in a box.</span>
 </dt>
 <dt>
+<span class="refentrytitle"><a href="NcDataReducedShearClusterMass.html">NcDataReducedShearClusterMass</a></span><span class="refpurpose"> — Galaxy clusters data -- pseudo number counts likelihood.</span>
+</dt>
+<dt>
 <span class="refentrytitle"><a href="NcDataPlanckLKL.html">NcDataPlanckLKL</a></span><span class="refpurpose"> — Planck Likelihood interface.</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcDataXcor.html">NcDataXcor</a></span><span class="refpurpose"> — cross-correlation data object.</span>
 </dt>
-<dt><span class="section"><a href="ch09.html#id-1.10.25">ABC analysis</a></span></dt>
+<dt><span class="section"><a href="ch09.html#id-1.10.26">ABC analysis</a></span></dt>
 <dd><dl><dt>
 <span class="refentrytitle"><a href="NcABCClusterNCount.html">NcABCClusterNCount</a></span><span class="refpurpose"> — Object implementing Approximate Bayesian Computation (ABC) for cluster number counts.</span>
 </dt></dl></dd>
@@ -883,6 +955,6 @@
 </dl></div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.27</div>
+<hr />Generated by GTK-Doc V1.29</div>
 </div></div></body>
 </html>

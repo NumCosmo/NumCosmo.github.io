@@ -6,10 +6,10 @@
 <title>NcmMSetTransKernCat: NumCosmo Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
 <link rel="home" href="index.html" title="NumCosmo Reference Manual" />
-<link rel="up" href="ch02s11.html" title="Statistical Analysis" />
+<link rel="up" href="ch02s13.html" title="Statistical Analysis" />
 <link rel="prev" href="NcmMSetTransKernGauss.html" title="NcmMSetTransKernGauss" />
 <link rel="next" href="NcmFitState.html" title="NcmFitState" />
-<meta name="generator" content="GTK-Doc V1.27 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -34,7 +34,7 @@
                   <a href="#NcmMSetTransKernCat.properties" class="shortcut">Properties</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
-<td><a accesskey="u" href="ch02s11.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="u" href="ch02s13.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
 <td><a accesskey="p" href="NcmMSetTransKernGauss.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
 <td><a accesskey="n" href="NcmFitState.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
 </tr></table>
@@ -54,14 +54,32 @@
 <col width="150px" class="functions_return" />
 <col class="functions_name" />
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
 <td class="function_type">
 <a class="link" href="NcmMSetTransKernCat.html" title="NcmMSetTransKernCat"><span class="returnvalue">NcmMSetTransKernCat</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="NcmMSetTransKernCat.html#ncm-mset-trans-kern-cat-new" title="ncm_mset_trans_kern_cat_new ()">ncm_mset_trans_kern_cat_new</a> <span class="c_punctuation">()</span>
 </td>
-</tr></tbody>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSetTransKernCat.html#ncm-mset-trans-kern-cat-set-sampling" title="ncm_mset_trans_kern_cat_set_sampling ()">ncm_mset_trans_kern_cat_set_sampling</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMSetTransKernCat.html#NcmMSetTransKernCatSampling" title="enum NcmMSetTransKernCatSampling"><span class="returnvalue">NcmMSetTransKernCatSampling</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSetTransKernCat.html#ncm-mset-trans-kern-cat-get-sampling" title="ncm_mset_trans_kern_cat_get_sampling ()">ncm_mset_trans_kern_cat_get_sampling</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect1">
@@ -72,17 +90,39 @@
 <col width="300px" class="properties_name" />
 <col width="200px" class="properties_flags" />
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
 <td class="property_type">
 <a class="link" href="NcmMSetCatalog.html" title="NcmMSetCatalog"><span class="type">NcmMSetCatalog</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmMSetTransKernCat.html#NcmMSetTransKernCat--catalog" title="The “catalog” property">catalog</a></td>
 <td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="NcmMSetTransKernCat.html#NcmMSetTransKernCatSampling" title="enum NcmMSetTransKernCatSampling"><span class="type">NcmMSetTransKernCatSampling</span></a></td>
+<td class="property_name"><a class="link" href="NcmMSetTransKernCat.html#NcmMSetTransKernCat--sampling-type" title="The “sampling-type” property">sampling-type</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmMSetTransKernCat.other" id="NcmMSetTransKernCat.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name" />
+<col class="description" />
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcmMSetTransKernCat.html#NcmMSetTransKernCatSampling" title="enum NcmMSetTransKernCatSampling">NcmMSetTransKernCatSampling</a></td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="NcmMSetTransKernCat.object-hierarchy" id="NcmMSetTransKernCat.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcmMSetTransKernCatSampling
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern">NcmMSetTransKern</a>
         <span class="lineart">╰──</span> NcmMSetTransKernCat
 </pre>
@@ -120,9 +160,103 @@ ncm_mset_trans_kern_cat_new (<em class="parameter"><code><a class="link" href="N
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-trans-kern-cat-set-sampling" id="ncm-mset-trans-kern-cat-set-sampling"></a><h3>ncm_mset_trans_kern_cat_set_sampling ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_trans_kern_cat_set_sampling (<em class="parameter"><code><a class="link" href="NcmMSetTransKernCat.html" title="NcmMSetTransKernCat"><span class="type">NcmMSetTransKernCat</span></a> *tcat</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcmMSetTransKernCat.html#NcmMSetTransKernCatSampling" title="enum NcmMSetTransKernCatSampling"><span class="type">NcmMSetTransKernCatSampling</span></a> sampling</code></em>);</pre>
+<p>Sets the sampling type to <em class="parameter"><code>sampling</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-mset-trans-kern-cat-set-sampling.parameters" id="ncm-mset-trans-kern-cat-set-sampling.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>tcat</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSetTransKernCat.html" title="NcmMSetTransKernCat"><span class="type">NcmMSetTransKernCat</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sampling</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSetTransKernCat.html#NcmMSetTransKernCatSampling" title="enum NcmMSetTransKernCatSampling"><span class="type">NcmMSetTransKernCatSampling</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-trans-kern-cat-get-sampling" id="ncm-mset-trans-kern-cat-get-sampling"></a><h3>ncm_mset_trans_kern_cat_get_sampling ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMSetTransKernCat.html#NcmMSetTransKernCatSampling" title="enum NcmMSetTransKernCatSampling"><span class="returnvalue">NcmMSetTransKernCatSampling</span></a>
+ncm_mset_trans_kern_cat_get_sampling (<em class="parameter"><code><a class="link" href="NcmMSetTransKernCat.html" title="NcmMSetTransKernCat"><span class="type">NcmMSetTransKernCat</span></a> *tcat</code></em>);</pre>
+<p>Gets the sampling type.</p>
+<div class="refsect3">
+<a name="ncm-mset-trans-kern-cat-get-sampling.parameters" id="ncm-mset-trans-kern-cat-get-sampling.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>tcat</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSetTransKernCat.html" title="NcmMSetTransKernCat"><span class="type">NcmMSetTransKernCat</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-mset-trans-kern-cat-get-sampling.returns" id="ncm-mset-trans-kern-cat-get-sampling.returns"></a><h4>Returns</h4>
+<p> the current sampling type <a class="link" href="NcmMSetTransKernCat.html" title="NcmMSetTransKernCat"><span class="type">NcmMSetTransKernCat</span></a>.</p>
+</div>
+</div>
 </div>
 <div class="refsect1">
 <a name="NcmMSetTransKernCat.other_details" id="NcmMSetTransKernCat.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcmMSetTransKernCatSampling" id="NcmMSetTransKernCatSampling"></a><h3>enum NcmMSetTransKernCatSampling</h3>
+<p>Sampling methods.</p>
+<div class="refsect3">
+<a name="NcmMSetTransKernCatSampling.members" id="NcmMSetTransKernCatSampling.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MSET-TRANS-KERN-CAT-SAMPLING-CHOOSE:CAPS" id="NCM-MSET-TRANS-KERN-CAT-SAMPLING-CHOOSE:CAPS"></a>NCM_MSET_TRANS_KERN_CAT_SAMPLING_CHOOSE</p></td>
+<td class="enum_member_description">
+<p>sampling by choosing radomly points from the catalog</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MSET-TRANS-KERN-CAT-SAMPLING-RBF-INTERP:CAPS" id="NCM-MSET-TRANS-KERN-CAT-SAMPLING-RBF-INTERP:CAPS"></a>NCM_MSET_TRANS_KERN_CAT_SAMPLING_RBF_INTERP</p></td>
+<td class="enum_member_description">
+<p>sampling from the RBF interpolation built using the last ensemble from the catalog </p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MSET-TRANS-KERN-CAT-SAMPLING-KDE:CAPS" id="NCM-MSET-TRANS-KERN-CAT-SAMPLING-KDE:CAPS"></a>NCM_MSET_TRANS_KERN_CAT_SAMPLING_KDE</p></td>
+<td class="enum_member_description">
+<p>sampling from the KDE estimate built using the last ensemble from the catalog </p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
 </div>
 <div class="refsect1">
 <a name="NcmMSetTransKernCat.property-details" id="NcmMSetTransKernCat.property-details"></a><h2>Property Details</h2>
@@ -132,9 +266,17 @@ ncm_mset_trans_kern_cat_new (<em class="parameter"><code><a class="link" href="N
 <p>catalog.</p>
 <p>Flags: Read / Write / Construct Only</p>
 </div>
+<hr />
+<div class="refsect2">
+<a name="NcmMSetTransKernCat--sampling-type" id="NcmMSetTransKernCat--sampling-type"></a><h3>The <code class="literal">“sampling-type”</code> property</h3>
+<pre class="programlisting">  “sampling-type”            <a class="link" href="NcmMSetTransKernCat.html#NcmMSetTransKernCatSampling" title="enum NcmMSetTransKernCatSampling"><span class="type">NcmMSetTransKernCatSampling</span></a></pre>
+<p>Sampling method to use.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: NCM_MSET_TRANS_KERN_CAT_SAMPLING_RBF_INTERP</p>
+</div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.27</div>
+<hr />Generated by GTK-Doc V1.29</div>
 </div></div></body>
 </html>

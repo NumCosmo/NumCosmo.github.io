@@ -6,10 +6,10 @@
 <title>NcmSplineGsl: NumCosmo Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
 <link rel="home" href="index.html" title="NumCosmo Reference Manual" />
-<link rel="up" href="ch02s03.html" title="Splines 1D" />
+<link rel="up" href="ch02s05.html" title="Splines 1D" />
 <link rel="prev" href="NcmSpline.html" title="NcmSpline" />
 <link rel="next" href="NcmSplineCubic.html" title="NcmSplineCubic" />
-<meta name="generator" content="GTK-Doc V1.27 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -34,7 +34,7 @@
                   <a href="#NcmSplineGsl.properties" class="shortcut">Properties</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
-<td><a accesskey="u" href="ch02s03.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="u" href="ch02s05.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
 <td><a accesskey="p" href="NcmSpline.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
 <td><a accesskey="n" href="NcmSplineCubic.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
 </tr></table>
@@ -73,6 +73,22 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSplineGsl.html#ncm-spline-gsl-new-by-id" title="ncm_spline_gsl_new_by_id ()">ncm_spline_gsl_new_by_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSplineGsl.html#ncm-spline-gsl-new-full-by-id" title="ncm_spline_gsl_new_full_by_id ()">ncm_spline_gsl_new_full_by_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -85,6 +101,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="NcmSplineGsl.html#ncm-spline-gsl-set-type-by-id" title="ncm_spline_gsl_set_type_by_id ()">ncm_spline_gsl_set_type_by_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSplineGsl.html#ncm-spline-gsl-set-type-by-name" title="ncm_spline_gsl_set_type_by_name ()">ncm_spline_gsl_set_type_by_name</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 </tbody>
@@ -100,7 +124,7 @@
 </colgroup>
 <tbody><tr>
 <td class="property_type">
-<a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmSplineGsl.html#NcmSplineGsl--type-name" title="The “type-name” property">type-name</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr></tbody>
@@ -123,14 +147,14 @@
 <a name="NcmSplineGsl.object-hierarchy" id="NcmSplineGsl.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
     <span class="lineart">╰──</span> NcmSplineGslType
-    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmSpline.html" title="NcmSpline">NcmSpline</a>
         <span class="lineart">╰──</span> NcmSplineGsl
 </pre>
 </div>
 <div class="refsect1">
 <a name="NcmSplineGsl.description" id="NcmSplineGsl.description"></a><h2>Description</h2>
-<p>This object comprises the proper functions to use the GNU Scientific 
+<p>This object comprises the proper functions to use the GNU Scientific
 Library (GSL) spline functions and interpolation methods.</p>
 </div>
 <div class="refsect1">
@@ -140,9 +164,8 @@ Library (GSL) spline functions and interpolation methods.</p>
 <pre class="programlisting"><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
 ncm_spline_gsl_new (<em class="parameter"><code>const <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-interp-type" title="gsl_interp_type"><span class="type">gsl_interp_type</span></a> *type</code></em>);</pre>
 <p>This function returns a new gsl <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> which will use <em class="parameter"><code>type</code></em>
- 
+
 interpolation method.</p>
-<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-spline-gsl-new.parameters" id="ncm-spline-gsl-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -170,9 +193,8 @@ interpolation method.</p>
 ncm_spline_gsl_new_full (<em class="parameter"><code>const <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-interp-type" title="gsl_interp_type"><span class="type">gsl_interp_type</span></a> *type</code></em>,
                          <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *xv</code></em>,
                          <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *yv</code></em>,
-                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> init</code></em>);</pre>
+                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> init</code></em>);</pre>
 <p>This function returns a new gsl <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> setting all its members.</p>
-<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-spline-gsl-new-full.parameters" id="ncm-spline-gsl-new-full.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -213,6 +235,81 @@ ncm_spline_gsl_new_full (<em class="parameter"><code>const <a class="link" href=
 </div>
 <hr />
 <div class="refsect2">
+<a name="ncm-spline-gsl-new-by-id" id="ncm-spline-gsl-new-by-id"></a><h3>ncm_spline_gsl_new_by_id ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
+ncm_spline_gsl_new_by_id (<em class="parameter"><code><a class="link" href="NcmSplineGsl.html#NcmSplineGslType" title="enum NcmSplineGslType"><span class="type">NcmSplineGslType</span></a> type_id</code></em>);</pre>
+<p>This function returns a new gsl <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> which will use <em class="parameter"><code>type</code></em>
+
+interpolation method.</p>
+<div class="refsect3">
+<a name="ncm-spline-gsl-new-by-id.parameters" id="ncm-spline-gsl-new-by-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>type_id</p></td>
+<td class="parameter_description"><p>gsl interpolation method id.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-spline-gsl-new-by-id.returns" id="ncm-spline-gsl-new-by-id.returns"></a><h4>Returns</h4>
+<p> a new <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a>.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-spline-gsl-new-full-by-id" id="ncm-spline-gsl-new-full-by-id"></a><h3>ncm_spline_gsl_new_full_by_id ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
+ncm_spline_gsl_new_full_by_id (<em class="parameter"><code><a class="link" href="NcmSplineGsl.html#NcmSplineGslType" title="enum NcmSplineGslType"><span class="type">NcmSplineGslType</span></a> type_id</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *xv</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *yv</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> init</code></em>);</pre>
+<p>This function returns a new gsl <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> setting all its members.</p>
+<div class="refsect3">
+<a name="ncm-spline-gsl-new-full-by-id.parameters" id="ncm-spline-gsl-new-full-by-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>type_id</p></td>
+<td class="parameter_description"><p>gsl interpolation method id.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xv</p></td>
+<td class="parameter_description"><p><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of knots.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yv</p></td>
+<td class="parameter_description"><p><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of the values of the function, to be interpolated, computed at <em class="parameter"><code>xv</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>init</p></td>
+<td class="parameter_description"><p>TRUE to prepare the new <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> or FALSE to not prepare it.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-spline-gsl-new-full-by-id.returns" id="ncm-spline-gsl-new-full-by-id.returns"></a><h4>Returns</h4>
+<p> a new <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a>.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
 <a name="ncm-spline-gsl-set-type" id="ncm-spline-gsl-set-type"></a><h3>ncm_spline_gsl_set_type ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_gsl_set_type (<em class="parameter"><code><a class="link" href="NcmSplineGsl.html" title="NcmSplineGsl"><span class="type">NcmSplineGsl</span></a> *sg</code></em>,
@@ -220,7 +317,6 @@ ncm_spline_gsl_set_type (<em class="parameter"><code><a class="link" href="NcmSp
 <p>This function sets the interpolation method <em class="parameter"><code>type</code></em>
  to <em class="parameter"><code>sg</code></em>
 .</p>
-<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-spline-gsl-set-type.parameters" id="ncm-spline-gsl-set-type.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -270,6 +366,38 @@ ncm_spline_gsl_set_type_by_id (<em class="parameter"><code><a class="link" href=
 <tr>
 <td class="parameter_name"><p>type_id</p></td>
 <td class="parameter_description"><p>gsl interpolation method id.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-spline-gsl-set-type-by-name" id="ncm-spline-gsl-set-type-by-name"></a><h3>ncm_spline_gsl_set_type_by_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_spline_gsl_set_type_by_name (<em class="parameter"><code><a class="link" href="NcmSplineGsl.html" title="NcmSplineGsl"><span class="type">NcmSplineGsl</span></a> *sg</code></em>,
+                                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *type_name</code></em>);</pre>
+<p>This function sets the interpolation method <em class="parameter"><code>type_name</code></em>
+ to <em class="parameter"><code>sg</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-spline-gsl-set-type-by-name.parameters" id="ncm-spline-gsl-set-type-by-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sg</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSplineGsl.html" title="NcmSplineGsl"><span class="type">NcmSplineGsl</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>type_name</p></td>
+<td class="parameter_description"><p>gsl interpolation method name.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -342,7 +470,7 @@ ncm_spline_gsl_set_type_by_id (<em class="parameter"><code><a class="link" href=
 <a name="NcmSplineGsl.property-details" id="NcmSplineGsl.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="NcmSplineGsl--type-name" id="NcmSplineGsl--type-name"></a><h3>The <code class="literal">“type-name”</code> property</h3>
-<pre class="programlisting">  “type-name”                <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “type-name”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
 <p>GSL Interpolation method name.</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: "NCM_SPLINE_GSL_CSPLINE"</p>
@@ -350,6 +478,6 @@ ncm_spline_gsl_set_type_by_id (<em class="parameter"><code><a class="link" href=
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.27</div>
+<hr />Generated by GTK-Doc V1.29</div>
 </div></div></body>
 </html>
