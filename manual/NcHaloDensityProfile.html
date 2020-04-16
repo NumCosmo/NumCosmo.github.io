@@ -279,6 +279,30 @@
 <a class="link" href="NcHaloDensityProfile.html#nc-halo-density-profile-eval-cyl-mass-array" title="nc_halo_density_profile_eval_cyl_mass_array ()">nc_halo_density_profile_eval_cyl_mass_array</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloDensityProfile.html#nc-halo-density-profile-eval-numint-dl-spher-mass" title="nc_halo_density_profile_eval_numint_dl_spher_mass ()">nc_halo_density_profile_eval_numint_dl_spher_mass</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloDensityProfile.html#nc-halo-density-profile-eval-numint-dl-2d-density" title="nc_halo_density_profile_eval_numint_dl_2d_density ()">nc_halo_density_profile_eval_numint_dl_2d_density</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloDensityProfile.html#nc-halo-density-profile-eval-numint-dl-cyl-mass" title="nc_halo_density_profile_eval_numint_dl_cyl_mass ()">nc_halo_density_profile_eval_numint_dl_cyl_mass</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -883,7 +907,8 @@ see Eq. \eqref{def:dlrho}.</p>
 <a name="nc-halo-density-profile-eval-dl-spher-mass" id="nc-halo-density-profile-eval-dl-spher-mass"></a><h3>nc_halo_density_profile_eval_dl_spher_mass ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_halo_density_profile_eval_dl_spher_mass
-                               (<em class="parameter"><code><a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> *dp</code></em>);</pre>
+                               (<em class="parameter"><code><a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> *dp</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
 <p>This function computes the 2d projection of the dimensionless density
 profile as described in Eq. \eqref{def:Ix2_dld}.</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> eval_dl_spher_mass]</span></p>
@@ -895,16 +920,23 @@ profile as described in Eq. \eqref{def:Ix2_dld}.</p>
 <col class="parameters_description" />
 <col width="200px" class="parameters_annotations" />
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
 <td class="parameter_name"><p>dp</p></td>
 <td class="parameter_description"><p>a <a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a></p></td>
 <td class="parameter_annotations"> </td>
-</tr></tbody>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>dimensionless radius $x = r / r_s$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="nc-halo-density-profile-eval-dl-spher-mass.returns" id="nc-halo-density-profile-eval-dl-spher-mass.returns"></a><h4>Returns</h4>
-<p> the value of the integral $I_{x^2\hat\rho}(c_\Delta)$.</p>
+<p> the value of the integral $I_{x^2\hat\rho}(x)$.</p>
 </div>
 </div>
 <hr />
@@ -1598,6 +1630,120 @@ cylinder of radius $R$, see Eq. \eqref{}.</p>
 <a name="nc-halo-density-profile-eval-cyl-mass-array.returns" id="nc-halo-density-profile-eval-cyl-mass-array.returns"></a><h4>Returns</h4>
 <p>the value of $\overline{\Sigma}(R)\left[M_\odot\right]$. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-density-profile-eval-numint-dl-spher-mass" id="nc-halo-density-profile-eval-numint-dl-spher-mass"></a><h3>nc_halo_density_profile_eval_numint_dl_spher_mass ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_halo_density_profile_eval_numint_dl_spher_mass
+                               (<em class="parameter"><code><a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> *dp</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
+<p>This function computes the 2d projection of the dimensionless density
+profile as described in Eq. \eqref{def:Ix2_dld}. This is the default
+implementation that will be used unless the child object provides one.
+This interface is present for testing purpose.</p>
+<div class="refsect3">
+<a name="nc-halo-density-profile-eval-numint-dl-spher-mass.parameters" id="nc-halo-density-profile-eval-numint-dl-spher-mass.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>dimensionless radius $x = r / r_s$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-halo-density-profile-eval-numint-dl-spher-mass.returns" id="nc-halo-density-profile-eval-numint-dl-spher-mass.returns"></a><h4>Returns</h4>
+<p> the value of the integral $I_{x^2\hat\rho}(c_\Delta)$.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-density-profile-eval-numint-dl-2d-density" id="nc-halo-density-profile-eval-numint-dl-2d-density"></a><h3>nc_halo_density_profile_eval_numint_dl_2d_density ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_halo_density_profile_eval_numint_dl_2d_density
+                               (<em class="parameter"><code><a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> *dp</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> X</code></em>);</pre>
+<p>This function computes the dimensionless 2D density profile,
+see Eq. \eqref{eq:def:hatSigma}. This is the default
+implementation that will be used unless the child object provides one.
+This interface is present for testing purpose.</p>
+<div class="refsect3">
+<a name="nc-halo-density-profile-eval-numint-dl-2d-density.parameters" id="nc-halo-density-profile-eval-numint-dl-2d-density.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>X</p></td>
+<td class="parameter_description"><p>dimensionless 2D radius $X = R / r_s$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-halo-density-profile-eval-numint-dl-2d-density.returns" id="nc-halo-density-profile-eval-numint-dl-2d-density.returns"></a><h4>Returns</h4>
+<p> the value of the dimensionless 2D density profile $\hat\Sigma(X)$.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-density-profile-eval-numint-dl-cyl-mass" id="nc-halo-density-profile-eval-numint-dl-cyl-mass"></a><h3>nc_halo_density_profile_eval_numint_dl_cyl_mass ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_halo_density_profile_eval_numint_dl_cyl_mass
+                               (<em class="parameter"><code><a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> *dp</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> X</code></em>);</pre>
+<p>This function computes the dimensionless cylinder mass,
+see Eq. \eqref{eq:def:cylmass}. This is the default
+implementation that will be used unless the child object 
+provides one. This interface is present for testing purpose.</p>
+<div class="refsect3">
+<a name="nc-halo-density-profile-eval-numint-dl-cyl-mass.parameters" id="nc-halo-density-profile-eval-numint-dl-cyl-mass.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>X</p></td>
+<td class="parameter_description"><p>dimensionless 2D radius $X = R / r_s$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-halo-density-profile-eval-numint-dl-cyl-mass.returns" id="nc-halo-density-profile-eval-numint-dl-cyl-mass.returns"></a><h4>Returns</h4>
+<p> the value of the dimensionless cylinder mass $\hat{\overline{\Sigma}}(X)$.</p>
 </div>
 </div>
 </div>
