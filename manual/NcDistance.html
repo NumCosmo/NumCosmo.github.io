@@ -9,7 +9,7 @@
 <link rel="up" href="ch06.html" title="Cosmological Calculators" />
 <link rel="prev" href="ch06.html" title="Cosmological Calculators" />
 <link rel="next" href="NcScalefactor.html" title="NcScalefactor" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -51,8 +51,8 @@
 <a name="NcDistance.functions" id="NcDistance.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -429,18 +429,20 @@
 <a name="NcDistance.other" id="NcDistance.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody><tr>
-<td class="define_keyword">#define</td>
-<td class="function_name"><a class="link" href="NcDistance.html#NC-DISTANCE-INI-STEP:CAPS" title="NC_DISTANCE_INI_STEP">NC_DISTANCE_INI_STEP</a></td>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcDistance.html#NcDistanceComovingMethod" title="enum NcDistanceComovingMethod">NcDistanceComovingMethod</a></td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="NcDistance.object-hierarchy" id="NcDistance.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcDistanceComovingMethod
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> NcDistance
 </pre>
 </div>
@@ -2000,9 +2002,34 @@ nc_distance_conformal_lookback_time (<em class="parameter"><code><a class="link"
 <div class="refsect1">
 <a name="NcDistance.other_details" id="NcDistance.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
-<a name="NC-DISTANCE-INI-STEP:CAPS" id="NC-DISTANCE-INI-STEP:CAPS"></a><h3>NC_DISTANCE_INI_STEP</h3>
-<pre class="programlisting">#define NC_DISTANCE_INI_STEP (1.0e-6)
-</pre>
+<a name="NcDistanceComovingMethod" id="NcDistanceComovingMethod"></a><h3>enum NcDistanceComovingMethod</h3>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="NcDistanceComovingMethod.members" id="NcDistanceComovingMethod.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DISTANCE-COMOVING-METHOD-INT-E:CAPS" id="NC-DISTANCE-COMOVING-METHOD-INT-E:CAPS"></a>NC_DISTANCE_COMOVING_METHOD_INT_E</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DISTANCE-COMOVING-METHOD-FROM-MODEL:CAPS" id="NC-DISTANCE-COMOVING-METHOD-FROM-MODEL:CAPS"></a>NC_DISTANCE_COMOVING_METHOD_FROM_MODEL</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 </div>
 <div class="refsect1">
@@ -2011,6 +2038,7 @@ nc_distance_conformal_lookback_time (<em class="parameter"><code><a class="link"
 <a name="NcDistance--recomb" id="NcDistance--recomb"></a><h3>The <code class="literal">“recomb”</code> property</h3>
 <pre class="programlisting">  “recomb”                   <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *</pre>
 <p>Recombination object.</p>
+<p>Owner: NcDistance</p>
 <p>Flags: Read / Write / Construct</p>
 </div>
 <hr />
@@ -2018,6 +2046,7 @@ nc_distance_conformal_lookback_time (<em class="parameter"><code><a class="link"
 <a name="NcDistance--zf" id="NcDistance--zf"></a><h3>The <code class="literal">“zf”</code> property</h3>
 <pre class="programlisting">  “zf”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Final cached redshift.</p>
+<p>Owner: NcDistance</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 10</p>
@@ -2025,6 +2054,6 @@ nc_distance_conformal_lookback_time (<em class="parameter"><code><a class="link"
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

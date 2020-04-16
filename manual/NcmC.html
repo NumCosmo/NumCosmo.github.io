@@ -9,7 +9,7 @@
 <link rel="up" href="ch02.html#id-1.3.2" title="Miscellaneous Objects" />
 <link rel="prev" href="ch02.html" title="Numcosmo Math" />
 <link rel="next" href="numcosmo-NcmCfg.html" title="NcmCfg" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -47,11 +47,15 @@
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
+<a name="NcmC.stability-level" id="NcmC.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+</div>
+<div class="refsect1">
 <a name="NcmC.functions" id="NcmC.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -1386,7 +1390,7 @@
 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
-<a class="link" href="NcmC.html#ncm-c-hubble-cte-wmap" title="ncm_c_hubble_cte_wmap ()">ncm_c_hubble_cte_wmap</a> <span class="c_punctuation">()</span>
+<a class="link" href="NcmC.html#ncm-c-hubble-cte-planck6-base" title="ncm_c_hubble_cte_planck6_base ()">ncm_c_hubble_cte_planck6_base</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -1395,14 +1399,6 @@
 </td>
 <td class="function_name">
 <a class="link" href="NcmC.html#ncm-c-hubble-cte-hst" title="ncm_c_hubble_cte_hst ()">ncm_c_hubble_cte_hst</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="NcmC.html#ncm-c-hubble-cte-msa" title="ncm_c_hubble_cte_msa ()">ncm_c_hubble_cte_msa</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -1477,22 +1473,6 @@
 <a class="link" href="NcmC.html#ncm-c-blackbody-per-crit-density-h2" title="ncm_c_blackbody_per_crit_density_h2 ()">ncm_c_blackbody_per_crit_density_h2</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="NcmC.html#ncm-c-radiation-temp-to-h2omega-r" title="ncm_c_radiation_temp_to_h2omega_r ()">ncm_c_radiation_temp_to_h2omega_r</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="NcmC.html#ncm-c-radiation-h2Omega-r0-to-temp" title="ncm_c_radiation_h2Omega_r0_to_temp ()">ncm_c_radiation_h2Omega_r0_to_temp</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
 </tbody>
 </table></div>
 </div>
@@ -1503,23 +1483,28 @@
 </pre>
 </div>
 <div class="refsect1">
+<a name="NcmC.includes" id="NcmC.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;numcosmo/math/ncm_c.h&gt;
+</pre>
+</div>
+<div class="refsect1">
 <a name="NcmC.description" id="NcmC.description"></a><h2>Description</h2>
 <p>Mathematical and physical constants and constants manipulation
 functions.</p>
 <p>The sources are:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>High precision mathematical constants obtained from <a class="ulink" href="http://www.mpfr.org/" target="_top">MPFR</a>. </p></li>
-<li class="listitem"><p>Fundamental constants: 2014 <a class="ulink" href="http://physics.nist.gov/cuu/Constants/index.html" target="_top">CODATA</a>
-recommended values, see constants.txt distributed with NumCosmo sources. </p></li>
-<li class="listitem"><p>The atomic weights: Commission on Isotopic Abundances and Atomic Weights 
-(<a class="ulink" href="http://www.ciaaw.org/atomic-weights.htm" target="_top">CIAAW</a>) of the 
-International Union of Pure and Applied Chemistry (IUPAC). See also from the 
-<a class="ulink" href="http://www.nist.gov/pml/data/comp.cfm" target="_top">NIST compilation</a>. </p></li>
-<li class="listitem"><p>Astronomical constants: <a class="ulink" href="https://www.iau.org/administration/resolutions/general_assemblies/" target="_top">IAU 2015</a> 
+<li class="listitem"><p>High precision mathematical constants obtained from <a class="ulink" href="http://www.mpfr.org/" target="_top">MPFR</a>.</p></li>
+<li class="listitem"><p>Fundamental constants: 2018 <a class="ulink" href="http://physics.nist.gov/cuu/Constants/index.html" target="_top">CODATA</a>
+recommended values, see constants.txt distributed with NumCosmo sources.</p></li>
+<li class="listitem"><p>The atomic weights: Commission on Isotopic Abundances and Atomic Weights
+(<a class="ulink" href="http://www.ciaaw.org/atomic-weights.htm" target="_top">CIAAW</a>) of the
+International Union of Pure and Applied Chemistry (IUPAC). See also from the
+<a class="ulink" href="http://www.nist.gov/pml/data/comp.cfm" target="_top">NIST compilation</a>.</p></li>
+<li class="listitem"><p>Astronomical constants: <a class="ulink" href="https://www.iau.org/administration/resolutions/general_assemblies/" target="_top">IAU 2015</a>
 resolutions for the astronomical unit <a class="link" href="NcmC.html#ncm-c-au" title="ncm_c_au ()"><code class="function">ncm_c_au()</code></a>, parsec <a class="link" href="NcmC.html#ncm-c-pc" title="ncm_c_pc ()"><code class="function">ncm_c_pc()</code></a> and derived constants.
 See also <a class="link" href="refs.html#XLuzum2011">Luzum 2011</a>.</p></li>
 <li class="listitem"><p>Atomic Specra: National Institute of Standards and Technology (NIST) <a class="ulink" href="http://www.nist.gov/pml/data/asd.cfm" target="_top">Atomic Spectra</a>
-database - Version 5 (January 2016).</p></li>
+Standard Reference Database 78 - Version 5.7 (October 2018).</p></li>
 </ul></div>
 </div>
 <div class="refsect1">
@@ -1704,7 +1689,7 @@ ncm_c_radian_to_degree (<em class="parameter"><code>const <a href="/usr/share/gt
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>r</p></td>
-<td class="parameter_description"><p>angle in radians </p></td>
+<td class="parameter_description"><p>angle in radians</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -1772,7 +1757,7 @@ ncm_c_c (<em class="parameter"><code><span class="type">void</span></code></em>)
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-c.returns" id="ncm-c-c.returns"></a><h4>Returns</h4>
-<p> Speed of light $c = 299792458 \,\left[\mathrm{m}\mathrm{s}^{-1}\right]$.</p>
+<p> Speed of light $c = 299792458.0 \,\left[\mathrm{m}\mathrm{s}^{-1}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -1783,7 +1768,7 @@ ncm_c_h (<em class="parameter"><code><span class="type">void</span></code></em>)
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-h.returns" id="ncm-c-h.returns"></a><h4>Returns</h4>
-<p> Planck constant $h = 6.626070040 \times 10^{-34} \,\left[\mathrm{J}\,\mathrm{s}^{-1}\right]$.</p>
+<p> Planck constant $h = 6.62607015 \times 10^{-34} \,\left[\mathrm{J}\,\mathrm{s}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -1794,7 +1779,7 @@ ncm_c_hbar (<em class="parameter"><code><span class="type">void</span></code></e
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-hbar.returns" id="ncm-c-hbar.returns"></a><h4>Returns</h4>
-<p> Planck constant over $2\pi$, $\hbar \equiv h / (2\pi) = 1.054571800 \times 10^{-34} \,\left[\mathrm{J}\,\mathrm{s}^{-1}\right]$.</p>
+<p> Planck constant over $2\pi$, $\hbar \equiv h / (2\pi) = 1.054571817 \times 10^{-34} \,\left[\mathrm{J}\,\mathrm{s}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -1805,7 +1790,7 @@ ncm_c_fine_struct (<em class="parameter"><code><span class="type">void</span></c
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-fine-struct.returns" id="ncm-c-fine-struct.returns"></a><h4>Returns</h4>
-<p> Fine structure constant $\alpha = 7.2973525664 \times 10^{-3} $.</p>
+<p> Fine structure constant $\alpha = 7.2973525693 \times 10^{-3} $.</p>
 </div>
 </div>
 <hr />
@@ -1816,7 +1801,7 @@ ncm_c_kb (<em class="parameter"><code><span class="type">void</span></code></em>
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-kb.returns" id="ncm-c-kb.returns"></a><h4>Returns</h4>
-<p> Boltzmann constant $k_\mathrm{B} = 1.38064852 \times 10^{-23} \,\left[\mathrm{J}\,\mathrm{K}^{-1}\right]$.</p>
+<p> Boltzmann constant $k_\mathrm{B} = 1.380649 \times 10^{-23} \,\left[\mathrm{J}\,\mathrm{K}^{-1}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -1827,7 +1812,7 @@ ncm_c_G (<em class="parameter"><code><span class="type">void</span></code></em>)
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-G.returns" id="ncm-c-G.returns"></a><h4>Returns</h4>
-<p> Newton's (or gravitational) constant $\mathrm{G} = 6.67408 \times 10^{-11} \,\left[\mathrm{m}^3\,\mathrm{kg}^{-1}\,\mathrm{s}^{-2}\right]$.</p>
+<p> Newton's (or gravitational) constant $\mathrm{G} = 6.67430 \times 10^{-11} \,\left[\mathrm{m}^3\,\mathrm{kg}^{-1}\,\mathrm{s}^{-2}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -1837,7 +1822,7 @@ ncm_c_G (<em class="parameter"><code><span class="type">void</span></code></em>)
 ncm_c_planck_length (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-c-planck-length.returns" id="ncm-c-planck-length.returns"></a><h4>Returns</h4>
-<p> Planck length $l_\mathrm{P} = 1.616229 \times 10^{-35} \,\left[\mathrm{m}\right]$.</p>
+<p> Planck length $l_\mathrm{P} = 1.616255 \times 10^{-35} \,\left[\mathrm{m}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -1848,7 +1833,7 @@ ncm_c_thomson_cs (<em class="parameter"><code><span class="type">void</span></co
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-thomson-cs.returns" id="ncm-c-thomson-cs.returns"></a><h4>Returns</h4>
-<p> Thomson cross section $\sigma_\mathrm{T} = 0.66524587158 \times 10^{-28} \,\left[\mathrm{m}^2\right]$.</p>
+<p> Thomson cross section $\sigma_\mathrm{T} = 0.66524587321 \times 10^{-28} \,\left[\mathrm{m}^2\right]$.</p>
 </div>
 </div>
 <hr />
@@ -1859,7 +1844,7 @@ ncm_c_stefan_boltzmann (<em class="parameter"><code><span class="type">void</spa
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-stefan-boltzmann.returns" id="ncm-c-stefan-boltzmann.returns"></a><h4>Returns</h4>
-<p> Stefan Boltzmann constant $\sigma_\mathrm{SB} = 5.670367 \times 10^{-8} \,\left[\mathrm{W}\,\mathrm{m}^{-2}\,\mathrm{K}^{-4}\right]$.</p>
+<p> Stefan Boltzmann constant $\sigma_\mathrm{SB} = 5.670374419 \times 10^{-8} \,\left[\mathrm{W}\,\mathrm{m}^{-2}\,\mathrm{K}^{-4}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -1870,7 +1855,7 @@ ncm_c_mass_atomic (<em class="parameter"><code><span class="type">void</span></c
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-mass-atomic.returns" id="ncm-c-mass-atomic.returns"></a><h4>Returns</h4>
-<p> Atomic mass constant $m_\mathrm{A} = 1.660539040 \times 10^{-27} \,\left[\mathrm{kg}\right]$.</p>
+<p> Atomic mass constant $m_\mathrm{A} = 1.66053906660 \times 10^{-27} \,\left[\mathrm{kg}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -1881,7 +1866,7 @@ ncm_c_mass_e (<em class="parameter"><code><span class="type">void</span></code><
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-mass-e.returns" id="ncm-c-mass-e.returns"></a><h4>Returns</h4>
-<p> Electron mass $m_\mathrm{e} = 9.10938356 \times 10^{-31} \,\left[\mathrm{kg}\right]$.</p>
+<p> Electron mass $m_\mathrm{e} = 9.1093837015 \times 10^{-31} \,\left[\mathrm{kg}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -1892,7 +1877,7 @@ ncm_c_mass_p (<em class="parameter"><code><span class="type">void</span></code><
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-mass-p.returns" id="ncm-c-mass-p.returns"></a><h4>Returns</h4>
-<p> Proton mass $m_\mathrm{p} = 1.672621898 \times 10^{-27} \,\left[\mathrm{kg}\right]$.</p>
+<p> Proton mass $m_\mathrm{p} = 1.67262192369 \times 10^{-27} \,\left[\mathrm{kg}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -1903,7 +1888,7 @@ ncm_c_mass_n (<em class="parameter"><code><span class="type">void</span></code><
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-mass-n.returns" id="ncm-c-mass-n.returns"></a><h4>Returns</h4>
-<p> Neuton mass $m_\mathrm{n} = 1.674927471 \times 10^{-27} \,\left[\mathrm{kg}\right]$.</p>
+<p> Neuton mass $m_\mathrm{n} = 1.67492749804 \times 10^{-27} \,\left[\mathrm{kg}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -1914,7 +1899,7 @@ ncm_c_mass_ratio_alpha_p (<em class="parameter"><code><span class="type">void</s
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-mass-ratio-alpha-p.returns" id="ncm-c-mass-ratio-alpha-p.returns"></a><h4>Returns</h4>
-<p> The proton and alpha particle (Helium-4 III) mass ratio $m_\alpha / m_\mathrm{p} = 3.97259968907$.</p>
+<p> The proton and alpha particle (Helium-4 III) mass ratio $m_\alpha / m_\mathrm{p} = 3.97259969009$.</p>
 </div>
 </div>
 <hr />
@@ -1925,7 +1910,7 @@ ncm_c_mass_ratio_e_p (<em class="parameter"><code><span class="type">void</span>
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-mass-ratio-e-p.returns" id="ncm-c-mass-ratio-e-p.returns"></a><h4>Returns</h4>
-<p> The electron and proton mass ratio $m_\mathrm{e} / m_\mathrm{p} = 5.44617021352 \times 10^{-4}$.</p>
+<p> The electron and proton mass ratio $m_\mathrm{e} / m_\mathrm{p} = 5.44617021487 \times 10^{-4}$.</p>
 </div>
 </div>
 <hr />
@@ -1936,7 +1921,7 @@ ncm_c_Rinf (<em class="parameter"><code><span class="type">void</span></code></e
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-Rinf.returns" id="ncm-c-Rinf.returns"></a><h4>Returns</h4>
-<p> The Rydberg constant $\mathrm{R}_\infty = 1.0973731568508 \times 10^{7} \,\left[\mathrm{m}^{-1}\right]$.</p>
+<p> The Rydberg constant $\mathrm{R}_\infty = 10973731.568160 \,\left[\mathrm{m}^{-1}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -1947,7 +1932,7 @@ ncm_c_Ry (<em class="parameter"><code><span class="type">void</span></code></em>
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-Ry.returns" id="ncm-c-Ry.returns"></a><h4>Returns</h4>
-<p> The Rydberg unity of energy $\mathrm{Ry} = hc\mathrm{R}_\infty = 2.179872325 \times 10^{-18} \,\left[\mathrm{J}\right]$.</p>
+<p> The Rydberg unity of energy $\mathrm{Ry} = hc\mathrm{R}_\infty = 2.1798723611035 \times 10^{-18} \,\left[\mathrm{J}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -1958,7 +1943,7 @@ ncm_c_eV (<em class="parameter"><code><span class="type">void</span></code></em>
 <p>Using CODATA values, see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-eV.returns" id="ncm-c-eV.returns"></a><h4>Returns</h4>
-<p> The value of one electron volt $\mathrm{eV} = 1.6021766208 \times 10^{-19} \,\left[\mathrm{J}\right]$.</p>
+<p> The value of one electron volt $\mathrm{eV} = 1.602176634 \times 10^{-19} \,\left[\mathrm{J}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -2210,7 +2195,7 @@ ncm_c_H_reduced_energy (<em class="parameter"><code><span class="type">void</spa
 ncm_c_H_bind (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> n</code></em>,
               <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> j</code></em>);</pre>
 <p>Energy difference from unbounded state to state $(n,\,j)$, i.e., minus the
-binding energy of the state $(n,\,j)$, calculated from 
+binding energy of the state $(n,\,j)$, calculated from
 \begin{equation}
 E^\mathrm{H}_{n,j} = m_\mathrm{e}c^2\left[1 - f(n,j)\right],
 \end{equation}
@@ -2485,7 +2470,7 @@ ncm_c_Mpc (<em class="parameter"><code><span class="type">void</span></code></em
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_G_mass_solar (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Using IAU 2015 recommendation see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>IAU recomends the use of a fixed value for the gravitational constant 
+<p>IAU recomends the use of a fixed value for the gravitational constant
 times the solar mass.</p>
 <div class="refsect3">
 <a name="ncm-c-G-mass-solar.returns" id="ncm-c-G-mass-solar.returns"></a><h4>Returns</h4>
@@ -2499,7 +2484,7 @@ times the solar mass.</p>
 ncm_c_mass_solar (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Using IAU 2015 recommendation see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>As in the recomendation above $\mathrm{M}_\odot = (\mathcal{GM})_\odot / \mathrm{G}$.
-Here we use the CODATA 2014 value for $G$, see <a class="link" href="NcmC.html#ncm-c-G" title="ncm_c_G ()"><code class="function">ncm_c_G()</code></a>.</p>
+Here we use the CODATA 2018 value for $G$, see <a class="link" href="NcmC.html#ncm-c-G" title="ncm_c_G ()"><code class="function">ncm_c_G()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-mass-solar.returns" id="ncm-c-mass-solar.returns"></a><h4>Returns</h4>
 <p> One solar mass $\mathrm{M}_\odot = (\mathcal{GM})_\odot / \mathrm{G} \,\left[\mathrm{kg}\right]$.</p>
@@ -2523,7 +2508,7 @@ ncm_c_HI_ion_wn_1s_2S0_5 (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HI_ion_wn_2s_2S0_5 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Ionization energy wavenumber for H-I $2s\,{}^2\!S_{1/2}$ state calculated 
+<p>Ionization energy wavenumber for H-I $2s\,{}^2\!S_{1/2}$ state calculated
 from the difference between the first state and the corresponding Lyman
 wavenumber, i.e., $k_{2s\,{}^2\!S_{1/2}} = k_{1s\,{}^2\!S_{1/2}} - k_{2s\,{}^2\!S_{1/2}}^\mathrm{Ly}$,
 see <a class="link" href="NcmC.html#ncm-c-HI-Lyman-wn-2s-2S0-5" title="ncm_c_HI_Lyman_wn_2s_2S0_5 ()"><code class="function">ncm_c_HI_Lyman_wn_2s_2S0_5()</code></a>.</p>
@@ -2538,7 +2523,7 @@ see <a class="link" href="NcmC.html#ncm-c-HI-Lyman-wn-2s-2S0-5" title="ncm_c_HI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HI_ion_wn_2p_2P0_5 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Ionization energy wavenumber for H-I $2p\,{}^2\!P_{1/2}$ state calculated 
+<p>Ionization energy wavenumber for H-I $2p\,{}^2\!P_{1/2}$ state calculated
 from the difference between the first state and the corresponding Lyman
 wavenumber, i.e., $k_{2p\,{}^2\!P_{1/2}} = k_{1s\,{}^2\!S_{1/2}} - k_{2p\,{}^2\!P_{1/2}}^\mathrm{Ly}$,
 see <a class="link" href="NcmC.html#ncm-c-HI-Lyman-wn-2p-2P0-5" title="ncm_c_HI_Lyman_wn_2p_2P0_5 ()"><code class="function">ncm_c_HI_Lyman_wn_2p_2P0_5()</code></a>.</p>
@@ -2553,7 +2538,7 @@ see <a class="link" href="NcmC.html#ncm-c-HI-Lyman-wn-2p-2P0-5" title="ncm_c_HI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HI_ion_wn_2p_2P3_5 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Ionization energy wavenumber for H-I $2p\,{}^2\!P_{3/2}$ state calculated 
+<p>Ionization energy wavenumber for H-I $2p\,{}^2\!P_{3/2}$ state calculated
 from the difference between the first state and the corresponding Lyman
 wavenumber, i.e., $k_{2p\,{}^2\!P_{3/2}} = k_{1s\,{}^2\!S_{3/2}} - k_{2p\,{}^2\!P_{3/2}}^\mathrm{Ly}$,
 see <a class="link" href="NcmC.html#ncm-c-HI-Lyman-wn-2p-2P3-5" title="ncm_c_HI_Lyman_wn_2p_2P3_5 ()"><code class="function">ncm_c_HI_Lyman_wn_2p_2P3_5()</code></a>.</p>
@@ -2568,7 +2553,7 @@ see <a class="link" href="NcmC.html#ncm-c-HI-Lyman-wn-2p-2P3-5" title="ncm_c_HI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HI_ion_wn_2p_2Pmean (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>The mean ionization energy wavenumber for H-I $2p\,{}^2\!P_{1/2}$ and 
+<p>The mean ionization energy wavenumber for H-I $2p\,{}^2\!P_{1/2}$ and
 $2p\,{}^2\!P_{3/2}$ states , i.e., $k_{2p\,{}^2\!P_\mathrm{mean}} = (k_{2p\,{}^2\!P_{1/2}} + k_{2p\,{}^2\!P_{3/2}}) / 2$,
 see <a class="link" href="NcmC.html#ncm-c-HI-Lyman-wn-2p-2Pmean" title="ncm_c_HI_Lyman_wn_2p_2Pmean ()"><code class="function">ncm_c_HI_Lyman_wn_2p_2Pmean()</code></a>.</p>
 <div class="refsect3">
@@ -2696,7 +2681,7 @@ states, $k_{2p\,{}^2\!P_{mean}^\mathrm{Ly}} = (k_{2p\,{}^2\!P_{1/2}}^\mathrm{Ly}
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HI_Lyman_wl_2s_2S0_5 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Wavelength for the $2s\,{}^2\!S_{1/2} \to 1s\,{}^2\!S_{1/2}$ transition 
+<p>Wavelength for the $2s\,{}^2\!S_{1/2} \to 1s\,{}^2\!S_{1/2}$ transition
 $\lambda_{2s\,{}^2\!S_{1/2}}^\mathrm{Ly} = \left(k_{2s\,{}^2\!S_{1/2}}^\mathrm{Ly}\right)^{-1}$,
 see <a class="link" href="NcmC.html#ncm-c-HI-Lyman-wn-2s-2S0-5" title="ncm_c_HI_Lyman_wn_2s_2S0_5 ()"><code class="function">ncm_c_HI_Lyman_wn_2s_2S0_5()</code></a>.</p>
 <div class="refsect3">
@@ -2710,7 +2695,7 @@ see <a class="link" href="NcmC.html#ncm-c-HI-Lyman-wn-2s-2S0-5" title="ncm_c_HI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HI_Lyman_wl_2p_2P0_5 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Wavelength for the $2p\,{}^2\!P_{1/2} \to 1s\,{}^2\!S_{1/2}$ transition 
+<p>Wavelength for the $2p\,{}^2\!P_{1/2} \to 1s\,{}^2\!S_{1/2}$ transition
 $\lambda_{2p\,{}^2\!P_{1/2}}^\mathrm{Ly} = \left(k_{2p\,{}^2\!P_{1/2}}^\mathrm{Ly}\right)^{-1}$,
 see <a class="link" href="NcmC.html#ncm-c-HI-Lyman-wn-2p-2P0-5" title="ncm_c_HI_Lyman_wn_2p_2P0_5 ()"><code class="function">ncm_c_HI_Lyman_wn_2p_2P0_5()</code></a>.</p>
 <div class="refsect3">
@@ -2724,7 +2709,7 @@ see <a class="link" href="NcmC.html#ncm-c-HI-Lyman-wn-2p-2P0-5" title="ncm_c_HI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HI_Lyman_wl_2p_2P3_5 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Wavelength for the $2p\,{}^2\!P_{3/2} \to 1s\,{}^2\!S_{1/2}$ transition 
+<p>Wavelength for the $2p\,{}^2\!P_{3/2} \to 1s\,{}^2\!S_{1/2}$ transition
 $\lambda_{2p\,{}^2\!P_{3/2}}^\mathrm{Ly} = \left(k_{2p\,{}^2\!P_{3/2}}^\mathrm{Ly}\right)^{-1}$,
 see <a class="link" href="NcmC.html#ncm-c-HI-Lyman-wn-2p-2P3-5" title="ncm_c_HI_Lyman_wn_2p_2P3_5 ()"><code class="function">ncm_c_HI_Lyman_wn_2p_2P3_5()</code></a>.</p>
 <div class="refsect3">
@@ -2738,7 +2723,7 @@ see <a class="link" href="NcmC.html#ncm-c-HI-Lyman-wn-2p-2P3-5" title="ncm_c_HI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HI_Lyman_wl_2p_2Pmean (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Wavelength for the $2p\,{}^2\!P_\mathrm{mean} \to 1s\,{}^2\!S_{1/2}$ transition 
+<p>Wavelength for the $2p\,{}^2\!P_\mathrm{mean} \to 1s\,{}^2\!S_{1/2}$ transition
 $\lambda_{2p\,{}^2\!P_\mathrm{mean}}^\mathrm{Ly} = \left(k_{2p\,{}^2\!P_\mathrm{mean}}^\mathrm{Ly}\right)^{-1}$,
 see <a class="link" href="NcmC.html#ncm-c-HI-Lyman-wn-2p-2Pmean" title="ncm_c_HI_Lyman_wn_2p_2Pmean ()"><code class="function">ncm_c_HI_Lyman_wn_2p_2Pmean()</code></a>.</p>
 <div class="refsect3">
@@ -2805,7 +2790,7 @@ see <a class="link" href="NcmC.html#ncm-c-HI-Lyman-wl-2p-2Pmean" title="ncm_c_HI
 ncm_c_boltzmann_factor_HI_1s_2S0_5 (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>Calculates the Boltzmann factor $B_{1s\,{}^2\!S_{1/2}}(T) = k_\mathrm{e}^3 T^{-3/2}\,\exp\left[-E_{1s\,{}^2\!S_{1/2}} / (k_\mathrm{B}T)\right]$,
-for the $1s\,{}^2\!S_{1/2}$ hydrogen energy level, see 
+for the $1s\,{}^2\!S_{1/2}$ hydrogen energy level, see
 <a class="link" href="NcmC.html#ncm-c-HI-ion-E-1s-2S0-5" title="ncm_c_HI_ion_E_1s_2S0_5 ()"><code class="function">ncm_c_HI_ion_E_1s_2S0_5()</code></a> and <a class="link" href="NcmC.html#ncm-c-thermal-wn-e" title="ncm_c_thermal_wn_e ()"><code class="function">ncm_c_thermal_wn_e()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-boltzmann-factor-HI-1s-2S0-5.parameters" id="ncm-c-boltzmann-factor-HI-1s-2S0-5.parameters"></a><h4>Parameters</h4>
@@ -2834,7 +2819,7 @@ for the $1s\,{}^2\!S_{1/2}$ hydrogen energy level, see
 ncm_c_boltzmann_factor_HI_2s_2S0_5 (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>Calculates the Boltzmann factor $B_{2s\,{}^2\!S_{1/2}}(T) = k_\mathrm{e}^3 T^{-3/2}\,\exp\left[-E_{2s\,{}^2\!S_{1/2}} / (k_\mathrm{B}T)\right]$,
-for the $2s\,{}^2\!S_{1/2}$ hydrogen energy level, see 
+for the $2s\,{}^2\!S_{1/2}$ hydrogen energy level, see
 <a class="link" href="NcmC.html#ncm-c-HI-ion-E-2s-2S0-5" title="ncm_c_HI_ion_E_2s_2S0_5 ()"><code class="function">ncm_c_HI_ion_E_2s_2S0_5()</code></a> and <a class="link" href="NcmC.html#ncm-c-thermal-wn-e" title="ncm_c_thermal_wn_e ()"><code class="function">ncm_c_thermal_wn_e()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-boltzmann-factor-HI-2s-2S0-5.parameters" id="ncm-c-boltzmann-factor-HI-2s-2S0-5.parameters"></a><h4>Parameters</h4>
@@ -2863,7 +2848,7 @@ for the $2s\,{}^2\!S_{1/2}$ hydrogen energy level, see
 ncm_c_boltzmann_factor_HI_2p_2P0_5 (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>Calculates the Boltzmann factor $B_{2p\,{}^2\!P_{1/2}}(T) = k_\mathrm{e}^3 T^{-3/2}\,\exp\left[-E_{2p\,{}^2\!P_{1/2}} / (k_\mathrm{B}T)\right]$,
-for the $2p\,{}^2\!P_{1/2}$ hydrogen energy level, see 
+for the $2p\,{}^2\!P_{1/2}$ hydrogen energy level, see
 <a class="link" href="NcmC.html#ncm-c-HI-ion-E-2p-2P0-5" title="ncm_c_HI_ion_E_2p_2P0_5 ()"><code class="function">ncm_c_HI_ion_E_2p_2P0_5()</code></a> and <a class="link" href="NcmC.html#ncm-c-thermal-wn-e" title="ncm_c_thermal_wn_e ()"><code class="function">ncm_c_thermal_wn_e()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-boltzmann-factor-HI-2p-2P0-5.parameters" id="ncm-c-boltzmann-factor-HI-2p-2P0-5.parameters"></a><h4>Parameters</h4>
@@ -2892,7 +2877,7 @@ for the $2p\,{}^2\!P_{1/2}$ hydrogen energy level, see
 ncm_c_boltzmann_factor_HI_2p_2P3_5 (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>Calculates the Boltzmann factor $B_{2p\,{}^2\!P_{3/2}}(T) = k_\mathrm{e}^3 T^{-3/2}\,\exp\left[-E_{2p\,{}^2\!P_{3/2}} / (k_\mathrm{B}T)\right]$,
-for the $2p\,{}^2\!P_{3/2}$ hydrogen energy level, see 
+for the $2p\,{}^2\!P_{3/2}$ hydrogen energy level, see
 <a class="link" href="NcmC.html#ncm-c-HI-ion-E-2p-2P3-5" title="ncm_c_HI_ion_E_2p_2P3_5 ()"><code class="function">ncm_c_HI_ion_E_2p_2P3_5()</code></a> and <a class="link" href="NcmC.html#ncm-c-thermal-wn-e" title="ncm_c_thermal_wn_e ()"><code class="function">ncm_c_thermal_wn_e()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-boltzmann-factor-HI-2p-2P3-5.parameters" id="ncm-c-boltzmann-factor-HI-2p-2P3-5.parameters"></a><h4>Parameters</h4>
@@ -2921,7 +2906,7 @@ for the $2p\,{}^2\!P_{3/2}$ hydrogen energy level, see
 ncm_c_boltzmann_factor_HI_2p_2Pmean (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>Calculates the Boltzmann factor $B_{2p\,{}^2\!P_\mathrm{mean}}(T) = k_\mathrm{e}^3 T^{-3/2}\,\exp\left[-E_{2p\,{}^2\!P_\mathrm{mean}} / (k_\mathrm{B}T)\right]$,
-for the $2p\,{}^2\!P_\mathrm{mean}$ hydrogen energy level, see 
+for the $2p\,{}^2\!P_\mathrm{mean}$ hydrogen energy level, see
 <a class="link" href="NcmC.html#ncm-c-HI-ion-E-2p-2Pmean" title="ncm_c_HI_ion_E_2p_2Pmean ()"><code class="function">ncm_c_HI_ion_E_2p_2Pmean()</code></a> and <a class="link" href="NcmC.html#ncm-c-thermal-wn-e" title="ncm_c_thermal_wn_e ()"><code class="function">ncm_c_thermal_wn_e()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-boltzmann-factor-HI-2p-2Pmean.parameters" id="ncm-c-boltzmann-factor-HI-2p-2Pmean.parameters"></a><h4>Parameters</h4>
@@ -2961,7 +2946,7 @@ ncm_c_HeI_ion_wn_1s_1S0 (<em class="parameter"><code><span class="type">void</sp
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HeI_ion_wn_2s_1S0 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Ionization energy wavenumber for He-I $2s\,{}^1\!S_{0}$ state calculated 
+<p>Ionization energy wavenumber for He-I $2s\,{}^1\!S_{0}$ state calculated
 from the difference between the first state and the corresponding Lyman
 wavenumber, i.e., $k_{2s\,{}^1\!S_{0}} = k_{1s\,{}^1\!S_{0}} - k_{2s\,{}^1\!S_{0}}^\mathrm{Ly}$,
 see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2s-1S0" title="ncm_c_HeI_Lyman_wn_2s_1S0 ()"><code class="function">ncm_c_HeI_Lyman_wn_2s_1S0()</code></a>.</p>
@@ -2976,7 +2961,7 @@ see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2s-1S0" title="ncm_c_HeI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HeI_ion_wn_2s_3S1 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Ionization energy wavenumber for He-I $2s\,{}^3\!S_{1}$ state calculated 
+<p>Ionization energy wavenumber for He-I $2s\,{}^3\!S_{1}$ state calculated
 from the difference between the first state and the corresponding Lyman
 wavenumber, i.e., $k_{2s\,{}^3\!S_{1}} = k_{1s\,{}^1\!S_{0}} - k_{2s\,{}^3\!S_{1}}^\mathrm{Ly}$,
 see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2s-3S1" title="ncm_c_HeI_Lyman_wn_2s_3S1 ()"><code class="function">ncm_c_HeI_Lyman_wn_2s_3S1()</code></a>.</p>
@@ -2991,7 +2976,7 @@ see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2s-3S1" title="ncm_c_HeI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HeI_ion_wn_2p_1P1 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Ionization energy wavenumber for He-I $2p\,{}^1\!P_{1}$ state calculated 
+<p>Ionization energy wavenumber for He-I $2p\,{}^1\!P_{1}$ state calculated
 from the difference between the first state and the corresponding Lyman
 wavenumber, i.e., $k_{2p\,{}^1\!P_{1}} = k_{1s\,{}^1\!S_{0}} - k_{2p\,{}^1\!P_{1}}^\mathrm{Ly}$,
 see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-1P1" title="ncm_c_HeI_Lyman_wn_2p_1P1 ()"><code class="function">ncm_c_HeI_Lyman_wn_2p_1P1()</code></a>.</p>
@@ -3006,7 +2991,7 @@ see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-1P1" title="ncm_c_HeI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HeI_ion_wn_2p_3P0 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Ionization energy wavenumber for He-I $2p\,{}^3\!P_{0}$ state calculated 
+<p>Ionization energy wavenumber for He-I $2p\,{}^3\!P_{0}$ state calculated
 from the difference between the first state and the corresponding Lyman
 wavenumber, i.e., $k_{2p\,{}^3\!P_{0}} = k_{1s\,{}^1\!S_{0}} - k_{2p\,{}^3\!P_{0}}^\mathrm{Ly}$,
 see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P0" title="ncm_c_HeI_Lyman_wn_2p_3P0 ()"><code class="function">ncm_c_HeI_Lyman_wn_2p_3P0()</code></a>.</p>
@@ -3021,7 +3006,7 @@ see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P0" title="ncm_c_HeI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HeI_ion_wn_2p_3P1 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Ionization energy wavenumber for He-I $2p\,{}^3\!P_{1}$ state calculated 
+<p>Ionization energy wavenumber for He-I $2p\,{}^3\!P_{1}$ state calculated
 from the difference between the first state and the corresponding Lyman
 wavenumber, i.e., $k_{2p\,{}^3\!P_{1}} = k_{1s\,{}^1\!S_{0}} - k_{2p\,{}^3\!P_{1}}^\mathrm{Ly}$,
 see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P1" title="ncm_c_HeI_Lyman_wn_2p_3P1 ()"><code class="function">ncm_c_HeI_Lyman_wn_2p_3P1()</code></a>.</p>
@@ -3036,7 +3021,7 @@ see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P1" title="ncm_c_HeI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HeI_ion_wn_2p_3P2 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Ionization energy wavenumber for He-I $2p\,{}^3\!P_{2}$ state calculated 
+<p>Ionization energy wavenumber for He-I $2p\,{}^3\!P_{2}$ state calculated
 from the difference between the first state and the corresponding Lyman
 wavenumber, i.e., $k_{2p\,{}^3\!P_{2}} = k_{1s\,{}^1\!S_{0}} - k_{2p\,{}^3\!P_{2}}^\mathrm{Ly}$,
 see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P2" title="ncm_c_HeI_Lyman_wn_2p_3P2 ()"><code class="function">ncm_c_HeI_Lyman_wn_2p_3P2()</code></a>.</p>
@@ -3051,7 +3036,7 @@ see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P2" title="ncm_c_HeI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HeI_ion_wn_2p_3Pmean (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Ionization energy wavenumber for He-I $2p\,{}^3\!P_\mathrm{mean}$ state calculated 
+<p>Ionization energy wavenumber for He-I $2p\,{}^3\!P_\mathrm{mean}$ state calculated
 from the difference between the first state and the corresponding Lyman
 wavenumber, i.e., $k_{2p\,{}^3\!P_{0}} = k_{1s\,{}^1\!S_{0}} - k_{2p\,{}^3\!P_\mathrm{mean}}^\mathrm{Ly}$,
 see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3Pmean" title="ncm_c_HeI_Lyman_wn_2p_3Pmean ()"><code class="function">ncm_c_HeI_Lyman_wn_2p_3Pmean()</code></a>.</p>
@@ -3242,7 +3227,7 @@ ncm_c_HeI_Lyman_wn_2p_3P2 (<em class="parameter"><code><span class="type">void</
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HeI_Lyman_wn_2p_3Pmean (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Mean Lyman emission wavenumber for the $2p\,{}^3\!P_{*}$, i.e., 
+<p>Mean Lyman emission wavenumber for the $2p\,{}^3\!P_{*}$, i.e.,
 $k_{2p\,{}^3\!P_\mathrm{mean}}^\mathrm{Ly} = \left(k_{2p\,{}^3\!P_{0}}^\mathrm{Ly} + k_{2p\,{}^3\!P_{1}}^\mathrm{Ly} + k_{2p\,{}^3\!P_{2}}^\mathrm{Ly}\right) / 3$.
 See <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P0" title="ncm_c_HeI_Lyman_wn_2p_3P0 ()"><code class="function">ncm_c_HeI_Lyman_wn_2p_3P0()</code></a>, <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P1" title="ncm_c_HeI_Lyman_wn_2p_3P1 ()"><code class="function">ncm_c_HeI_Lyman_wn_2p_3P1()</code></a> and <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P2" title="ncm_c_HeI_Lyman_wn_2p_3P2 ()"><code class="function">ncm_c_HeI_Lyman_wn_2p_3P2()</code></a>.</p>
 <div class="refsect3">
@@ -3256,7 +3241,7 @@ See <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P0" title="ncm_c_HeI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HeI_Lyman_wl_2s_1S0 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Wavelength for the $2s\,{}^1\!S_{0} \to 1s\,{}^1\!S_{0}$ transition 
+<p>Wavelength for the $2s\,{}^1\!S_{0} \to 1s\,{}^1\!S_{0}$ transition
 $\lambda_{2s\,{}^1\!S_{0}}^\mathrm{Ly} = \left(k_{2s\,{}^1\!S_{0}}^\mathrm{Ly}\right)^{-1}$,
 see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2s-1S0" title="ncm_c_HeI_Lyman_wn_2s_1S0 ()"><code class="function">ncm_c_HeI_Lyman_wn_2s_1S0()</code></a>.</p>
 <div class="refsect3">
@@ -3270,7 +3255,7 @@ see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2s-1S0" title="ncm_c_HeI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HeI_Lyman_wl_2s_3S1 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Wavelength for the $2s\,{}^3\!S_{1} \to 1s\,{}^1\!S_{0}$ transition 
+<p>Wavelength for the $2s\,{}^3\!S_{1} \to 1s\,{}^1\!S_{0}$ transition
 $\lambda_{2s\,{}^3\!S_{1}}^\mathrm{Ly} = \left(k_{2s\,{}^3\!S_{1}}^\mathrm{Ly}\right)^{-1}$,
 see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2s-3S1" title="ncm_c_HeI_Lyman_wn_2s_3S1 ()"><code class="function">ncm_c_HeI_Lyman_wn_2s_3S1()</code></a>.</p>
 <div class="refsect3">
@@ -3284,7 +3269,7 @@ see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2s-3S1" title="ncm_c_HeI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HeI_Lyman_wl_2p_1P1 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Wavelength for the $2p\,{}^1\!P_{1} \to 1s\,{}^1\!S_{0}$ transition 
+<p>Wavelength for the $2p\,{}^1\!P_{1} \to 1s\,{}^1\!S_{0}$ transition
 $\lambda_{2p\,{}^1\!P_{1}}^\mathrm{Ly} = \left(k_{2p\,{}^1\!P_{1}}^\mathrm{Ly}\right)^{-1}$,
 see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-1P1" title="ncm_c_HeI_Lyman_wn_2p_1P1 ()"><code class="function">ncm_c_HeI_Lyman_wn_2p_1P1()</code></a>.</p>
 <div class="refsect3">
@@ -3298,7 +3283,7 @@ see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-1P1" title="ncm_c_HeI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HeI_Lyman_wl_2p_3P0 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Wavelength for the $2p\,{}^3\!P_{0} \to 1s\,{}^1\!S_{0}$ transition 
+<p>Wavelength for the $2p\,{}^3\!P_{0} \to 1s\,{}^1\!S_{0}$ transition
 $\lambda_{2p\,{}^3\!P_{0}}^\mathrm{Ly} = \left(k_{2p\,{}^3\!P_{0}}^\mathrm{Ly}\right)^{-1}$,
 see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P0" title="ncm_c_HeI_Lyman_wn_2p_3P0 ()"><code class="function">ncm_c_HeI_Lyman_wn_2p_3P0()</code></a>.</p>
 <div class="refsect3">
@@ -3312,7 +3297,7 @@ see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P0" title="ncm_c_HeI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HeI_Lyman_wl_2p_3P1 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Wavelength for the $2p\,{}^3\!P_{1} \to 1s\,{}^1\!S_{0}$ transition 
+<p>Wavelength for the $2p\,{}^3\!P_{1} \to 1s\,{}^1\!S_{0}$ transition
 $\lambda_{2p\,{}^3\!P_{1}}^\mathrm{Ly} = \left(k_{2p\,{}^3\!P_{1}}^\mathrm{Ly}\right)^{-1}$,
 see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P1" title="ncm_c_HeI_Lyman_wn_2p_3P1 ()"><code class="function">ncm_c_HeI_Lyman_wn_2p_3P1()</code></a>.</p>
 <div class="refsect3">
@@ -3326,7 +3311,7 @@ see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P1" title="ncm_c_HeI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HeI_Lyman_wl_2p_3P2 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Wavelength for the $2p\,{}^3\!P_{2} \to 1s\,{}^1\!S_{0}$ transition 
+<p>Wavelength for the $2p\,{}^3\!P_{2} \to 1s\,{}^1\!S_{0}$ transition
 $\lambda_{2p\,{}^3\!P_{2}}^\mathrm{Ly} = \left(k_{2p\,{}^3\!P_{2}}^\mathrm{Ly}\right)^{-1}$,
 see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P2" title="ncm_c_HeI_Lyman_wn_2p_3P2 ()"><code class="function">ncm_c_HeI_Lyman_wn_2p_3P2()</code></a>.</p>
 <div class="refsect3">
@@ -3340,7 +3325,7 @@ see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3P2" title="ncm_c_HeI_
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_HeI_Lyman_wl_2p_3Pmean (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
-<p>Wavelength for the $2p\,{}^3\!P_\mathrm{mean} \to 1s\,{}^1\!S_{0}$ transition 
+<p>Wavelength for the $2p\,{}^3\!P_\mathrm{mean} \to 1s\,{}^1\!S_{0}$ transition
 $\lambda_{2p\,{}^3\!P_\mathrm{mean}}^\mathrm{Ly} = \left(k_{2p\,{}^3\!P_\mathrm{mean}}^\mathrm{Ly}\right)^{-1}$,
 see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wn-2p-3Pmean" title="ncm_c_HeI_Lyman_wn_2p_3Pmean ()"><code class="function">ncm_c_HeI_Lyman_wn_2p_3Pmean()</code></a>.</p>
 <div class="refsect3">
@@ -3446,7 +3431,7 @@ see <a class="link" href="NcmC.html#ncm-c-HeI-Lyman-wl-2p-3Pmean" title="ncm_c_H
 ncm_c_boltzmann_factor_HeI_1s_1S0 (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>Calculates the Boltzmann factor $B_{1s\,{}^1\!S_{0}}(T) = k_\mathrm{e}^3 T^{-3/2}\,\exp\left[-E_{1s\,{}^1\!S_{0}} / (k_\mathrm{B}T)\right]$,
-for the $1s\,{}^1\!S_{0}$ helium energy level, see 
+for the $1s\,{}^1\!S_{0}$ helium energy level, see
 <a class="link" href="NcmC.html#ncm-c-HeI-ion-E-1s-1S0" title="ncm_c_HeI_ion_E_1s_1S0 ()"><code class="function">ncm_c_HeI_ion_E_1s_1S0()</code></a> and <a class="link" href="NcmC.html#ncm-c-thermal-wn-e" title="ncm_c_thermal_wn_e ()"><code class="function">ncm_c_thermal_wn_e()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-boltzmann-factor-HeI-1s-1S0.parameters" id="ncm-c-boltzmann-factor-HeI-1s-1S0.parameters"></a><h4>Parameters</h4>
@@ -3475,7 +3460,7 @@ for the $1s\,{}^1\!S_{0}$ helium energy level, see
 ncm_c_boltzmann_factor_HeI_2s_1S0 (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>Calculates the Boltzmann factor $B_{2s\,{}^1\!S_{0}}(T) = k_\mathrm{e}^3 T^{-3/2}\,\exp\left[-E_{2s\,{}^1\!S_{0}} / (k_\mathrm{B}T)\right]$,
-for the $2s\,{}^1\!S_{0}$ helium energy level, see 
+for the $2s\,{}^1\!S_{0}$ helium energy level, see
 <a class="link" href="NcmC.html#ncm-c-HeI-ion-E-2s-1S0" title="ncm_c_HeI_ion_E_2s_1S0 ()"><code class="function">ncm_c_HeI_ion_E_2s_1S0()</code></a> and <a class="link" href="NcmC.html#ncm-c-thermal-wn-e" title="ncm_c_thermal_wn_e ()"><code class="function">ncm_c_thermal_wn_e()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-boltzmann-factor-HeI-2s-1S0.parameters" id="ncm-c-boltzmann-factor-HeI-2s-1S0.parameters"></a><h4>Parameters</h4>
@@ -3504,7 +3489,7 @@ for the $2s\,{}^1\!S_{0}$ helium energy level, see
 ncm_c_boltzmann_factor_HeI_2s_3S1 (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>Calculates the Boltzmann factor $B_{2s\,{}^3\!S_{1}}(T) = k_\mathrm{e}^3 T^{-3/2}\,\exp\left[-E_{2s\,{}^3\!S_{1}} / (k_\mathrm{B}T)\right]$,
-for the $2s\,{}^3\!S_{1}$ helium energy level, see 
+for the $2s\,{}^3\!S_{1}$ helium energy level, see
 <a class="link" href="NcmC.html#ncm-c-HeI-ion-E-2s-3S1" title="ncm_c_HeI_ion_E_2s_3S1 ()"><code class="function">ncm_c_HeI_ion_E_2s_3S1()</code></a> and <a class="link" href="NcmC.html#ncm-c-thermal-wn-e" title="ncm_c_thermal_wn_e ()"><code class="function">ncm_c_thermal_wn_e()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-boltzmann-factor-HeI-2s-3S1.parameters" id="ncm-c-boltzmann-factor-HeI-2s-3S1.parameters"></a><h4>Parameters</h4>
@@ -3533,7 +3518,7 @@ for the $2s\,{}^3\!S_{1}$ helium energy level, see
 ncm_c_boltzmann_factor_HeI_2p_1P1 (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>Calculates the Boltzmann factor $B_{2p\,{}^1\!P_{1}}(T) = k_\mathrm{e}^3 T^{-3/2}\,\exp\left[-E_{2p\,{}^1\!P_{1}} / (k_\mathrm{B}T)\right]$,
-for the $2p\,{}^1\!P_{1}$ helium energy level, see 
+for the $2p\,{}^1\!P_{1}$ helium energy level, see
 <a class="link" href="NcmC.html#ncm-c-HeI-ion-E-2p-1P1" title="ncm_c_HeI_ion_E_2p_1P1 ()"><code class="function">ncm_c_HeI_ion_E_2p_1P1()</code></a> and <a class="link" href="NcmC.html#ncm-c-thermal-wn-e" title="ncm_c_thermal_wn_e ()"><code class="function">ncm_c_thermal_wn_e()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-boltzmann-factor-HeI-2p-1P1.parameters" id="ncm-c-boltzmann-factor-HeI-2p-1P1.parameters"></a><h4>Parameters</h4>
@@ -3562,7 +3547,7 @@ for the $2p\,{}^1\!P_{1}$ helium energy level, see
 ncm_c_boltzmann_factor_HeI_2p_3P0 (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>Calculates the Boltzmann factor $B_{2p\,{}^3\!P_{0}}(T) = k_\mathrm{e}^3 T^{-3/2}\,\exp\left[-E_{2p\,{}^3\!P_{0}} / (k_\mathrm{B}T)\right]$,
-for the $2p\,{}^3\!P_{0}$ helium energy level, see 
+for the $2p\,{}^3\!P_{0}$ helium energy level, see
 <a class="link" href="NcmC.html#ncm-c-HeI-ion-E-2p-3P0" title="ncm_c_HeI_ion_E_2p_3P0 ()"><code class="function">ncm_c_HeI_ion_E_2p_3P0()</code></a> and <a class="link" href="NcmC.html#ncm-c-thermal-wn-e" title="ncm_c_thermal_wn_e ()"><code class="function">ncm_c_thermal_wn_e()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-boltzmann-factor-HeI-2p-3P0.parameters" id="ncm-c-boltzmann-factor-HeI-2p-3P0.parameters"></a><h4>Parameters</h4>
@@ -3591,7 +3576,7 @@ for the $2p\,{}^3\!P_{0}$ helium energy level, see
 ncm_c_boltzmann_factor_HeI_2p_3P1 (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>Calculates the Boltzmann factor $B_{2p\,{}^3\!P_{1}}(T) = k_\mathrm{e}^3 T^{-3/2}\,\exp\left[-E_{2p\,{}^3\!P_{1}} / (k_\mathrm{B}T)\right]$,
-for the $2p\,{}^3\!P_{1}$ helium energy level, see 
+for the $2p\,{}^3\!P_{1}$ helium energy level, see
 <a class="link" href="NcmC.html#ncm-c-HeI-ion-E-2p-3P1" title="ncm_c_HeI_ion_E_2p_3P1 ()"><code class="function">ncm_c_HeI_ion_E_2p_3P1()</code></a> and <a class="link" href="NcmC.html#ncm-c-thermal-wn-e" title="ncm_c_thermal_wn_e ()"><code class="function">ncm_c_thermal_wn_e()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-boltzmann-factor-HeI-2p-3P1.parameters" id="ncm-c-boltzmann-factor-HeI-2p-3P1.parameters"></a><h4>Parameters</h4>
@@ -3620,7 +3605,7 @@ for the $2p\,{}^3\!P_{1}$ helium energy level, see
 ncm_c_boltzmann_factor_HeI_2p_3P2 (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>Calculates the Boltzmann factor $B_{2p\,{}^3\!P_{2}}(T) = k_\mathrm{e}^3 T^{-3/2}\,\exp\left[-E_{2p\,{}^3\!P_{2}} / (k_\mathrm{B}T)\right]$,
-for the $2p\,{}^3\!P_{2}$ helium energy level, see 
+for the $2p\,{}^3\!P_{2}$ helium energy level, see
 <a class="link" href="NcmC.html#ncm-c-HeI-ion-E-2p-3P2" title="ncm_c_HeI_ion_E_2p_3P2 ()"><code class="function">ncm_c_HeI_ion_E_2p_3P2()</code></a> and <a class="link" href="NcmC.html#ncm-c-thermal-wn-e" title="ncm_c_thermal_wn_e ()"><code class="function">ncm_c_thermal_wn_e()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-boltzmann-factor-HeI-2p-3P2.parameters" id="ncm-c-boltzmann-factor-HeI-2p-3P2.parameters"></a><h4>Parameters</h4>
@@ -3649,7 +3634,7 @@ for the $2p\,{}^3\!P_{2}$ helium energy level, see
 ncm_c_boltzmann_factor_HeI_2p_3Pmean (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>Calculates the Boltzmann factor $B_{2p\,{}^3\!P_\mathrm{mean}}(T) = k_\mathrm{e}^3 T^{-3/2}\,\exp\left[-E_{2p\,{}^3\!P_\mathrm{mean}} / (k_\mathrm{B}T)\right]$,
-for the $2p\,{}^3\!P_\mathrm{mean}$ helium energy level, see 
+for the $2p\,{}^3\!P_\mathrm{mean}$ helium energy level, see
 <a class="link" href="NcmC.html#ncm-c-HeI-ion-E-2p-3Pmean" title="ncm_c_HeI_ion_E_2p_3Pmean ()"><code class="function">ncm_c_HeI_ion_E_2p_3Pmean()</code></a> and <a class="link" href="NcmC.html#ncm-c-thermal-wn-e" title="ncm_c_thermal_wn_e ()"><code class="function">ncm_c_thermal_wn_e()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-boltzmann-factor-HeI-2p-3Pmean.parameters" id="ncm-c-boltzmann-factor-HeI-2p-3Pmean.parameters"></a><h4>Parameters</h4>
@@ -3678,8 +3663,8 @@ for the $2p\,{}^3\!P_\mathrm{mean}$ helium energy level, see
 ncm_c_HeI_Balmer_wn_2p_1P1_2s_1S0 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>Balmer emission wavenumber for the $2p\,{}^1\!P_{1} \to 2s\,{}^1\!S_{0}$ transition $k_{2p\,{}^1\!P_{1}}^{2s\,{}^1\!S_{0}}$,
-calculated from the difference between the Lyman lines $2s\,{}^1\!S_{0}$ state and the 
-corresponding Lyman wavenumber, i.e., 
+calculated from the difference between the Lyman lines $2s\,{}^1\!S_{0}$ state and the
+corresponding Lyman wavenumber, i.e.,
 $k_{2p\,{}^1\!P_{1}}^{2s\,{}^1\!S_{0}} = k_{2p\,{}^1\!P_{1}}^\mathrm{Ly} - k_{2s\,{}^1\!S_{0}}^\mathrm{Ly}$.</p>
 <div class="refsect3">
 <a name="ncm-c-HeI-Balmer-wn-2p-1P1-2s-1S0.returns" id="ncm-c-HeI-Balmer-wn-2p-1P1-2s-1S0.returns"></a><h4>Returns</h4>
@@ -3693,8 +3678,8 @@ $k_{2p\,{}^1\!P_{1}}^{2s\,{}^1\!S_{0}} = k_{2p\,{}^1\!P_{1}}^\mathrm{Ly} - k_{2s
 ncm_c_HeI_Balmer_wn_2p_3Pmean_2s_3S1 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>NIST compilation of atomic spectra see <a class="link" href="NcmC.html#NcmC.description" title="Description">description</a>.</p>
 <p>Balmer emission wavenumber for the $2p\,{}^3\!P_\mathrm{mean} \to 2s\,{}^3\!S_{1}$ transition $k_{2p\,{}^3\!P_\mathrm{mean}}^{2s\,{}^3\!S_{1}}$,
-calculated from the difference between the Lyman lines $2s\,{}^1\!S_{0}$ state and the 
-corresponding Lyman wavenumber, i.e., 
+calculated from the difference between the Lyman lines $2s\,{}^1\!S_{0}$ state and the
+corresponding Lyman wavenumber, i.e.,
 $k_{2p\,{}^3\!P_\mathrm{mean}}^{2s\,{}^3\!S_{1}} = k_{2p\,{}^3\!P_\mathrm{mean}}^\mathrm{Ly} - k_{2s\,{}^3\!S_{1}}^\mathrm{Ly}$.</p>
 <div class="refsect3">
 <a name="ncm-c-HeI-Balmer-wn-2p-3Pmean-2s-3S1.returns" id="ncm-c-HeI-Balmer-wn-2p-3Pmean-2s-3S1.returns"></a><h4>Returns</h4>
@@ -3756,7 +3741,7 @@ ncm_c_HeII_ion_E_1s_2S0_5 (<em class="parameter"><code><span class="type">void</
 <a name="ncm-c-decay-H-rate-2s-1s" id="ncm-c-decay-H-rate-2s-1s"></a><h3>ncm_c_decay_H_rate_2s_1s ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_decay_H_rate_2s_1s (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>Theoretical value for the two photons decay rate for Hydrogen 
+<p>Theoretical value for the two photons decay rate for Hydrogen
 $2\mathrm{s} \to 1\mathrm{s}$ states <a class="link" href="refs.html#XGoldman1989">Goldman 1989</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-decay-H-rate-2s-1s.returns" id="ncm-c-decay-H-rate-2s-1s.returns"></a><h4>Returns</h4>
@@ -3768,7 +3753,7 @@ $2\mathrm{s} \to 1\mathrm{s}$ states <a class="link" href="refs.html#XGoldman198
 <a name="ncm-c-decay-He-rate-2s-1s" id="ncm-c-decay-He-rate-2s-1s"></a><h3>ncm_c_decay_He_rate_2s_1s ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_decay_He_rate_2s_1s (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>Theoretical value for the two photons decay rate for Helium 
+<p>Theoretical value for the two photons decay rate for Helium
 $2\mathrm{s} \to 1\mathrm{s}$ states <a class="link" href="refs.html#XDrake1969">Drake 1969</a>.</p>
 <div class="refsect3">
 <a name="ncm-c-decay-He-rate-2s-1s.returns" id="ncm-c-decay-He-rate-2s-1s.returns"></a><h4>Returns</h4>
@@ -3816,9 +3801,10 @@ and standard deviation sigma in $(\mu - 3 \sigma, \mu + 3 \sigma)$.</p>
 <a name="ncm-c-wmap5-coadded-I-K" id="ncm-c-wmap5-coadded-I-K"></a><h3>ncm_c_wmap5_coadded_I_K ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_wmap5_coadded_I_K (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>WMAP-5 noise per observation for resolution 9 and 10 $I$ maps, to $\sim$0.1% uncertainty for differencing assembly (DA) $\text{K1}$. See <a class="link" href="refs.html#X2009ApJS..180..225H">Hinshaw (2009)</a> [<a class="ulink" href="https://arxiv.org/abs/0803.0732" target="_top">arXiv</a>].</p>
 <div class="refsect3">
 <a name="ncm-c-wmap5-coadded-I-K.returns" id="ncm-c-wmap5-coadded-I-K.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> $\sigma_0(I) = 1.436 \left[ \text{mK} \right]$.</p>
 </div>
 </div>
 <hr />
@@ -3826,9 +3812,10 @@ ncm_c_wmap5_coadded_I_K (<em class="parameter"><code><span class="type">void</sp
 <a name="ncm-c-wmap5-coadded-I-Ka" id="ncm-c-wmap5-coadded-I-Ka"></a><h3>ncm_c_wmap5_coadded_I_Ka ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_wmap5_coadded_I_Ka (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>WMAP-5 noise per observation for resolution 9 and 10 $I$ maps, to $\sim$0.1% uncertainty for differencing assembly (DA) $\text{Ka1}$. See <a class="link" href="refs.html#X2009ApJS..180..225H">Hinshaw (2009)</a> [<a class="ulink" href="https://arxiv.org/abs/0803.0732" target="_top">arXiv</a>].</p>
 <div class="refsect3">
 <a name="ncm-c-wmap5-coadded-I-Ka.returns" id="ncm-c-wmap5-coadded-I-Ka.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> $\sigma_0(I) = 1.470 \left[ \text{mK} \right]$.</p>
 </div>
 </div>
 <hr />
@@ -3836,9 +3823,10 @@ ncm_c_wmap5_coadded_I_Ka (<em class="parameter"><code><span class="type">void</s
 <a name="ncm-c-wmap5-coadded-I-Q" id="ncm-c-wmap5-coadded-I-Q"></a><h3>ncm_c_wmap5_coadded_I_Q ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_wmap5_coadded_I_Q (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>WMAP-5 noise per observation for resolution 9 and 10 $I$ maps, to $\sim$0.1% uncertainty for differencing assembly (DA) $\text{Q}$. See Smidt (2009) [<a class="ulink" href="https://arxiv.org/abs/0907.4051" target="_top">arXiv</a>].</p>
 <div class="refsect3">
 <a name="ncm-c-wmap5-coadded-I-Q.returns" id="ncm-c-wmap5-coadded-I-Q.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> $\sigma_0(I) = 2.197 \left[ \text{mK} \right]$.</p>
 </div>
 </div>
 <hr />
@@ -3846,9 +3834,10 @@ ncm_c_wmap5_coadded_I_Q (<em class="parameter"><code><span class="type">void</sp
 <a name="ncm-c-wmap5-coadded-I-V" id="ncm-c-wmap5-coadded-I-V"></a><h3>ncm_c_wmap5_coadded_I_V ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_wmap5_coadded_I_V (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>WMAP-5 noise per observation for resolution 9 and 10 $I$ maps, to $\sim$0.1% uncertainty for differencing assembly (DA) $\text{V}$. See Smidt (2009) [<a class="ulink" href="https://arxiv.org/abs/0907.4051" target="_top">arXiv</a>].</p>
 <div class="refsect3">
 <a name="ncm-c-wmap5-coadded-I-V.returns" id="ncm-c-wmap5-coadded-I-V.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> $\sigma_0(I) = 3.133 \left[ \text{mK} \right]$.</p>
 </div>
 </div>
 <hr />
@@ -3856,20 +3845,21 @@ ncm_c_wmap5_coadded_I_V (<em class="parameter"><code><span class="type">void</sp
 <a name="ncm-c-wmap5-coadded-I-W" id="ncm-c-wmap5-coadded-I-W"></a><h3>ncm_c_wmap5_coadded_I_W ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_wmap5_coadded_I_W (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>WMAP-5 noise per observation for resolution 9 and 10 $I$ maps, to $\sim$0.1% uncertainty for differencing assembly (DA) $\text{W}$. See Smidt (2009) [<a class="ulink" href="https://arxiv.org/abs/0907.4051" target="_top">arXiv</a>].</p>
 <div class="refsect3">
 <a name="ncm-c-wmap5-coadded-I-W.returns" id="ncm-c-wmap5-coadded-I-W.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> $\sigma_0(I) = 6.538 \left[ \text{mK} \right]$.</p>
 </div>
 </div>
 <hr />
 <div class="refsect2">
-<a name="ncm-c-hubble-cte-wmap" id="ncm-c-hubble-cte-wmap"></a><h3>ncm_c_hubble_cte_wmap ()</h3>
+<a name="ncm-c-hubble-cte-planck6-base" id="ncm-c-hubble-cte-planck6-base"></a><h3>ncm_c_hubble_cte_planck6_base ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-ncm_c_hubble_cte_wmap (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>FIXME</p>
+ncm_c_hubble_cte_planck6_base (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Planck VI Hubble constant base-$\Lambda$CDM model TT,TE,EE$+$lowE$+$lensing final result. See <a class="link" href="refs.html#X2018arXiv180706209P">Planck Collaboration (2018)</a> [<a class="ulink" href="https://arxiv.org/abs/1807.06209" target="_top">arXiv</a>].</p>
 <div class="refsect3">
-<a name="ncm-c-hubble-cte-wmap.returns" id="ncm-c-hubble-cte-wmap.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<a name="ncm-c-hubble-cte-planck6-base.returns" id="ncm-c-hubble-cte-planck6-base.returns"></a><h4>Returns</h4>
+<p> $H_0 = 67.36 \left[\text{km}\,\text{s}^{-1}\,\text{Mpc}^{-1}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -3877,21 +3867,10 @@ ncm_c_hubble_cte_wmap (<em class="parameter"><code><span class="type">void</span
 <a name="ncm-c-hubble-cte-hst" id="ncm-c-hubble-cte-hst"></a><h3>ncm_c_hubble_cte_hst ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_hubble_cte_hst (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>FIXME</p>
+<p>HST Hubble constant final result. See <a class="link" href="refs.html#X2001ApJ...553...47F">Freedman (2001)</a> [<a class="ulink" href="https://arxiv.org/abs/astro-ph/0012376" target="_top">arXiv</a>].</p>
 <div class="refsect3">
 <a name="ncm-c-hubble-cte-hst.returns" id="ncm-c-hubble-cte-hst.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
-</div>
-</div>
-<hr />
-<div class="refsect2">
-<a name="ncm-c-hubble-cte-msa" id="ncm-c-hubble-cte-msa"></a><h3>ncm_c_hubble_cte_msa ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-ncm_c_hubble_cte_msa (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>FIXME</p>
-<div class="refsect3">
-<a name="ncm-c-hubble-cte-msa.returns" id="ncm-c-hubble-cte-msa.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> $H_0 = 72 \left[\text{km}\,\text{s}^{-1}\,\text{Mpc}^{-1}\right]$.</p>
 </div>
 </div>
 <hr />
@@ -3899,12 +3878,26 @@ ncm_c_hubble_cte_msa (<em class="parameter"><code><span class="type">void</span>
 <a name="ncm-c-hubble-radius-hm1-Mpc" id="ncm-c-hubble-radius-hm1-Mpc"></a><h3>ncm_c_hubble_radius_hm1_Mpc ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_hubble_radius_hm1_Mpc (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Hubble radius in units of $\mathsf{h}^{-1} \, \text{Mpc}$ defined as
+\begin{equation}
+  R_H  h^{-1} = \frac{c}{100 \mathsf{h} \, \text{km} \, \text{sec}^{-1} \, \text{Mpc}^{-1}} \, ,
+\end{equation}
+where $c$ is the speed of light (<a class="link" href="NcmC.html#ncm-c-c" title="ncm_c_c ()"><code class="function">ncm_c_c()</code></a>). Calculated using <a class="link" href="NcmC.html#ncm-c-c" title="ncm_c_c ()"><code class="function">ncm_c_c()</code></a> $/$ $10^{5}$.</p>
+<div class="refsect3">
+<a name="ncm-c-hubble-radius-hm1-Mpc.returns" id="ncm-c-hubble-radius-hm1-Mpc.returns"></a><h4>Returns</h4>
+<p> Hubble radius $R_H \mathsf{h}^{-1} \left[\text{Mpc}\right]$.</p>
+</div>
 </div>
 <hr />
 <div class="refsect2">
 <a name="ncm-c-hubble-radius-hm1-planck" id="ncm-c-hubble-radius-hm1-planck"></a><h3>ncm_c_hubble_radius_hm1_planck ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_hubble_radius_hm1_planck (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Hubble radius in units of $\mathsf{h}^{-1} \, l_{\text{p}}$. Calculated using <a class="link" href="NcmC.html#ncm-c-hubble-radius-hm1-Mpc" title="ncm_c_hubble_radius_hm1_Mpc ()"><code class="function">ncm_c_hubble_radius_hm1_Mpc()</code></a> $\times$ <a class="link" href="NcmC.html#ncm-c-Mpc" title="ncm_c_Mpc ()"><code class="function">ncm_c_Mpc()</code></a> $/$ <a class="link" href="NcmC.html#ncm-c-planck-length" title="ncm_c_planck_length ()"><code class="function">ncm_c_planck_length()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-c-hubble-radius-hm1-planck.returns" id="ncm-c-hubble-radius-hm1-planck.returns"></a><h4>Returns</h4>
+<p> Hubble radius $R_H \mathsf{h}^{-1} \left[l_\text{p}\right]$.</p>
+</div>
 </div>
 <hr />
 <div class="refsect2">
@@ -3915,7 +3908,7 @@ ncm_c_crit_density_h2 (<em class="parameter"><code><span class="type">void</span
 \begin{equation}
 \rho_{\mathrm{crit}0} = \frac{3 c^2 H_0^2}{8\pi G},
 \end{equation}
-where $G$ is the gravitational constant (<a class="link" href="NcmC.html#ncm-c-G" title="ncm_c_G ()"><code class="function">ncm_c_G()</code></a>), $c$ is the speed of light 
+where $G$ is the gravitational constant (<a class="link" href="NcmC.html#ncm-c-G" title="ncm_c_G ()"><code class="function">ncm_c_G()</code></a>), $c$ is the speed of light
 (<a class="link" href="NcmC.html#ncm-c-c" title="ncm_c_c ()"><code class="function">ncm_c_c()</code></a>) and $H_0$ is the Hubble parameter,
 $$H_0 = 100 \times \mathsf{h} \,\left[\text{km}\,\text{s}^{-1}\,\text{Mpc}^{-1}\right].$$</p>
 <div class="refsect3">
@@ -3928,6 +3921,11 @@ $$H_0 = 100 \times \mathsf{h} \,\left[\text{km}\,\text{s}^{-1}\,\text{Mpc}^{-1}\
 <a name="ncm-c-crit-mass-density-h2" id="ncm-c-crit-mass-density-h2"></a><h3>ncm_c_crit_mass_density_h2 ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_crit_mass_density_h2 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>This function computes the critical mass density over $\mathsf{h}^2 \times c^2$.</p>
+<div class="refsect3">
+<a name="ncm-c-crit-mass-density-h2.returns" id="ncm-c-crit-mass-density-h2.returns"></a><h4>Returns</h4>
+<p> Critical mass density over $\mathsf{h}^2 \times c^2$, $$\frac{\rho_{\mathrm{crit}0}}{c^2\mathsf{h}^2} \,\left[\frac{\text{kg}}{\text{m}^3}\right].$$</p>
+</div>
 </div>
 <hr />
 <div class="refsect2">
@@ -3946,10 +3944,10 @@ ncm_c_crit_mass_density_h2_solar_mass_Mpc3
 <a name="ncm-c-crit-number-density-p" id="ncm-c-crit-number-density-p"></a><h3>ncm_c_crit_number_density_p ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_crit_number_density_p (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>FIXME</p>
+<p>This function computes the proton number density in units of its rest energy. Calculated using <a class="link" href="NcmC.html#ncm-c-crit-density-h2" title="ncm_c_crit_density_h2 ()"><code class="function">ncm_c_crit_density_h2()</code></a> $/$ <a class="link" href="NcmC.html#ncm-c-rest-energy-p" title="ncm_c_rest_energy_p ()"><code class="function">ncm_c_rest_energy_p()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-crit-number-density-p.returns" id="ncm-c-crit-number-density-p.returns"></a><h4>Returns</h4>
-<p> Critical proton number density in ... units.</p>
+<p> Critical proton number density in units of its rest mass.</p>
 </div>
 </div>
 <hr />
@@ -3957,10 +3955,10 @@ ncm_c_crit_number_density_p (<em class="parameter"><code><span class="type">void
 <a name="ncm-c-crit-number-density-n" id="ncm-c-crit-number-density-n"></a><h3>ncm_c_crit_number_density_n ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_crit_number_density_n (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>FIXME</p>
+<p>This function computes the neutron number density in units of its rest energy. Calculated using <a class="link" href="NcmC.html#ncm-c-crit-density-h2" title="ncm_c_crit_density_h2 ()"><code class="function">ncm_c_crit_density_h2()</code></a> $/$ <a class="link" href="NcmC.html#ncm-c-rest-energy-n" title="ncm_c_rest_energy_n ()"><code class="function">ncm_c_rest_energy_n()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-crit-number-density-n.returns" id="ncm-c-crit-number-density-n.returns"></a><h4>Returns</h4>
-<p> Critical neutron number density in ... units.</p>
+<p> Critical neutron number density in units of its rest mass.</p>
 </div>
 </div>
 <hr />
@@ -3968,10 +3966,14 @@ ncm_c_crit_number_density_n (<em class="parameter"><code><span class="type">void
 <a name="ncm-c-blackbody-energy-density" id="ncm-c-blackbody-energy-density"></a><h3>ncm_c_blackbody_energy_density ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_blackbody_energy_density (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>FIXME</p>
+<p>This functions returns the black body energy density divided by $T^4$. Defined as
+\begin{equation}
+  \frac{\rho_{\text{BL}}}{T^4} = \frac{8\pi^2k_{\text{b}}^4}{15 \left( hc \right)^3},
+\end{equation}
+where $\rho_{\text{BL}}$ is the black body energy density, $T$ is the temperature, $k_{\text{b}}$ is the Boltzmann constant (<a class="link" href="NcmC.html#ncm-c-kb" title="ncm_c_kb ()"><code class="function">ncm_c_kb()</code></a>), $h$ is the Planck constant (<a class="link" href="NcmC.html#ncm-c-h" title="ncm_c_h ()"><code class="function">ncm_c_h()</code></a>) and $c$ is the speed of light (<a class="link" href="NcmC.html#ncm-c-c" title="ncm_c_c ()"><code class="function">ncm_c_c()</code></a>).</p>
 <div class="refsect3">
 <a name="ncm-c-blackbody-energy-density.returns" id="ncm-c-blackbody-energy-density.returns"></a><h4>Returns</h4>
-<p> Blackbody energy density in ... units.</p>
+<p> Blackbody energy density in $\left[ \text{J} \, \text{m}^{-3} \, \text{K}^{-4}  \right]$units.</p>
 </div>
 </div>
 <hr />
@@ -3979,50 +3981,15 @@ ncm_c_blackbody_energy_density (<em class="parameter"><code><span class="type">v
 <a name="ncm-c-blackbody-per-crit-density-h2" id="ncm-c-blackbody-per-crit-density-h2"></a><h3>ncm_c_blackbody_per_crit_density_h2 ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_c_blackbody_per_crit_density_h2 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>FIXME</p>
+<p>This functions returns <a class="link" href="NcmC.html#ncm-c-blackbody-energy-density" title="ncm_c_blackbody_energy_density ()"><code class="function">ncm_c_blackbody_energy_density()</code></a> $/$ <a class="link" href="NcmC.html#ncm-c-crit-density-h2" title="ncm_c_crit_density_h2 ()"><code class="function">ncm_c_crit_density_h2()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-c-blackbody-per-crit-density-h2.returns" id="ncm-c-blackbody-per-crit-density-h2.returns"></a><h4>Returns</h4>
-<p> Blackbody energy density over critical density times $h^2$.</p>
+<p> Blackbody energy density over critical density times $\mathsf{h}^2$.</p>
 </div>
 </div>
-<hr />
-<div class="refsect2">
-<a name="ncm-c-radiation-temp-to-h2omega-r" id="ncm-c-radiation-temp-to-h2omega-r"></a><h3>ncm_c_radiation_temp_to_h2omega_r ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-ncm_c_radiation_temp_to_h2omega_r (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> T</code></em>);</pre>
-</div>
-<hr />
-<div class="refsect2">
-<a name="ncm-c-radiation-h2Omega-r0-to-temp" id="ncm-c-radiation-h2Omega-r0-to-temp"></a><h3>ncm_c_radiation_h2Omega_r0_to_temp ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-ncm_c_radiation_h2Omega_r0_to_temp (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> omr</code></em>);</pre>
-<p>FIXME</p>
-<div class="refsect3">
-<a name="ncm-c-radiation-h2Omega-r0-to-temp.parameters" id="ncm-c-radiation-h2Omega-r0-to-temp.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>omr</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="ncm-c-radiation-h2Omega-r0-to-temp.returns" id="ncm-c-radiation-h2Omega-r0-to-temp.returns"></a><h4>Returns</h4>
-<p> .</p>
-</div>
-</div>
-</div>
-<div class="refsect1">
-<a name="NcmC.other_details" id="NcmC.other_details"></a><h2>Types and Values</h2>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

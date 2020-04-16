@@ -8,8 +8,8 @@
 <link rel="home" href="index.html" title="NumCosmo Reference Manual" />
 <link rel="up" href="ch02s07.html" title="Power spectrum functions" />
 <link rel="prev" href="NcmPowspec.html" title="NcmPowspec" />
-<link rel="next" href="ch02s08.html" title="Harmonic Oscillator" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<link rel="next" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -36,7 +36,7 @@
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
 <td><a accesskey="u" href="ch02s07.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
 <td><a accesskey="p" href="NcmPowspec.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
-<td><a accesskey="n" href="ch02s08.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+<td><a accesskey="n" href="NcmPowspecCorr3d.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcmPowspecFilter" id="NcmPowspecFilter"></a><div class="titlepage"></div>
@@ -51,8 +51,8 @@
 <a name="NcmPowspecFilter.functions" id="NcmPowspecFilter.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -268,7 +268,7 @@
 <td class="property_type">
 <a class="link" href="NcmPowspec.html" title="NcmPowspec"><span class="type">NcmPowspec</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmPowspecFilter.html#NcmPowspecFilter--powerspectrum" title="The “powerspectrum” property">powerspectrum</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
@@ -302,8 +302,8 @@
 <a name="NcmPowspecFilter.other" id="NcmPowspecFilter.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -1171,7 +1171,8 @@ ncm_powspec_filter_volume_rm3 (<em class="parameter"><code><a class="link" href=
 <a name="NcmPowspecFilter.other_details" id="NcmPowspecFilter.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
 <a name="NcmPowspecFilterType" id="NcmPowspecFilterType"></a><h3>enum NcmPowspecFilterType</h3>
-<p>Filter type to apply to the power spectrum. 
+<p>Filter type to apply to the power spectrum.
+
 See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatwin2"><span class="type">NcmFftlogTophatwin2</span></a> and <a class="link" href="NcmFftlogGausswin2.html" title="NcmFftlogGausswin2"><span class="type">NcmFftlogGausswin2</span></a>, for the top-hat and Gaussian filters, respectively.</p>
 <div class="refsect3">
 <a name="NcmPowspecFilterType.members" id="NcmPowspecFilterType.members"></a><h4>Members</h4>
@@ -1185,14 +1186,14 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <tr>
 <td class="enum_member_name"><p><a name="NCM-POWSPEC-FILTER-TYPE-TOPHAT:CAPS" id="NCM-POWSPEC-FILTER-TYPE-TOPHAT:CAPS"></a>NCM_POWSPEC_FILTER_TYPE_TOPHAT</p></td>
 <td class="enum_member_description">
-<p>Apply the top-hat filter</p>
+<p>Apply the top-hat filter.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-POWSPEC-FILTER-TYPE-GAUSS:CAPS" id="NCM-POWSPEC-FILTER-TYPE-GAUSS:CAPS"></a>NCM_POWSPEC_FILTER_TYPE_GAUSS</p></td>
 <td class="enum_member_description">
-<p>Apply the Gaussian filter</p>
+<p>Apply the Gaussian filter.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1213,6 +1214,7 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <a name="NcmPowspecFilter--lnr0" id="NcmPowspecFilter--lnr0"></a><h3>The <code class="literal">“lnr0”</code> property</h3>
 <pre class="programlisting">  “lnr0”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Output center value.</p>
+<p>Owner: NcmPowspecFilter</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
@@ -1221,13 +1223,15 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <a name="NcmPowspecFilter--powerspectrum" id="NcmPowspecFilter--powerspectrum"></a><h3>The <code class="literal">“powerspectrum”</code> property</h3>
 <pre class="programlisting">  “powerspectrum”            <a class="link" href="NcmPowspec.html" title="NcmPowspec"><span class="type">NcmPowspec</span></a> *</pre>
 <p>NcmPowspec object.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmPowspecFilter</p>
+<p>Flags: Read / Write / Construct Only</p>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NcmPowspecFilter--reltol" id="NcmPowspecFilter--reltol"></a><h3>The <code class="literal">“reltol”</code> property</h3>
 <pre class="programlisting">  “reltol”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Relative tolerance for calibration.</p>
+<p>Owner: NcmPowspecFilter</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: [2.22045e-16,1]</p>
 <p>Default value: 0.001</p>
@@ -1237,6 +1241,7 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <a name="NcmPowspecFilter--reltol-z" id="NcmPowspecFilter--reltol-z"></a><h3>The <code class="literal">“reltol-z”</code> property</h3>
 <pre class="programlisting">  “reltol-z”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Relative tolerance for calibration in the redshift direction.</p>
+<p>Owner: NcmPowspecFilter</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: [2.22045e-16,1]</p>
 <p>Default value: 1e-06</p>
@@ -1246,6 +1251,7 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <a name="NcmPowspecFilter--type" id="NcmPowspecFilter--type"></a><h3>The <code class="literal">“type”</code> property</h3>
 <pre class="programlisting">  “type”                     <a class="link" href="NcmPowspecFilter.html#NcmPowspecFilterType" title="enum NcmPowspecFilterType"><span class="type">NcmPowspecFilterType</span></a></pre>
 <p>Filter type.</p>
+<p>Owner: NcmPowspecFilter</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: NCM_POWSPEC_FILTER_TYPE_TOPHAT</p>
 </div>
@@ -1254,6 +1260,7 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <a name="NcmPowspecFilter--zf" id="NcmPowspecFilter--zf"></a><h3>The <code class="literal">“zf”</code> property</h3>
 <pre class="programlisting">  “zf”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Output final time.</p>
+<p>Owner: NcmPowspecFilter</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 1</p>
 </div>
@@ -1262,12 +1269,13 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <a name="NcmPowspecFilter--zi" id="NcmPowspecFilter--zi"></a><h3>The <code class="literal">“zi”</code> property</h3>
 <pre class="programlisting">  “zi”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Output initial time.</p>
+<p>Owner: NcmPowspecFilter</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

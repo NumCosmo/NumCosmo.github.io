@@ -6,10 +6,10 @@
 <title>NcCBE: NumCosmo Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
 <link rel="home" href="index.html" title="NumCosmo Reference Manual" />
-<link rel="up" href="ch07.html#id-1.8.9" title="CLASS Backend" />
+<link rel="up" href="ch07s03.html" title="CLASS Backend" />
 <link rel="prev" href="NcCBEPrecision.html" title="NcCBEPrecision" />
 <link rel="next" href="NcHIPertBoltzmannCBE.html" title="NcHIPertBoltzmannCBE" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -34,7 +34,7 @@
                   <a href="#NcCBE.properties" class="shortcut">Properties</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
-<td><a accesskey="u" href="ch07.html#id-1.8.9"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="u" href="ch07s03.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
 <td><a accesskey="p" href="NcCBEPrecision.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
 <td><a accesskey="n" href="NcHIPertBoltzmannCBE.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
 </tr></table>
@@ -51,8 +51,8 @@
 <a name="NcCBE.functions" id="NcCBE.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -1562,7 +1562,7 @@ nc_cbe_get_matter_ps (<em class="parameter"><code><a class="link" href="NcCBE.ht
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_cbe_get_sigma8 (<em class="parameter"><code><a class="link" href="NcCBE.html" title="NcCBE"><span class="type">NcCBE</span></a> *cbe</code></em>);</pre>
 <p>Computes the value of $\sigma_8$ as computed by CLASS, usually with errors $\propto 10^{-4}$.
-For better precision use: <a class="link" href="NcPowspecML.html#nc-powspec-ml-sigma-R" title="nc_powspec_ml_sigma_R ()"><code class="function">nc_powspec_ml_sigma_R()</code></a> or <a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a>.</p>
+For better precision use: <a class="link" href="NcmPowspec.html#ncm-powspec-sigma-tophat-R" title="ncm_powspec_sigma_tophat_R ()"><code class="function">ncm_powspec_sigma_tophat_R()</code></a> or <a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a>.</p>
 <div class="refsect3">
 <a name="nc-cbe-get-sigma8.parameters" id="nc-cbe-get-sigma8.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1667,14 +1667,12 @@ nc_cbe_debug_test (<em class="parameter"><code><a class="link" href="NcCBE.html"
 </div>
 </div>
 <div class="refsect1">
-<a name="NcCBE.other_details" id="NcCBE.other_details"></a><h2>Types and Values</h2>
-</div>
-<div class="refsect1">
 <a name="NcCBE.property-details" id="NcCBE.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="NcCBE--calc-transfer" id="NcCBE--calc-transfer"></a><h3>The <code class="literal">“calc-transfer”</code> property</h3>
 <pre class="programlisting">  “calc-transfer”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Whether to calculate the transfer function.</p>
+<p>Owner: NcCBE</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: FALSE</p>
 </div>
@@ -1683,6 +1681,7 @@ nc_cbe_debug_test (<em class="parameter"><code><a class="link" href="NcCBE.html"
 <a name="NcCBE--matter-pk-maxk" id="NcCBE--matter-pk-maxk"></a><h3>The <code class="literal">“matter-pk-maxk”</code> property</h3>
 <pre class="programlisting">  “matter-pk-maxk”           <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Maximum mode k for matter Pk.</p>
+<p>Owner: NcCBE</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 1</p>
@@ -1692,6 +1691,7 @@ nc_cbe_debug_test (<em class="parameter"><code><a class="link" href="NcCBE.html"
 <a name="NcCBE--matter-pk-maxz" id="NcCBE--matter-pk-maxz"></a><h3>The <code class="literal">“matter-pk-maxz”</code> property</h3>
 <pre class="programlisting">  “matter-pk-maxz”           <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Maximum redshift for matter Pk.</p>
+<p>Owner: NcCBE</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
@@ -1701,6 +1701,7 @@ nc_cbe_debug_test (<em class="parameter"><code><a class="link" href="NcCBE.html"
 <a name="NcCBE--precision" id="NcCBE--precision"></a><h3>The <code class="literal">“precision”</code> property</h3>
 <pre class="programlisting">  “precision”                <a class="link" href="NcCBEPrecision.html" title="NcCBEPrecision"><span class="type">NcCBEPrecision</span></a> *</pre>
 <p>CLASS precision object.</p>
+<p>Owner: NcCBE</p>
 <p>Flags: Read / Write / Construct</p>
 </div>
 <hr />
@@ -1708,6 +1709,7 @@ nc_cbe_debug_test (<em class="parameter"><code><a class="link" href="NcCBE.html"
 <a name="NcCBE--scalar-lmax" id="NcCBE--scalar-lmax"></a><h3>The <code class="literal">“scalar-lmax”</code> property</h3>
 <pre class="programlisting">  “scalar-lmax”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Scalar modes l_max.</p>
+<p>Owner: NcCBE</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: 500</p>
 </div>
@@ -1716,6 +1718,7 @@ nc_cbe_debug_test (<em class="parameter"><code><a class="link" href="NcCBE.html"
 <a name="NcCBE--target-Cls" id="NcCBE--target-Cls"></a><h3>The <code class="literal">“target-Cls”</code> property</h3>
 <pre class="programlisting">  “target-Cls”               <a class="link" href="numcosmo-NcDataCMB.html#NcDataCMBDataType" title="enum NcDataCMBDataType"><span class="type">NcDataCMBDataType</span></a></pre>
 <p>Target Cls to calculate.</p>
+<p>Owner: NcCBE</p>
 <p>Flags: Read / Write / Construct</p>
 </div>
 <hr />
@@ -1723,6 +1726,7 @@ nc_cbe_debug_test (<em class="parameter"><code><a class="link" href="NcCBE.html"
 <a name="NcCBE--tensor-lmax" id="NcCBE--tensor-lmax"></a><h3>The <code class="literal">“tensor-lmax”</code> property</h3>
 <pre class="programlisting">  “tensor-lmax”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Tensor modes l_max.</p>
+<p>Owner: NcCBE</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: 500</p>
 </div>
@@ -1731,6 +1735,7 @@ nc_cbe_debug_test (<em class="parameter"><code><a class="link" href="NcCBE.html"
 <a name="NcCBE--use-lensed-Cls" id="NcCBE--use-lensed-Cls"></a><h3>The <code class="literal">“use-lensed-Cls”</code> property</h3>
 <pre class="programlisting">  “use-lensed-Cls”           <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Whether to use lensed Cls.</p>
+<p>Owner: NcCBE</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: FALSE</p>
 </div>
@@ -1739,6 +1744,7 @@ nc_cbe_debug_test (<em class="parameter"><code><a class="link" href="NcCBE.html"
 <a name="NcCBE--use-ppf" id="NcCBE--use-ppf"></a><h3>The <code class="literal">“use-ppf”</code> property</h3>
 <pre class="programlisting">  “use-ppf”                  <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Whether to use PPF.</p>
+<p>Owner: NcCBE</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: FALSE</p>
 </div>
@@ -1747,6 +1753,7 @@ nc_cbe_debug_test (<em class="parameter"><code><a class="link" href="NcCBE.html"
 <a name="NcCBE--use-tensor" id="NcCBE--use-tensor"></a><h3>The <code class="literal">“use-tensor”</code> property</h3>
 <pre class="programlisting">  “use-tensor”               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Whether to use tensor contributions.</p>
+<p>Owner: NcCBE</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: FALSE</p>
 </div>
@@ -1755,6 +1762,7 @@ nc_cbe_debug_test (<em class="parameter"><code><a class="link" href="NcCBE.html"
 <a name="NcCBE--use-thermodyn" id="NcCBE--use-thermodyn"></a><h3>The <code class="literal">“use-thermodyn”</code> property</h3>
 <pre class="programlisting">  “use-thermodyn”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Whether to use the thermodynamics module.</p>
+<p>Owner: NcCBE</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: FALSE</p>
 </div>
@@ -1763,6 +1771,7 @@ nc_cbe_debug_test (<em class="parameter"><code><a class="link" href="NcCBE.html"
 <a name="NcCBE--vector-lmax" id="NcCBE--vector-lmax"></a><h3>The <code class="literal">“vector-lmax”</code> property</h3>
 <pre class="programlisting">  “vector-lmax”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Vector modes l_max.</p>
+<p>Owner: NcCBE</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: 500</p>
 </div>
@@ -1771,12 +1780,13 @@ nc_cbe_debug_test (<em class="parameter"><code><a class="link" href="NcCBE.html"
 <a name="NcCBE--verbosity" id="NcCBE--verbosity"></a><h3>The <code class="literal">“verbosity”</code> property</h3>
 <pre class="programlisting">  “verbosity”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Verbosity.</p>
+<p>Owner: NcCBE</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: 0</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

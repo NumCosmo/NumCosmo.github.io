@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s05.html" title="Splines 1D" />
 <link rel="prev" href="numcosmo-NcmSplineFunc.html" title="NcmSplineFunc" />
 <link rel="next" href="ch02s06.html" title="Splines 2D" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -51,8 +51,8 @@
 <a name="NcmOdeSpline.functions" id="NcmOdeSpline.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -216,7 +216,7 @@
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
 <td class="property_name"><a class="link" href="NcmOdeSpline.html#NcmOdeSpline--dydx" title="The “dydx” property">dydx</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
@@ -266,8 +266,8 @@
 <a name="NcmOdeSpline.other" id="NcmOdeSpline.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -833,6 +833,7 @@ ncm_ode_spline_peek_spline (<em class="parameter"><code><a class="link" href="Nc
 <a name="NcmOdeSpline--abs" id="NcmOdeSpline--abs"></a><h3>The <code class="literal">“abs”</code> property</h3>
 <pre class="programlisting">  “abs”                      <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Absolute tolerance.</p>
+<p>Owner: NcmOdeSpline</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: [0,1]</p>
 <p>Default value: 0</p>
@@ -842,6 +843,7 @@ ncm_ode_spline_peek_spline (<em class="parameter"><code><a class="link" href="Nc
 <a name="NcmOdeSpline--auto-abstol" id="NcmOdeSpline--auto-abstol"></a><h3>The <code class="literal">“auto-abstol”</code> property</h3>
 <pre class="programlisting">  “auto-abstol”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Automatic abstol.</p>
+<p>Owner: NcmOdeSpline</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: FALSE</p>
 </div>
@@ -850,13 +852,15 @@ ncm_ode_spline_peek_spline (<em class="parameter"><code><a class="link" href="Nc
 <a name="NcmOdeSpline--dydx" id="NcmOdeSpline--dydx"></a><h3>The <code class="literal">“dydx”</code> property</h3>
 <pre class="programlisting">  “dydx”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
 <p>Pointer to the dydx function.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmOdeSpline</p>
+<p>Flags: Read / Write / Construct Only</p>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NcmOdeSpline--ini-step" id="NcmOdeSpline--ini-step"></a><h3>The <code class="literal">“ini-step”</code> property</h3>
 <pre class="programlisting">  “ini-step”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Integration initial step size.</p>
+<p>Owner: NcmOdeSpline</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
@@ -866,6 +870,7 @@ ncm_ode_spline_peek_spline (<em class="parameter"><code><a class="link" href="Nc
 <a name="NcmOdeSpline--reltol" id="NcmOdeSpline--reltol"></a><h3>The <code class="literal">“reltol”</code> property</h3>
 <pre class="programlisting">  “reltol”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Relative tolerance.</p>
+<p>Owner: NcmOdeSpline</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: [0,1]</p>
 <p>Default value: 1e-13</p>
@@ -875,6 +880,7 @@ ncm_ode_spline_peek_spline (<em class="parameter"><code><a class="link" href="Nc
 <a name="NcmOdeSpline--spline" id="NcmOdeSpline--spline"></a><h3>The <code class="literal">“spline”</code> property</h3>
 <pre class="programlisting">  “spline”                   <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *</pre>
 <p>Spline algorithm to be used.</p>
+<p>Owner: NcmOdeSpline</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr />
@@ -882,6 +888,7 @@ ncm_ode_spline_peek_spline (<em class="parameter"><code><a class="link" href="Nc
 <a name="NcmOdeSpline--stop-hnil" id="NcmOdeSpline--stop-hnil"></a><h3>The <code class="literal">“stop-hnil”</code> property</h3>
 <pre class="programlisting">  “stop-hnil”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Whether treat hnil as error.</p>
+<p>Owner: NcmOdeSpline</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: TRUE</p>
 </div>
@@ -890,6 +897,7 @@ ncm_ode_spline_peek_spline (<em class="parameter"><code><a class="link" href="Nc
 <a name="NcmOdeSpline--xf" id="NcmOdeSpline--xf"></a><h3>The <code class="literal">“xf”</code> property</h3>
 <pre class="programlisting">  “xf”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Final point.</p>
+<p>Owner: NcmOdeSpline</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
@@ -898,6 +906,7 @@ ncm_ode_spline_peek_spline (<em class="parameter"><code><a class="link" href="Nc
 <a name="NcmOdeSpline--xi" id="NcmOdeSpline--xi"></a><h3>The <code class="literal">“xi”</code> property</h3>
 <pre class="programlisting">  “xi”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Initial point.</p>
+<p>Owner: NcmOdeSpline</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
@@ -906,6 +915,7 @@ ncm_ode_spline_peek_spline (<em class="parameter"><code><a class="link" href="Nc
 <a name="NcmOdeSpline--yf" id="NcmOdeSpline--yf"></a><h3>The <code class="literal">“yf”</code> property</h3>
 <pre class="programlisting">  “yf”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Final Value.</p>
+<p>Owner: NcmOdeSpline</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
@@ -914,12 +924,13 @@ ncm_ode_spline_peek_spline (<em class="parameter"><code><a class="link" href="Nc
 <a name="NcmOdeSpline--yi" id="NcmOdeSpline--yi"></a><h3>The <code class="literal">“yi”</code> property</h3>
 <pre class="programlisting">  “yi”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Initial Value.</p>
+<p>Owner: NcmOdeSpline</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

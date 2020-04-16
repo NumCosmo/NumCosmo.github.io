@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s13.html" title="Statistical Analysis" />
 <link rel="prev" href="ch02s13.html" title="Statistical Analysis" />
 <link rel="next" href="NcmStatsDist1d.html" title="NcmStatsDist1d" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -51,8 +51,8 @@
 <a name="NcmStatsVec.functions" id="NcmStatsVec.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -452,17 +452,17 @@
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcmStatsVec.html#NcmStatsVec--length" title="The “length” property">length</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
 <td class="property_name"><a class="link" href="NcmStatsVec.html#NcmStatsVec--save-x" title="The “save-x” property">save-x</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a class="link" href="NcmStatsVec.html#NcmStatsVecType" title="enum NcmStatsVecType"><span class="type">NcmStatsVecType</span></a></td>
 <td class="property_name"><a class="link" href="NcmStatsVec.html#NcmStatsVec--type" title="The “type” property">type</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 </tbody>
 </table></div>
@@ -471,8 +471,8 @@
 <a name="NcmStatsVec.other" id="NcmStatsVec.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -535,22 +535,22 @@ $$Cov(x,y)_n = \frac{N(x,y)_n}{W^\text{bias}_{n}}.$$</p>
 14
 15
 16</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="comment">// Creates a new one dimensional NcmStatsVec to calculates mean and variance.</span>
-<span class="usertype">NcmStatsVec</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">svec </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="NcmStatsVec.html#ncm-stats-vec-new">ncm_stats_vec_new</a></span><span class="normal"> </span><span class="symbol">(</span><span class="number">1</span><span class="symbol">,</span><span class="normal"> <a href="NcmStatsVec.html#NCM-STATS-VEC-VAR:CAPS">NCM_STATS_VEC_VAR</a></span><span class="symbol">,</span><span class="normal"> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a></span><span class="symbol">);</span>
+        <td class="listing_code"><pre class="programlisting"><span class="c1">// Creates a new one dimensional NcmStatsVec to calculates mean and variance.</span>
+<span class="n">NcmStatsVec</span> <span class="o">*</span><span class="n">svec</span> <span class="o">=</span> <span class="n">ncm_stats_vec_new</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">NCM_STATS_VEC_VAR</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">);</span>
 
-<span class="comment">// Set and update three different values of the only random variable.</span>
-<span class="function"><a href="NcmStatsVec.html#ncm-stats-vec-set">ncm_stats_vec_set</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">svec</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">,</span><span class="normal"> </span><span class="number">1.0</span><span class="symbol">);</span>
-<span class="function"><a href="NcmStatsVec.html#ncm-stats-vec-update">ncm_stats_vec_update</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">svec</span><span class="symbol">);</span>
-<span class="function"><a href="NcmStatsVec.html#ncm-stats-vec-set">ncm_stats_vec_set</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">svec</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">,</span><span class="normal"> </span><span class="number">2.0</span><span class="symbol">);</span>
-<span class="function"><a href="NcmStatsVec.html#ncm-stats-vec-update">ncm_stats_vec_update</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">svec</span><span class="symbol">);</span>
-<span class="function"><a href="NcmStatsVec.html#ncm-stats-vec-set">ncm_stats_vec_set</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">svec</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">,</span><span class="normal"> </span><span class="number">1.5</span><span class="symbol">);</span>
-<span class="function"><a href="NcmStatsVec.html#ncm-stats-vec-update">ncm_stats_vec_update</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">svec</span><span class="symbol">);</span>
+<span class="c1">// Set and update three different values of the only random variable.</span>
+<span class="n">ncm_stats_vec_set</span> <span class="p">(</span><span class="n">svec</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">);</span>
+<span class="n">ncm_stats_vec_update</span> <span class="p">(</span><span class="n">svec</span><span class="p">);</span>
+<span class="n">ncm_stats_vec_set</span> <span class="p">(</span><span class="n">svec</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">);</span>
+<span class="n">ncm_stats_vec_update</span> <span class="p">(</span><span class="n">svec</span><span class="p">);</span>
+<span class="n">ncm_stats_vec_set</span> <span class="p">(</span><span class="n">svec</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">);</span>
+<span class="n">ncm_stats_vec_update</span> <span class="p">(</span><span class="n">svec</span><span class="p">);</span>
 
-<span class="cbracket">{</span>
-<span class="normal">  </span><span class="usertype">gdouble</span><span class="normal"> mean </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="NcmStatsVec.html#ncm-stats-vec-get-mean">ncm_stats_vec_get_mean</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">svec</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">);</span>
-<span class="normal">  </span><span class="usertype">gdouble</span><span class="normal"> var </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="NcmStatsVec.html#ncm-stats-vec-get-var">ncm_stats_vec_get_var</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">svec</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">);</span>
-<span class="normal">  </span><span class="symbol">...</span>
-<span class="cbracket">}</span></pre></td>
+<span class="p">{</span>
+  <span class="n">gdouble</span> <span class="n">mean</span> <span class="o">=</span> <span class="n">ncm_stats_vec_get_mean</span> <span class="p">(</span><span class="n">svec</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="n">gdouble</span> <span class="n">var</span> <span class="o">=</span> <span class="n">ncm_stats_vec_get_var</span> <span class="p">(</span><span class="n">svec</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="p">...</span>
+<span class="p">}</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -2482,7 +2482,8 @@ function fails if the object was not created with save_x == TRUE;</p>
 <a name="NcmStatsVec--length" id="NcmStatsVec--length"></a><h3>The <code class="literal">“length”</code> property</h3>
 <pre class="programlisting">  “length”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Number of random variables.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmStatsVec</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 1</p>
 </div>
@@ -2491,7 +2492,8 @@ function fails if the object was not created with save_x == TRUE;</p>
 <a name="NcmStatsVec--save-x" id="NcmStatsVec--save-x"></a><h3>The <code class="literal">“save-x”</code> property</h3>
 <pre class="programlisting">  “save-x”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Whenever to save each vector x through each interation.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmStatsVec</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Default value: FALSE</p>
 </div>
 <hr />
@@ -2499,12 +2501,13 @@ function fails if the object was not created with save_x == TRUE;</p>
 <a name="NcmStatsVec--type" id="NcmStatsVec--type"></a><h3>The <code class="literal">“type”</code> property</h3>
 <pre class="programlisting">  “type”                     <a class="link" href="NcmStatsVec.html#NcmStatsVecType" title="enum NcmStatsVecType"><span class="type">NcmStatsVecType</span></a></pre>
 <p>The statistics to be calculated.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmStatsVec</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Default value: NCM_STATS_VEC_MEAN</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

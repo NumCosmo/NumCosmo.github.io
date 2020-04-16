@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s13.html" title="Statistical Analysis" />
 <link rel="prev" href="NcmFitState.html" title="NcmFitState" />
 <link rel="next" href="NcmFitNLOpt.html" title="NLopt Interface Object" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -51,8 +51,8 @@
 <a name="NcmFit.functions" id="NcmFit.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -875,7 +875,7 @@
 <td class="property_type">
 <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmFit.html#NcmFit--likelihood" title="The “likelihood” property">likelihood</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
@@ -896,7 +896,7 @@
 <td class="property_type">
 <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmFit.html#NcmFit--mset" title="The “mset” property">mset</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
@@ -907,7 +907,7 @@
 <td class="property_type">
 <a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmFit.html#NcmFit--state" title="The “state” property">state</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type">
@@ -922,8 +922,8 @@
 <a name="NcmFit.other" id="NcmFit.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -4212,6 +4212,7 @@ ncm_fit_function_cov (<em class="parameter"><code><a class="link" href="NcmFit.h
 <a name="NcmFit--equality-constraints" id="NcmFit--equality-constraints"></a><h3>The <code class="literal">“equality-constraints”</code> property</h3>
 <pre class="programlisting">  “equality-constraints”     <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</pre>
 <p>Equality constraints array.</p>
+<p>Owner: NcmFit</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr />
@@ -4219,6 +4220,7 @@ ncm_fit_function_cov (<em class="parameter"><code><a class="link" href="NcmFit.h
 <a name="NcmFit--equality-constraints-tot" id="NcmFit--equality-constraints-tot"></a><h3>The <code class="literal">“equality-constraints-tot”</code> property</h3>
 <pre class="programlisting">  “equality-constraints-tot” <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
 <p>Equality constraints tolerance.</p>
+<p>Owner: NcmFit</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr />
@@ -4226,6 +4228,7 @@ ncm_fit_function_cov (<em class="parameter"><code><a class="link" href="NcmFit.h
 <a name="NcmFit--grad-type" id="NcmFit--grad-type"></a><h3>The <code class="literal">“grad-type”</code> property</h3>
 <pre class="programlisting">  “grad-type”                <a class="link" href="NcmFit.html#NcmFitGradType" title="enum NcmFitGradType"><span class="type">NcmFitGradType</span></a></pre>
 <p>Differentiation method.</p>
+<p>Owner: NcmFit</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: NCM_FIT_GRAD_NUMDIFF_FORWARD</p>
 </div>
@@ -4234,6 +4237,7 @@ ncm_fit_function_cov (<em class="parameter"><code><a class="link" href="NcmFit.h
 <a name="NcmFit--inequality-constraints" id="NcmFit--inequality-constraints"></a><h3>The <code class="literal">“inequality-constraints”</code> property</h3>
 <pre class="programlisting">  “inequality-constraints”   <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</pre>
 <p>Inequality constraints array.</p>
+<p>Owner: NcmFit</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr />
@@ -4241,6 +4245,7 @@ ncm_fit_function_cov (<em class="parameter"><code><a class="link" href="NcmFit.h
 <a name="NcmFit--inequality-constraints-tot" id="NcmFit--inequality-constraints-tot"></a><h3>The <code class="literal">“inequality-constraints-tot”</code> property</h3>
 <pre class="programlisting">  “inequality-constraints-tot” <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
 <p>Inequality constraints tolerance.</p>
+<p>Owner: NcmFit</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr />
@@ -4248,13 +4253,15 @@ ncm_fit_function_cov (<em class="parameter"><code><a class="link" href="NcmFit.h
 <a name="NcmFit--likelihood" id="NcmFit--likelihood"></a><h3>The <code class="literal">“likelihood”</code> property</h3>
 <pre class="programlisting">  “likelihood”               <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *</pre>
 <p>Likelihood object.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmFit</p>
+<p>Flags: Read / Write / Construct Only</p>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NcmFit--m2lnL-abstol" id="NcmFit--m2lnL-abstol"></a><h3>The <code class="literal">“m2lnL-abstol”</code> property</h3>
 <pre class="programlisting">  “m2lnL-abstol”             <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Absolute tolarence in m2lnL.</p>
+<p>Owner: NcmFit</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
@@ -4264,6 +4271,7 @@ ncm_fit_function_cov (<em class="parameter"><code><a class="link" href="NcmFit.h
 <a name="NcmFit--m2lnL-reltol" id="NcmFit--m2lnL-reltol"></a><h3>The <code class="literal">“m2lnL-reltol”</code> property</h3>
 <pre class="programlisting">  “m2lnL-reltol”             <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Relative tolarence in m2lnL.</p>
+<p>Owner: NcmFit</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 1e-08</p>
@@ -4273,6 +4281,7 @@ ncm_fit_function_cov (<em class="parameter"><code><a class="link" href="NcmFit.h
 <a name="NcmFit--maxiter" id="NcmFit--maxiter"></a><h3>The <code class="literal">“maxiter”</code> property</h3>
 <pre class="programlisting">  “maxiter”                  <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Maximum number of interations.</p>
+<p>Owner: NcmFit</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: 100000</p>
 </div>
@@ -4281,13 +4290,15 @@ ncm_fit_function_cov (<em class="parameter"><code><a class="link" href="NcmFit.h
 <a name="NcmFit--mset" id="NcmFit--mset"></a><h3>The <code class="literal">“mset”</code> property</h3>
 <pre class="programlisting">  “mset”                     <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *</pre>
 <p>Model set object.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmFit</p>
+<p>Flags: Read / Write / Construct Only</p>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NcmFit--params-reltol" id="NcmFit--params-reltol"></a><h3>The <code class="literal">“params-reltol”</code> property</h3>
 <pre class="programlisting">  “params-reltol”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Relative tolarence in fitted parameters.</p>
+<p>Owner: NcmFit</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 1e-05</p>
@@ -4297,18 +4308,20 @@ ncm_fit_function_cov (<em class="parameter"><code><a class="link" href="NcmFit.h
 <a name="NcmFit--state" id="NcmFit--state"></a><h3>The <code class="literal">“state”</code> property</h3>
 <pre class="programlisting">  “state”                    <a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> *</pre>
 <p>Fit state object.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmFit</p>
+<p>Flags: Read / Write / Construct Only</p>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NcmFit--sub-fit" id="NcmFit--sub-fit"></a><h3>The <code class="literal">“sub-fit”</code> property</h3>
 <pre class="programlisting">  “sub-fit”                  <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *</pre>
 <p>Subsidiary fit.</p>
+<p>Owner: NcmFit</p>
 <p>Flags: Read / Write</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

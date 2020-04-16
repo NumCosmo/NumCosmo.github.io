@@ -202,6 +202,8 @@ export NUMCOSMO_DIR=$HOME/cosmology/NumCosmo
 export NUMCOSMO_BUILD_DIR=$HOME/cosmology/NumCosmo
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${NUMCOSMO_BUILD_DIR}/numcosmo/.libs/"
 export NUMCOSMO_DATA_DIR="${NUMCOSMO_DIR}"
+export LIBRARY_PATH="$LIBRARY_PATH:${NUMCOSMO_BUILD_DIR}/numcosmo/.libs"
+export CPATH="$CPATH:${NUMCOSMO_DIR}:${NUMCOSMO_DIR}/numcosmo:${NUMCOSMO_BUILD_DIR}:${NUMCOSMO_BUILD_DIR}/numcosmo"
 export GI_TYPELIB_PATH="${GI_TYPELIB_PATH}:${NUMCOSMO_BUILD_DIR}/numcosmo"
 ```
 

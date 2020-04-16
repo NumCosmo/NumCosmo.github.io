@@ -9,7 +9,7 @@
 <link rel="up" href="ch06.html" title="Cosmological Calculators" />
 <link rel="prev" href="NcHIReion.html" title="NcHIReion" />
 <link rel="next" href="NcHIReionCambReparamTau.html" title="NcHIReionCambReparamTau" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -51,8 +51,8 @@
 <a name="NcHIReionCamb.functions" id="NcHIReionCamb.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -146,13 +146,13 @@
 <a name="NcHIReionCamb.other" id="NcHIReionCamb.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody>
 <tr>
 <td class="datatype_keyword">enum</td>
-<td class="function_name"><a class="link" href="NcHIReionCamb.html#NcHIReionCambParams" title="enum NcHIReionCambParams">NcHIReionCambParams</a></td>
+<td class="function_name"><a class="link" href="NcHIReionCamb.html#NcHIReionCambSParams" title="enum NcHIReionCambSParams">NcHIReionCambSParams</a></td>
 </tr>
 <tr>
 <td class="define_keyword">#define</td>
@@ -180,7 +180,7 @@
 <div class="refsect1">
 <a name="NcHIReionCamb.object-hierarchy" id="NcHIReionCamb.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
-    <span class="lineart">╰──</span> NcHIReionCambParams
+    <span class="lineart">╰──</span> NcHIReionCambSParams
     <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmModel.html" title="NcmModel">NcmModel</a>
         <span class="lineart">╰──</span> <a class="link" href="NcHIReion.html" title="NcHIReion">NcHIReion</a>
@@ -318,10 +318,10 @@ nc_hireion_camb_z_to_tau (<em class="parameter"><code><a class="link" href="NcHI
 <div class="refsect1">
 <a name="NcHIReionCamb.other_details" id="NcHIReionCamb.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
-<a name="NcHIReionCambParams" id="NcHIReionCambParams"></a><h3>enum NcHIReionCambParams</h3>
+<a name="NcHIReionCambSParams" id="NcHIReionCambSParams"></a><h3>enum NcHIReionCambSParams</h3>
 <p>FIXME</p>
 <div class="refsect3">
-<a name="NcHIReionCambParams.members" id="NcHIReionCambParams.members"></a><h4>Members</h4>
+<a name="NcHIReionCambSParams.members" id="NcHIReionCambSParams.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name" />
@@ -384,6 +384,7 @@ nc_hireion_camb_z_to_tau (<em class="parameter"><code><a class="link" href="NcHI
 <a name="NcHIReionCamb--HII-HeII-reion-delta" id="NcHIReionCamb--HII-HeII-reion-delta"></a><h3>The <code class="literal">“HII-HeII-reion-delta”</code> property</h3>
 <pre class="programlisting">  “HII-HeII-reion-delta”     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Window size for HII and HeII reionization.</p>
+<p>Owner: NcHIReionCamb</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0.5</p>
@@ -393,6 +394,7 @@ nc_hireion_camb_z_to_tau (<em class="parameter"><code><a class="link" href="NcHI
 <a name="NcHIReionCamb--HII-HeII-reion-exponent" id="NcHIReionCamb--HII-HeII-reion-exponent"></a><h3>The <code class="literal">“HII-HeII-reion-exponent”</code> property</h3>
 <pre class="programlisting">  “HII-HeII-reion-exponent”  <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Exponent for HII and HeII reionization transition.</p>
+<p>Owner: NcHIReionCamb</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 1.5</p>
@@ -402,6 +404,7 @@ nc_hireion_camb_z_to_tau (<em class="parameter"><code><a class="link" href="NcHI
 <a name="NcHIReionCamb--HeII-reionized" id="NcHIReionCamb--HeII-reionized"></a><h3>The <code class="literal">“HeII-reionized”</code> property</h3>
 <pre class="programlisting">  “HeII-reionized”           <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Whether HeIII is reionized.</p>
+<p>Owner: NcHIReionCamb</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: TRUE</p>
 </div>
@@ -410,6 +413,7 @@ nc_hireion_camb_z_to_tau (<em class="parameter"><code><a class="link" href="NcHI
 <a name="NcHIReionCamb--HeIII-reion-delta" id="NcHIReionCamb--HeIII-reion-delta"></a><h3>The <code class="literal">“HeIII-reion-delta”</code> property</h3>
 <pre class="programlisting">  “HeIII-reion-delta”        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Window size for HeIII reionization.</p>
+<p>Owner: NcHIReionCamb</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0.5</p>
@@ -419,6 +423,7 @@ nc_hireion_camb_z_to_tau (<em class="parameter"><code><a class="link" href="NcHI
 <a name="NcHIReionCamb--z-He-re" id="NcHIReionCamb--z-He-re"></a><h3>The <code class="literal">“z-He-re”</code> property</h3>
 <pre class="programlisting">  “z-He-re”                  <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>z^\mathrm{He}_\mathrm{re}.</p>
+<p>Owner: NcHIReionCamb</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 3.5</p>
 </div>
@@ -427,6 +432,7 @@ nc_hireion_camb_z_to_tau (<em class="parameter"><code><a class="link" href="NcHI
 <a name="NcHIReionCamb--z-He-re-fit" id="NcHIReionCamb--z-He-re-fit"></a><h3>The <code class="literal">“z-He-re-fit”</code> property</h3>
 <pre class="programlisting">  “z-He-re-fit”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>z^\mathrm{He}_\mathrm{re}:fit.</p>
+<p>Owner: NcHIReionCamb</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -435,6 +441,7 @@ nc_hireion_camb_z_to_tau (<em class="parameter"><code><a class="link" href="NcHI
 <a name="NcHIReionCamb--z-re" id="NcHIReionCamb--z-re"></a><h3>The <code class="literal">“z-re”</code> property</h3>
 <pre class="programlisting">  “z-re”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>z_\mathrm{re}.</p>
+<p>Owner: NcHIReionCamb</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 13</p>
 </div>
@@ -443,12 +450,13 @@ nc_hireion_camb_z_to_tau (<em class="parameter"><code><a class="link" href="NcHI
 <a name="NcHIReionCamb--z-re-fit" id="NcHIReionCamb--z-re-fit"></a><h3>The <code class="literal">“z-re-fit”</code> property</h3>
 <pre class="programlisting">  “z-re-fit”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>z_\mathrm{re}:fit.</p>
+<p>Owner: NcHIReionCamb</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

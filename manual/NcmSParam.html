@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s10.html" title="Models and Parameters" />
 <link rel="prev" href="NcmModel.html" title="NcmModel" />
 <link rel="next" href="NcmVParam.html" title="NcmVParam" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -51,8 +51,8 @@
 <a name="NcmSParam.functions" id="NcmSParam.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -257,7 +257,7 @@
 <td class="property_type">
 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmSParam.html#NcmSParam--name" title="The “name” property">name</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
@@ -268,7 +268,7 @@
 <td class="property_type">
 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmSParam.html#NcmSParam--symbol" title="The “symbol” property">symbol</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
@@ -282,8 +282,8 @@
 <a name="NcmSParam.other" id="NcmSParam.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody><tr>
 <td class="datatype_keyword">enum</td>
@@ -948,9 +948,11 @@ ncm_sparam_get_fit_type (<em class="parameter"><code>const <a class="link" href=
 <div class="refsect2">
 <a name="NcmParamType" id="NcmParamType"></a><h3>enum NcmParamType</h3>
 <p>NcmParamType indicates if the parameter must be fitted, <em class="parameter"><code>NCM_PARAM_TYPE_FREE</code></em>
-, 
+,
+
 or if it remains fixed, <em class="parameter"><code>NCM_PARAM_TYPE_FIXED</code></em>
-, when a statistical analysis is 
+, when a statistical analysis is
+
 carried out.</p>
 <div class="refsect3">
 <a name="NcmParamType.members" id="NcmParamType.members"></a><h4>Members</h4>
@@ -986,6 +988,7 @@ carried out.</p>
 <a name="NcmSParam--absolute-tolerance" id="NcmSParam--absolute-tolerance"></a><h3>The <code class="literal">“absolute-tolerance”</code> property</h3>
 <pre class="programlisting">  “absolute-tolerance”       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Absolute tolerance, whose value is restricted to [0, G_MAXDOUBLE], is the size of the error used by <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a>.</p>
+<p>Owner: NcmSParam</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
@@ -995,6 +998,7 @@ carried out.</p>
 <a name="NcmSParam--default-value" id="NcmSParam--default-value"></a><h3>The <code class="literal">“default-value”</code> property</h3>
 <pre class="programlisting">  “default-value”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Parameter's default value.</p>
+<p>Owner: NcmSParam</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
@@ -1003,6 +1007,7 @@ carried out.</p>
 <a name="NcmSParam--fit-type" id="NcmSParam--fit-type"></a><h3>The <code class="literal">“fit-type”</code> property</h3>
 <pre class="programlisting">  “fit-type”                 <a class="link" href="NcmSParam.html#NcmParamType" title="enum NcmParamType"><span class="type">NcmParamType</span></a></pre>
 <p>Parameter's fit type: FIXED or FREE.</p>
+<p>Owner: NcmSParam</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NCM_PARAM_TYPE_FREE</p>
 </div>
@@ -1011,6 +1016,7 @@ carried out.</p>
 <a name="NcmSParam--lower-bound" id="NcmSParam--lower-bound"></a><h3>The <code class="literal">“lower-bound”</code> property</h3>
 <pre class="programlisting">  “lower-bound”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Lower parameter threshold whose value is restricted to [-G_MAXDOUBLE, G_MAXDOUBLE].</p>
+<p>Owner: NcmSParam</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
@@ -1019,7 +1025,8 @@ carried out.</p>
 <a name="NcmSParam--name" id="NcmSParam--name"></a><h3>The <code class="literal">“name”</code> property</h3>
 <pre class="programlisting">  “name”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
 <p>The parameter' s name must be a string written using only ASCII and -.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmSParam</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Default value: NULL</p>
 </div>
 <hr />
@@ -1027,6 +1034,7 @@ carried out.</p>
 <a name="NcmSParam--scale" id="NcmSParam--scale"></a><h3>The <code class="literal">“scale”</code> property</h3>
 <pre class="programlisting">  “scale”                    <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Scale, whose value is restricted to [0, G_MAXDOUBLE], is the step used by <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> to increment the value of the parameter.</p>
+<p>Owner: NcmSParam</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
@@ -1036,7 +1044,8 @@ carried out.</p>
 <a name="NcmSParam--symbol" id="NcmSParam--symbol"></a><h3>The <code class="literal">“symbol”</code> property</h3>
 <pre class="programlisting">  “symbol”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
 <p>Parameter's name written in a usual form (including latex).</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmSParam</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Default value: NULL</p>
 </div>
 <hr />
@@ -1044,12 +1053,13 @@ carried out.</p>
 <a name="NcmSParam--upper-bound" id="NcmSParam--upper-bound"></a><h3>The <code class="literal">“upper-bound”</code> property</h3>
 <pre class="programlisting">  “upper-bound”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Upper parameter threshold whose value is restricted to [-G_MAXDOUBLE, G_MAXDOUBLE].</p>
+<p>Owner: NcmSParam</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

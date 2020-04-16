@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s13.html" title="Statistical Analysis" />
 <link rel="prev" href="NcmFitMCMC.html" title="NcmFitMCMC" />
 <link rel="next" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -51,8 +51,8 @@
 <a name="NcmFitESMCMC.functions" id="NcmFitESMCMC.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -351,13 +351,23 @@
 <td class="property_type">
 <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--fit" title="The “fit” property">fit</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type">
 <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--function-array" title="The “function-array” property">function-array</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--intermediary-log" title="The “intermediary-log” property">intermediary-log</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--log-time-interval" title="The “log-time-interval” property">log-time-interval</a></td>
+<td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
@@ -387,7 +397,7 @@
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--nwalkers" title="The “nwalkers” property">nwalkers</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type">
@@ -409,7 +419,7 @@
 <td class="property_type">
 <a class="link" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker"><span class="type">NcmFitESMCMCWalker</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--walker" title="The “walker” property">walker</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 </tbody>
 </table></div>
@@ -418,8 +428,8 @@
 <a name="NcmFitESMCMC.other" id="NcmFitESMCMC.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -1464,6 +1474,7 @@ during a multithread evaluation of the likelihood.</p>
 <a name="NcmFitESMCMC--auto-trim" id="NcmFitESMCMC--auto-trim"></a><h3>The <code class="literal">“auto-trim”</code> property</h3>
 <pre class="programlisting">  “auto-trim”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Whether to automatically trim the catalog.</p>
+<p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: FALSE</p>
 </div>
@@ -1472,6 +1483,7 @@ during a multithread evaluation of the likelihood.</p>
 <a name="NcmFitESMCMC--auto-trim-div" id="NcmFitESMCMC--auto-trim-div"></a><h3>The <code class="literal">“auto-trim-div”</code> property</h3>
 <pre class="programlisting">  “auto-trim-div”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Automatically trim divisor.</p>
+<p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 100</p>
@@ -1481,6 +1493,7 @@ during a multithread evaluation of the likelihood.</p>
 <a name="NcmFitESMCMC--data-file" id="NcmFitESMCMC--data-file"></a><h3>The <code class="literal">“data-file”</code> property</h3>
 <pre class="programlisting">  “data-file”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
 <p>Data filename.</p>
+<p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
 </div>
@@ -1489,20 +1502,43 @@ during a multithread evaluation of the likelihood.</p>
 <a name="NcmFitESMCMC--fit" id="NcmFitESMCMC--fit"></a><h3>The <code class="literal">“fit”</code> property</h3>
 <pre class="programlisting">  “fit”                      <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *</pre>
 <p>Fit object.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmFitESMCMC</p>
+<p>Flags: Read / Write / Construct Only</p>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NcmFitESMCMC--function-array" id="NcmFitESMCMC--function-array"></a><h3>The <code class="literal">“function-array”</code> property</h3>
 <pre class="programlisting">  “function-array”           <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</pre>
 <p>Functions array.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmFitESMCMC</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitESMCMC--intermediary-log" id="NcmFitESMCMC--intermediary-log"></a><h3>The <code class="literal">“intermediary-log”</code> property</h3>
+<pre class="programlisting">  “intermediary-log”         <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>Number of intermediary logs.</p>
+<p>Owner: NcmFitESMCMC</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 1</p>
+<p>Default value: 5</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitESMCMC--log-time-interval" id="NcmFitESMCMC--log-time-interval"></a><h3>The <code class="literal">“log-time-interval”</code> property</h3>
+<pre class="programlisting">  “log-time-interval”        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>Time interval between log.</p>
+<p>Owner: NcmFitESMCMC</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 1</p>
+<p>Default value: 60</p>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NcmFitESMCMC--lre-step" id="NcmFitESMCMC--lre-step"></a><h3>The <code class="literal">“lre-step”</code> property</h3>
 <pre class="programlisting">  “lre-step”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Step size in the lre run.</p>
+<p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: [0.01,1]</p>
 <p>Default value: 0.1</p>
@@ -1512,6 +1548,7 @@ during a multithread evaluation of the likelihood.</p>
 <a name="NcmFitESMCMC--max-runs-time" id="NcmFitESMCMC--max-runs-time"></a><h3>The <code class="literal">“max-runs-time”</code> property</h3>
 <pre class="programlisting">  “max-runs-time”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Maximum time between runs.</p>
+<p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 7200</p>
@@ -1521,6 +1558,7 @@ during a multithread evaluation of the likelihood.</p>
 <a name="NcmFitESMCMC--min-runs" id="NcmFitESMCMC--min-runs"></a><h3>The <code class="literal">“min-runs”</code> property</h3>
 <pre class="programlisting">  “min-runs”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Minumum number of runs.</p>
+<p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 10</p>
@@ -1530,6 +1568,7 @@ during a multithread evaluation of the likelihood.</p>
 <a name="NcmFitESMCMC--mtype" id="NcmFitESMCMC--mtype"></a><h3>The <code class="literal">“mtype”</code> property</h3>
 <pre class="programlisting">  “mtype”                    <a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a></pre>
 <p>Run messages type.</p>
+<p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NCM_FIT_RUN_MSGS_SIMPLE</p>
 </div>
@@ -1538,6 +1577,7 @@ during a multithread evaluation of the likelihood.</p>
 <a name="NcmFitESMCMC--nthreads" id="NcmFitESMCMC--nthreads"></a><h3>The <code class="literal">“nthreads”</code> property</h3>
 <pre class="programlisting">  “nthreads”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Number of threads to run.</p>
+<p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
@@ -1546,7 +1586,8 @@ during a multithread evaluation of the likelihood.</p>
 <a name="NcmFitESMCMC--nwalkers" id="NcmFitESMCMC--nwalkers"></a><h3>The <code class="literal">“nwalkers”</code> property</h3>
 <pre class="programlisting">  “nwalkers”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
 <p>Number of walkers.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmFitESMCMC</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 1</p>
 </div>
@@ -1555,6 +1596,7 @@ during a multithread evaluation of the likelihood.</p>
 <a name="NcmFitESMCMC--sampler" id="NcmFitESMCMC--sampler"></a><h3>The <code class="literal">“sampler”</code> property</h3>
 <pre class="programlisting">  “sampler”                  <a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a> *</pre>
 <p>Initial points sampler.</p>
+<p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
 </div>
 <hr />
@@ -1562,6 +1604,7 @@ during a multithread evaluation of the likelihood.</p>
 <a name="NcmFitESMCMC--trim-type" id="NcmFitESMCMC--trim-type"></a><h3>The <code class="literal">“trim-type”</code> property</h3>
 <pre class="programlisting">  “trim-type”                <a class="link" href="NcmMSetCatalog.html#NcmMSetCatalogTrimType" title="enum NcmMSetCatalogTrimType"><span class="type">NcmMSetCatalogTrimType</span></a></pre>
 <p>Trimming tests to apply.</p>
+<p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: NCM_MSET_CATALOG_TRIM_TYPE_ESS</p>
 </div>
@@ -1570,6 +1613,7 @@ during a multithread evaluation of the likelihood.</p>
 <a name="NcmFitESMCMC--use-mpi" id="NcmFitESMCMC--use-mpi"></a><h3>The <code class="literal">“use-mpi”</code> property</h3>
 <pre class="programlisting">  “use-mpi”                  <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Use MPI instead of threads.</p>
+<p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: TRUE</p>
 </div>
@@ -1578,11 +1622,12 @@ during a multithread evaluation of the likelihood.</p>
 <a name="NcmFitESMCMC--walker" id="NcmFitESMCMC--walker"></a><h3>The <code class="literal">“walker”</code> property</h3>
 <pre class="programlisting">  “walker”                   <a class="link" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker"><span class="type">NcmFitESMCMCWalker</span></a> *</pre>
 <p>Walker object.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmFitESMCMC</p>
+<p>Flags: Read / Write / Construct Only</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

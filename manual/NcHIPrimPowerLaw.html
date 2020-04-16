@@ -9,7 +9,7 @@
 <link rel="up" href="ch04.html#id-1.5.3" title="Inflationary" />
 <link rel="prev" href="NcHIPrim.html" title="NcHIPrim" />
 <link rel="next" href="NcHIPrimAtan.html" title="NcHIPrimAtan" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -51,8 +51,8 @@
 <a name="NcHIPrimPowerLaw.functions" id="NcHIPrimPowerLaw.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody><tr>
 <td class="function_type">
@@ -120,13 +120,13 @@
 <a name="NcHIPrimPowerLaw.other" id="NcHIPrimPowerLaw.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody>
 <tr>
 <td class="datatype_keyword">enum</td>
-<td class="function_name"><a class="link" href="NcHIPrimPowerLaw.html#NcHIPrimPowerLawParams" title="enum NcHIPrimPowerLawParams">NcHIPrimPowerLawParams</a></td>
+<td class="function_name"><a class="link" href="NcHIPrimPowerLaw.html#NcHIPrimPowerLawSParams" title="enum NcHIPrimPowerLawSParams">NcHIPrimPowerLawSParams</a></td>
 </tr>
 <tr>
 <td class="define_keyword">#define</td>
@@ -150,7 +150,7 @@
 <div class="refsect1">
 <a name="NcHIPrimPowerLaw.object-hierarchy" id="NcHIPrimPowerLaw.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
-    <span class="lineart">╰──</span> NcHIPrimPowerLawParams
+    <span class="lineart">╰──</span> NcHIPrimPowerLawSParams
     <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmModel.html" title="NcmModel">NcmModel</a>
         <span class="lineart">╰──</span> <a class="link" href="NcHIPrim.html" title="NcHIPrim">NcHIPrim</a>
@@ -182,13 +182,13 @@ nc_hiprim_power_law_new (<em class="parameter"><code><span class="type">void</sp
 <div class="refsect1">
 <a name="NcHIPrimPowerLaw.other_details" id="NcHIPrimPowerLaw.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
-<a name="NcHIPrimPowerLawParams" id="NcHIPrimPowerLawParams"></a><h3>enum NcHIPrimPowerLawParams</h3>
+<a name="NcHIPrimPowerLawSParams" id="NcHIPrimPowerLawSParams"></a><h3>enum NcHIPrimPowerLawSParams</h3>
 <p>Primordial adiabatic scalar power spectrum:
 $$ \mathcal{P}_{SA}(k) = \mathcal{A}_\mathrm{s}\left(\frac{k}{k_\star}\right)^{n_s -1 }.$$</p>
 <p>Primordial tensor power spectrum:
 $$ \mathcal{P}_T(k) = r \mathcal{A}_\mathrm{s} \left(\frac{k}{k_\star}\right)^{n_T -1 }.$$</p>
 <div class="refsect3">
-<a name="NcHIPrimPowerLawParams.members" id="NcHIPrimPowerLawParams.members"></a><h4>Members</h4>
+<a name="NcHIPrimPowerLawSParams.members" id="NcHIPrimPowerLawSParams.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name" />
@@ -259,6 +259,7 @@ $$ \mathcal{P}_T(k) = r \mathcal{A}_\mathrm{s} \left(\frac{k}{k_\star}\right)^{n
 <a name="NcHIPrimPowerLaw--T-SA-ratio" id="NcHIPrimPowerLaw--T-SA-ratio"></a><h3>The <code class="literal">“T-SA-ratio”</code> property</h3>
 <pre class="programlisting">  “T-SA-ratio”               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>A_T/A_{\mathrm{SA}}.</p>
+<p>Owner: NcHIPrimPowerLaw</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0.2</p>
 </div>
@@ -267,6 +268,7 @@ $$ \mathcal{P}_T(k) = r \mathcal{A}_\mathrm{s} \left(\frac{k}{k_\star}\right)^{n
 <a name="NcHIPrimPowerLaw--T-SA-ratio-fit" id="NcHIPrimPowerLaw--T-SA-ratio-fit"></a><h3>The <code class="literal">“T-SA-ratio-fit”</code> property</h3>
 <pre class="programlisting">  “T-SA-ratio-fit”           <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>A_T/A_{\mathrm{SA}}:fit.</p>
+<p>Owner: NcHIPrimPowerLaw</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -275,6 +277,7 @@ $$ \mathcal{P}_T(k) = r \mathcal{A}_\mathrm{s} \left(\frac{k}{k_\star}\right)^{n
 <a name="NcHIPrimPowerLaw--ln10e10ASA" id="NcHIPrimPowerLaw--ln10e10ASA"></a><h3>The <code class="literal">“ln10e10ASA”</code> property</h3>
 <pre class="programlisting">  “ln10e10ASA”               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>\log(10^{10}A_{\mathrm{SA}}).</p>
+<p>Owner: NcHIPrimPowerLaw</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 3.179</p>
 </div>
@@ -283,6 +286,7 @@ $$ \mathcal{P}_T(k) = r \mathcal{A}_\mathrm{s} \left(\frac{k}{k_\star}\right)^{n
 <a name="NcHIPrimPowerLaw--ln10e10ASA-fit" id="NcHIPrimPowerLaw--ln10e10ASA-fit"></a><h3>The <code class="literal">“ln10e10ASA-fit”</code> property</h3>
 <pre class="programlisting">  “ln10e10ASA-fit”           <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>\log(10^{10}A_{\mathrm{SA}}):fit.</p>
+<p>Owner: NcHIPrimPowerLaw</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -291,6 +295,7 @@ $$ \mathcal{P}_T(k) = r \mathcal{A}_\mathrm{s} \left(\frac{k}{k_\star}\right)^{n
 <a name="NcHIPrimPowerLaw--n-SA" id="NcHIPrimPowerLaw--n-SA"></a><h3>The <code class="literal">“n-SA”</code> property</h3>
 <pre class="programlisting">  “n-SA”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>n_{\mathrm{SA}}.</p>
+<p>Owner: NcHIPrimPowerLaw</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0.9742</p>
 </div>
@@ -299,6 +304,7 @@ $$ \mathcal{P}_T(k) = r \mathcal{A}_\mathrm{s} \left(\frac{k}{k_\star}\right)^{n
 <a name="NcHIPrimPowerLaw--n-SA-fit" id="NcHIPrimPowerLaw--n-SA-fit"></a><h3>The <code class="literal">“n-SA-fit”</code> property</h3>
 <pre class="programlisting">  “n-SA-fit”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>n_{\mathrm{SA}}:fit.</p>
+<p>Owner: NcHIPrimPowerLaw</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -307,6 +313,7 @@ $$ \mathcal{P}_T(k) = r \mathcal{A}_\mathrm{s} \left(\frac{k}{k_\star}\right)^{n
 <a name="NcHIPrimPowerLaw--n-T" id="NcHIPrimPowerLaw--n-T"></a><h3>The <code class="literal">“n-T”</code> property</h3>
 <pre class="programlisting">  “n-T”                      <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>n_{\mathrm{T}}.</p>
+<p>Owner: NcHIPrimPowerLaw</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
@@ -315,12 +322,13 @@ $$ \mathcal{P}_T(k) = r \mathcal{A}_\mathrm{s} \left(\frac{k}{k_\star}\right)^{n
 <a name="NcHIPrimPowerLaw--n-T-fit" id="NcHIPrimPowerLaw--n-T-fit"></a><h3>The <code class="literal">“n-T-fit”</code> property</h3>
 <pre class="programlisting">  “n-T-fit”                  <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>n_{\mathrm{T}}:fit.</p>
+<p>Owner: NcHIPrimPowerLaw</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

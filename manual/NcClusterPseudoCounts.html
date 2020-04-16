@@ -9,7 +9,7 @@
 <link rel="up" href="ch08.html" title="Large Scale Structure" />
 <link rel="prev" href="NcClusterAbundance.html" title="NcClusterAbundance" />
 <link rel="next" href="NcCorClusterCmbLensLimber.html" title="NcCorClusterCmbLensLimber" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -51,8 +51,8 @@
 <a name="NcClusterPseudoCounts.functions" id="NcClusterPseudoCounts.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -186,7 +186,7 @@
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcClusterPseudoCounts.html#NcClusterPseudoCounts--number-clusters" title="The “number-clusters” property">number-clusters</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
@@ -215,13 +215,13 @@
 <a name="NcClusterPseudoCounts.other" id="NcClusterPseudoCounts.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody>
 <tr>
 <td class="datatype_keyword">enum</td>
-<td class="function_name"><a class="link" href="NcClusterPseudoCounts.html#NcClusterPseudoCountsParams" title="enum NcClusterPseudoCountsParams">NcClusterPseudoCountsParams</a></td>
+<td class="function_name"><a class="link" href="NcClusterPseudoCounts.html#NcClusterPseudoCountsSParams" title="enum NcClusterPseudoCountsSParams">NcClusterPseudoCountsSParams</a></td>
 </tr>
 <tr>
 <td class="define_keyword">#define</td>
@@ -249,7 +249,7 @@
 <div class="refsect1">
 <a name="NcClusterPseudoCounts.object-hierarchy" id="NcClusterPseudoCounts.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
-    <span class="lineart">╰──</span> NcClusterPseudoCountsParams
+    <span class="lineart">╰──</span> NcClusterPseudoCountsSParams
     <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmModel.html" title="NcmModel">NcmModel</a>
         <span class="lineart">╰──</span> NcClusterPseudoCounts
@@ -813,10 +813,10 @@ nc_cluster_pseudo_counts_posterior_numerator_plcl
 <div class="refsect1">
 <a name="NcClusterPseudoCounts.other_details" id="NcClusterPseudoCounts.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
-<a name="NcClusterPseudoCountsParams" id="NcClusterPseudoCountsParams"></a><h3>enum NcClusterPseudoCountsParams</h3>
+<a name="NcClusterPseudoCountsSParams" id="NcClusterPseudoCountsSParams"></a><h3>enum NcClusterPseudoCountsSParams</h3>
 <p>FIXME</p>
 <div class="refsect3">
-<a name="NcClusterPseudoCountsParams.members" id="NcClusterPseudoCountsParams.members"></a><h4>Members</h4>
+<a name="NcClusterPseudoCountsSParams.members" id="NcClusterPseudoCountsSParams.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name" />
@@ -893,6 +893,7 @@ nc_cluster_pseudo_counts_posterior_numerator_plcl
 <a name="NcClusterPseudoCounts--Deltaz" id="NcClusterPseudoCounts--Deltaz"></a><h3>The <code class="literal">“Deltaz”</code> property</h3>
 <pre class="programlisting">  “Deltaz”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Maximum redsift is $z_{max} = z_{min} + \Delta z$. Range: $\Delta z \in [0.1, 2.0]$.</p>
+<p>Owner: NcClusterPseudoCounts</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0.99</p>
 </div>
@@ -901,6 +902,7 @@ nc_cluster_pseudo_counts_posterior_numerator_plcl
 <a name="NcClusterPseudoCounts--Deltaz-fit" id="NcClusterPseudoCounts--Deltaz-fit"></a><h3>The <code class="literal">“Deltaz-fit”</code> property</h3>
 <pre class="programlisting">  “Deltaz-fit”               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>\delta{}z:fit.</p>
+<p>Owner: NcClusterPseudoCounts</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -911,6 +913,7 @@ nc_cluster_pseudo_counts_posterior_numerator_plcl
 <p>Logarithm base e of the lower mass cut-off,
 
 $\ln M_{CUT} \in [12.0 \ln(10), 16.0 \ln(10)]$.</p>
+<p>Owner: NcClusterPseudoCounts</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 33</p>
 </div>
@@ -919,6 +922,7 @@ $\ln M_{CUT} \in [12.0 \ln(10), 16.0 \ln(10)]$.</p>
 <a name="NcClusterPseudoCounts--lnMCut-fit" id="NcClusterPseudoCounts--lnMCut-fit"></a><h3>The <code class="literal">“lnMCut-fit”</code> property</h3>
 <pre class="programlisting">  “lnMCut-fit”               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>FIXME</p>
+<p>Owner: NcClusterPseudoCounts</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -927,7 +931,8 @@ $\ln M_{CUT} \in [12.0 \ln(10), 16.0 \ln(10)]$.</p>
 <a name="NcClusterPseudoCounts--number-clusters" id="NcClusterPseudoCounts--number-clusters"></a><h3>The <code class="literal">“number-clusters”</code> property</h3>
 <pre class="programlisting">  “number-clusters”          <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Number of clusters.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcClusterPseudoCounts</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 21</p>
 </div>
@@ -936,6 +941,7 @@ $\ln M_{CUT} \in [12.0 \ln(10), 16.0 \ln(10)]$.</p>
 <a name="NcClusterPseudoCounts--sigma-Mcut" id="NcClusterPseudoCounts--sigma-Mcut"></a><h3>The <code class="literal">“sigma-Mcut”</code> property</h3>
 <pre class="programlisting">  “sigma-Mcut”               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>\sigma_{MCUT}.</p>
+<p>Owner: NcClusterPseudoCounts</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0.206</p>
 </div>
@@ -944,6 +950,7 @@ $\ln M_{CUT} \in [12.0 \ln(10), 16.0 \ln(10)]$.</p>
 <a name="NcClusterPseudoCounts--sigma-Mcut-fit" id="NcClusterPseudoCounts--sigma-Mcut-fit"></a><h3>The <code class="literal">“sigma-Mcut-fit”</code> property</h3>
 <pre class="programlisting">  “sigma-Mcut-fit”           <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>\sigma_{MCUT}:fit.</p>
+<p>Owner: NcClusterPseudoCounts</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -952,6 +959,7 @@ $\ln M_{CUT} \in [12.0 \ln(10), 16.0 \ln(10)]$.</p>
 <a name="NcClusterPseudoCounts--zmin" id="NcClusterPseudoCounts--zmin"></a><h3>The <code class="literal">“zmin”</code> property</h3>
 <pre class="programlisting">  “zmin”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Range: $z_{min} \in [10^{-5}, 2.0]$</p>
+<p>Owner: NcClusterPseudoCounts</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0.188</p>
 </div>
@@ -960,12 +968,13 @@ $\ln M_{CUT} \in [12.0 \ln(10), 16.0 \ln(10)]$.</p>
 <a name="NcClusterPseudoCounts--zmin-fit" id="NcClusterPseudoCounts--zmin-fit"></a><h3>The <code class="literal">“zmin-fit”</code> property</h3>
 <pre class="programlisting">  “zmin-fit”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>z_{min}:fit.</p>
+<p>Owner: NcClusterPseudoCounts</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

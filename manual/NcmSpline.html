@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s05.html" title="Splines 1D" />
 <link rel="prev" href="ch02s05.html" title="Splines 1D" />
 <link rel="next" href="NcmSplineGsl.html" title="NcmSplineGsl" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -51,8 +51,8 @@
 <a name="NcmSpline.functions" id="NcmSpline.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -302,7 +302,7 @@
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcmSpline.html#NcmSpline--length" title="The “length” property">length</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type">
@@ -315,41 +315,6 @@
 <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmSpline.html#NcmSpline--y" title="The “y” property">y</a></td>
 <td class="property_flags">Read / Write</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect1">
-<a name="NcmSpline.other" id="NcmSpline.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="name" />
-<col class="description" />
-</colgroup>
-<tbody>
-<tr>
-<td class="variable_type">const gdouble </td>
-<td class="function_name"><a class="link" href="NcmSpline.html#r1" title="r1">r1</a></td>
-</tr>
-<tr>
-<td class="variable_type">const gdouble </td>
-<td class="function_name"><a class="link" href="NcmSpline.html#r2" title="r2">r2</a></td>
-</tr>
-<tr>
-<td class="variable_type">const gdouble </td>
-<td class="function_name"><a class="link" href="NcmSpline.html#r12" title="r12">r12</a></td>
-</tr>
-<tr>
-<td class="variable_type">const gdouble </td>
-<td class="function_name"><a class="link" href="NcmSpline.html#bterm" title="bterm">bterm</a></td>
-</tr>
-<tr>
-<td class="variable_type">const gdouble </td>
-<td class="function_name"><a class="link" href="NcmSpline.html#cterm" title="cterm">cterm</a></td>
-</tr>
-<tr>
-<td class="variable_type">const gdouble </td>
-<td class="function_name"><a class="link" href="NcmSpline.html#dterm" title="dterm">dterm</a></td>
 </tr>
 </tbody>
 </table></div>
@@ -1384,50 +1349,13 @@ belongs to.</p>
 </div>
 </div>
 <div class="refsect1">
-<a name="NcmSpline.other_details" id="NcmSpline.other_details"></a><h2>Types and Values</h2>
-<div class="refsect2">
-<a name="r1" id="r1"></a><h3>r1</h3>
-<pre class="programlisting">  const gdouble r1    = (a - xi);
-</pre>
-</div>
-<hr />
-<div class="refsect2">
-<a name="r2" id="r2"></a><h3>r2</h3>
-<pre class="programlisting">  const gdouble r2    = (b - xi);
-</pre>
-</div>
-<hr />
-<div class="refsect2">
-<a name="r12" id="r12"></a><h3>r12</h3>
-<pre class="programlisting">  const gdouble r12   = (r1 + r2);
-</pre>
-</div>
-<hr />
-<div class="refsect2">
-<a name="bterm" id="bterm"></a><h3>bterm</h3>
-<pre class="programlisting">  const gdouble bterm = 0.5 * bi * r12;
-</pre>
-</div>
-<hr />
-<div class="refsect2">
-<a name="cterm" id="cterm"></a><h3>cterm</h3>
-<pre class="programlisting">  const gdouble cterm = (1.0 / 3.0) * ci * (r1 * r1 + r2 * r2 + r1 * r2);
-</pre>
-</div>
-<hr />
-<div class="refsect2">
-<a name="dterm" id="dterm"></a><h3>dterm</h3>
-<pre class="programlisting">  const gdouble dterm = 0.25 * di * r12 * (r1 * r1 + r2 * r2);
-</pre>
-</div>
-</div>
-<div class="refsect1">
 <a name="NcmSpline.property-details" id="NcmSpline.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="NcmSpline--length" id="NcmSpline--length"></a><h3>The <code class="literal">“length”</code> property</h3>
 <pre class="programlisting">  “length”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Spline length.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmSpline</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Default value: 0</p>
 </div>
 <hr />
@@ -1435,6 +1363,7 @@ belongs to.</p>
 <a name="NcmSpline--x" id="NcmSpline--x"></a><h3>The <code class="literal">“x”</code> property</h3>
 <pre class="programlisting">  “x”                        <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
 <p>Spline knots.</p>
+<p>Owner: NcmSpline</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr />
@@ -1442,11 +1371,12 @@ belongs to.</p>
 <a name="NcmSpline--y" id="NcmSpline--y"></a><h3>The <code class="literal">“y”</code> property</h3>
 <pre class="programlisting">  “y”                        <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
 <p>Spline values.</p>
+<p>Owner: NcmSpline</p>
 <p>Flags: Read / Write</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

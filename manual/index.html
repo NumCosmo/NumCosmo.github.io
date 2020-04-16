@@ -7,7 +7,7 @@
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
 <link rel="home" href="index.html" title="NumCosmo Reference Manual" />
 <link rel="next" href="ch01.html" title="NumCosmo Overview" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -29,7 +29,7 @@
 <div>
 <div><table class="navigation" id="top" width="100%" cellpadding="2" cellspacing="0"><tr><th valign="middle"><p class="title">NumCosmo Reference Manual</p></th></tr></table></div>
 <div><p class="releaseinfo">
-    for NumCosmo 0.14.2.
+    for NumCosmo 0.15.0.
     The latest version of this documentation can be found on-line at
     <a class="ulink" href="https://numcosmo.github.io/manual/" target="_top">https://numcosmo.github.io/manual/</a>,      
     <a class="ulink" href="https://numcosmo.github.io/" target="_top">NumCosmo website</a>.
@@ -112,7 +112,10 @@
 <span class="refentrytitle"><a href="NcmMPIJobFit.html">NcmMPIJobFit</a></span><span class="refpurpose"> — MPI job object for running <span class="type">NcmFit</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcmMPIJobMCMC.html">NcmMPIJobMCMC</a></span><span class="refpurpose"> — MPI job object for running <span class="type">NcmFit</span></span>
+<span class="refentrytitle"><a href="NcmMPIJobMCMC.html">NcmMPIJobMCMC</a></span><span class="refpurpose"> — MPI job object for running MCMC steps</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmMPIJobFEval.html">NcmMPIJobFEval</a></span><span class="refpurpose"> — MPI job object for evaluating fit steps</span>
 </dt>
 </dl></dd>
 <dt><span class="section"><a href="ch02s03.html">ODE Solvers objects</a></span></dt>
@@ -186,11 +189,19 @@
 <dt>
 <span class="refentrytitle"><a href="NcmPowspecFilter.html">NcmPowspecFilter</a></span><span class="refpurpose"> — Class to compute filtered power spectrum</span>
 </dt>
+<dt>
+<span class="refentrytitle"><a href="NcmPowspecCorr3d.html">NcmPowspecCorr3d</a></span><span class="refpurpose"> — Class to compute filtered power spectrum</span>
+</dt>
 </dl></dd>
 <dt><span class="section"><a href="ch02s08.html">Harmonic Oscillator</a></span></dt>
-<dd><dl><dt>
+<dd><dl>
+<dt>
 <span class="refentrytitle"><a href="NcmHOAA.html">NcmHOAA</a></span><span class="refpurpose"> — Abstract class for Harmonic Oscillator calculation through AA variables.</span>
-</dt></dl></dd>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcmCSQ1D.html">NcmCSQ1D</a></span><span class="refpurpose"> — Abstract class for Harmonic Oscillator calculation through complex structure quantization.</span>
+</dt>
+</dl></dd>
 <dt><span class="section"><a href="ch02s09.html">Special Functions</a></span></dt>
 <dd><dl>
 <dt>
@@ -483,6 +494,9 @@
 <dt>
 <span class="refentrytitle"><a href="NcPriorQSplineCont.html">NcHICosmoQSpline</a></span><span class="refpurpose"> — Kinetic model -- Spline deceleration function</span>
 </dt>
+<dt>
+<span class="refentrytitle"><a href="NcHICosmoQRBFRprior.html">NcHICosmoQRBF</a></span><span class="refpurpose"> — Kinetic model -- Spline deceleration function</span>
+</dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="ch04.html">Primordial Cosmology Models</a></span></dt>
@@ -564,6 +578,9 @@
 <span class="refentrytitle"><a href="NcHIPert.html">NcHIPert</a></span><span class="refpurpose"> — Abstract class for perturbation in homogeneous and isotropic cosmologies.</span>
 </dt>
 <dt>
+<span class="refentrytitle"><a href="NcHIPertBGVar.html">NcHIPertComp</a></span><span class="refpurpose"> — Perturbation background variables transport object</span>
+</dt>
+<dt>
 <span class="refentrytitle"><a href="NcHIPertWKB.html">NcHIPertWKB</a></span><span class="refpurpose"> — WKB perturbation object.</span>
 </dt>
 <dt>
@@ -581,7 +598,28 @@
 <dt>
 <span class="refentrytitle"><a href="NcHIPertBoltzmannStd.html">NcHIPertBoltzmannStd</a></span><span class="refpurpose"> — Perturbations object for standard Boltzmann hierarchy model.</span>
 </dt>
-<dt><span class="section"><a href="ch07.html#id-1.8.9">CLASS Backend</a></span></dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertFirstOrder.html">NcHIPertFirstOrder</a></span><span class="refpurpose"> — Base object for implementing first order perturbation in a Friedmann background.</span>
+</dt>
+<dt><span class="section"><a href="ch07.html#id-1.8.11">Gravitational theories</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertGrav.html">NcHIPertGrav</a></span><span class="refpurpose"> — Abstract class describing a general first order gravitation theory.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertGravEinstein.html">NcHIPertGravEinstein</a></span><span class="refpurpose"> — First order Einstein equations on a Friedmann background.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch07s02.html">Perturbation components</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertComp.html">NcHIPertComp</a></span><span class="refpurpose"> — Abstract class describing a general perturbation compoment.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertCompPB.html">NcHIPertCompPB</a></span><span class="refpurpose"> — Photon-Baryon plasma compoment</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch07s03.html">CLASS Backend</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcCBEPrecision.html">NcCBEPrecision</a></span><span class="refpurpose"> — CLASS (Cosmic Linear Anisotropy Solving System) backend for perturbations</span>
@@ -593,7 +631,7 @@
 <span class="refentrytitle"><a href="NcHIPertBoltzmannCBE.html">NcHIPertBoltzmannCBE</a></span><span class="refpurpose"> — CLASS (Cosmic Linear Anisotropy Solving System) backend for perturbations</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch07s02.html">Perturbation Interfaces</a></span></dt>
+<dt><span class="section"><a href="ch07s04.html">Perturbation Interfaces</a></span></dt>
 <dd><dl><dt>
 <span class="refentrytitle"><a href="NcHIPertITwoFluids.html">NcHIPertITwoFluids</a></span><span class="refpurpose"> — Perturbation interface for two fluids system.</span>
 </dt></dl></dd>
@@ -654,10 +692,19 @@
 <dt><span class="section"><a href="ch08s04.html"> Density Profile</a></span></dt>
 <dd><dl>
 <dt>
-<span class="refentrytitle"><a href="NcDensityProfile.html">NcDensityProfile</a></span><span class="refpurpose"> — Abstract class for density profile functions.</span>
+<span class="refentrytitle"><a href="NcHaloDensityProfile.html">NcHaloDensityProfile</a></span><span class="refpurpose"> — Abstract class for density profile functions.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcDensityProfileNFW.html">NcDensityProfileNFW</a></span><span class="refpurpose"> — Density profile of Navarro-Frenk-White type.</span>
+<span class="refentrytitle"><a href="NcHaloDensityProfileNFW.html">NcHaloDensityProfileNFW</a></span><span class="refpurpose"> — Density profile of Navarro-Frenk-White type.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloDensityProfileEinasto.html">NcHaloDensityProfileEinasto</a></span><span class="refpurpose"> — Density profile of Einasto type.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloDensityProfileDK14.html">NcHaloDensityProfileDK14</a></span><span class="refpurpose"> — Density profile of Diemer \&amp; Kravtsov type.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloDensityProfileHernquist.html">NcHaloDensityProfileHernquist</a></span><span class="refpurpose"> — Density profile of Hernquist type.</span>
 </dt>
 </dl></dd>
 <dt><span class="section"><a href="ch08s05.html">Multiplicity Function</a></span></dt>
@@ -930,7 +977,7 @@
 <span class="refentrytitle"><a href="numcosmo-NcmQuad.html">NcmQuad</a></span><span class="refpurpose"> — Quadrature algorithims.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="numcosmo-NcmFunctionCache.html">NcmFunctionCache</a></span><span class="refpurpose"> — A generic cache for functions values</span>
+<span class="refentrytitle"><a href="NcmFunctionCache.html">NcmFunctionCache</a></span><span class="refpurpose"> — A generic cache for functions values</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="numcosmo-NcmMemoryPool.html">NcmMemoryPool</a></span><span class="refpurpose"> — Generic memory pool.</span>
@@ -955,6 +1002,6 @@
 </dl></div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

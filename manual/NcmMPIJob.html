@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s02.html" title="MPI Objects" />
 <link rel="prev" href="ch02s02.html" title="MPI Objects" />
 <link rel="next" href="NcmMPIJobTest.html" title="NcmMPIJobTest" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -51,8 +51,8 @@
 <a name="NcmMPIJob.functions" id="NcmMPIJob.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -97,7 +97,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a class="link" href="NcmMPIJob.html#MPI-Datatype" title="MPI_Datatype"><span class="returnvalue">MPI_Datatype</span></a>
+<a class="link" href="NcmMPIJob.html#NcmMPIDatatype" title="NcmMPIDatatype"><span class="returnvalue">NcmMPIDatatype</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmMPIJob.html#ncm-mpi-job-input-datatype" title="ncm_mpi_job_input_datatype ()">ncm_mpi_job_input_datatype</a> <span class="c_punctuation">()</span>
@@ -105,7 +105,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a class="link" href="NcmMPIJob.html#MPI-Datatype" title="MPI_Datatype"><span class="returnvalue">MPI_Datatype</span></a>
+<a class="link" href="NcmMPIJob.html#NcmMPIDatatype" title="NcmMPIDatatype"><span class="returnvalue">NcmMPIDatatype</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmMPIJob.html#ncm-mpi-job-return-datatype" title="ncm_mpi_job_return_datatype ()">ncm_mpi_job_return_datatype</a> <span class="c_punctuation">()</span>
@@ -267,13 +267,13 @@
 <a name="NcmMPIJob.other" id="NcmMPIJob.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody>
 <tr>
-<td class="define_keyword">#define</td>
-<td class="function_name"><a class="link" href="NcmMPIJob.html#MPI-Datatype" title="MPI_Datatype">MPI_Datatype</a></td>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="NcmMPIJob.html#NcmMPIDatatype" title="NcmMPIDatatype">NcmMPIDatatype</a></td>
 </tr>
 <tr>
 <td class="define_keyword">#define</td>
@@ -297,6 +297,7 @@
     <span class="lineart">╰──</span> NcmMPIJobCtrlTag
     <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> NcmMPIJob
+        <span class="lineart">├──</span> <a class="link" href="NcmMPIJobFEval.html" title="NcmMPIJobFEval">NcmMPIJobFEval</a>
         <span class="lineart">├──</span> <a class="link" href="NcmMPIJobFit.html" title="NcmMPIJobFit">NcmMPIJobFit</a>
         <span class="lineart">├──</span> <a class="link" href="NcmMPIJobMCMC.html" title="NcmMPIJobMCMC">NcmMPIJobMCMC</a>
         <span class="lineart">╰──</span> <a class="link" href="NcmMPIJobTest.html" title="NcmMPIJobTest">NcmMPIJobTest</a>
@@ -438,7 +439,7 @@ times during the work phase.</p>
 <hr />
 <div class="refsect2">
 <a name="ncm-mpi-job-input-datatype" id="ncm-mpi-job-input-datatype"></a><h3>ncm_mpi_job_input_datatype ()</h3>
-<pre class="programlisting"><a class="link" href="NcmMPIJob.html#MPI-Datatype" title="MPI_Datatype"><span class="returnvalue">MPI_Datatype</span></a>
+<pre class="programlisting"><a class="link" href="NcmMPIJob.html#NcmMPIDatatype" title="NcmMPIDatatype"><span class="returnvalue">NcmMPIDatatype</span></a>
 ncm_mpi_job_input_datatype (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *len</code></em>,
                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *size</code></em>);</pre>
@@ -473,13 +474,14 @@ ncm_mpi_job_input_datatype (<em class="parameter"><code><a class="link" href="Nc
 </div>
 <div class="refsect3">
 <a name="ncm-mpi-job-input-datatype.returns" id="ncm-mpi-job-input-datatype.returns"></a><h4>Returns</h4>
-<p> the input datatype.</p>
+<p>the input datatype. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
 <div class="refsect2">
 <a name="ncm-mpi-job-return-datatype" id="ncm-mpi-job-return-datatype"></a><h3>ncm_mpi_job_return_datatype ()</h3>
-<pre class="programlisting"><a class="link" href="NcmMPIJob.html#MPI-Datatype" title="MPI_Datatype"><span class="returnvalue">MPI_Datatype</span></a>
+<pre class="programlisting"><a class="link" href="NcmMPIJob.html#NcmMPIDatatype" title="NcmMPIDatatype"><span class="returnvalue">NcmMPIDatatype</span></a>
 ncm_mpi_job_return_datatype (<em class="parameter"><code><a class="link" href="NcmMPIJob.html" title="NcmMPIJob"><span class="type">NcmMPIJob</span></a> *mpi_job</code></em>,
                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *len</code></em>,
                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *size</code></em>);</pre>
@@ -514,7 +516,8 @@ ncm_mpi_job_return_datatype (<em class="parameter"><code><a class="link" href="N
 </div>
 <div class="refsect3">
 <a name="ncm-mpi-job-return-datatype.returns" id="ncm-mpi-job-return-datatype.returns"></a><h4>Returns</h4>
-<p> the return datatype.</p>
+<p>the return datatype. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -541,7 +544,8 @@ ncm_mpi_job_create_input (<em class="parameter"><code><a class="link" href="NcmM
 </div>
 <div class="refsect3">
 <a name="ncm-mpi-job-create-input.returns" id="ncm-mpi-job-create-input.returns"></a><h4>Returns</h4>
-<p> the newly input object.</p>
+<p>the newly input object. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -568,7 +572,8 @@ ncm_mpi_job_create_return (<em class="parameter"><code><a class="link" href="Ncm
 </div>
 <div class="refsect3">
 <a name="ncm-mpi-job-create-return.returns" id="ncm-mpi-job-create-return.returns"></a><h4>Returns</h4>
-<p> the newly return object.</p>
+<p>the newly return object. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -668,7 +673,8 @@ ncm_mpi_job_get_input_buffer (<em class="parameter"><code><a class="link" href="
 </div>
 <div class="refsect3">
 <a name="ncm-mpi-job-get-input-buffer.returns" id="ncm-mpi-job-get-input-buffer.returns"></a><h4>Returns</h4>
-<p> the created buffer.</p>
+<p>the created buffer. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -704,7 +710,8 @@ ncm_mpi_job_get_return_buffer (<em class="parameter"><code><a class="link" href=
 </div>
 <div class="refsect3">
 <a name="ncm-mpi-job-get-return-buffer.returns" id="ncm-mpi-job-get-return-buffer.returns"></a><h4>Returns</h4>
-<p> the created buffer.</p>
+<p>the created buffer. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -817,7 +824,8 @@ ncm_mpi_job_pack_input (<em class="parameter"><code><a class="link" href="NcmMPI
 </div>
 <div class="refsect3">
 <a name="ncm-mpi-job-pack-input.returns" id="ncm-mpi-job-pack-input.returns"></a><h4>Returns</h4>
-<p> the packed buffer.</p>
+<p>the packed buffer. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -853,7 +861,8 @@ ncm_mpi_job_pack_return (<em class="parameter"><code><a class="link" href="NcmMP
 </div>
 <div class="refsect3">
 <a name="ncm-mpi-job-pack-return.returns" id="ncm-mpi-job-pack-return.returns"></a><h4>Returns</h4>
-<p> the packed buffer. </p>
+<p>the packed buffer. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1077,8 +1086,8 @@ ncm_mpi_job_free_all_slaves (<em class="parameter"><code><a class="link" href="N
 <div class="refsect1">
 <a name="NcmMPIJob.other_details" id="NcmMPIJob.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
-<a name="MPI-Datatype" id="MPI-Datatype"></a><h3>MPI_Datatype</h3>
-<pre class="programlisting">#define MPI_Datatype gpointer
+<a name="NcmMPIDatatype" id="NcmMPIDatatype"></a><h3>NcmMPIDatatype</h3>
+<pre class="programlisting">typedef MPI_Datatype NcmMPIDatatype;
 </pre>
 </div>
 <hr />
@@ -1184,12 +1193,13 @@ ncm_mpi_job_free_all_slaves (<em class="parameter"><code><a class="link" href="N
 <a name="NcmMPIJob--placeholder" id="NcmMPIJob--placeholder"></a><h3>The <code class="literal">“placeholder”</code> property</h3>
 <pre class="programlisting">  “placeholder”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>placeholder.</p>
+<p>Owner: NcmMPIJob</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: 0</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

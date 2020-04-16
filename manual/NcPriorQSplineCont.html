@@ -8,8 +8,8 @@
 <link rel="home" href="index.html" title="NumCosmo Reference Manual" />
 <link rel="up" href="ch03s03.html" title="Kinematic Models" />
 <link rel="prev" href="NcHICosmoQLinear.html" title="NcHICosmoQLinear" />
-<link rel="next" href="ch04.html" title="Primordial Cosmology Models" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<link rel="next" href="NcHICosmoQRBFRprior.html" title="NcHICosmoQRBF" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -36,7 +36,7 @@
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
 <td><a accesskey="u" href="ch03s03.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
 <td><a accesskey="p" href="NcHICosmoQLinear.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
-<td><a accesskey="n" href="ch04.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+<td><a accesskey="n" href="NcHICosmoQRBFRprior.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcPriorQSplineCont" id="NcPriorQSplineCont"></a><div class="titlepage"></div>
@@ -51,8 +51,8 @@
 <a name="NcPriorQSplineCont.functions" id="NcPriorQSplineCont.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -200,18 +200,18 @@
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcPriorQSplineCont.html#NcHICosmoQSpline--qparam-length" title="The “qparam-length” property">qparam-length</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type">
 <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *</td>
 <td class="property_name"><a class="link" href="NcPriorQSplineCont.html#NcHICosmoQSpline--spline" title="The “spline” property">spline</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
 <td class="property_name"><a class="link" href="NcPriorQSplineCont.html#NcHICosmoQSpline--zf" title="The “zf” property">zf</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
@@ -238,7 +238,7 @@
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcPriorQSplineCont.html#NcHICosmoQSplineContPrior--lnsigma-length" title="The “lnsigma-length” property">lnsigma-length</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 </tbody>
 </table></div>
@@ -247,8 +247,8 @@
 <a name="NcPriorQSplineCont.other" id="NcPriorQSplineCont.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -710,7 +710,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <hr />
 <div class="refsect2">
 <a name="NC-HICOSMO-QSPLINE-DEFAULT-H0:CAPS" id="NC-HICOSMO-QSPLINE-DEFAULT-H0:CAPS"></a><h3>NC_HICOSMO_QSPLINE_DEFAULT_H0</h3>
-<pre class="programlisting">#define NC_HICOSMO_QSPLINE_DEFAULT_H0      ncm_c_hubble_cte_wmap ()
+<pre class="programlisting">#define NC_HICOSMO_QSPLINE_DEFAULT_H0      ncm_c_hubble_cte_planck6_base ()
 </pre>
 </div>
 <hr />
@@ -756,14 +756,16 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <a name="NcHICosmoQSpline--H0" id="NcHICosmoQSpline--H0"></a><h3>The <code class="literal">“H0”</code> property</h3>
 <pre class="programlisting">  “H0”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Hubble parameter today (z = 0).</p>
+<p>Owner: NcHICosmoQSpline</p>
 <p>Flags: Read / Write</p>
-<p>Default value: 73</p>
+<p>Default value: 67.36</p>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NcHICosmoQSpline--H0-fit" id="NcHICosmoQSpline--H0-fit"></a><h3>The <code class="literal">“H0-fit”</code> property</h3>
 <pre class="programlisting">  “H0-fit”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>FIXME</p>
+<p>Owner: NcHICosmoQSpline</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -772,6 +774,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <a name="NcHICosmoQSpline--Omegat" id="NcHICosmoQSpline--Omegat"></a><h3>The <code class="literal">“Omegat”</code> property</h3>
 <pre class="programlisting">  “Omegat”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>FIXME</p>
+<p>Owner: NcHICosmoQSpline</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 1</p>
 </div>
@@ -780,6 +783,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <a name="NcHICosmoQSpline--Omegat-fit" id="NcHICosmoQSpline--Omegat-fit"></a><h3>The <code class="literal">“Omegat-fit”</code> property</h3>
 <pre class="programlisting">  “Omegat-fit”               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>FIXME</p>
+<p>Owner: NcHICosmoQSpline</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -788,6 +792,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <a name="NcHICosmoQSpline--asdrag" id="NcHICosmoQSpline--asdrag"></a><h3>The <code class="literal">“asdrag”</code> property</h3>
 <pre class="programlisting">  “asdrag”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>FIXME</p>
+<p>Owner: NcHICosmoQSpline</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0.035</p>
 </div>
@@ -796,6 +801,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <a name="NcHICosmoQSpline--asdrag-fit" id="NcHICosmoQSpline--asdrag-fit"></a><h3>The <code class="literal">“asdrag-fit”</code> property</h3>
 <pre class="programlisting">  “asdrag-fit”               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>FIXME</p>
+<p>Owner: NcHICosmoQSpline</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -804,6 +810,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <a name="NcHICosmoQSpline--qparam" id="NcHICosmoQSpline--qparam"></a><h3>The <code class="literal">“qparam”</code> property</h3>
 <pre class="programlisting">  “qparam”                   <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
 <p>FIXME</p>
+<p>Owner: NcHICosmoQSpline</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr />
@@ -811,6 +818,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <a name="NcHICosmoQSpline--qparam-fit" id="NcHICosmoQSpline--qparam-fit"></a><h3>The <code class="literal">“qparam-fit”</code> property</h3>
 <pre class="programlisting">  “qparam-fit”               <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *</pre>
 <p>FIXME</p>
+<p>Owner: NcHICosmoQSpline</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: GVariant&lt;a*&gt;</p>
 <p>Default value: NULL</p>
@@ -820,7 +828,8 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <a name="NcHICosmoQSpline--qparam-length" id="NcHICosmoQSpline--qparam-length"></a><h3>The <code class="literal">“qparam-length”</code> property</h3>
 <pre class="programlisting">  “qparam-length”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>FIXME</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcHICosmoQSpline</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Default value: 3</p>
 </div>
 <hr />
@@ -828,14 +837,16 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <a name="NcHICosmoQSpline--spline" id="NcHICosmoQSpline--spline"></a><h3>The <code class="literal">“spline”</code> property</h3>
 <pre class="programlisting">  “spline”                   <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *</pre>
 <p>Spline object.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcHICosmoQSpline</p>
+<p>Flags: Read / Write / Construct Only</p>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NcHICosmoQSpline--zf" id="NcHICosmoQSpline--zf"></a><h3>The <code class="literal">“zf”</code> property</h3>
 <pre class="programlisting">  “zf”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>final redshift.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcHICosmoQSpline</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Allowed values: [0,100]</p>
 <p>Default value: 1</p>
 </div>
@@ -844,6 +855,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <a name="NcHICosmoQSplineContPrior--abstol" id="NcHICosmoQSplineContPrior--abstol"></a><h3>The <code class="literal">“abstol”</code> property</h3>
 <pre class="programlisting">  “abstol”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>FIXME</p>
+<p>Owner: NcHICosmoQSplineContPrior</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0.1</p>
 </div>
@@ -852,6 +864,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <a name="NcHICosmoQSplineContPrior--abstol-fit" id="NcHICosmoQSplineContPrior--abstol-fit"></a><h3>The <code class="literal">“abstol-fit”</code> property</h3>
 <pre class="programlisting">  “abstol-fit”               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>FIXME</p>
+<p>Owner: NcHICosmoQSplineContPrior</p>
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
 </div>
@@ -860,6 +873,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <a name="NcHICosmoQSplineContPrior--lnsigma" id="NcHICosmoQSplineContPrior--lnsigma"></a><h3>The <code class="literal">“lnsigma”</code> property</h3>
 <pre class="programlisting">  “lnsigma”                  <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
 <p>FIXME</p>
+<p>Owner: NcHICosmoQSplineContPrior</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr />
@@ -867,6 +881,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <a name="NcHICosmoQSplineContPrior--lnsigma-fit" id="NcHICosmoQSplineContPrior--lnsigma-fit"></a><h3>The <code class="literal">“lnsigma-fit”</code> property</h3>
 <pre class="programlisting">  “lnsigma-fit”              <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *</pre>
 <p>FIXME</p>
+<p>Owner: NcHICosmoQSplineContPrior</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: GVariant&lt;a*&gt;</p>
 <p>Default value: NULL</p>
@@ -876,12 +891,13 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <a name="NcHICosmoQSplineContPrior--lnsigma-length" id="NcHICosmoQSplineContPrior--lnsigma-length"></a><h3>The <code class="literal">“lnsigma-length”</code> property</h3>
 <pre class="programlisting">  “lnsigma-length”           <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>FIXME</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcHICosmoQSplineContPrior</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Default value: 3</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

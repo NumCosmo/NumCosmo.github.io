@@ -9,7 +9,7 @@
 <link rel="up" href="ch08s11.html" title="Weak Lensing" />
 <link rel="prev" href="NcWLSurfaceMassDensity.html" title="NcWLSurfaceMassDensity" />
 <link rel="next" href="NcReducedShearCalib.html" title="NcReducedShearCalib" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -51,8 +51,8 @@
 <a name="NcReducedShearClusterMass.functions" id="NcReducedShearClusterMass.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -128,7 +128,7 @@
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
 <td class="property_name"><a class="link" href="NcReducedShearClusterMass.html#NcReducedShearClusterMass--R" title="The “R” property">R</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
@@ -163,7 +163,7 @@
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcReducedShearClusterMass.html#NcReducedShearClusterMass--number-z-bins" title="The “number-z-bins” property">number-z-bins</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
@@ -192,8 +192,8 @@
 <a name="NcReducedShearClusterMass.other" id="NcReducedShearClusterMass.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -401,13 +401,16 @@ nc_reduced_shear_cluster_mass_posterior_no_shear_calibration
 <a name="NcReducedShearClusterMass.other_details" id="NcReducedShearClusterMass.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
 <a name="NcReducedShearClusterMassParams" id="NcReducedShearClusterMassParams"></a><h3>enum NcReducedShearClusterMassParams</h3>
-<p>These parameters refers to the shear calibration, and 
+<p>These parameters refers to the shear calibration, and
+
 the Voigt profile. </p>
 <p>In particular, we consider the shear calibration as defined for STEP and STEP2 simulations:
 $$\hat{g}_{Teo} = (1 + m)g + c,$$
-where $g$ is the reduced shear, the multiplicative bias $m$ is  
+where $g$ is the reduced shear, the multiplicative bias $m$ is
+
 $$ m =\left{
-  \begin{array}{c l}	
+  \begin{array}{c l}
+
        a \frac{r_{gal}}{r_{PSF}} + b &amp; \frac{r_{gal}}{r_{PSF}} &lt; x_p \
        b &amp; \frac{r_{gal}}{r_{PSF}} \geq x_p
   \end{array}\right. $$
@@ -518,6 +521,7 @@ See <a class="link" href="refs.html#XApplegate2014">Applegate (2014)</a>.</p>
 <a name="NcReducedShearClusterMass--Gamma" id="NcReducedShearClusterMass--Gamma"></a><h3>The <code class="literal">“Gamma”</code> property</h3>
 <pre class="programlisting">  “Gamma”                    <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>\Gamma.</p>
+<p>Owner: NcReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0.05</p>
 </div>
@@ -526,6 +530,7 @@ See <a class="link" href="refs.html#XApplegate2014">Applegate (2014)</a>.</p>
 <a name="NcReducedShearClusterMass--Gamma-fit" id="NcReducedShearClusterMass--Gamma-fit"></a><h3>The <code class="literal">“Gamma-fit”</code> property</h3>
 <pre class="programlisting">  “Gamma-fit”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>\Gamma:fit.</p>
+<p>Owner: NcReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -534,7 +539,8 @@ See <a class="link" href="refs.html#XApplegate2014">Applegate (2014)</a>.</p>
 <a name="NcReducedShearClusterMass--R" id="NcReducedShearClusterMass--R"></a><h3>The <code class="literal">“R”</code> property</h3>
 <pre class="programlisting">  “R”                        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Distance from the center of the lens.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcReducedShearClusterMass</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 1</p>
 </div>
@@ -543,6 +549,7 @@ See <a class="link" href="refs.html#XApplegate2014">Applegate (2014)</a>.</p>
 <a name="NcReducedShearClusterMass--a" id="NcReducedShearClusterMass--a"></a><h3>The <code class="literal">“a”</code> property</h3>
 <pre class="programlisting">  “a”                        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>FIXME</p>
+<p>Owner: NcReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
@@ -551,6 +558,7 @@ See <a class="link" href="refs.html#XApplegate2014">Applegate (2014)</a>.</p>
 <a name="NcReducedShearClusterMass--a-fit" id="NcReducedShearClusterMass--a-fit"></a><h3>The <code class="literal">“a-fit”</code> property</h3>
 <pre class="programlisting">  “a-fit”                    <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>FIXME</p>
+<p>Owner: NcReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -559,6 +567,7 @@ See <a class="link" href="refs.html#XApplegate2014">Applegate (2014)</a>.</p>
 <a name="NcReducedShearClusterMass--b" id="NcReducedShearClusterMass--b"></a><h3>The <code class="literal">“b”</code> property</h3>
 <pre class="programlisting">  “b”                        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>FIXME</p>
+<p>Owner: NcReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
@@ -567,6 +576,7 @@ See <a class="link" href="refs.html#XApplegate2014">Applegate (2014)</a>.</p>
 <a name="NcReducedShearClusterMass--b-fit" id="NcReducedShearClusterMass--b-fit"></a><h3>The <code class="literal">“b-fit”</code> property</h3>
 <pre class="programlisting">  “b-fit”                    <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>b:fit.</p>
+<p>Owner: NcReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -575,6 +585,7 @@ See <a class="link" href="refs.html#XApplegate2014">Applegate (2014)</a>.</p>
 <a name="NcReducedShearClusterMass--c" id="NcReducedShearClusterMass--c"></a><h3>The <code class="literal">“c”</code> property</h3>
 <pre class="programlisting">  “c”                        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>FIXME</p>
+<p>Owner: NcReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
@@ -583,6 +594,7 @@ See <a class="link" href="refs.html#XApplegate2014">Applegate (2014)</a>.</p>
 <a name="NcReducedShearClusterMass--c-fit" id="NcReducedShearClusterMass--c-fit"></a><h3>The <code class="literal">“c-fit”</code> property</h3>
 <pre class="programlisting">  “c-fit”                    <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>c:fit.</p>
+<p>Owner: NcReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -591,7 +603,8 @@ See <a class="link" href="refs.html#XApplegate2014">Applegate (2014)</a>.</p>
 <a name="NcReducedShearClusterMass--number-z-bins" id="NcReducedShearClusterMass--number-z-bins"></a><h3>The <code class="literal">“number-z-bins”</code> property</h3>
 <pre class="programlisting">  “number-z-bins”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Number of redshift bins.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcReducedShearClusterMass</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 10</p>
 </div>
@@ -600,6 +613,7 @@ See <a class="link" href="refs.html#XApplegate2014">Applegate (2014)</a>.</p>
 <a name="NcReducedShearClusterMass--sigma" id="NcReducedShearClusterMass--sigma"></a><h3>The <code class="literal">“sigma”</code> property</h3>
 <pre class="programlisting">  “sigma”                    <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>\sigma.</p>
+<p>Owner: NcReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0.3</p>
 </div>
@@ -608,6 +622,7 @@ See <a class="link" href="refs.html#XApplegate2014">Applegate (2014)</a>.</p>
 <a name="NcReducedShearClusterMass--sigma-fit" id="NcReducedShearClusterMass--sigma-fit"></a><h3>The <code class="literal">“sigma-fit”</code> property</h3>
 <pre class="programlisting">  “sigma-fit”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>\sigma:fit.</p>
+<p>Owner: NcReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -616,6 +631,7 @@ See <a class="link" href="refs.html#XApplegate2014">Applegate (2014)</a>.</p>
 <a name="NcReducedShearClusterMass--xp" id="NcReducedShearClusterMass--xp"></a><h3>The <code class="literal">“xp”</code> property</h3>
 <pre class="programlisting">  “xp”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>FIXME</p>
+<p>Owner: NcReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0.2</p>
 </div>
@@ -624,12 +640,13 @@ See <a class="link" href="refs.html#XApplegate2014">Applegate (2014)</a>.</p>
 <a name="NcReducedShearClusterMass--xp-fit" id="NcReducedShearClusterMass--xp-fit"></a><h3>The <code class="literal">“xp-fit”</code> property</h3>
 <pre class="programlisting">  “xp-fit”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>xp:fit.</p>
+<p>Owner: NcReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

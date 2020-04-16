@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s13.html" title="Statistical Analysis" />
 <link rel="prev" href="NcmLHRatio2d.html" title="NcmLHRatio2d" />
 <link rel="next" href="ch02s14.html" title="Spherical maps and Healpix" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -51,8 +51,8 @@
 <a name="NcmABC.functions" id="NcmABC.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -277,7 +277,7 @@
 <td class="property_type">
 <a class="link" href="NcmDataset.html" title="NcmDataset"><span class="type">NcmDataset</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmABC.html#NcmABC--data-set" title="The “data-set” property">data-set</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
@@ -288,7 +288,7 @@
 <td class="property_type">
 <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmABC.html#NcmABC--mset" title="The “mset” property">mset</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
@@ -299,7 +299,7 @@
 <td class="property_type">
 <a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmABC.html#NcmABC--prior" title="The “prior” property">prior</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type">
@@ -314,8 +314,8 @@
 <a name="NcmABC.other" id="NcmABC.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody><tr>
 <td class="define_keyword">#define</td>
@@ -1078,13 +1078,15 @@ if the first_id is non-zero it will run <em class="parameter"><code>n</code></em
 <a name="NcmABC--data-set" id="NcmABC--data-set"></a><h3>The <code class="literal">“data-set”</code> property</h3>
 <pre class="programlisting">  “data-set”                 <a class="link" href="NcmDataset.html" title="NcmDataset"><span class="type">NcmDataset</span></a> *</pre>
 <p>Dataset.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmABC</p>
+<p>Flags: Read / Write / Construct Only</p>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NcmABC--epsilon" id="NcmABC--epsilon"></a><h3>The <code class="literal">“epsilon”</code> property</h3>
 <pre class="programlisting">  “epsilon”                  <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>epsilon.</p>
+<p>Owner: NcmABC</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 1e+20</p>
@@ -1094,13 +1096,15 @@ if the first_id is non-zero it will run <em class="parameter"><code>n</code></em
 <a name="NcmABC--mset" id="NcmABC--mset"></a><h3>The <code class="literal">“mset”</code> property</h3>
 <pre class="programlisting">  “mset”                     <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *</pre>
 <p>Model Set.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmABC</p>
+<p>Flags: Read / Write / Construct Only</p>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NcmABC--nparticles" id="NcmABC--nparticles"></a><h3>The <code class="literal">“nparticles”</code> property</h3>
 <pre class="programlisting">  “nparticles”               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Number of particles.</p>
+<p>Owner: NcmABC</p>
 <p>Flags: Read</p>
 <p>Default value: 100</p>
 </div>
@@ -1109,18 +1113,20 @@ if the first_id is non-zero it will run <em class="parameter"><code>n</code></em
 <a name="NcmABC--prior" id="NcmABC--prior"></a><h3>The <code class="literal">“prior”</code> property</h3>
 <pre class="programlisting">  “prior”                    <a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a> *</pre>
 <p>Prior Sampler.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcmABC</p>
+<p>Flags: Read / Write / Construct Only</p>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NcmABC--trans-kernel" id="NcmABC--trans-kernel"></a><h3>The <code class="literal">“trans-kernel”</code> property</h3>
 <pre class="programlisting">  “trans-kernel”             <a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a> *</pre>
 <p>Transition Kernel.</p>
+<p>Owner: NcmABC</p>
 <p>Flags: Read / Write</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

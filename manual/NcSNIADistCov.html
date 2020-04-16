@@ -9,7 +9,7 @@
 <link rel="up" href="ch05s02.html" title="Supernova Covariance Models" />
 <link rel="prev" href="ch05s02.html" title="Supernova Covariance Models" />
 <link rel="next" href="ch06.html" title="Cosmological Calculators" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -51,8 +51,8 @@
 <a name="NcSNIADistCov.functions" id="NcSNIADistCov.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -121,7 +121,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">void</span>
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcSNIADistCov.html#nc-snia-dist-cov-calc" title="nc_snia_dist_cov_calc ()">nc_snia_dist_cov_calc</a> <span class="c_punctuation">()</span>
@@ -165,6 +165,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="NcSNIADistCov.html#nc-snia-dist-cov-alpha-beta" title="nc_snia_dist_cov_alpha_beta ()">nc_snia_dist_cov_alpha_beta</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcSNIADistCov.html#nc-snia-dist-cov-set-default-params-by-id" title="nc_snia_dist_cov_set_default_params_by_id ()">nc_snia_dist_cov_set_default_params_by_id</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 </tbody>
@@ -245,7 +253,7 @@
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcSNIADistCov.html#NcSNIADistCov--lnsigma-int-length" title="The “lnsigma-int-length” property">lnsigma-int-length</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
@@ -282,7 +290,7 @@
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcSNIADistCov.html#NcSNIADistCov--mu-length" title="The “mu-length” property">mu-length</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
+<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 </tbody>
 </table></div>
@@ -291,8 +299,8 @@
 <a name="NcSNIADistCov.other" id="NcSNIADistCov.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -597,7 +605,7 @@ nc_snia_dist_cov_prepare_if_needed (<em class="parameter"><code><a class="link" 
 <hr />
 <div class="refsect2">
 <a name="nc-snia-dist-cov-calc" id="nc-snia-dist-cov-calc"></a><h3>nc_snia_dist_cov_calc ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 nc_snia_dist_cov_calc (<em class="parameter"><code><a class="link" href="NcSNIADistCov.html" title="NcSNIADistCov"><span class="type">NcSNIADistCov</span></a> *dcov</code></em>,
                        <em class="parameter"><code><a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov"><span class="type">NcDataSNIACov</span></a> *snia_cov</code></em>,
                        <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cov</code></em>);</pre>
@@ -628,6 +636,10 @@ nc_snia_dist_cov_calc (<em class="parameter"><code><a class="link" href="NcSNIAD
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="nc-snia-dist-cov-calc.returns" id="nc-snia-dist-cov-calc.returns"></a><h4>Returns</h4>
+<p> whether the covariance was computed.</p>
 </div>
 </div>
 <hr />
@@ -874,6 +886,38 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 </table></div>
 </div>
 </div>
+<hr />
+<div class="refsect2">
+<a name="nc-snia-dist-cov-set-default-params-by-id" id="nc-snia-dist-cov-set-default-params-by-id"></a><h3>nc_snia_dist_cov_set_default_params_by_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_snia_dist_cov_set_default_params_by_id
+                               (<em class="parameter"><code><a class="link" href="NcSNIADistCov.html" title="NcSNIADistCov"><span class="type">NcSNIADistCov</span></a> *dcov</code></em>,
+                                <em class="parameter"><code><a class="link" href="numcosmo-NcDataSNIAId.html#NcDataSNIAId" title="enum NcDataSNIAId"><span class="type">NcDataSNIAId</span></a> snia_id</code></em>);</pre>
+<p>Sets the default parameters appropriated to the sample defined by <em class="parameter"><code>snia_id</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-snia-dist-cov-set-default-params-by-id.parameters" id="nc-snia-dist-cov-set-default-params-by-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dcov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcSNIADistCov.html" title="NcSNIADistCov"><span class="type">NcSNIADistCov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>snia_id</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-NcDataSNIAId.html#NcDataSNIAId" title="enum NcDataSNIAId"><span class="type">NcDataSNIAId</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
 </div>
 <div class="refsect1">
 <a name="NcSNIADistCov.other_details" id="NcSNIADistCov.other_details"></a><h2>Types and Values</h2>
@@ -1039,6 +1083,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--M1" id="NcSNIADistCov--M1"></a><h3>The <code class="literal">“M1”</code> property</h3>
 <pre class="programlisting">  “M1”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>\mathcal{M}_1.</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 <p>Default value: -19.1686</p>
 </div>
@@ -1047,6 +1092,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--M1-fit" id="NcSNIADistCov--M1-fit"></a><h3>The <code class="literal">“M1-fit”</code> property</h3>
 <pre class="programlisting">  “M1-fit”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>\mathcal{M}_1:fit.</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -1055,6 +1101,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--M2" id="NcSNIADistCov--M2"></a><h3>The <code class="literal">“M2”</code> property</h3>
 <pre class="programlisting">  “M2”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>\mathcal{M}_2.</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 <p>Default value: -19.1856</p>
 </div>
@@ -1063,6 +1110,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--M2-fit" id="NcSNIADistCov--M2-fit"></a><h3>The <code class="literal">“M2-fit”</code> property</h3>
 <pre class="programlisting">  “M2-fit”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>\mathcal{M}_2:fit.</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -1071,6 +1119,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--alpha" id="NcSNIADistCov--alpha"></a><h3>The <code class="literal">“alpha”</code> property</h3>
 <pre class="programlisting">  “alpha”                    <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>\alpha.</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0.145</p>
 </div>
@@ -1079,6 +1128,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--alpha-fit" id="NcSNIADistCov--alpha-fit"></a><h3>The <code class="literal">“alpha-fit”</code> property</h3>
 <pre class="programlisting">  “alpha-fit”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>\alpha:fit.</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -1087,6 +1137,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--beta" id="NcSNIADistCov--beta"></a><h3>The <code class="literal">“beta”</code> property</h3>
 <pre class="programlisting">  “beta”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>\beta.</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 3.16</p>
 </div>
@@ -1095,6 +1146,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--beta-fit" id="NcSNIADistCov--beta-fit"></a><h3>The <code class="literal">“beta-fit”</code> property</h3>
 <pre class="programlisting">  “beta-fit”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>\beta:fit.</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -1103,6 +1155,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--dist" id="NcSNIADistCov--dist"></a><h3>The <code class="literal">“dist”</code> property</h3>
 <pre class="programlisting">  “dist”                     <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *</pre>
 <p>Distance object.</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write / Construct</p>
 </div>
 <hr />
@@ -1110,6 +1163,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--empty-fac" id="NcSNIADistCov--empty-fac"></a><h3>The <code class="literal">“empty-fac”</code> property</h3>
 <pre class="programlisting">  “empty-fac”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Empty universe approximation factor.</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: TRUE</p>
 </div>
@@ -1118,6 +1172,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--lnsigma-int" id="NcSNIADistCov--lnsigma-int"></a><h3>The <code class="literal">“lnsigma-int”</code> property</h3>
 <pre class="programlisting">  “lnsigma-int”              <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
 <p>\ln(\sigma_{\mathrm{int}}).</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr />
@@ -1125,6 +1180,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--lnsigma-int-fit" id="NcSNIADistCov--lnsigma-int-fit"></a><h3>The <code class="literal">“lnsigma-int-fit”</code> property</h3>
 <pre class="programlisting">  “lnsigma-int-fit”          <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *</pre>
 <p>\ln(\sigma_{\mathrm{int}}):fit.</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: GVariant&lt;a*&gt;</p>
 <p>Default value: NULL</p>
@@ -1134,7 +1190,8 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--lnsigma-int-length" id="NcSNIADistCov--lnsigma-int-length"></a><h3>The <code class="literal">“lnsigma-int-length”</code> property</h3>
 <pre class="programlisting">  “lnsigma-int-length”       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>\ln(\sigma_{\mathrm{int}}):length.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcSNIADistCov</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Default value: 4</p>
 </div>
 <hr />
@@ -1142,6 +1199,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--lnsigma-lens" id="NcSNIADistCov--lnsigma-lens"></a><h3>The <code class="literal">“lnsigma-lens”</code> property</h3>
 <pre class="programlisting">  “lnsigma-lens”             <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>\ln(\sigma_{\mathrm{lens}}).</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 <p>Default value: -2.90042</p>
 </div>
@@ -1150,6 +1208,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--lnsigma-lens-fit" id="NcSNIADistCov--lnsigma-lens-fit"></a><h3>The <code class="literal">“lnsigma-lens-fit”</code> property</h3>
 <pre class="programlisting">  “lnsigma-lens-fit”         <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>\ln(\sigma_{\mathrm{lens}}):fit.</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -1158,6 +1217,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--lnsigma-pecz" id="NcSNIADistCov--lnsigma-pecz"></a><h3>The <code class="literal">“lnsigma-pecz”</code> property</h3>
 <pre class="programlisting">  “lnsigma-pecz”             <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>\ln(\sigma_{\mathrm{pecz}}).</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 <p>Default value: -7.60021</p>
 </div>
@@ -1166,6 +1226,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--lnsigma-pecz-fit" id="NcSNIADistCov--lnsigma-pecz-fit"></a><h3>The <code class="literal">“lnsigma-pecz-fit”</code> property</h3>
 <pre class="programlisting">  “lnsigma-pecz-fit”         <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>\ln(\sigma_{\mathrm{pecz}}):fit.</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -1174,6 +1235,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--mu" id="NcSNIADistCov--mu"></a><h3>The <code class="literal">“mu”</code> property</h3>
 <pre class="programlisting">  “mu”                       <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
 <p>\mu.</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr />
@@ -1181,6 +1243,7 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--mu-fit" id="NcSNIADistCov--mu-fit"></a><h3>The <code class="literal">“mu-fit”</code> property</h3>
 <pre class="programlisting">  “mu-fit”                   <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *</pre>
 <p>\mu:fit.</p>
+<p>Owner: NcSNIADistCov</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: GVariant&lt;a*&gt;</p>
 <p>Default value: NULL</p>
@@ -1190,12 +1253,13 @@ nc_snia_dist_cov_alpha_beta (<em class="parameter"><code><a class="link" href="N
 <a name="NcSNIADistCov--mu-length" id="NcSNIADistCov--mu-length"></a><h3>The <code class="literal">“mu-length”</code> property</h3>
 <pre class="programlisting">  “mu-length”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>\mu:length.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<p>Owner: NcSNIADistCov</p>
+<p>Flags: Read / Write / Construct Only</p>
 <p>Default value: 0</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

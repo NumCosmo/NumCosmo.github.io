@@ -9,7 +9,7 @@
 <link rel="up" href="ch02.html#id-1.3.2" title="Miscellaneous Objects" />
 <link rel="prev" href="NcmDiff.html" title="NcmDiff" />
 <link rel="next" href="NcmMatrix.html" title="NcmMatrix" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -55,8 +55,8 @@
 <a name="NcmVector.functions" id="NcmVector.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -548,18 +548,18 @@
 </td>
 </tr>
 <tr>
+<td class="function_type">const <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector" title="gsl_vector"><span class="returnvalue">gsl_vector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmVector.html#ncm-vector-const-gsl" title="ncm_vector_const_gsl ()">ncm_vector_const_gsl</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
 <td class="function_type">
 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmVector.html#ncm-vector-dot" title="ncm_vector_dot ()">ncm_vector_dot</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">const <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector" title="gsl_vector"><span class="returnvalue">gsl_vector</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="NcmVector.html#ncm-vector-const-gsl" title="ncm_vector_const_gsl ()">ncm_vector_const_gsl</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -697,8 +697,8 @@
 <a name="NcmVector.other" id="NcmVector.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody><tr>
 <td class="datatype_keyword">enum</td>
@@ -736,7 +736,7 @@ Also includes several vector operations.</p>
 <hr />
 <div class="refsect2">
 <a name="NCM-N2VECTOR:CAPS" id="NCM-N2VECTOR:CAPS"></a><h3>NCM_N2VECTOR()</h3>
-<pre class="programlisting">#define NCM_N2VECTOR(v) ((NcmVector *)((v)-&gt;content))
+<pre class="programlisting">#define NCM_N2VECTOR(v) ((NcmVector *) ((v)-&gt;content))
 </pre>
 </div>
 <hr />
@@ -757,7 +757,7 @@ with <em class="parameter"><code>n</code></em>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>n</p></td>
-<td class="parameter_description"><p>defines the size of the vector</p></td>
+<td class="parameter_description"><p>defines the size of the vector.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -798,12 +798,12 @@ when it is no longer necessary.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>number of doubles allocated</p></td>
+<td class="parameter_description"><p>number of doubles allocated.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>stride</p></td>
-<td class="parameter_description"><p>the step-size from one element to the next in physical memory, measured in units of double</p></td>
+<td class="parameter_description"><p>the step-size from one element to the next in physical memory, measured in units of double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -843,7 +843,7 @@ by fftw* functions.</p>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>number of doubles allocated</p></td>
+<td class="parameter_description"><p>number of doubles allocated.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -873,7 +873,7 @@ The <em class="parameter"><code>gv</code></em>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>gv</p></td>
-<td class="parameter_description"><p>vector from GNU Scientific Library (GSL) to be converted into a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>vector from <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/index.html" target="_top">GNU Scientific Library (GSL)</a> to be converted into a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -903,7 +903,7 @@ The <em class="parameter"><code>gv</code></em>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>gv</p></td>
-<td class="parameter_description"><p>vector from GNU Scientific Library (GSL) to be converted into a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>vector from <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/index.html" target="_top">GNU Scientific Library (GSL)</a> to be converted into a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -972,12 +972,12 @@ The <em class="parameter"><code>a</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>number of doubles allocated</p></td>
+<td class="parameter_description"><p>number of doubles allocated.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>stride</p></td>
-<td class="parameter_description"><p>the step-size from one element to the next in physical memory, measured in units of double</p></td>
+<td class="parameter_description"><p>the step-size from one element to the next in physical memory, measured in units of double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1015,12 +1015,12 @@ It saves <em class="parameter"><code>d</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>number of doubles allocated</p></td>
+<td class="parameter_description"><p>number of doubles allocated.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>stride</p></td>
-<td class="parameter_description"><p>the step-size from one element to the next in physical memory, measured in units of double</p></td>
+<td class="parameter_description"><p>the step-size from one element to the next in physical memory, measured in units of double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1058,12 +1058,12 @@ must not be freed during this period.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>number of doubles allocated</p></td>
+<td class="parameter_description"><p>number of doubles allocated.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>stride</p></td>
-<td class="parameter_description"><p>the step-size from one element to the next in physical memory, measured in units of double</p></td>
+<td class="parameter_description"><p>the step-size from one element to the next in physical memory, measured in units of double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1101,12 +1101,12 @@ It allocate a new vector and copy the contents of <em class="parameter"><code>d<
 </tr>
 <tr>
 <td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>number of doubles allocated</p></td>
+<td class="parameter_description"><p>number of doubles allocated.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>stride</p></td>
-<td class="parameter_description"><p>the step-size from one element to the next in physical memory, measured in units of double</p></td>
+<td class="parameter_description"><p>the step-size from one element to the next in physical memory, measured in units of double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1135,7 +1135,7 @@ memory for the vector.</p>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>var</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> of the type "ad"</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> of the type "ad".</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -1162,7 +1162,7 @@ ncm_vector_ref (<em class="parameter"><code><a class="link" href="NcmVector.html
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -1191,7 +1191,7 @@ ncm_vector_const_ref (<em class="parameter"><code>const <a class="link" href="Nc
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -1221,7 +1221,7 @@ a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>var</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> of the type "ad"</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> of the type "ad".</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -1259,12 +1259,12 @@ must not be freed during this period.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>number of doubles allocated</p></td>
+<td class="parameter_description"><p>number of doubles allocated.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>stride</p></td>
-<td class="parameter_description"><p>the step-size from one element to the next in physical memory, measured in units of double</p></td>
+<td class="parameter_description"><p>the step-size from one element to the next in physical memory, measured in units of double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1300,17 +1300,17 @@ The new vector has <em class="parameter"><code>size</code></em>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>k</p></td>
-<td class="parameter_description"><p>component index of the original vector</p></td>
+<td class="parameter_description"><p>component index of the original vector.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>number of components of the subvector</p></td>
+<td class="parameter_description"><p>number of components of the subvector.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1348,22 +1348,22 @@ The new vector has <em class="parameter"><code>size</code></em>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>k</p></td>
-<td class="parameter_description"><p>component index of the original vector</p></td>
+<td class="parameter_description"><p>component index of the original vector.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>number of components of the subvector</p></td>
+<td class="parameter_description"><p>number of components of the subvector.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>stride</p></td>
-<td class="parameter_description"><p>the step-size from one element to the next in physical memory, measured in units of double</p></td>
+<td class="parameter_description"><p>the step-size from one element to the next in physical memory, measured in units of double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1379,11 +1379,11 @@ The new vector has <em class="parameter"><code>size</code></em>
 <div class="refsect2">
 <a name="ncm-vector-get-variant" id="ncm-vector-get-variant"></a><h3>ncm_vector_get_variant ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
-ncm_vector_get_variant (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *v</code></em>);</pre>
-<p>Convert <em class="parameter"><code>v</code></em>
+ncm_vector_get_variant (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>);</pre>
+<p>Convert <em class="parameter"><code>cv</code></em>
  to a GVariant of the type "ad" without destroying the
-original vector <em class="parameter"><code>v</code></em>
-;</p>
+original vector <em class="parameter"><code>cv</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-vector-get-variant.parameters" id="ncm-vector-get-variant.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1393,8 +1393,8 @@ original vector <em class="parameter"><code>v</code></em>
 <col width="200px" class="parameters_annotations" />
 </colgroup>
 <tbody><tr>
-<td class="parameter_name"><p>v</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_name"><p>cv</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -1409,10 +1409,10 @@ original vector <em class="parameter"><code>v</code></em>
 <div class="refsect2">
 <a name="ncm-vector-peek-variant" id="ncm-vector-peek-variant"></a><h3>ncm_vector_peek_variant ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
-ncm_vector_peek_variant (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *v</code></em>);</pre>
-<p>Convert <em class="parameter"><code>v</code></em>
+ncm_vector_peek_variant (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>);</pre>
+<p>Convert <em class="parameter"><code>cv</code></em>
  to a GVariant of the type "ad" using the same memory space.
-The vector <em class="parameter"><code>v</code></em>
+The vector <em class="parameter"><code>cv</code></em>
  should not be modified during the variant existance.
 If the vector has stride != 1 then <a class="link" href="NcmVector.html#ncm-vector-get-variant" title="ncm_vector_get_variant ()"><code class="function">ncm_vector_get_variant()</code></a> is called.</p>
 <div class="refsect3">
@@ -1424,8 +1424,8 @@ If the vector has stride != 1 then <a class="link" href="NcmVector.html#ncm-vect
 <col width="200px" class="parameters_annotations" />
 </colgroup>
 <tbody><tr>
-<td class="parameter_name"><p>v</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_name"><p>cv</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -1440,11 +1440,12 @@ If the vector has stride != 1 then <a class="link" href="NcmVector.html#ncm-vect
 <div class="refsect2">
 <a name="ncm-vector-log-vals" id="ncm-vector-log-vals"></a><h3>ncm_vector_log_vals ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-ncm_vector_log_vals (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *v</code></em>,
+ncm_vector_log_vals (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>,
                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *prestr</code></em>,
                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *format</code></em>,
                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> cr</code></em>);</pre>
-<p>Log the vector values using <em class="parameter"><code>prestr</code></em>
+<p>Log the values of <em class="parameter"><code>cv</code></em>
+ using <em class="parameter"><code>prestr</code></em>
  and <em class="parameter"><code>format</code></em>
 .</p>
 <div class="refsect3">
@@ -1457,23 +1458,23 @@ ncm_vector_log_vals (<em class="parameter"><code>const <a class="link" href="Ncm
 </colgroup>
 <tbody>
 <tr>
-<td class="parameter_name"><p>v</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_name"><p>cv</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>prestr</p></td>
-<td class="parameter_description"><p>initial string</p></td>
+<td class="parameter_description"><p>initial string.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>format</p></td>
-<td class="parameter_description"><p>float format</p></td>
+<td class="parameter_description"><p>float format.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cr</p></td>
-<td class="parameter_description"><p>whether to include a cariage return</p></td>
+<td class="parameter_description"><p>whether to include a cariage return.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1484,12 +1485,15 @@ ncm_vector_log_vals (<em class="parameter"><code>const <a class="link" href="Ncm
 <div class="refsect2">
 <a name="ncm-vector-log-vals-avpb" id="ncm-vector-log-vals-avpb"></a><h3>ncm_vector_log_vals_avpb ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-ncm_vector_log_vals_avpb (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *v</code></em>,
+ncm_vector_log_vals_avpb (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>,
                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *prestr</code></em>,
                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *format</code></em>,
                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> a</code></em>,
                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> b</code></em>);</pre>
-<p>Log the vector values ($a\vec{v}+b$) using <em class="parameter"><code>prestr</code></em>
+<p>Log the values of (<em class="parameter"><code>a</code></em>
+ $\times$ <em class="parameter"><code>cv</code></em>
+ $+$ <em class="parameter"><code>b</code></em>
+) using <em class="parameter"><code>prestr</code></em>
  and <em class="parameter"><code>format</code></em>
 .</p>
 <div class="refsect3">
@@ -1502,28 +1506,28 @@ ncm_vector_log_vals_avpb (<em class="parameter"><code>const <a class="link" href
 </colgroup>
 <tbody>
 <tr>
-<td class="parameter_name"><p>v</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_name"><p>cv</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>prestr</p></td>
-<td class="parameter_description"><p>initial string</p></td>
+<td class="parameter_description"><p>initial string.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>format</p></td>
-<td class="parameter_description"><p>float format</p></td>
+<td class="parameter_description"><p>float format.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>a</p></td>
-<td class="parameter_description"><p>a double</p></td>
+<td class="parameter_description"><p>a double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>b</p></td>
-<td class="parameter_description"><p>a double</p></td>
+<td class="parameter_description"><p>a double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1534,12 +1538,14 @@ ncm_vector_log_vals_avpb (<em class="parameter"><code>const <a class="link" href
 <div class="refsect2">
 <a name="ncm-vector-log-vals-func" id="ncm-vector-log-vals-func"></a><h3>ncm_vector_log_vals_func ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-ncm_vector_log_vals_func (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *v</code></em>,
+ncm_vector_log_vals_func (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>,
                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *prestr</code></em>,
                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *format</code></em>,
                           <em class="parameter"><code><a class="link" href="NcmVector.html#NcmVectorCompFunc" title="NcmVectorCompFunc ()"><span class="type">NcmVectorCompFunc</span></a> f</code></em>,
                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
-<p>Log the vector values (f(\vec{v}_i)$) using <em class="parameter"><code>prestr</code></em>
+<p>Log the values of <em class="parameter"><code>f</code></em>
+(<em class="parameter"><code>cv</code></em>
+) using <em class="parameter"><code>prestr</code></em>
  and <em class="parameter"><code>format</code></em>
 .</p>
 <div class="refsect3">
@@ -1552,18 +1558,18 @@ ncm_vector_log_vals_func (<em class="parameter"><code>const <a class="link" href
 </colgroup>
 <tbody>
 <tr>
-<td class="parameter_name"><p>v</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_name"><p>cv</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>prestr</p></td>
-<td class="parameter_description"><p>initial string</p></td>
+<td class="parameter_description"><p>initial string.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>format</p></td>
-<td class="parameter_description"><p>float format</p></td>
+<td class="parameter_description"><p>float format.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1574,7 +1580,7 @@ ncm_vector_log_vals_func (<em class="parameter"><code>const <a class="link" href
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
 <td class="parameter_description"><p>user data used in <em class="parameter"><code>f</code></em>
-</p></td>
+.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1604,12 +1610,12 @@ if <em class="parameter"><code>cv</code></em>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>var</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> of type ad</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> of type ad.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1634,8 +1640,7 @@ $\vert\text{cv}\vert_2$.</p>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <em class="parameter"><code>NcmVector</code></em>
-</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -1650,9 +1655,13 @@ $\vert\text{cv}\vert_2$.</p>
 <a name="ncm-vector-axpy" id="ncm-vector-axpy"></a><h3>ncm_vector_axpy ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_vector_axpy (<em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv1</code></em>,
-                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> alpha</code></em>,
+                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> a</code></em>,
                  <em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv2</code></em>);</pre>
-<p>Performs the operation $y = \alpha x + y$.</p>
+<p>Performs the operation (<em class="parameter"><code>cv1</code></em>
+$=$ <em class="parameter"><code>a</code></em>
+ $\times$ <em class="parameter"><code>cv2</code></em>
+ $+$ <em class="parameter"><code>cv1</code></em>
+).</p>
 <div class="refsect3">
 <a name="ncm-vector-axpy.parameters" id="ncm-vector-axpy.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1664,17 +1673,17 @@ ncm_vector_axpy (<em class="parameter"><code><a class="link" href="NcmVector.htm
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv1</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> $y$</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
-<td class="parameter_name"><p>alpha</p></td>
-<td class="parameter_description"><p>a double $\alpha$</p></td>
+<td class="parameter_name"><p>a</p></td>
+<td class="parameter_description"><p>a constant gdouble.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cv2</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> $x$</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1687,7 +1696,7 @@ ncm_vector_axpy (<em class="parameter"><code><a class="link" href="NcmVector.htm
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_vector_cmp (<em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv1</code></em>,
                 <em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv2</code></em>);</pre>
-<p>Performs a comparison, component-wise, of the two vectors and 
+<p>Performs a comparison, component-wise, of the two vectors and
 puts the weighted difference in <em class="parameter"><code>cv1</code></em>
 .</p>
 <div class="refsect3">
@@ -1701,12 +1710,12 @@ puts the weighted difference in <em class="parameter"><code>cv1</code></em>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv1</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> $x_1$</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cv2</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> $x_2$</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1734,12 +1743,12 @@ subtraction of <em class="parameter"><code>cv1</code></em>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv1</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> $x_1$</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cv2</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> $x_2$</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1751,7 +1760,7 @@ subtraction of <em class="parameter"><code>cv1</code></em>
 <a name="ncm-vector-reciprocal" id="ncm-vector-reciprocal"></a><h3>ncm_vector_reciprocal ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_vector_reciprocal (<em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>);</pre>
-<p>Calculates the reciprocal of <em class="parameter"><code>cv1</code></em>
+<p>Calculates the reciprocal of <em class="parameter"><code>cv</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-reciprocal.parameters" id="ncm-vector-reciprocal.parameters"></a><h4>Parameters</h4>
@@ -1763,7 +1772,7 @@ ncm_vector_reciprocal (<em class="parameter"><code><a class="link" href="NcmVect
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -1785,8 +1794,7 @@ ncm_vector_sum_cpts (<em class="parameter"><code>const <a class="link" href="Ncm
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <em class="parameter"><code>NcmVector</code></em>
-</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -1801,8 +1809,8 @@ components.</p>
 <div class="refsect2">
 <a name="ncm-vector-const-new-gsl" id="ncm-vector-const-new-gsl"></a><h3>ncm_vector_const_new_gsl ()</h3>
 <pre class="programlisting">const <a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
-ncm_vector_const_new_gsl (<em class="parameter"><code>const <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector" title="gsl_vector"><span class="type">gsl_vector</span></a> *v</code></em>);</pre>
-<p>This function converts <em class="parameter"><code>v</code></em>
+ncm_vector_const_new_gsl (<em class="parameter"><code>const <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector" title="gsl_vector"><span class="type">gsl_vector</span></a> *gv</code></em>);</pre>
+<p>This function converts <span class="type">gsl_vetor</span> <em class="parameter"><code>gv</code></em>
  into a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
@@ -1814,15 +1822,15 @@ ncm_vector_const_new_gsl (<em class="parameter"><code>const <a class="link" href
 <col width="200px" class="parameters_annotations" />
 </colgroup>
 <tbody><tr>
-<td class="parameter_name"><p>v</p></td>
-<td class="parameter_description"><p>vector from GNU Scientific Library (GSL)</p></td>
+<td class="parameter_name"><p>gv</p></td>
+<td class="parameter_description"><p>constant <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector" title="gsl_vector"><span class="type">gsl_vector</span></a> from <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/index.html" target="_top">GNU Scientific Library (GSL)</a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="ncm-vector-const-new-gsl.returns" id="ncm-vector-const-new-gsl.returns"></a><h4>Returns</h4>
-<p> A new constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p>
+<p> A new constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
 </div>
 </div>
 <hr />
@@ -1842,12 +1850,12 @@ ncm_vector_get (<em class="parameter"><code>const <a class="link" href="NcmVecto
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>i</p></td>
-<td class="parameter_description"><p>component index</p></td>
+<td class="parameter_description"><p>component index.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1877,12 +1885,12 @@ ncm_vector_fast_get (<em class="parameter"><code>const <a class="link" href="Ncm
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>i</p></td>
-<td class="parameter_description"><p>component index</p></td>
+<td class="parameter_description"><p>component index.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1912,12 +1920,12 @@ ncm_vector_ptr (<em class="parameter"><code><a class="link" href="NcmVector.html
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>i</p></td>
-<td class="parameter_description"><p>component index</p></td>
+<td class="parameter_description"><p>component index.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1947,12 +1955,12 @@ ncm_vector_fast_ptr (<em class="parameter"><code><a class="link" href="NcmVector
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>i</p></td>
-<td class="parameter_description"><p>component index</p></td>
+<td class="parameter_description"><p>component index.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1971,6 +1979,34 @@ assuming stride == 1.</p>
 <pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a> *
 ncm_vector_const_ptr (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>,
                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-vector-const-ptr.parameters" id="ncm-vector-const-ptr.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cv</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>component index.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-vector-const-ptr.returns" id="ncm-vector-const-ptr.returns"></a><h4>Returns</h4>
+<p> A constant pointer to the <em class="parameter"><code>i</code></em>
+-th component of the vector <em class="parameter"><code>cv</code></em>
+.</p>
+</div>
 </div>
 <hr />
 <div class="refsect2">
@@ -1994,17 +2030,17 @@ ncm_vector_set (<em class="parameter"><code><a class="link" href="NcmVector.html
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>i</p></td>
-<td class="parameter_description"><p>component index</p></td>
+<td class="parameter_description"><p>component index.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>val</p></td>
-<td class="parameter_description"><p>a constant double</p></td>
+<td class="parameter_description"><p>a constant double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2033,17 +2069,17 @@ ncm_vector_fast_set (<em class="parameter"><code><a class="link" href="NcmVector
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>i</p></td>
-<td class="parameter_description"><p>component index</p></td>
+<td class="parameter_description"><p>component index.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>val</p></td>
-<td class="parameter_description"><p>a constant double</p></td>
+<td class="parameter_description"><p>a constant double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2059,7 +2095,7 @@ ncm_vector_addto (<em class="parameter"><code><a class="link" href="NcmVector.ht
                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> val</code></em>);</pre>
 <p>This function adds <em class="parameter"><code>val</code></em>
  to the value of the <em class="parameter"><code>i</code></em>
--th component of <em class="parameter"><code>cv</code></em>
+-th component of the vector <em class="parameter"><code>cv</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-addto.parameters" id="ncm-vector-addto.parameters"></a><h4>Parameters</h4>
@@ -2072,17 +2108,17 @@ ncm_vector_addto (<em class="parameter"><code><a class="link" href="NcmVector.ht
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>i</p></td>
-<td class="parameter_description"><p>component index</p></td>
+<td class="parameter_description"><p>component index.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>val</p></td>
-<td class="parameter_description"><p>a constant double</p></td>
+<td class="parameter_description"><p>a constant double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2137,7 +2173,7 @@ ncm_vector_subfrom (<em class="parameter"><code><a class="link" href="NcmVector.
                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> val</code></em>);</pre>
 <p>This function subtracts <em class="parameter"><code>val</code></em>
  from the value of the <em class="parameter"><code>i</code></em>
--th component of <em class="parameter"><code>cv</code></em>
+-th component of the vector <em class="parameter"><code>cv</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-subfrom.parameters" id="ncm-vector-subfrom.parameters"></a><h4>Parameters</h4>
@@ -2150,17 +2186,17 @@ ncm_vector_subfrom (<em class="parameter"><code><a class="link" href="NcmVector.
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>i</p></td>
-<td class="parameter_description"><p>component index</p></td>
+<td class="parameter_description"><p>component index.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>val</p></td>
-<td class="parameter_description"><p>a constant double</p></td>
+<td class="parameter_description"><p>a constant double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2176,7 +2212,7 @@ ncm_vector_fast_subfrom (<em class="parameter"><code><a class="link" href="NcmVe
                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> val</code></em>);</pre>
 <p>This function subtracts <em class="parameter"><code>val</code></em>
  from the value of the <em class="parameter"><code>i</code></em>
--th component of <em class="parameter"><code>cv</code></em>
+-th component of the vector <em class="parameter"><code>cv</code></em>
  assuming stride == 1.</p>
 <div class="refsect3">
 <a name="ncm-vector-fast-subfrom.parameters" id="ncm-vector-fast-subfrom.parameters"></a><h4>Parameters</h4>
@@ -2189,17 +2225,17 @@ ncm_vector_fast_subfrom (<em class="parameter"><code><a class="link" href="NcmVe
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>i</p></td>
-<td class="parameter_description"><p>component index</p></td>
+<td class="parameter_description"><p>component index.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>val</p></td>
-<td class="parameter_description"><p>a constant double</p></td>
+<td class="parameter_description"><p>a constant double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2214,7 +2250,8 @@ ncm_vector_mulby (<em class="parameter"><code><a class="link" href="NcmVector.ht
                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>,
                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> val</code></em>);</pre>
 <p>This function multiplies the <em class="parameter"><code>i</code></em>
--th component by <em class="parameter"><code>val</code></em>
+-th component of the vector <em class="parameter"><code>cv</code></em>
+ by <em class="parameter"><code>val</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-mulby.parameters" id="ncm-vector-mulby.parameters"></a><h4>Parameters</h4>
@@ -2227,17 +2264,17 @@ ncm_vector_mulby (<em class="parameter"><code><a class="link" href="NcmVector.ht
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>i</p></td>
-<td class="parameter_description"><p>component index</p></td>
+<td class="parameter_description"><p>component index.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>val</p></td>
-<td class="parameter_description"><p>a constant double</p></td>
+<td class="parameter_description"><p>a constant double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2252,7 +2289,7 @@ ncm_vector_fast_mulby (<em class="parameter"><code><a class="link" href="NcmVect
                        <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>,
                        <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> val</code></em>);</pre>
 <p>This function multiplies the <em class="parameter"><code>i</code></em>
--th component by <em class="parameter"><code>val</code></em>
+-th component of the vector by <em class="parameter"><code>val</code></em>
  assuming stride == 1.</p>
 <div class="refsect3">
 <a name="ncm-vector-fast-mulby.parameters" id="ncm-vector-fast-mulby.parameters"></a><h4>Parameters</h4>
@@ -2265,17 +2302,17 @@ ncm_vector_fast_mulby (<em class="parameter"><code><a class="link" href="NcmVect
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>i</p></td>
-<td class="parameter_description"><p>component index</p></td>
+<td class="parameter_description"><p>component index.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>val</p></td>
-<td class="parameter_description"><p>a constant double</p></td>
+<td class="parameter_description"><p>a constant double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2302,12 +2339,12 @@ ncm_vector_set_all (<em class="parameter"><code><a class="link" href="NcmVector.
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>val</p></td>
-<td class="parameter_description"><p>a constant double</p></td>
+<td class="parameter_description"><p>a constant double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2347,7 +2384,7 @@ ncm_vector_set_data (<em class="parameter"><code><a class="link" href="NcmVector
 </tr>
 <tr>
 <td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>data array size</p></td>
+<td class="parameter_description"><p>data array size.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2382,7 +2419,7 @@ ncm_vector_set_array (<em class="parameter"><code><a class="link" href="NcmVecto
 <tr>
 <td class="parameter_name"><p>array</p></td>
 <td class="parameter_description"><p>a pointer to a double <a href="/usr/share/gtk-doc/html/glib/glib-Arrays.html#GArray"><span class="type">GArray</span></a>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -2408,12 +2445,12 @@ ncm_vector_scale (<em class="parameter"><code><a class="link" href="NcmVector.ht
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>val</p></td>
-<td class="parameter_description"><p>a constant double</p></td>
+<td class="parameter_description"><p>a constant double.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2427,7 +2464,9 @@ ncm_vector_scale (<em class="parameter"><code><a class="link" href="NcmVector.ht
 ncm_vector_add_constant (<em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>,
                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> val</code></em>);</pre>
 <p>This function adds the constant <em class="parameter"><code>val</code></em>
- to all components.</p>
+ to all components of the vector <em class="parameter"><code>cv</code></em>
+.
+:w</p>
 <div class="refsect3">
 <a name="ncm-vector-add-constant.parameters" id="ncm-vector-add-constant.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2472,12 +2511,12 @@ The two vectors must have the same length.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv1</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>, numerator</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cv2</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>, denominator</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2505,12 +2544,12 @@ The two vectors must have the same length.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv1</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>, numerator</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>, numerator.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cv2</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>, denominator</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>, denominator.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2538,12 +2577,12 @@ The two vectors must have the same length.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv1</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cv2</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2571,12 +2610,12 @@ The two vectors must have the same length.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv1</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cv2</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2600,7 +2639,7 @@ ncm_vector_set_zero (<em class="parameter"><code><a class="link" href="NcmVector
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -2627,12 +2666,12 @@ The two vectors must have the same length.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv1</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cv2</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2649,7 +2688,7 @@ ncm_vector_memcpy2 (<em class="parameter"><code><a class="link" href="NcmVector.
                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> cv2_start</code></em>,
                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> size</code></em>);</pre>
 <p>This function copies <em class="parameter"><code>size</code></em>
- components of <em class="parameter"><code>cv2</code></em>
+ components of the vector <em class="parameter"><code>cv2</code></em>
 , counting from <em class="parameter"><code>cv2_start</code></em>
 ,
 to the vector <em class="parameter"><code>cv1</code></em>
@@ -2667,29 +2706,29 @@ It is useful for vectors with different sizes.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv1</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cv2</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cv1_start</p></td>
 <td class="parameter_description"><p>component of <em class="parameter"><code>cv1</code></em>
-</p></td>
+.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cv2_start</p></td>
 <td class="parameter_description"><p>component of <em class="parameter"><code>cv2</code></em>
-</p></td>
+.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>number of components</p></td>
+<td class="parameter_description"><p>number of components.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2701,7 +2740,9 @@ It is useful for vectors with different sizes.</p>
 <a name="ncm-vector-get-array" id="ncm-vector-get-array"></a><h3>ncm_vector_get_array ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
 ncm_vector_get_array (<em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns the array of <em class="parameter"><code>cv</code></em>
+. It is only applied if the vector <em class="parameter"><code>cv</code></em>
+ was created with <a class="link" href="NcmVector.html#ncm-vector-new-array" title="ncm_vector_new_array ()"><code class="function">ncm_vector_new_array()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-vector-get-array.parameters" id="ncm-vector-get-array.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2712,14 +2753,14 @@ ncm_vector_get_array (<em class="parameter"><code><a class="link" href="NcmVecto
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="ncm-vector-get-array.returns" id="ncm-vector-get-array.returns"></a><h4>Returns</h4>
-<p>FIXME. </p>
+<p>A pointer to a double GArray. </p>
 <p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
 </div>
 </div>
@@ -2728,7 +2769,8 @@ ncm_vector_get_array (<em class="parameter"><code><a class="link" href="NcmVecto
 <a name="ncm-vector-dup-array" id="ncm-vector-dup-array"></a><h3>ncm_vector_dup_array ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
 ncm_vector_dup_array (<em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>);</pre>
-<p>FIXME</p>
+<p>This function allocates a new array and copy the contents of the vector <em class="parameter"><code>cv</code></em>
+ into it. The array must not be freed.</p>
 <div class="refsect3">
 <a name="ncm-vector-dup-array.parameters" id="ncm-vector-dup-array.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2739,14 +2781,14 @@ ncm_vector_dup_array (<em class="parameter"><code><a class="link" href="NcmVecto
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="ncm-vector-dup-array.returns" id="ncm-vector-dup-array.returns"></a><h4>Returns</h4>
-<p>FIXME. </p>
+<p>A new pointer to a double GArray. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
 </div>
 </div>
@@ -2755,7 +2797,8 @@ ncm_vector_dup_array (<em class="parameter"><code><a class="link" href="NcmVecto
 <a name="ncm-vector-data" id="ncm-vector-data"></a><h3>ncm_vector_data ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a> *
 ncm_vector_data (<em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns a pointer to the vector <em class="parameter"><code>cv</code></em>
+ data.</p>
 <div class="refsect3">
 <a name="ncm-vector-data.parameters" id="ncm-vector-data.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2766,14 +2809,15 @@ ncm_vector_data (<em class="parameter"><code><a class="link" href="NcmVector.htm
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="ncm-vector-data.returns" id="ncm-vector-data.returns"></a><h4>Returns</h4>
-<p>FIXME. </p>
+<p>A pointer to <em class="parameter"><code>cv</code></em>
+data. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
@@ -2782,7 +2826,8 @@ ncm_vector_data (<em class="parameter"><code><a class="link" href="NcmVector.htm
 <a name="ncm-vector-const-data" id="ncm-vector-const-data"></a><h3>ncm_vector_const_data ()</h3>
 <pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a> *
 ncm_vector_const_data (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns a constant pointer to the vector <em class="parameter"><code>cv</code></em>
+ data.</p>
 <div class="refsect3">
 <a name="ncm-vector-const-data.parameters" id="ncm-vector-const-data.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2793,14 +2838,15 @@ ncm_vector_const_data (<em class="parameter"><code>const <a class="link" href="N
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="ncm-vector-const-data.returns" id="ncm-vector-const-data.returns"></a><h4>Returns</h4>
-<p>FIXME. </p>
+<p>A constant pointer to the vector <em class="parameter"><code>cv</code></em>
+data. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
@@ -2809,7 +2855,8 @@ ncm_vector_const_data (<em class="parameter"><code>const <a class="link" href="N
 <a name="ncm-vector-gsl" id="ncm-vector-gsl"></a><h3>ncm_vector_gsl ()</h3>
 <pre class="programlisting"><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector" title="gsl_vector"><span class="returnvalue">gsl_vector</span></a> *
 ncm_vector_gsl (<em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns a pointer to the <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector" title="gsl_vector"><span class="type">gsl_vector</span></a> associated to the vector <em class="parameter"><code>cv</code></em>
+.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-vector-gsl.parameters" id="ncm-vector-gsl.parameters"></a><h4>Parameters</h4>
@@ -2821,29 +2868,23 @@ ncm_vector_gsl (<em class="parameter"><code><a class="link" href="NcmVector.html
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="ncm-vector-gsl.returns" id="ncm-vector-gsl.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> A pointer to a <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector" title="gsl_vector"><span class="type">gsl_vector</span></a>.</p>
 </div>
-</div>
-<hr />
-<div class="refsect2">
-<a name="ncm-vector-dot" id="ncm-vector-dot"></a><h3>ncm_vector_dot ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-ncm_vector_dot (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv1</code></em>,
-                <em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv2</code></em>);</pre>
 </div>
 <hr />
 <div class="refsect2">
 <a name="ncm-vector-const-gsl" id="ncm-vector-const-gsl"></a><h3>ncm_vector_const_gsl ()</h3>
 <pre class="programlisting">const <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector" title="gsl_vector"><span class="returnvalue">gsl_vector</span></a> *
 ncm_vector_const_gsl (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns a constant pointer to the <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector" title="gsl_vector"><span class="type">gsl_vector</span></a> associated to the vector <em class="parameter"><code>cv</code></em>
+.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-vector-const-gsl.parameters" id="ncm-vector-const-gsl.parameters"></a><h4>Parameters</h4>
@@ -2855,14 +2896,50 @@ ncm_vector_const_gsl (<em class="parameter"><code>const <a class="link" href="Nc
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="ncm-vector-const-gsl.returns" id="ncm-vector-const-gsl.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> A constant pointer to a <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector" title="gsl_vector"><span class="type">gsl_vector</span></a>.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-vector-dot" id="ncm-vector-dot"></a><h3>ncm_vector_dot ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_vector_dot (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv1</code></em>,
+                <em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv2</code></em>);</pre>
+<p>This function returns the dot product of the <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> <em class="parameter"><code>cv1</code></em>
+ and <em class="parameter"><code>cv2</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-vector-dot.parameters" id="ncm-vector-dot.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cv1</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cv2</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-vector-dot.returns" id="ncm-vector-dot.returns"></a><h4>Returns</h4>
+<p> $\vec{v}_1 \cdot \vec{v}_2$.</p>
 </div>
 </div>
 <hr />
@@ -2870,7 +2947,8 @@ ncm_vector_const_gsl (<em class="parameter"><code>const <a class="link" href="Nc
 <a name="ncm-vector-len" id="ncm-vector-len"></a><h3>ncm_vector_len ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 ncm_vector_len (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>);</pre>
-<p>FIXME</p>
+<p>Compute the number of components in the <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> <em class="parameter"><code>cv</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-vector-len.parameters" id="ncm-vector-len.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2881,14 +2959,15 @@ ncm_vector_len (<em class="parameter"><code>const <a class="link" href="NcmVecto
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="ncm-vector-len.returns" id="ncm-vector-len.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> the number of components in <em class="parameter"><code>cv</code></em>
+.</p>
 </div>
 </div>
 <hr />
@@ -2896,7 +2975,8 @@ ncm_vector_len (<em class="parameter"><code>const <a class="link" href="NcmVecto
 <a name="ncm-vector-stride" id="ncm-vector-stride"></a><h3>ncm_vector_stride ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 ncm_vector_stride (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns the stride of <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> <em class="parameter"><code>cv</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-vector-stride.parameters" id="ncm-vector-stride.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2907,14 +2987,15 @@ ncm_vector_stride (<em class="parameter"><code>const <a class="link" href="NcmVe
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="ncm-vector-stride.returns" id="ncm-vector-stride.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> The stride of <em class="parameter"><code>cv</code></em>
+.</p>
 </div>
 </div>
 <hr />
@@ -2933,8 +3014,7 @@ ncm_vector_get_max (<em class="parameter"><code>const <a class="link" href="NcmV
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <em class="parameter"><code>NcmVector</code></em>
-.</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -2960,8 +3040,7 @@ ncm_vector_get_min (<em class="parameter"><code>const <a class="link" href="NcmV
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <em class="parameter"><code>NcmVector</code></em>
-.</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -2987,8 +3066,7 @@ ncm_vector_get_max_index (<em class="parameter"><code>const <a class="link" href
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <em class="parameter"><code>NcmVector</code></em>
-.</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -3014,8 +3092,7 @@ ncm_vector_get_min_index (<em class="parameter"><code>const <a class="link" href
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <em class="parameter"><code>NcmVector</code></em>
-.</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -3044,8 +3121,7 @@ ncm_vector_get_minmax (<em class="parameter"><code>const <a class="link" href="N
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <em class="parameter"><code>NcmVector</code></em>
-.</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -3081,8 +3157,7 @@ Otherwise returns TRUE;</p>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <em class="parameter"><code>NcmVector</code></em>
-.</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -3100,7 +3175,8 @@ are finite.</p>
 ncm_vector_get_absminmax (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>,
                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *absmin</code></em>,
                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *absmax</code></em>);</pre>
-<p>Gets the minimum/maximum absolute value of the vector components.</p>
+<p>Gets the minimum/maximum absolute value of <em class="parameter"><code>cv</code></em>
+ components.</p>
 <div class="refsect3">
 <a name="ncm-vector-get-absminmax.parameters" id="ncm-vector-get-absminmax.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -3112,8 +3188,7 @@ ncm_vector_get_absminmax (<em class="parameter"><code>const <a class="link" href
 <tbody>
 <tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <em class="parameter"><code>NcmVector</code></em>
-.</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -3149,7 +3224,7 @@ ncm_vector_dup (<em class="parameter"><code>const <a class="link" href="NcmVecto
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -3164,8 +3239,8 @@ ncm_vector_dup (<em class="parameter"><code>const <a class="link" href="NcmVecto
 <div class="refsect2">
 <a name="ncm-vector-substitute" id="ncm-vector-substitute"></a><h3>ncm_vector_substitute ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-ncm_vector_substitute (<em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> **cv</code></em>,
-                       <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *nv</code></em>,
+ncm_vector_substitute (<em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> **cv1</code></em>,
+                       <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv2</code></em>,
                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> check_size</code></em>);</pre>
 <p>This function substitute the vector *<em class="parameter"><code>cv</code></em>
  by <em class="parameter"><code>nv</code></em>
@@ -3184,18 +3259,18 @@ same size.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_name"><p>cv1</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
-<td class="parameter_name"><p>nv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_name"><p>cv2</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>check_size</p></td>
-<td class="parameter_description"><p>whether to check vector size</p></td>
+<td class="parameter_description"><p>whether to check vector size.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -3221,7 +3296,7 @@ all memory allocated by <em class="parameter"><code>cv</code></em>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -3246,7 +3321,7 @@ all memory allocated by <em class="parameter"><code>cv</code></em>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -3271,7 +3346,7 @@ all memory allocated by <em class="parameter"><code>cv</code></em>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
-<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -3282,7 +3357,7 @@ all memory allocated by <em class="parameter"><code>cv</code></em>
 <a name="NcmVector.other_details" id="NcmVector.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
 <a name="NcmVectorInternal" id="NcmVectorInternal"></a><h3>enum NcmVectorInternal</h3>
-<p>FIXME</p>
+<p>This enumerator is only used internally. Only by developers.</p>
 <div class="refsect3">
 <a name="NcmVectorInternal.members" id="NcmVectorInternal.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -3295,35 +3370,35 @@ all memory allocated by <em class="parameter"><code>cv</code></em>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-VECTOR-SLICE:CAPS" id="NCM-VECTOR-SLICE:CAPS"></a>NCM_VECTOR_SLICE</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses <a class="ulink" href="https://developer.gnome.org/glib/stable/glib-Memory-Slices.html" target="_top">g_slice_*</a> family functions from <a class="ulink" href="https://developer.gnome.org/glib/" target="_top">Glib</a> to alloc and free memory segments.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-VECTOR-GSL-VECTOR:CAPS" id="NCM-VECTOR-GSL-VECTOR:CAPS"></a>NCM_VECTOR_GSL_VECTOR</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/vectors.html#vectors" target="_top">gsl_vector</a> from <a class="ulink" href="https://www.gnu.org/software/gsl/" target="_top">GSL</a> as the base object.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-VECTOR-MALLOC:CAPS" id="NCM-VECTOR-MALLOC:CAPS"></a>NCM_VECTOR_MALLOC</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses <a class="ulink" href="https://en.wikipedia.org/wiki/C_dynamic_memory_allocation" target="_top">malloc</a> for memory allocation and free functions.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-VECTOR-ARRAY:CAPS" id="NCM-VECTOR-ARRAY:CAPS"></a>NCM_VECTOR_ARRAY</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses <a class="ulink" href="https://developer.gnome.org/glib/stable/glib-Arrays.html" target="_top">g_array</a> from <a class="ulink" href="https://developer.gnome.org/glib/" target="_top">Glib</a> as base.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-VECTOR-DERIVED:CAPS" id="NCM-VECTOR-DERIVED:CAPS"></a>NCM_VECTOR_DERIVED</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses another <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> (for example, if it is getting a subvector from a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>).</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3338,6 +3413,7 @@ all memory allocated by <em class="parameter"><code>cv</code></em>
 <a name="NcmVector--values" id="NcmVector--values"></a><h3>The <code class="literal">“values”</code> property</h3>
 <pre class="programlisting">  “values”                   <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *</pre>
 <p>values.</p>
+<p>Owner: NcmVector</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: GVariant&lt;a*&gt;</p>
 <p>Default value: NULL</p>
@@ -3345,6 +3421,6 @@ all memory allocated by <em class="parameter"><code>cv</code></em>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>

@@ -9,7 +9,7 @@
 <link rel="up" href="ch03.html" title="Cosmological Models" />
 <link rel="prev" href="ch03.html" title="Cosmological Models" />
 <link rel="next" href="numcosmo-NcHICosmoPrior.html" title="NcHICosmoPrior" />
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -50,8 +50,8 @@
 <a name="NcHICosmo.functions" id="NcHICosmo.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return" />
-<col class="functions_name" />
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -116,6 +116,14 @@
 </td>
 <td class="function_name">
 <span class="c_punctuation">(</span><a class="link" href="NcHICosmo.html#NcHICosmoFuncMassNuInfo" title="NcHICosmoFuncMassNuInfo ()">*NcHICosmoFuncMassNuInfo</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="NcHICosmo.html#NcHICosmoGetBGVar" title="NcHICosmoGetBGVar ()">*NcHICosmoGetBGVar</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -396,6 +404,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="NcHICosmo.html#nc-hicosmo-set-MassNuInfo-impl" title="nc_hicosmo_set_MassNuInfo_impl ()">nc_hicosmo_set_MassNuInfo_impl</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHICosmo.html#nc-hicosmo-set-get-bg-var-impl" title="nc_hicosmo_set_get_bg_var_impl ()">nc_hicosmo_set_get_bg_var_impl</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -936,6 +952,14 @@
 </tr>
 <tr>
 <td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHICosmo.html#nc-hicosmo-get-bg-var" title="nc_hicosmo_get_bg_var ()">nc_hicosmo_get_bg_var</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
@@ -1053,8 +1077,8 @@
 <a name="NcHICosmo.other" id="NcHICosmo.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name" />
-<col class="description" />
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
 </colgroup>
 <tbody>
 <tr>
@@ -1170,7 +1194,7 @@
 </div>
 <div class="refsect1">
 <a name="NcHICosmo.object-hierarchy" id="NcHICosmo.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GFlags</a>
     <span class="lineart">╰──</span> NcHICosmoImpl
     <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmModel.html" title="NcmModel">NcmModel</a>
@@ -1183,6 +1207,7 @@
             <span class="lineart">├──</span> <a class="link" href="NcHICosmoQConst.html" title="NcHICosmoQConst">NcHICosmoQConst</a>
             <span class="lineart">├──</span> <a class="link" href="NcHICosmoQGRW.html" title="NcHICosmoQGRW">NcHICosmoQGRW</a>
             <span class="lineart">├──</span> <a class="link" href="NcHICosmoQLinear.html" title="NcHICosmoQLinear">NcHICosmoQLinear</a>
+            <span class="lineart">├──</span> <a class="link" href="NcHICosmoQRBFRprior.html#NcHICosmoQRBF">NcHICosmoQRBF</a>
             <span class="lineart">╰──</span> <a class="link" href="NcPriorQSplineCont.html#NcHICosmoQSpline">NcHICosmoQSpline</a>
 </pre>
 </div>
@@ -1250,6 +1275,14 @@
                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *T_0</code></em>,
                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *xi</code></em>,
                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *g</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHICosmoGetBGVar" id="NcHICosmoGetBGVar"></a><h3>NcHICosmoGetBGVar ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*NcHICosmoGetBGVar<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> t</code></em>,
+                      <em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>);</pre>
 </div>
 <hr />
 <div class="refsect2">
@@ -2316,6 +2349,37 @@ nc_hicosmo_set_MassNuInfo_impl (<em class="parameter"><code><span class="type">N
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="nc-hicosmo-set-MassNuInfo-impl.parameters" id="nc-hicosmo-set-MassNuInfo-impl.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>model_class</p></td>
+<td class="parameter_description"><p>a <span class="type">NcmModelClass</span></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>f</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hicosmo-set-get-bg-var-impl" id="nc-hicosmo-set-get-bg-var-impl"></a><h3>nc_hicosmo_set_get_bg_var_impl ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hicosmo_set_get_bg_var_impl (<em class="parameter"><code><span class="type">NcHICosmoClass</span> *model_class</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcHICosmo.html#NcHICosmoGetBGVar" title="NcHICosmoGetBGVar ()"><span class="type">NcHICosmoGetBGVar</span></a> f</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="nc-hicosmo-set-get-bg-var-impl.parameters" id="nc-hicosmo-set-get-bg-var-impl.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name" />
@@ -4324,6 +4388,27 @@ nc_hicosmo_Dc (<em class="parameter"><code><a class="link" href="NcHICosmo.html"
 <a name="nc-hicosmo-NMassNu" id="nc-hicosmo-NMassNu"></a><h3>nc_hicosmo_NMassNu ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 nc_hicosmo_NMassNu (<em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> NMassNu]</span></p>
+<div class="refsect3">
+<a name="nc-hicosmo-NMassNu.parameters" id="nc-hicosmo-NMassNu.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hicosmo-NMassNu.returns" id="nc-hicosmo-NMassNu.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
 </div>
 <hr />
 <div class="refsect2">
@@ -4335,6 +4420,50 @@ nc_hicosmo_MassNuInfo (<em class="parameter"><code><a class="link" href="NcHICos
                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *T_0</code></em>,
                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *xi</code></em>,
                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *g</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> MassNuInfo]</span></p>
+<div class="refsect3">
+<a name="nc-hicosmo-MassNuInfo.parameters" id="nc-hicosmo-MassNuInfo.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>nu_i</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mass_eV</p></td>
+<td class="parameter_description"><p>FIXME. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>T_0</p></td>
+<td class="parameter_description"><p>FIXME. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xi</p></td>
+<td class="parameter_description"><p>FIXME. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>g</p></td>
+<td class="parameter_description"><p>FIXME. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 <hr />
 <div class="refsect2">
@@ -4360,6 +4489,42 @@ nc_hicosmo_Neff (<em class="parameter"><code><a class="link" href="NcHICosmo.htm
 <div class="refsect3">
 <a name="nc-hicosmo-Neff.returns" id="nc-hicosmo-Neff.returns"></a><h4>Returns</h4>
 <p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hicosmo-get-bg-var" id="nc-hicosmo-get-bg-var"></a><h3>nc_hicosmo_get_bg_var ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hicosmo_get_bg_var (<em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> t</code></em>,
+                       <em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>);</pre>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_bg_var]</span></p>
+<div class="refsect3">
+<a name="nc-hicosmo-get-bg-var.parameters" id="nc-hicosmo-get-bg-var.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>t</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
 </div>
 </div>
 <hr />
@@ -5057,6 +5222,13 @@ nc_hicosmo_sigma8 (<em class="parameter"><code><a class="link" href="NcHICosmo.h
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HICOSMO-IMPL-get-bg-var" id="NC-HICOSMO-IMPL-get-bg-var"></a>NC_HICOSMO_IMPL_get_bg_var</p></td>
+<td class="enum_member_description">
+<p>Background variables interface for perturbations</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -5220,6 +5392,6 @@ nc_hicosmo_sigma8 (<em class="parameter"><code><a class="link" href="NcHICosmo.h
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.29</div>
+<hr />Generated by GTK-Doc V1.32.1</div>
 </div></div></body>
 </html>
