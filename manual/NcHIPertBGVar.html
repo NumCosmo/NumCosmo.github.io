@@ -1,0 +1,1379 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcHIPertComp: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch07.html" title="Perturbations" />
+<link rel="prev" href="NcHIPert.html" title="NcHIPert" />
+<link rel="next" href="NcHIPertWKB.html" title="NcHIPertWKB" />
+<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcHIPertBGVar.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcHIPertBGVar.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcHIPertBGVar.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch07.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcHIPert.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcHIPertWKB.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcHIPertBGVar" id="NcHIPertBGVar"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcHIPertBGVar.top_of_page" id="NcHIPertBGVar.top_of_page"></a>NcHIPertComp</span></h2>
+<p>NcHIPertComp — Perturbation background variables transport object</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcHIPertBGVar.functions" id="NcHIPertBGVar.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-class-register-id" title="nc_hipert_bg_var_class_register_id ()">nc_hipert_bg_var_class_register_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarID" title="NcHIPertBGVarID"><span class="returnvalue">NcHIPertBGVarID</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-class-get-id-by-gtype" title="nc_hipert_bg_var_class_get_id_by_gtype ()">nc_hipert_bg_var_class_get_id_by_gtype</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarID" title="NcHIPertBGVarID"><span class="returnvalue">NcHIPertBGVarID</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-class-get-id-by-ns" title="nc_hipert_bg_var_class_get_id_by_ns ()">nc_hipert_bg_var_class_get_id_by_ns</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#NC-HIPERT-BG-VAR-ID-FUNC:CAPS" title="NC_HIPERT_BG_VAR_ID_FUNC()">NC_HIPERT_BG_VAR_ID_FUNC</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#NC-HIPERT-BG-VAR-ID-FUNC-DECL:CAPS" title="NC_HIPERT_BG_VAR_ID_FUNC_DECL()">NC_HIPERT_BG_VAR_ID_FUNC_DECL</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#NC-HIPERT-BG-VAR-ID-FUNC-IMPL:CAPS" title="NC_HIPERT_BG_VAR_ID_FUNC_IMPL()">NC_HIPERT_BG_VAR_ID_FUNC_IMPL</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="returnvalue">NcHIPertBGVarYDY</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-ydy-new" title="nc_hipert_bg_var_ydy_new ()">nc_hipert_bg_var_ydy_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="returnvalue">NcHIPertBGVarYDY</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-ydy-dup" title="nc_hipert_bg_var_ydy_dup ()">nc_hipert_bg_var_ydy_dup</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-ydy-free" title="nc_hipert_bg_var_ydy_free ()">nc_hipert_bg_var_ydy_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-ydy-get-y-i" title="nc_hipert_bg_var_ydy_get_y_i ()">nc_hipert_bg_var_ydy_get_y_i</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-ydy-set-dy-i" title="nc_hipert_bg_var_ydy_set_dy_i ()">nc_hipert_bg_var_ydy_set_dy_i</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-ydy-get-dy-i" title="nc_hipert_bg_var_ydy_get_dy_i ()">nc_hipert_bg_var_ydy_get_dy_i</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="returnvalue">NcHIPertBGVar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-new" title="nc_hipert_bg_var_new ()">nc_hipert_bg_var_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="returnvalue">NcHIPertBGVar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-new-full" title="nc_hipert_bg_var_new_full ()">nc_hipert_bg_var_new_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="returnvalue">NcHIPertBGVar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-ref" title="nc_hipert_bg_var_ref ()">nc_hipert_bg_var_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-free" title="nc_hipert_bg_var_free ()">nc_hipert_bg_var_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-clear" title="nc_hipert_bg_var_clear ()">nc_hipert_bg_var_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-prepare" title="nc_hipert_bg_var_prepare ()">nc_hipert_bg_var_prepare</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-prepare-if-needed" title="nc_hipert_bg_var_prepare_if_needed ()">nc_hipert_bg_var_prepare_if_needed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-set-dist" title="nc_hipert_bg_var_set_dist ()">nc_hipert_bg_var_set_dist</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-set-recomb" title="nc_hipert_bg_var_set_recomb ()">nc_hipert_bg_var_set_recomb</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-set-scalefactor" title="nc_hipert_bg_var_set_scalefactor ()">nc_hipert_bg_var_set_scalefactor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcDistance.html" title="NcDistance"><span class="returnvalue">NcDistance</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-get-dist" title="nc_hipert_bg_var_get_dist ()">nc_hipert_bg_var_get_dist</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcRecomb.html" title="NcRecomb"><span class="returnvalue">NcRecomb</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-get-recomb" title="nc_hipert_bg_var_get_recomb ()">nc_hipert_bg_var_get_recomb</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="returnvalue">NcScalefactor</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-get-scalefactor" title="nc_hipert_bg_var_get_scalefactor ()">nc_hipert_bg_var_get_scalefactor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcDistance.html" title="NcDistance"><span class="returnvalue">NcDistance</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-peek-dist" title="nc_hipert_bg_var_peek_dist ()">nc_hipert_bg_var_peek_dist</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcRecomb.html" title="NcRecomb"><span class="returnvalue">NcRecomb</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-peek-recomb" title="nc_hipert_bg_var_peek_recomb ()">nc_hipert_bg_var_peek_recomb</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="returnvalue">NcScalefactor</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-peek-scalefactor" title="nc_hipert_bg_var_peek_scalefactor ()">nc_hipert_bg_var_peek_scalefactor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-set-zf" title="nc_hipert_bg_var_set_zf ()">nc_hipert_bg_var_set_zf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-get-zf" title="nc_hipert_bg_var_get_zf ()">nc_hipert_bg_var_get_zf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-len" title="nc_hipert_bg_var_len ()">nc_hipert_bg_var_len</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-activate-id" title="nc_hipert_bg_var_activate_id ()">nc_hipert_bg_var_activate_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-activate-id-array" title="nc_hipert_bg_var_activate_id_array ()">nc_hipert_bg_var_activate_id_array</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertBGVar.properties" id="NcHIPertBGVar.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *</td>
+<td class="property_name"><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVar--distance" title="The “distance” property">distance</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *</td>
+<td class="property_name"><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVar--recomb" title="The “recomb” property">recomb</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="type">NcScalefactor</span></a> *</td>
+<td class="property_name"><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVar--scalefactor" title="The “scalefactor” property">scalefactor</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVar--zf" title="The “zf” property">zf</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="NcHIPertBGVarYDY" id="NcHIPertBGVarYDY"></a><div class="refsect1">
+<a name="NcHIPertBGVar.other" id="NcHIPertBGVar.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarID" title="NcHIPertBGVarID">NcHIPertBGVarID</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarDesc" title="struct NcHIPertBGVarDesc">NcHIPertBGVarDesc</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY-struct" title="struct NcHIPertBGVarYDY">NcHIPertBGVarYDY</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcHIPertBGVar.html#NC-HIPERT-BG-VAR-DEFAULT-ZF:CAPS" title="NC_HIPERT_BG_VAR_DEFAULT_ZF">NC_HIPERT_BG_VAR_DEFAULT_ZF</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertBGVar.object-hierarchy" id="NcHIPertBGVar.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
+    <span class="lineart">╰──</span> NcHIPertBGVarYDY
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcHIPertBGVar
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcHIPertBGVar.description" id="NcHIPertBGVar.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcHIPertBGVar.functions_details" id="NcHIPertBGVar.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="nc-hipert-bg-var-class-register-id" id="nc-hipert-bg-var-class-register-id"></a><h3>nc_hipert_bg_var_class_register_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_bg_var_class_register_id (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *ns</code></em>,
+                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *desc</code></em>,
+                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *long_desc</code></em>,
+                                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> cstruct_size</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-class-register-id.parameters" id="nc-hipert-bg-var-class-register-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ns</p></td>
+<td class="parameter_description"><p>object namespace</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>desc</p></td>
+<td class="parameter_description"><p>short description</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>long_desc</p></td>
+<td class="parameter_description"><p>long description</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cstruct_size</p></td>
+<td class="parameter_description"><p>component struct size</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-class-get-id-by-gtype" id="nc-hipert-bg-var-class-get-id-by-gtype"></a><h3>nc_hipert_bg_var_class_get_id_by_gtype ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarID" title="NcHIPertBGVarID"><span class="returnvalue">NcHIPertBGVarID</span></a>
+nc_hipert_bg_var_class_get_id_by_gtype
+                               (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> gt</code></em>);</pre>
+<p>Gets the id associated with the GType <em class="parameter"><code>gt</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-class-get-id-by-gtype.parameters" id="nc-hipert-bg-var-class-get-id-by-gtype.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>gt</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-class-get-id-by-gtype.returns" id="nc-hipert-bg-var-class-get-id-by-gtype.returns"></a><h4>Returns</h4>
+<p> the id of <em class="parameter"><code>gt</code></em>
+.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-class-get-id-by-ns" id="nc-hipert-bg-var-class-get-id-by-ns"></a><h3>nc_hipert_bg_var_class_get_id_by_ns ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarID" title="NcHIPertBGVarID"><span class="returnvalue">NcHIPertBGVarID</span></a>
+nc_hipert_bg_var_class_get_id_by_ns (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *ns</code></em>);</pre>
+<p>Gets the id associated with the namespace <em class="parameter"><code>ns</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-class-get-id-by-ns.parameters" id="nc-hipert-bg-var-class-get-id-by-ns.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ns</p></td>
+<td class="parameter_description"><p>an object namespace</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-class-get-id-by-ns.returns" id="nc-hipert-bg-var-class-get-id-by-ns.returns"></a><h4>Returns</h4>
+<p> the id of <em class="parameter"><code>ns</code></em>
+.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-HIPERT-BG-VAR-ID-FUNC:CAPS" id="NC-HIPERT-BG-VAR-ID-FUNC:CAPS"></a><h3>NC_HIPERT_BG_VAR_ID_FUNC()</h3>
+<pre class="programlisting">#define NC_HIPERT_BG_VAR_ID_FUNC(obj_ns) obj_ns##_id
+</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="NC-HIPERT-BG-VAR-ID-FUNC.parameters" id="NC-HIPERT-BG-VAR-ID-FUNC.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>obj_ns</p></td>
+<td class="parameter_description"><p>object namespace</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-HIPERT-BG-VAR-ID-FUNC-DECL:CAPS" id="NC-HIPERT-BG-VAR-ID-FUNC-DECL:CAPS"></a><h3>NC_HIPERT_BG_VAR_ID_FUNC_DECL()</h3>
+<pre class="programlisting">#define NC_HIPERT_BG_VAR_ID_FUNC_DECL(obj_ns) NcHIPertBGVarID NC_HIPERT_BG_VAR_ID_FUNC(obj_ns) (void) G_GNUC_CONST
+</pre>
+<p>Declare the id function associated with <em class="parameter"><code>obj_ns</code></em>
+.</p>
+<div class="refsect3">
+<a name="NC-HIPERT-BG-VAR-ID-FUNC-DECL.parameters" id="NC-HIPERT-BG-VAR-ID-FUNC-DECL.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>obj_ns</p></td>
+<td class="parameter_description"><p>object namespace</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-HIPERT-BG-VAR-ID-FUNC-IMPL:CAPS" id="NC-HIPERT-BG-VAR-ID-FUNC-IMPL:CAPS"></a><h3>NC_HIPERT_BG_VAR_ID_FUNC_IMPL()</h3>
+<pre class="programlisting">#define             NC_HIPERT_BG_VAR_ID_FUNC_IMPL(obj_ns,ns)</pre>
+<p>The implementation of the id function associated with <em class="parameter"><code>obj_ns</code></em>
+.</p>
+<div class="refsect3">
+<a name="NC-HIPERT-BG-VAR-ID-FUNC-IMPL.parameters" id="NC-HIPERT-BG-VAR-ID-FUNC-IMPL.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>obj_ns</p></td>
+<td class="parameter_description"><p>object namespace</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ns</p></td>
+<td class="parameter_description"><p>namespace</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-ydy-new" id="nc-hipert-bg-var-ydy-new"></a><h3>nc_hipert_bg_var_ydy_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="returnvalue">NcHIPertBGVarYDY</span></a> *
+nc_hipert_bg_var_ydy_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="type">NcHIPertBGVarYDY</span></a> with all
+entries set to zero.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-ydy-new.returns" id="nc-hipert-bg-var-ydy-new.returns"></a><h4>Returns</h4>
+<p>a new <a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="type">NcHIPertBGVarYDY</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-ydy-dup" id="nc-hipert-bg-var-ydy-dup"></a><h3>nc_hipert_bg_var_ydy_dup ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="returnvalue">NcHIPertBGVarYDY</span></a> *
+nc_hipert_bg_var_ydy_dup (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="type">NcHIPertBGVarYDY</span></a> *ydy</code></em>);</pre>
+<p>Duplicates <em class="parameter"><code>ydy</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-ydy-dup.parameters" id="nc-hipert-bg-var-ydy-dup.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ydy</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="type">NcHIPertBGVarYDY</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-ydy-dup.returns" id="nc-hipert-bg-var-ydy-dup.returns"></a><h4>Returns</h4>
+<p>a copy of <em class="parameter"><code>ydy</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-ydy-free" id="nc-hipert-bg-var-ydy-free"></a><h3>nc_hipert_bg_var_ydy_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_bg_var_ydy_free (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="type">NcHIPertBGVarYDY</span></a> *ydy</code></em>);</pre>
+<p>Frees <em class="parameter"><code>ydy</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-ydy-free.parameters" id="nc-hipert-bg-var-ydy-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ydy</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="type">NcHIPertBGVarYDY</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-ydy-get-y-i" id="nc-hipert-bg-var-ydy-get-y-i"></a><h3>nc_hipert_bg_var_ydy_get_y_i ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_hipert_bg_var_ydy_get_y_i (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="type">NcHIPertBGVarYDY</span></a> *ydy</code></em>,
+                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
+<p>Gets the <em class="parameter"><code>i</code></em>
+-th variable.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-ydy-get-y-i.parameters" id="nc-hipert-bg-var-ydy-get-y-i.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ydy</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="type">NcHIPertBGVarYDY</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>variable index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-ydy-get-y-i.returns" id="nc-hipert-bg-var-ydy-get-y-i.returns"></a><h4>Returns</h4>
+<p> the value of the <em class="parameter"><code>i</code></em>
+-th variable.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-ydy-set-dy-i" id="nc-hipert-bg-var-ydy-set-dy-i"></a><h3>nc_hipert_bg_var_ydy_set_dy_i ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_bg_var_ydy_set_dy_i (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="type">NcHIPertBGVarYDY</span></a> *ydy</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>,
+                               <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> dy_i</code></em>);</pre>
+<p>Sets the <em class="parameter"><code>i</code></em>
+-th variable derivative to <em class="parameter"><code>dy_i</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-ydy-set-dy-i.parameters" id="nc-hipert-bg-var-ydy-set-dy-i.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ydy</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="type">NcHIPertBGVarYDY</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>variable index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dy_i</p></td>
+<td class="parameter_description"><p>the value of the <em class="parameter"><code>i</code></em>
+-th variable derivative</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-ydy-get-dy-i" id="nc-hipert-bg-var-ydy-get-dy-i"></a><h3>nc_hipert_bg_var_ydy_get_dy_i ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_hipert_bg_var_ydy_get_dy_i (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="type">NcHIPertBGVarYDY</span></a> *ydy</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
+<p>Gets the <em class="parameter"><code>i</code></em>
+-th variable derivative.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-ydy-get-dy-i.parameters" id="nc-hipert-bg-var-ydy-get-dy-i.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ydy</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="type">NcHIPertBGVarYDY</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>variable index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-ydy-get-dy-i.returns" id="nc-hipert-bg-var-ydy-get-dy-i.returns"></a><h4>Returns</h4>
+<p> the value of the <em class="parameter"><code>i</code></em>
+-th variable derivative.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-new" id="nc-hipert-bg-var-new"></a><h3>nc_hipert_bg_var_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="returnvalue">NcHIPertBGVar</span></a> *
+nc_hipert_bg_var_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a>.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-new.returns" id="nc-hipert-bg-var-new.returns"></a><h4>Returns</h4>
+<p>the newly instantiated <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-new-full" id="nc-hipert-bg-var-new-full"></a><h3>nc_hipert_bg_var_new_full ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="returnvalue">NcHIPertBGVar</span></a> *
+nc_hipert_bg_var_new_full (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="type">NcScalefactor</span></a> *a</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-ref" id="nc-hipert-bg-var-ref"></a><h3>nc_hipert_bg_var_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="returnvalue">NcHIPertBGVar</span></a> *
+nc_hipert_bg_var_ref (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>bg_var</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-ref.parameters" id="nc-hipert-bg-var-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-ref.returns" id="nc-hipert-bg-var-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>bg_var</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-free" id="nc-hipert-bg-var-free"></a><h3>nc_hipert_bg_var_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_bg_var_free (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>bg_var</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-free.parameters" id="nc-hipert-bg-var-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-clear" id="nc-hipert-bg-var-clear"></a><h3>nc_hipert_bg_var_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_bg_var_clear (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> **bg_var</code></em>);</pre>
+<p>Decreases the reference count of *<em class="parameter"><code>bg_var</code></em>
+ and sets the pointer *<em class="parameter"><code>bg_var</code></em>
+ to NULL.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-clear.parameters" id="nc-hipert-bg-var-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-prepare" id="nc-hipert-bg-var-prepare"></a><h3>nc_hipert_bg_var_prepare ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_bg_var_prepare (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>,
+                          <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
+<p>Prepares all computation objects inside <em class="parameter"><code>bg_var</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-prepare.parameters" id="nc-hipert-bg-var-prepare.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-prepare-if-needed" id="nc-hipert-bg-var-prepare-if-needed"></a><h3>nc_hipert_bg_var_prepare_if_needed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_bg_var_prepare_if_needed (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>,
+                                    <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
+<p>Prepares all computation objects inside <em class="parameter"><code>bg_var</code></em>
+ if necessary.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-prepare-if-needed.parameters" id="nc-hipert-bg-var-prepare-if-needed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-set-dist" id="nc-hipert-bg-var-set-dist"></a><h3>nc_hipert_bg_var_set_dist ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_bg_var_set_dist (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>);</pre>
+<p>Sets the <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> object.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-set-dist.parameters" id="nc-hipert-bg-var-set-dist.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dist</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-set-recomb" id="nc-hipert-bg-var-set-recomb"></a><h3>nc_hipert_bg_var_set_recomb ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_bg_var_set_recomb (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>);</pre>
+<p>Sets the <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> object.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-set-recomb.parameters" id="nc-hipert-bg-var-set-recomb.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>recomb</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-set-scalefactor" id="nc-hipert-bg-var-set-scalefactor"></a><h3>nc_hipert_bg_var_set_scalefactor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_bg_var_set_scalefactor (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>,
+                                  <em class="parameter"><code><a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="type">NcScalefactor</span></a> *a</code></em>);</pre>
+<p>Sets the <a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="type">NcScalefactor</span></a> object.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-set-scalefactor.parameters" id="nc-hipert-bg-var-set-scalefactor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="type">NcScalefactor</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-get-dist" id="nc-hipert-bg-var-get-dist"></a><h3>nc_hipert_bg_var_get_dist ()</h3>
+<pre class="programlisting"><a class="link" href="NcDistance.html" title="NcDistance"><span class="returnvalue">NcDistance</span></a> *
+nc_hipert_bg_var_get_dist (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>);</pre>
+<p>Gets the <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> object.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-get-dist.parameters" id="nc-hipert-bg-var-get-dist.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-get-dist.returns" id="nc-hipert-bg-var-get-dist.returns"></a><h4>Returns</h4>
+<p>the <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> object used by <em class="parameter"><code>bg_var</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-get-recomb" id="nc-hipert-bg-var-get-recomb"></a><h3>nc_hipert_bg_var_get_recomb ()</h3>
+<pre class="programlisting"><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="returnvalue">NcRecomb</span></a> *
+nc_hipert_bg_var_get_recomb (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>);</pre>
+<p>Gets the <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> object.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-get-recomb.parameters" id="nc-hipert-bg-var-get-recomb.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-get-recomb.returns" id="nc-hipert-bg-var-get-recomb.returns"></a><h4>Returns</h4>
+<p>the <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> object used by <em class="parameter"><code>bg_var</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-get-scalefactor" id="nc-hipert-bg-var-get-scalefactor"></a><h3>nc_hipert_bg_var_get_scalefactor ()</h3>
+<pre class="programlisting"><a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="returnvalue">NcScalefactor</span></a> *
+nc_hipert_bg_var_get_scalefactor (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>);</pre>
+<p>Gets the <a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="type">NcScalefactor</span></a> object.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-get-scalefactor.parameters" id="nc-hipert-bg-var-get-scalefactor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-get-scalefactor.returns" id="nc-hipert-bg-var-get-scalefactor.returns"></a><h4>Returns</h4>
+<p>the <a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="type">NcScalefactor</span></a> object used by <em class="parameter"><code>bg_var</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-peek-dist" id="nc-hipert-bg-var-peek-dist"></a><h3>nc_hipert_bg_var_peek_dist ()</h3>
+<pre class="programlisting"><a class="link" href="NcDistance.html" title="NcDistance"><span class="returnvalue">NcDistance</span></a> *
+nc_hipert_bg_var_peek_dist (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>);</pre>
+<p>Peeks the <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> object.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-peek-dist.parameters" id="nc-hipert-bg-var-peek-dist.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-peek-dist.returns" id="nc-hipert-bg-var-peek-dist.returns"></a><h4>Returns</h4>
+<p>the <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> object used by <em class="parameter"><code>bg_var</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-peek-recomb" id="nc-hipert-bg-var-peek-recomb"></a><h3>nc_hipert_bg_var_peek_recomb ()</h3>
+<pre class="programlisting"><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="returnvalue">NcRecomb</span></a> *
+nc_hipert_bg_var_peek_recomb (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>);</pre>
+<p>Peeks the <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> object.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-peek-recomb.parameters" id="nc-hipert-bg-var-peek-recomb.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-peek-recomb.returns" id="nc-hipert-bg-var-peek-recomb.returns"></a><h4>Returns</h4>
+<p>the <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> object used by <em class="parameter"><code>bg_var</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-peek-scalefactor" id="nc-hipert-bg-var-peek-scalefactor"></a><h3>nc_hipert_bg_var_peek_scalefactor ()</h3>
+<pre class="programlisting"><a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="returnvalue">NcScalefactor</span></a> *
+nc_hipert_bg_var_peek_scalefactor (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>);</pre>
+<p>Peeks the <a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="type">NcScalefactor</span></a> object.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-peek-scalefactor.parameters" id="nc-hipert-bg-var-peek-scalefactor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-peek-scalefactor.returns" id="nc-hipert-bg-var-peek-scalefactor.returns"></a><h4>Returns</h4>
+<p>the <a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="type">NcScalefactor</span></a> object used by <em class="parameter"><code>bg_var</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-set-zf" id="nc-hipert-bg-var-set-zf"></a><h3>nc_hipert_bg_var_set_zf ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_bg_var_set_zf (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>,
+                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zf</code></em>);</pre>
+<p>Requires the maximum redshift for computations to be <em class="parameter"><code>zf</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-set-zf.parameters" id="nc-hipert-bg-var-set-zf.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zf</p></td>
+<td class="parameter_description"><p>the maximum redshift where calculations take place $z_f$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-get-zf" id="nc-hipert-bg-var-get-zf"></a><h3>nc_hipert_bg_var_get_zf ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_hipert_bg_var_get_zf (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>);</pre>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-get-zf.parameters" id="nc-hipert-bg-var-get-zf.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-get-zf.returns" id="nc-hipert-bg-var-get-zf.returns"></a><h4>Returns</h4>
+<p> the maximum redshift for computations <em class="parameter"><code>zf</code></em>
+.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-len" id="nc-hipert-bg-var-len"></a><h3>nc_hipert_bg_var_len ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+nc_hipert_bg_var_len (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>);</pre>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-len.parameters" id="nc-hipert-bg-var-len.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-len.returns" id="nc-hipert-bg-var-len.returns"></a><h4>Returns</h4>
+<p> the number of possible components installed.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-activate-id" id="nc-hipert-bg-var-activate-id"></a><h3>nc_hipert_bg_var_activate_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_bg_var_activate_id (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>,
+                              <em class="parameter"><code>...</code></em>);</pre>
+<p>Register which components that will use the object <em class="parameter"><code>bg_var</code></em>
+.
+the list ... must end with a -1 signaling the end of the list.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-activate-id.parameters" id="nc-hipert-bg-var-activate-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>a list of background ids</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-bg-var-activate-id-array" id="nc-hipert-bg-var-activate-id-array"></a><h3>nc_hipert_bg_var_activate_id_array ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_bg_var_activate_id_array (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>,
+                                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Arrays.html#GArray"><span class="type">GArray</span></a> *ids</code></em>);</pre>
+<p>Register which components that will use the object <em class="parameter"><code>bg_var</code></em>
+.
+the list ... must end with a -1 signaling the end of the list.</p>
+<div class="refsect3">
+<a name="nc-hipert-bg-var-activate-id-array.parameters" id="nc-hipert-bg-var-activate-id-array.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>bg_var</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ids</p></td>
+<td class="parameter_description"><p>an array of background ids. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> NcHIPertBGVarID]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertBGVar.other_details" id="NcHIPertBGVar.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcHIPertBGVarID" id="NcHIPertBGVarID"></a><h3>NcHIPertBGVarID</h3>
+<pre class="programlisting">typedef gint32 NcHIPertBGVarID;
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPertBGVarDesc" id="NcHIPertBGVarDesc"></a><h3>struct NcHIPertBGVarDesc</h3>
+<pre class="programlisting">struct NcHIPertBGVarDesc {
+};
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPertBGVarYDY-struct" id="NcHIPertBGVarYDY-struct"></a><h3>struct NcHIPertBGVarYDY</h3>
+<pre class="programlisting">struct NcHIPertBGVarYDY {
+};
+</pre>
+<p>Boxed object containing the current status of the ode system.</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-HIPERT-BG-VAR-DEFAULT-ZF:CAPS" id="NC-HIPERT-BG-VAR-DEFAULT-ZF:CAPS"></a><h3>NC_HIPERT_BG_VAR_DEFAULT_ZF</h3>
+<pre class="programlisting">#define NC_HIPERT_BG_VAR_DEFAULT_ZF (1.0e9)
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertBGVar.property-details" id="NcHIPertBGVar.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcHIPertBGVar--distance" id="NcHIPertBGVar--distance"></a><h3>The <code class="literal">“distance”</code> property</h3>
+<pre class="programlisting">  “distance”                 <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *</pre>
+<p>Distance object.</p>
+<p>Owner: NcHIPertBGVar</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPertBGVar--recomb" id="NcHIPertBGVar--recomb"></a><h3>The <code class="literal">“recomb”</code> property</h3>
+<pre class="programlisting">  “recomb”                   <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *</pre>
+<p>Recombination object.</p>
+<p>Owner: NcHIPertBGVar</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPertBGVar--scalefactor" id="NcHIPertBGVar--scalefactor"></a><h3>The <code class="literal">“scalefactor”</code> property</h3>
+<pre class="programlisting">  “scalefactor”              <a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="type">NcScalefactor</span></a> *</pre>
+<p>Scalefactor object.</p>
+<p>Owner: NcHIPertBGVar</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPertBGVar--zf" id="NcHIPertBGVar--zf"></a><h3>The <code class="literal">“zf”</code> property</h3>
+<pre class="programlisting">  “zf”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>Maximum redshift.</p>
+<p>Owner: NcHIPertBGVar</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: &gt;= 1</p>
+<p>Default value: 1e+09</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.32.1</div>
+</div></div></body>
+</html>
