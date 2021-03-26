@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s12.html" title="Data Objects" />
 <link rel="prev" href="ch02s12.html" title="Data Objects" />
 <link rel="next" href="NcmDataset.html" title="NcmDataset" />
-<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -314,7 +314,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="NcmData.html#NcmData--desc" title="The “desc” property">desc</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -325,13 +325,13 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="NcmData.html#NcmData--long-desc" title="The “long-desc” property">long-desc</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="NcmData.html#NcmData--name" title="The “name” property">name</a></td>
 <td class="property_flags">Read</td>
 </tr>
@@ -369,6 +369,7 @@
         <span class="lineart">├──</span> <a class="link" href="NcmDataPoisson.html" title="NcmDataPoisson">NcmDataPoisson</a>
         <span class="lineart">├──</span> <a class="link" href="NcDataClusterNCount.html" title="NcDataClusterNCount">NcDataClusterNCount</a>
         <span class="lineart">├──</span> <a class="link" href="NcDataClusterPseudoCounts.html" title="NcDataClusterPseudoCounts">NcDataClusterPseudoCounts</a>
+        <span class="lineart">├──</span> <a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL">NcDataClusterWL</a>
         <span class="lineart">├──</span> <a class="link" href="NcDataPlanckLKL.html" title="NcDataPlanckLKL">NcDataPlanckLKL</a>
         <span class="lineart">╰──</span> <a class="link" href="NcDataReducedShearClusterMass.html" title="NcDataReducedShearClusterMass">NcDataReducedShearClusterMass</a>
 </pre>
@@ -446,7 +447,7 @@ ncm_data_ref (<em class="parameter"><code><a class="link" href="NcmData.html" ti
 <a name="ncm-data-ref.returns" id="ncm-data-ref.returns"></a><h4>Returns</h4>
 <p><em class="parameter"><code>data</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -530,7 +531,7 @@ ncm_data_dup (<em class="parameter"><code><a class="link" href="NcmData.html" ti
 <a name="ncm-data-dup.returns" id="ncm-data-dup.returns"></a><h4>Returns</h4>
 <p>a duplicate of <em class="parameter"><code>data</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -558,7 +559,7 @@ ncm_data_new_from_file (<em class="parameter"><code>const <a href="/usr/share/gt
 <div class="refsect3">
 <a name="ncm-data-new-from-file.returns" id="ncm-data-new-from-file.returns"></a><h4>Returns</h4>
 <p>the newly created <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -738,7 +739,7 @@ ncm_data_peek_desc (<em class="parameter"><code><a class="link" href="NcmData.ht
 <a name="ncm-data-peek-desc.returns" id="ncm-data-peek-desc.returns"></a><h4>Returns</h4>
 <p>internal <em class="parameter"><code>data</code></em>
 description. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -767,7 +768,7 @@ ncm_data_get_desc (<em class="parameter"><code><a class="link" href="NcmData.htm
 <a name="ncm-data-get-desc.returns" id="ncm-data-get-desc.returns"></a><h4>Returns</h4>
 <p>copy of the <em class="parameter"><code>data</code></em>
 description. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1487,7 +1488,7 @@ parameters in <em class="parameter"><code>mset</code></em>
 <hr />
 <div class="refsect2">
 <a name="NcmData--desc" id="NcmData--desc"></a><h3>The <code class="literal">“desc”</code> property</h3>
-<pre class="programlisting">  “desc”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “desc”                     <span class="type">char</span> *</pre>
 <p>Description of the data object.</p>
 <p>Owner: NcmData</p>
 <p>Flags: Read / Write</p>
@@ -1505,7 +1506,7 @@ parameters in <em class="parameter"><code>mset</code></em>
 <hr />
 <div class="refsect2">
 <a name="NcmData--long-desc" id="NcmData--long-desc"></a><h3>The <code class="literal">“long-desc”</code> property</h3>
-<pre class="programlisting">  “long-desc”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “long-desc”                <span class="type">char</span> *</pre>
 <p>Description of the data object.</p>
 <p>Owner: NcmData</p>
 <p>Flags: Read / Write</p>
@@ -1514,7 +1515,7 @@ parameters in <em class="parameter"><code>mset</code></em>
 <hr />
 <div class="refsect2">
 <a name="NcmData--name" id="NcmData--name"></a><h3>The <code class="literal">“name”</code> property</h3>
-<pre class="programlisting">  “name”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “name”                     <span class="type">char</span> *</pre>
 <p>Name of the data object.</p>
 <p>Owner: NcmData</p>
 <p>Flags: Read</p>
@@ -1523,6 +1524,6 @@ parameters in <em class="parameter"><code>mset</code></em>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.32.1</div>
+<hr />Generated by GTK-Doc V1.33.1</div>
 </div></div></body>
 </html>

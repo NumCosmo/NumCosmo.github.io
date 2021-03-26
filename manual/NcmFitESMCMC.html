@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s13.html" title="Statistical Analysis" />
 <link rel="prev" href="NcmFitMCMC.html" title="NcmFitMCMC" />
 <link rel="next" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker" />
-<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -343,7 +343,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--data-file" title="The “data-file” property">data-file</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -365,17 +365,17 @@
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--log-time-interval" title="The “log-time-interval” property">log-time-interval</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--lre-step" title="The “lre-step” property">lre-step</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--max-runs-time" title="The “max-runs-time” property">max-runs-time</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -395,7 +395,7 @@
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_type"><span class="type">int</span></td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--nwalkers" title="The “nwalkers” property">nwalkers</a></td>
 <td class="property_flags">Read / Write / Construct Only</td>
 </tr>
@@ -596,7 +596,7 @@ ncm_fit_esmcmc_ref (<em class="parameter"><code><a class="link" href="NcmFitESMC
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-ref.returns" id="ncm-fit-esmcmc-ref.returns"></a><h4>Returns</h4>
 <p>FIXME. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -749,10 +749,10 @@ nwalkers / 2.</p>
 ncm_fit_esmcmc_use_mpi (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_mpi</code></em>);</pre>
 <p>If <em class="parameter"><code>use_mpi</code></em>
- is TRUE then the paralelization will be acomplished
+ is TRUE then the parallelization will be accomplished
 using MPI if any slaves are available. If no slaves are available
-then it falls back to threads. </p>
-<p>Note that paralelization will only occur if the number of threads
+then it falls back to threads.</p>
+<p>Note that parallelization will only occur if the number of threads
 set using <a class="link" href="NcmFitESMCMC.html#ncm-fit-esmcmc-set-nthreads" title="ncm_fit_esmcmc_set_nthreads ()"><code class="function">ncm_fit_esmcmc_set_nthreads()</code></a> is larger than one.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-use-mpi.parameters" id="ncm-fit-esmcmc-use-mpi.parameters"></a><h4>Parameters</h4>
@@ -1309,7 +1309,7 @@ ncm_fit_esmcmc_peek_ser (<em class="parameter"><code><a class="link" href="NcmFi
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-peek-ser.returns" id="ncm-fit-esmcmc-peek-ser.returns"></a><h4>Returns</h4>
 <p>the internal <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> object. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1337,7 +1337,7 @@ ncm_fit_esmcmc_get_catalog (<em class="parameter"><code><a class="link" href="Nc
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-get-catalog.returns" id="ncm-fit-esmcmc-get-catalog.returns"></a><h4>Returns</h4>
 <p>the generated catalog. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1365,7 +1365,7 @@ ncm_fit_esmcmc_peek_catalog (<em class="parameter"><code><a class="link" href="N
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-peek-catalog.returns" id="ncm-fit-esmcmc-peek-catalog.returns"></a><h4>Returns</h4>
 <p>the generated catalog. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1392,7 +1392,7 @@ ncm_fit_esmcmc_peek_fit (<em class="parameter"><code><a class="link" href="NcmFi
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-peek-fit.returns" id="ncm-fit-esmcmc-peek-fit.returns"></a><h4>Returns</h4>
 <p>the <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> object. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1491,7 +1491,7 @@ during a multithread evaluation of the likelihood.</p>
 <hr />
 <div class="refsect2">
 <a name="NcmFitESMCMC--data-file" id="NcmFitESMCMC--data-file"></a><h3>The <code class="literal">“data-file”</code> property</h3>
-<pre class="programlisting">  “data-file”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “data-file”                <span class="type">char</span> *</pre>
 <p>Data filename.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write</p>
@@ -1526,7 +1526,7 @@ during a multithread evaluation of the likelihood.</p>
 <hr />
 <div class="refsect2">
 <a name="NcmFitESMCMC--log-time-interval" id="NcmFitESMCMC--log-time-interval"></a><h3>The <code class="literal">“log-time-interval”</code> property</h3>
-<pre class="programlisting">  “log-time-interval”        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<pre class="programlisting">  “log-time-interval”        <span class="type">double</span></pre>
 <p>Time interval between log.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
@@ -1536,7 +1536,7 @@ during a multithread evaluation of the likelihood.</p>
 <hr />
 <div class="refsect2">
 <a name="NcmFitESMCMC--lre-step" id="NcmFitESMCMC--lre-step"></a><h3>The <code class="literal">“lre-step”</code> property</h3>
-<pre class="programlisting">  “lre-step”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<pre class="programlisting">  “lre-step”                 <span class="type">double</span></pre>
 <p>Step size in the lre run.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
@@ -1546,7 +1546,7 @@ during a multithread evaluation of the likelihood.</p>
 <hr />
 <div class="refsect2">
 <a name="NcmFitESMCMC--max-runs-time" id="NcmFitESMCMC--max-runs-time"></a><h3>The <code class="literal">“max-runs-time”</code> property</h3>
-<pre class="programlisting">  “max-runs-time”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<pre class="programlisting">  “max-runs-time”            <span class="type">double</span></pre>
 <p>Maximum time between runs.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
@@ -1584,7 +1584,7 @@ during a multithread evaluation of the likelihood.</p>
 <hr />
 <div class="refsect2">
 <a name="NcmFitESMCMC--nwalkers" id="NcmFitESMCMC--nwalkers"></a><h3>The <code class="literal">“nwalkers”</code> property</h3>
-<pre class="programlisting">  “nwalkers”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<pre class="programlisting">  “nwalkers”                 <span class="type">int</span></pre>
 <p>Number of walkers.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct Only</p>
@@ -1628,6 +1628,6 @@ during a multithread evaluation of the likelihood.</p>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.32.1</div>
+<hr />Generated by GTK-Doc V1.33.1</div>
 </div></div></body>
 </html>

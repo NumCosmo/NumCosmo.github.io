@@ -9,7 +9,7 @@
 <link rel="up" href="ch02.html#id-1.3.2" title="Miscellaneous Objects" />
 <link rel="prev" href="NcmTimer.html" title="NcmTimer" />
 <link rel="next" href="NcmQuaternion.html" title="NcmQuaternion" />
-<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -43,10 +43,14 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="NcmRNG.top_of_page" id="NcmRNG.top_of_page"></a>NcmRNG</span></h2>
-<p>NcmRNG — Encapsulated GSL random number generator with support for multhreading.</p>
+<p>NcmRNG — Encapsulated GNU Scientific Library (GSL) random number generator with support for multhreading.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
+<div class="refsect1">
+<a name="NcmRNG.stability-level" id="NcmRNG.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+</div>
 <div class="refsect1">
 <a name="NcmRNG.functions" id="NcmRNG.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -268,7 +272,7 @@
 <tbody>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="NcmRNG.html#NcmRNG--algorithm" title="The “algorithm” property">algorithm</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -279,7 +283,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="NcmRNG.html#NcmRNG--state" title="The “state” property">state</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -293,9 +297,16 @@
 </pre>
 </div>
 <div class="refsect1">
+<a name="NcmRNG.includes" id="NcmRNG.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;numcosmo/math/ncm_rng.h&gt;
+</pre>
+</div>
+<div class="refsect1">
 <a name="NcmRNG.description" id="NcmRNG.description"></a><h2>Description</h2>
-<p>This object encapsulates the GSL pseudo random number generator (PRNG). The purpose is to
-add support for saving and loading state and multhreading.</p>
+<p>This object encapsulates the <a class="ulink" href="https://www.gnu.org/software/gsl/" target="_top">GNU Scientific Library (GSL)</a> pseudo random number generator (PRNG).
+Its main purpose is to add support for saving and loading state and multhreading.
+For more information about the GSL routines see both links: <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/rng.html#random-number-generation" target="_top">random number generation</a>
+and <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/randist.html#random-number-distributions" target="_top">random number distributions</a>.</p>
 </div>
 <div class="refsect1">
 <a name="NcmRNG.functions_details" id="NcmRNG.functions_details"></a><h2>Functions</h2>
@@ -304,12 +315,11 @@ add support for saving and loading state and multhreading.</p>
 <pre class="programlisting"><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="returnvalue">NcmRNG</span></a> *
 ncm_rng_new (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *algo</code></em>);</pre>
 <p>Creates a new <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> using the algorithm <em class="parameter"><code>algo</code></em>
- see the list of algorithms
-here ( http://www.gnu.org/software/gsl/manual/html_node/Random-number-generator-algorithms.html ).
+.
+See the list of algorithms <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/rng.html#random-number-generator-algorithms" target="_top">here</a>.
 If <em class="parameter"><code>algo</code></em>
- is NULL the default algorithm and seed are used, see 
-( http://www.gnu.org/software/gsl/manual/html_node/Random-number-environment-variables.html#Random-number-environment-variables )
-for more details.</p>
+ is NULL the default algorithm and seed are used.
+See this <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/rng.html#random-number-environment-variables" target="_top">link</a> for more details.</p>
 <div class="refsect3">
 <a name="ncm-rng-new.parameters" id="ncm-rng-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -328,7 +338,7 @@ for more details.</p>
 <div class="refsect3">
 <a name="ncm-rng-new.returns" id="ncm-rng-new.returns"></a><h4>Returns</h4>
 <p>a new <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -338,12 +348,11 @@ for more details.</p>
 ncm_rng_seeded_new (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *algo</code></em>,
                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> seed</code></em>);</pre>
 <p>Creates a new <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> using the algorithm <em class="parameter"><code>algo</code></em>
- see the list of algorithms
-here ( http://www.gnu.org/software/gsl/manual/html_node/Random-number-generator-algorithms.html ).
+.
+See the list of algorithms <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/rng.html#random-number-generator-algorithms" target="_top">here</a>.
 If <em class="parameter"><code>algo</code></em>
- is NULL the default algorithm is used, see 
-( http://www.gnu.org/software/gsl/manual/html_node/Random-number-environment-variables.html#Random-number-environment-variables )
-for more details.</p>
+ is NULL the default algorithm is used.
+See this <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/rng.html#random-number-environment-variables" target="_top">link</a> for more details.</p>
 <div class="refsect3">
 <a name="ncm-rng-seeded-new.parameters" id="ncm-rng-seeded-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -360,7 +369,7 @@ for more details.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>seed</p></td>
-<td class="parameter_description"><p>seed used to initialize the PRNG.</p></td>
+<td class="parameter_description"><p>seed used to initialize the PRNG</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -369,7 +378,7 @@ for more details.</p>
 <div class="refsect3">
 <a name="ncm-rng-seeded-new.returns" id="ncm-rng-seeded-new.returns"></a><h4>Returns</h4>
 <p>a new <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -389,7 +398,7 @@ ncm_rng_ref (<em class="parameter"><code><a class="link" href="NcmRNG.html" titl
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>rng</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -398,7 +407,7 @@ ncm_rng_ref (<em class="parameter"><code><a class="link" href="NcmRNG.html" titl
 <a name="ncm-rng-ref.returns" id="ncm-rng-ref.returns"></a><h4>Returns</h4>
 <p><em class="parameter"><code>rng</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -418,7 +427,7 @@ ncm_rng_free (<em class="parameter"><code><a class="link" href="NcmRNG.html" tit
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>rng</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -442,7 +451,7 @@ ncm_rng_clear (<em class="parameter"><code><a class="link" href="NcmRNG.html" ti
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>rng</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -465,7 +474,7 @@ ncm_rng_lock (<em class="parameter"><code><a class="link" href="NcmRNG.html" tit
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>rng</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -488,7 +497,7 @@ ncm_rng_unlock (<em class="parameter"><code><a class="link" href="NcmRNG.html" t
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>rng</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -510,7 +519,7 @@ ncm_rng_get_algo (<em class="parameter"><code><a class="link" href="NcmRNG.html"
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>rng</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -518,7 +527,7 @@ ncm_rng_get_algo (<em class="parameter"><code><a class="link" href="NcmRNG.html"
 <div class="refsect3">
 <a name="ncm-rng-get-algo.returns" id="ncm-rng-get-algo.returns"></a><h4>Returns</h4>
 <p>algorithm name. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -526,8 +535,8 @@ ncm_rng_get_algo (<em class="parameter"><code><a class="link" href="NcmRNG.html"
 <a name="ncm-rng-get-state" id="ncm-rng-get-state"></a><h3>ncm_rng_get_state ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 ncm_rng_get_state (<em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
-<p>Gets the state of the algorithm in Base64. It can be a very large string
-depending on the underlining</p>
+<p>Gets the state of the algorithm in <a class="ulink" href="https://en.wikipedia.org/wiki/Base64" target="_top">Base64</a>.
+It can be a very large string depending on the underlining state.</p>
 <div class="refsect3">
 <a name="ncm-rng-get-state.parameters" id="ncm-rng-get-state.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -538,7 +547,7 @@ depending on the underlining</p>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>rng</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -546,7 +555,7 @@ depending on the underlining</p>
 <div class="refsect3">
 <a name="ncm-rng-get-state.returns" id="ncm-rng-get-state.returns"></a><h4>Returns</h4>
 <p>algorithm state. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -555,7 +564,7 @@ depending on the underlining</p>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_rng_set_algo (<em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>,
                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *algo</code></em>);</pre>
-<p>Sets the algorithm.</p>
+<p>Sets the PRNG algorithm.</p>
 <div class="refsect3">
 <a name="ncm-rng-set-algo.parameters" id="ncm-rng-set-algo.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -567,12 +576,12 @@ ncm_rng_set_algo (<em class="parameter"><code><a class="link" href="NcmRNG.html"
 <tbody>
 <tr>
 <td class="parameter_name"><p>rng</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>algo</p></td>
-<td class="parameter_description"><p>algorithm name.</p></td>
+<td class="parameter_description"><p>algorithm name</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -585,7 +594,7 @@ ncm_rng_set_algo (<em class="parameter"><code><a class="link" href="NcmRNG.html"
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_rng_set_state (<em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>,
                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *state</code></em>);</pre>
-<p>Sets the algorithm state.</p>
+<p>Sets the PRNG algorithm state.</p>
 <div class="refsect3">
 <a name="ncm-rng-set-state.parameters" id="ncm-rng-set-state.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -597,12 +606,12 @@ ncm_rng_set_state (<em class="parameter"><code><a class="link" href="NcmRNG.html
 <tbody>
 <tr>
 <td class="parameter_name"><p>rng</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>state</p></td>
-<td class="parameter_description"><p>algorithm state.</p></td>
+<td class="parameter_description"><p>algorithm state</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -627,12 +636,12 @@ ncm_rng_check_seed (<em class="parameter"><code><a class="link" href="NcmRNG.htm
 <tbody>
 <tr>
 <td class="parameter_name"><p>rng</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>seed</p></td>
-<td class="parameter_description"><p>seed for the PRNG.</p></td>
+<td class="parameter_description"><p>seed for the PRNG</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -640,8 +649,8 @@ ncm_rng_check_seed (<em class="parameter"><code><a class="link" href="NcmRNG.htm
 </div>
 <div class="refsect3">
 <a name="ncm-rng-check-seed.returns" id="ncm-rng-check-seed.returns"></a><h4>Returns</h4>
-<p> TRUE is <em class="parameter"><code>seed</code></em>
-was never used.</p>
+<p> TRUE if <em class="parameter"><code>seed</code></em>
+was never used and FALSE otherwise.</p>
 </div>
 </div>
 <hr />
@@ -650,7 +659,7 @@ was never used.</p>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_rng_set_seed (<em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>,
                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> seed</code></em>);</pre>
-<p>Sets the algorithm seed.</p>
+<p>Sets the PRNG algorithm seed.</p>
 <div class="refsect3">
 <a name="ncm-rng-set-seed.parameters" id="ncm-rng-set-seed.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -662,12 +671,12 @@ ncm_rng_set_seed (<em class="parameter"><code><a class="link" href="NcmRNG.html"
 <tbody>
 <tr>
 <td class="parameter_name"><p>rng</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>seed</p></td>
-<td class="parameter_description"><p>seed for the PRNG.</p></td>
+<td class="parameter_description"><p>seed for the PRNG</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -679,6 +688,7 @@ ncm_rng_set_seed (<em class="parameter"><code><a class="link" href="NcmRNG.html"
 <a name="ncm-rng-get-seed" id="ncm-rng-get-seed"></a><h3>ncm_rng_get_seed ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>
 ncm_rng_get_seed (<em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
+<p>This functions returns the seed used to initialize the PRNG.</p>
 <div class="refsect3">
 <a name="ncm-rng-get-seed.parameters" id="ncm-rng-get-seed.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -689,14 +699,16 @@ ncm_rng_get_seed (<em class="parameter"><code><a class="link" href="NcmRNG.html"
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>rng</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="ncm-rng-get-seed.returns" id="ncm-rng-get-seed.returns"></a><h4>Returns</h4>
-<p> the seed used to initialize the PRNG.</p>
+<p> <em class="parameter"><code>rng</code></em>
+'s <em class="parameter"><code>seed</code></em>
+.</p>
 </div>
 </div>
 <hr />
@@ -706,10 +718,9 @@ ncm_rng_get_seed (<em class="parameter"><code><a class="link" href="NcmRNG.html"
 ncm_rng_set_random_seed (<em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>,
                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> allow_colisions</code></em>);</pre>
 <p>Sets the algorithm seed using a PRNG seeded by /dev/urandom (Unix/Linux)
-or current time  when the first is not available (see <a href="/usr/share/gtk-doc/html/glib/glib-Random-Numbers.html#g-rand-new"><code class="function"><gtkdoclink href="g-rand-new"><code class="function">g_rand_new()</code></gtkdoclink></code></a>). If
-<em class="parameter"><code>allow_colisions</code></em>
- is FALSE this function will set the first unused seed
-generated.</p>
+or current time, when the first is not available (see <a href="/usr/share/gtk-doc/html/glib/glib-Random-Numbers.html#g-rand-new"><code class="function"><gtkdoclink href="g-rand-new"><code class="function">g_rand_new()</code></gtkdoclink></code></a>).
+If <em class="parameter"><code>allow_colisions</code></em>
+ is FALSE this function will set the first unused seed generated.</p>
 <div class="refsect3">
 <a name="ncm-rng-set-random-seed.parameters" id="ncm-rng-set-random-seed.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -721,12 +732,12 @@ generated.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>rng</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>allow_colisions</p></td>
-<td class="parameter_description"><p>a gboolean.</p></td>
+<td class="parameter_description"><p>a gboolean</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -739,8 +750,8 @@ generated.</p>
 <pre class="programlisting"><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="returnvalue">NcmRNG</span></a> *
 ncm_rng_pool_get (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
 <p>Gets the <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> named <em class="parameter"><code>name</code></em>
- from the pool. If it doesn't exists creates
-one, add to the pool and returns it.</p>
+ from the pool.
+If it doesn't exists, it creates one, add it to the pool and returns it.</p>
 <div class="refsect3">
 <a name="ncm-rng-pool-get.parameters" id="ncm-rng-pool-get.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -751,7 +762,7 @@ one, add to the pool and returns it.</p>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>name</p></td>
-<td class="parameter_description"><p>a string.</p></td>
+<td class="parameter_description"><p>a string</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -760,7 +771,7 @@ one, add to the pool and returns it.</p>
 <a name="ncm-rng-pool-get.returns" id="ncm-rng-pool-get.returns"></a><h4>Returns</h4>
 <p>the <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> named <em class="parameter"><code>name</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -770,7 +781,10 @@ one, add to the pool and returns it.</p>
 ncm_rng_uniform_gen (<em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>,
                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xl</code></em>,
                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xu</code></em>);</pre>
-<p>FIXME</p>
+<p>This functions returns a random number drawn from the
+uniform distribution between the values <em class="parameter"><code>xl</code></em>
+ and <em class="parameter"><code>xu</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-rng-uniform-gen.parameters" id="ncm-rng-uniform-gen.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -787,16 +801,20 @@ ncm_rng_uniform_gen (<em class="parameter"><code><a class="link" href="NcmRNG.ht
 </tr>
 <tr>
 <td class="parameter_name"><p>xl</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>lower value</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>xu</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>upper value</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-rng-uniform-gen.returns" id="ncm-rng-uniform-gen.returns"></a><h4>Returns</h4>
+<p> a random number from the uniform distribution.</p>
 </div>
 </div>
 <hr />
@@ -806,7 +824,11 @@ ncm_rng_uniform_gen (<em class="parameter"><code><a class="link" href="NcmRNG.ht
 ncm_rng_gaussian_gen (<em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>,
                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mu</code></em>,
                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns a random number drawn from the
+<a class="ulink" href="https://en.wikipedia.org/wiki/Normal_distribution" target="_top">Gaussian distribution</a>,
+with mean <em class="parameter"><code>mu</code></em>
+ and standard deviation <em class="parameter"><code>sigma</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-rng-gaussian-gen.parameters" id="ncm-rng-gaussian-gen.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -823,16 +845,20 @@ ncm_rng_gaussian_gen (<em class="parameter"><code><a class="link" href="NcmRNG.h
 </tr>
 <tr>
 <td class="parameter_name"><p>mu</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>mean</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>sigma</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>standard deviation</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-rng-gaussian-gen.returns" id="ncm-rng-gaussian-gen.returns"></a><h4>Returns</h4>
+<p> a random number from the Gaussian distribution.</p>
 </div>
 </div>
 <hr />
@@ -840,6 +866,31 @@ ncm_rng_gaussian_gen (<em class="parameter"><code><a class="link" href="NcmRNG.h
 <a name="ncm-rng-ugaussian-gen" id="ncm-rng-ugaussian-gen"></a><h3>ncm_rng_ugaussian_gen ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_rng_ugaussian_gen (<em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
+<p>This function returns a random number drwan from the
+<a class="ulink" href="https://en.wikipedia.org/wiki/Normal_distribution" target="_top">Gaussian distribution</a>,
+with mean zero and standard deviation one.
+Equivalent as above but with <em class="parameter"><code>mean</code></em>
+ = 0 and <em class="parameter"><code>sigma</code></em>
+ = 1.</p>
+<div class="refsect3">
+<a name="ncm-rng-ugaussian-gen.parameters" id="ncm-rng-ugaussian-gen.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>rng</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-rng-ugaussian-gen.returns" id="ncm-rng-ugaussian-gen.returns"></a><h4>Returns</h4>
+<p> a random number from the Gaussian distribution.</p>
+</div>
 </div>
 <hr />
 <div class="refsect2">
@@ -848,7 +899,11 @@ ncm_rng_ugaussian_gen (<em class="parameter"><code><a class="link" href="NcmRNG.
 ncm_rng_gaussian_tail_gen (<em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>,
                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> a</code></em>,
                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns a random number drawn from the upper tail of the
+<a class="ulink" href="https://en.wikipedia.org/wiki/Normal_distribution" target="_top">Gaussian distribution</a> with standard deviation <em class="parameter"><code>sigma</code></em>
+.
+The value returned is larger than the lower limit <em class="parameter"><code>a</code></em>
+, which must be positive.</p>
 <div class="refsect3">
 <a name="ncm-rng-gaussian-tail-gen.parameters" id="ncm-rng-gaussian-tail-gen.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -865,16 +920,20 @@ ncm_rng_gaussian_tail_gen (<em class="parameter"><code><a class="link" href="Ncm
 </tr>
 <tr>
 <td class="parameter_name"><p>a</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>positive lower limit</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>sigma</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>standard deviation</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-rng-gaussian-tail-gen.returns" id="ncm-rng-gaussian-tail-gen.returns"></a><h4>Returns</h4>
+<p> a random number from the Gaussian distribution tail.</p>
 </div>
 </div>
 <hr />
@@ -883,7 +942,10 @@ ncm_rng_gaussian_tail_gen (<em class="parameter"><code><a class="link" href="Ncm
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_rng_exponential_gen (<em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>,
                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mu</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns a random number drawn from the
+<a class="ulink" href="https://en.wikipedia.org/wiki/Exponential_distribution" target="_top">exponential distribution</a>
+with scale parameter (mean) <em class="parameter"><code>mu</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-rng-exponential-gen.parameters" id="ncm-rng-exponential-gen.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -900,11 +962,15 @@ ncm_rng_exponential_gen (<em class="parameter"><code><a class="link" href="NcmRN
 </tr>
 <tr>
 <td class="parameter_name"><p>mu</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>scale parameter</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-rng-exponential-gen.returns" id="ncm-rng-exponential-gen.returns"></a><h4>Returns</h4>
+<p> a random number from the exponential distribution.</p>
 </div>
 </div>
 <hr />
@@ -913,7 +979,10 @@ ncm_rng_exponential_gen (<em class="parameter"><code><a class="link" href="NcmRN
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_rng_laplace_gen (<em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>,
                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> a</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns a random number drawn from the
+<a class="ulink" href="https://en.wikipedia.org/wiki/Laplace_distribution" target="_top">Laplace distribution</a>
+with width <em class="parameter"><code>a</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-rng-laplace-gen.parameters" id="ncm-rng-laplace-gen.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -930,11 +999,15 @@ ncm_rng_laplace_gen (<em class="parameter"><code><a class="link" href="NcmRNG.ht
 </tr>
 <tr>
 <td class="parameter_name"><p>a</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>width of the distribution</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-rng-laplace-gen.returns" id="ncm-rng-laplace-gen.returns"></a><h4>Returns</h4>
+<p> a random number from the Laplace distribution.</p>
 </div>
 </div>
 <hr />
@@ -944,7 +1017,11 @@ ncm_rng_laplace_gen (<em class="parameter"><code><a class="link" href="NcmRNG.ht
 ncm_rng_exppow_gen (<em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>,
                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> a</code></em>,
                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> b</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns a random number drawn from the
+<a class="ulink" href="https://en.wikipedia.org/wiki/Generalized_normal_distribution#Version_1" target="_top">exponential power distribution</a>
+with scale parameter <em class="parameter"><code>a</code></em>
+ and exponent <em class="parameter"><code>b</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-rng-exppow-gen.parameters" id="ncm-rng-exppow-gen.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -961,16 +1038,20 @@ ncm_rng_exppow_gen (<em class="parameter"><code><a class="link" href="NcmRNG.htm
 </tr>
 <tr>
 <td class="parameter_name"><p>a</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>scale parameter</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>b</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>exponent</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-rng-exppow-gen.returns" id="ncm-rng-exppow-gen.returns"></a><h4>Returns</h4>
+<p> a random number from the exponential power distribution.</p>
 </div>
 </div>
 <hr />
@@ -980,7 +1061,11 @@ ncm_rng_exppow_gen (<em class="parameter"><code><a class="link" href="NcmRNG.htm
 ncm_rng_beta_gen (<em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>,
                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> a</code></em>,
                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> b</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns a random number drawn from the
+<a class="ulink" href="https://en.wikipedia.org/wiki/Beta_distribution" target="_top">beta distribution</a>
+with shape parameters <em class="parameter"><code>a</code></em>
+ and <em class="parameter"><code>b</code></em>
+. The shape parameters must be positive.</p>
 <div class="refsect3">
 <a name="ncm-rng-beta-gen.parameters" id="ncm-rng-beta-gen.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -997,16 +1082,20 @@ ncm_rng_beta_gen (<em class="parameter"><code><a class="link" href="NcmRNG.html"
 </tr>
 <tr>
 <td class="parameter_name"><p>a</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>shape parameter</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>b</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>shape parameter</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-rng-beta-gen.returns" id="ncm-rng-beta-gen.returns"></a><h4>Returns</h4>
+<p> a random number from the beta distribution.</p>
 </div>
 </div>
 <hr />
@@ -1016,7 +1105,11 @@ ncm_rng_beta_gen (<em class="parameter"><code><a class="link" href="NcmRNG.html"
 ncm_rng_gamma_gen (<em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>,
                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> a</code></em>,
                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> b</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns a random number drawn from the
+<a class="ulink" href="https://en.wikipedia.org/wiki/Gamma_distribution" target="_top">gamma distribution</a>
+with shape parameter <em class="parameter"><code>a</code></em>
+ and scale parameter <em class="parameter"><code>b</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-rng-gamma-gen.parameters" id="ncm-rng-gamma-gen.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1033,16 +1126,20 @@ ncm_rng_gamma_gen (<em class="parameter"><code><a class="link" href="NcmRNG.html
 </tr>
 <tr>
 <td class="parameter_name"><p>a</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>shape parameter</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>b</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>scale parameter</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-rng-gamma-gen.returns" id="ncm-rng-gamma-gen.returns"></a><h4>Returns</h4>
+<p> a random number from the gamma distribution.</p>
 </div>
 </div>
 </div>
@@ -1050,8 +1147,9 @@ ncm_rng_gamma_gen (<em class="parameter"><code><a class="link" href="NcmRNG.html
 <a name="NcmRNG.property-details" id="NcmRNG.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="NcmRNG--algorithm" id="NcmRNG--algorithm"></a><h3>The <code class="literal">“algorithm”</code> property</h3>
-<pre class="programlisting">  “algorithm”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>Algorithm name.</p>
+<pre class="programlisting">  “algorithm”                <span class="type">char</span> *</pre>
+<p>The name of the pseudo random number algorithm to be used from <a class="ulink" href="https://www.gnu.org/software/gsl/" target="_top">GNU Scientific Library (GSL)</a>.
+A list of the available algorithms can be find <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/rng.html#random-number-generator-algorithms" target="_top">here</a>.</p>
 <p>Owner: NcmRNG</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: "mt19937"</p>
@@ -1060,15 +1158,15 @@ ncm_rng_gamma_gen (<em class="parameter"><code><a class="link" href="NcmRNG.html
 <div class="refsect2">
 <a name="NcmRNG--seed" id="NcmRNG--seed"></a><h3>The <code class="literal">“seed”</code> property</h3>
 <pre class="programlisting">  “seed”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></pre>
-<p>Algorithm seed.</p>
+<p>Pseudo random number algorithm seed.</p>
 <p>Owner: NcmRNG</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NcmRNG--state" id="NcmRNG--state"></a><h3>The <code class="literal">“state”</code> property</h3>
-<pre class="programlisting">  “state”                    <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>Algorithm state.</p>
+<pre class="programlisting">  “state”                    <span class="type">char</span> *</pre>
+<p>Pseudo random number algorithm state.</p>
 <p>Owner: NcmRNG</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
@@ -1076,6 +1174,6 @@ ncm_rng_gamma_gen (<em class="parameter"><code><a class="link" href="NcmRNG.html
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.32.1</div>
+<hr />Generated by GTK-Doc V1.33.1</div>
 </div></div></body>
 </html>

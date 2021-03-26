@@ -7,9 +7,9 @@
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
 <link rel="home" href="index.html" title="NumCosmo Reference Manual" />
 <link rel="up" href="ch09.html" title="Cosmological Data" />
-<link rel="prev" href="NcDataClusterCountsBoxPoisson.html" title="NcDataClusterCountsBoxPoisson" />
+<link rel="prev" href="NcDataClusterWL.html" title="NcDataClusterWL" />
 <link rel="next" href="NcDataPlanckLKL.html" title="NcDataPlanckLKL" />
-<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -35,7 +35,7 @@
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
 <td><a accesskey="u" href="ch09.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
-<td><a accesskey="p" href="NcDataClusterCountsBoxPoisson.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="p" href="NcDataClusterWL.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
 <td><a accesskey="n" href="NcDataPlanckLKL.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
 </tr></table>
 <div class="refentry">
@@ -124,7 +124,7 @@
 </colgroup>
 <tbody>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcDataReducedShearClusterMass.html#NcDataReducedShearClusterMass--dec-cluster" title="The “dec-cluster” property">dec-cluster</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -152,17 +152,17 @@
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcDataReducedShearClusterMass.html#NcDataReducedShearClusterMass--psf-size" title="The “psf-size” property">psf-size</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcDataReducedShearClusterMass.html#NcDataReducedShearClusterMass--ra-cluster" title="The “ra-cluster” property">ra-cluster</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcDataReducedShearClusterMass.html#NcDataReducedShearClusterMass--z-cluster" title="The “z-cluster” property">z-cluster</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -213,7 +213,7 @@ nc_data_reduced_shear_cluster_mass_new
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>dist</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -249,7 +249,7 @@ nc_data_reduced_shear_cluster_mass_new_from_file
 <div class="refsect3">
 <a name="nc-data-reduced-shear-cluster-mass-new-from-file.returns" id="nc-data-reduced-shear-cluster-mass-new-from-file.returns"></a><h4>Returns</h4>
 <p>the newly created <a class="link" href="NcDataReducedShearClusterMass.html" title="NcDataReducedShearClusterMass"><span class="type">NcDataReducedShearClusterMass</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -279,7 +279,7 @@ nc_data_reduced_shear_cluster_mass_ref
 <a name="nc-data-reduced-shear-cluster-mass-ref.returns" id="nc-data-reduced-shear-cluster-mass-ref.returns"></a><h4>Returns</h4>
 <p><em class="parameter"><code>drs</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -467,7 +467,7 @@ the cluster information in <em class="parameter"><code>z_cluster</code></em>
 <a name="NcDataReducedShearClusterMass.property-details" id="NcDataReducedShearClusterMass.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="NcDataReducedShearClusterMass--dec-cluster" id="NcDataReducedShearClusterMass--dec-cluster"></a><h3>The <code class="literal">“dec-cluster”</code> property</h3>
-<pre class="programlisting">  “dec-cluster”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<pre class="programlisting">  “dec-cluster”              <span class="type">double</span></pre>
 <p>Cluster (halo) DEC.</p>
 <p>Owner: NcDataReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
@@ -510,7 +510,7 @@ the cluster information in <em class="parameter"><code>z_cluster</code></em>
 <hr />
 <div class="refsect2">
 <a name="NcDataReducedShearClusterMass--psf-size" id="NcDataReducedShearClusterMass--psf-size"></a><h3>The <code class="literal">“psf-size”</code> property</h3>
-<pre class="programlisting">  “psf-size”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<pre class="programlisting">  “psf-size”                 <span class="type">double</span></pre>
 <p>PSF size.</p>
 <p>Owner: NcDataReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
@@ -520,7 +520,7 @@ the cluster information in <em class="parameter"><code>z_cluster</code></em>
 <hr />
 <div class="refsect2">
 <a name="NcDataReducedShearClusterMass--ra-cluster" id="NcDataReducedShearClusterMass--ra-cluster"></a><h3>The <code class="literal">“ra-cluster”</code> property</h3>
-<pre class="programlisting">  “ra-cluster”               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<pre class="programlisting">  “ra-cluster”               <span class="type">double</span></pre>
 <p>Cluster (halo) RA.</p>
 <p>Owner: NcDataReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
@@ -530,7 +530,7 @@ the cluster information in <em class="parameter"><code>z_cluster</code></em>
 <hr />
 <div class="refsect2">
 <a name="NcDataReducedShearClusterMass--z-cluster" id="NcDataReducedShearClusterMass--z-cluster"></a><h3>The <code class="literal">“z-cluster”</code> property</h3>
-<pre class="programlisting">  “z-cluster”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<pre class="programlisting">  “z-cluster”                <span class="type">double</span></pre>
 <p>Cluster (halo) redshift.</p>
 <p>Owner: NcDataReducedShearClusterMass</p>
 <p>Flags: Read / Write</p>
@@ -540,6 +540,6 @@ the cluster information in <em class="parameter"><code>z_cluster</code></em>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.32.1</div>
+<hr />Generated by GTK-Doc V1.33.1</div>
 </div></div></body>
 </html>

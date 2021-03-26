@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s10.html" title="Models and Parameters" />
 <link rel="prev" href="NcmModel.html" title="NcmModel" />
 <link rel="next" href="NcmVParam.html" title="NcmVParam" />
-<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -234,12 +234,12 @@
 </colgroup>
 <tbody>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcmSParam.html#NcmSParam--absolute-tolerance" title="The “absolute-tolerance” property">absolute-tolerance</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcmSParam.html#NcmSParam--default-value" title="The “default-value” property">default-value</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -249,29 +249,29 @@
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcmSParam.html#NcmSParam--lower-bound" title="The “lower-bound” property">lower-bound</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="NcmSParam.html#NcmSParam--name" title="The “name” property">name</a></td>
 <td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcmSParam.html#NcmSParam--scale" title="The “scale” property">scale</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="NcmSParam.html#NcmSParam--symbol" title="The “symbol” property">symbol</a></td>
 <td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcmSParam.html#NcmSParam--upper-bound" title="The “upper-bound” property">upper-bound</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -410,7 +410,7 @@ ncm_sparam_copy (<em class="parameter"><code><a class="link" href="NcmSParam.htm
 <div class="refsect3">
 <a name="ncm-sparam-copy.returns" id="ncm-sparam-copy.returns"></a><h4>Returns</h4>
 <p>A new <a class="link" href="NcmSParam.html" title="NcmSParam"><span class="type">NcmSParam</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -439,7 +439,7 @@ ncm_sparam_ref (<em class="parameter"><code><a class="link" href="NcmSParam.html
 <a name="ncm-sparam-ref.returns" id="ncm-sparam-ref.returns"></a><h4>Returns</h4>
 <p><em class="parameter"><code>sparam</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -986,7 +986,7 @@ carried out.</p>
 <a name="NcmSParam.property-details" id="NcmSParam.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="NcmSParam--absolute-tolerance" id="NcmSParam--absolute-tolerance"></a><h3>The <code class="literal">“absolute-tolerance”</code> property</h3>
-<pre class="programlisting">  “absolute-tolerance”       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<pre class="programlisting">  “absolute-tolerance”       <span class="type">double</span></pre>
 <p>Absolute tolerance, whose value is restricted to [0, G_MAXDOUBLE], is the size of the error used by <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a>.</p>
 <p>Owner: NcmSParam</p>
 <p>Flags: Read / Write</p>
@@ -996,7 +996,7 @@ carried out.</p>
 <hr />
 <div class="refsect2">
 <a name="NcmSParam--default-value" id="NcmSParam--default-value"></a><h3>The <code class="literal">“default-value”</code> property</h3>
-<pre class="programlisting">  “default-value”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<pre class="programlisting">  “default-value”            <span class="type">double</span></pre>
 <p>Parameter's default value.</p>
 <p>Owner: NcmSParam</p>
 <p>Flags: Read / Write</p>
@@ -1014,7 +1014,7 @@ carried out.</p>
 <hr />
 <div class="refsect2">
 <a name="NcmSParam--lower-bound" id="NcmSParam--lower-bound"></a><h3>The <code class="literal">“lower-bound”</code> property</h3>
-<pre class="programlisting">  “lower-bound”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<pre class="programlisting">  “lower-bound”              <span class="type">double</span></pre>
 <p>Lower parameter threshold whose value is restricted to [-G_MAXDOUBLE, G_MAXDOUBLE].</p>
 <p>Owner: NcmSParam</p>
 <p>Flags: Read / Write</p>
@@ -1023,7 +1023,7 @@ carried out.</p>
 <hr />
 <div class="refsect2">
 <a name="NcmSParam--name" id="NcmSParam--name"></a><h3>The <code class="literal">“name”</code> property</h3>
-<pre class="programlisting">  “name”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “name”                     <span class="type">char</span> *</pre>
 <p>The parameter' s name must be a string written using only ASCII and -.</p>
 <p>Owner: NcmSParam</p>
 <p>Flags: Read / Write / Construct Only</p>
@@ -1032,7 +1032,7 @@ carried out.</p>
 <hr />
 <div class="refsect2">
 <a name="NcmSParam--scale" id="NcmSParam--scale"></a><h3>The <code class="literal">“scale”</code> property</h3>
-<pre class="programlisting">  “scale”                    <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<pre class="programlisting">  “scale”                    <span class="type">double</span></pre>
 <p>Scale, whose value is restricted to [0, G_MAXDOUBLE], is the step used by <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> to increment the value of the parameter.</p>
 <p>Owner: NcmSParam</p>
 <p>Flags: Read / Write</p>
@@ -1042,7 +1042,7 @@ carried out.</p>
 <hr />
 <div class="refsect2">
 <a name="NcmSParam--symbol" id="NcmSParam--symbol"></a><h3>The <code class="literal">“symbol”</code> property</h3>
-<pre class="programlisting">  “symbol”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “symbol”                   <span class="type">char</span> *</pre>
 <p>Parameter's name written in a usual form (including latex).</p>
 <p>Owner: NcmSParam</p>
 <p>Flags: Read / Write / Construct Only</p>
@@ -1051,7 +1051,7 @@ carried out.</p>
 <hr />
 <div class="refsect2">
 <a name="NcmSParam--upper-bound" id="NcmSParam--upper-bound"></a><h3>The <code class="literal">“upper-bound”</code> property</h3>
-<pre class="programlisting">  “upper-bound”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<pre class="programlisting">  “upper-bound”              <span class="type">double</span></pre>
 <p>Upper parameter threshold whose value is restricted to [-G_MAXDOUBLE, G_MAXDOUBLE].</p>
 <p>Owner: NcmSParam</p>
 <p>Flags: Read / Write</p>
@@ -1060,6 +1060,6 @@ carried out.</p>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.32.1</div>
+<hr />Generated by GTK-Doc V1.33.1</div>
 </div></div></body>
 </html>

@@ -9,7 +9,7 @@
 <link rel="up" href="ch08s03.html" title="Matter Power Spectrum" />
 <link rel="prev" href="NcPowspecML.html" title="NcPowspecML" />
 <link rel="next" href="NcPowspecMLTransfer.html" title="NcPowspecMLTransfer" />
-<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -48,6 +48,10 @@
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
+<a name="NcPowspecMLFixSpline.stability-level" id="NcPowspecMLFixSpline.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+</div>
+<div class="refsect1">
 <a name="NcPowspecMLFixSpline.functions" id="NcPowspecMLFixSpline.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
@@ -84,7 +88,7 @@
 </colgroup>
 <tbody><tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="NcPowspecMLFixSpline.html#NcPowspecMLFixSpline--filename" title="The “filename” property">filename</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr></tbody>
@@ -99,8 +103,13 @@
 </pre>
 </div>
 <div class="refsect1">
+<a name="NcPowspecMLFixSpline.includes" id="NcPowspecMLFixSpline.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;numcosmo/nc_powspec_ml_fix_spline.h&gt;
+</pre>
+</div>
+<div class="refsect1">
 <a name="NcPowspecMLFixSpline.description" id="NcPowspecMLFixSpline.description"></a><h2>Description</h2>
-<p>Provides a linear matter power spectrum as a function of mode $k$ at a redshift $z_0$ computing 
+<p>Provides a linear matter power spectrum as a function of mode $k$ at a redshift $z_0$ computing
 a spline, whose knots and the respective $P(k, z = z_0)$ values are provided in a file.</p>
 </div>
 <div class="refsect1">
@@ -109,7 +118,7 @@ a spline, whose knots and the respective $P(k, z = z_0)$ values are provided in 
 <a name="nc-powspec-ml-fix-spline-new" id="nc-powspec-ml-fix-spline-new"></a><h3>nc_powspec_ml_fix_spline_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcPowspecMLFixSpline.html" title="NcPowspecMLFixSpline"><span class="returnvalue">NcPowspecMLFixSpline</span></a> *
 nc_powspec_ml_fix_spline_new (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
-<p>Creates a new <a class="link" href="NcPowspecMLFixSpline.html" title="NcPowspecMLFixSpline"><span class="type">NcPowspecMLFixSpline</span></a> from a spline of the power spectrum, 
+<p>Creates a new <a class="link" href="NcPowspecMLFixSpline.html" title="NcPowspecMLFixSpline"><span class="type">NcPowspecMLFixSpline</span></a> from a spline of the power spectrum,
 $P(k, z=z_0)$ at a given redshift $z_0$, which is present in the serialized object <em class="parameter"><code>filename</code></em>
 .</p>
 <div class="refsect3">
@@ -130,7 +139,7 @@ $P(k, z=z_0)$ at a given redshift $z_0$, which is present in the serialized obje
 <div class="refsect3">
 <a name="nc-powspec-ml-fix-spline-new.returns" id="nc-powspec-ml-fix-spline-new.returns"></a><h4>Returns</h4>
 <p>the newly created <a class="link" href="NcPowspecMLFixSpline.html" title="NcPowspecMLFixSpline"><span class="type">NcPowspecMLFixSpline</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -152,7 +161,7 @@ nc_powspec_ml_fix_spline_set_file (<em class="parameter"><code><a class="link" h
 <tbody>
 <tr>
 <td class="parameter_name"><p>ps_fs</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcPowspecMLFixSpline.html" title="NcPowspecMLFixSpline"><span class="type">NcPowspecMLFixSpline</span></a> </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcPowspecMLFixSpline.html" title="NcPowspecMLFixSpline"><span class="type">NcPowspecMLFixSpline</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -169,8 +178,8 @@ nc_powspec_ml_fix_spline_set_file (<em class="parameter"><code><a class="link" h
 <a name="NcPowspecMLFixSpline.property-details" id="NcPowspecMLFixSpline.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="NcPowspecMLFixSpline--filename" id="NcPowspecMLFixSpline--filename"></a><h3>The <code class="literal">“filename”</code> property</h3>
-<pre class="programlisting">  “filename”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>Filename.</p>
+<pre class="programlisting">  “filename”                 <span class="type">char</span> *</pre>
+<p>The file name containing $P(k, z=z_0)$ in a serialized <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> format.</p>
 <p>Owner: NcPowspecMLFixSpline</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: NULL</p>
@@ -178,6 +187,6 @@ nc_powspec_ml_fix_spline_set_file (<em class="parameter"><code><a class="link" h
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.32.1</div>
+<hr />Generated by GTK-Doc V1.33.1</div>
 </div></div></body>
 </html>

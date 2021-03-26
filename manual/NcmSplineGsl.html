@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s05.html" title="Splines 1D" />
 <link rel="prev" href="NcmSpline.html" title="NcmSpline" />
 <link rel="next" href="NcmSplineCubic.html" title="NcmSplineCubic" />
-<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -47,6 +47,10 @@
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
+<div class="refsect1">
+<a name="NcmSplineGsl.stability-level" id="NcmSplineGsl.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+</div>
 <div class="refsect1">
 <a name="NcmSplineGsl.functions" id="NcmSplineGsl.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -124,7 +128,7 @@
 </colgroup>
 <tbody><tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="NcmSplineGsl.html#NcmSplineGsl--type-name" title="The “type-name” property">type-name</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr></tbody>
@@ -153,9 +157,14 @@
 </pre>
 </div>
 <div class="refsect1">
+<a name="NcmSplineGsl.includes" id="NcmSplineGsl.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;numcosmo/math/ncm_spline_gsl.h&gt;
+</pre>
+</div>
+<div class="refsect1">
 <a name="NcmSplineGsl.description" id="NcmSplineGsl.description"></a><h2>Description</h2>
-<p>This object comprises the proper functions to use the GNU Scientific
-Library (GSL) spline functions and interpolation methods.</p>
+<p>This object comprises the proper functions to use the <a class="ulink" href="https://www.gnu.org/software/gsl/" target="_top">GNU Scientific
+Library (GSL)</a> spline functions and interpolation methods.</p>
 </div>
 <div class="refsect1">
 <a name="NcmSplineGsl.functions_details" id="NcmSplineGsl.functions_details"></a><h2>Functions</h2>
@@ -176,7 +185,7 @@ interpolation method.</p>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>type</p></td>
-<td class="parameter_description"><p>gsl interpolation method.</p></td>
+<td class="parameter_description"><p>gsl interpolation method</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -206,23 +215,23 @@ ncm_spline_gsl_new_full (<em class="parameter"><code>const <a class="link" href=
 <tbody>
 <tr>
 <td class="parameter_name"><p>type</p></td>
-<td class="parameter_description"><p>gsl interpolation method.</p></td>
+<td class="parameter_description"><p>gsl interpolation method</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>xv</p></td>
-<td class="parameter_description"><p><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of knots.</p></td>
+<td class="parameter_description"><p><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of knots</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>yv</p></td>
 <td class="parameter_description"><p><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of the values of the function, to be interpolated, computed at <em class="parameter"><code>xv</code></em>
-.</p></td>
+</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>init</p></td>
-<td class="parameter_description"><p>TRUE to prepare the new <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> or FALSE to not prepare it.</p></td>
+<td class="parameter_description"><p>TRUE to prepare the new <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> or FALSE to not prepare it</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -251,7 +260,7 @@ interpolation method.</p>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>type_id</p></td>
-<td class="parameter_description"><p>gsl interpolation method id.</p></td>
+<td class="parameter_description"><p>gsl interpolation method id</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -281,23 +290,23 @@ ncm_spline_gsl_new_full_by_id (<em class="parameter"><code><a class="link" href=
 <tbody>
 <tr>
 <td class="parameter_name"><p>type_id</p></td>
-<td class="parameter_description"><p>gsl interpolation method id.</p></td>
+<td class="parameter_description"><p>gsl interpolation method id</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>xv</p></td>
-<td class="parameter_description"><p><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of knots.</p></td>
+<td class="parameter_description"><p><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of knots</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>yv</p></td>
 <td class="parameter_description"><p><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of the values of the function, to be interpolated, computed at <em class="parameter"><code>xv</code></em>
-.</p></td>
+</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>init</p></td>
-<td class="parameter_description"><p>TRUE to prepare the new <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> or FALSE to not prepare it.</p></td>
+<td class="parameter_description"><p>TRUE to prepare the new <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> or FALSE to not prepare it</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -328,12 +337,12 @@ ncm_spline_gsl_set_type (<em class="parameter"><code><a class="link" href="NcmSp
 <tbody>
 <tr>
 <td class="parameter_name"><p>sg</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmSplineGsl.html" title="NcmSplineGsl"><span class="type">NcmSplineGsl</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSplineGsl.html" title="NcmSplineGsl"><span class="type">NcmSplineGsl</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>type</p></td>
-<td class="parameter_description"><p>gsl interpolation method.</p></td>
+<td class="parameter_description"><p>gsl interpolation method</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -360,12 +369,12 @@ ncm_spline_gsl_set_type_by_id (<em class="parameter"><code><a class="link" href=
 <tbody>
 <tr>
 <td class="parameter_name"><p>sg</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmSplineGsl.html" title="NcmSplineGsl"><span class="type">NcmSplineGsl</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSplineGsl.html" title="NcmSplineGsl"><span class="type">NcmSplineGsl</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>type_id</p></td>
-<td class="parameter_description"><p>gsl interpolation method id.</p></td>
+<td class="parameter_description"><p>gsl interpolation method id</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -392,12 +401,12 @@ ncm_spline_gsl_set_type_by_name (<em class="parameter"><code><a class="link" hre
 <tbody>
 <tr>
 <td class="parameter_name"><p>sg</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmSplineGsl.html" title="NcmSplineGsl"><span class="type">NcmSplineGsl</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSplineGsl.html" title="NcmSplineGsl"><span class="type">NcmSplineGsl</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>type_name</p></td>
-<td class="parameter_description"><p>gsl interpolation method name.</p></td>
+<td class="parameter_description"><p>gsl interpolation method name</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -409,7 +418,7 @@ ncm_spline_gsl_set_type_by_name (<em class="parameter"><code><a class="link" hre
 <a name="NcmSplineGsl.other_details" id="NcmSplineGsl.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
 <a name="NcmSplineGslType" id="NcmSplineGslType"></a><h3>enum NcmSplineGslType</h3>
-<p>FIXME</p>
+<p>Enumeration to choose which <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/interp.html#interpolation" target="_top">GSL interpolation method</a> as backend to be used by the object. It can be used with the function <a class="link" href="NcmSplineGsl.html#ncm-spline-gsl-new-by-id" title="ncm_spline_gsl_new_by_id ()"><code class="function">ncm_spline_gsl_new_by_id()</code></a> when a new <a class="link" href="NcmSplineGsl.html" title="NcmSplineGsl"><span class="type">NcmSplineGsl</span></a> is created.</p>
 <div class="refsect3">
 <a name="NcmSplineGslType.members" id="NcmSplineGslType.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -422,42 +431,42 @@ ncm_spline_gsl_set_type_by_name (<em class="parameter"><code><a class="link" hre
 <tr>
 <td class="enum_member_name"><p><a name="NCM-SPLINE-GSL-LINEAR:CAPS" id="NCM-SPLINE-GSL-LINEAR:CAPS"></a>NCM_SPLINE_GSL_LINEAR</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/interp.html#c.gsl_interp_linear" target="_top">gsl_interp_linear</a> interpolation method. </p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-SPLINE-GSL-POLYNOMIAL:CAPS" id="NCM-SPLINE-GSL-POLYNOMIAL:CAPS"></a>NCM_SPLINE_GSL_POLYNOMIAL</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/interp.html#c.gsl_interp_polynomial" target="_top">gsl_interp_polynomial</a> interpolation method. </p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-SPLINE-GSL-CSPLINE:CAPS" id="NCM-SPLINE-GSL-CSPLINE:CAPS"></a>NCM_SPLINE_GSL_CSPLINE</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/interp.html#c.gsl_interp_cspline" target="_top">gsl_interp_cspline</a> interpolation method. </p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-SPLINE-GSL-CSPLINE-PERIODIC:CAPS" id="NCM-SPLINE-GSL-CSPLINE-PERIODIC:CAPS"></a>NCM_SPLINE_GSL_CSPLINE_PERIODIC</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/interp.html#c.gsl_interp_cspline_periodic" target="_top">gsl_interp_cspline_periodic</a> interpolation method.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-SPLINE-GSL-AKIMA:CAPS" id="NCM-SPLINE-GSL-AKIMA:CAPS"></a>NCM_SPLINE_GSL_AKIMA</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/interp.html#c.gsl_interp_akima" target="_top">gsl_interp_akima</a> interpolation method. </p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-SPLINE-GSL-AKIMA-PERIODIC:CAPS" id="NCM-SPLINE-GSL-AKIMA-PERIODIC:CAPS"></a>NCM_SPLINE_GSL_AKIMA_PERIODIC</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/interp.html#c.gsl_interp_akima_periodic" target="_top">gsl_interp_akima_periodic</a> interpolation method. </p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -470,8 +479,8 @@ ncm_spline_gsl_set_type_by_name (<em class="parameter"><code><a class="link" hre
 <a name="NcmSplineGsl.property-details" id="NcmSplineGsl.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="NcmSplineGsl--type-name" id="NcmSplineGsl--type-name"></a><h3>The <code class="literal">“type-name”</code> property</h3>
-<pre class="programlisting">  “type-name”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>GSL Interpolation method name.</p>
+<pre class="programlisting">  “type-name”                <span class="type">char</span> *</pre>
+<p>The name of the interpolation method from <a class="ulink" href="https://www.gnu.org/software/gsl/" target="_top">GNU Scientific Library (GSL)</a>.</p>
 <p>Owner: NcmSplineGsl</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: "NCM_SPLINE_GSL_CSPLINE"</p>
@@ -479,6 +488,6 @@ ncm_spline_gsl_set_type_by_name (<em class="parameter"><code><a class="link" hre
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.32.1</div>
+<hr />Generated by GTK-Doc V1.33.1</div>
 </div></div></body>
 </html>

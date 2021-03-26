@@ -9,7 +9,7 @@
 <link rel="up" href="ch06.html" title="Cosmological Calculators" />
 <link rel="prev" href="ch06.html" title="Cosmological Calculators" />
 <link rel="next" href="NcScalefactor.html" title="NcScalefactor" />
-<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -47,6 +47,10 @@
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
+<div class="refsect1">
+<a name="NcDistance.stability-level" id="NcDistance.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+</div>
 <div class="refsect1">
 <a name="NcDistance.functions" id="NcDistance.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -189,14 +193,6 @@
 </td>
 <td class="function_name">
 <a class="link" href="NcDistance.html#nc-distance-theta100CMB" title="nc_distance_theta100CMB ()">nc_distance_theta100CMB</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="NcDistance.html#nc-distance-Omega-k0" title="nc_distance_Omega_k0 ()">nc_distance_Omega_k0</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -372,6 +368,22 @@
 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
+<a class="link" href="NcDistance.html#nc-distance-transverse-z1-z2" title="nc_distance_transverse_z1_z2 ()">nc_distance_transverse_z1_z2</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcDistance.html#nc-distance-angular-diameter-z1-z2" title="nc_distance_angular_diameter_z1_z2 ()">nc_distance_angular_diameter_z1_z2</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
 <a class="link" href="NcDistance.html#nc-distance-cosmic-time" title="nc_distance_cosmic_time ()">nc_distance_cosmic_time</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -418,7 +430,7 @@
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcDistance.html#NcDistance--zf" title="The “zf” property">zf</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -447,6 +459,11 @@
 </pre>
 </div>
 <div class="refsect1">
+<a name="NcDistance.includes" id="NcDistance.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;numcosmo/nc_distance.h&gt;
+</pre>
+</div>
+<div class="refsect1">
 <a name="NcDistance.description" id="NcDistance.description"></a><h2>Description</h2>
 <p>This object implements several distances used in cosmology, here we have
 the following definitions.</p>
@@ -454,18 +471,18 @@ the following definitions.</p>
  \newcommand{\RH}{{R_H}}
  \newcommand{\RHc}{{R^\mathrm{c}_H}}
 $</p>
-<p>The Hubble radius (or scale) is defined as the inverse of the Hubble 
+<p>The Hubble radius (or scale) is defined as the inverse of the Hubble
 function $H(z)$ [<a class="link" href="NcHICosmo.html#nc-hicosmo-H" title="nc_hicosmo_H ()"><code class="function">nc_hicosmo_H()</code></a>],
 \begin{equation}\label{eq:def:RHc}
 \RH = \frac{c}{H(z)}, \qquad \RH_0 = \frac{c}{H_0},
 \end{equation}
-where $c$ is the speed of light [<a class="link" href="NcmC.html#ncm-c-c" title="ncm_c_c ()"><code class="function">ncm_c_c()</code></a>], $z$ is the redshift and 
-$H_0 \equiv H(0)$ is the Hubble parameter [<a class="link" href="NcHICosmo.html#nc-hicosmo-H0" title="nc_hicosmo_H0 ()"><code class="function">nc_hicosmo_H0()</code></a>]. Similarly, 
-we also define the comoving Hubble radius as 
+where $c$ is the speed of light [<a class="link" href="NcmC.html#ncm-c-c" title="ncm_c_c ()"><code class="function">ncm_c_c()</code></a>], $z$ is the redshift and
+$H_0 \equiv H(0)$ is the Hubble parameter [<a class="link" href="NcHICosmo.html#nc-hicosmo-H0" title="nc_hicosmo_H0 ()"><code class="function">nc_hicosmo_H0()</code></a>]. Similarly,
+we also define the comoving Hubble radius as
 \begin{equation}\label{eq:def:DH}
 \RHc(z) = \frac{c}{aH(z)} = \frac{c(1+z)}{a_0H(z)}, \qquad \RHc_0 = \frac{c}{a_0H_0}
 \end{equation}
-where ${}_0$ subscript means that the function is calculated at the 
+where ${}_0$ subscript means that the function is calculated at the
 present time and the redshift $z$ is defined by the expression
 $$1 + z = \frac{a_0}{a}.$$</p>
 <p>The comoving distance $D_c$ is defined as
@@ -481,12 +498,12 @@ for the comoving distance we define
 \begin{equation}\label{eq:def:Dc}
 D_c(z) \equiv \frac{d_c(z)}{\RHc_0}.
 \end{equation}
-note, however, that $D_c(z)$ coincides with the proper distance today 
-$r(z) \equiv a_0 d_c(z)$ in unit of the Hubble radius, i.e., 
-$D_c(z) = r(z) / \RH_0$. Therefore, both the comoving distance and 
+note, however, that $D_c(z)$ coincides with the proper distance today
+$r(z) \equiv a_0 d_c(z)$ in unit of the Hubble radius, i.e.,
+$D_c(z) = r(z) / \RH_0$. Therefore, both the comoving distance and
 the proper distance today can be obtained by multiplying $D_c(z)$
 by $\RHc_0$ and $\RH_0$ respectively.</p>
-<p>The transverse comoving distance $D_t$ and its derivative with respect to 
+<p>The transverse comoving distance $D_t$ and its derivative with respect to
 $z$ are given by
 \begin{equation}\label{eq:def:Dt}
 D_t(z) = \frac{\sinh\left[\sqrt{\Omega_{k0}}D_c(z)\right]}{\sqrt{\Omega_{k0}}},
@@ -504,10 +521,15 @@ and the distance modulus is given by
 \end{equation}
 Note that the distance modulus is defined as
 $$\mu(z) = 5\log_{10}[\RH_0D_l(z)/(1\,\text{Mpc})] + 25.$$
-Thus, this differs from our definition by a factor of 
-$5\log_{10}[\RH_0/(1\,\text{Mpc})]$, i.e., 
-$$\mu(z) = \delta\mu(z) + 5\log_{10}[\RH_0/(1\,\text{Mpc})],$$ 
+Thus, this differs from our definition by a factor of
+$5\log_{10}[\RH_0/(1\,\text{Mpc})]$, i.e.,
+$$\mu(z) = \delta\mu(z) + 5\log_{10}[\RH_0/(1\,\text{Mpc})],$$
 where $\text{Mpc}$ is megaparsec [<a class="link" href="NcmC.html#ncm-c-Mpc" title="ncm_c_Mpc ()"><code class="function">ncm_c_Mpc()</code></a>].</p>
+<p>We also implement the following distances between $z_1$ and $z_2$:
+\begin{align}\label{eq:def:Dt12}
+D_t(z_1, z_2) &amp;= \frac{\sinh\left\{\sqrt{\Omega_{k0}}\left[D_c(z_2)-D_c(z_1)\right]\right\}}{\sqrt{\Omega_{k0}}}, \\ \label{eq:def:DA12}
+D_A(z_1, z_2) &amp;= D_t (z_1, z_2) / (1 + z_2).
+\end{align}</p>
 </div>
 <div class="refsect1">
 <a name="NcDistance.functions_details" id="NcDistance.functions_details"></a><h2>Functions</h2>
@@ -531,7 +553,8 @@ where $\text{Mpc}$ is megaparsec [<a class="link" href="NcmC.html#ncm-c-Mpc" tit
 <pre class="programlisting"><a class="link" href="NcDistance.html" title="NcDistance"><span class="returnvalue">NcDistance</span></a> *
 nc_distance_new (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zf</code></em>);</pre>
 <p>Creates a new <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> object optimized to perform distance calculations
-to redshift up to $z_f$.</p>
+to redshift up to <em class="parameter"><code>zf</code></em>
+.</p>
 <div class="refsect3">
 <a name="nc-distance-new.parameters" id="nc-distance-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -542,14 +565,14 @@ to redshift up to $z_f$.</p>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>zf</p></td>
-<td class="parameter_description"><p>final redshift $z_f$</p></td>
+<td class="parameter_description"><p>final redshift</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="nc-distance-new.returns" id="nc-distance-new.returns"></a><h4>Returns</h4>
-<p> a new <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a></p>
+<p> a new <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a>.</p>
 </div>
 </div>
 <hr />
@@ -557,7 +580,8 @@ to redshift up to $z_f$.</p>
 <a name="nc-distance-ref" id="nc-distance-ref"></a><h3>nc_distance_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcDistance.html" title="NcDistance"><span class="returnvalue">NcDistance</span></a> *
 nc_distance_ref (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>);</pre>
-<p>FIXME</p>
+<p>Increases the reference count of <em class="parameter"><code>dist</code></em>
+ atomically.</p>
 <div class="refsect3">
 <a name="nc-distance-ref.parameters" id="nc-distance-ref.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -575,8 +599,9 @@ nc_distance_ref (<em class="parameter"><code><a class="link" href="NcDistance.ht
 </div>
 <div class="refsect3">
 <a name="nc-distance-ref.returns" id="nc-distance-ref.returns"></a><h4>Returns</h4>
-<p>FIXME. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><em class="parameter"><code>dist</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -585,7 +610,7 @@ nc_distance_ref (<em class="parameter"><code><a class="link" href="NcDistance.ht
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_distance_require_zf (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zf</code></em>);</pre>
-<p>Requires the final redshift of at least $z_f$ = <em class="parameter"><code>zf</code></em>
+<p>Requires the final redshift of at least <em class="parameter"><code>zf</code></em>
 .</p>
 <div class="refsect3">
 <a name="nc-distance-require-zf.parameters" id="nc-distance-require-zf.parameters"></a><h4>Parameters</h4>
@@ -616,6 +641,31 @@ nc_distance_require_zf (<em class="parameter"><code><a class="link" href="NcDist
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_distance_set_recomb (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                         <em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>);</pre>
+<p>This function sets <em class="parameter"><code>recomb</code></em>
+ into <em class="parameter"><code>dist</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-distance-set-recomb.parameters" id="nc-distance-set-recomb.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dist</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>recomb</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 <hr />
 <div class="refsect2">
@@ -623,7 +673,11 @@ nc_distance_set_recomb (<em class="parameter"><code><a class="link" href="NcDist
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_distance_prepare (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                      <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
-<p>FIXME</p>
+<p>This function prepares the object <em class="parameter"><code>dist</code></em>
+ using <em class="parameter"><code>cosmo</code></em>
+,
+such that all the available distances functions can be evaluated,
+e.g. <a class="link" href="NcDistance.html#nc-distance-comoving" title="nc_distance_comoving ()"><code class="function">nc_distance_comoving()</code></a>.</p>
 <div class="refsect3">
 <a name="nc-distance-prepare.parameters" id="nc-distance-prepare.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -653,13 +707,42 @@ nc_distance_prepare (<em class="parameter"><code><a class="link" href="NcDistanc
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_distance_prepare_if_needed (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                                <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
+<p>This function prepares the object <em class="parameter"><code>dist</code></em>
+ using <em class="parameter"><code>cosmo</code></em>
+
+if it was changed since last preparation.</p>
+<div class="refsect3">
+<a name="nc-distance-prepare-if-needed.parameters" id="nc-distance-prepare-if-needed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dist</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 <hr />
 <div class="refsect2">
 <a name="nc-distance-free" id="nc-distance-free"></a><h3>nc_distance_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_distance_free (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>);</pre>
-<p>FIXME</p>
+<p>Atomically decrements the reference count of <em class="parameter"><code>dist</code></em>
+ by one. 
+If the reference count drops to 0, all memory allocated by <em class="parameter"><code>dist</code></em>
+ is released.</p>
 <div class="refsect3">
 <a name="nc-distance-free.parameters" id="nc-distance-free.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -681,7 +764,11 @@ nc_distance_free (<em class="parameter"><code><a class="link" href="NcDistance.h
 <a name="nc-distance-clear" id="nc-distance-clear"></a><h3>nc_distance_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_distance_clear (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> **dist</code></em>);</pre>
-<p>FIXME</p>
+<p>Atomically decrements the reference count of <em class="parameter"><code>dist</code></em>
+ by one. 
+If the reference count drops to 0, all memory allocated by <em class="parameter"><code>dist</code></em>
+ is released. 
+Set pointer to NULL.</p>
 <div class="refsect3">
 <a name="nc-distance-clear.parameters" id="nc-distance-clear.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -730,7 +817,7 @@ units of megaparsec (Mpc) [<a class="link" href="NcmC.html#ncm-c-Mpc" title="ncm
 </div>
 <div class="refsect3">
 <a name="nc-distance-hubble.returns" id="nc-distance-hubble.returns"></a><h4>Returns</h4>
-<p> $D_{H0}$</p>
+<p> $D_{H0}$.</p>
 </div>
 </div>
 <hr />
@@ -743,7 +830,7 @@ nc_distance_decoupling_redshift (<em class="parameter"><code><a class="link" hre
 the last scattering surface of the cosmic microwave background photons.</p>
 <p>This function computes $z_\star$ using [<a class="link" href="NcHICosmo.html#nc-hicosmo-z-lss" title="nc_hicosmo_z_lss ()"><code class="function">nc_hicosmo_z_lss()</code></a>], if <em class="parameter"><code>cosmo</code></em>
  implements
-it, or using Hu &amp; Sugiyama fitting formula <a class="link" href="refs.html#XHu1996">Hu (1996)</a>,
+it, or using Hu &amp; Sugiyama fitting formula <a class="link" href="refs.html#XHu1996">Hu (1996)</a>[<a class="ulink" href="https://arxiv.org/abs/astro-ph/9510117" target="_top">arXiv</a>],
 $$ z_\star = 1048 \left(1 + 1.24 \times 10^{-3}  (\Omega_{b0} h^2)^{-0.738}\right) \left(1 + g_1 (\Omega_{m0} h^2)^{g_2}\right),$$
 where $\Omega_{b0} h^2$ [<a class="link" href="NcHICosmo.html#nc-hicosmo-Omega-b0h2" title="nc_hicosmo_Omega_b0h2 ()"><code class="function">nc_hicosmo_Omega_b0h2()</code></a>] and $\Omega_{m0} h^2$ [<a class="link" href="NcHICosmo.html#nc-hicosmo-Omega-m0h2" title="nc_hicosmo_Omega_m0h2 ()"><code class="function">nc_hicosmo_Omega_m0h2()</code></a>]
 are, respectively, the baryonic and matter density parameters times the square
@@ -775,7 +862,7 @@ $$g_1 = \frac{0.0783 (\Omega_{b0} h^2)^{-0.238}}{(1 + 39.5 (\Omega_{b0} h^2)^{0.
 </div>
 <div class="refsect3">
 <a name="nc-distance-decoupling-redshift.returns" id="nc-distance-decoupling-redshift.returns"></a><h4>Returns</h4>
-<p> $z_\star$</p>
+<p> $z_\star$.</p>
 </div>
 </div>
 <hr />
@@ -787,8 +874,8 @@ nc_distance_drag_redshift (<em class="parameter"><code><a class="link" href="NcD
 <p>Drag redshift is the epoch at which baryons were released from photons.</p>
 <p>If the <em class="parameter"><code>dist</code></em>
  object constains a NcRecomb object, it calculates the drag
-redshift through the recombination history. Otherwise, it computes $z_d$ 
-using the fitting formula given in <a class="link" href="refs.html#XEisenstein1998">Eisenstein &amp;amp; Hu (1998)</a>,
+redshift through the recombination history. Otherwise, it computes $z_d$
+using the fitting formula given in <a class="link" href="refs.html#XEisenstein1998">Eisenstein &amp;amp; Hu (1998)</a> [<a class="ulink" href="https://arxiv.org/abs/astro-ph/9709112" target="_top">arXiv</a>],
 $$z_d = \frac{1291 (\Omega_{m0} h^2)^{0.251}}{(1 + 0.659 (\Omega_{m0} h^2)^{0.828})}
 \left(1 + b_1 (\Omega_{b0} h^2)^{b_2}\right),$$
 where $\Omega_{b0} h^2$ [<a class="link" href="NcHICosmo.html#nc-hicosmo-Omega-b0h2" title="nc_hicosmo_Omega_b0h2 ()"><code class="function">nc_hicosmo_Omega_b0h2()</code></a>] and $\Omega_{m0} h^2$ [<a class="link" href="NcHICosmo.html#nc-hicosmo-Omega-m0h2" title="nc_hicosmo_Omega_m0h2 ()"><code class="function">nc_hicosmo_Omega_m0h2()</code></a>]
@@ -821,7 +908,7 @@ $$b_1 = 0.313 (\Omega_{m0} h^2)^{-0.419} \left(1 + 0.607 (\Omega_{m0} h^2)^{0.67
 </div>
 <div class="refsect3">
 <a name="nc-distance-drag-redshift.returns" id="nc-distance-drag-redshift.returns"></a><h4>Returns</h4>
-<p> $z_d$</p>
+<p> $z_d$.</p>
 </div>
 </div>
 <hr />
@@ -856,7 +943,7 @@ decoupling redshift $z_\star$ [<a class="link" href="NcDistance.html#nc-distance
 </div>
 <div class="refsect3">
 <a name="nc-distance-shift-parameter-lss.returns" id="nc-distance-shift-parameter-lss.returns"></a><h4>Returns</h4>
-<p> $R(z_\star)$</p>
+<p> $R(z_\star)$.</p>
 </div>
 </div>
 <hr />
@@ -891,7 +978,7 @@ decoupling redshift $z_\star$ [<a class="link" href="NcDistance.html#nc-distance
 </div>
 <div class="refsect3">
 <a name="nc-distance-comoving-lss.returns" id="nc-distance-comoving-lss.returns"></a><h4>Returns</h4>
-<p> $D_c(z_\star)$</p>
+<p> $D_c(z_\star)$.</p>
 </div>
 </div>
 <hr />
@@ -901,12 +988,11 @@ decoupling redshift $z_\star$ [<a class="link" href="NcDistance.html#nc-distance
 nc_distance_acoustic_scale (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                             <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
 <p>Compute the acoustic scale $l_A (z_\star)$ at $z_\star$ [<a class="link" href="NcDistance.html#nc-distance-decoupling-redshift" title="nc_distance_decoupling_redshift ()"><code class="function">nc_distance_decoupling_redshift()</code></a>],
-\begin{equation}
+\begin{equation*}
 l_A(z_\star) = \pi \frac{D_t (z_\star)}{r_s (z_\star)},
-\end{equation}
+\end{equation*}
 where $D_t(z_\star)$ is the comoving transverse distance [<a class="link" href="NcDistance.html#nc-distance-transverse" title="nc_distance_transverse ()"><code class="function">nc_distance_transverse()</code></a>]
-and $r_s(z_\star)$ is the sound horizon [<a class="link" href="NcDistance.html#nc-distance-sound-horizon" title="nc_distance_sound_horizon ()"><code class="function">nc_distance_sound_horizon()</code></a>] both
-both computed at $z_\star$.</p>
+and $r_s(z_\star)$ is the sound horizon [<a class="link" href="NcDistance.html#nc-distance-sound-horizon" title="nc_distance_sound_horizon ()"><code class="function">nc_distance_sound_horizon()</code></a>] both computed at $z_\star$.</p>
 <div class="refsect3">
 <a name="nc-distance-acoustic-scale.parameters" id="nc-distance-acoustic-scale.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -931,7 +1017,7 @@ both computed at $z_\star$.</p>
 </div>
 <div class="refsect3">
 <a name="nc-distance-acoustic-scale.returns" id="nc-distance-acoustic-scale.returns"></a><h4>Returns</h4>
-<p> $l_A(z_\star)$</p>
+<p> $l_A(z_\star)$.</p>
 </div>
 </div>
 <hr />
@@ -941,9 +1027,9 @@ both computed at $z_\star$.</p>
 nc_distance_theta100CMB (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                          <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
 <p>Compute the $100\theta_\mathrm{CMB}$ angle at $z_\star$ [<a class="link" href="NcDistance.html#nc-distance-decoupling-redshift" title="nc_distance_decoupling_redshift ()"><code class="function">nc_distance_decoupling_redshift()</code></a>],
-\begin{equation}
+\begin{equation*}
 100\theta_\mathrm{CMB} = 100 \times \frac{r_s (z_\star)}{D_t (z_\star)},
-\end{equation}
+\end{equation*}
 where $D_t(z_\star)$ is the comoving transverse distance [<a class="link" href="NcDistance.html#nc-distance-transverse" title="nc_distance_transverse ()"><code class="function">nc_distance_transverse()</code></a>]
 and $r_s(z_\star)$ is the sound horizon [<a class="link" href="NcDistance.html#nc-distance-sound-horizon" title="nc_distance_sound_horizon ()"><code class="function">nc_distance_sound_horizon()</code></a>] both
 both computed at $z_\star$.</p>
@@ -971,15 +1057,8 @@ both computed at $z_\star$.</p>
 </div>
 <div class="refsect3">
 <a name="nc-distance-theta100CMB.returns" id="nc-distance-theta100CMB.returns"></a><h4>Returns</h4>
-<p> $100\theta_\mathrm{CMB}$</p>
+<p> $100\theta_\mathrm{CMB}$.</p>
 </div>
-</div>
-<hr />
-<div class="refsect2">
-<a name="nc-distance-Omega-k0" id="nc-distance-Omega-k0"></a><h3>nc_distance_Omega_k0 ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-nc_distance_Omega_k0 (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
-                      <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
 </div>
 <hr />
 <div class="refsect2">
@@ -1017,7 +1096,7 @@ $D_t(z_\star)$ is the transverse comoving distance [Eq. $\eqref{eq:def:Dt}$] bot
 </div>
 <div class="refsect3">
 <a name="nc-distance-angular-diameter-curvature-scale.returns" id="nc-distance-angular-diameter-curvature-scale.returns"></a><h4>Returns</h4>
-<p> $D_a(z_\star)$</p>
+<p> $D_a(z_\star)$.</p>
 </div>
 </div>
 <hr />
@@ -1026,7 +1105,8 @@ $D_t(z_\star)$ is the transverse comoving distance [Eq. $\eqref{eq:def:Dt}$] bot
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_r_zd (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                   <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
-<p>$r(z_d)$.</p>
+<p>This funtion computes the sound horizon [<a class="link" href="NcDistance.html#nc-distance-sound-horizon" title="nc_distance_sound_horizon ()"><code class="function">nc_distance_sound_horizon()</code></a>]
+at the drag redshift [<a class="link" href="NcDistance.html#nc-distance-drag-redshift" title="nc_distance_drag_redshift ()"><code class="function">nc_distance_drag_redshift()</code></a>].</p>
 <div class="refsect3">
 <a name="nc-distance-r-zd.parameters" id="nc-distance-r-zd.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1051,7 +1131,7 @@ nc_distance_r_zd (<em class="parameter"><code><a class="link" href="NcDistance.h
 </div>
 <div class="refsect3">
 <a name="nc-distance-r-zd.returns" id="nc-distance-r-zd.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> $r(z_d)$.</p>
 </div>
 </div>
 <hr />
@@ -1060,7 +1140,7 @@ nc_distance_r_zd (<em class="parameter"><code><a class="link" href="NcDistance.h
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_r_zd_Mpc (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                       <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
-<p>$r (z_d) R_H\, [\mathrm{Mpc}]$.</p>
+<p>Similar as <a class="link" href="NcDistance.html#nc-distance-r-zd" title="nc_distance_r_zd ()"><code class="function">nc_distance_r_zd()</code></a>, but now in units of $\mathrm{Mpc}$, i.e., $ R_H \times r(z_d)$.</p>
 <div class="refsect3">
 <a name="nc-distance-r-zd-Mpc.parameters" id="nc-distance-r-zd-Mpc.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1085,7 +1165,7 @@ nc_distance_r_zd_Mpc (<em class="parameter"><code><a class="link" href="NcDistan
 </div>
 <div class="refsect3">
 <a name="nc-distance-r-zd-Mpc.returns" id="nc-distance-r-zd-Mpc.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> r_zd in $ \left[ \mathrm{Mpc} \right]$ units.</p>
 </div>
 </div>
 <hr />
@@ -1094,7 +1174,7 @@ nc_distance_r_zd_Mpc (<em class="parameter"><code><a class="link" href="NcDistan
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_comoving (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                       <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
 <p>Calculate the comoving distance $D_c (z)$ as defined in Eq. $\eqref{eq:def:Dc}$.</p>
 <div class="refsect3">
 <a name="nc-distance-comoving.parameters" id="nc-distance-comoving.parameters"></a><h4>Parameters</h4>
@@ -1125,7 +1205,7 @@ nc_distance_comoving (<em class="parameter"><code><a class="link" href="NcDistan
 </div>
 <div class="refsect3">
 <a name="nc-distance-comoving.returns" id="nc-distance-comoving.returns"></a><h4>Returns</h4>
-<p> $D_c(z)$</p>
+<p> $D_c(z)$.</p>
 </div>
 </div>
 <hr />
@@ -1134,7 +1214,7 @@ nc_distance_comoving (<em class="parameter"><code><a class="link" href="NcDistan
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_transverse (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                         <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+                        <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
 <p>Compute the transverse comoving distance $D_t (z)$ defined in Eq. $\eqref{eq:def:Dt}$.</p>
 <div class="refsect3">
 <a name="nc-distance-transverse.parameters" id="nc-distance-transverse.parameters"></a><h4>Parameters</h4>
@@ -1165,7 +1245,7 @@ nc_distance_transverse (<em class="parameter"><code><a class="link" href="NcDist
 </div>
 <div class="refsect3">
 <a name="nc-distance-transverse.returns" id="nc-distance-transverse.returns"></a><h4>Returns</h4>
-<p> $D_t(z)$</p>
+<p> $D_t(z)$.</p>
 </div>
 </div>
 <hr />
@@ -1174,7 +1254,7 @@ nc_distance_transverse (<em class="parameter"><code><a class="link" href="NcDist
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_dtransverse_dz (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                             <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
 <p>Compute the derivative of $D_t(z)$ with respect to $z$ defined in
 Eq. $\eqref{eq:def:Dt}$.</p>
 <div class="refsect3">
@@ -1206,7 +1286,7 @@ Eq. $\eqref{eq:def:Dt}$.</p>
 </div>
 <div class="refsect3">
 <a name="nc-distance-dtransverse-dz.returns" id="nc-distance-dtransverse-dz.returns"></a><h4>Returns</h4>
-<p> $\frac{dD_t(z)}{dz}$</p>
+<p> $\frac{dD_t(z)}{dz}$.</p>
 </div>
 </div>
 <hr />
@@ -1215,7 +1295,7 @@ Eq. $\eqref{eq:def:Dt}$.</p>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_luminosity (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                         <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+                        <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
 <p>Compute the luminosity distance $D_l(z)$  defined in Eq. $\eqref{eq:def:Dl}$.</p>
 <div class="refsect3">
 <a name="nc-distance-luminosity.parameters" id="nc-distance-luminosity.parameters"></a><h4>Parameters</h4>
@@ -1246,7 +1326,7 @@ nc_distance_luminosity (<em class="parameter"><code><a class="link" href="NcDist
 </div>
 <div class="refsect3">
 <a name="nc-distance-luminosity.returns" id="nc-distance-luminosity.returns"></a><h4>Returns</h4>
-<p> $D_l(z)$</p>
+<p> $D_l(z)$.</p>
 </div>
 </div>
 <hr />
@@ -1255,8 +1335,8 @@ nc_distance_luminosity (<em class="parameter"><code><a class="link" href="NcDist
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_angular_diameter (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                               <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
-<p>Compute the angular diameter $D_A(z)$  defined in Eq. $\eqref{eq:def:Dl}$.</p>
+                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>Compute the angular diameter $D_A(z)$, defined in Eq. $\eqref{eq:def:Dl}$.</p>
 <div class="refsect3">
 <a name="nc-distance-angular-diameter.parameters" id="nc-distance-angular-diameter.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1286,7 +1366,7 @@ nc_distance_angular_diameter (<em class="parameter"><code><a class="link" href="
 </div>
 <div class="refsect3">
 <a name="nc-distance-angular-diameter.returns" id="nc-distance-angular-diameter.returns"></a><h4>Returns</h4>
-<p> $D_A(z)$</p>
+<p> $D_A(z)$.</p>
 </div>
 </div>
 <hr />
@@ -1295,7 +1375,7 @@ nc_distance_angular_diameter (<em class="parameter"><code><a class="link" href="
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_dmodulus (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                       <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
 <p>Compute the distance modulus $\delta\mu(z)$ defined in Eq. $\eqref{eq:def:dmu}$.</p>
 <div class="refsect3">
 <a name="nc-distance-dmodulus.parameters" id="nc-distance-dmodulus.parameters"></a><h4>Parameters</h4>
@@ -1326,7 +1406,7 @@ nc_distance_dmodulus (<em class="parameter"><code><a class="link" href="NcDistan
 </div>
 <div class="refsect3">
 <a name="nc-distance-dmodulus.returns" id="nc-distance-dmodulus.returns"></a><h4>Returns</h4>
-<p> $\delta\mu(z)$</p>
+<p> $\delta\mu(z)$.</p>
 </div>
 </div>
 <hr />
@@ -1335,8 +1415,8 @@ nc_distance_dmodulus (<em class="parameter"><code><a class="link" href="NcDistan
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_luminosity_hef (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                             <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z_he</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z_cmb</code></em>);</pre>
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z_he</code></em>,
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z_cmb</code></em>);</pre>
 <p>Calculate the luminosity distance $D_l$ corrected to our local frame.</p>
 <div class="refsect3">
 <a name="nc-distance-luminosity-hef.parameters" id="nc-distance-luminosity-hef.parameters"></a><h4>Parameters</h4>
@@ -1372,7 +1452,7 @@ nc_distance_luminosity_hef (<em class="parameter"><code><a class="link" href="Nc
 </div>
 <div class="refsect3">
 <a name="nc-distance-luminosity-hef.returns" id="nc-distance-luminosity-hef.returns"></a><h4>Returns</h4>
-<p> $D_l(z_{hef},z_{CMB})$</p>
+<p> $D_l(z_{hef},z_{CMB})$.</p>
 </div>
 </div>
 <hr />
@@ -1381,9 +1461,9 @@ nc_distance_luminosity_hef (<em class="parameter"><code><a class="link" href="Nc
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_dmodulus_hef (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                           <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z_he</code></em>,
-                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z_cmb</code></em>);</pre>
-<p>Calculate the distance modulus [Eq. $\eqref{eq:def:dmu}$] using the frame corrected luminosity 
+                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z_he</code></em>,
+                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z_cmb</code></em>);</pre>
+<p>Calculate the distance modulus [Eq. $\eqref{eq:def:dmu}$] using the frame corrected luminosity
 distance [<a class="link" href="NcDistance.html#nc-distance-luminosity-hef" title="nc_distance_luminosity_hef ()"><code class="function">nc_distance_luminosity_hef()</code></a>].</p>
 <div class="refsect3">
 <a name="nc-distance-dmodulus-hef.parameters" id="nc-distance-dmodulus-hef.parameters"></a><h4>Parameters</h4>
@@ -1419,7 +1499,7 @@ distance [<a class="link" href="NcDistance.html#nc-distance-luminosity-hef" titl
 </div>
 <div class="refsect3">
 <a name="nc-distance-dmodulus-hef.returns" id="nc-distance-dmodulus-hef.returns"></a><h4>Returns</h4>
-<p> $\delta\mu(z_{hef},z_{CMB})$</p>
+<p> $\delta\mu(z_{hef},z_{CMB})$.</p>
 </div>
 </div>
 <hr />
@@ -1428,12 +1508,11 @@ distance [<a class="link" href="NcDistance.html#nc-distance-luminosity-hef" titl
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_shift_parameter (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                              <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+                             <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
 <p>The shift parameter $R(z)$ is defined as
-\begin{align}
-R(z) &amp;=&amp; \frac{\sqrt{\Omega_{m0} H_0^2}}{c} (1 + z) D_A(z) \
-&amp;=&amp; \sqrt{\Omega_{m0}} D_t(z),
-\end{align}
+\begin{equation*}
+R(z) = \frac{\sqrt{\Omega_{m0} H_0^2}}{c} (1 + z) D_A(z) = \sqrt{\Omega_{m0}} D_t(z),
+\end{equation*}
 where $\Omega_{m0}$ is the matter density paremeter [<a class="link" href="NcHICosmo.html#nc-hicosmo-Omega-m0" title="nc_hicosmo_Omega_m0 ()"><code class="function">nc_hicosmo_Omega_m0()</code></a>],
 $D_A(z) = D_{H_0} D_t(z) / (1 + z)$ is the angular diameter distance and
 $D_t(z)$ is the tranverse comoving distance [Eq. $\eqref{eq:def:Dt}$].</p>
@@ -1466,7 +1545,7 @@ $D_t(z)$ is the tranverse comoving distance [Eq. $\eqref{eq:def:Dt}$].</p>
 </div>
 <div class="refsect3">
 <a name="nc-distance-shift-parameter.returns" id="nc-distance-shift-parameter.returns"></a><h4>Returns</h4>
-<p> $R(z)$</p>
+<p> $R(z)$.</p>
 </div>
 </div>
 <hr />
@@ -1475,13 +1554,13 @@ $D_t(z)$ is the tranverse comoving distance [Eq. $\eqref{eq:def:Dt}$].</p>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_dilation_scale (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                             <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
 <p>The dilation scale is the spherically averaged distance for perturbations along and
 orthogonal to the line of sight,
 $$D_V(z) = \left[D_{H_0}^2 D_t(z)^2 \frac{cz}{H(z)} \right]^{1/3},$$
 where $D_t(z)$ is the transverse comoving distance [Eq. $\eqref{eq:def:Dt}$], $c$ is the speed of light
 [<a class="link" href="NcmC.html#ncm-c-c" title="ncm_c_c ()"><code class="function">ncm_c_c()</code></a>] and $H(z)$ is the Hubble function [<a class="link" href="NcHICosmo.html#nc-hicosmo-H" title="nc_hicosmo_H ()"><code class="function">nc_hicosmo_H()</code></a>].
-See <a class="link" href="refs.html#XEisenstein2005">Eisenstein et al. (2005)</a>.</p>
+See <a class="link" href="refs.html#XEisenstein2005">Eisenstein et al. (2005)</a> [<a class="ulink" href="https://arxiv.org/abs/astro-ph/0501171" target="_top">arXiv</a>].</p>
 <p>This function computes the dimensionless dilation scale:
 $$D_V^\star(z) = \left[D_t(z)^2 \frac{z}{E(z)} \right]^{1/3} = \frac{D_V(z)}{D_{H_0}},$$
 where $E(z)$ is the normalized Hubble function [<a class="link" href="NcHICosmo.html#nc-hicosmo-E2" title="nc_hicosmo_E2 ()"><code class="function">nc_hicosmo_E2()</code></a>].</p>
@@ -1514,7 +1593,7 @@ where $E(z)$ is the normalized Hubble function [<a class="link" href="NcHICosmo.
 </div>
 <div class="refsect3">
 <a name="nc-distance-dilation-scale.returns" id="nc-distance-dilation-scale.returns"></a><h4>Returns</h4>
-<p> $D_V^\star(z)$</p>
+<p> $D_V^\star(z)$.</p>
 </div>
 </div>
 <hr />
@@ -1523,13 +1602,13 @@ where $E(z)$ is the normalized Hubble function [<a class="link" href="NcHICosmo.
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_bao_A_scale (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                          <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
-<p>Bao 'A' scale D_v(z) sqrt(Omega_m0) / z -- (arXiv:astro-ph/0501171)
-The acoustic scale is defined as
+                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>This function returns the <a class="ulink" href="https://en.wikipedia.org/wiki/Baryon_acoustic_oscillations" target="_top">BAO</a> $A$ parameter.
+It is defined as
 $$ A \equiv D_V (z) \frac{\sqrt{\Omega_{m0} H_0^2}}{z c},$$
 where $\Omega_{m0}$ is the matter density parameter [<a class="link" href="NcHICosmo.html#nc-hicosmo-Omega-m0" title="nc_hicosmo_Omega_m0 ()"><code class="function">nc_hicosmo_Omega_m0()</code></a>], $c$ is the speed of light [<a class="link" href="NcmC.html#ncm-c-c" title="ncm_c_c ()"><code class="function">ncm_c_c()</code></a>],
 $H_0$ is the Hubble parameter [<a class="link" href="NcHICosmo.html#nc-hicosmo-H0" title="nc_hicosmo_H0 ()"><code class="function">nc_hicosmo_H0()</code></a>] and $D_V(z)$ is the dilation scale [<a class="link" href="NcDistance.html#nc-distance-dilation-scale" title="nc_distance_dilation_scale ()"><code class="function">nc_distance_dilation_scale()</code></a>].
-See Section 4.5 from <a class="link" href="refs.html#XEisenstein2005">Eisenstein et al. (2005)</a>.</p>
+See Section 4.5 from <a class="link" href="refs.html#XEisenstein2005">Eisenstein et al. (2005)</a> [<a class="ulink" href="https://arxiv.org/abs/astro-ph/0501171" target="_top">arXiv</a>].</p>
 <div class="refsect3">
 <a name="nc-distance-bao-A-scale.parameters" id="nc-distance-bao-A-scale.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1559,7 +1638,7 @@ See Section 4.5 from <a class="link" href="refs.html#XEisenstein2005">Eisenstein
 </div>
 <div class="refsect3">
 <a name="nc-distance-bao-A-scale.returns" id="nc-distance-bao-A-scale.returns"></a><h4>Returns</h4>
-<p> $A(z)$</p>
+<p> $A(z)$.</p>
 </div>
 </div>
 <hr />
@@ -1568,14 +1647,14 @@ See Section 4.5 from <a class="link" href="refs.html#XEisenstein2005">Eisenstein
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_sound_horizon (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                            <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
 <p>Compute the sound horizon $r_s$,
 \begin{equation}
 \theta_s (z) = \int_{z}^\infty \frac{c_s(z^\prime)}{E(z^\prime)} dz^\prime, \quad r_s (z) = \frac{\mathrm{sinn}\left(\sqrt{\Omega_{k0}}\theta_s\right)}{\sqrt{\Omega_{k0}}},
 \end{equation}
-where $c^{b\gamma}_s$ is the baryon-photon plasma speed of sound 
-[<a class="link" href="NcHICosmo.html#nc-hicosmo-bgp-cs2" title="nc_hicosmo_bgp_cs2 ()"><code class="function">nc_hicosmo_bgp_cs2()</code></a>] and $E(z)$ is the normalized Hubble function 
-[<a class="link" href="NcHICosmo.html#nc-hicosmo-E" title="nc_hicosmo_E ()"><code class="function">nc_hicosmo_E()</code></a>].</p>
+where $c_s = \sqrt{c^{b\gamma 2}_s(z)}$ is the baryon-photon plasma speed of sound
+(see <a class="link" href="NcHICosmo.html#nc-hicosmo-bgp-cs2" title="nc_hicosmo_bgp_cs2 ()"><code class="function">nc_hicosmo_bgp_cs2()</code></a> for more details)
+and $E(z)$ is the normalized Hubble function [<a class="link" href="NcHICosmo.html#nc-hicosmo-E" title="nc_hicosmo_E ()"><code class="function">nc_hicosmo_E()</code></a>].</p>
 <div class="refsect3">
 <a name="nc-distance-sound-horizon.parameters" id="nc-distance-sound-horizon.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1605,7 +1684,7 @@ where $c^{b\gamma}_s$ is the baryon-photon plasma speed of sound
 </div>
 <div class="refsect3">
 <a name="nc-distance-sound-horizon.returns" id="nc-distance-sound-horizon.returns"></a><h4>Returns</h4>
-<p> $r_s(z)$</p>
+<p> $r_s(z)$.</p>
 </div>
 </div>
 <hr />
@@ -1614,10 +1693,12 @@ where $c^{b\gamma}_s$ is the baryon-photon plasma speed of sound
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_dsound_horizon_dz (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                                <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+                               <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
 <p>Calculate the sound horizon [<a class="link" href="NcDistance.html#nc-distance-sound-horizon" title="nc_distance_sound_horizon ()"><code class="function">nc_distance_sound_horizon()</code></a>] derivative with respect to $z$,
-$$\frac{d r_s(z)}{dz} = - \frac{c_s(z)}{E(z)},$$
-where $c_s(z) / E(z)$ is given by Eq. \eqref{eq:def:rs:integrand}.</p>
+$$\frac{d r_s(z)}{dz} = - \frac{c_s(z)}{E(z)}\, ,$$
+where $c_s = \sqrt{c^{b\gamma 2}_s(z)}$ is the baryon-photon plasma speed of sound
+(see <a class="link" href="NcHICosmo.html#nc-hicosmo-bgp-cs2" title="nc_hicosmo_bgp_cs2 ()"><code class="function">nc_hicosmo_bgp_cs2()</code></a> for more details)
+and $E(z)$ is the normalized Hubble function [<a class="link" href="NcHICosmo.html#nc-hicosmo-E" title="nc_hicosmo_E ()"><code class="function">nc_hicosmo_E()</code></a>].</p>
 <div class="refsect3">
 <a name="nc-distance-dsound-horizon-dz.parameters" id="nc-distance-dsound-horizon-dz.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1647,7 +1728,7 @@ where $c_s(z) / E(z)$ is given by Eq. \eqref{eq:def:rs:integrand}.</p>
 </div>
 <div class="refsect3">
 <a name="nc-distance-dsound-horizon-dz.returns" id="nc-distance-dsound-horizon-dz.returns"></a><h4>Returns</h4>
-<p> $\frac{d r_s(z)}{dz}$</p>
+<p> $\frac{d r_s(z)}{dz}$.</p>
 </div>
 </div>
 <hr />
@@ -1656,8 +1737,10 @@ where $c_s(z) / E(z)$ is given by Eq. \eqref{eq:def:rs:integrand}.</p>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_bao_r_Dv (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                       <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
-<p>$r(z_d) / D_V(z)$ -- (arXiv:0705.3323).</p>
+                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>This function computes $r(z_d) / D_V(z)$,
+where $r(z_d)$ is given by <a class="link" href="NcDistance.html#nc-distance-r-zd" title="nc_distance_r_zd ()"><code class="function">nc_distance_r_zd()</code></a> and $D_V(z)$ by <a class="link" href="NcDistance.html#nc-distance-dilation-scale" title="nc_distance_dilation_scale ()"><code class="function">nc_distance_dilation_scale()</code></a>.
+For more information see <a class="link" href="refs.html#XPercival2007">Percival et al. (2007)</a> [<a class="ulink" href="https://arxiv.org/abs/0705.3323" target="_top">arXiv</a>].</p>
 <div class="refsect3">
 <a name="nc-distance-bao-r-Dv.parameters" id="nc-distance-bao-r-Dv.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1687,7 +1770,7 @@ nc_distance_bao_r_Dv (<em class="parameter"><code><a class="link" href="NcDistan
 </div>
 <div class="refsect3">
 <a name="nc-distance-bao-r-Dv.returns" id="nc-distance-bao-r-Dv.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> $r(z_d) / D_V(z)$.</p>
 </div>
 </div>
 <hr />
@@ -1696,9 +1779,9 @@ nc_distance_bao_r_Dv (<em class="parameter"><code><a class="link" href="NcDistan
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_DH_r (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                   <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
-<p>Computes the ratio between the Hubble (distance) radius and the sound horizon at the drag epoch, 
-$$\frac{R_H}{r_s(z_d)} = c / (H(z) r_d).$$</p>
+                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>Computes the ratio between the Hubble (distance) radius and the sound horizon at the drag epoch,
+$$\frac{R_H}{r_s(z_d)} = \frac{c}{H(z) r_d}.$$</p>
 <div class="refsect3">
 <a name="nc-distance-DH-r.parameters" id="nc-distance-DH-r.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1728,7 +1811,7 @@ $$\frac{R_H}{r_s(z_d)} = c / (H(z) r_d).$$</p>
 </div>
 <div class="refsect3">
 <a name="nc-distance-DH-r.returns" id="nc-distance-DH-r.returns"></a><h4>Returns</h4>
-<p> $R_H/r_d = c / (H(z) r_d)$</p>
+<p> $R_H/r_d = c / (H(z) r_d)$.</p>
 </div>
 </div>
 <hr />
@@ -1737,8 +1820,9 @@ $$\frac{R_H}{r_s(z_d)} = c / (H(z) r_d).$$</p>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_DA_r (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                   <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
-<p>Computes the ratio between the angular-diameter distance and the sound horizon at the drag epoch, $$D_A(z) / (c r_s(z_d)).$$</p>
+                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>Computes the ratio between the angular-diameter distance and the sound horizon at the drag epoch,
+$$\frac{D_A(z)}{c \, r_s(z_d)}.$$</p>
 <div class="refsect3">
 <a name="nc-distance-DA-r.parameters" id="nc-distance-DA-r.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1768,7 +1852,7 @@ nc_distance_DA_r (<em class="parameter"><code><a class="link" href="NcDistance.h
 </div>
 <div class="refsect3">
 <a name="nc-distance-DA-r.returns" id="nc-distance-DA-r.returns"></a><h4>Returns</h4>
-<p> $D_A(z) / (c r_d)$</p>
+<p> $D_A(z) / (c \, r_d)$.</p>
 </div>
 </div>
 <hr />
@@ -1777,7 +1861,7 @@ nc_distance_DA_r (<em class="parameter"><code><a class="link" href="NcDistance.h
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_comoving_z_to_infinity (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                                     <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
 <p>Computes the comoving distance from <em class="parameter"><code>z</code></em>
  to infinity.</p>
 <div class="refsect3">
@@ -1809,7 +1893,7 @@ nc_distance_comoving_z_to_infinity (<em class="parameter"><code><a class="link" 
 </div>
 <div class="refsect3">
 <a name="nc-distance-comoving-z-to-infinity.returns" id="nc-distance-comoving-z-to-infinity.returns"></a><h4>Returns</h4>
-<p> $D_c$ from $z$ to $\infity$</p>
+<p> $D_c$ from $z$ to $\infty$.</p>
 </div>
 </div>
 <hr />
@@ -1818,8 +1902,8 @@ nc_distance_comoving_z_to_infinity (<em class="parameter"><code><a class="link" 
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_transverse_z_to_infinity (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                                       <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
-<p>Compute the transverse comoving distance $D_t (z)$ (defined in Eq. $\eqref{eq:def:Dt}$) 
+                                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>Compute the transverse comoving distance $D_t (z)$ (defined in Eq. $\eqref{eq:def:Dt}$)
 but from <em class="parameter"><code>z</code></em>
  to infinity.</p>
 <div class="refsect3">
@@ -1851,7 +1935,99 @@ but from <em class="parameter"><code>z</code></em>
 </div>
 <div class="refsect3">
 <a name="nc-distance-transverse-z-to-infinity.returns" id="nc-distance-transverse-z-to-infinity.returns"></a><h4>Returns</h4>
-<p> $D_t(z)$ from $z$ to $\infity$</p>
+<p> $D_t(z)$ from $z$ to $\infty$.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-distance-transverse-z1-z2" id="nc-distance-transverse-z1-z2"></a><h3>nc_distance_transverse_z1_z2 ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_distance_transverse_z1_z2 (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
+                              <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z1</code></em>,
+                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z2</code></em>);</pre>
+<p>Compute the transverse comoving distance between $z_1$ and $z_2$, $D_t (z1, z2)$ defined in Eq. $\eqref{eq:def:Dt12}$.</p>
+<div class="refsect3">
+<a name="nc-distance-transverse-z1-z2.parameters" id="nc-distance-transverse-z1-z2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dist</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z1</p></td>
+<td class="parameter_description"><p>redshift $z_1$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z2</p></td>
+<td class="parameter_description"><p>redshift $z_2$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-distance-transverse-z1-z2.returns" id="nc-distance-transverse-z1-z2.returns"></a><h4>Returns</h4>
+<p> $D_t(z_1, z_2)$.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-distance-angular-diameter-z1-z2" id="nc-distance-angular-diameter-z1-z2"></a><h3>nc_distance_angular_diameter_z1_z2 ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_distance_angular_diameter_z1_z2 (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
+                                    <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z1</code></em>,
+                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z2</code></em>);</pre>
+<p>Compute the angular diameter $D_A(z_1, z_2)$, defined in Eq. $\eqref{eq:def:DA12}$.</p>
+<div class="refsect3">
+<a name="nc-distance-angular-diameter-z1-z2.parameters" id="nc-distance-angular-diameter-z1-z2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dist</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z1</p></td>
+<td class="parameter_description"><p>redshift $z_1$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z2</p></td>
+<td class="parameter_description"><p>redshift $z_2$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-distance-angular-diameter-z1-z2.returns" id="nc-distance-angular-diameter-z1-z2.returns"></a><h4>Returns</h4>
+<p> $D_A(z_1, z_2)$.</p>
 </div>
 </div>
 <hr />
@@ -1860,8 +2036,11 @@ but from <em class="parameter"><code>z</code></em>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_cosmic_time (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                          <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
-<p>FIXME</p>
+                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>This function computes the cosmological time, $t(z)$, defined as
+\begin{equation*}
+t(z) = \int_z^{\infty} \frac{dx}{(1+x)E(x)}.
+\end{equation*}</p>
 <div class="refsect3">
 <a name="nc-distance-cosmic-time.parameters" id="nc-distance-cosmic-time.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1883,11 +2062,15 @@ nc_distance_cosmic_time (<em class="parameter"><code><a class="link" href="NcDis
 </tr>
 <tr>
 <td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="nc-distance-cosmic-time.returns" id="nc-distance-cosmic-time.returns"></a><h4>Returns</h4>
+<p> $t(z)$.</p>
 </div>
 </div>
 <hr />
@@ -1896,8 +2079,11 @@ nc_distance_cosmic_time (<em class="parameter"><code><a class="link" href="NcDis
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_lookback_time (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                            <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
-<p>FIXME</p>
+                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>This functions computes the look-back time, $t_{lb}(z)$, defined as</p>
+<p>\begin{equation*}
+t_{lb}(z) = \int_0^{z} \frac{dx}{(1+x)E(x)}.
+\end{equation*}</p>
 <div class="refsect3">
 <a name="nc-distance-lookback-time.parameters" id="nc-distance-lookback-time.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1919,11 +2105,15 @@ nc_distance_lookback_time (<em class="parameter"><code><a class="link" href="NcD
 </tr>
 <tr>
 <td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="nc-distance-lookback-time.returns" id="nc-distance-lookback-time.returns"></a><h4>Returns</h4>
+<p> $t_{lb}(z)$.</p>
 </div>
 </div>
 <hr />
@@ -1932,8 +2122,9 @@ nc_distance_lookback_time (<em class="parameter"><code><a class="link" href="NcD
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_conformal_time (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                             <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
-<p>FIXME</p>
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>This function computes the cosmological conformal time $\eta(z)$ defined as
+$$ \eta(z) = \int_z^\infty \frac{dz}{E(z)} \, . $$</p>
 <div class="refsect3">
 <a name="nc-distance-conformal-time.parameters" id="nc-distance-conformal-time.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1955,11 +2146,15 @@ nc_distance_conformal_time (<em class="parameter"><code><a class="link" href="Nc
 </tr>
 <tr>
 <td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="nc-distance-conformal-time.returns" id="nc-distance-conformal-time.returns"></a><h4>Returns</h4>
+<p> $\eta(z)$.</p>
 </div>
 </div>
 <hr />
@@ -1968,8 +2163,10 @@ nc_distance_conformal_time (<em class="parameter"><code><a class="link" href="Nc
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_distance_conformal_lookback_time (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                                      <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
-<p>FIXME</p>
+                                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>This function computes the conformal look-back time $\eta_{lb}(z)$.
+Within the chosen units it becomes the same as the comoving distance [<a class="link" href="NcDistance.html#nc-distance-comoving" title="nc_distance_comoving ()"><code class="function">nc_distance_comoving()</code></a>],
+given in Eq. $\eqref{eq:def:dc}$.</p>
 <div class="refsect3">
 <a name="nc-distance-conformal-lookback-time.parameters" id="nc-distance-conformal-lookback-time.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1991,11 +2188,15 @@ nc_distance_conformal_lookback_time (<em class="parameter"><code><a class="link"
 </tr>
 <tr>
 <td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="nc-distance-conformal-lookback-time.returns" id="nc-distance-conformal-lookback-time.returns"></a><h4>Returns</h4>
+<p> $\eta_{lb}(z)$.</p>
 </div>
 </div>
 </div>
@@ -2003,7 +2204,7 @@ nc_distance_conformal_lookback_time (<em class="parameter"><code><a class="link"
 <a name="NcDistance.other_details" id="NcDistance.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
 <a name="NcDistanceComovingMethod" id="NcDistanceComovingMethod"></a><h3>enum NcDistanceComovingMethod</h3>
-<p>FIXME</p>
+<p>Enumeration to define which method to be applied in order to compute the cosmological distances.</p>
 <div class="refsect3">
 <a name="NcDistanceComovingMethod.members" id="NcDistanceComovingMethod.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2016,14 +2217,14 @@ nc_distance_conformal_lookback_time (<em class="parameter"><code><a class="link"
 <tr>
 <td class="enum_member_name"><p><a name="NC-DISTANCE-COMOVING-METHOD-INT-E:CAPS" id="NC-DISTANCE-COMOVING-METHOD-INT-E:CAPS"></a>NC_DISTANCE_COMOVING_METHOD_INT_E</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>performs a numerical evaluation.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NC-DISTANCE-COMOVING-METHOD-FROM-MODEL:CAPS" id="NC-DISTANCE-COMOVING-METHOD-FROM-MODEL:CAPS"></a>NC_DISTANCE_COMOVING_METHOD_FROM_MODEL</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>uses the method defined by the implementation of <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a>.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -2037,15 +2238,15 @@ nc_distance_conformal_lookback_time (<em class="parameter"><code><a class="link"
 <div class="refsect2">
 <a name="NcDistance--recomb" id="NcDistance--recomb"></a><h3>The <code class="literal">“recomb”</code> property</h3>
 <pre class="programlisting">  “recomb”                   <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *</pre>
-<p>Recombination object.</p>
+<p>The recombination object, <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a>, used by <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a>.</p>
 <p>Owner: NcDistance</p>
 <p>Flags: Read / Write / Construct</p>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NcDistance--zf" id="NcDistance--zf"></a><h3>The <code class="literal">“zf”</code> property</h3>
-<pre class="programlisting">  “zf”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
-<p>Final cached redshift.</p>
+<pre class="programlisting">  “zf”                       <span class="type">double</span></pre>
+<p>The final redhift to compute cosmological distances and related quantities.</p>
 <p>Owner: NcDistance</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 0</p>
@@ -2054,6 +2255,6 @@ nc_distance_conformal_lookback_time (<em class="parameter"><code><a class="link"
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.32.1</div>
+<hr />Generated by GTK-Doc V1.33.1</div>
 </div></div></body>
 </html>

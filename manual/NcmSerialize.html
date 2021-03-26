@@ -9,7 +9,7 @@
 <link rel="up" href="ch02.html#id-1.3.2" title="Miscellaneous Objects" />
 <link rel="prev" href="NcmMatrix.html" title="NcmMatrix" />
 <link rel="next" href="NcmObjArray.html" title="NcmObjArray" />
-<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -661,7 +661,7 @@ ncm_serialize_ref (<em class="parameter"><code><a class="link" href="NcmSerializ
 <a name="ncm-serialize-ref.returns" id="ncm-serialize-ref.returns"></a><h4>Returns</h4>
 <p><em class="parameter"><code>ser</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -991,7 +991,7 @@ ncm_serialize_peek_by_name (<em class="parameter"><code><a class="link" href="Nc
 <a name="ncm-serialize-peek-by-name.returns" id="ncm-serialize-peek-by-name.returns"></a><h4>Returns</h4>
 <p>Gets the instance named <em class="parameter"><code>name</code></em>
 or NULL. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></p>
 </div>
 </div>
 <hr />
@@ -1029,7 +1029,7 @@ ncm_serialize_get_by_name (<em class="parameter"><code><a class="link" href="Ncm
 <a name="ncm-serialize-get-by-name.returns" id="ncm-serialize-get-by-name.returns"></a><h4>Returns</h4>
 <p>Gets the instance named <em class="parameter"><code>name</code></em>
 or NULL. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></p>
 </div>
 </div>
 <hr />
@@ -1069,7 +1069,7 @@ when the <em class="parameter"><code>obj</code></em>
 <a name="ncm-serialize-peek-name.returns" id="ncm-serialize-peek-name.returns"></a><h4>Returns</h4>
 <p>the name of <em class="parameter"><code>obj</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1224,7 +1224,7 @@ and returns TRUE.</p>
 <tr>
 <td class="parameter_name"><p>name</p></td>
 <td class="parameter_description"><p>object name. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -1344,7 +1344,7 @@ ncm_serialize_from_variant (<em class="parameter"><code><a class="link" href="Nc
 <div class="refsect3">
 <a name="ncm-serialize-from-variant.returns" id="ncm-serialize-from-variant.returns"></a><h4>Returns</h4>
 <p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1385,7 +1385,7 @@ ncm_serialize_from_name_params (<em class="parameter"><code><a class="link" href
 <div class="refsect3">
 <a name="ncm-serialize-from-name-params.returns" id="ncm-serialize-from-name-params.returns"></a><h4>Returns</h4>
 <p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1420,7 +1420,7 @@ ncm_serialize_from_string (<em class="parameter"><code><a class="link" href="Ncm
 <div class="refsect3">
 <a name="ncm-serialize-from-string.returns" id="ncm-serialize-from-string.returns"></a><h4>Returns</h4>
 <p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1456,7 +1456,7 @@ ncm_serialize_from_file (<em class="parameter"><code><a class="link" href="NcmSe
 <div class="refsect3">
 <a name="ncm-serialize-from-file.returns" id="ncm-serialize-from-file.returns"></a><h4>Returns</h4>
 <p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1492,7 +1492,7 @@ ncm_serialize_from_binfile (<em class="parameter"><code><a class="link" href="Nc
 <div class="refsect3">
 <a name="ncm-serialize-from-binfile.returns" id="ncm-serialize-from-binfile.returns"></a><h4>Returns</h4>
 <p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1528,7 +1528,7 @@ ncm_serialize_gvalue_to_gvariant (<em class="parameter"><code><a class="link" hr
 <a name="ncm-serialize-gvalue-to-gvariant.returns" id="ncm-serialize-gvalue-to-gvariant.returns"></a><h4>Returns</h4>
 <p>A <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> convertion of <em class="parameter"><code>val</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1566,7 +1566,7 @@ ncm_serialize_to_variant (<em class="parameter"><code><a class="link" href="NcmS
 <a name="ncm-serialize-to-variant.returns" id="ncm-serialize-to-variant.returns"></a><h4>Returns</h4>
 <p>A <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> dictionary describing the <em class="parameter"><code>obj</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1609,7 +1609,7 @@ ncm_serialize_to_string (<em class="parameter"><code><a class="link" href="NcmSe
 <a name="ncm-serialize-to-string.returns" id="ncm-serialize-to-string.returns"></a><h4>Returns</h4>
 <p>A string containing the serialized version of <em class="parameter"><code>obj</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1722,7 +1722,7 @@ ncm_serialize_dup_obj (<em class="parameter"><code><a class="link" href="NcmSeri
 <a name="ncm-serialize-dup-obj.returns" id="ncm-serialize-dup-obj.returns"></a><h4>Returns</h4>
 <p>A duplicate of <em class="parameter"><code>obj</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1734,7 +1734,7 @@ ncm_serialize_global (<em class="parameter"><code><span class="type">void</span>
 <div class="refsect3">
 <a name="ncm-serialize-global.returns" id="ncm-serialize-global.returns"></a><h4>Returns</h4>
 <p>The global <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1895,7 +1895,7 @@ ncm_serialize_global_get_by_name (<em class="parameter"><code>const <a href="/us
 <a name="ncm-serialize-global-get-by-name.returns" id="ncm-serialize-global-get-by-name.returns"></a><h4>Returns</h4>
 <p>Gets the instance named <em class="parameter"><code>name</code></em>
 or NULL. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></p>
 </div>
 </div>
 <hr />
@@ -2010,7 +2010,7 @@ ncm_serialize_global_is_named (<em class="parameter"><code>const <a href="/usr/s
 <tr>
 <td class="parameter_name"><p>name</p></td>
 <td class="parameter_description"><p>object name. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -2107,7 +2107,7 @@ ncm_serialize_global_from_variant (<em class="parameter"><code><a href="/usr/sha
 <a name="ncm-serialize-global-from-variant.returns" id="ncm-serialize-global-from-variant.returns"></a><h4>Returns</h4>
 <p>a new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> deserialized from <em class="parameter"><code>var_obj</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -2142,7 +2142,7 @@ ncm_serialize_global_from_name_params (<em class="parameter"><code>const <a href
 <div class="refsect3">
 <a name="ncm-serialize-global-from-name-params.returns" id="ncm-serialize-global-from-name-params.returns"></a><h4>Returns</h4>
 <p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -2169,7 +2169,7 @@ ncm_serialize_global_from_string (<em class="parameter"><code>const <a href="/us
 <div class="refsect3">
 <a name="ncm-serialize-global-from-string.returns" id="ncm-serialize-global-from-string.returns"></a><h4>Returns</h4>
 <p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -2196,7 +2196,7 @@ ncm_serialize_global_from_file (<em class="parameter"><code>const <a href="/usr/
 <div class="refsect3">
 <a name="ncm-serialize-global-from-file.returns" id="ncm-serialize-global-from-file.returns"></a><h4>Returns</h4>
 <p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -2223,7 +2223,7 @@ ncm_serialize_global_from_binfile (<em class="parameter"><code>const <a href="/u
 <div class="refsect3">
 <a name="ncm-serialize-global-from-binfile.returns" id="ncm-serialize-global-from-binfile.returns"></a><h4>Returns</h4>
 <p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -2252,7 +2252,7 @@ ncm_serialize_global_gvalue_to_gvariant
 <a name="ncm-serialize-global-gvalue-to-gvariant.returns" id="ncm-serialize-global-gvalue-to-gvariant.returns"></a><h4>Returns</h4>
 <p>A <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> convertion of <em class="parameter"><code>val</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -2280,7 +2280,7 @@ ncm_serialize_global_to_variant (<em class="parameter"><code><a href="/usr/share
 <a name="ncm-serialize-global-to-variant.returns" id="ncm-serialize-global-to-variant.returns"></a><h4>Returns</h4>
 <p>A <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> dictionary describing the <em class="parameter"><code>obj</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -2316,7 +2316,7 @@ ncm_serialize_global_to_string (<em class="parameter"><code><a href="/usr/share/
 <a name="ncm-serialize-global-to-string.returns" id="ncm-serialize-global-to-string.returns"></a><h4>Returns</h4>
 <p>A string containing the serialized version of <em class="parameter"><code>obj</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -2404,7 +2404,7 @@ ncm_serialize_global_dup_obj (<em class="parameter"><code><a href="/usr/share/gt
 <a name="ncm-serialize-global-dup-obj.returns" id="ncm-serialize-global-dup-obj.returns"></a><h4>Returns</h4>
 <p>A duplicate of <em class="parameter"><code>obj</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 </div>
@@ -2521,6 +2521,6 @@ ncm_serialize_global_dup_obj (<em class="parameter"><code><a href="/usr/share/gt
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.32.1</div>
+<hr />Generated by GTK-Doc V1.33.1</div>
 </div></div></body>
 </html>

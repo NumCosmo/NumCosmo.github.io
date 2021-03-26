@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s07.html" title="Power spectrum functions" />
 <link rel="prev" href="NcmPowspec.html" title="NcmPowspec" />
 <link rel="next" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d" />
-<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -47,6 +47,10 @@
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
+<div class="refsect1">
+<a name="NcmPowspecFilter.stability-level" id="NcmPowspecFilter.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+</div>
 <div class="refsect1">
 <a name="NcmPowspecFilter.functions" id="NcmPowspecFilter.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -141,6 +145,22 @@
 </td>
 <td class="function_name">
 <a class="link" href="NcmPowspecFilter.html#ncm-powspec-filter-set-zf" title="ncm_powspec_filter_set_zf ()">ncm_powspec_filter_set_zf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecFilter.html#ncm-powspec-filter-require-zi" title="ncm_powspec_filter_require_zi ()">ncm_powspec_filter_require_zi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecFilter.html#ncm-powspec-filter-require-zf" title="ncm_powspec_filter_require_zf ()">ncm_powspec_filter_require_zf</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -260,7 +280,7 @@
 </colgroup>
 <tbody>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcmPowspecFilter.html#NcmPowspecFilter--lnr0" title="The “lnr0” property">lnr0</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -271,12 +291,12 @@
 <td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcmPowspecFilter.html#NcmPowspecFilter--reltol" title="The “reltol” property">reltol</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcmPowspecFilter.html#NcmPowspecFilter--reltol-z" title="The “reltol-z” property">reltol-z</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -286,12 +306,12 @@
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcmPowspecFilter.html#NcmPowspecFilter--zf" title="The “zf” property">zf</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcmPowspecFilter.html#NcmPowspecFilter--zi" title="The “zi” property">zi</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -326,11 +346,16 @@
 </pre>
 </div>
 <div class="refsect1">
+<a name="NcmPowspecFilter.includes" id="NcmPowspecFilter.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;numcosmo/math/ncm_powspec_filter.h&gt;
+</pre>
+</div>
+<div class="refsect1">
 <a name="NcmPowspecFilter.description" id="NcmPowspecFilter.description"></a><h2>Description</h2>
-<p>This class computes the filtered power spectrum, $\sigma^2(k, r)$, and its derivatives with respect to $\ln r$ 
+<p>This class computes the filtered power spectrum, $\sigma^2(k, r)$, and its derivatives with respect to $\ln r$
 (<a class="link" href="NcmPowspecFilter.html#ncm-powspec-filter-eval-dnvar-dlnrn" title="ncm_powspec_filter_eval_dnvar_dlnrn ()"><code class="function">ncm_powspec_filter_eval_dnvar_dlnrn()</code></a>) using the FFTLog approach (see <a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a>),
-\begin{equation}\lable{eq:variance}
-\sigma^2(r, z) = \frac{1}{2\pi^2} \int_0^\infty k^2 \ P(k, z) \vert W(k,r) \vert^2 \ \mathrm{d}k, 
+\begin{equation}\label{eq:variance}
+\sigma^2(r, z) = \frac{1}{2\pi^2} \int_0^\infty k^2 \ P(k, z) \vert W(k,r) \vert^2 \ \mathrm{d}k,
 \end{equation}
 where $P(k, z)$ is the power spectrum at mode $k$ and redshift $z$ and $W(k, r)$ is the filter (or window function).</p>
 </div>
@@ -368,7 +393,7 @@ ncm_powspec_filter_new (<em class="parameter"><code><a class="link" href="NcmPow
 <div class="refsect3">
 <a name="ncm-powspec-filter-new.returns" id="ncm-powspec-filter-new.returns"></a><h4>Returns</h4>
 <p>the newly created <a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -377,7 +402,7 @@ ncm_powspec_filter_new (<em class="parameter"><code><a class="link" href="NcmPow
 <pre class="programlisting"><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="returnvalue">NcmPowspecFilter</span></a> *
 ncm_powspec_filter_ref (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>);</pre>
 <p>Increases the reference count of <em class="parameter"><code>psf</code></em>
- by one.</p>
+ by one atomically.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-ref.parameters" id="ncm-powspec-filter-ref.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -397,7 +422,7 @@ ncm_powspec_filter_ref (<em class="parameter"><code><a class="link" href="NcmPow
 <a name="ncm-powspec-filter-ref.returns" id="ncm-powspec-filter-ref.returns"></a><h4>Returns</h4>
 <p><em class="parameter"><code>psf</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -405,8 +430,10 @@ ncm_powspec_filter_ref (<em class="parameter"><code><a class="link" href="NcmPow
 <a name="ncm-powspec-filter-free" id="ncm-powspec-filter-free"></a><h3>ncm_powspec_filter_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_powspec_filter_free (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>);</pre>
-<p>Decreases the reference count of <em class="parameter"><code>psf</code></em>
- by one.</p>
+<p>Atomically decrements the reference count of <em class="parameter"><code>psf</code></em>
+ by one.
+If the reference count drops to 0, all memory allocated by <em class="parameter"><code>psf</code></em>
+ is released.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-free.parameters" id="ncm-powspec-filter-free.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -429,10 +456,13 @@ ncm_powspec_filter_free (<em class="parameter"><code><a class="link" href="NcmPo
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_powspec_filter_clear (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> **psf</code></em>);</pre>
 <p>If <em class="parameter"><code>psf</code></em>
- is different from NULL, decreases the reference count of 
-<em class="parameter"><code>psf</code></em>
- by one and sets <em class="parameter"><code>fftlog</code></em>
- to NULL.</p>
+ is different from NULL,
+atomically decrements the reference count of <em class="parameter"><code>psf</code></em>
+ by one.
+If the reference count drops to 0,
+all memory allocated by <em class="parameter"><code>psf</code></em>
+ is released and <em class="parameter"><code>psf</code></em>
+ is set to NULL.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-clear.parameters" id="ncm-powspec-filter-clear.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -546,7 +576,7 @@ ncm_powspec_filter_set_type (<em class="parameter"><code><a class="link" href="N
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_powspec_filter_set_lnr0 (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>,
                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnr0</code></em>);</pre>
-<p>FIXME</p>
+<p>Sets the center of the transform output $\ln(r_0)$ (see <a class="link" href="NcmFftlog.html#ncm-fftlog-set-lnr0" title="ncm_fftlog_set_lnr0 ()"><code class="function">ncm_fftlog_set_lnr0()</code></a>).</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-set-lnr0.parameters" id="ncm-powspec-filter-set-lnr0.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -575,7 +605,8 @@ ncm_powspec_filter_set_lnr0 (<em class="parameter"><code><a class="link" href="N
 <a name="ncm-powspec-filter-set-best-lnr0" id="ncm-powspec-filter-set-best-lnr0"></a><h3>ncm_powspec_filter_set_best_lnr0 ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_powspec_filter_set_best_lnr0 (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>);</pre>
-<p>FIXME</p>
+<p>Sets the value of $\ln(r_0)$ which gives the best results for
+the transformation based on the current value of $\ln(k_0)$.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-set-best-lnr0.parameters" id="ncm-powspec-filter-set-best-lnr0.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -598,7 +629,7 @@ ncm_powspec_filter_set_best_lnr0 (<em class="parameter"><code><a class="link" hr
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_powspec_filter_set_zi (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>,
                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zi</code></em>);</pre>
-<p>FIXME</p>
+<p>Sets the inital time $z_i$.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-set-zi.parameters" id="ncm-powspec-filter-set-zi.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -628,9 +659,69 @@ ncm_powspec_filter_set_zi (<em class="parameter"><code><a class="link" href="Ncm
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_powspec_filter_set_zf (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>,
                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zf</code></em>);</pre>
-<p>FIXME</p>
+<p>Sets the final time $z_f$.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-set-zf.parameters" id="ncm-powspec-filter-set-zf.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>psf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zf</p></td>
+<td class="parameter_description"><p>the output final time $z_f$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-powspec-filter-require-zi" id="ncm-powspec-filter-require-zi"></a><h3>ncm_powspec_filter_require_zi ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_powspec_filter_require_zi (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zi</code></em>);</pre>
+<p>Require the initial time of at least $z_i$.</p>
+<div class="refsect3">
+<a name="ncm-powspec-filter-require-zi.parameters" id="ncm-powspec-filter-require-zi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>psf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zi</p></td>
+<td class="parameter_description"><p>the output initial time $z_i$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-powspec-filter-require-zf" id="ncm-powspec-filter-require-zf"></a><h3>ncm_powspec_filter_require_zf ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_powspec_filter_require_zf (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zf</code></em>);</pre>
+<p>Requires the final time of at least $z_f$.</p>
+<div class="refsect3">
+<a name="ncm-powspec-filter-require-zf.parameters" id="ncm-powspec-filter-require-zf.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name" />
@@ -657,7 +748,7 @@ ncm_powspec_filter_set_zf (<em class="parameter"><code><a class="link" href="Ncm
 <a name="ncm-powspec-filter-get-r-min" id="ncm-powspec-filter-get-r-min"></a><h3>ncm_powspec_filter_get_r_min ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_powspec_filter_get_r_min (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns $\sigma^2(r, z)$'s minimum evaluated distance.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-get-r-min.parameters" id="ncm-powspec-filter-get-r-min.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -675,7 +766,7 @@ ncm_powspec_filter_get_r_min (<em class="parameter"><code><a class="link" href="
 </div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-get-r-min.returns" id="ncm-powspec-filter-get-r-min.returns"></a><h4>Returns</h4>
-<p> FIXME </p>
+<p> the minimum distance $r_{\mathrm{min}}$.</p>
 </div>
 </div>
 <hr />
@@ -683,7 +774,7 @@ ncm_powspec_filter_get_r_min (<em class="parameter"><code><a class="link" href="
 <a name="ncm-powspec-filter-get-r-max" id="ncm-powspec-filter-get-r-max"></a><h3>ncm_powspec_filter_get_r_max ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_powspec_filter_get_r_max (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns $\sigma^2(r, z)$'s maximum evaluated distance.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-get-r-max.parameters" id="ncm-powspec-filter-get-r-max.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -701,7 +792,7 @@ ncm_powspec_filter_get_r_max (<em class="parameter"><code><a class="link" href="
 </div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-get-r-max.returns" id="ncm-powspec-filter-get-r-max.returns"></a><h4>Returns</h4>
-<p> FIXME </p>
+<p> the maximum distance $r_{\mathrm{max}}$.</p>
 </div>
 </div>
 <hr />
@@ -730,7 +821,7 @@ ncm_powspec_filter_eval_lnvar_lnr (<em class="parameter"><code><a class="link" h
 </tr>
 <tr>
 <td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -743,7 +834,7 @@ ncm_powspec_filter_eval_lnvar_lnr (<em class="parameter"><code><a class="link" h
 </div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-lnvar-lnr.returns" id="ncm-powspec-filter-eval-lnvar-lnr.returns"></a><h4>Returns</h4>
-<p> FIXME </p>
+<p> $\ln \left[ \sigma^2(\ln r, z)  \right]$.</p>
 </div>
 </div>
 <hr />
@@ -753,8 +844,7 @@ ncm_powspec_filter_eval_lnvar_lnr (<em class="parameter"><code><a class="link" h
 ncm_powspec_filter_eval_var (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>,
                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> r</code></em>);</pre>
-<p>Evaluate the filtered variance at <em class="parameter"><code>r</code></em>
-.</p>
+<p>Evaluate the filtered variance at $r$.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-var.parameters" id="ncm-powspec-filter-eval-var.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -771,12 +861,12 @@ ncm_powspec_filter_eval_var (<em class="parameter"><code><a class="link" href="N
 </tr>
 <tr>
 <td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift </p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>r</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>distance $r$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -784,7 +874,7 @@ ncm_powspec_filter_eval_var (<em class="parameter"><code><a class="link" href="N
 </div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-var.returns" id="ncm-powspec-filter-eval-var.returns"></a><h4>Returns</h4>
-<p> FIXME </p>
+<p> $\sigma^2(r, z)$.</p>
 </div>
 </div>
 <hr />
@@ -813,7 +903,7 @@ ncm_powspec_filter_eval_var_lnr (<em class="parameter"><code><a class="link" hre
 </tr>
 <tr>
 <td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -826,7 +916,7 @@ ncm_powspec_filter_eval_var_lnr (<em class="parameter"><code><a class="link" hre
 </div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-var-lnr.returns" id="ncm-powspec-filter-eval-var-lnr.returns"></a><h4>Returns</h4>
-<p> FIXME </p>
+<p> $\sigma^2(\ln r, z)$.</p>
 </div>
 </div>
 <hr />
@@ -836,7 +926,7 @@ ncm_powspec_filter_eval_var_lnr (<em class="parameter"><code><a class="link" hre
 ncm_powspec_filter_eval_sigma_lnr (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>,
                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnr</code></em>);</pre>
-<p>Evaluate the suare root of the filtered power spectrum at <em class="parameter"><code>lnr</code></em>
+<p>Evaluate the square root of the filtered power spectrum at <em class="parameter"><code>lnr</code></em>
  and <em class="parameter"><code>z</code></em>
 .</p>
 <div class="refsect3">
@@ -855,7 +945,7 @@ ncm_powspec_filter_eval_sigma_lnr (<em class="parameter"><code><a class="link" h
 </tr>
 <tr>
 <td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -868,7 +958,7 @@ ncm_powspec_filter_eval_sigma_lnr (<em class="parameter"><code><a class="link" h
 </div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-sigma-lnr.returns" id="ncm-powspec-filter-eval-sigma-lnr.returns"></a><h4>Returns</h4>
-<p> FIXME </p>
+<p> $\sqrt{ \sigma^2(\ln r, z) }$.</p>
 </div>
 </div>
 <hr />
@@ -878,7 +968,8 @@ ncm_powspec_filter_eval_sigma_lnr (<em class="parameter"><code><a class="link" h
 ncm_powspec_filter_eval_sigma (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>,
                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> r</code></em>);</pre>
-<p>Evaluates the filtered variance at <em class="parameter"><code>r</code></em>
+<p>Evaluates the square root of the filtered power spectrum at <em class="parameter"><code>r</code></em>
+ and <em class="parameter"><code>z</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-sigma.parameters" id="ncm-powspec-filter-eval-sigma.parameters"></a><h4>Parameters</h4>
@@ -896,12 +987,12 @@ ncm_powspec_filter_eval_sigma (<em class="parameter"><code><a class="link" href=
 </tr>
 <tr>
 <td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>r</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>distance $r$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -909,7 +1000,7 @@ ncm_powspec_filter_eval_sigma (<em class="parameter"><code><a class="link" href=
 </div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-sigma.returns" id="ncm-powspec-filter-eval-sigma.returns"></a><h4>Returns</h4>
-<p> FIXME </p>
+<p> $\sqrt{ \sigma^2(r, z) }$.</p>
 </div>
 </div>
 <hr />
@@ -919,7 +1010,9 @@ ncm_powspec_filter_eval_sigma (<em class="parameter"><code><a class="link" href=
 ncm_powspec_filter_eval_dvar_dlnr (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>,
                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnr</code></em>);</pre>
-<p>Evaluates the filtered variance at <em class="parameter"><code>lnr</code></em>
+<p>Evaluates the first derivative of the filtered
+variance with respect to $\ln r$ at <em class="parameter"><code>lnr</code></em>
+ and <em class="parameter"><code>z</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-dvar-dlnr.parameters" id="ncm-powspec-filter-eval-dvar-dlnr.parameters"></a><h4>Parameters</h4>
@@ -937,7 +1030,7 @@ ncm_powspec_filter_eval_dvar_dlnr (<em class="parameter"><code><a class="link" h
 </tr>
 <tr>
 <td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -950,7 +1043,7 @@ ncm_powspec_filter_eval_dvar_dlnr (<em class="parameter"><code><a class="link" h
 </div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-dvar-dlnr.returns" id="ncm-powspec-filter-eval-dvar-dlnr.returns"></a><h4>Returns</h4>
-<p> FIXME </p>
+<p> $\frac{\mathrm{d} \sigma^2(\ln r, z) }{\mathrm{d} \ln r }$.</p>
 </div>
 </div>
 <hr />
@@ -960,7 +1053,9 @@ ncm_powspec_filter_eval_dvar_dlnr (<em class="parameter"><code><a class="link" h
 ncm_powspec_filter_eval_dlnvar_dlnr (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>,
                                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
                                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnr</code></em>);</pre>
-<p>Evaluate the filtered variance at <em class="parameter"><code>lnr</code></em>
+<p>Evaluates the first derivative of the logarithm of the filtered
+variance with respect to $\ln r$ at <em class="parameter"><code>lnr</code></em>
+ and <em class="parameter"><code>z</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-dlnvar-dlnr.parameters" id="ncm-powspec-filter-eval-dlnvar-dlnr.parameters"></a><h4>Parameters</h4>
@@ -978,7 +1073,7 @@ ncm_powspec_filter_eval_dlnvar_dlnr (<em class="parameter"><code><a class="link"
 </tr>
 <tr>
 <td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -991,7 +1086,7 @@ ncm_powspec_filter_eval_dlnvar_dlnr (<em class="parameter"><code><a class="link"
 </div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-dlnvar-dlnr.returns" id="ncm-powspec-filter-eval-dlnvar-dlnr.returns"></a><h4>Returns</h4>
-<p> FIXME </p>
+<p>  $\frac{\mathrm{d} \left[ \ln \sigma^2(\ln r, z) \right] }{\mathrm{d} \ln r }$.</p>
 </div>
 </div>
 <hr />
@@ -1001,7 +1096,9 @@ ncm_powspec_filter_eval_dlnvar_dlnr (<em class="parameter"><code><a class="link"
 ncm_powspec_filter_eval_dlnvar_dr (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>,
                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnr</code></em>);</pre>
-<p>Evaluates the filtered variance at <em class="parameter"><code>lnr</code></em>
+<p>Evaluates the first derivative of the logarithm of the filtered
+variance with respect to $r$ at <em class="parameter"><code>lnr</code></em>
+ and <em class="parameter"><code>z</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-dlnvar-dr.parameters" id="ncm-powspec-filter-eval-dlnvar-dr.parameters"></a><h4>Parameters</h4>
@@ -1019,7 +1116,7 @@ ncm_powspec_filter_eval_dlnvar_dr (<em class="parameter"><code><a class="link" h
 </tr>
 <tr>
 <td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1032,7 +1129,7 @@ ncm_powspec_filter_eval_dlnvar_dr (<em class="parameter"><code><a class="link" h
 </div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-dlnvar-dr.returns" id="ncm-powspec-filter-eval-dlnvar-dr.returns"></a><h4>Returns</h4>
-<p> FIXME </p>
+<p>  $\frac{\mathrm{d} \left[ \ln \sigma^2(\ln r, z) \right] }{\mathrm{d} r }$.</p>
 </div>
 </div>
 <hr />
@@ -1043,18 +1140,14 @@ ncm_powspec_filter_eval_dnvar_dlnrn (<em class="parameter"><code><a class="link"
                                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
                                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnr</code></em>,
                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
-<p>Evaluates the derivative of the filtered variance at <em class="parameter"><code>lnr</code></em>
+<p>Evaluates the derivatives of the filtered variance at <em class="parameter"><code>lnr</code></em>
  and <em class="parameter"><code>z</code></em>
 , namely:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><em class="parameter"><code>n</code></em>
- = 0: $\sigma(r, z)^2$,</p></li>
-<li class="listitem"><p><em class="parameter"><code>n</code></em>
- = 1: $\frac{d\sigma^2}{d\ln r}$,</p></li>
-<li class="listitem"><p><em class="parameter"><code>n</code></em>
- = 2: $\frac{d^2\sigma^2}{d(\ln r)^2}$,</p></li>
-<li class="listitem"><p><em class="parameter"><code>n</code></em>
- = 3: $\frac{d^3\sigma^2}{d(\ln r)^3}$.</p></li>
+<li class="listitem"><p>$n = 0 \rightarrow \sigma(r, z)^2$,</p></li>
+<li class="listitem"><p>$n = 1 \rightarrow \frac{\mathrm{d}\sigma^2}{\mathrm{d} \ln r}$,</p></li>
+<li class="listitem"><p>$n = 2 \rightarrow \frac{\mathrm{d}^2\sigma^2}{\mathrm{d}(\ln r)^2}$,</p></li>
+<li class="listitem"><p>$n = 3 \rightarrow \frac{\mathrm{d}^3\sigma^2}{\mathrm{d}(\ln r)^3}$.</p></li>
 </ul></div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-dnvar-dlnrn.parameters" id="ncm-powspec-filter-eval-dnvar-dlnrn.parameters"></a><h4>Parameters</h4>
@@ -1072,7 +1165,7 @@ ncm_powspec_filter_eval_dnvar_dlnrn (<em class="parameter"><code><a class="link"
 </tr>
 <tr>
 <td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1082,7 +1175,7 @@ ncm_powspec_filter_eval_dnvar_dlnrn (<em class="parameter"><code><a class="link"
 </tr>
 <tr>
 <td class="parameter_name"><p>n</p></td>
-<td class="parameter_description"><p>number of derivatives</p></td>
+<td class="parameter_description"><p>number of derivatives $n$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1090,7 +1183,7 @@ ncm_powspec_filter_eval_dnvar_dlnrn (<em class="parameter"><code><a class="link"
 </div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-dnvar-dlnrn.returns" id="ncm-powspec-filter-eval-dnvar-dlnrn.returns"></a><h4>Returns</h4>
-<p> FIXME </p>
+<p> one of the four derivatives described above.</p>
 </div>
 </div>
 <hr />
@@ -1101,8 +1194,15 @@ ncm_powspec_filter_eval_dnlnvar_dlnrn (<em class="parameter"><code><a class="lin
                                        <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
                                        <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnr</code></em>,
                                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
-<p>Evaluates the filtered variance at <em class="parameter"><code>lnr</code></em>
-.</p>
+<p>Evaluates the derivatives of the logarithm of the filtered variance at <em class="parameter"><code>lnr</code></em>
+ and <em class="parameter"><code>z</code></em>
+, namely:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>$n = 0 \rightarrow \ln \left[ \sigma(r, z)^2 \right]$,</p></li>
+<li class="listitem"><p>$n = 1 \rightarrow \frac{\mathrm{d}\ln \left( \sigma^2 \right)}{\mathrm{d} \ln r}$,</p></li>
+<li class="listitem"><p>$n = 2 \rightarrow \frac{\mathrm{d}^2 \ln \left( \sigma^2 \right)}{\mathrm{d}(\ln r)^2}$,</p></li>
+<li class="listitem"><p>$n = 3 \rightarrow \frac{\mathrm{d}^3 \ln \left( \sigma^2 \right)}{\mathrm{d}(\ln r)^3}$.</p></li>
+</ul></div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-dnlnvar-dlnrn.parameters" id="ncm-powspec-filter-eval-dnlnvar-dlnrn.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1119,7 +1219,7 @@ ncm_powspec_filter_eval_dnlnvar_dlnrn (<em class="parameter"><code><a class="lin
 </tr>
 <tr>
 <td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1129,7 +1229,7 @@ ncm_powspec_filter_eval_dnlnvar_dlnrn (<em class="parameter"><code><a class="lin
 </tr>
 <tr>
 <td class="parameter_name"><p>n</p></td>
-<td class="parameter_description"><p>number of derivatives</p></td>
+<td class="parameter_description"><p>number of derivatives $n$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1137,7 +1237,7 @@ ncm_powspec_filter_eval_dnlnvar_dlnrn (<em class="parameter"><code><a class="lin
 </div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-dnlnvar-dlnrn.returns" id="ncm-powspec-filter-eval-dnlnvar-dlnrn.returns"></a><h4>Returns</h4>
-<p> FIXME </p>
+<p> one of the four derivatives described above.</p>
 </div>
 </div>
 <hr />
@@ -1163,7 +1263,7 @@ ncm_powspec_filter_volume_rm3 (<em class="parameter"><code><a class="link" href=
 </div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-volume-rm3.returns" id="ncm-powspec-filter-volume-rm3.returns"></a><h4>Returns</h4>
-<p> Filter's volume over the radius squared $V r^{-3}$. </p>
+<p> Filter's volume over the radius squared $V r^{-3}$.</p>
 </div>
 </div>
 </div>
@@ -1172,7 +1272,6 @@ ncm_powspec_filter_volume_rm3 (<em class="parameter"><code><a class="link" href=
 <div class="refsect2">
 <a name="NcmPowspecFilterType" id="NcmPowspecFilterType"></a><h3>enum NcmPowspecFilterType</h3>
 <p>Filter type to apply to the power spectrum.
-
 See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatwin2"><span class="type">NcmFftlogTophatwin2</span></a> and <a class="link" href="NcmFftlogGausswin2.html" title="NcmFftlogGausswin2"><span class="type">NcmFftlogGausswin2</span></a>, for the top-hat and Gaussian filters, respectively.</p>
 <div class="refsect3">
 <a name="NcmPowspecFilterType.members" id="NcmPowspecFilterType.members"></a><h4>Members</h4>
@@ -1212,8 +1311,8 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <a name="NcmPowspecFilter.property-details" id="NcmPowspecFilter.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="NcmPowspecFilter--lnr0" id="NcmPowspecFilter--lnr0"></a><h3>The <code class="literal">“lnr0”</code> property</h3>
-<pre class="programlisting">  “lnr0”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
-<p>Output center value.</p>
+<pre class="programlisting">  “lnr0”                     <span class="type">double</span></pre>
+<p>The output center value for $\ln(r)$.</p>
 <p>Owner: NcmPowspecFilter</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
@@ -1222,15 +1321,15 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <div class="refsect2">
 <a name="NcmPowspecFilter--powerspectrum" id="NcmPowspecFilter--powerspectrum"></a><h3>The <code class="literal">“powerspectrum”</code> property</h3>
 <pre class="programlisting">  “powerspectrum”            <a class="link" href="NcmPowspec.html" title="NcmPowspec"><span class="type">NcmPowspec</span></a> *</pre>
-<p>NcmPowspec object.</p>
+<p>The <a class="link" href="NcmPowspec.html" title="NcmPowspec"><span class="type">NcmPowspec</span></a> object to be used to compute the variance $\sigma^{2}(r,z)$.</p>
 <p>Owner: NcmPowspecFilter</p>
 <p>Flags: Read / Write / Construct Only</p>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NcmPowspecFilter--reltol" id="NcmPowspecFilter--reltol"></a><h3>The <code class="literal">“reltol”</code> property</h3>
-<pre class="programlisting">  “reltol”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
-<p>Relative tolerance for calibration.</p>
+<pre class="programlisting">  “reltol”                   <span class="type">double</span></pre>
+<p>The relative tolerance for calibration in the distance direction.</p>
 <p>Owner: NcmPowspecFilter</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: [2.22045e-16,1]</p>
@@ -1239,8 +1338,8 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <hr />
 <div class="refsect2">
 <a name="NcmPowspecFilter--reltol-z" id="NcmPowspecFilter--reltol-z"></a><h3>The <code class="literal">“reltol-z”</code> property</h3>
-<pre class="programlisting">  “reltol-z”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
-<p>Relative tolerance for calibration in the redshift direction.</p>
+<pre class="programlisting">  “reltol-z”                 <span class="type">double</span></pre>
+<p>The relative tolerance for calibration in the redshift direction.</p>
 <p>Owner: NcmPowspecFilter</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: [2.22045e-16,1]</p>
@@ -1250,7 +1349,7 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <div class="refsect2">
 <a name="NcmPowspecFilter--type" id="NcmPowspecFilter--type"></a><h3>The <code class="literal">“type”</code> property</h3>
 <pre class="programlisting">  “type”                     <a class="link" href="NcmPowspecFilter.html#NcmPowspecFilterType" title="enum NcmPowspecFilterType"><span class="type">NcmPowspecFilterType</span></a></pre>
-<p>Filter type.</p>
+<p>The type of fliter used $W(k,r)$.</p>
 <p>Owner: NcmPowspecFilter</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: NCM_POWSPEC_FILTER_TYPE_TOPHAT</p>
@@ -1258,8 +1357,8 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <hr />
 <div class="refsect2">
 <a name="NcmPowspecFilter--zf" id="NcmPowspecFilter--zf"></a><h3>The <code class="literal">“zf”</code> property</h3>
-<pre class="programlisting">  “zf”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
-<p>Output final time.</p>
+<pre class="programlisting">  “zf”                       <span class="type">double</span></pre>
+<p>The output final time $z_f$ of the variance $\sigma^{2}(r,z)$.</p>
 <p>Owner: NcmPowspecFilter</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 1</p>
@@ -1267,8 +1366,8 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <hr />
 <div class="refsect2">
 <a name="NcmPowspecFilter--zi" id="NcmPowspecFilter--zi"></a><h3>The <code class="literal">“zi”</code> property</h3>
-<pre class="programlisting">  “zi”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
-<p>Output initial time.</p>
+<pre class="programlisting">  “zi”                       <span class="type">double</span></pre>
+<p>The output initial time $z_i$ of the variance $\sigma^{2}(r,z)$.</p>
 <p>Owner: NcmPowspecFilter</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
@@ -1276,6 +1375,6 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.32.1</div>
+<hr />Generated by GTK-Doc V1.33.1</div>
 </div></div></body>
 </html>

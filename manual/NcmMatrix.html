@@ -9,7 +9,7 @@
 <link rel="up" href="ch02.html#id-1.3.2" title="Miscellaneous Objects" />
 <link rel="prev" href="NcmVector.html" title="NcmVector" />
 <link rel="next" href="NcmSerialize.html" title="NcmSerialize" />
-<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -755,16 +755,10 @@
 <col width="150px" class="other_proto_type" />
 <col class="other_proto_name" />
 </colgroup>
-<tbody>
-<tr>
+<tbody><tr>
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="NcmMatrix.html#NcmMatrixInternal" title="enum NcmMatrixInternal">NcmMatrixInternal</a></td>
-</tr>
-<tr>
-<td class="datatype_keyword">struct</td>
-<td class="function_name"><a class="link" href="NcmMatrix.html#NcmMatrix-struct" title="struct NcmMatrix">NcmMatrix</a></td>
-</tr>
-</tbody>
+</tr></tbody>
 </table></div>
 </div>
 <div class="refsect1">
@@ -853,7 +847,7 @@ with <em class="parameter"><code>nrows</code></em>
 <div class="refsect3">
 <a name="ncm-matrix-new0.returns" id="ncm-matrix-new0.returns"></a><h4>Returns</h4>
 <p>A new <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -937,7 +931,7 @@ The <em class="parameter"><code>gm</code></em>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>gm</p></td>
-<td class="parameter_description"><p>matrix from GNU Scientific Library (GSL) to be converted into a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_description"><p>matrix from <a class="ulink" href="https://www.gnu.org/software/gsl/" target="_top">GNU Scientific Library (GSL)</a> to be converted into a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -967,7 +961,7 @@ The <em class="parameter"><code>gm</code></em>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>gm</p></td>
-<td class="parameter_description"><p>matrix from GNU Scientific Library (GSL) to be converted into a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_description"><p>matrix from <a class="ulink" href="https://www.gnu.org/software/gsl/" target="_top">GNU Scientific Library (GSL)</a> to be converted into a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -1015,7 +1009,7 @@ The GArray <em class="parameter"><code>a</code></em>
 <div class="refsect3">
 <a name="ncm-matrix-new-array.returns" id="ncm-matrix-new-array.returns"></a><h4>Returns</h4>
 <p>A new <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1231,8 +1225,9 @@ ncm_matrix_new_variant (<em class="parameter"><code><a href="/usr/share/gtk-doc/
 </div>
 <div class="refsect3">
 <a name="ncm-matrix-new-variant.returns" id="ncm-matrix-new-variant.returns"></a><h4>Returns</h4>
-<p> (transfer full) :a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> with the values from <em class="parameter"><code>var</code></em>
-.</p>
+<p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> with the values from <em class="parameter"><code>var</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1261,7 +1256,7 @@ ncm_matrix_ref (<em class="parameter"><code><a class="link" href="NcmMatrix.html
 <a name="ncm-matrix-ref.returns" id="ncm-matrix-ref.returns"></a><h4>Returns</h4>
 <p><em class="parameter"><code>cm</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1331,8 +1326,9 @@ ncm_matrix_const_new_variant (<em class="parameter"><code><a href="/usr/share/gt
 </div>
 <div class="refsect3">
 <a name="ncm-matrix-const-new-variant.returns" id="ncm-matrix-const-new-variant.returns"></a><h4>Returns</h4>
-<p> (transfer full) :a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> with the values from <em class="parameter"><code>var</code></em>
-.</p>
+<p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> with the values from <em class="parameter"><code>var</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1394,7 +1390,7 @@ The submatrix has <em class="parameter"><code>nrows</code></em>
 <div class="refsect3">
 <a name="ncm-matrix-get-submatrix.returns" id="ncm-matrix-get-submatrix.returns"></a><h4>Returns</h4>
 <p>A <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1432,7 +1428,7 @@ into a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type
 <div class="refsect3">
 <a name="ncm-matrix-get-col.returns" id="ncm-matrix-get-col.returns"></a><h4>Returns</h4>
 <p>A <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1470,7 +1466,7 @@ into a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type
 <div class="refsect3">
 <a name="ncm-matrix-get-row.returns" id="ncm-matrix-get-row.returns"></a><h4>Returns</h4>
 <p>A <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1530,7 +1526,7 @@ ncm_matrix_get_variant (<em class="parameter"><code><a class="link" href="NcmMat
 <div class="refsect3">
 <a name="ncm-matrix-get-variant.returns" id="ncm-matrix-get-variant.returns"></a><h4>Returns</h4>
 <p>the newly created <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1560,7 +1556,7 @@ The matrix <em class="parameter"><code>cm</code></em>
 <div class="refsect3">
 <a name="ncm-matrix-peek-variant.returns" id="ncm-matrix-peek-variant.returns"></a><h4>Returns</h4>
 <p>the newly created <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -1633,8 +1629,8 @@ must have the same size as <a class="link" href="NcmMatrix.html" title="NcmMatri
 <div class="refsect2">
 <a name="ncm-matrix-new-gsl-const" id="ncm-matrix-new-gsl-const"></a><h3>ncm_matrix_new_gsl_const ()</h3>
 <pre class="programlisting">const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="returnvalue">NcmMatrix</span></a> *
-ncm_matrix_new_gsl_const (<em class="parameter"><code><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-matrix" title="gsl_matrix"><span class="type">gsl_matrix</span></a> *m</code></em>);</pre>
-<p>This function converts <em class="parameter"><code>m</code></em>
+ncm_matrix_new_gsl_const (<em class="parameter"><code><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-matrix" title="gsl_matrix"><span class="type">gsl_matrix</span></a> *gm</code></em>);</pre>
+<p>This function converts <em class="parameter"><code>gm</code></em>
  into a constant <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a>.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
@@ -1646,8 +1642,8 @@ ncm_matrix_new_gsl_const (<em class="parameter"><code><a class="link" href="numc
 <col width="200px" class="parameters_annotations" />
 </colgroup>
 <tbody><tr>
-<td class="parameter_name"><p>m</p></td>
-<td class="parameter_description"><p>matrix from GNU Scientific Library (GSL)</p></td>
+<td class="parameter_name"><p>gm</p></td>
+<td class="parameter_description"><p>matrix from <a class="ulink" href="https://www.gnu.org/software/gsl/" target="_top">GNU Scientific Library (GSL)</a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -1788,7 +1784,9 @@ ncm_matrix_const_ptr (<em class="parameter"><code>const <a class="link" href="Nc
 <a name="ncm-matrix-get-array" id="ncm-matrix-get-array"></a><h3>ncm_matrix_get_array ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
 ncm_matrix_get_array (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns the array of <em class="parameter"><code>cv</code></em>
+. It is only applied if the matrix <em class="parameter"><code>cm</code></em>
+ was created with <a class="link" href="NcmMatrix.html#ncm-matrix-new-array" title="ncm_matrix_new_array ()"><code class="function">ncm_matrix_new_array()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-matrix-get-array.parameters" id="ncm-matrix-get-array.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1806,8 +1804,8 @@ ncm_matrix_get_array (<em class="parameter"><code><a class="link" href="NcmMatri
 </div>
 <div class="refsect3">
 <a name="ncm-matrix-get-array.returns" id="ncm-matrix-get-array.returns"></a><h4>Returns</h4>
-<p>FIXME. </p>
-<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
+<p>A pointer to a double GArray. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data container, but not the data inside it."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
 </div>
 </div>
 <hr />
@@ -1864,6 +1862,43 @@ ncm_matrix_set_colmajor (<em class="parameter"><code><a class="link" href="NcmMa
                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>,
                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> j</code></em>,
                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> val</code></em>);</pre>
+<p>This function sets the value of the (<em class="parameter"><code>i</code></em>
+,<em class="parameter"><code>j</code></em>
+)-th element of the matrix <em class="parameter"><code>cm</code></em>
+ to <em class="parameter"><code>val</code></em>
+ considering it being in the <a class="ulink" href="https://en.wikipedia.org/wiki/Row-_and_column-major_order" target="_top">column-major order</a>.</p>
+<div class="refsect3">
+<a name="ncm-matrix-set-colmajor.parameters" id="ncm-matrix-set-colmajor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cm</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>row index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>j</p></td>
+<td class="parameter_description"><p>column index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>val</p></td>
+<td class="parameter_description"><p>a double</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 <hr />
 <div class="refsect2">
@@ -2296,6 +2331,31 @@ ncm_matrix_mul_col (<em class="parameter"><code><a class="link" href="NcmMatrix.
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_matrix_get_diag (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>,
                      <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *diag</code></em>);</pre>
+<p>This function copies de diagonal elements of the matrix <em class="parameter"><code>cm</code></em>
+ to the vector <em class="parameter"><code>diag</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-matrix-get-diag.parameters" id="ncm-matrix-get-diag.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cm</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>diag</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 <hr />
 <div class="refsect2">
@@ -2303,6 +2363,31 @@ ncm_matrix_get_diag (<em class="parameter"><code><a class="link" href="NcmMatrix
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_matrix_set_diag (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>,
                      <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *diag</code></em>);</pre>
+<p>This function copies de the elements of the vector <em class="parameter"><code>diag</code></em>
+ to the diagonal elements of the matrix <em class="parameter"><code>cm</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-matrix-set-diag.parameters" id="ncm-matrix-set-diag.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cm</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>diag</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 <hr />
 <div class="refsect2">
@@ -2423,7 +2508,15 @@ The length of the vector must be the same as the length of the row.</p>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_matrix_fast_get (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>,
                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> ij</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns the value of the <em class="parameter"><code>cm</code></em>
+[<em class="parameter"><code>i</code></em>
+,<em class="parameter"><code>j</code></em>
+] element by direct access of its base data. Where <em class="parameter"><code>ij</code></em>
+ = i $\times$ <em class="parameter"><code>tda</code></em>
+ $+$ j.</p>
+<p>If the matrix was created with <a class="link" href="NcmMatrix.html#ncm-matrix-new" title="ncm_matrix_new ()"><code class="function">ncm_matrix_new()</code></a> or <a class="link" href="NcmMatrix.html#ncm-matrix-new0" title="ncm_matrix_new0 ()"><code class="function">ncm_matrix_new0()</code></a> then <em class="parameter"><code>tda</code></em>
+ = <em class="parameter"><code>ncols</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-matrix-fast-get.parameters" id="ncm-matrix-fast-get.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2440,7 +2533,7 @@ ncm_matrix_fast_get (<em class="parameter"><code><a class="link" href="NcmMatrix
 </tr>
 <tr>
 <td class="parameter_name"><p>ij</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>element index of the <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> base data</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2448,7 +2541,10 @@ ncm_matrix_fast_get (<em class="parameter"><code><a class="link" href="NcmMatrix
 </div>
 <div class="refsect3">
 <a name="ncm-matrix-fast-get.returns" id="ncm-matrix-fast-get.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> The (<em class="parameter"><code>i</code></em>
+,<em class="parameter"><code>j</code></em>
+)-th element of <em class="parameter"><code>cm</code></em>
+.</p>
 </div>
 </div>
 <hr />
@@ -2458,7 +2554,16 @@ ncm_matrix_fast_get (<em class="parameter"><code><a class="link" href="NcmMatrix
 ncm_matrix_fast_set (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>,
                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> ij</code></em>,
                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> val</code></em>);</pre>
-<p>FIXME</p>
+<p>This function sets the value of the <em class="parameter"><code>cm</code></em>
+[<em class="parameter"><code>i</code></em>
+,<em class="parameter"><code>j</code></em>
+] element to <em class="parameter"><code>val</code></em>
+ by direct access of its base data. Where <em class="parameter"><code>ij</code></em>
+ = i $\times$ <em class="parameter"><code>tda</code></em>
+ $+$ j.</p>
+<p>If the matrix was created with <a class="link" href="NcmMatrix.html#ncm-matrix-new" title="ncm_matrix_new ()"><code class="function">ncm_matrix_new()</code></a> or <a class="link" href="NcmMatrix.html#ncm-matrix-new0" title="ncm_matrix_new0 ()"><code class="function">ncm_matrix_new0()</code></a> then <em class="parameter"><code>tda</code></em>
+ = <em class="parameter"><code>ncols</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-matrix-fast-set.parameters" id="ncm-matrix-fast-set.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2475,12 +2580,12 @@ ncm_matrix_fast_set (<em class="parameter"><code><a class="link" href="NcmMatrix
 </tr>
 <tr>
 <td class="parameter_name"><p>ij</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>element index of the <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> base data</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>val</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a double</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2492,7 +2597,8 @@ ncm_matrix_fast_set (<em class="parameter"><code><a class="link" href="NcmMatrix
 <a name="ncm-matrix-gsl" id="ncm-matrix-gsl"></a><h3>ncm_matrix_gsl ()</h3>
 <pre class="programlisting"><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-matrix" title="gsl_matrix"><span class="returnvalue">gsl_matrix</span></a> *
 ncm_matrix_gsl (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns a pointer to the <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-matrix" title="gsl_matrix"><span class="type">gsl_matrix</span></a> associated to the matrix <em class="parameter"><code>cm</code></em>
+.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-matrix-gsl.parameters" id="ncm-matrix-gsl.parameters"></a><h4>Parameters</h4>
@@ -2511,7 +2617,7 @@ ncm_matrix_gsl (<em class="parameter"><code><a class="link" href="NcmMatrix.html
 </div>
 <div class="refsect3">
 <a name="ncm-matrix-gsl.returns" id="ncm-matrix-gsl.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> A pointer to a <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-matrix" title="gsl_matrix"><span class="type">gsl_matrix</span></a>.</p>
 </div>
 </div>
 <hr />
@@ -2519,7 +2625,8 @@ ncm_matrix_gsl (<em class="parameter"><code><a class="link" href="NcmMatrix.html
 <a name="ncm-matrix-const-gsl" id="ncm-matrix-const-gsl"></a><h3>ncm_matrix_const_gsl ()</h3>
 <pre class="programlisting">const <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-matrix" title="gsl_matrix"><span class="returnvalue">gsl_matrix</span></a> *
 ncm_matrix_const_gsl (<em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns a constant pointer to the <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-matrix" title="gsl_matrix"><span class="type">gsl_matrix</span></a> associated to the matrix <em class="parameter"><code>cm</code></em>
+.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-matrix-const-gsl.parameters" id="ncm-matrix-const-gsl.parameters"></a><h4>Parameters</h4>
@@ -2538,7 +2645,7 @@ ncm_matrix_const_gsl (<em class="parameter"><code>const <a class="link" href="Nc
 </div>
 <div class="refsect3">
 <a name="ncm-matrix-const-gsl.returns" id="ncm-matrix-const-gsl.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> A constant pointer to a <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-matrix" title="gsl_matrix"><span class="type">gsl_matrix</span></a>.</p>
 </div>
 </div>
 <hr />
@@ -2546,7 +2653,8 @@ ncm_matrix_const_gsl (<em class="parameter"><code>const <a class="link" href="Nc
 <a name="ncm-matrix-col-len" id="ncm-matrix-col-len"></a><h3>ncm_matrix_col_len ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 ncm_matrix_col_len (<em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns the number of elements in a column of the matrix <em class="parameter"><code>cm</code></em>
+. The columns length.</p>
 <div class="refsect3">
 <a name="ncm-matrix-col-len.parameters" id="ncm-matrix-col-len.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2564,7 +2672,9 @@ ncm_matrix_col_len (<em class="parameter"><code>const <a class="link" href="NcmM
 </div>
 <div class="refsect3">
 <a name="ncm-matrix-col-len.returns" id="ncm-matrix-col-len.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> The columns length of <em class="parameter"><code>cm</code></em>
+(a.k.a. <em class="parameter"><code>nrows</code></em>
+).</p>
 </div>
 </div>
 <hr />
@@ -2572,7 +2682,8 @@ ncm_matrix_col_len (<em class="parameter"><code>const <a class="link" href="NcmM
 <a name="ncm-matrix-row-len" id="ncm-matrix-row-len"></a><h3>ncm_matrix_row_len ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 ncm_matrix_row_len (<em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns the number of elements in a row of the matrix <em class="parameter"><code>cm</code></em>
+. The rows length.</p>
 <div class="refsect3">
 <a name="ncm-matrix-row-len.parameters" id="ncm-matrix-row-len.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2590,7 +2701,9 @@ ncm_matrix_row_len (<em class="parameter"><code>const <a class="link" href="NcmM
 </div>
 <div class="refsect3">
 <a name="ncm-matrix-row-len.returns" id="ncm-matrix-row-len.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> The rows length of <em class="parameter"><code>cm</code></em>
+(a.k.a. <em class="parameter"><code>ncols</code></em>
+).</p>
 </div>
 </div>
 <hr />
@@ -2598,7 +2711,8 @@ ncm_matrix_row_len (<em class="parameter"><code>const <a class="link" href="NcmM
 <a name="ncm-matrix-nrows" id="ncm-matrix-nrows"></a><h3>ncm_matrix_nrows ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 ncm_matrix_nrows (<em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns the number of elements in a row of the matrix <em class="parameter"><code>cm</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-matrix-nrows.parameters" id="ncm-matrix-nrows.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2616,7 +2730,8 @@ ncm_matrix_nrows (<em class="parameter"><code>const <a class="link" href="NcmMat
 </div>
 <div class="refsect3">
 <a name="ncm-matrix-nrows.returns" id="ncm-matrix-nrows.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> The number of elements in a row of <em class="parameter"><code>cm</code></em>
+.</p>
 </div>
 </div>
 <hr />
@@ -2624,7 +2739,8 @@ ncm_matrix_nrows (<em class="parameter"><code>const <a class="link" href="NcmMat
 <a name="ncm-matrix-ncols" id="ncm-matrix-ncols"></a><h3>ncm_matrix_ncols ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 ncm_matrix_ncols (<em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns the number of elements in a column of the matrix <em class="parameter"><code>cm</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-matrix-ncols.parameters" id="ncm-matrix-ncols.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2642,7 +2758,8 @@ ncm_matrix_ncols (<em class="parameter"><code>const <a class="link" href="NcmMat
 </div>
 <div class="refsect3">
 <a name="ncm-matrix-ncols.returns" id="ncm-matrix-ncols.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> The number of elements in a column of <em class="parameter"><code>cm</code></em>
+.</p>
 </div>
 </div>
 <hr />
@@ -2650,7 +2767,9 @@ ncm_matrix_ncols (<em class="parameter"><code>const <a class="link" href="NcmMat
 <a name="ncm-matrix-size" id="ncm-matrix-size"></a><h3>ncm_matrix_size ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 ncm_matrix_size (<em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>);</pre>
-<p>Calculates the total size of the matrix, ncols * nrows.</p>
+<p>Calculates the total size of the matrix, <em class="parameter"><code>ncols</code></em>
+ $\times$ <em class="parameter"><code>nrows</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-matrix-size.parameters" id="ncm-matrix-size.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2676,6 +2795,9 @@ ncm_matrix_size (<em class="parameter"><code>const <a class="link" href="NcmMatr
 <a name="ncm-matrix-tda" id="ncm-matrix-tda"></a><h3>ncm_matrix_tda ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 ncm_matrix_tda (<em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>);</pre>
+<p>This functions returns the matrix <em class="parameter"><code>cm</code></em>
+ <em class="parameter"><code>tda</code></em>
+ value.</p>
 <div class="refsect3">
 <a name="ncm-matrix-tda.parameters" id="ncm-matrix-tda.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2701,7 +2823,8 @@ ncm_matrix_tda (<em class="parameter"><code>const <a class="link" href="NcmMatri
 <a name="ncm-matrix-data" id="ncm-matrix-data"></a><h3>ncm_matrix_data ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a> *
 ncm_matrix_data (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns a pointer to the matrix <em class="parameter"><code>cm</code></em>
+ base data.</p>
 <div class="refsect3">
 <a name="ncm-matrix-data.parameters" id="ncm-matrix-data.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2719,8 +2842,9 @@ ncm_matrix_data (<em class="parameter"><code><a class="link" href="NcmMatrix.htm
 </div>
 <div class="refsect3">
 <a name="ncm-matrix-data.returns" id="ncm-matrix-data.returns"></a><h4>Returns</h4>
-<p>FIXME. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p>A pointer to <em class="parameter"><code>cm</code></em>
+base data. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -2728,7 +2852,8 @@ ncm_matrix_data (<em class="parameter"><code><a class="link" href="NcmMatrix.htm
 <a name="ncm-matrix-const-data" id="ncm-matrix-const-data"></a><h3>ncm_matrix_const_data ()</h3>
 <pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a> *
 ncm_matrix_const_data (<em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>);</pre>
-<p>FIXME</p>
+<p>This function returns a constant pointer to the matrix <em class="parameter"><code>cm</code></em>
+ base data.</p>
 <div class="refsect3">
 <a name="ncm-matrix-const-data.parameters" id="ncm-matrix-const-data.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2746,8 +2871,9 @@ ncm_matrix_const_data (<em class="parameter"><code>const <a class="link" href="N
 </div>
 <div class="refsect3">
 <a name="ncm-matrix-const-data.returns" id="ncm-matrix-const-data.returns"></a><h4>Returns</h4>
-<p>FIXME. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p>A constant pointer to the matrix <em class="parameter"><code>cm</code></em>
+base data. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -2775,7 +2901,7 @@ ncm_matrix_dup (<em class="parameter"><code>const <a class="link" href="NcmMatri
 <div class="refsect3">
 <a name="ncm-matrix-dup.returns" id="ncm-matrix-dup.returns"></a><h4>Returns</h4>
 <p>A <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -2823,10 +2949,14 @@ If <em class="parameter"><code>check_size</code></em>
 <div class="refsect2">
 <a name="ncm-matrix-add-mul" id="ncm-matrix-add-mul"></a><h3>ncm_matrix_add_mul ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-ncm_matrix_add_mul (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm</code></em>,
-                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> alpha</code></em>,
-                    <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *b</code></em>);</pre>
-<p>FIXME</p>
+ncm_matrix_add_mul (<em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm1</code></em>,
+                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> a</code></em>,
+                    <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm2</code></em>);</pre>
+<p>This function performs the operation <em class="parameter"><code>cm1</code></em>
+ = <em class="parameter"><code>a</code></em>
+ $\times$ <em class="parameter"><code>cm2</code></em>
+ $+$ <em class="parameter"><code>cm1</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-matrix-add-mul.parameters" id="ncm-matrix-add-mul.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2837,18 +2967,18 @@ ncm_matrix_add_mul (<em class="parameter"><code><a class="link" href="NcmMatrix.
 </colgroup>
 <tbody>
 <tr>
-<td class="parameter_name"><p>cm</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_name"><p>cm1</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
-<td class="parameter_name"><p>alpha</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_name"><p>a</p></td>
+<td class="parameter_description"><p>a constant gdouble</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
-<td class="parameter_name"><p>b</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_name"><p>cm2</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2862,7 +2992,11 @@ ncm_matrix_add_mul (<em class="parameter"><code><a class="link" href="NcmMatrix.
 ncm_matrix_cmp (<em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm1</code></em>,
                 <em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm2</code></em>,
                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> scale</code></em>);</pre>
-<p>FIXME</p>
+<p>This function performes a comparison, component-wise, of the two matrices, given by $\left| \right. ($<em class="parameter"><code>cm1</code></em>
+ $-$ <em class="parameter"><code>cm2</code></em>
+ $)/($<em class="parameter"><code>scale</code></em>
+ $+$ <em class="parameter"><code>cm2</code></em>
+$)\left. \right|$ and returns its maximum value.</p>
 <div class="refsect3">
 <a name="ncm-matrix-cmp.parameters" id="ncm-matrix-cmp.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2874,17 +3008,17 @@ ncm_matrix_cmp (<em class="parameter"><code>const <a class="link" href="NcmMatri
 <tbody>
 <tr>
 <td class="parameter_name"><p>cm1</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cm2</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a constant <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>scale</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a constant gdouble</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2892,7 +3026,11 @@ ncm_matrix_cmp (<em class="parameter"><code>const <a class="link" href="NcmMatri
 </div>
 <div class="refsect3">
 <a name="ncm-matrix-cmp.returns" id="ncm-matrix-cmp.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> The maximum value of the operation $\left| \right. ($<em class="parameter"><code>cm1</code></em>
+$-$ <em class="parameter"><code>cm2</code></em>
+$)/($<em class="parameter"><code>scale</code></em>
+$+$ <em class="parameter"><code>cm2</code></em>
+$)\left. \right|$.</p>
 </div>
 </div>
 <hr />
@@ -2902,7 +3040,7 @@ ncm_matrix_cmp (<em class="parameter"><code>const <a class="link" href="NcmMatri
 ncm_matrix_cmp_diag (<em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm1</code></em>,
                      <em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cm2</code></em>,
                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> scale</code></em>);</pre>
-<p>FIXME</p>
+<p>This function is similar to <a class="link" href="NcmMatrix.html#ncm-matrix-cmp" title="ncm_matrix_cmp ()"><code class="function">ncm_matrix_cmp()</code></a>, but now only the diagonal elements are compared.</p>
 <div class="refsect3">
 <a name="ncm-matrix-cmp-diag.parameters" id="ncm-matrix-cmp-diag.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2914,17 +3052,17 @@ ncm_matrix_cmp_diag (<em class="parameter"><code>const <a class="link" href="Ncm
 <tbody>
 <tr>
 <td class="parameter_name"><p>cm1</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>cm2</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>scale</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a constant gdouble</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2932,7 +3070,11 @@ ncm_matrix_cmp_diag (<em class="parameter"><code>const <a class="link" href="Ncm
 </div>
 <div class="refsect3">
 <a name="ncm-matrix-cmp-diag.returns" id="ncm-matrix-cmp-diag.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> The maximum value of the operation $\left| \right. ($<em class="parameter"><code>cm1</code></em>
+$-$ <em class="parameter"><code>cm2</code></em>
+$)/($<em class="parameter"><code>scale</code></em>
+$+$ <em class="parameter"><code>cm2</code></em>
+$)\left. \right|$ comparing only the diagonal elements.</p>
 </div>
 </div>
 <hr />
@@ -3036,7 +3178,7 @@ If <em class="parameter"><code>UL</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>UL</p></td>
-<td class="parameter_description"><p>char indicating 'U'pper or 'L'ower matrix </p></td>
+<td class="parameter_description"><p>char indicating 'U'pper or 'L'ower matrix</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -3053,7 +3195,12 @@ ncm_matrix_dsymm (<em class="parameter"><code><a class="link" href="NcmMatrix.ht
                   <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *A</code></em>,
                   <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *B</code></em>,
                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> beta</code></em>);</pre>
-<p>FIXME</p>
+<p>This function performes the following operation:</p>
+<p>if <em class="parameter"><code>UL</code></em>
+ == 'U': $\left( \mathsf{cm} \leftarrow \alpha \mathbf{A} \mathbf{B} + \beta \, \mathsf{cm} \right)$;</p>
+<p>if <em class="parameter"><code>UL</code></em>
+ == 'L': $\left( \mathsf{cm} \leftarrow \alpha \mathbf{B} \mathbf{A} + \beta \, \mathsf{cm} \right)$.</p>
+<p>Where $\mathbf{A} = \mathbf{A}^\intercal$.</p>
 <div class="refsect3">
 <a name="ncm-matrix-dsymm.parameters" id="ncm-matrix-dsymm.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -3070,27 +3217,27 @@ ncm_matrix_dsymm (<em class="parameter"><code><a class="link" href="NcmMatrix.ht
 </tr>
 <tr>
 <td class="parameter_name"><p>UL</p></td>
-<td class="parameter_description"><p>char indicating 'U'pper or 'L'ower matrix </p></td>
+<td class="parameter_description"><p>gchar indicating 'U'pper or 'L'ower matrix</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>alpha</p></td>
-<td class="parameter_description"><p>$\alpha$</p></td>
+<td class="parameter_description"><p>a constant gdouble</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>A</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> $A$</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>B</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> $B$</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>beta</p></td>
-<td class="parameter_description"><p>$\beta$</p></td>
+<td class="parameter_description"><p>a constant gdouble</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -3125,12 +3272,12 @@ ncm_matrix_dgemm (<em class="parameter"><code><a class="link" href="NcmMatrix.ht
 </tr>
 <tr>
 <td class="parameter_name"><p>TransA</p></td>
-<td class="parameter_description"><p>char indicating 'T'ranspose or 'N'ot transposed matrix </p></td>
+<td class="parameter_description"><p>char indicating 'T'ranspose or 'N'ot transposed matrix</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>TransB</p></td>
-<td class="parameter_description"><p>char indicating 'T'ranspose or 'N'ot transposed matrix </p></td>
+<td class="parameter_description"><p>char indicating 'T'ranspose or 'N'ot transposed matrix</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -3295,8 +3442,8 @@ ncm_matrix_cholesky_solve2 (<em class="parameter"><code><a class="link" href="Nc
                             <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *b</code></em>,
                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> UL</code></em>);</pre>
 <p>Using a previously computed Cholesky decomposition in <em class="parameter"><code>cm</code></em>
-, through 
-<a class="link" href="NcmMatrix.html#ncm-matrix-cholesky-decomp" title="ncm_matrix_cholesky_decomp ()"><code class="function">ncm_matrix_cholesky_decomp()</code></a>, solves the system $A x = B$ where 
+, through
+<a class="link" href="NcmMatrix.html#ncm-matrix-cholesky-decomp" title="ncm_matrix_cholesky_decomp ()"><code class="function">ncm_matrix_cholesky_decomp()</code></a>, solves the system $A x = B$ where
 $A=$<em class="parameter"><code>cm</code></em>
  and $B$=<em class="parameter"><code>b</code></em>
 .</p>
@@ -3338,7 +3485,7 @@ ncm_matrix_nearPD (<em class="parameter"><code><a class="link" href="NcmMatrix.h
                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> maxiter</code></em>);</pre>
 <p>Assuming that <em class="parameter"><code>cm</code></em>
  is a symmetric matrix with data on <em class="parameter"><code>UL</code></em>
- 
+
 side, computes the nearest positive definite matrix
 in the Frobenius norm. See <a class="link" href="refs.html#XHigham2002">Higham (2002)</a>.
 The iterations stop when the Cholesky decomposition is valid.</p>
@@ -3358,7 +3505,7 @@ The iterations stop when the Cholesky decomposition is valid.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>UL</p></td>
-<td class="parameter_description"><p>char indicating 'U'pper or 'L'ower matrix </p></td>
+<td class="parameter_description"><p>char indicating 'U'pper or 'L'ower matrix</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -3377,7 +3524,7 @@ for its Cholesky decomposition</p></td>
 </div>
 <div class="refsect3">
 <a name="ncm-matrix-nearPD.returns" id="ncm-matrix-nearPD.returns"></a><h4>Returns</h4>
-<p> the return value of the last Cholesky decomposition</p>
+<p> the return value of the last Cholesky decomposition.</p>
 </div>
 </div>
 <hr />
@@ -3389,9 +3536,9 @@ ncm_matrix_sym_exp_cholesky (<em class="parameter"><code><a class="link" href="N
                              <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *exp_cm_dec</code></em>);</pre>
 <p>Assuming that <em class="parameter"><code>cm</code></em>
  is a symmetric matrix with data on <em class="parameter"><code>UL</code></em>
- 
+
 side, computes the matrix exponential of <em class="parameter"><code>cm</code></em>
- and its cholesky 
+ and its cholesky
 decomposition.</p>
 <div class="refsect3">
 <a name="ncm-matrix-sym-exp-cholesky.parameters" id="ncm-matrix-sym-exp-cholesky.parameters"></a><h4>Parameters</h4>
@@ -3409,12 +3556,12 @@ decomposition.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>UL</p></td>
-<td class="parameter_description"><p>char indicating 'U'pper or 'L'ower matrix </p></td>
+<td class="parameter_description"><p>char indicating 'U'pper or 'L'ower matrix</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>exp_cm_dec</p></td>
-<td class="parameter_description"><p>on exit this matrix contain the upper triangular matrix $U$ where $\exp(M) = U^\textsc{T}U$</p></td>
+<td class="parameter_description"><p>on exit this matrix contain the upper triangular matrix $U$ where $\exp(M) = U^\intercal U$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -3430,7 +3577,7 @@ ncm_matrix_sym_posdef_log (<em class="parameter"><code><a class="link" href="Ncm
                            <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *ln_cm</code></em>);</pre>
 <p>Assuming that <em class="parameter"><code>cm</code></em>
  is a symmetric matrix with data on <em class="parameter"><code>UL</code></em>
- 
+
 side, computes the matrix logarithm of <em class="parameter"><code>cm</code></em>
 .</p>
 <div class="refsect3">
@@ -3449,12 +3596,12 @@ side, computes the matrix logarithm of <em class="parameter"><code>cm</code></em
 </tr>
 <tr>
 <td class="parameter_name"><p>UL</p></td>
-<td class="parameter_description"><p>char indicating 'U'pper or 'L'ower matrix </p></td>
+<td class="parameter_description"><p>char indicating 'U'pper or 'L'ower matrix</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>ln_cm</p></td>
-<td class="parameter_description"><p>on exit this matrix contain the upper triangular matrix $U$ where $\exp(M) = U^\textsc{T}U$</p></td>
+<td class="parameter_description"><p>on exit this matrix contain the upper triangular matrix $U$ where $\exp(M) = U^\intercal U$</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -3471,10 +3618,10 @@ ncm_matrix_triang_to_sym (<em class="parameter"><code><a class="link" href="NcmM
                           <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *sym</code></em>);</pre>
 <p>Assuming that <em class="parameter"><code>cm</code></em>
  is a triangular square matrix with data on <em class="parameter"><code>UL</code></em>
- 
-side, computes the symmetric matrix $M^\textsc{T}\times M$ if 
+
+side, computes the symmetric matrix $M^\intercal \times M$ if
 <em class="parameter"><code>cm</code></em>
- is upper triangular or $M\times M^\textsc{T}$ if it is
+ is upper triangular or $M\times M^\intercal$ if it is
 lower triangular.</p>
 <p>If <em class="parameter"><code>zero</code></em>
  is TRUE it first sets to zero all elements above/below
@@ -3769,7 +3916,7 @@ correlation matrix.</p>
 <div class="refsect3">
 <a name="ncm-matrix-cov-dup-cor.returns" id="ncm-matrix-cov-dup-cor.returns"></a><h4>Returns</h4>
 <p>the newly allocated correlation matrix. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 </div>
@@ -3777,7 +3924,7 @@ correlation matrix.</p>
 <a name="NcmMatrix.other_details" id="NcmMatrix.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
 <a name="NcmMatrixInternal" id="NcmMatrixInternal"></a><h3>enum NcmMatrixInternal</h3>
-<p>FIXME</p>
+<p>This enumerator is only used internally. Only by developers.</p>
 <div class="refsect3">
 <a name="NcmMatrixInternal.members" id="NcmMatrixInternal.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -3790,35 +3937,35 @@ correlation matrix.</p>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-MATRIX-SLICE:CAPS" id="NCM-MATRIX-SLICE:CAPS"></a>NCM_MATRIX_SLICE</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses <a class="ulink" href="https://developer.gnome.org/glib/stable/glib-Memory-Slices.html" target="_top">g_slice_*</a> family functions from <a class="ulink" href="https://developer.gnome.org/glib/" target="_top">Glib</a> to alloc and free memory segments.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-MATRIX-GSL-MATRIX:CAPS" id="NCM-MATRIX-GSL-MATRIX:CAPS"></a>NCM_MATRIX_GSL_MATRIX</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/vectors.html#matrices" target="_top">gsl_matrix</a> from <a class="ulink" href="https://www.gnu.org/software/gsl/" target="_top">GSL</a> as the base object.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-MATRIX-MALLOC:CAPS" id="NCM-MATRIX-MALLOC:CAPS"></a>NCM_MATRIX_MALLOC</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses <a class="ulink" href="https://en.wikipedia.org/wiki/C_dynamic_memory_allocation" target="_top">malloc</a> for memory allocation and free functions.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-MATRIX-GARRAY:CAPS" id="NCM-MATRIX-GARRAY:CAPS"></a>NCM_MATRIX_GARRAY</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses <a class="ulink" href="https://developer.gnome.org/glib/stable/glib-Arrays.html" target="_top">g_array</a> from <a class="ulink" href="https://developer.gnome.org/glib/" target="_top">Glib</a> as base.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-MATRIX-DERIVED:CAPS" id="NCM-MATRIX-DERIVED:CAPS"></a>NCM_MATRIX_DERIVED</p></td>
 <td class="enum_member_description">
-<p>FIXME</p>
+<p>Uses another <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> (for example, if it is getting a submatrix from a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a>).</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3826,19 +3973,13 @@ correlation matrix.</p>
 </table></div>
 </div>
 </div>
-<hr />
-<div class="refsect2">
-<a name="NcmMatrix-struct" id="NcmMatrix-struct"></a><h3>struct NcmMatrix</h3>
-<pre class="programlisting">struct NcmMatrix;</pre>
-<p>FIXME</p>
-</div>
 </div>
 <div class="refsect1">
 <a name="NcmMatrix.property-details" id="NcmMatrix.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="NcmMatrix--values" id="NcmMatrix--values"></a><h3>The <code class="literal">“values”</code> property</h3>
 <pre class="programlisting">  “values”                   <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *</pre>
-<p>values.</p>
+<p>GVariant representation of the matrix used to serialize the object.</p>
 <p>Owner: NcmMatrix</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: GVariant&lt;a*&gt;</p>
@@ -3847,6 +3988,6 @@ correlation matrix.</p>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.32.1</div>
+<hr />Generated by GTK-Doc V1.33.1</div>
 </div></div></body>
 </html>

@@ -9,7 +9,7 @@
 <link rel="up" href="ch02s06.html" title="Splines 2D" />
 <link rel="prev" href="NcmSpline2dBicubic.html" title="NcmSpline2dBicubic" />
 <link rel="next" href="ch02s07.html" title="Power spectrum functions" />
-<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -42,10 +42,14 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="NcmSpline2dGsl.top_of_page" id="NcmSpline2dGsl.top_of_page"></a>NcmSpline2dGsl</span></h2>
-<p>NcmSpline2dGsl — Implements spline from spline method using GSL as base splines.</p>
+<p>NcmSpline2dGsl — Implements spline from spline method using The GNU Scientific Library (GSL) as base splines.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
+<div class="refsect1">
+<a name="NcmSpline2dGsl.stability-level" id="NcmSpline2dGsl.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+</div>
 <div class="refsect1">
 <a name="NcmSpline2dGsl.functions" id="NcmSpline2dGsl.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -81,9 +85,14 @@
 </pre>
 </div>
 <div class="refsect1">
+<a name="NcmSpline2dGsl.includes" id="NcmSpline2dGsl.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;numcosmo/math/ncm_spline2d_gsl.h&gt;
+</pre>
+</div>
+<div class="refsect1">
 <a name="NcmSpline2dGsl.description" id="NcmSpline2dGsl.description"></a><h2>Description</h2>
-<p>This object implements spline from spline methods using GSL splines as
-base objects.</p>
+<p>This object implements bidimensional splines with the method
+given by the <a class="link" href="NcmSplineGsl.html" title="NcmSplineGsl"><span class="type">NcmSplineGsl</span></a> class.</p>
 </div>
 <div class="refsect1">
 <a name="NcmSpline2dGsl.functions_details" id="NcmSpline2dGsl.functions_details"></a><h2>Functions</h2>
@@ -91,7 +100,9 @@ base objects.</p>
 <a name="ncm-spline2d-gsl-new" id="ncm-spline2d-gsl-new"></a><h3>ncm_spline2d_gsl_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="returnvalue">NcmSpline2d</span></a> *
 ncm_spline2d_gsl_new (<em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>);</pre>
-<p>This function initializes a <a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="type">NcmSpline2d</span></a> of gsl type given s.</p>
+<p>This function initializes a <a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="type">NcmSpline2d</span></a> of
+<a class="ulink" href="https://www.gnu.org/software/gsl/" target="_top">GSL</a> type given in <em class="parameter"><code>s</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-spline2d-gsl-new.parameters" id="ncm-spline2d-gsl-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -102,7 +113,7 @@ ncm_spline2d_gsl_new (<em class="parameter"><code><a class="link" href="NcmSplin
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>s</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmSplineGsl.html" title="NcmSplineGsl"><span class="type">NcmSplineGsl</span></a> derived <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSplineGsl.html" title="NcmSplineGsl"><span class="type">NcmSplineGsl</span></a> derived <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -117,7 +128,8 @@ ncm_spline2d_gsl_new (<em class="parameter"><code><a class="link" href="NcmSplin
 <a name="ncm-spline2d-gsl-natural-new" id="ncm-spline2d-gsl-natural-new"></a><h3>ncm_spline2d_gsl_natural_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="returnvalue">NcmSpline2d</span></a> *
 ncm_spline2d_gsl_natural_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>This function initializes a <a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="type">NcmSpline2d</span></a> of gsl type.</p>
+<p>This function initializes a <a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="type">NcmSpline2d</span></a> of <a class="ulink" href="https://www.gnu.org/software/gsl/" target="_top">GSL</a>
+type <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/interp.html#c.gsl_interp_cspline" target="_top">gsl_interp_cspline</a>.</p>
 <div class="refsect3">
 <a name="ncm-spline2d-gsl-natural-new.returns" id="ncm-spline2d-gsl-natural-new.returns"></a><h4>Returns</h4>
 <p> A new <a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="type">NcmSpline2d</span></a>.</p>
@@ -126,6 +138,6 @@ ncm_spline2d_gsl_natural_new (<em class="parameter"><code><span class="type">voi
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.32.1</div>
+<hr />Generated by GTK-Doc V1.33.1</div>
 </div></div></body>
 </html>

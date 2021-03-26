@@ -9,7 +9,7 @@
 <link rel="up" href="ch09.html" title="Cosmological Data" />
 <link rel="prev" href="numcosmo-NcDataCMB.html" title="NcDataCMB" />
 <link rel="next" href="NcDataCMBDistPriors.html" title="NcDataCMBDistPriors" />
-<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="container.css" type="text/css" />
 <script type="text/x-mathjax-config">
@@ -47,6 +47,10 @@
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
+<div class="refsect1">
+<a name="NcDataCMBShiftParam.stability-level" id="NcDataCMBShiftParam.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+</div>
 <div class="refsect1">
 <a name="NcDataCMBShiftParam.functions" id="NcDataCMBShiftParam.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -123,8 +127,14 @@
 </pre>
 </div>
 <div class="refsect1">
+<a name="NcDataCMBShiftParam.includes" id="NcDataCMBShiftParam.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;numcosmo/data/nc_data_cmb_shift_param.h&gt;
+</pre>
+</div>
+<div class="refsect1">
 <a name="NcDataCMBShiftParam.description" id="NcDataCMBShiftParam.description"></a><h2>Description</h2>
-<p>FIXME</p>
+<p>This object creates a CMB shift parameter $R$ data (<a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>).
+See <a class="link" href="numcosmo-NcDataCMB.html#NcDataCMBId" title="enum NcDataCMBId"><span class="type">NcDataCMBId</span></a> and <a class="link" href="NcDistance.html#nc-distance-shift-parameter" title="nc_distance_shift_parameter ()"><span class="type">nc_distance_shift_parameter</span></a> for more informations.</p>
 </div>
 <div class="refsect1">
 <a name="NcDataCMBShiftParam.functions_details" id="NcDataCMBShiftParam.functions_details"></a><h2>Functions</h2>
@@ -132,7 +142,7 @@
 <a name="nc-data-cmb-shift-param-new-empty" id="nc-data-cmb-shift-param-new-empty"></a><h3>nc_data_cmb_shift_param_new_empty ()</h3>
 <pre class="programlisting"><a class="link" href="NcDataCMBShiftParam.html" title="NcDataCMBShiftParam"><span class="returnvalue">NcDataCMBShiftParam</span></a> *
 nc_data_cmb_shift_param_new_empty (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>);</pre>
-<p>FIXME</p>
+<p>This function allocates an empty <a class="link" href="NcDataCMBShiftParam.html" title="NcDataCMBShiftParam"><span class="type">NcDataCMBShiftParam</span></a> object.</p>
 <div class="refsect3">
 <a name="nc-data-cmb-shift-param-new-empty.parameters" id="nc-data-cmb-shift-param-new-empty.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -143,14 +153,14 @@ nc_data_cmb_shift_param_new_empty (<em class="parameter"><code><a class="link" h
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>dist</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="nc-data-cmb-shift-param-new-empty.returns" id="nc-data-cmb-shift-param-new-empty.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> a <a class="link" href="NcDataCMBShiftParam.html" title="NcDataCMBShiftParam"><span class="type">NcDataCMBShiftParam</span></a>.</p>
 </div>
 </div>
 <hr />
@@ -178,7 +188,7 @@ nc_data_cmb_shift_param_new_from_file (<em class="parameter"><code>const <a href
 <div class="refsect3">
 <a name="nc-data-cmb-shift-param-new-from-file.returns" id="nc-data-cmb-shift-param-new-from-file.returns"></a><h4>Returns</h4>
 <p>the newly created <a class="link" href="NcDataCMBShiftParam.html" title="NcDataCMBShiftParam"><span class="type">NcDataCMBShiftParam</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -187,7 +197,9 @@ nc_data_cmb_shift_param_new_from_file (<em class="parameter"><code>const <a href
 <pre class="programlisting"><a class="link" href="NcDataCMBShiftParam.html" title="NcDataCMBShiftParam"><span class="returnvalue">NcDataCMBShiftParam</span></a> *
 nc_data_cmb_shift_param_new_from_id (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                                      <em class="parameter"><code><a class="link" href="numcosmo-NcDataCMB.html#NcDataCMBId" title="enum NcDataCMBId"><span class="type">NcDataCMBId</span></a> id</code></em>);</pre>
-<p>FIXME</p>
+<p>Creates a new <a class="link" href="NcDataCMBShiftParam.html" title="NcDataCMBShiftParam"><span class="type">NcDataCMBShiftParam</span></a> from <em class="parameter"><code>id</code></em>
+.
+See <a class="link" href="numcosmo-NcDataCMB.html#NcDataCMBId" title="enum NcDataCMBId"><span class="type">NcDataCMBId</span></a> for the available options.</p>
 <div class="refsect3">
 <a name="nc-data-cmb-shift-param-new-from-id.parameters" id="nc-data-cmb-shift-param-new-from-id.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -199,12 +211,12 @@ nc_data_cmb_shift_param_new_from_id (<em class="parameter"><code><a class="link"
 <tbody>
 <tr>
 <td class="parameter_name"><p>dist</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>id</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-NcDataCMB.html#NcDataCMBId" title="enum NcDataCMBId"><span class="type">NcDataCMBId</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -212,7 +224,7 @@ nc_data_cmb_shift_param_new_from_id (<em class="parameter"><code><a class="link"
 </div>
 <div class="refsect3">
 <a name="nc-data-cmb-shift-param-new-from-id.returns" id="nc-data-cmb-shift-param-new-from-id.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> the newly created <a class="link" href="NcDataCMBShiftParam.html" title="NcDataCMBShiftParam"><span class="type">NcDataCMBShiftParam</span></a>.</p>
 </div>
 </div>
 <hr />
@@ -221,7 +233,9 @@ nc_data_cmb_shift_param_new_from_id (<em class="parameter"><code><a class="link"
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_data_cmb_shift_param_set_dist (<em class="parameter"><code><a class="link" href="NcDataCMBShiftParam.html" title="NcDataCMBShiftParam"><span class="type">NcDataCMBShiftParam</span></a> *cmb_shift_param</code></em>,
                                   <em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>);</pre>
-<p>Sets the distance object.</p>
+<p>Sets the distance object <em class="parameter"><code>dist</code></em>
+ to <em class="parameter"><code>cmb_shift_param</code></em>
+.</p>
 <div class="refsect3">
 <a name="nc-data-cmb-shift-param-set-dist.parameters" id="nc-data-cmb-shift-param-set-dist.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -251,7 +265,7 @@ nc_data_cmb_shift_param_set_dist (<em class="parameter"><code><a class="link" hr
 <div class="refsect2">
 <a name="NcDataCMBShiftParam--dist" id="NcDataCMBShiftParam--dist"></a><h3>The <code class="literal">“dist”</code> property</h3>
 <pre class="programlisting">  “dist”                     <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *</pre>
-<p>Distance object.</p>
+<p>The <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> object to be used.</p>
 <p>Owner: NcDataCMBShiftParam</p>
 <p>Flags: Read / Write</p>
 </div>
@@ -259,13 +273,13 @@ nc_data_cmb_shift_param_set_dist (<em class="parameter"><code><a class="link" hr
 <div class="refsect2">
 <a name="NcDataCMBShiftParam--z" id="NcDataCMBShiftParam--z"></a><h3>The <code class="literal">“z”</code> property</h3>
 <pre class="programlisting">  “z”                        <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
-<p>Data redshift.</p>
+<p>The data redshift.</p>
 <p>Owner: NcDataCMBShiftParam</p>
 <p>Flags: Read / Write</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.32.1</div>
+<hr />Generated by GTK-Doc V1.33.1</div>
 </div></div></body>
 </html>
