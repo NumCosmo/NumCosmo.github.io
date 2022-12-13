@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmFitMCMC: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s15.html" title="MCMC and ESMCMC" />
+<link rel="prev" href="ch02s15.html" title="MCMC and ESMCMC" />
+<link rel="next" href="NcmFitESMCMC.html" title="NcmFitESMCMC" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmFitMCMC.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmFitMCMC.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmFitMCMC.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s15.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="ch02s15.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmFitESMCMC.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmFitMCMC" id="NcmFitMCMC"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmFitMCMC.top_of_page" id="NcmFitMCMC.top_of_page"></a>NcmFitMCMC</span></h2>
+<p>NcmFitMCMC — Markov Chain Monte Carlo analysis.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmFitMCMC.functions" id="NcmFitMCMC.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="returnvalue">NcmFitMCMC</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-new" title="ncm_fit_mcmc_new ()">ncm_fit_mcmc_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-free" title="ncm_fit_mcmc_free ()">ncm_fit_mcmc_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-clear" title="ncm_fit_mcmc_clear ()">ncm_fit_mcmc_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-set-data-file" title="ncm_fit_mcmc_set_data_file ()">ncm_fit_mcmc_set_data_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-set-mtype" title="ncm_fit_mcmc_set_mtype ()">ncm_fit_mcmc_set_mtype</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-set-trans-kern" title="ncm_fit_mcmc_set_trans_kern ()">ncm_fit_mcmc_set_trans_kern</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-set-nthreads" title="ncm_fit_mcmc_set_nthreads ()">ncm_fit_mcmc_set_nthreads</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-set-fiducial" title="ncm_fit_mcmc_set_fiducial ()">ncm_fit_mcmc_set_fiducial</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-set-rng" title="ncm_fit_mcmc_set_rng ()">ncm_fit_mcmc_set_rng</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-get-accept-ratio" title="ncm_fit_mcmc_get_accept_ratio ()">ncm_fit_mcmc_get_accept_ratio</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-start-run" title="ncm_fit_mcmc_start_run ()">ncm_fit_mcmc_start_run</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-end-run" title="ncm_fit_mcmc_end_run ()">ncm_fit_mcmc_end_run</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-reset" title="ncm_fit_mcmc_reset ()">ncm_fit_mcmc_reset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-set-first-sample-id" title="ncm_fit_mcmc_set_first_sample_id ()">ncm_fit_mcmc_set_first_sample_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-run" title="ncm_fit_mcmc_run ()">ncm_fit_mcmc_run</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-run-lre" title="ncm_fit_mcmc_run_lre ()">ncm_fit_mcmc_run_lre</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-mean-covar" title="ncm_fit_mcmc_mean_covar ()">ncm_fit_mcmc_mean_covar</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMSetCatalog.html" title="NcmMSetCatalog"><span class="returnvalue">NcmMSetCatalog</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitMCMC.html#ncm-fit-mcmc-get-catalog" title="ncm_fit_mcmc_get_catalog ()">ncm_fit_mcmc_get_catalog</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmFitMCMC.properties" id="NcmFitMCMC.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmFitMCMC.html#NcmFitMCMC--fit" title="The “fit” property">fit</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitMCMC.html#NcmFitMCMC--mtype" title="The “mtype” property">mtype</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitMCMC.html#NcmFitMCMC--nthreads" title="The “nthreads” property">nthreads</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmFitMCMC.html#NcmFitMCMC--sampler" title="The “sampler” property">sampler</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmFitMCMC.other" id="NcmFitMCMC.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody><tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmFitMCMC.html#NCM-FIT-MCMC-MIN-SYNC-INTERVAL:CAPS" title="NCM_FIT_MCMC_MIN_SYNC_INTERVAL">NCM_FIT_MCMC_MIN_SYNC_INTERVAL</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmFitMCMC.object-hierarchy" id="NcmFitMCMC.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcmFitMCMC
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmFitMCMC.description" id="NcmFitMCMC.description"></a><h2>Description</h2>
+<p>FIXME </p>
+<p>Metropolis–Hastings sampler.</p>
+</div>
+<div class="refsect1">
+<a name="NcmFitMCMC.functions_details" id="NcmFitMCMC.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-fit-mcmc-new" id="ncm-fit-mcmc-new"></a><h3>ncm_fit_mcmc_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="returnvalue">NcmFitMCMC</span></a> *
+ncm_fit_mcmc_new (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
+                  <em class="parameter"><code><a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a> *tkern</code></em>,
+                  <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a> mtype</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-new.parameters" id="ncm-fit-mcmc-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fit</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tkern</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mtype</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-new.returns" id="ncm-fit-mcmc-new.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-free" id="ncm-fit-mcmc-free"></a><h3>ncm_fit_mcmc_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_mcmc_free (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-free.parameters" id="ncm-fit-mcmc-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-clear" id="ncm-fit-mcmc-clear"></a><h3>ncm_fit_mcmc_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_mcmc_clear (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> **mcmc</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-clear.parameters" id="ncm-fit-mcmc-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-set-data-file" id="ncm-fit-mcmc-set-data-file"></a><h3>ncm_fit_mcmc_set_data_file ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_mcmc_set_data_file (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>,
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-set-data-file.parameters" id="ncm-fit-mcmc-set-data-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>a filename.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-set-mtype" id="ncm-fit-mcmc-set-mtype"></a><h3>ncm_fit_mcmc_set_mtype ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_mcmc_set_mtype (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>,
+                        <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a> mtype</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-set-mtype.parameters" id="ncm-fit-mcmc-set-mtype.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mtype</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-set-trans-kern" id="ncm-fit-mcmc-set-trans-kern"></a><h3>ncm_fit_mcmc_set_trans_kern ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_mcmc_set_trans_kern (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a> *tkern</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-set-trans-kern.parameters" id="ncm-fit-mcmc-set-trans-kern.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tkern</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-set-nthreads" id="ncm-fit-mcmc-set-nthreads"></a><h3>ncm_fit_mcmc_set_nthreads ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_mcmc_set_nthreads (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>,
+                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nthreads</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-set-nthreads.parameters" id="ncm-fit-mcmc-set-nthreads.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>nthreads</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-set-fiducial" id="ncm-fit-mcmc-set-fiducial"></a><h3>ncm_fit_mcmc_set_fiducial ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_mcmc_set_fiducial (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *fiduc</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-set-rng" id="ncm-fit-mcmc-set-rng"></a><h3>ncm_fit_mcmc_set_rng ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_mcmc_set_rng (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>,
+                      <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-set-rng.parameters" id="ncm-fit-mcmc-set-rng.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rng</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-get-accept-ratio" id="ncm-fit-mcmc-get-accept-ratio"></a><h3>ncm_fit_mcmc_get_accept_ratio ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_fit_mcmc_get_accept_ratio (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-get-accept-ratio.parameters" id="ncm-fit-mcmc-get-accept-ratio.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-get-accept-ratio.returns" id="ncm-fit-mcmc-get-accept-ratio.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-start-run" id="ncm-fit-mcmc-start-run"></a><h3>ncm_fit_mcmc_start_run ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_mcmc_start_run (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-start-run.parameters" id="ncm-fit-mcmc-start-run.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-end-run" id="ncm-fit-mcmc-end-run"></a><h3>ncm_fit_mcmc_end_run ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_mcmc_end_run (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-end-run.parameters" id="ncm-fit-mcmc-end-run.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-reset" id="ncm-fit-mcmc-reset"></a><h3>ncm_fit_mcmc_reset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_mcmc_reset (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-reset.parameters" id="ncm-fit-mcmc-reset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-set-first-sample-id" id="ncm-fit-mcmc-set-first-sample-id"></a><h3>ncm_fit_mcmc_set_first_sample_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_mcmc_set_first_sample_id (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> first_sample_id</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-set-first-sample-id.parameters" id="ncm-fit-mcmc-set-first-sample-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first_sample_id</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-run" id="ncm-fit-mcmc-run"></a><h3>ncm_fit_mcmc_run ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_mcmc_run (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>,
+                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
+<p>Runs the Markov Chain Monte Carlo until it reaches the <em class="parameter"><code>n</code></em>
+-th realization. Note that
+if the first_id is non-zero it will run <em class="parameter"><code>n</code></em>
+ - first_id realizations.</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-run.parameters" id="ncm-fit-mcmc-run.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>total number of realizations to run</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-run-lre" id="ncm-fit-mcmc-run-lre"></a><h3>ncm_fit_mcmc_run_lre ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_mcmc_run_lre (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>,
+                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> prerun</code></em>,
+                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lre</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-run-lre.parameters" id="ncm-fit-mcmc-run-lre.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prerun</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lre</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-mean-covar" id="ncm-fit-mcmc-mean-covar"></a><h3>ncm_fit_mcmc_mean_covar ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_mcmc_mean_covar (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-mean-covar.parameters" id="ncm-fit-mcmc-mean-covar.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-mcmc-get-catalog" id="ncm-fit-mcmc-get-catalog"></a><h3>ncm_fit_mcmc_get_catalog ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMSetCatalog.html" title="NcmMSetCatalog"><span class="returnvalue">NcmMSetCatalog</span></a> *
+ncm_fit_mcmc_get_catalog (<em class="parameter"><code><a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a> *mcmc</code></em>);</pre>
+<p>Gets the generated catalog of <em class="parameter"><code>mcmc</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-get-catalog.parameters" id="ncm-fit-mcmc-get-catalog.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMCMC.html" title="NcmFitMCMC"><span class="type">NcmFitMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-mcmc-get-catalog.returns" id="ncm-fit-mcmc-get-catalog.returns"></a><h4>Returns</h4>
+<p>the generated catalog. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmFitMCMC.other_details" id="NcmFitMCMC.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NCM-FIT-MCMC-MIN-SYNC-INTERVAL:CAPS" id="NCM-FIT-MCMC-MIN-SYNC-INTERVAL:CAPS"></a><h3>NCM_FIT_MCMC_MIN_SYNC_INTERVAL</h3>
+<pre class="programlisting">#define NCM_FIT_MCMC_MIN_SYNC_INTERVAL (10.0)
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmFitMCMC.property-details" id="NcmFitMCMC.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmFitMCMC--fit" id="NcmFitMCMC--fit"></a><h3>The <code class="literal">“fit”</code> property</h3>
+<pre class="programlisting">  “fit”                      <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *</pre>
+<p>Fit object.</p>
+<p>Owner: NcmFitMCMC</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitMCMC--mtype" id="NcmFitMCMC--mtype"></a><h3>The <code class="literal">“mtype”</code> property</h3>
+<pre class="programlisting">  “mtype”                    <a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a></pre>
+<p>Run messages type.</p>
+<p>Owner: NcmFitMCMC</p>
+<p>Flags: Read / Write</p>
+<p>Default value: NCM_FIT_RUN_MSGS_SIMPLE</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitMCMC--nthreads" id="NcmFitMCMC--nthreads"></a><h3>The <code class="literal">“nthreads”</code> property</h3>
+<pre class="programlisting">  “nthreads”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>Number of threads to run.</p>
+<p>Owner: NcmFitMCMC</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: &lt;= 100</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitMCMC--sampler" id="NcmFitMCMC--sampler"></a><h3>The <code class="literal">“sampler”</code> property</h3>
+<pre class="programlisting">  “sampler”                  <a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a> *</pre>
+<p>Metropolis–Hastings sampler.</p>
+<p>Owner: NcmFitMCMC</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmSplineRBF: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s05.html" title="Splines 1D" />
+<link rel="prev" href="NcmSplineCubicD2.html" title="NcmSplineCubicD2" />
+<link rel="next" href="numcosmo-NcmSplineFunc.html" title="NcmSplineFunc" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmSplineRBF.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmSplineRBF.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmSplineRBF.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s05.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcmSplineCubicD2.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="numcosmo-NcmSplineFunc.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmSplineRBF" id="NcmSplineRBF"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmSplineRBF.top_of_page" id="NcmSplineRBF.top_of_page"></a>NcmSplineRBF</span></h2>
+<p>NcmSplineRBF — Radial Basis Function implementation of spline class.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmSplineRBF.stability-level" id="NcmSplineRBF.stability-level"></a><h2>Stability Level</h2>
+<acronym title="Unstable interfaces are experimental or transitional. They are typically used to&#10;give outside developers early access to new or rapidly changing technology, or&#10;to provide an interim solution to a problem where a more general solution is&#10;anticipated. No claims are made about either source or binary compatibility from&#10;one minor release to the next.&#10;&#10;The Unstable interface level is a warning that these interfaces are  subject to&#10;change without warning and should not be used in unbundled products.&#10;&#10;Given such caveats, customer impact need not be a factor when considering&#10;incompatible changes to an Unstable interface in a major or minor release.&#10;Nonetheless, when such changes are introduced, the changes should still be&#10;mentioned in the release notes for the affected release.&#10;"><span class="acronym">Unstable</span></acronym>, unless otherwise indicated
+</div>
+<div class="refsect1">
+<a name="NcmSplineRBF.functions" id="NcmSplineRBF.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSplineRBF.html" title="NcmSplineRBF"><span class="returnvalue">NcmSplineRBF</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSplineRBF.html#ncm-spline-rbf-new" title="ncm_spline_rbf_new ()">ncm_spline_rbf_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSplineRBF.html" title="NcmSplineRBF"><span class="returnvalue">NcmSplineRBF</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSplineRBF.html#ncm-spline-rbf-ref" title="ncm_spline_rbf_ref ()">ncm_spline_rbf_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSplineRBF.html#ncm-spline-rbf-free" title="ncm_spline_rbf_free ()">ncm_spline_rbf_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSplineRBF.html#ncm-spline-rbf-clear" title="ncm_spline_rbf_clear ()">ncm_spline_rbf_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSplineRBF.html#ncm-spline-rbf-set-type" title="ncm_spline_rbf_set_type ()">ncm_spline_rbf_set_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSplineRBF.html#ncm-spline-rbf-set-shape-params" title="ncm_spline_rbf_set_shape_params ()">ncm_spline_rbf_set_shape_params</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmSplineRBF.properties" id="NcmSplineRBF.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody><tr>
+<td class="property_type"><a class="link" href="NcmSplineRBF.html#NcmSplineRBFType" title="enum NcmSplineRBFType"><span class="type">NcmSplineRBFType</span></a></td>
+<td class="property_name"><a class="link" href="NcmSplineRBF.html#NcmSplineRBF--type-id" title="The “type-id” property">type-id</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmSplineRBF.other" id="NcmSplineRBF.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcmSplineRBF.html#NcmSplineRBFType" title="enum NcmSplineRBFType">NcmSplineRBFType</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmSplineRBF.object-hierarchy" id="NcmSplineRBF.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcmSplineRBFType
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcmSpline.html" title="NcmSpline">NcmSpline</a>
+        <span class="lineart">╰──</span> NcmSplineRBF
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmSplineRBF.includes" id="NcmSplineRBF.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;numcosmo/math/ncm_spline_rbf.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmSplineRBF.description" id="NcmSplineRBF.description"></a><h2>Description</h2>
+<p>This object implements <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a>, using <a class="ulink" href="https://en.wikipedia.org/wiki/Radial_basis_function" target="_top">Radial Basis Function (RBF)</a> methods.</p>
+</div>
+<div class="refsect1">
+<a name="NcmSplineRBF.functions_details" id="NcmSplineRBF.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-spline-rbf-new" id="ncm-spline-rbf-new"></a><h3>ncm_spline_rbf_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSplineRBF.html" title="NcmSplineRBF"><span class="returnvalue">NcmSplineRBF</span></a> *
+ncm_spline_rbf_new (<em class="parameter"><code><a class="link" href="NcmSplineRBF.html#NcmSplineRBFType" title="enum NcmSplineRBFType"><span class="type">NcmSplineRBFType</span></a> type_id</code></em>);</pre>
+<p>Creates a new RBF using <em class="parameter"><code>type_id</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-spline-rbf-new.parameters" id="ncm-spline-rbf-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>type_id</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSplineRBF.html#NcmSplineRBFType" title="enum NcmSplineRBFType"><span class="type">NcmSplineRBFType</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-spline-rbf-new.returns" id="ncm-spline-rbf-new.returns"></a><h4>Returns</h4>
+<p>a newly created <a class="link" href="NcmSplineRBF.html" title="NcmSplineRBF"><span class="type">NcmSplineRBF</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-spline-rbf-ref" id="ncm-spline-rbf-ref"></a><h3>ncm_spline_rbf_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSplineRBF.html" title="NcmSplineRBF"><span class="returnvalue">NcmSplineRBF</span></a> *
+ncm_spline_rbf_ref (<em class="parameter"><code><a class="link" href="NcmSplineRBF.html" title="NcmSplineRBF"><span class="type">NcmSplineRBF</span></a> *rbf</code></em>);</pre>
+<p>Increase the reference of <em class="parameter"><code>rbf</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-spline-rbf-ref.parameters" id="ncm-spline-rbf-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>rbf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSplineRBF.html" title="NcmSplineRBF"><span class="type">NcmSplineRBF</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-spline-rbf-ref.returns" id="ncm-spline-rbf-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>rbf</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-spline-rbf-free" id="ncm-spline-rbf-free"></a><h3>ncm_spline_rbf_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_spline_rbf_free (<em class="parameter"><code><a class="link" href="NcmSplineRBF.html" title="NcmSplineRBF"><span class="type">NcmSplineRBF</span></a> *rbf</code></em>);</pre>
+<p>Decrease the reference count of <em class="parameter"><code>rbf</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-spline-rbf-free.parameters" id="ncm-spline-rbf-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>rbf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSplineRBF.html" title="NcmSplineRBF"><span class="type">NcmSplineRBF</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-spline-rbf-clear" id="ncm-spline-rbf-clear"></a><h3>ncm_spline_rbf_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_spline_rbf_clear (<em class="parameter"><code><a class="link" href="NcmSplineRBF.html" title="NcmSplineRBF"><span class="type">NcmSplineRBF</span></a> **rbf</code></em>);</pre>
+<p>Decrease the reference count of <em class="parameter"><code>rbf</code></em>
+ by one, and sets the pointer *<em class="parameter"><code>rbf</code></em>
+ to
+NULL.</p>
+<div class="refsect3">
+<a name="ncm-spline-rbf-clear.parameters" id="ncm-spline-rbf-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>rbf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSplineRBF.html" title="NcmSplineRBF"><span class="type">NcmSplineRBF</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-spline-rbf-set-type" id="ncm-spline-rbf-set-type"></a><h3>ncm_spline_rbf_set_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_spline_rbf_set_type (<em class="parameter"><code><a class="link" href="NcmSplineRBF.html" title="NcmSplineRBF"><span class="type">NcmSplineRBF</span></a> *rbf</code></em>,
+                         <em class="parameter"><code><a class="link" href="NcmSplineRBF.html#NcmSplineRBFType" title="enum NcmSplineRBFType"><span class="type">NcmSplineRBFType</span></a> type_id</code></em>);</pre>
+<p>Sets the RBF type function to <em class="parameter"><code>type_id</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-spline-rbf-set-type.parameters" id="ncm-spline-rbf-set-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>rbf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSplineRBF.html" title="NcmSplineRBF"><span class="type">NcmSplineRBF</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>type_id</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSplineRBF.html#NcmSplineRBFType" title="enum NcmSplineRBFType"><span class="type">NcmSplineRBFType</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-spline-rbf-set-shape-params" id="ncm-spline-rbf-set-shape-params"></a><h3>ncm_spline_rbf_set_shape_params ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_spline_rbf_set_shape_params (<em class="parameter"><code><a class="link" href="NcmSplineRBF.html" title="NcmSplineRBF"><span class="type">NcmSplineRBF</span></a> *rbf</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *shape_params</code></em>);</pre>
+<p>Sets the RBF shape parameters to <em class="parameter"><code>shape_params</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-spline-rbf-set-shape-params.parameters" id="ncm-spline-rbf-set-shape-params.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>rbf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSplineRBF.html" title="NcmSplineRBF"><span class="type">NcmSplineRBF</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>shape_params</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSplineRBF.html#NcmSplineRBFType" title="enum NcmSplineRBFType"><span class="type">NcmSplineRBFType</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmSplineRBF.other_details" id="NcmSplineRBF.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcmSplineRBFType" id="NcmSplineRBFType"></a><h3>enum NcmSplineRBFType</h3>
+<p>Enumeration to choose which Gaussian <a class="ulink" href="https://en.wikipedia.org/wiki/Radial_basis_function" target="_top">RBF</a> interpolation method to be applied by the object.</p>
+<div class="refsect3">
+<a name="NcmSplineRBFType.members" id="NcmSplineRBFType.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-SPLINE-RBF-TYPE-POSDEF-GAUSS:CAPS" id="NCM-SPLINE-RBF-TYPE-POSDEF-GAUSS:CAPS"></a>NCM_SPLINE_RBF_TYPE_POSDEF_GAUSS</p></td>
+<td class="enum_member_description">
+<p>Gaussian <a class="ulink" href="https://en.wikipedia.org/wiki/Radial_basis_function" target="_top">RBF</a> interpolation method for positive defined functions. </p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-SPLINE-RBF-TYPE-GAUSS:CAPS" id="NCM-SPLINE-RBF-TYPE-GAUSS:CAPS"></a>NCM_SPLINE_RBF_TYPE_GAUSS</p></td>
+<td class="enum_member_description">
+<p>Gaussian <a class="ulink" href="https://en.wikipedia.org/wiki/Radial_basis_function" target="_top">RBF</a> interpolation method for any kind of function. </p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmSplineRBF.property-details" id="NcmSplineRBF.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmSplineRBF--type-id" id="NcmSplineRBF--type-id"></a><h3>The <code class="literal">“type-id”</code> property</h3>
+<pre class="programlisting">  “type-id”                  <a class="link" href="NcmSplineRBF.html#NcmSplineRBFType" title="enum NcmSplineRBFType"><span class="type">NcmSplineRBFType</span></a></pre>
+<p>The <a class="ulink" href="https://en.wikipedia.org/wiki/Radial_basis_function" target="_top">RBF</a> method to be applied by the object.</p>
+<p>Owner: NcmSplineRBF</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: NCM_SPLINE_RBF_TYPE_POSDEF_GAUSS</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

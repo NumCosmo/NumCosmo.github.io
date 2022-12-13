@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcHIPertAdiab: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch07.html" title="Perturbations" />
+<link rel="prev" href="NcHIPertWKB.html" title="NcHIPertWKB" />
+<link rel="next" href="NcHIPertGW.html" title="NcHIPertGW" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcHIPertAdiab.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcHIPertAdiab.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch07.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcHIPertWKB.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcHIPertGW.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcHIPertAdiab" id="NcHIPertAdiab"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcHIPertAdiab.top_of_page" id="NcHIPertAdiab.top_of_page"></a>NcHIPertAdiab</span></h2>
+<p>NcHIPertAdiab — Perturbation object for adiabatic mode only.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcHIPertAdiab.functions" id="NcHIPertAdiab.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertAdiab.html#nc-hipert-iadiab-eval-mnu" title="nc_hipert_iadiab_eval_mnu ()">nc_hipert_iadiab_eval_mnu</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertAdiab.html#nc-hipert-iadiab-eval-nu" title="nc_hipert_iadiab_eval_nu ()">nc_hipert_iadiab_eval_nu</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertAdiab.html#nc-hipert-iadiab-eval-dlnmnu" title="nc_hipert_iadiab_eval_dlnmnu ()">nc_hipert_iadiab_eval_dlnmnu</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertAdiab.html#nc-hipert-iadiab-eval-system" title="nc_hipert_iadiab_eval_system ()">nc_hipert_iadiab_eval_system</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertAdiab.html#nc-hipert-iadiab-nsing" title="nc_hipert_iadiab_nsing ()">nc_hipert_iadiab_nsing</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertAdiab.html#nc-hipert-iadiab-get-sing-info" title="nc_hipert_iadiab_get_sing_info ()">nc_hipert_iadiab_get_sing_info</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertAdiab.html#nc-hipert-iadiab-eval-sing-mnu" title="nc_hipert_iadiab_eval_sing_mnu ()">nc_hipert_iadiab_eval_sing_mnu</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertAdiab.html#nc-hipert-iadiab-eval-sing-dlnmnu" title="nc_hipert_iadiab_eval_sing_dlnmnu ()">nc_hipert_iadiab_eval_sing_dlnmnu</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertAdiab.html#nc-hipert-iadiab-eval-sing-system" title="nc_hipert_iadiab_eval_sing_system ()">nc_hipert_iadiab_eval_sing_system</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertAdiab.html#nc-hipert-iadiab-eval-powspec-factor" title="nc_hipert_iadiab_eval_powspec_factor ()">nc_hipert_iadiab_eval_powspec_factor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertAdiab.html" title="NcHIPertAdiab"><span class="returnvalue">NcHIPertAdiab</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertAdiab.html#nc-hipert-adiab-new" title="nc_hipert_adiab_new ()">nc_hipert_adiab_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertAdiab.html" title="NcHIPertAdiab"><span class="returnvalue">NcHIPertAdiab</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertAdiab.html#nc-hipert-adiab-ref" title="nc_hipert_adiab_ref ()">nc_hipert_adiab_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertAdiab.html#nc-hipert-adiab-free" title="nc_hipert_adiab_free ()">nc_hipert_adiab_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertAdiab.html#nc-hipert-adiab-clear" title="nc_hipert_adiab_clear ()">nc_hipert_adiab_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="NcHIPertIAdiab" id="NcHIPertIAdiab"></a><div class="refsect1">
+<a name="NcHIPertAdiab.other" id="NcHIPertAdiab.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcHIPertAdiab.html#NcHIPertAdiabVars" title="enum NcHIPertAdiabVars">NcHIPertAdiabVars</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertAdiab.object-hierarchy" id="NcHIPertAdiab.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcHIPertAdiabVars
+    <a href="/usr/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
+    <span class="lineart">╰──</span> NcHIPertIAdiab
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcmHOAA.html" title="NcmHOAA">NcmHOAA</a>
+        <span class="lineart">╰──</span> NcHIPertAdiab
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcHIPertAdiab.description" id="NcHIPertAdiab.description"></a><h2>Description</h2>
+<p>This object provides the computation of the adiabatic mode for the cosmological
+perturbations. It solves the equation of motion for the gauge invariant variable
+(see <a class="link" href="refs.html#XVitenti2013">Vitenti (2013)</a> for notation and details)
+$$\zeta \equiv \Psi - \frac{2\bar{K}}{\kappa(\bar{\rho} + \bar{p})} + H\mathcal{V}.$$
+Its conjugated momentum is give by
+\begin{split}
+P_\zeta &amp;= \frac{2\bar{D}^2_\bar{K}\Psi}{x^3H},
+\end{split}</p>
+<p>The equations of motion in their first order form are
+\begin{align}
+\zeta^\prime &amp;= \frac{P_\zeta}{m_\zeta}, \\
+P_\zeta^\prime &amp;= -m_\zeta\mu_\zeta^2\zeta.
+\end{align}
+The mass $m_\zeta$ and the frequency $\mu_\zeta$ are defined by
+\begin{align}
+m_\zeta     &amp;= \frac{3\Delta_\bar{K}(\bar{\rho} + \bar{p})}{\rho_\text{crit0} N x^3 c_s^2 E^2}, \\
+\mu_\zeta^2 &amp;= x^2N^2c_s^2k^2,
+\end{align}
+where $\bar{\rho} + \bar{p}$ is the background total energy density plus pressure,
+$E^2 = H^2/H_0^2$ is the dimensionless Hubble function squared (<a class="link" href="NcHICosmo.html#nc-hicosmo-E2" title="nc_hicosmo_E2 ()"><code class="function">nc_hicosmo_E2()</code></a>), $c_s^2$ the speed of sound,
+$N$ is the lapse function that in this case (using $\alpha$ as time variable) is $N \equiv \vert{}E\vert^{-1}$, $\rho_\text{crit0}$
+is the critical density today defined by $\rho_\text{crit0} \equiv 3H_0^2/\kappa$ and $$\Delta_\bar{K} \equiv \frac{k^2}{k^2 + \Omega_{k0}}.$$</p>
+</div>
+<div class="refsect1">
+<a name="NcHIPertAdiab.functions_details" id="NcHIPertAdiab.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-mnu" id="nc-hipert-iadiab-eval-mnu"></a><h3>nc_hipert_iadiab_eval_mnu ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_hipert_iadiab_eval_mnu (<em class="parameter"><code><a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> tau</code></em>,
+                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-mnu.parameters" id="nc-hipert-iadiab-eval-mnu.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-mnu.returns" id="nc-hipert-iadiab-eval-mnu.returns"></a><h4>Returns</h4>
+<p> FIXME.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-nu" id="nc-hipert-iadiab-eval-nu"></a><h3>nc_hipert_iadiab_eval_nu ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_hipert_iadiab_eval_nu (<em class="parameter"><code><a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> tau</code></em>,
+                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-nu.parameters" id="nc-hipert-iadiab-eval-nu.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-nu.returns" id="nc-hipert-iadiab-eval-nu.returns"></a><h4>Returns</h4>
+<p> FIXME.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-dlnmnu" id="nc-hipert-iadiab-eval-dlnmnu"></a><h3>nc_hipert_iadiab_eval_dlnmnu ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_hipert_iadiab_eval_dlnmnu (<em class="parameter"><code><a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> tau</code></em>,
+                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-dlnmnu.parameters" id="nc-hipert-iadiab-eval-dlnmnu.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-dlnmnu.returns" id="nc-hipert-iadiab-eval-dlnmnu.returns"></a><h4>Returns</h4>
+<p> FIXME.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-system" id="nc-hipert-iadiab-eval-system"></a><h3>nc_hipert_iadiab_eval_system ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_iadiab_eval_system (<em class="parameter"><code><a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> tau</code></em>,
+                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>,
+                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *nu</code></em>,
+                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *dlnmnu</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-system.parameters" id="nc-hipert-iadiab-eval-system.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>nu</p></td>
+<td class="parameter_description"><p>$\nu$. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dlnmnu</p></td>
+<td class="parameter_description"><p>FIXME. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-iadiab-nsing" id="nc-hipert-iadiab-nsing"></a><h3>nc_hipert_iadiab_nsing ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+nc_hipert_iadiab_nsing (<em class="parameter"><code><a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                        <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-iadiab-get-sing-info" id="nc-hipert-iadiab-get-sing-info"></a><h3>nc_hipert_iadiab_get_sing_info ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_iadiab_get_sing_info (<em class="parameter"><code><a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sing</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *ts</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *dts_i</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *dts_f</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcmHOAA.html#NcmHOAASingType" title="enum NcmHOAASingType"><span class="type">NcmHOAASingType</span></a> *st</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-sing-mnu" id="nc-hipert-iadiab-eval-sing-mnu"></a><h3>nc_hipert_iadiab_eval_sing_mnu ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_hipert_iadiab_eval_sing_mnu (<em class="parameter"><code><a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> tau_m_taus</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sing</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-sing-mnu.parameters" id="nc-hipert-iadiab-eval-sing-mnu.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau_m_taus</p></td>
+<td class="parameter_description"><p>$\tau - \tau_s$ </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sing</p></td>
+<td class="parameter_description"><p>singularity index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-sing-mnu.returns" id="nc-hipert-iadiab-eval-sing-mnu.returns"></a><h4>Returns</h4>
+<p> FIXME.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-sing-dlnmnu" id="nc-hipert-iadiab-eval-sing-dlnmnu"></a><h3>nc_hipert_iadiab_eval_sing_dlnmnu ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_hipert_iadiab_eval_sing_dlnmnu (<em class="parameter"><code><a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> tau_m_taus</code></em>,
+                                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>,
+                                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sing</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-sing-dlnmnu.parameters" id="nc-hipert-iadiab-eval-sing-dlnmnu.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau_m_taus</p></td>
+<td class="parameter_description"><p>$\tau - \tau_s$ </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sing</p></td>
+<td class="parameter_description"><p>singularity index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-sing-dlnmnu.returns" id="nc-hipert-iadiab-eval-sing-dlnmnu.returns"></a><h4>Returns</h4>
+<p> FIXME.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-sing-system" id="nc-hipert-iadiab-eval-sing-system"></a><h3>nc_hipert_iadiab_eval_sing_system ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_iadiab_eval_sing_system (<em class="parameter"><code><a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> tau_m_taus</code></em>,
+                                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>,
+                                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sing</code></em>,
+                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *nu</code></em>,
+                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *dlnmnu</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-sing-system.parameters" id="nc-hipert-iadiab-eval-sing-system.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau_m_taus</p></td>
+<td class="parameter_description"><p>$\tau - \tau_s$ </p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sing</p></td>
+<td class="parameter_description"><p>singularity index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>nu</p></td>
+<td class="parameter_description"><p>FIXME. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dlnmnu</p></td>
+<td class="parameter_description"><p>FIXME. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-powspec-factor" id="nc-hipert-iadiab-eval-powspec-factor"></a><h3>nc_hipert_iadiab_eval_powspec_factor ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_hipert_iadiab_eval_powspec_factor (<em class="parameter"><code><a class="link" href="NcHIPertAdiab.html#NcHIPertIAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-adiab-new" id="nc-hipert-adiab-new"></a><h3>nc_hipert_adiab_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertAdiab.html" title="NcHIPertAdiab"><span class="returnvalue">NcHIPertAdiab</span></a> *
+nc_hipert_adiab_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="NcHIPertAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> object.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-new.returns" id="nc-hipert-adiab-new.returns"></a><h4>Returns</h4>
+<p>a new <a class="link" href="NcHIPertAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-adiab-ref" id="nc-hipert-adiab-ref"></a><h3>nc_hipert_adiab_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertAdiab.html" title="NcHIPertAdiab"><span class="returnvalue">NcHIPertAdiab</span></a> *
+nc_hipert_adiab_ref (<em class="parameter"><code><a class="link" href="NcHIPertAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> *pa</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>pa</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-ref.parameters" id="nc-hipert-adiab-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pa</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-adiab-ref.returns" id="nc-hipert-adiab-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>pa</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-adiab-free" id="nc-hipert-adiab-free"></a><h3>nc_hipert_adiab_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_adiab_free (<em class="parameter"><code><a class="link" href="NcHIPertAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> *pa</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>pa</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-free.parameters" id="nc-hipert-adiab-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pa</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-adiab-clear" id="nc-hipert-adiab-clear"></a><h3>nc_hipert_adiab_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_adiab_clear (<em class="parameter"><code><a class="link" href="NcHIPertAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> **pa</code></em>);</pre>
+<p>Decreases the reference count of *<em class="parameter"><code>pa</code></em>
+ and sets *<em class="parameter"><code>pa</code></em>
+ to NULL.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-clear.parameters" id="nc-hipert-adiab-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pa</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertAdiab.other_details" id="NcHIPertAdiab.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcHIPertAdiabVars" id="NcHIPertAdiabVars"></a><h3>enum NcHIPertAdiabVars</h3>
+<p>Perturbation variables enumerator.</p>
+<div class="refsect3">
+<a name="NcHIPertAdiabVars.members" id="NcHIPertAdiabVars.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HIPERT-ADIAB-RE-ZETA:CAPS" id="NC-HIPERT-ADIAB-RE-ZETA:CAPS"></a>NC_HIPERT_ADIAB_RE_ZETA</p></td>
+<td class="enum_member_description">
+<p>$\text{Re}(\zeta)$</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HIPERT-ADIAB-IM-ZETA:CAPS" id="NC-HIPERT-ADIAB-IM-ZETA:CAPS"></a>NC_HIPERT_ADIAB_IM_ZETA</p></td>
+<td class="enum_member_description">
+<p>$\text{Im}(\zeta)$</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HIPERT-ADIAB-RE-PZETA:CAPS" id="NC-HIPERT-ADIAB-RE-PZETA:CAPS"></a>NC_HIPERT_ADIAB_RE_PZETA</p></td>
+<td class="enum_member_description">
+<p>$\text{Re}(P_\zeta)$</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HIPERT-ADIAB-IM-PZETA:CAPS" id="NC-HIPERT-ADIAB-IM-PZETA:CAPS"></a>NC_HIPERT_ADIAB_IM_PZETA</p></td>
+<td class="enum_member_description">
+<p>$\text{Im}(P_\zeta)$</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

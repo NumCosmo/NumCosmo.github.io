@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Cosmological Data: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="prev" href="NcGalaxySelfunc.html" title="NcGalaxySelfunc" />
+<link rel="next" href="numcosmo-NcDataCMB.html" title="NcDataCMB" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><img src="up-insensitive.png" width="16" height="16" border="0" /></td>
+<td><a accesskey="p" href="NcGalaxySelfunc.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="numcosmo-NcDataCMB.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h1 class="title">
+<a name="id-1.10" id="id-1.10"></a>Cosmological Data</h1></div></div></div>
+<div class="toc"><dl class="toc">
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcDataCMB.html">NcDataCMB</a></span><span class="refpurpose"> — Helper function for instantiating CMB data</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataCMBShiftParam.html">NcDataCMBShiftParam</a></span><span class="refpurpose"> — Cosmic microwave background data -- shift parameter.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataCMBDistPriors.html">NcDataCMBDistPriors</a></span><span class="refpurpose"> — Cosmic microwave background data -- distance priors.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataHubble.html">NcDataHubble</a></span><span class="refpurpose"> — Hubble function data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataHubbleBao.html">NcDataHubbleBao</a></span><span class="refpurpose"> — Hubble function data from BAO.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcDataBao.html">NcDataBao</a></span><span class="refpurpose"> — Helper functions for instantiating BAO data</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoA.html">NcDataBaoA</a></span><span class="refpurpose"> — Baryon oscillation data -- acoustic scale $A$.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoDV.html">NcDataBaoDV</a></span><span class="refpurpose"> — Baryon oscillation data -- volume mean $D_V$.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoRDV.html">NcDataBaoRDV</a></span><span class="refpurpose"> — Baryon Oscillation Data -- $r_s / D_V$ ratio.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoDVDV.html">NcDataBaoDVDV</a></span><span class="refpurpose"> — Baryon oscillation data -- $D_V / D_V$ ratio.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoEmpiricalFit.html">NcDataBaoEmpiricalFit</a></span><span class="refpurpose"> — Baryon oscillation data -- $D_V / r_s$ empirical likelihood.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoEmpiricalFit2d.html">NcDataBaoEmpiricalFit2d</a></span><span class="refpurpose"> — Baryon oscillation data -- $D_H / r_d$ and $D_t / r_d$ empirical likelihood.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoDHrDAr.html">NcDataBaoDHrDAr</a></span><span class="refpurpose"> — Baryon Oscillation Data -- $(D_H/r,\; D_A/r)$ data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoDtrDHr.html">NcDataBaoDtrDHr</a></span><span class="refpurpose"> — Baryon Oscillation Data -- $(D_H/r,\; D_t/r)$ data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataBaoDMrHr.html">NcDataBaoDMrHr</a></span><span class="refpurpose"> — Baryon Oscillation Data -- $(D_M/r,\; H/r)$ data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcDataSNIAId.html">NcDataSNIAId</a></span><span class="refpurpose"> — Helper function for instantiating type Ia supernova data</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataDistMu.html">NcDataDistMu</a></span><span class="refpurpose"> — Distance modulus data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataSNIACov.html">NcDataSNIACov</a></span><span class="refpurpose"> — Type Ia supernovae data with covariance error matrix</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataClusterNCount.html">NcDataClusterNCount</a></span><span class="refpurpose"> — Cluster number count data.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataClusterPseudoCounts.html">NcDataClusterPseudoCounts</a></span><span class="refpurpose"> — Galaxy clusters data -- pseudo number counts likelihood.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataClusterWL.html">NcDataClusterWL</a></span><span class="refpurpose"> — Cluster weak lensing likelihood.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataReducedShearClusterMass.html">NcDataReducedShearClusterMass</a></span><span class="refpurpose"> — Galaxy clusters data -- pseudo number counts likelihood.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataPlanckLKL.html">NcDataPlanckLKL</a></span><span class="refpurpose"> — Planck Likelihood interface.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcDataXcor.html">NcDataXcor</a></span><span class="refpurpose"> — cross-correlation data object.</span>
+</dt>
+<dt><span class="section"><a href="ch09.html#id-1.10.26">ABC analysis</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="NcABCClusterNCount.html">NcABCClusterNCount</a></span><span class="refpurpose"> — Object implementing Approximate Bayesian Computation (ABC) for cluster number counts.</span>
+</dt></dl></dd>
+</dl></div>
+<div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="id-1.10.26" id="id-1.10.26"></a>ABC analysis</h2></div></div></div></div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

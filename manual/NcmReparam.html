@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmReparam: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s11.html" title="Reparametrization" />
+<link rel="prev" href="ch02s11.html" title="Reparametrization" />
+<link rel="next" href="NcmReparamLinear.html" title="NcmReparamLinear" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmReparam.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmReparam.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmReparam.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s11.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="ch02s11.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmReparamLinear.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmReparam" id="NcmReparam"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmReparam.top_of_page" id="NcmReparam.top_of_page"></a>NcmReparam</span></h2>
+<p>NcmReparam — Abstract class for model reparametrization.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmReparam.functions" id="NcmReparam.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="NcmReparam.html#NcmReparamV" title="NcmReparamV ()">*NcmReparamV</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="NcmReparam.html#NcmReparamJ" title="NcmReparamJ ()">*NcmReparamJ</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmReparam.html" title="NcmReparam"><span class="returnvalue">NcmReparam</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-ref" title="ncm_reparam_ref ()">ncm_reparam_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-free" title="ncm_reparam_free ()">ncm_reparam_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-clear" title="ncm_reparam_clear ()">ncm_reparam_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-get-compat-type" title="ncm_reparam_get_compat_type ()">ncm_reparam_get_compat_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-old2new" title="ncm_reparam_old2new ()">ncm_reparam_old2new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-new2old" title="ncm_reparam_new2old ()">ncm_reparam_new2old</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-jac" title="ncm_reparam_jac ()">ncm_reparam_jac</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-grad-old2new" title="ncm_reparam_grad_old2new ()">ncm_reparam_grad_old2new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-M-old2new" title="ncm_reparam_M_old2new ()">ncm_reparam_M_old2new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-get-params-desc-dict" title="ncm_reparam_get_params_desc_dict ()">ncm_reparam_get_params_desc_dict</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-set-params-desc-dict" title="ncm_reparam_set_params_desc_dict ()">ncm_reparam_set_params_desc_dict</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-set-param-desc" title="ncm_reparam_set_param_desc ()">ncm_reparam_set_param_desc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSParam.html" title="NcmSParam"><span class="returnvalue">NcmSParam</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-peek-param-desc" title="ncm_reparam_peek_param_desc ()">ncm_reparam_peek_param_desc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSParam.html" title="NcmSParam"><span class="returnvalue">NcmSParam</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-get-param-desc" title="ncm_reparam_get_param_desc ()">ncm_reparam_get_param_desc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-set-param-desc-full" title="ncm_reparam_set_param_desc_full ()">ncm_reparam_set_param_desc_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmReparam.html#ncm-reparam-index-from-name" title="ncm_reparam_index_from_name ()">ncm_reparam_index_from_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmReparam.properties" id="NcmReparam.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<span class="type">char</span> *</td>
+<td class="property_name"><a class="link" href="NcmReparam.html#NcmReparam--compat-type" title="The “compat-type” property">compat-type</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcmReparam.html#NcmReparam--length" title="The “length” property">length</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmReparam.html#NcmReparam--params-desc" title="The “params-desc” property">params-desc</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmReparam.other" id="NcmReparam.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody><tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmReparam.html#NCM-REPARAM-PARAMS-DESC-DICT-TYPE:CAPS" title="NCM_REPARAM_PARAMS_DESC_DICT_TYPE">NCM_REPARAM_PARAMS_DESC_DICT_TYPE</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmReparam.object-hierarchy" id="NcmReparam.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcmReparam
+        <span class="lineart">├──</span> <a class="link" href="NcHICosmoDEReparamCMB.html" title="NcHICosmoDEReparamCMB">NcHICosmoDEReparamCMB</a>
+        <span class="lineart">├──</span> <a class="link" href="NcHICosmoDEReparamOk.html" title="NcHICosmoDEReparamOk">NcHICosmoDEReparamOk</a>
+        <span class="lineart">├──</span> <a class="link" href="NcHICosmoGCGReparamOk.html#NcHICosmoGCGReparamCMB">NcHICosmoGCGReparamCMB</a>
+        <span class="lineart">├──</span> <a class="link" href="NcHICosmoGCGReparamOk.html" title="NcHICosmoGCG">NcHICosmoGCGReparamOk</a>
+        <span class="lineart">├──</span> <a class="link" href="NcHICosmoIDEM2ReparamOk.html#NcHICosmoIDEM2ReparamCMB">NcHICosmoIDEM2ReparamCMB</a>
+        <span class="lineart">├──</span> <a class="link" href="NcHICosmoIDEM2ReparamOk.html" title="NcHICosmoIDEM2">NcHICosmoIDEM2ReparamOk</a>
+        <span class="lineart">├──</span> <a class="link" href="NcHIReionCambReparamTau.html" title="NcHIReionCambReparamTau">NcHIReionCambReparamTau</a>
+        <span class="lineart">╰──</span> <a class="link" href="NcmReparamLinear.html" title="NcmReparamLinear">NcmReparamLinear</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmReparam.description" id="NcmReparam.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcmReparam.functions_details" id="NcmReparam.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="NcmReparamV" id="NcmReparamV"></a><h3>NcmReparamV ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="c_punctuation">(</span>*NcmReparamV<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>,
+                <em class="parameter"><code><span class="type">struct _NcmModel</span> *model</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="NcmReparamV.parameters" id="NcmReparamV.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmReparamJ" id="NcmReparamJ"></a><h3>NcmReparamJ ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="c_punctuation">(</span>*NcmReparamJ<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>,
+                <em class="parameter"><code><span class="type">struct _NcmModel</span> *model</code></em>,
+                <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *jac</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="NcmReparamJ.parameters" id="NcmReparamJ.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>jac</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-ref" id="ncm-reparam-ref"></a><h3>ncm_reparam_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="returnvalue">NcmReparam</span></a> *
+ncm_reparam_ref (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-reparam-ref.parameters" id="ncm-reparam-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-reparam-ref.returns" id="ncm-reparam-ref.returns"></a><h4>Returns</h4>
+<p>FIXME. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-free" id="ncm-reparam-free"></a><h3>ncm_reparam_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_reparam_free (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-reparam-free.parameters" id="ncm-reparam-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-clear" id="ncm-reparam-clear"></a><h3>ncm_reparam_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_reparam_clear (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> **reparam</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-reparam-clear.parameters" id="ncm-reparam-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-get-compat-type" id="ncm-reparam-get-compat-type"></a><h3>ncm_reparam_get_compat_type ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>
+ncm_reparam_get_compat_type (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-reparam-get-compat-type.parameters" id="ncm-reparam-get-compat-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-reparam-get-compat-type.returns" id="ncm-reparam-get-compat-type.returns"></a><h4>Returns</h4>
+<p> the compatible <a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> for this reparametrization.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-old2new" id="ncm-reparam-old2new"></a><h3>ncm_reparam_old2new ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_reparam_old2new (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>,
+                     <em class="parameter"><code><span class="type">struct _NcmModel</span> *model</code></em>);</pre>
+<p>Using the values set in the original parametrization update the
+values of the new parametrization.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> old2new]</span></p>
+<div class="refsect3">
+<a name="ncm-reparam-old2new.parameters" id="ncm-reparam-old2new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-new2old" id="ncm-reparam-new2old"></a><h3>ncm_reparam_new2old ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_reparam_new2old (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>,
+                     <em class="parameter"><code><span class="type">struct _NcmModel</span> *model</code></em>);</pre>
+<p>Using the values set in the new parametrization update the
+values of the original parametrization.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> new2old]</span></p>
+<div class="refsect3">
+<a name="ncm-reparam-new2old.parameters" id="ncm-reparam-new2old.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-jac" id="ncm-reparam-jac"></a><h3>ncm_reparam_jac ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_reparam_jac (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>,
+                 <em class="parameter"><code><span class="type">struct _NcmModel</span> *model</code></em>,
+                 <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *jac</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> jac]</span></p>
+<div class="refsect3">
+<a name="ncm-reparam-jac.parameters" id="ncm-reparam-jac.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>jac</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-grad-old2new" id="ncm-reparam-grad-old2new"></a><h3>ncm_reparam_grad_old2new ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_reparam_grad_old2new (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>,
+                          <em class="parameter"><code><span class="type">struct _NcmModel</span> *model</code></em>,
+                          <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *jac</code></em>,
+                          <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *old_grad</code></em>,
+                          <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *new_grad</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-reparam-grad-old2new.parameters" id="ncm-reparam-grad-old2new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>jac</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>old_grad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>new_grad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-M-old2new" id="ncm-reparam-M-old2new"></a><h3>ncm_reparam_M_old2new ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_reparam_M_old2new (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>,
+                       <em class="parameter"><code><span class="type">struct _NcmModel</span> *model</code></em>,
+                       <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *jac</code></em>,
+                       <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *old_M</code></em>,
+                       <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *new_M</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-reparam-M-old2new.parameters" id="ncm-reparam-M-old2new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>jac</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>old_M</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>new_M</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-get-params-desc-dict" id="ncm-reparam-get-params-desc-dict"></a><h3>ncm_reparam_get_params_desc_dict ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+ncm_reparam_get_params_desc_dict (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>);</pre>
+<p>Returns a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> containing a dictionary describing the new parameters.</p>
+<div class="refsect3">
+<a name="ncm-reparam-get-params-desc-dict.parameters" id="ncm-reparam-get-params-desc-dict.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-reparam-get-params-desc-dict.returns" id="ncm-reparam-get-params-desc-dict.returns"></a><h4>Returns</h4>
+<p> a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> dictionary.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-set-params-desc-dict" id="ncm-reparam-set-params-desc-dict"></a><h3>ncm_reparam_set_params_desc_dict ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_reparam_set_params_desc_dict (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *pdesc_dict</code></em>);</pre>
+<p>Sets the new parameters descriptions using the information from <em class="parameter"><code>pdesc_dict</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-reparam-set-params-desc-dict.parameters" id="ncm-reparam-set-params-desc-dict.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pdesc_dict</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> containing the new parameters descriptions.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-set-param-desc" id="ncm-reparam-set-param-desc"></a><h3>ncm_reparam_set_param_desc ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_reparam_set_param_desc (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>,
+                            <em class="parameter"><code><a class="link" href="NcmSParam.html" title="NcmSParam"><span class="type">NcmSParam</span></a> *sp</code></em>);</pre>
+<p>Change the <em class="parameter"><code>i</code></em>
+-th parameter description using <em class="parameter"><code>sp</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-reparam-set-param-desc.parameters" id="ncm-reparam-set-param-desc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>index of the changed parameter.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sp</p></td>
+<td class="parameter_description"><p><a class="link" href="NcmSParam.html" title="NcmSParam"><span class="type">NcmSParam</span></a> describing the new parameter.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-peek-param-desc" id="ncm-reparam-peek-param-desc"></a><h3>ncm_reparam_peek_param_desc ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSParam.html" title="NcmSParam"><span class="returnvalue">NcmSParam</span></a> *
+ncm_reparam_peek_param_desc (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>,
+                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
+<p>Peeks the <em class="parameter"><code>i</code></em>
+-th parameter description.</p>
+<div class="refsect3">
+<a name="ncm-reparam-peek-param-desc.parameters" id="ncm-reparam-peek-param-desc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>index of the changed parameter.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-reparam-peek-param-desc.returns" id="ncm-reparam-peek-param-desc.returns"></a><h4>Returns</h4>
+<p>The <em class="parameter"><code>i</code></em>
+-th parameter description. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-get-param-desc" id="ncm-reparam-get-param-desc"></a><h3>ncm_reparam_get_param_desc ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSParam.html" title="NcmSParam"><span class="returnvalue">NcmSParam</span></a> *
+ncm_reparam_get_param_desc (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
+<p>Gets the <em class="parameter"><code>i</code></em>
+-th parameter description.</p>
+<div class="refsect3">
+<a name="ncm-reparam-get-param-desc.parameters" id="ncm-reparam-get-param-desc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>index of the changed parameter.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-reparam-get-param-desc.returns" id="ncm-reparam-get-param-desc.returns"></a><h4>Returns</h4>
+<p>The <em class="parameter"><code>i</code></em>
+-th parameter description. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-set-param-desc-full" id="ncm-reparam-set-param-desc-full"></a><h3>ncm_reparam_set_param_desc_full ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_reparam_set_param_desc_full (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>,
+                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>,
+                                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *symbol</code></em>,
+                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lower_bound</code></em>,
+                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> upper_bound</code></em>,
+                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> scale</code></em>,
+                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> abstol</code></em>,
+                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> default_val</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmSParam.html#NcmParamType" title="enum NcmParamType"><span class="type">NcmParamType</span></a> ftype</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-reparam-set-param-desc-full.parameters" id="ncm-reparam-set-param-desc-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>index of the changed parameter.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p><a class="link" href="NcmSParam.html#NcmSParam--name" title="The “name” property"><span class="type">“name”</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>symbol</p></td>
+<td class="parameter_description"><p><a class="link" href="NcmSParam.html#NcmSParam--symbol" title="The “symbol” property"><span class="type">“symbol”</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lower_bound</p></td>
+<td class="parameter_description"><p>value of <a class="link" href="NcmSParam.html#NcmSParam--lower-bound" title="The “lower-bound” property"><span class="type">“lower-bound”</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>upper_bound</p></td>
+<td class="parameter_description"><p>value of <a class="link" href="NcmSParam.html#NcmSParam--upper-bound" title="The “upper-bound” property"><span class="type">“upper-bound”</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>scale</p></td>
+<td class="parameter_description"><p>value of <a class="link" href="NcmSParam.html#NcmSParam--scale" title="The “scale” property"><span class="type">“scale”</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>abstol</p></td>
+<td class="parameter_description"><p>value of <a class="link" href="NcmSParam.html#NcmSParam--absolute-tolerance" title="The “absolute-tolerance” property"><span class="type">“absolute-tolerance”</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>default_val</p></td>
+<td class="parameter_description"><p>value of <a class="link" href="NcmSParam.html#NcmSParam--default-value" title="The “default-value” property"><span class="type">“default-value”</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ftype</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSParam.html#NcmParamType" title="enum NcmParamType"><span class="type">NcmParamType</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-reparam-index-from-name" id="ncm-reparam-index-from-name"></a><h3>ncm_reparam_index_from_name ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_reparam_index_from_name (<em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>,
+                             <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *param_name</code></em>,
+                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *i</code></em>);</pre>
+<p>Looks for a parameter named <em class="parameter"><code>param_name</code></em>
+ and returns TRUE if found. If found
+puts at <em class="parameter"><code>i</code></em>
+ its index.</p>
+<div class="refsect3">
+<a name="ncm-reparam-index-from-name.parameters" id="ncm-reparam-index-from-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>reparam</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param_name</p></td>
+<td class="parameter_description"><p>parameter name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>parameter index. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-reparam-index-from-name.returns" id="ncm-reparam-index-from-name.returns"></a><h4>Returns</h4>
+<p> whenever the parameter is found.</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmReparam.other_details" id="NcmReparam.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NCM-REPARAM-PARAMS-DESC-DICT-TYPE:CAPS" id="NCM-REPARAM-PARAMS-DESC-DICT-TYPE:CAPS"></a><h3>NCM_REPARAM_PARAMS_DESC_DICT_TYPE</h3>
+<pre class="programlisting">#define NCM_REPARAM_PARAMS_DESC_DICT_TYPE "a{u"NCM_SERIALIZE_OBJECT_TYPE"}"
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmReparam.property-details" id="NcmReparam.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmReparam--compat-type" id="NcmReparam--compat-type"></a><h3>The <code class="literal">“compat-type”</code> property</h3>
+<pre class="programlisting">  “compat-type”              <span class="type">char</span> *</pre>
+<p>Compatible type.</p>
+<p>Owner: NcmReparam</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: "NcmModel"</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmReparam--length" id="NcmReparam--length"></a><h3>The <code class="literal">“length”</code> property</h3>
+<pre class="programlisting">  “length”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>System's length.</p>
+<p>Owner: NcmReparam</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmReparam--params-desc" id="NcmReparam--params-desc"></a><h3>The <code class="literal">“params-desc”</code> property</h3>
+<pre class="programlisting">  “params-desc”              <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *</pre>
+<p>News parameter descriptions.</p>
+<p>Owner: NcmReparam</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: GVariant&lt;a{u{sa{sv}}}&gt;</p>
+<p>Default value: NULL</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

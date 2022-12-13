@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcXcorLimberKernel: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch08s09.html" title="Cross-correlations" />
+<link rel="prev" href="NcXcorAB.html" title="NcXcorAB" />
+<link rel="next" href="NcXcorLimberKernelGal.html" title="NcXcorLimberKernelGal" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcXcorLimberKernel.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcXcorLimberKernel.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcXcorLimberKernel.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch08s09.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcXcorAB.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcXcorLimberKernelGal.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcXcorLimberKernel" id="NcXcorLimberKernel"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcXcorLimberKernel.top_of_page" id="NcXcorLimberKernel.top_of_page"></a>NcXcorLimberKernel</span></h2>
+<p>NcXcorLimberKernel — Abstract object for the kernels of projected observables used in cross-correlations.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcXcorLimberKernel.functions" id="NcXcorLimberKernel.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="returnvalue">NcXcorLimberKernel</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcXcorLimberKernel.html#nc-xcor-limber-kernel-new-from-name" title="nc_xcor_limber_kernel_new_from_name ()">nc_xcor_limber_kernel_new_from_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="returnvalue">NcXcorLimberKernel</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcXcorLimberKernel.html#nc-xcor-limber-kernel-ref" title="nc_xcor_limber_kernel_ref ()">nc_xcor_limber_kernel_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcXcorLimberKernel.html#nc-xcor-limber-kernel-free" title="nc_xcor_limber_kernel_free ()">nc_xcor_limber_kernel_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcXcorLimberKernel.html#nc-xcor-limber-kernel-clear" title="nc_xcor_limber_kernel_clear ()">nc_xcor_limber_kernel_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcXcorLimberKernel.html#nc-xcor-limber-kernel-obs-len" title="nc_xcor_limber_kernel_obs_len ()">nc_xcor_limber_kernel_obs_len</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcXcorLimberKernel.html#nc-xcor-limber-kernel-obs-params-len" title="nc_xcor_limber_kernel_obs_params_len ()">nc_xcor_limber_kernel_obs_params_len</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcXcorLimberKernel.html#nc-xcor-limber-kernel-eval" title="nc_xcor_limber_kernel_eval ()">nc_xcor_limber_kernel_eval</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcXcorLimberKernel.html#nc-xcor-limber-kernel-eval-full" title="nc_xcor_limber_kernel_eval_full ()">nc_xcor_limber_kernel_eval_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcXcorLimberKernel.html#nc-xcor-limber-kernel-prepare" title="nc_xcor_limber_kernel_prepare ()">nc_xcor_limber_kernel_prepare</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcXcorLimberKernel.html#nc-xcor-limber-kernel-add-noise" title="nc_xcor_limber_kernel_add_noise ()">nc_xcor_limber_kernel_add_noise</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcXcorLimberKernel.html#nc-xcor-limber-kernel-log-all-models" title="nc_xcor_limber_kernel_log_all_models ()">nc_xcor_limber_kernel_log_all_models</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcXcorLimberKernel.properties" id="NcXcorLimberKernel.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcXcorLimberKernel.html#NcXcorLimberKernel--zmax" title="The “zmax” property">zmax</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcXcorLimberKernel.html#NcXcorLimberKernel--zmin" title="The “zmin” property">zmin</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="NcXcorKinetic" id="NcXcorKinetic"></a><div class="refsect1">
+<a name="NcXcorLimberKernel.other" id="NcXcorLimberKernel.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcXcorLimberKernel.html#NcXcorLimberKernelImpl" title="enum NcXcorLimberKernelImpl">NcXcorLimberKernelImpl</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcXcorLimberKernel.html#NC-XCOR-LIMBER-KERNEL-IMPL-ALL:CAPS" title="NC_XCOR_LIMBER_KERNEL_IMPL_ALL">NC_XCOR_LIMBER_KERNEL_IMPL_ALL</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcXcorLimberKernel.html#NcXcorKinetic-struct" title="NcXcorKinetic">NcXcorKinetic</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcXcorLimberKernel.object-hierarchy" id="NcXcorLimberKernel.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
+    <span class="lineart">╰──</span> NcXcorKinetic
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcXcorLimberKernelImpl
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcmModel.html" title="NcmModel">NcmModel</a>
+        <span class="lineart">╰──</span> NcXcorLimberKernel
+            <span class="lineart">├──</span> <a class="link" href="NcXcorLimberKernelCMBLensing.html" title="NcXcorLimberKernelCMBLensing">NcXcorLimberKernelCMBLensing</a>
+            <span class="lineart">├──</span> <a class="link" href="NcXcorLimberKernelGal.html" title="NcXcorLimberKernelGal">NcXcorLimberKernelGal</a>
+            <span class="lineart">╰──</span> <a class="link" href="NcXcorLimberKernelWeakLensing.html" title="NcXcorLimberKernelWeakLensing">NcXcorLimberKernelWeakLensing</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcXcorLimberKernel.description" id="NcXcorLimberKernel.description"></a><h2>Description</h2>
+<p>The projected field and its kernel are linked by
+\begin{equation}
+$A(\hat{\mathbf{n}}) = \int_0^\infty dz \ W^A(z) \ \delta(\chi(z)\hat{\mathbf{n}}, z)$
+\end{equation}
+where $\delta$ is the matter density field.</p>
+<p>Kernels also implement the noise power spectrum.</p>
+</div>
+<div class="refsect1">
+<a name="NcXcorLimberKernel.functions_details" id="NcXcorLimberKernel.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="nc-xcor-limber-kernel-new-from-name" id="nc-xcor-limber-kernel-new-from-name"></a><h3>nc_xcor_limber_kernel_new_from_name ()</h3>
+<pre class="programlisting"><a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="returnvalue">NcXcorLimberKernel</span></a> *
+nc_xcor_limber_kernel_new_from_name (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *xcor_name</code></em>);</pre>
+<p>This function returns a new <a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a> whose type is defined by
+<em class="parameter"><code>xcor_name</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-new-from-name.parameters" id="nc-xcor-limber-kernel-new-from-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>xcor_name</p></td>
+<td class="parameter_description"><p>string which specifies the type of the observable</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-new-from-name.returns" id="nc-xcor-limber-kernel-new-from-name.returns"></a><h4>Returns</h4>
+<p>A new <a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-xcor-limber-kernel-ref" id="nc-xcor-limber-kernel-ref"></a><h3>nc_xcor_limber_kernel_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="returnvalue">NcXcorLimberKernel</span></a> *
+nc_xcor_limber_kernel_ref (<em class="parameter"><code><a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a> *xclk</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-ref.parameters" id="nc-xcor-limber-kernel-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>xclk</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-ref.returns" id="nc-xcor-limber-kernel-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>xclk</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-xcor-limber-kernel-free" id="nc-xcor-limber-kernel-free"></a><h3>nc_xcor_limber_kernel_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_xcor_limber_kernel_free (<em class="parameter"><code><a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a> *xclk</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-free.parameters" id="nc-xcor-limber-kernel-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>xclk</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-xcor-limber-kernel-clear" id="nc-xcor-limber-kernel-clear"></a><h3>nc_xcor_limber_kernel_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_xcor_limber_kernel_clear (<em class="parameter"><code><a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a> **xclk</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-clear.parameters" id="nc-xcor-limber-kernel-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>xclk</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-xcor-limber-kernel-obs-len" id="nc-xcor-limber-kernel-obs-len"></a><h3>nc_xcor_limber_kernel_obs_len ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+nc_xcor_limber_kernel_obs_len (<em class="parameter"><code><a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a> *xclk</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> obs_len]</span></p>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-obs-len.parameters" id="nc-xcor-limber-kernel-obs-len.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>xclk</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-obs-len.returns" id="nc-xcor-limber-kernel-obs-len.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-xcor-limber-kernel-obs-params-len" id="nc-xcor-limber-kernel-obs-params-len"></a><h3>nc_xcor_limber_kernel_obs_params_len ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+nc_xcor_limber_kernel_obs_params_len (<em class="parameter"><code><a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a> *xclk</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> obs_params_len]</span></p>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-obs-params-len.parameters" id="nc-xcor-limber-kernel-obs-params-len.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>xclk</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-obs-params-len.returns" id="nc-xcor-limber-kernel-obs-params-len.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-xcor-limber-kernel-eval" id="nc-xcor-limber-kernel-eval"></a><h3>nc_xcor_limber_kernel_eval ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_xcor_limber_kernel_eval (<em class="parameter"><code><a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a> *xclk</code></em>,
+                            <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
+                            <em class="parameter"><code>const <a class="link" href="NcXcorLimberKernel.html#NcXcorKinetic"><span class="type">NcXcorKinetic</span></a> *xck</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> l</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> eval]</span></p>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-eval.parameters" id="nc-xcor-limber-kernel-eval.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>xclk</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xck</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcXcorLimberKernel.html#NcXcorKinetic"><span class="type">NcXcorKinetic</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>l</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-eval.returns" id="nc-xcor-limber-kernel-eval.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-xcor-limber-kernel-eval-full" id="nc-xcor-limber-kernel-eval-full"></a><h3>nc_xcor_limber_kernel_eval_full ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_xcor_limber_kernel_eval_full (<em class="parameter"><code><a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a> *xclk</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
+                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> l</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-eval-full.parameters" id="nc-xcor-limber-kernel-eval-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>xclk</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dist</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>l</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-eval-full.returns" id="nc-xcor-limber-kernel-eval-full.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-xcor-limber-kernel-prepare" id="nc-xcor-limber-kernel-prepare"></a><h3>nc_xcor_limber_kernel_prepare ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_xcor_limber_kernel_prepare (<em class="parameter"><code><a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a> *xclk</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> prepare]</span></p>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-prepare.parameters" id="nc-xcor-limber-kernel-prepare.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>xclk</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a NcHICosmo</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-xcor-limber-kernel-add-noise" id="nc-xcor-limber-kernel-add-noise"></a><h3>nc_xcor_limber_kernel_add_noise ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_xcor_limber_kernel_add_noise (<em class="parameter"><code><a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a> *xclk</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *vp1</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *vp2</code></em>,
+                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> lmin</code></em>);</pre>
+<p>vp2 = vp1 + noise spectrum</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> add_noise]</span></p>
+<div class="refsect3">
+<a name="nc-xcor-limber-kernel-add-noise.parameters" id="nc-xcor-limber-kernel-add-noise.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>xclk</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>vp1</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>vp2</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lmin</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-xcor-limber-kernel-log-all-models" id="nc-xcor-limber-kernel-log-all-models"></a><h3>nc_xcor_limber_kernel_log_all_models ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_xcor_limber_kernel_log_all_models (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>FIXME</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcXcorLimberKernel.other_details" id="NcXcorLimberKernel.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcXcorLimberKernelImpl" id="NcXcorLimberKernelImpl"></a><h3>enum NcXcorLimberKernelImpl</h3>
+<div class="refsect3">
+<a name="NcXcorLimberKernelImpl.members" id="NcXcorLimberKernelImpl.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-XCOR-LIMBER-KERNEL-IMPL-EVAL:CAPS" id="NC-XCOR-LIMBER-KERNEL-IMPL-EVAL:CAPS"></a>NC_XCOR_LIMBER_KERNEL_IMPL_EVAL</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-XCOR-LIMBER-KERNEL-IMPL-PREPARE:CAPS" id="NC-XCOR-LIMBER-KERNEL-IMPL-PREPARE:CAPS"></a>NC_XCOR_LIMBER_KERNEL_IMPL_PREPARE</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-XCOR-LIMBER-KERNEL-IMPL-ADD-NOISE:CAPS" id="NC-XCOR-LIMBER-KERNEL-IMPL-ADD-NOISE:CAPS"></a>NC_XCOR_LIMBER_KERNEL_IMPL_ADD_NOISE</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NC-XCOR-LIMBER-KERNEL-IMPL-ALL:CAPS" id="NC-XCOR-LIMBER-KERNEL-IMPL-ALL:CAPS"></a><h3>NC_XCOR_LIMBER_KERNEL_IMPL_ALL</h3>
+<pre class="programlisting">#define NC_XCOR_LIMBER_KERNEL_IMPL_ALL NCM_MODEL_CLASS_IMPL_ALL
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcXcorKinetic-struct" id="NcXcorKinetic-struct"></a><h3>NcXcorKinetic</h3>
+<pre class="programlisting">typedef struct _NcXcorKinetic NcXcorKinetic;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcXcorLimberKernel.property-details" id="NcXcorLimberKernel.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcXcorLimberKernel--zmax" id="NcXcorLimberKernel--zmax"></a><h3>The <code class="literal">“zmax”</code> property</h3>
+<pre class="programlisting">  “zmax”                     <span class="type">double</span></pre>
+<p>Maximum redshift.</p>
+<p>Owner: NcXcorLimberKernel</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [0,100000]</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcXcorLimberKernel--zmin" id="NcXcorLimberKernel--zmin"></a><h3>The <code class="literal">“zmin”</code> property</h3>
+<pre class="programlisting">  “zmin”                     <span class="type">double</span></pre>
+<p>Minimum redshift.</p>
+<p>Owner: NcXcorLimberKernel</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [0,100000]</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

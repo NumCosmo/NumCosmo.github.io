@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmBinSplit: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch10.html" title="Mathematical Utilities" />
+<link rel="prev" href="ch10.html" title="Mathematical Utilities" />
+<link rel="next" href="NcmFunctionCache.html" title="NcmFunctionCache" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#numcosmo-NcmBinSplit.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch10.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="ch10.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmFunctionCache.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="numcosmo-NcmBinSplit" id="numcosmo-NcmBinSplit"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="numcosmo-NcmBinSplit.top_of_page" id="numcosmo-NcmBinSplit.top_of_page"></a>NcmBinSplit</span></h2>
+<p>NcmBinSplit — Binnary splitting algorithms used to evaluate sums fast and with arbitrary precision.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="numcosmo-NcmBinSplit.stability-level" id="numcosmo-NcmBinSplit.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+</div>
+<div class="refsect1">
+<a name="numcosmo-NcmBinSplit.functions" id="numcosmo-NcmBinSplit.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplitEval" title="NcmBinSplitEval ()">*NcmBinSplitEval</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="returnvalue">NcmBinSplit</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmBinSplit.html#ncm-binsplit-alloc" title="ncm_binsplit_alloc ()">ncm_binsplit_alloc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmBinSplit.html#ncm-binsplit-test-next" title="ncm_binsplit_test_next ()">ncm_binsplit_test_next</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmBinSplit.html#ncm-binsplit-join" title="ncm_binsplit_join ()">ncm_binsplit_join</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmBinSplit.html#ncm-binsplit-eval-join" title="ncm_binsplit_eval_join ()">ncm_binsplit_eval_join</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmBinSplit.html#ncm-binsplit-eval-prec" title="ncm_binsplit_eval_prec ()">ncm_binsplit_eval_prec</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmBinSplit.html#ncm-binsplit-get" title="ncm_binsplit_get ()">ncm_binsplit_get</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmBinSplit.html#ncm-binsplit-get-q" title="ncm_binsplit_get_q ()">ncm_binsplit_get_q</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmBinSplit.html#ncm-binsplit-get-d" title="ncm_binsplit_get_d ()">ncm_binsplit_get_d</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmBinSplit.html#NCM-BINSPLIT-DECL:CAPS" title="NCM_BINSPLIT_DECL()">NCM_BINSPLIT_DECL</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmBinSplit.html#NCM-BINSPLIT-DENC-NULL:CAPS" title="NCM_BINSPLIT_DENC_NULL()">NCM_BINSPLIT_DENC_NULL</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="numcosmo-NcmBinSplit.other" id="numcosmo-NcmBinSplit.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit">NcmBinSplit</a></td>
+</tr>
+<tr>
+<td class="variable_type">extern mpz_t </td>
+<td class="function_name"><a class="link" href="numcosmo-NcmBinSplit.html#NCM-BINSPLIT-ONE:CAPS" title="NCM_BINSPLIT_ONE">NCM_BINSPLIT_ONE</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="numcosmo-NcmBinSplit.includes" id="numcosmo-NcmBinSplit.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;numcosmo/math/ncm_binsplit.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="numcosmo-NcmBinSplit.description" id="numcosmo-NcmBinSplit.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="numcosmo-NcmBinSplit.functions_details" id="numcosmo-NcmBinSplit.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="NcmBinSplitEval" id="NcmBinSplitEval"></a><h3>NcmBinSplitEval ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*NcmBinSplitEval<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a> *bs</code></em>,
+                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> n1</code></em>,
+                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> n2</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-binsplit-alloc" id="ncm-binsplit-alloc"></a><h3>ncm_binsplit_alloc ()</h3>
+<pre class="programlisting"><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="returnvalue">NcmBinSplit</span></a> *
+ncm_binsplit_alloc (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> userdata</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="ncm-binsplit-alloc.parameters" id="ncm-binsplit-alloc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>userdata</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-binsplit-alloc.returns" id="ncm-binsplit-alloc.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-binsplit-test-next" id="ncm-binsplit-test-next"></a><h3>ncm_binsplit_test_next ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>
+ncm_binsplit_test_next (<em class="parameter"><code><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a> *bs</code></em>,
+                        <em class="parameter"><code><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplitEval" title="NcmBinSplitEval ()"><span class="type">NcmBinSplitEval</span></a> bs_eval</code></em>,
+                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> nt</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="ncm-binsplit-test-next.parameters" id="ncm-binsplit-test-next.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>bs</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bs_eval</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplitEval" title="NcmBinSplitEval ()"><span class="type">NcmBinSplitEval</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>nt</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-binsplit-test-next.returns" id="ncm-binsplit-test-next.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-binsplit-join" id="ncm-binsplit-join"></a><h3>ncm_binsplit_join ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_binsplit_join (<em class="parameter"><code><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a> *bs</code></em>,
+                   <em class="parameter"><code><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a> *bs_l</code></em>,
+                   <em class="parameter"><code><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a> *bs_r</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-binsplit-join.parameters" id="ncm-binsplit-join.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>bs</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bs_l</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bs_r</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-binsplit-eval-join" id="ncm-binsplit-eval-join"></a><h3>ncm_binsplit_eval_join ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_binsplit_eval_join (<em class="parameter"><code><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a> *bs</code></em>,
+                        <em class="parameter"><code><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplitEval" title="NcmBinSplitEval ()"><span class="type">NcmBinSplitEval</span></a> bs_eval</code></em>,
+                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> nt</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="ncm-binsplit-eval-join.parameters" id="ncm-binsplit-eval-join.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>bs</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bs_eval</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplitEval" title="NcmBinSplitEval ()"><span class="type">NcmBinSplitEval</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>nt</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-binsplit-eval-prec" id="ncm-binsplit-eval-prec"></a><h3>ncm_binsplit_eval_prec ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>
+ncm_binsplit_eval_prec (<em class="parameter"><code><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a> *bs</code></em>,
+                        <em class="parameter"><code><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplitEval" title="NcmBinSplitEval ()"><span class="type">NcmBinSplitEval</span></a> bs_eval</code></em>,
+                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> step</code></em>,
+                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#glong"><span class="type">glong</span></a> prec</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="ncm-binsplit-eval-prec.parameters" id="ncm-binsplit-eval-prec.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>bs</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bs_eval</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplitEval" title="NcmBinSplitEval ()"><span class="type">NcmBinSplitEval</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>step</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prec</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-binsplit-eval-prec.returns" id="ncm-binsplit-eval-prec.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-binsplit-get" id="ncm-binsplit-get"></a><h3>ncm_binsplit_get ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_binsplit_get (<em class="parameter"><code><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a> *bs</code></em>,
+                  <em class="parameter"><code><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#mpfr-t" title="mpfr_t"><span class="type">mpfr_t</span></a> res</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="ncm-binsplit-get.parameters" id="ncm-binsplit-get.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>bs</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>res</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-binsplit-get-q" id="ncm-binsplit-get-q"></a><h3>ncm_binsplit_get_q ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_binsplit_get_q (<em class="parameter"><code><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a> *bs</code></em>,
+                    <em class="parameter"><code><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#mpq-t" title="mpq_t"><span class="type">mpq_t</span></a> q</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="ncm-binsplit-get-q.parameters" id="ncm-binsplit-get-q.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>bs</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>q</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-binsplit-get-d" id="ncm-binsplit-get-d"></a><h3>ncm_binsplit_get_d ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_binsplit_get_d (<em class="parameter"><code><a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a> *bs</code></em>,
+                    <em class="parameter"><code><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#mp-rnd-t" title="mp_rnd_t"><span class="type">mp_rnd_t</span></a> rnd</code></em>);</pre>
+<p>FIXME</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="ncm-binsplit-get-d.parameters" id="ncm-binsplit-get-d.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>bs</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-NcmBinSplit.html#NcmBinSplit" title="struct NcmBinSplit"><span class="type">NcmBinSplit</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rnd</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-binsplit-get-d.returns" id="ncm-binsplit-get-d.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-BINSPLIT-DECL:CAPS" id="NCM-BINSPLIT-DECL:CAPS"></a><h3>NCM_BINSPLIT_DECL()</h3>
+<pre class="programlisting">#define NCM_BINSPLIT_DECL(name,v,u,n,data) static inline void name (mpz_t v, mpz_t u, gulong n, gpointer data)
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-BINSPLIT-DENC-NULL:CAPS" id="NCM-BINSPLIT-DENC-NULL:CAPS"></a><h3>NCM_BINSPLIT_DENC_NULL()</h3>
+<pre class="programlisting">#define NCM_BINSPLIT_DENC_NULL(a,b,c,d) 
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="numcosmo-NcmBinSplit.other_details" id="numcosmo-NcmBinSplit.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcmBinSplit" id="NcmBinSplit"></a><h3>struct NcmBinSplit</h3>
+<pre class="programlisting">struct NcmBinSplit {
+};
+</pre>
+<p>FIXME</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-BINSPLIT-ONE:CAPS" id="NCM-BINSPLIT-ONE:CAPS"></a><h3>NCM_BINSPLIT_ONE</h3>
+<pre class="programlisting">extern mpz_t NCM_BINSPLIT_ONE;
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

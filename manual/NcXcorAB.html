@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcXcorAB: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch08s09.html" title="Cross-correlations" />
+<link rel="prev" href="NcXcor.html" title="Cross-correlations" />
+<link rel="next" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcXcorAB.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcXcorAB.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcXcorAB.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch08s09.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcXcor.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcXcorLimberKernel.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcXcorAB" id="NcXcorAB"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcXcorAB.top_of_page" id="NcXcorAB.top_of_page"></a>NcXcorAB</span></h2>
+<p>NcXcorAB — Cross-correlations data storage object.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcXcorAB.functions" id="NcXcorAB.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcXcorAB.html" title="NcXcorAB"><span class="returnvalue">NcXcorAB</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcXcorAB.html#nc-xcor-AB-new" title="nc_xcor_AB_new ()">nc_xcor_AB_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcXcorAB.html" title="NcXcorAB"><span class="returnvalue">NcXcorAB</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcXcorAB.html#nc-xcor-AB-ref" title="nc_xcor_AB_ref ()">nc_xcor_AB_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcXcorAB.html#nc-xcor-AB-free" title="nc_xcor_AB_free ()">nc_xcor_AB_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcXcorAB.html#nc-xcor-AB-clear" title="nc_xcor_AB_clear ()">nc_xcor_AB_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcXcorAB.properties" id="NcXcorAB.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcXcorAB.html#NcXcorAB--a" title="The “a” property">a</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcXcorAB.html#NcXcorAB--b" title="The “b” property">b</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</td>
+<td class="property_name"><a class="link" href="NcXcorAB.html#NcXcorAB--cl-obs" title="The “cl-obs” property">cl-obs</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *</td>
+<td class="property_name"><a class="link" href="NcXcorAB.html#NcXcorAB--cl-th" title="The “cl-th” property">cl-th</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcXcorAB.html#NcXcorAB--ell-lik-max" title="The “ell-lik-max” property">ell-lik-max</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcXcorAB.html#NcXcorAB--ell-lik-min" title="The “ell-lik-min” property">ell-lik-min</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcXcorAB.html#NcXcorAB--ell-th-cut-off" title="The “ell-th-cut-off” property">ell-th-cut-off</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *</td>
+<td class="property_name"><a class="link" href="NcXcorAB.html#NcXcorAB--mixing" title="The “mixing” property">mixing</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcXcorAB.other" id="NcXcorAB.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody><tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcXcorAB.html#H0-c-3" title="H0_c_3">H0_c_3</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcXcorAB.object-hierarchy" id="NcXcorAB.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcXcorAB
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcXcorAB.description" id="NcXcorAB.description"></a><h2>Description</h2>
+<p>This object stores information for observables $A$ and $B$ for use with a <a class="link" href="NcDataXcor.html" title="NcDataXcor"><span class="type">NcDataXcor</span></a> likelihood object.</p>
+</div>
+<div class="refsect1">
+<a name="NcXcorAB.functions_details" id="NcXcorAB.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="nc-xcor-AB-new" id="nc-xcor-AB-new"></a><h3>nc_xcor_AB_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcXcorAB.html" title="NcXcorAB"><span class="returnvalue">NcXcorAB</span></a> *
+nc_xcor_AB_new (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> a</code></em>,
+                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> b</code></em>,
+                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> ell_th_cut_off</code></em>,
+                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> ell_lik_min</code></em>,
+                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> ell_lik_max</code></em>,
+                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *clobs_filename</code></em>,
+                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mixing_filename</code></em>,
+                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> mixing_filelength</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-xcor-AB-new.parameters" id="nc-xcor-AB-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>, the index of observable $A$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>b</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>, the index of observable $B$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ell_th_cut_off</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>, the cut-off for the computation of the theoretical full-sky angular power spectrum</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ell_lik_min</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>, the minimum multipole to be included in the likelihood</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ell_lik_max</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>, the maximum multipole to be included in the likelihood</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>clobs_filename</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>, the name of the file containing the observed pseudo spectrum (should start at zero, even if not used in the likelihod)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mixing_filename</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>, the name of the file containing the mixing matrix</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mixing_filelength</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>, the size of the matrix in <em class="parameter"><code>mixing_filename</code></em>
+(in case it is larger than <em class="parameter"><code>ell_th_cut_off</code></em>
+)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-xcor-AB-new.returns" id="nc-xcor-AB-new.returns"></a><h4>Returns</h4>
+<p>FIXME. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-xcor-AB-ref" id="nc-xcor-AB-ref"></a><h3>nc_xcor_AB_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcXcorAB.html" title="NcXcorAB"><span class="returnvalue">NcXcorAB</span></a> *
+nc_xcor_AB_ref (<em class="parameter"><code><a class="link" href="NcXcorAB.html" title="NcXcorAB"><span class="type">NcXcorAB</span></a> *xcab</code></em>);</pre>
+<div class="refsect3">
+<a name="nc-xcor-AB-ref.parameters" id="nc-xcor-AB-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>xcab</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcXcorAB.html" title="NcXcorAB"><span class="type">NcXcorAB</span></a>
+*</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-xcor-AB-ref.returns" id="nc-xcor-AB-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>xcab</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-xcor-AB-free" id="nc-xcor-AB-free"></a><h3>nc_xcor_AB_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_xcor_AB_free (<em class="parameter"><code><a class="link" href="NcXcorAB.html" title="NcXcorAB"><span class="type">NcXcorAB</span></a> *xcab</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-xcor-AB-free.parameters" id="nc-xcor-AB-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>xcab</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcXcorAB.html" title="NcXcorAB"><span class="type">NcXcorAB</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-xcor-AB-clear" id="nc-xcor-AB-clear"></a><h3>nc_xcor_AB_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_xcor_AB_clear (<em class="parameter"><code><a class="link" href="NcXcorAB.html" title="NcXcorAB"><span class="type">NcXcorAB</span></a> **xcab</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-xcor-AB-clear.parameters" id="nc-xcor-AB-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>xcab</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcXcorAB.html" title="NcXcorAB"><span class="type">NcXcorAB</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcXcorAB.other_details" id="NcXcorAB.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="H0-c-3" id="H0-c-3"></a><h3>H0_c_3</h3>
+<pre class="programlisting">#define H0_c_3 (gsl_pow_3 (1e5 / ncm_c_c ()))
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcXcorAB.property-details" id="NcXcorAB.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcXcorAB--a" id="NcXcorAB--a"></a><h3>The <code class="literal">“a”</code> property</h3>
+<pre class="programlisting">  “a”                        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>a.</p>
+<p>Owner: NcXcorAB</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Allowed values: &lt;= 99</p>
+<p>Default value: 99</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcXcorAB--b" id="NcXcorAB--b"></a><h3>The <code class="literal">“b”</code> property</h3>
+<pre class="programlisting">  “b”                        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>b.</p>
+<p>Owner: NcXcorAB</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Allowed values: &lt;= 99</p>
+<p>Default value: 99</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcXcorAB--cl-obs" id="NcXcorAB--cl-obs"></a><h3>The <code class="literal">“cl-obs”</code> property</h3>
+<pre class="programlisting">  “cl-obs”                   <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
+<p>cl_obs.</p>
+<p>Owner: NcXcorAB</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcXcorAB--cl-th" id="NcXcorAB--cl-th"></a><h3>The <code class="literal">“cl-th”</code> property</h3>
+<pre class="programlisting">  “cl-th”                    <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *</pre>
+<p>cl_th.</p>
+<p>Owner: NcXcorAB</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcXcorAB--ell-lik-max" id="NcXcorAB--ell-lik-max"></a><h3>The <code class="literal">“ell-lik-max”</code> property</h3>
+<pre class="programlisting">  “ell-lik-max”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>ell_lik_max.</p>
+<p>Owner: NcXcorAB</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &lt;= 10000</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcXcorAB--ell-lik-min" id="NcXcorAB--ell-lik-min"></a><h3>The <code class="literal">“ell-lik-min”</code> property</h3>
+<pre class="programlisting">  “ell-lik-min”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>ell_lik_min.</p>
+<p>Owner: NcXcorAB</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &lt;= 10000</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcXcorAB--ell-th-cut-off" id="NcXcorAB--ell-th-cut-off"></a><h3>The <code class="literal">“ell-th-cut-off”</code> property</h3>
+<pre class="programlisting">  “ell-th-cut-off”           <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>ell_th_cut_off.</p>
+<p>Owner: NcXcorAB</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &lt;= 10000</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcXcorAB--mixing" id="NcXcorAB--mixing"></a><h3>The <code class="literal">“mixing”</code> property</h3>
+<pre class="programlisting">  “mixing”                   <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *</pre>
+<p>mixing.</p>
+<p>Owner: NcXcorAB</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

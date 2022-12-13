@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmLHRatio2d: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s13.html" title="Statistical Analysis" />
+<link rel="prev" href="NcmLHRatio1d.html" title="NcmLHRatio1d" />
+<link rel="next" href="NcmABC.html" title="NcmABC" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmLHRatio2d.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmLHRatio2d.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmLHRatio2d.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s13.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcmLHRatio1d.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmABC.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmLHRatio2d" id="NcmLHRatio2d"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmLHRatio2d.top_of_page" id="NcmLHRatio2d.top_of_page"></a>NcmLHRatio2d</span></h2>
+<p>NcmLHRatio2d — Likelihood ratio object for bidimensional parameter analysis.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmLHRatio2d.functions" id="NcmLHRatio2d.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmLHRatio2d.html" title="NcmLHRatio2d"><span class="returnvalue">NcmLHRatio2d</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmLHRatio2d.html#ncm-lh-ratio2d-new" title="ncm_lh_ratio2d_new ()">ncm_lh_ratio2d_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLHRatio2d.html#ncm-lh-ratio2d-free" title="ncm_lh_ratio2d_free ()">ncm_lh_ratio2d_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLHRatio2d.html#ncm-lh-ratio2d-clear" title="ncm_lh_ratio2d_clear ()">ncm_lh_ratio2d_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLHRatio2d.html#ncm-lh-ratio2d-set-pindex" title="ncm_lh_ratio2d_set_pindex ()">ncm_lh_ratio2d_set_pindex</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dRegion"><span class="returnvalue">NcmLHRatio2dRegion</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmLHRatio2d.html#ncm-lh-ratio2d-conf-region" title="ncm_lh_ratio2d_conf_region ()">ncm_lh_ratio2d_conf_region</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dRegion"><span class="returnvalue">NcmLHRatio2dRegion</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmLHRatio2d.html#ncm-lh-ratio2d-fisher-border" title="ncm_lh_ratio2d_fisher_border ()">ncm_lh_ratio2d_fisher_border</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dRegion"><span class="returnvalue">NcmLHRatio2dRegion</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmLHRatio2d.html#ncm-lh-ratio2d-region-dup" title="ncm_lh_ratio2d_region_dup ()">ncm_lh_ratio2d_region_dup</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLHRatio2d.html#ncm-lh-ratio2d-region-free" title="ncm_lh_ratio2d_region_free ()">ncm_lh_ratio2d_region_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLHRatio2d.html#ncm-lh-ratio2d-region-clear" title="ncm_lh_ratio2d_region_clear ()">ncm_lh_ratio2d_region_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLHRatio2d.html#ncm-lh-ratio2d-region-print" title="ncm_lh_ratio2d_region_print ()">ncm_lh_ratio2d_region_print</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmLHRatio2d.properties" id="NcmLHRatio2d.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcmLHRatio2d.html#NcmLHRatio2d--border-prec" title="The “border-prec” property">border-prec</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmLHRatio2d.html#NcmLHRatio2d--fit" title="The “fit” property">fit</a></td>
+<td class="property_flags">Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmLHRatio2d.html#NcmLHRatio2d--pi1" title="The “pi1” property">pi1</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmLHRatio2d.html#NcmLHRatio2d--pi2" title="The “pi2” property">pi2</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="NcmLHRatio2dRegion" id="NcmLHRatio2dRegion"></a><div class="refsect1">
+<a name="NcmLHRatio2d.other" id="NcmLHRatio2d.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dRoot" title="enum NcmLHRatio2dRoot">NcmLHRatio2dRoot</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dPoint" title="struct NcmLHRatio2dPoint">NcmLHRatio2dPoint</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dRegion-struct" title="struct NcmLHRatio2dRegion">NcmLHRatio2dRegion</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmLHRatio2d.object-hierarchy" id="NcmLHRatio2d.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
+    <span class="lineart">╰──</span> NcmLHRatio2dRegion
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcmLHRatio2dRoot
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcmLHRatio2d
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmLHRatio2d.description" id="NcmLHRatio2d.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcmLHRatio2d.functions_details" id="NcmLHRatio2d.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-lh-ratio2d-new" id="ncm-lh-ratio2d-new"></a><h3>ncm_lh_ratio2d_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmLHRatio2d.html" title="NcmLHRatio2d"><span class="returnvalue">NcmLHRatio2d</span></a> *
+ncm_lh_ratio2d_new (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
+                    <em class="parameter"><code>const <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a> *pi1</code></em>,
+                    <em class="parameter"><code>const <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a> *pi2</code></em>,
+                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> border_prec</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-lh-ratio2d-new.parameters" id="ncm-lh-ratio2d-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fit</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pi1</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pi2</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>border_prec</p></td>
+<td class="parameter_description"><p>precision on the border finder.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-lh-ratio2d-new.returns" id="ncm-lh-ratio2d-new.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-lh-ratio2d-free" id="ncm-lh-ratio2d-free"></a><h3>ncm_lh_ratio2d_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_lh_ratio2d_free (<em class="parameter"><code><a class="link" href="NcmLHRatio2d.html" title="NcmLHRatio2d"><span class="type">NcmLHRatio2d</span></a> *lhr2d</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-lh-ratio2d-free.parameters" id="ncm-lh-ratio2d-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>lhr2d</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-lh-ratio2d-clear" id="ncm-lh-ratio2d-clear"></a><h3>ncm_lh_ratio2d_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_lh_ratio2d_clear (<em class="parameter"><code><a class="link" href="NcmLHRatio2d.html" title="NcmLHRatio2d"><span class="type">NcmLHRatio2d</span></a> **lhr2d</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-lh-ratio2d-clear.parameters" id="ncm-lh-ratio2d-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>lhr2d</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-lh-ratio2d-set-pindex" id="ncm-lh-ratio2d-set-pindex"></a><h3>ncm_lh_ratio2d_set_pindex ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_lh_ratio2d_set_pindex (<em class="parameter"><code><a class="link" href="NcmLHRatio2d.html" title="NcmLHRatio2d"><span class="type">NcmLHRatio2d</span></a> *lhr2d</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a> *pi1</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a> *pi2</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-lh-ratio2d-set-pindex.parameters" id="ncm-lh-ratio2d-set-pindex.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lhr2d</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLHRatio2d.html" title="NcmLHRatio2d"><span class="type">NcmLHRatio2d</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pi1</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pi2</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-lh-ratio2d-conf-region" id="ncm-lh-ratio2d-conf-region"></a><h3>ncm_lh_ratio2d_conf_region ()</h3>
+<pre class="programlisting"><a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dRegion"><span class="returnvalue">NcmLHRatio2dRegion</span></a> *
+ncm_lh_ratio2d_conf_region (<em class="parameter"><code><a class="link" href="NcmLHRatio2d.html" title="NcmLHRatio2d"><span class="type">NcmLHRatio2d</span></a> *lhr2d</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> clevel</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> expected_np</code></em>,
+                            <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a> mtype</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-lh-ratio2d-conf-region.parameters" id="ncm-lh-ratio2d-conf-region.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lhr2d</p></td>
+<td class="parameter_description"><p>a <em class="parameter"><code>NcmFit</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>clevel</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>expected_np</p></td>
+<td class="parameter_description"><p>Expected number of points, if lesser than 1 it uses the default value of 100.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mtype</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-lh-ratio2d-conf-region.returns" id="ncm-lh-ratio2d-conf-region.returns"></a><h4>Returns</h4>
+<p>FIXME. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-lh-ratio2d-fisher-border" id="ncm-lh-ratio2d-fisher-border"></a><h3>ncm_lh_ratio2d_fisher_border ()</h3>
+<pre class="programlisting"><a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dRegion"><span class="returnvalue">NcmLHRatio2dRegion</span></a> *
+ncm_lh_ratio2d_fisher_border (<em class="parameter"><code><a class="link" href="NcmLHRatio2d.html" title="NcmLHRatio2d"><span class="type">NcmLHRatio2d</span></a> *lhr2d</code></em>,
+                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> clevel</code></em>,
+                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> expected_np</code></em>,
+                              <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a> mtype</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-lh-ratio2d-fisher-border.parameters" id="ncm-lh-ratio2d-fisher-border.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lhr2d</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>clevel</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>expected_np</p></td>
+<td class="parameter_description"><p>Expected number of points, if lesser than 1 it uses the default value of 600.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mtype</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-lh-ratio2d-fisher-border.returns" id="ncm-lh-ratio2d-fisher-border.returns"></a><h4>Returns</h4>
+<p>FIXME. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-lh-ratio2d-region-dup" id="ncm-lh-ratio2d-region-dup"></a><h3>ncm_lh_ratio2d_region_dup ()</h3>
+<pre class="programlisting"><a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dRegion"><span class="returnvalue">NcmLHRatio2dRegion</span></a> *
+ncm_lh_ratio2d_region_dup (<em class="parameter"><code><a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dRegion"><span class="type">NcmLHRatio2dRegion</span></a> *rg</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-lh-ratio2d-region-dup.parameters" id="ncm-lh-ratio2d-region-dup.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>rg</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dRegion"><span class="type">NcmLHRatio2dRegion</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-lh-ratio2d-region-dup.returns" id="ncm-lh-ratio2d-region-dup.returns"></a><h4>Returns</h4>
+<p>FIXME. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-lh-ratio2d-region-free" id="ncm-lh-ratio2d-region-free"></a><h3>ncm_lh_ratio2d_region_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_lh_ratio2d_region_free (<em class="parameter"><code><a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dRegion"><span class="type">NcmLHRatio2dRegion</span></a> *rg</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-lh-ratio2d-region-free.parameters" id="ncm-lh-ratio2d-region-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>rg</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dRegion"><span class="type">NcmLHRatio2dRegion</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-lh-ratio2d-region-clear" id="ncm-lh-ratio2d-region-clear"></a><h3>ncm_lh_ratio2d_region_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_lh_ratio2d_region_clear (<em class="parameter"><code><a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dRegion"><span class="type">NcmLHRatio2dRegion</span></a> **rg</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-lh-ratio2d-region-clear.parameters" id="ncm-lh-ratio2d-region-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>rg</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dRegion"><span class="type">NcmLHRatio2dRegion</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-lh-ratio2d-region-print" id="ncm-lh-ratio2d-region-print"></a><h3>ncm_lh_ratio2d_region_print ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_lh_ratio2d_region_print (<em class="parameter"><code><a class="link" href="NcmLHRatio2d.html#NcmLHRatio2dRegion"><span class="type">NcmLHRatio2dRegion</span></a> *rg</code></em>,
+                             <em class="parameter"><code><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#FILE:CAPS" title="FILE"><span class="type">FILE</span></a> *out</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-lh-ratio2d-region-print.parameters" id="ncm-lh-ratio2d-region-print.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>rg</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmLHRatio2d.other_details" id="NcmLHRatio2d.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcmLHRatio2dRoot" id="NcmLHRatio2dRoot"></a><h3>enum NcmLHRatio2dRoot</h3>
+<div class="refsect3">
+<a name="NcmLHRatio2dRoot.members" id="NcmLHRatio2dRoot.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-LH-RATIO2D-ROOT-BRACKET:CAPS" id="NCM-LH-RATIO2D-ROOT-BRACKET:CAPS"></a>NCM_LH_RATIO2D_ROOT_BRACKET</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-LH-RATIO2D-ROOT-NUMDIFF:CAPS" id="NCM-LH-RATIO2D-ROOT-NUMDIFF:CAPS"></a>NCM_LH_RATIO2D_ROOT_NUMDIFF</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmLHRatio2dPoint" id="NcmLHRatio2dPoint"></a><h3>struct NcmLHRatio2dPoint</h3>
+<pre class="programlisting">struct NcmLHRatio2dPoint {
+};
+</pre>
+<p>FIXME</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmLHRatio2dRegion-struct" id="NcmLHRatio2dRegion-struct"></a><h3>struct NcmLHRatio2dRegion</h3>
+<pre class="programlisting">struct NcmLHRatio2dRegion {
+  guint np;
+  NcmVector *p1;
+  NcmVector *p2;
+  gdouble clevel;
+};
+</pre>
+<p>Object describing a confidence region.</p>
+<div class="refsect3">
+<a name="NcmLHRatio2dRegion.members" id="NcmLHRatio2dRegion.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name" />
+<col class="struct_members_description" />
+<col width="200px" class="struct_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> <em class="structfield"><code><a name="NcmLHRatio2dRegion-struct.np" id="NcmLHRatio2dRegion-struct.np"></a>np</code></em>;</p></td>
+<td class="struct_member_description"><p>Number of points.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *<em class="structfield"><code><a name="NcmLHRatio2dRegion-struct.p1" id="NcmLHRatio2dRegion-struct.p1"></a>p1</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> containing points of parameter one.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *<em class="structfield"><code><a name="NcmLHRatio2dRegion-struct.p2" id="NcmLHRatio2dRegion-struct.p2"></a>p2</code></em>;</p></td>
+<td class="struct_member_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> containing points of parameter two.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> <em class="structfield"><code><a name="NcmLHRatio2dRegion-struct.clevel" id="NcmLHRatio2dRegion-struct.clevel"></a>clevel</code></em>;</p></td>
+<td class="struct_member_description"><p>the confidence level represented by the border.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmLHRatio2d.property-details" id="NcmLHRatio2d.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmLHRatio2d--border-prec" id="NcmLHRatio2d--border-prec"></a><h3>The <code class="literal">“border-prec”</code> property</h3>
+<pre class="programlisting">  “border-prec”              <span class="type">double</span></pre>
+<p>Border precision.</p>
+<p>Owner: NcmLHRatio2d</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [1e-16,1000]</p>
+<p>Default value: 1e-05</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmLHRatio2d--fit" id="NcmLHRatio2d--fit"></a><h3>The <code class="literal">“fit”</code> property</h3>
+<pre class="programlisting">  “fit”                      <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *</pre>
+<p>NcmFit object.</p>
+<p>Owner: NcmLHRatio2d</p>
+<p>Flags: Write / Construct Only</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmLHRatio2d--pi1" id="NcmLHRatio2d--pi1"></a><h3>The <code class="literal">“pi1”</code> property</h3>
+<pre class="programlisting">  “pi1”                      <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a> *</pre>
+<p>First param index.</p>
+<p>Owner: NcmLHRatio2d</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmLHRatio2d--pi2" id="NcmLHRatio2d--pi2"></a><h3>The <code class="literal">“pi2”</code> property</h3>
+<pre class="programlisting">  “pi2”                      <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a> *</pre>
+<p>Second param index.</p>
+<p>Owner: NcmLHRatio2d</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

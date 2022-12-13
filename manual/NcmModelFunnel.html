@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmModelFunnel: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s16.html" title="MCMC Testing" />
+<link rel="prev" href="NcmDataRosenbrock.html" title="NcmDataRosenbrock" />
+<link rel="next" href="NcmDataFunnel.html" title="NcmDataFunnel" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmModelFunnel.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmModelFunnel.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmModelFunnel.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s16.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcmDataRosenbrock.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmDataFunnel.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmModelFunnel" id="NcmModelFunnel"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmModelFunnel.top_of_page" id="NcmModelFunnel.top_of_page"></a>NcmModelFunnel</span></h2>
+<p>NcmModelFunnel — Multivariate Normal Distribution mean model.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmModelFunnel.functions" id="NcmModelFunnel.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmModelFunnel.html" title="NcmModelFunnel"><span class="returnvalue">NcmModelFunnel</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmModelFunnel.html#ncm-model-funnel-new" title="ncm_model_funnel_new ()">ncm_model_funnel_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmModelFunnel.html" title="NcmModelFunnel"><span class="returnvalue">NcmModelFunnel</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmModelFunnel.html#ncm-model-funnel-ref" title="ncm_model_funnel_ref ()">ncm_model_funnel_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmModelFunnel.html#ncm-model-funnel-free" title="ncm_model_funnel_free ()">ncm_model_funnel_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmModelFunnel.html#ncm-model-funnel-clear" title="ncm_model_funnel_clear ()">ncm_model_funnel_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmModelFunnel.properties" id="NcmModelFunnel.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcmModelFunnel.html#NcmModelFunnel--nu" title="The “nu” property">nu</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="NcmModelFunnel.html#NcmModelFunnel--nu-fit" title="The “nu-fit” property">nu-fit</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmModelFunnel.html#NcmModelFunnel--x" title="The “x” property">x</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmModelFunnel.html#NcmModelFunnel--x-fit" title="The “x-fit” property">x-fit</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcmModelFunnel.html#NcmModelFunnel--x-length" title="The “x-length” property">x-length</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmModelFunnel.other" id="NcmModelFunnel.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcmModelFunnel.html#NcmModelFunnelSParams" title="enum NcmModelFunnelSParams">NcmModelFunnelSParams</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcmModelFunnel.html#NcmModelFunnelVParams" title="enum NcmModelFunnelVParams">NcmModelFunnelVParams</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmModelFunnel.object-hierarchy" id="NcmModelFunnel.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">├──</span> NcmModelFunnelSParams
+    <span class="lineart">╰──</span> NcmModelFunnelVParams
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcmModel.html" title="NcmModel">NcmModel</a>
+        <span class="lineart">╰──</span> NcmModelFunnel
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmModelFunnel.description" id="NcmModelFunnel.description"></a><h2>Description</h2>
+<p>Multivariate Normal distribution model of the mean.</p>
+</div>
+<div class="refsect1">
+<a name="NcmModelFunnel.functions_details" id="NcmModelFunnel.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-model-funnel-new" id="ncm-model-funnel-new"></a><h3>ncm_model_funnel_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmModelFunnel.html" title="NcmModelFunnel"><span class="returnvalue">NcmModelFunnel</span></a> *
+ncm_model_funnel_new (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
+<p>Creates a new Funnel model.</p>
+<div class="refsect3">
+<a name="ncm-model-funnel-new.parameters" id="ncm-model-funnel-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>number of $x$ variables</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-model-funnel-new.returns" id="ncm-model-funnel-new.returns"></a><h4>Returns</h4>
+<p>the newly created <a class="link" href="NcmModelFunnel.html" title="NcmModelFunnel"><span class="type">NcmModelFunnel</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-model-funnel-ref" id="ncm-model-funnel-ref"></a><h3>ncm_model_funnel_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmModelFunnel.html" title="NcmModelFunnel"><span class="returnvalue">NcmModelFunnel</span></a> *
+ncm_model_funnel_ref (<em class="parameter"><code><a class="link" href="NcmModelFunnel.html" title="NcmModelFunnel"><span class="type">NcmModelFunnel</span></a> *mfu</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>mfu</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-model-funnel-ref.parameters" id="ncm-model-funnel-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mfu</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModelFunnel.html" title="NcmModelFunnel"><span class="type">NcmModelFunnel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-model-funnel-ref.returns" id="ncm-model-funnel-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>mfu</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-model-funnel-free" id="ncm-model-funnel-free"></a><h3>ncm_model_funnel_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_model_funnel_free (<em class="parameter"><code><a class="link" href="NcmModelFunnel.html" title="NcmModelFunnel"><span class="type">NcmModelFunnel</span></a> *mfu</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>mfu</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-model-funnel-free.parameters" id="ncm-model-funnel-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mfu</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModelFunnel.html" title="NcmModelFunnel"><span class="type">NcmModelFunnel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-model-funnel-clear" id="ncm-model-funnel-clear"></a><h3>ncm_model_funnel_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_model_funnel_clear (<em class="parameter"><code><a class="link" href="NcmModelFunnel.html" title="NcmModelFunnel"><span class="type">NcmModelFunnel</span></a> **mfu</code></em>);</pre>
+<p>If <em class="parameter"><code>mfu</code></em>
+ is different from NULL, decreases the reference count of
+<em class="parameter"><code>mfu</code></em>
+ by one and sets <em class="parameter"><code>mfu</code></em>
+ to NULL.</p>
+<div class="refsect3">
+<a name="ncm-model-funnel-clear.parameters" id="ncm-model-funnel-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mfu</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModelFunnel.html" title="NcmModelFunnel"><span class="type">NcmModelFunnel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmModelFunnel.other_details" id="NcmModelFunnel.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcmModelFunnelSParams" id="NcmModelFunnelSParams"></a><h3>enum NcmModelFunnelSParams</h3>
+<p>Funnel model parameters.</p>
+<div class="refsect3">
+<a name="NcmModelFunnelSParams.members" id="NcmModelFunnelSParams.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="enum_member_name"><p><a name="NCM-MODEL-FUNNEL-NU:CAPS" id="NCM-MODEL-FUNNEL-NU:CAPS"></a>NCM_MODEL_FUNNEL_NU</p></td>
+<td class="enum_member_description">
+<p>$\nu$</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmModelFunnelVParams" id="NcmModelFunnelVParams"></a><h3>enum NcmModelFunnelVParams</h3>
+<p>Funnel model parameters.</p>
+<div class="refsect3">
+<a name="NcmModelFunnelVParams.members" id="NcmModelFunnelVParams.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="enum_member_name"><p><a name="NCM-MODEL-FUNNEL-X:CAPS" id="NCM-MODEL-FUNNEL-X:CAPS"></a>NCM_MODEL_FUNNEL_X</p></td>
+<td class="enum_member_description">
+<p>$x$</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmModelFunnel.property-details" id="NcmModelFunnel.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmModelFunnel--nu" id="NcmModelFunnel--nu"></a><h3>The <code class="literal">“nu”</code> property</h3>
+<pre class="programlisting">  “nu”                       <span class="type">double</span></pre>
+<p>\nu.</p>
+<p>Owner: NcmModelFunnel</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmModelFunnel--nu-fit" id="NcmModelFunnel--nu-fit"></a><h3>The <code class="literal">“nu-fit”</code> property</h3>
+<pre class="programlisting">  “nu-fit”                   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>\nu:fit.</p>
+<p>Owner: NcmModelFunnel</p>
+<p>Flags: Read / Write</p>
+<p>Default value: TRUE</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmModelFunnel--x" id="NcmModelFunnel--x"></a><h3>The <code class="literal">“x”</code> property</h3>
+<pre class="programlisting">  “x”                        <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
+<p>x.</p>
+<p>Owner: NcmModelFunnel</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmModelFunnel--x-fit" id="NcmModelFunnel--x-fit"></a><h3>The <code class="literal">“x-fit”</code> property</h3>
+<pre class="programlisting">  “x-fit”                    <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *</pre>
+<p>x:fit.</p>
+<p>Owner: NcmModelFunnel</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: GVariant&lt;a*&gt;</p>
+<p>Default value: NULL</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmModelFunnel--x-length" id="NcmModelFunnel--x-length"></a><h3>The <code class="literal">“x-length”</code> property</h3>
+<pre class="programlisting">  “x-length”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>x:length.</p>
+<p>Owner: NcmModelFunnel</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: 9</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

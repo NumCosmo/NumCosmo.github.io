@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmStatsDistKDE: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s14.html" title="Multivariate density estimation" />
+<link rel="prev" href="NcmStatsDist.html" title="NcmStatsDist" />
+<link rel="next" href="NcmStatsDistVKDE.html" title="NcmStatsDistVKDE" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmStatsDistKDE.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmStatsDistKDE.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmStatsDistKDE.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s14.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcmStatsDist.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmStatsDistVKDE.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmStatsDistKDE" id="NcmStatsDistKDE"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmStatsDistKDE.top_of_page" id="NcmStatsDistKDE.top_of_page"></a>NcmStatsDistKDE</span></h2>
+<p>NcmStatsDistKDE — Abstract class for implementing N-dimensional probability distributions with a fixed density estimator kernel.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmStatsDistKDE.functions" id="NcmStatsDistKDE.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="returnvalue">NcmStatsDistKDE</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDistKDE.html#ncm-stats-dist-kde-new" title="ncm_stats_dist_kde_new ()">ncm_stats_dist_kde_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="returnvalue">NcmStatsDistKDE</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDistKDE.html#ncm-stats-dist-kde-ref" title="ncm_stats_dist_kde_ref ()">ncm_stats_dist_kde_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDistKDE.html#ncm-stats-dist-kde-free" title="ncm_stats_dist_kde_free ()">ncm_stats_dist_kde_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDistKDE.html#ncm-stats-dist-kde-clear" title="ncm_stats_dist_kde_clear ()">ncm_stats_dist_kde_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDistKDE.html#ncm-stats-dist-kde-set-nearPD-maxiter" title="ncm_stats_dist_kde_set_nearPD_maxiter ()">ncm_stats_dist_kde_set_nearPD_maxiter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDistKDE.html#ncm-stats-dist-kde-get-nearPD-maxiter" title="ncm_stats_dist_kde_get_nearPD_maxiter ()">ncm_stats_dist_kde_get_nearPD_maxiter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDistKDE.html#ncm-stats-dist-kde-set-cov-type" title="ncm_stats_dist_kde_set_cov_type ()">ncm_stats_dist_kde_set_cov_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmStatsDistKDE.html#NcmStatsDistKDECovType" title="enum NcmStatsDistKDECovType"><span class="returnvalue">NcmStatsDistKDECovType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDistKDE.html#ncm-stats-dist-kde-get-cov-type" title="ncm_stats_dist_kde_get_cov_type ()">ncm_stats_dist_kde_get_cov_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDistKDE.html#ncm-stats-dist-kde-set-cov-fixed" title="ncm_stats_dist_kde_set_cov_fixed ()">ncm_stats_dist_kde_set_cov_fixed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="returnvalue">NcmMatrix</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDistKDE.html#ncm-stats-dist-kde-peek-cov-fixed" title="ncm_stats_dist_kde_peek_cov_fixed ()">ncm_stats_dist_kde_peek_cov_fixed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmStatsDistKDE.properties" id="NcmStatsDistKDE.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmStatsDistKDE.html#NcmStatsDistKDE--cov-fixed" title="The “cov-fixed” property">cov-fixed</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="NcmStatsDistKDE.html#NcmStatsDistKDECovType" title="enum NcmStatsDistKDECovType"><span class="type">NcmStatsDistKDECovType</span></a></td>
+<td class="property_name"><a class="link" href="NcmStatsDistKDE.html#NcmStatsDistKDE--cov-type" title="The “cov-type” property">cov-type</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="NcmStatsDistKDE.html#NcmStatsDistKDE--nearPD-maxiter" title="The “nearPD-maxiter” property">nearPD-maxiter</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmStatsDistKDE.other" id="NcmStatsDistKDE.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcmStatsDistKDE.html#NcmStatsDistKDECovType" title="enum NcmStatsDistKDECovType">NcmStatsDistKDECovType</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmStatsDistKDE.object-hierarchy" id="NcmStatsDistKDE.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcmStatsDistKDECovType
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcmStatsDist.html" title="NcmStatsDist">NcmStatsDist</a>
+        <span class="lineart">╰──</span> NcmStatsDistKDE
+            <span class="lineart">╰──</span> <a class="link" href="NcmStatsDistVKDE.html" title="NcmStatsDistVKDE">NcmStatsDistVKDE</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmStatsDistKDE.description" id="NcmStatsDistKDE.description"></a><h2>Description</h2>
+<p>Abstract object to reconstruct an arbitrary N-dimensional probability distribution.
+This object provides the complementary tools to perform a radial basis interpolation
+in a multidimensional function using the <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class.</p>
+<p>This object sets the kernel $\phi$ to be used in the radial basis interpolation. This object also implements some
+calculations needed in the <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class, such as the covariance matrix of the whole sample and its Cholesky decomposition,
+the preparation of the interpolation matrix $IM$, the kernel normalization factor, and given a sample vector $\vec{x}$, the distribution
+evaluated in these points. Some of these calculations are explained below.</p>
+<p>The <a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a> class uses one covariance matrix for all the sample points. So, given $n$ points, there is only
+one covariance matrix $\Sigma$ that is used for all the $i$-th kernels $\phi(|x-x_i|, \Sigma)$. After the covariance
+matrix is computed, the algorithm computes the Cholesky decomposition, that is
+\begin{align}
+\Sigma &amp;= AA^T
+,\end{align}
+where $A$ is a triangular positive defined matrix and $A^T$ is its transpose. The $A$ matrix is used in the least square squares
+calculation method that is called in the <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class.</p>
+<p>The object also prepares the interpolation matrix to be implemented in the least-squares problem, that is, given the relation</p>
+<p>$\left[\begin{array}{cccc}
+\phi\left(\left\|\mathbf{x}_{1}-\mathbf{x}_{1}\right\|\right) &amp; \phi\left(\left\|\mathbf{x}_{2}-\mathbf{x}_{1}\right\|\right) &amp; \ldots &amp; \phi\left(\left\|\mathbf{x}_{n}-\mathbf{x}_{1}\right\|\right) \newline
+\phi\left(\left\|\mathbf{x}_{1}-\mathbf{x}_{2}\right\|\right) &amp; \phi\left(\left\|\mathbf{x}_{2}-\mathbf{x}_{2}\right\|\right) &amp; \ldots &amp; \phi\left(\left\|\mathbf{x}_{n}-\mathbf{x}_{2}\right\|\right) \newline
+\vdots &amp; \vdots &amp; &amp; \vdots \newline
+\phi\left(\left\|\mathbf{x}_{1}-\mathbf{x}_{n}\right\|\right) &amp; \phi\left(\left\|\mathbf{x}_{2}-\mathbf{x}_{n}\right\|\right) &amp; \ldots &amp; \phi\left(\left\|\mathbf{x}_{n}-\mathbf{x}_{n}\right\|\right)
+\end{array}\right]\left[\begin{array}{c}
+\lambda_{1} \newline
+\lambda_{2} \newline
+\vdots \newline
+\lambda_{n}
+\end{array}\right]=\left[\begin{array}{c}
+g_{1} \newline
+g_{2} \newline
+\vdots \newline
+g_{n}
+,\end{array}\right]$</p>
+<p>which is explained in the <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class, this object prepares the first matrix for all the $n$ points in the sample, using the covariance matrix and the defined kernel.
+The <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class implements the solution for this relation and then one can compute the distribution for a given
+vector $\vec{x}$ using a method of the <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class but that is implemented in this object.</p>
+<p>The user must provide input the values: <em class="parameter"><code>sdk</code></em>
+, <em class="parameter"><code>CV_type</code></em>
+ - <a class="link" href="NcmStatsDistKDE.html#ncm-stats-dist-kde-new" title="ncm_stats_dist_kde_new ()"><code class="function">ncm_stats_dist_kde_new()</code></a>, <em class="parameter"><code>y</code></em>
+ - <a class="link" href="NcmStatsDist.html#ncm-stats-dist-add-obs" title="ncm_stats_dist_add_obs ()"><code class="function">ncm_stats_dist_add_obs()</code></a>, <em class="parameter"><code>split_frac</code></em>
+ - <a class="link" href="NcmStatsDist.html#ncm-stats-dist-set-split-frac" title="ncm_stats_dist_set_split_frac ()"><code class="function">ncm_stats_dist_set_split_frac()</code></a>, 
+<em class="parameter"><code>over_smooth</code></em>
+ - <a class="link" href="NcmStatsDist.html#ncm-stats-dist-set-over-smooth" title="ncm_stats_dist_set_over_smooth ()"><code class="function">ncm_stats_dist_set_over_smooth()</code></a>, $v(x)$ - <a class="link" href="NcmStatsDist.html#ncm-stats-dist-prepare-interp" title="ncm_stats_dist_prepare_interp ()"><code class="function">ncm_stats_dist_prepare_interp()</code></a>.
+To see an example of how to use this object and the main functions that are called within each function,
+check the fluxogram at the end of this documentation,
+where the order of the functions that should be called by the user and some of the functions that the algorithm calls. </p>
+<p><span class="inlinemediaobject"><img src="kde.png" alt="kde_sketch" /></span></p>
+</div>
+<div class="refsect1">
+<a name="NcmStatsDistKDE.functions_details" id="NcmStatsDistKDE.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-stats-dist-kde-new" id="ncm-stats-dist-kde-new"></a><h3>ncm_stats_dist_kde_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="returnvalue">NcmStatsDistKDE</span></a> *
+ncm_stats_dist_kde_new (<em class="parameter"><code><a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> *sdk</code></em>,
+                        <em class="parameter"><code><a class="link" href="NcmStatsDist.html#NcmStatsDistCV" title="enum NcmStatsDistCV"><span class="type">NcmStatsDistCV</span></a> CV_type</code></em>);</pre>
+<p>Creates a new <a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a> object using <em class="parameter"><code>sdk</code></em>
+ as
+kernel and <em class="parameter"><code>CV_type</code></em>
+ as cross-validation method.</p>
+<div class="refsect3">
+<a name="ncm-stats-dist-kde-new.parameters" id="ncm-stats-dist-kde-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sdk</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>CV_type</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDist.html#NcmStatsDistCV" title="enum NcmStatsDistCV"><span class="type">NcmStatsDistCV</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-stats-dist-kde-new.returns" id="ncm-stats-dist-kde-new.returns"></a><h4>Returns</h4>
+<p>the newly created <a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a> object. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-stats-dist-kde-ref" id="ncm-stats-dist-kde-ref"></a><h3>ncm_stats_dist_kde_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="returnvalue">NcmStatsDistKDE</span></a> *
+ncm_stats_dist_kde_ref (<em class="parameter"><code><a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a> *sdkde</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>sdkde</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-stats-dist-kde-ref.parameters" id="ncm-stats-dist-kde-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>sdkde</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-stats-dist-kde-ref.returns" id="ncm-stats-dist-kde-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>sdkde</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-stats-dist-kde-free" id="ncm-stats-dist-kde-free"></a><h3>ncm_stats_dist_kde_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_stats_dist_kde_free (<em class="parameter"><code><a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a> *sdkde</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>sdkde</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-stats-dist-kde-free.parameters" id="ncm-stats-dist-kde-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>sdkde</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-stats-dist-kde-clear" id="ncm-stats-dist-kde-clear"></a><h3>ncm_stats_dist_kde_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_stats_dist_kde_clear (<em class="parameter"><code><a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a> **sdkde</code></em>);</pre>
+<p>Decreases the reference count of *<em class="parameter"><code>sdkde</code></em>
+ and sets the pointer *<em class="parameter"><code>sdkde</code></em>
+ to NULL.</p>
+<div class="refsect3">
+<a name="ncm-stats-dist-kde-clear.parameters" id="ncm-stats-dist-kde-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>sdkde</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-stats-dist-kde-set-nearPD-maxiter" id="ncm-stats-dist-kde-set-nearPD-maxiter"></a><h3>ncm_stats_dist_kde_set_nearPD_maxiter ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_stats_dist_kde_set_nearPD_maxiter (<em class="parameter"><code><a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a> *sdkde</code></em>,
+                                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> maxiter</code></em>);</pre>
+<p>Sets the maximum number of iterations when finding the
+nearest positive definite covariance matrix to <em class="parameter"><code>maxiter</code></em>
+. This function is implemented
+as a property and is called in the _cholesky_decomp and in the <em class="parameter"><code>ncm_stats_dist_kde_prepare_kernel</code></em>
+ function.</p>
+<div class="refsect3">
+<a name="ncm-stats-dist-kde-set-nearPD-maxiter.parameters" id="ncm-stats-dist-kde-set-nearPD-maxiter.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sdkde</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>maxiter</p></td>
+<td class="parameter_description"><p>maximum number of iterations</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-stats-dist-kde-get-nearPD-maxiter" id="ncm-stats-dist-kde-get-nearPD-maxiter"></a><h3>ncm_stats_dist_kde_get_nearPD_maxiter ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_stats_dist_kde_get_nearPD_maxiter (<em class="parameter"><code><a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a> *sdkde</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-stats-dist-kde-get-nearPD-maxiter.parameters" id="ncm-stats-dist-kde-get-nearPD-maxiter.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>sdkde</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-stats-dist-kde-get-nearPD-maxiter.returns" id="ncm-stats-dist-kde-get-nearPD-maxiter.returns"></a><h4>Returns</h4>
+<p>an int nearPD_maxiter, the maximum number of iterations when finding the nearest positive definite covariance matrix.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-stats-dist-kde-set-cov-type" id="ncm-stats-dist-kde-set-cov-type"></a><h3>ncm_stats_dist_kde_set_cov_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_stats_dist_kde_set_cov_type (<em class="parameter"><code><a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a> *sdkde</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmStatsDistKDE.html#NcmStatsDistKDECovType" title="enum NcmStatsDistKDECovType"><span class="type">NcmStatsDistKDECovType</span></a> cov_type</code></em>);</pre>
+<p>Sets the covariance type to use in kernel interpolation.</p>
+<div class="refsect3">
+<a name="ncm-stats-dist-kde-set-cov-type.parameters" id="ncm-stats-dist-kde-set-cov-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sdkde</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cov_type</p></td>
+<td class="parameter_description"><p>covariance type</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-stats-dist-kde-get-cov-type" id="ncm-stats-dist-kde-get-cov-type"></a><h3>ncm_stats_dist_kde_get_cov_type ()</h3>
+<pre class="programlisting"><a class="link" href="NcmStatsDistKDE.html#NcmStatsDistKDECovType" title="enum NcmStatsDistKDECovType"><span class="returnvalue">NcmStatsDistKDECovType</span></a>
+ncm_stats_dist_kde_get_cov_type (<em class="parameter"><code><a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a> *sdkde</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-stats-dist-kde-get-cov-type.parameters" id="ncm-stats-dist-kde-get-cov-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>sdkde</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-stats-dist-kde-get-cov-type.returns" id="ncm-stats-dist-kde-get-cov-type.returns"></a><h4>Returns</h4>
+<p> the covariance type <a class="link" href="NcmStatsDistKDE.html#NcmStatsDistKDECovType" title="enum NcmStatsDistKDECovType"><span class="type">NcmStatsDistKDECovType</span></a>.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-stats-dist-kde-set-cov-fixed" id="ncm-stats-dist-kde-set-cov-fixed"></a><h3>ncm_stats_dist_kde_set_cov_fixed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_stats_dist_kde_set_cov_fixed (<em class="parameter"><code><a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a> *sdkde</code></em>,
+                                  <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cov_fixed</code></em>);</pre>
+<p>Sets the covariance matrix to be used when <a class="link" href="NcmStatsDistKDE.html#NcmStatsDistKDECovType" title="enum NcmStatsDistKDECovType"><span class="type">NcmStatsDistKDECovType</span></a> is
+set to <a class="link" href="NcmStatsDistKDE.html#NCM-STATS-DIST-KDE-COV-TYPE-FIXED:CAPS"><span class="type">NCM_STATS_DIST_KDE_COV_TYPE_FIXED</span></a>. A copy of the matrix
+<em class="parameter"><code>cov_fixed</code></em>
+ is made and saved into the object.</p>
+<div class="refsect3">
+<a name="ncm-stats-dist-kde-set-cov-fixed.parameters" id="ncm-stats-dist-kde-set-cov-fixed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sdkde</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cov_fixed</p></td>
+<td class="parameter_description"><p>the fixed covariance matrix <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-stats-dist-kde-peek-cov-fixed" id="ncm-stats-dist-kde-peek-cov-fixed"></a><h3>ncm_stats_dist_kde_peek_cov_fixed ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="returnvalue">NcmMatrix</span></a> *
+ncm_stats_dist_kde_peek_cov_fixed (<em class="parameter"><code><a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a> *sdkde</code></em>);</pre>
+<p>Gets the currently used fixed covariance matrix.</p>
+<div class="refsect3">
+<a name="ncm-stats-dist-kde-peek-cov-fixed.parameters" id="ncm-stats-dist-kde-peek-cov-fixed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>sdkde</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-stats-dist-kde-peek-cov-fixed.returns" id="ncm-stats-dist-kde-peek-cov-fixed.returns"></a><h4>Returns</h4>
+<p>the fixed covariance matrix. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmStatsDistKDE.other_details" id="NcmStatsDistKDE.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcmStatsDistKDECovType" id="NcmStatsDistKDECovType"></a><h3>enum NcmStatsDistKDECovType</h3>
+<p>Selects the covariance type to use in the kernel interpolation.</p>
+<div class="refsect3">
+<a name="NcmStatsDistKDECovType.members" id="NcmStatsDistKDECovType.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-STATS-DIST-KDE-COV-TYPE-SAMPLE:CAPS" id="NCM-STATS-DIST-KDE-COV-TYPE-SAMPLE:CAPS"></a>NCM_STATS_DIST_KDE_COV_TYPE_SAMPLE</p></td>
+<td class="enum_member_description">
+<p>Use sample covariance.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-STATS-DIST-KDE-COV-TYPE-FIXED:CAPS" id="NCM-STATS-DIST-KDE-COV-TYPE-FIXED:CAPS"></a>NCM_STATS_DIST_KDE_COV_TYPE_FIXED</p></td>
+<td class="enum_member_description">
+<p>Use a fixed covariance matrix.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-STATS-DIST-KDE-COV-TYPE-ROBUST-DIAG:CAPS" id="NCM-STATS-DIST-KDE-COV-TYPE-ROBUST-DIAG:CAPS"></a>NCM_STATS_DIST_KDE_COV_TYPE_ROBUST_DIAG</p></td>
+<td class="enum_member_description">
+<p>Use an 1D robust estimator to build a diagonal covariance.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-STATS-DIST-KDE-COV-TYPE-ROBUST:CAPS" id="NCM-STATS-DIST-KDE-COV-TYPE-ROBUST:CAPS"></a>NCM_STATS_DIST_KDE_COV_TYPE_ROBUST</p></td>
+<td class="enum_member_description">
+<p>Use the OGK method to build a covariance.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmStatsDistKDE.property-details" id="NcmStatsDistKDE.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmStatsDistKDE--cov-fixed" id="NcmStatsDistKDE--cov-fixed"></a><h3>The <code class="literal">“cov-fixed”</code> property</h3>
+<pre class="programlisting">  “cov-fixed”                <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *</pre>
+<p>Fixed covariance matrix.</p>
+<p>Owner: NcmStatsDistKDE</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmStatsDistKDE--cov-type" id="NcmStatsDistKDE--cov-type"></a><h3>The <code class="literal">“cov-type”</code> property</h3>
+<pre class="programlisting">  “cov-type”                 <a class="link" href="NcmStatsDistKDE.html#NcmStatsDistKDECovType" title="enum NcmStatsDistKDECovType"><span class="type">NcmStatsDistKDECovType</span></a></pre>
+<p>Covariance type.</p>
+<p>Owner: NcmStatsDistKDE</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: NCM_STATS_DIST_KDE_COV_TYPE_SAMPLE</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmStatsDistKDE--nearPD-maxiter" id="NcmStatsDistKDE--nearPD-maxiter"></a><h3>The <code class="literal">“nearPD-maxiter”</code> property</h3>
+<pre class="programlisting">  “nearPD-maxiter”           <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>Maximum number of iterations in the nearPD call.</p>
+<p>Owner: NcmStatsDistKDE</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 1</p>
+<p>Default value: 200</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

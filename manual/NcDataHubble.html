@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcDataHubble: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch09.html" title="Cosmological Data" />
+<link rel="prev" href="NcDataCMBDistPriors.html" title="NcDataCMBDistPriors" />
+<link rel="next" href="NcDataHubbleBao.html" title="NcDataHubbleBao" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcDataHubble.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcDataHubble.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcDataHubble.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch09.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcDataCMBDistPriors.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcDataHubbleBao.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcDataHubble" id="NcDataHubble"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcDataHubble.top_of_page" id="NcDataHubble.top_of_page"></a>NcDataHubble</span></h2>
+<p>NcDataHubble — Hubble function data.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcDataHubble.functions" id="NcDataHubble.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcDataHubble.html" title="NcDataHubble"><span class="returnvalue">NcDataHubble</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataHubble.html#nc-data-hubble-new-empty" title="nc_data_hubble_new_empty ()">nc_data_hubble_new_empty</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcDataHubble.html" title="NcDataHubble"><span class="returnvalue">NcDataHubble</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataHubble.html#nc-data-hubble-new-from-file" title="nc_data_hubble_new_from_file ()">nc_data_hubble_new_from_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcDataHubble.html" title="NcDataHubble"><span class="returnvalue">NcDataHubble</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataHubble.html#nc-data-hubble-new-from-id" title="nc_data_hubble_new_from_id ()">nc_data_hubble_new_from_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataHubble.html#nc-data-hubble-set-sample" title="nc_data_hubble_set_sample ()">nc_data_hubble_set_sample</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcDataHubble.properties" id="NcDataHubble.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody><tr>
+<td class="property_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</td>
+<td class="property_name"><a class="link" href="NcDataHubble.html#NcDataHubble--z" title="The “z” property">z</a></td>
+<td class="property_flags">Read / Write</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcDataHubble.other" id="NcDataHubble.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcDataHubble.html#NcDataHubbleId" title="enum NcDataHubbleId">NcDataHubbleId</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcDataHubble.object-hierarchy" id="NcDataHubble.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcDataHubbleId
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcmData.html" title="NcmData">NcmData</a>
+        <span class="lineart">╰──</span> <a class="link" href="NcmDataGaussDiag.html" title="NcmDataGaussDiag">NcmDataGaussDiag</a>
+            <span class="lineart">╰──</span> NcDataHubble
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcDataHubble.description" id="NcDataHubble.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcDataHubble.functions_details" id="NcDataHubble.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="nc-data-hubble-new-empty" id="nc-data-hubble-new-empty"></a><h3>nc_data_hubble_new_empty ()</h3>
+<pre class="programlisting"><a class="link" href="NcDataHubble.html" title="NcDataHubble"><span class="returnvalue">NcDataHubble</span></a> *
+nc_data_hubble_new_empty (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-data-hubble-new-empty.returns" id="nc-data-hubble-new-empty.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-hubble-new-from-file" id="nc-data-hubble-new-from-file"></a><h3>nc_data_hubble_new_from_file ()</h3>
+<pre class="programlisting"><a class="link" href="NcDataHubble.html" title="NcDataHubble"><span class="returnvalue">NcDataHubble</span></a> *
+nc_data_hubble_new_from_file (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>Creates a new <a class="link" href="NcDataHubble.html" title="NcDataHubble"><span class="type">NcDataHubble</span></a> from <em class="parameter"><code>filename</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-data-hubble-new-from-file.parameters" id="nc-data-hubble-new-from-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>file containing a serialized <a class="link" href="NcDataHubble.html" title="NcDataHubble"><span class="type">NcDataHubble</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-hubble-new-from-file.returns" id="nc-data-hubble-new-from-file.returns"></a><h4>Returns</h4>
+<p>the newly created <a class="link" href="NcDataHubble.html" title="NcDataHubble"><span class="type">NcDataHubble</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-hubble-new-from-id" id="nc-data-hubble-new-from-id"></a><h3>nc_data_hubble_new_from_id ()</h3>
+<pre class="programlisting"><a class="link" href="NcDataHubble.html" title="NcDataHubble"><span class="returnvalue">NcDataHubble</span></a> *
+nc_data_hubble_new_from_id (<em class="parameter"><code><a class="link" href="NcDataHubble.html#NcDataHubbleId" title="enum NcDataHubbleId"><span class="type">NcDataHubbleId</span></a> id</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-data-hubble-new-from-id.parameters" id="nc-data-hubble-new-from-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>id</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataHubble.html#NcDataHubbleId" title="enum NcDataHubbleId"><span class="type">NcDataHubbleId</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-hubble-new-from-id.returns" id="nc-data-hubble-new-from-id.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-data-hubble-set-sample" id="nc-data-hubble-set-sample"></a><h3>nc_data_hubble_set_sample ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_hubble_set_sample (<em class="parameter"><code><a class="link" href="NcDataHubble.html" title="NcDataHubble"><span class="type">NcDataHubble</span></a> *hubble</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcDataHubble.html#NcDataHubbleId" title="enum NcDataHubbleId"><span class="type">NcDataHubbleId</span></a> id</code></em>);</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcDataHubble.other_details" id="NcDataHubble.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcDataHubbleId" id="NcDataHubbleId"></a><h3>enum NcDataHubbleId</h3>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="NcDataHubbleId.members" id="NcDataHubbleId.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-HUBBLE-SIMON2005:CAPS" id="NC-DATA-HUBBLE-SIMON2005:CAPS"></a>NC_DATA_HUBBLE_SIMON2005</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-HUBBLE-CABRE:CAPS" id="NC-DATA-HUBBLE-CABRE:CAPS"></a>NC_DATA_HUBBLE_CABRE</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-HUBBLE-STERN2009:CAPS" id="NC-DATA-HUBBLE-STERN2009:CAPS"></a>NC_DATA_HUBBLE_STERN2009</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-HUBBLE-MORESCO2012-BC03:CAPS" id="NC-DATA-HUBBLE-MORESCO2012-BC03:CAPS"></a>NC_DATA_HUBBLE_MORESCO2012_BC03</p></td>
+<td class="enum_member_description">
+<p><a class="link" href="refs.html#XMoresco2012">Moresco et al. (2012)</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-HUBBLE-MORESCO2012-MASTRO:CAPS" id="NC-DATA-HUBBLE-MORESCO2012-MASTRO:CAPS"></a>NC_DATA_HUBBLE_MORESCO2012_MASTRO</p></td>
+<td class="enum_member_description">
+<p><a class="link" href="refs.html#XMoresco2012">Moresco et al. (2012)</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-HUBBLE-MORESCO2015:CAPS" id="NC-DATA-HUBBLE-MORESCO2015:CAPS"></a>NC_DATA_HUBBLE_MORESCO2015</p></td>
+<td class="enum_member_description">
+<p><a class="link" href="refs.html#XMoresco2015">Moresco (2015)</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-HUBBLE-MORESCO2016-DR9-BC03:CAPS" id="NC-DATA-HUBBLE-MORESCO2016-DR9-BC03:CAPS"></a>NC_DATA_HUBBLE_MORESCO2016_DR9_BC03</p></td>
+<td class="enum_member_description">
+<p><a class="link" href="refs.html#XMoresco2016">Moresco et al. (2016)</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-HUBBLE-MORESCO2016-DR9-MASTRO:CAPS" id="NC-DATA-HUBBLE-MORESCO2016-DR9-MASTRO:CAPS"></a>NC_DATA_HUBBLE_MORESCO2016_DR9_MASTRO</p></td>
+<td class="enum_member_description">
+<p><a class="link" href="refs.html#XMoresco2016">Moresco et al. (2016)</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-HUBBLE-BUSCA2013-BAO-WMAP:CAPS" id="NC-DATA-HUBBLE-BUSCA2013-BAO-WMAP:CAPS"></a>NC_DATA_HUBBLE_BUSCA2013_BAO_WMAP</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-HUBBLE-RIESS2008-HST:CAPS" id="NC-DATA-HUBBLE-RIESS2008-HST:CAPS"></a>NC_DATA_HUBBLE_RIESS2008_HST</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-HUBBLE-ZHANG2012:CAPS" id="NC-DATA-HUBBLE-ZHANG2012:CAPS"></a>NC_DATA_HUBBLE_ZHANG2012</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-HUBBLE-RIESS2016-HST-WFC3:CAPS" id="NC-DATA-HUBBLE-RIESS2016-HST-WFC3:CAPS"></a>NC_DATA_HUBBLE_RIESS2016_HST_WFC3</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-HUBBLE-GOMEZ-VALENT-COMP2018:CAPS" id="NC-DATA-HUBBLE-GOMEZ-VALENT-COMP2018:CAPS"></a>NC_DATA_HUBBLE_GOMEZ_VALENT_COMP2018</p></td>
+<td class="enum_member_description">
+<p><a class="link" href="refs.html#XGomez-Valent2018">Gomez-Valent et al. (2018)</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-HUBBLE-RIESS2018:CAPS" id="NC-DATA-HUBBLE-RIESS2018:CAPS"></a>NC_DATA_HUBBLE_RIESS2018</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcDataHubble.property-details" id="NcDataHubble.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcDataHubble--z" id="NcDataHubble--z"></a><h3>The <code class="literal">“z”</code> property</h3>
+<pre class="programlisting">  “z”                        <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
+<p>Data redshifts.</p>
+<p>Owner: NcDataHubble</p>
+<p>Flags: Read / Write</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcHaloMassFunction: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch08.html" title="Large Scale Structure" />
+<link rel="prev" href="NcMultiplicityFuncWatson.html" title="NcMultiplicityFuncWatson" />
+<link rel="next" href="ch08s06.html" title="Halo Bias Function Type" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcHaloMassFunction.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcHaloMassFunction.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcHaloMassFunction.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch08.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcMultiplicityFuncWatson.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="ch08s06.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcHaloMassFunction" id="NcHaloMassFunction"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcHaloMassFunction.top_of_page" id="NcHaloMassFunction.top_of_page"></a>NcHaloMassFunction</span></h2>
+<p>NcHaloMassFunction — Clusters mass function.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcHaloMassFunction.functions" id="NcHaloMassFunction.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="returnvalue">NcHaloMassFunction</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-new" title="nc_halo_mass_function_new ()">nc_halo_mass_function_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-free" title="nc_halo_mass_function_free ()">nc_halo_mass_function_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-clear" title="nc_halo_mass_function_clear ()">nc_halo_mass_function_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-set-area" title="nc_halo_mass_function_set_area ()">nc_halo_mass_function_set_area</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-set-prec" title="nc_halo_mass_function_set_prec ()">nc_halo_mass_function_set_prec</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-set-area-sd" title="nc_halo_mass_function_set_area_sd ()">nc_halo_mass_function_set_area_sd</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-set-eval-limits" title="nc_halo_mass_function_set_eval_limits ()">nc_halo_mass_function_set_eval_limits</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-prepare" title="nc_halo_mass_function_prepare ()">nc_halo_mass_function_prepare</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-prepare-if-needed" title="nc_halo_mass_function_prepare_if_needed ()">nc_halo_mass_function_prepare_if_needed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="returnvalue">NcmPowspecFilter</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-peek-psf" title="nc_halo_mass_function_peek_psf ()">nc_halo_mass_function_peek_psf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-lnM-to-lnR" title="nc_halo_mass_function_lnM_to_lnR ()">nc_halo_mass_function_lnM_to_lnR</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-lnR-to-lnM" title="nc_halo_mass_function_lnR_to_lnM ()">nc_halo_mass_function_lnR_to_lnM</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-dn-dlnR-sigma" title="nc_halo_mass_function_dn_dlnR_sigma ()">nc_halo_mass_function_dn_dlnR_sigma</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-dn-dlnM-sigma" title="nc_halo_mass_function_dn_dlnM_sigma ()">nc_halo_mass_function_dn_dlnM_sigma</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-dn-dlnR" title="nc_halo_mass_function_dn_dlnR ()">nc_halo_mass_function_dn_dlnR</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-dn-dlnM" title="nc_halo_mass_function_dn_dlnM ()">nc_halo_mass_function_dn_dlnM</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-dv-dzdomega" title="nc_halo_mass_function_dv_dzdomega ()">nc_halo_mass_function_dv_dzdomega</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-d2n-dzdlnM" title="nc_halo_mass_function_d2n_dzdlnM ()">nc_halo_mass_function_d2n_dzdlnM</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-dn-dz" title="nc_halo_mass_function_dn_dz ()">nc_halo_mass_function_dn_dz</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloMassFunction.html#nc-halo-mass-function-n" title="nc_halo_mass_function_n ()">nc_halo_mass_function_n</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcHaloMassFunction.properties" id="NcHaloMassFunction.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcHaloMassFunction.html#NcHaloMassFunction--area" title="The “area” property">area</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *</td>
+<td class="property_name"><a class="link" href="NcHaloMassFunction.html#NcHaloMassFunction--distance" title="The “distance” property">distance</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcHaloMassFunction.html#NcHaloMassFunction--lnMf" title="The “lnMf” property">lnMf</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcHaloMassFunction.html#NcHaloMassFunction--lnMi" title="The “lnMi” property">lnMi</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcHaloMassFunction.html#NcHaloMassFunction--mf-lb" title="The “mf-lb” property">mf-lb</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcMultiplicityFunc.html" title="NcMultiplicityFunc"><span class="type">NcMultiplicityFunc</span></a> *</td>
+<td class="property_name"><a class="link" href="NcHaloMassFunction.html#NcHaloMassFunction--multiplicity" title="The “multiplicity” property">multiplicity</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *</td>
+<td class="property_name"><a class="link" href="NcHaloMassFunction.html#NcHaloMassFunction--powerspectrum-filtered" title="The “powerspectrum-filtered” property">powerspectrum-filtered</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcHaloMassFunction.html#NcHaloMassFunction--prec" title="The “prec” property">prec</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcHaloMassFunction.html#NcHaloMassFunction--zf" title="The “zf” property">zf</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcHaloMassFunction.html#NcHaloMassFunction--zi" title="The “zi” property">zi</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcHaloMassFunction.other" id="NcHaloMassFunction.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcHaloMassFunction.html#NcHaloMassFunctionSplineOptimize" title="enum NcHaloMassFunctionSplineOptimize">NcHaloMassFunctionSplineOptimize</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcHaloMassFunction.object-hierarchy" id="NcHaloMassFunction.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcHaloMassFunctionSplineOptimize
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcHaloMassFunction
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcHaloMassFunction.description" id="NcHaloMassFunction.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcHaloMassFunction.functions_details" id="NcHaloMassFunction.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="nc-halo-mass-function-new" id="nc-halo-mass-function-new"></a><h3>nc_halo_mass_function_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="returnvalue">NcHaloMassFunction</span></a> *
+nc_halo_mass_function_new (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcMultiplicityFunc.html" title="NcMultiplicityFunc"><span class="type">NcMultiplicityFunc</span></a> *mulf</code></em>);</pre>
+<p>This function allocates memory for a new <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> object and sets its properties to the values from
+the input arguments.</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-new.parameters" id="nc-halo-mass-function-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dist</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> sets to <a class="link" href="NcHaloMassFunction.html#NcHaloMassFunction--distance" title="The “distance” property"><span class="type">“distance”</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>psf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> sets to <a class="link" href="NcHaloMassFunction.html#NcHaloMassFunction--powerspectrum-filtered" title="The “powerspectrum-filtered” property"><span class="type">“powerspectrum-filtered”</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mulf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcMultiplicityFunc.html" title="NcMultiplicityFunc"><span class="type">NcMultiplicityFunc</span></a> sets to <a class="link" href="NcHaloMassFunction.html#NcHaloMassFunction--multiplicity" title="The “multiplicity” property"><span class="type">“multiplicity”</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-halo-mass-function-new.returns" id="nc-halo-mass-function-new.returns"></a><h4>Returns</h4>
+<p> A new <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a>.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-free" id="nc-halo-mass-function-free"></a><h3>nc_halo_mass_function_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_halo_mass_function_free (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>);</pre>
+<p>Atomically decrements the reference count of <em class="parameter"><code>mfp</code></em>
+ by one. If the reference count drops to 0,
+all memory allocated by <em class="parameter"><code>mfp</code></em>
+ is released.</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-free.parameters" id="nc-halo-mass-function-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-clear" id="nc-halo-mass-function-clear"></a><h3>nc_halo_mass_function_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_halo_mass_function_clear (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> **mfp</code></em>);</pre>
+<p>Atomically decrements the reference count of <em class="parameter"><code>mfp</code></em>
+ by one. If the reference count drops to 0,
+all memory allocated by <em class="parameter"><code>mfp</code></em>
+ is released. Set pointer to NULL.</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-clear.parameters" id="nc-halo-mass-function-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-set-area" id="nc-halo-mass-function-set-area"></a><h3>nc_halo_mass_function_set_area ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_halo_mass_function_set_area (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> area</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-set-area.parameters" id="nc-halo-mass-function-set-area.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>area</p></td>
+<td class="parameter_description"><p>area in steradian</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-set-prec" id="nc-halo-mass-function-set-prec"></a><h3>nc_halo_mass_function_set_prec ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_halo_mass_function_set_prec (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> prec</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-set-prec.parameters" id="nc-halo-mass-function-set-prec.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prec</p></td>
+<td class="parameter_description"><p>precision</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-set-area-sd" id="nc-halo-mass-function-set-area-sd"></a><h3>nc_halo_mass_function_set_area_sd ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_halo_mass_function_set_area_sd (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> area_sd</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-set-area-sd.parameters" id="nc-halo-mass-function-set-area-sd.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>area_sd</p></td>
+<td class="parameter_description"><p>area in square degree</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-set-eval-limits" id="nc-halo-mass-function-set-eval-limits"></a><h3>nc_halo_mass_function_set_eval_limits ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_halo_mass_function_set_eval_limits (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                                       <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnMi</code></em>,
+                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnMf</code></em>,
+                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zi</code></em>,
+                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zf</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-set-eval-limits.parameters" id="nc-halo-mass-function-set-eval-limits.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnMi</p></td>
+<td class="parameter_description"><p>minimum logarithm base e of mass</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnMf</p></td>
+<td class="parameter_description"><p>maximum logarithm base e of mass</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zi</p></td>
+<td class="parameter_description"><p>minimum redshift</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zf</p></td>
+<td class="parameter_description"><p>maximum redshift</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-prepare" id="nc-halo-mass-function-prepare"></a><h3>nc_halo_mass_function_prepare ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_halo_mass_function_prepare (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-prepare.parameters" id="nc-halo-mass-function-prepare.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-prepare-if-needed" id="nc-halo-mass-function-prepare-if-needed"></a><h3>nc_halo_mass_function_prepare_if_needed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_halo_mass_function_prepare_if_needed
+                               (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-prepare-if-needed.parameters" id="nc-halo-mass-function-prepare-if-needed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-peek-psf" id="nc-halo-mass-function-peek-psf"></a><h3>nc_halo_mass_function_peek_psf ()</h3>
+<pre class="programlisting"><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="returnvalue">NcmPowspecFilter</span></a> *
+nc_halo_mass_function_peek_psf (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-peek-psf.parameters" id="nc-halo-mass-function-peek-psf.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-halo-mass-function-peek-psf.returns" id="nc-halo-mass-function-peek-psf.returns"></a><h4>Returns</h4>
+<p>FIXME. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-lnM-to-lnR" id="nc-halo-mass-function-lnM-to-lnR"></a><h3>nc_halo_mass_function_lnM_to_lnR ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_halo_mass_function_lnM_to_lnR (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                                  <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnM</code></em>);</pre>
+<p>This function computes the ln-radius of related to the ln-mass $\ln(M / M_\odot)$.</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-lnM-to-lnR.parameters" id="nc-halo-mass-function-lnM-to-lnR.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnM</p></td>
+<td class="parameter_description"><p>logarithm base $e$ of the mass enclosed in the filter volume</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-halo-mass-function-lnM-to-lnR.returns" id="nc-halo-mass-function-lnM-to-lnR.returns"></a><h4>Returns</h4>
+<p> $\ln(R / 1 \text{Mpc})$</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-lnR-to-lnM" id="nc-halo-mass-function-lnR-to-lnM"></a><h3>nc_halo_mass_function_lnR_to_lnM ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_halo_mass_function_lnR_to_lnM (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                                  <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnR</code></em>);</pre>
+<p>This function computes the ln-mass of the mass enclosed in the filter volume.</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-lnR-to-lnM.parameters" id="nc-halo-mass-function-lnR-to-lnM.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnR</p></td>
+<td class="parameter_description"><p>ln-radius of the related volume</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-halo-mass-function-lnR-to-lnM.returns" id="nc-halo-mass-function-lnR-to-lnM.returns"></a><h4>Returns</h4>
+<p> $\ln(M / 1 M_\odot)$</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-dn-dlnR-sigma" id="nc-halo-mass-function-dn-dlnR-sigma"></a><h3>nc_halo_mass_function_dn_dlnR_sigma ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_halo_mass_function_dn_dlnR_sigma (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                                     <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnR</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *sigma_ptr</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *dn_dlnR_ptr</code></em>);</pre>
+<p>This function computes the comoving number density of dark matter halos per redshift <em class="parameter"><code>z</code></em>
+ and
+volume with ln-radius <em class="parameter"><code>lnR</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-dn-dlnR-sigma.parameters" id="nc-halo-mass-function-dn-dlnR-sigma.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnR</p></td>
+<td class="parameter_description"><p>logarithm base e of the radius $R$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z</p></td>
+<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sigma_ptr</p></td>
+<td class="parameter_description"><p>matter variance for $\ln(R)$. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dn_dlnR_ptr</p></td>
+<td class="parameter_description"><p>$\frac{\mathrm{d}n}{\mathrm{d}\ln(R)}$. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-dn-dlnM-sigma" id="nc-halo-mass-function-dn-dlnM-sigma"></a><h3>nc_halo_mass_function_dn_dlnM_sigma ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_halo_mass_function_dn_dlnM_sigma (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                                     <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnM</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *sigma_ptr</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *dn_dlnM_ptr</code></em>);</pre>
+<p>This function computes the comoving number density of dark matter halos at redshift <em class="parameter"><code>z</code></em>
+ and
+mass M.</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-dn-dlnM-sigma.parameters" id="nc-halo-mass-function-dn-dlnM-sigma.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnM</p></td>
+<td class="parameter_description"><p>logarithm base e of mass</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z</p></td>
+<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sigma_ptr</p></td>
+<td class="parameter_description"><p>matter variance for $\ln(M)$. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dn_dlnM_ptr</p></td>
+<td class="parameter_description"><p>$\frac{\mathrm{d}n}{\mathrm{d}\ln(M)}$. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-dn-dlnR" id="nc-halo-mass-function-dn-dlnR"></a><h3>nc_halo_mass_function_dn_dlnR ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_halo_mass_function_dn_dlnR (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnR</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>This function computes the comoving number density of dark matter halos per redshift <em class="parameter"><code>z</code></em>
+ and
+volume with ln-radius <em class="parameter"><code>lnR</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-dn-dlnR.parameters" id="nc-halo-mass-function-dn-dlnR.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnR</p></td>
+<td class="parameter_description"><p>logarithm base e of the radius $R$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z</p></td>
+<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-halo-mass-function-dn-dlnR.returns" id="nc-halo-mass-function-dn-dlnR.returns"></a><h4>Returns</h4>
+<p> $\frac{\mathrm{d}n}{\mathrm{d}\ln(R)}$.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-dn-dlnM" id="nc-halo-mass-function-dn-dlnM"></a><h3>nc_halo_mass_function_dn_dlnM ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_halo_mass_function_dn_dlnM (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnM</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>This function computes the comoving number density of dark matter halos at redshift <em class="parameter"><code>z</code></em>
+ and
+mass M.</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-dn-dlnM.parameters" id="nc-halo-mass-function-dn-dlnM.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnM</p></td>
+<td class="parameter_description"><p>logarithm base e of mass</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z</p></td>
+<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-halo-mass-function-dn-dlnM.returns" id="nc-halo-mass-function-dn-dlnM.returns"></a><h4>Returns</h4>
+<p> $\frac{\mathrm{d}n}{\mathrm{d}\ln(M)}$.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-dv-dzdomega" id="nc-halo-mass-function-dv-dzdomega"></a><h3>nc_halo_mass_function_dv_dzdomega ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_halo_mass_function_dv_dzdomega (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                                   <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>This function computes the comoving volume (flat universe) element per unit solid angle $d\Omega$
+given <em class="parameter"><code>z</code></em>
+, namely, $$\frac{\mathrm{d}^2V}{\mathrm{d}z\mathrm{d}\Omega} = \frac{c}{H(z)} D_c^2(z),$$
+where $H(z)$ is the Hubble function and $D_c$ is the comoving distance.</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-dv-dzdomega.parameters" id="nc-halo-mass-function-dv-dzdomega.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z</p></td>
+<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-halo-mass-function-dv-dzdomega.returns" id="nc-halo-mass-function-dv-dzdomega.returns"></a><h4>Returns</h4>
+<p> comoving volume element $\frac{\mathrm{d}^2V}{\mathrm{d}z\mathrm{d}\Omega} \,\left[\mathrm{Mpc}^3\right]$.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-d2n-dzdlnM" id="nc-halo-mass-function-d2n-dzdlnM"></a><h3>nc_halo_mass_function_d2n_dzdlnM ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_halo_mass_function_d2n_dzdlnM (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                                  <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnM</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-d2n-dzdlnM.parameters" id="nc-halo-mass-function-d2n-dzdlnM.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnM</p></td>
+<td class="parameter_description"><p>logarithm base e of mass</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z</p></td>
+<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-halo-mass-function-d2n-dzdlnM.returns" id="nc-halo-mass-function-d2n-dzdlnM.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-dn-dz" id="nc-halo-mass-function-dn-dz"></a><h3>nc_halo_mass_function_dn_dz ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_halo_mass_function_dn_dz (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnMl</code></em>,
+                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnMu</code></em>,
+                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
+                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> spline</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-dn-dz.parameters" id="nc-halo-mass-function-dn-dz.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnMl</p></td>
+<td class="parameter_description"><p>logarithm base e of mass, lower threshold</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnMu</p></td>
+<td class="parameter_description"><p>logarithm base e of mass, upper threshold</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z</p></td>
+<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>spline</p></td>
+<td class="parameter_description"><p>whenever to create an intermediary spline of the mass integration</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-halo-mass-function-dn-dz.returns" id="nc-halo-mass-function-dn-dz.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-halo-mass-function-n" id="nc-halo-mass-function-n"></a><h3>nc_halo_mass_function_n ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_halo_mass_function_n (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
+                         <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnMl</code></em>,
+                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnMu</code></em>,
+                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zl</code></em>,
+                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zu</code></em>,
+                         <em class="parameter"><code><a class="link" href="NcHaloMassFunction.html#NcHaloMassFunctionSplineOptimize" title="enum NcHaloMassFunctionSplineOptimize"><span class="type">NcHaloMassFunctionSplineOptimize</span></a> spline</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-halo-mass-function-n.parameters" id="nc-halo-mass-function-n.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mfp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnMl</p></td>
+<td class="parameter_description"><p>logarithm base e of mass, lower threshold</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnMu</p></td>
+<td class="parameter_description"><p>logarithm base e of mass, upper threshold</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zl</p></td>
+<td class="parameter_description"><p>minimum redshift</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zu</p></td>
+<td class="parameter_description"><p>maximum redshift</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>spline</p></td>
+<td class="parameter_description"><p>whenever to create an intermediary spline of the integration</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-halo-mass-function-n.returns" id="nc-halo-mass-function-n.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcHaloMassFunction.other_details" id="NcHaloMassFunction.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcHaloMassFunctionSplineOptimize" id="NcHaloMassFunctionSplineOptimize"></a><h3>enum NcHaloMassFunctionSplineOptimize</h3>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="NcHaloMassFunctionSplineOptimize.members" id="NcHaloMassFunctionSplineOptimize.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HALO-MASS-FUNCTION-SPLINE-NONE:CAPS" id="NC-HALO-MASS-FUNCTION-SPLINE-NONE:CAPS"></a>NC_HALO_MASS_FUNCTION_SPLINE_NONE</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HALO-MASS-FUNCTION-SPLINE-LNM:CAPS" id="NC-HALO-MASS-FUNCTION-SPLINE-LNM:CAPS"></a>NC_HALO_MASS_FUNCTION_SPLINE_LNM</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HALO-MASS-FUNCTION-SPLINE-Z:CAPS" id="NC-HALO-MASS-FUNCTION-SPLINE-Z:CAPS"></a>NC_HALO_MASS_FUNCTION_SPLINE_Z</p></td>
+<td class="enum_member_description">
+<p>FIXME</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcHaloMassFunction.property-details" id="NcHaloMassFunction.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcHaloMassFunction--area" id="NcHaloMassFunction--area"></a><h3>The <code class="literal">“area”</code> property</h3>
+<pre class="programlisting">  “area”                     <span class="type">double</span></pre>
+<p>This property sets the angular area in steradian.</p>
+<p>Owner: NcHaloMassFunction</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [0,12.5664]</p>
+<p>Default value: 0.0609235</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHaloMassFunction--distance" id="NcHaloMassFunction--distance"></a><h3>The <code class="literal">“distance”</code> property</h3>
+<pre class="programlisting">  “distance”                 <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *</pre>
+<p>This property keeps the distance object.</p>
+<p>Owner: NcHaloMassFunction</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHaloMassFunction--lnMf" id="NcHaloMassFunction--lnMf"></a><h3>The <code class="literal">“lnMf”</code> property</h3>
+<pre class="programlisting">  “lnMf”                     <span class="type">double</span></pre>
+<p>This property sets the maximum halo mass (logarithm base e).</p>
+<p>Owner: NcHaloMassFunction</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [25.3284,39.1439]</p>
+<p>Default value: 36.8414</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHaloMassFunction--lnMi" id="NcHaloMassFunction--lnMi"></a><h3>The <code class="literal">“lnMi”</code> property</h3>
+<pre class="programlisting">  “lnMi”                     <span class="type">double</span></pre>
+<p>This property sets the minimum halo mass (logarithm base e).</p>
+<p>Owner: NcHaloMassFunction</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [25.3284,39.1439]</p>
+<p>Default value: 29.9336</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHaloMassFunction--mf-lb" id="NcHaloMassFunction--mf-lb"></a><h3>The <code class="literal">“mf-lb”</code> property</h3>
+<pre class="programlisting">  “mf-lb”                    <span class="type">double</span></pre>
+<p>Mass function lower bound.</p>
+<p>Owner: NcHaloMassFunction</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 1e-30</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHaloMassFunction--multiplicity" id="NcHaloMassFunction--multiplicity"></a><h3>The <code class="literal">“multiplicity”</code> property</h3>
+<pre class="programlisting">  “multiplicity”             <a class="link" href="NcMultiplicityFunc.html" title="NcMultiplicityFunc"><span class="type">NcMultiplicityFunc</span></a> *</pre>
+<p>This property keeps the multiplicity function object.</p>
+<p>Owner: NcHaloMassFunction</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHaloMassFunction--powerspectrum-filtered" id="NcHaloMassFunction--powerspectrum-filtered"></a><h3>The <code class="literal">“powerspectrum-filtered”</code> property</h3>
+<pre class="programlisting">  “powerspectrum-filtered”   <a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *</pre>
+<p>This property keeps the filtered power spectrum.</p>
+<p>Owner: NcHaloMassFunction</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHaloMassFunction--prec" id="NcHaloMassFunction--prec"></a><h3>The <code class="literal">“prec”</code> property</h3>
+<pre class="programlisting">  “prec”                     <span class="type">double</span></pre>
+<p>This property sets the precision.</p>
+<p>Owner: NcHaloMassFunction</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [2.22045e-16,1]</p>
+<p>Default value: 1e-06</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHaloMassFunction--zf" id="NcHaloMassFunction--zf"></a><h3>The <code class="literal">“zf”</code> property</h3>
+<pre class="programlisting">  “zf”                       <span class="type">double</span></pre>
+<p>This property sets the final redshift.</p>
+<p>Owner: NcHaloMassFunction</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 1.4</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHaloMassFunction--zi" id="NcHaloMassFunction--zi"></a><h3>The <code class="literal">“zi”</code> property</h3>
+<pre class="programlisting">  “zi”                       <span class="type">double</span></pre>
+<p>This property sets the initial redshift.</p>
+<p>Owner: NcHaloMassFunction</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

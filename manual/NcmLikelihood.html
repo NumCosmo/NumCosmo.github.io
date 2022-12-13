@@ -1,0 +1,1452 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmLikelihood: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s13.html" title="Statistical Analysis" />
+<link rel="prev" href="NcmBootstrap.html" title="NcmBootstrap" />
+<link rel="next" href="NcmPrior.html" title="NcmPrior" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmLikelihood.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmLikelihood.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmLikelihood.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s13.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcmBootstrap.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmPrior.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmLikelihood" id="NcmLikelihood"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmLikelihood.top_of_page" id="NcmLikelihood.top_of_page"></a>NcmLikelihood</span></h2>
+<p>NcmLikelihood — Likelihood combining a NcmDataset and priors.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmLikelihood.functions" id="NcmLikelihood.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="returnvalue">NcmLikelihood</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-new" title="ncm_likelihood_new ()">ncm_likelihood_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="returnvalue">NcmLikelihood</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-ref" title="ncm_likelihood_ref ()">ncm_likelihood_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="returnvalue">NcmLikelihood</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-dup" title="ncm_likelihood_dup ()">ncm_likelihood_dup</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-free" title="ncm_likelihood_free ()">ncm_likelihood_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-clear" title="ncm_likelihood_clear ()">ncm_likelihood_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-add" title="ncm_likelihood_priors_add ()">ncm_likelihood_priors_add</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-add-gauss-param" title="ncm_likelihood_priors_add_gauss_param ()">ncm_likelihood_priors_add_gauss_param</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-add-gauss-param-pindex" title="ncm_likelihood_priors_add_gauss_param_pindex ()">ncm_likelihood_priors_add_gauss_param_pindex</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-add-gauss-param-name" title="ncm_likelihood_priors_add_gauss_param_name ()">ncm_likelihood_priors_add_gauss_param_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-add-gauss-func" title="ncm_likelihood_priors_add_gauss_func ()">ncm_likelihood_priors_add_gauss_func</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-add-flat-param" title="ncm_likelihood_priors_add_flat_param ()">ncm_likelihood_priors_add_flat_param</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-add-flat-param-pindex" title="ncm_likelihood_priors_add_flat_param_pindex ()">ncm_likelihood_priors_add_flat_param_pindex</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-add-flat-param-name" title="ncm_likelihood_priors_add_flat_param_name ()">ncm_likelihood_priors_add_flat_param_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-add-flat-func" title="ncm_likelihood_priors_add_flat_func ()">ncm_likelihood_priors_add_flat_func</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmPrior.html" title="NcmPrior"><span class="returnvalue">NcmPrior</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-peek-f" title="ncm_likelihood_priors_peek_f ()">ncm_likelihood_priors_peek_f</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-length-f" title="ncm_likelihood_priors_length_f ()">ncm_likelihood_priors_length_f</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmPrior.html" title="NcmPrior"><span class="returnvalue">NcmPrior</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-peek-m2lnL" title="ncm_likelihood_priors_peek_m2lnL ()">ncm_likelihood_priors_peek_m2lnL</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-length-m2lnL" title="ncm_likelihood_priors_length_m2lnL ()">ncm_likelihood_priors_length_m2lnL</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-has-leastsquares-J" title="ncm_likelihood_has_leastsquares_J ()">ncm_likelihood_has_leastsquares_J</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-has-m2lnL-grad" title="ncm_likelihood_has_m2lnL_grad ()">ncm_likelihood_has_m2lnL_grad</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-leastsquares-f" title="ncm_likelihood_priors_leastsquares_f ()">ncm_likelihood_priors_leastsquares_f</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-leastsquares-f" title="ncm_likelihood_leastsquares_f ()">ncm_likelihood_leastsquares_f</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-leastsquares-J" title="ncm_likelihood_leastsquares_J ()">ncm_likelihood_leastsquares_J</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-leastsquares-f-J" title="ncm_likelihood_leastsquares_f_J ()">ncm_likelihood_leastsquares_f_J</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-m2lnL-val" title="ncm_likelihood_priors_m2lnL_val ()">ncm_likelihood_priors_m2lnL_val</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-priors-m2lnL-vec" title="ncm_likelihood_priors_m2lnL_vec ()">ncm_likelihood_priors_m2lnL_vec</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-m2lnL-val" title="ncm_likelihood_m2lnL_val ()">ncm_likelihood_m2lnL_val</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-m2lnL-grad" title="ncm_likelihood_m2lnL_grad ()">ncm_likelihood_m2lnL_grad</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmLikelihood.html#ncm-likelihood-m2lnL-val-grad" title="ncm_likelihood_m2lnL_val_grad ()">ncm_likelihood_m2lnL_val_grad</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmLikelihood.properties" id="NcmLikelihood.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmDataset.html" title="NcmDataset"><span class="type">NcmDataset</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmLikelihood.html#NcmLikelihood--dataset" title="The “dataset” property">dataset</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmLikelihood.html#NcmLikelihood--m2lnL-v" title="The “m2lnL-v” property">m2lnL-v</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmLikelihood.html#NcmLikelihood--priors-f" title="The “priors-f” property">priors-f</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmLikelihood.html#NcmLikelihood--priors-m2lnL" title="The “priors-m2lnL” property">priors-m2lnL</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmLikelihood.object-hierarchy" id="NcmLikelihood.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcmLikelihood
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmLikelihood.description" id="NcmLikelihood.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcmLikelihood.functions_details" id="NcmLikelihood.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-likelihood-new" id="ncm-likelihood-new"></a><h3>ncm_likelihood_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="returnvalue">NcmLikelihood</span></a> *
+ncm_likelihood_new (<em class="parameter"><code><a class="link" href="NcmDataset.html" title="NcmDataset"><span class="type">NcmDataset</span></a> *dset</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-new.parameters" id="ncm-likelihood-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>dset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDataset.html" title="NcmDataset"><span class="type">NcmDataset</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-likelihood-new.returns" id="ncm-likelihood-new.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-ref" id="ncm-likelihood-ref"></a><h3>ncm_likelihood_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="returnvalue">NcmLikelihood</span></a> *
+ncm_likelihood_ref (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-ref.parameters" id="ncm-likelihood-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-likelihood-ref.returns" id="ncm-likelihood-ref.returns"></a><h4>Returns</h4>
+<p>FIXME. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-dup" id="ncm-likelihood-dup"></a><h3>ncm_likelihood_dup ()</h3>
+<pre class="programlisting"><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="returnvalue">NcmLikelihood</span></a> *
+ncm_likelihood_dup (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                    <em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>);</pre>
+<p>Duplicates the object and all of its content.</p>
+<div class="refsect3">
+<a name="ncm-likelihood-dup.parameters" id="ncm-likelihood-dup.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-likelihood-dup.returns" id="ncm-likelihood-dup.returns"></a><h4>Returns</h4>
+<p>A duplicate of <em class="parameter"><code>lh</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-free" id="ncm-likelihood-free"></a><h3>ncm_likelihood_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_free (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-free.parameters" id="ncm-likelihood-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-clear" id="ncm-likelihood-clear"></a><h3>ncm_likelihood_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_clear (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> **lh</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-clear.parameters" id="ncm-likelihood-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-add" id="ncm-likelihood-priors-add"></a><h3>ncm_likelihood_priors_add ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_priors_add (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmPrior.html" title="NcmPrior"><span class="type">NcmPrior</span></a> *prior</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-add.parameters" id="ncm-likelihood-priors-add.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prior</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPrior.html" title="NcmPrior"><span class="type">NcmPrior</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-add-gauss-param" id="ncm-likelihood-priors-add-gauss-param"></a><h3>ncm_likelihood_priors_add_gauss_param ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_priors_add_gauss_param (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                                       <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>,
+                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mu</code></em>,
+                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-add-gauss-param.parameters" id="ncm-likelihood-priors-add-gauss-param.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mu</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sigma</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-add-gauss-param-pindex" id="ncm-likelihood-priors-add-gauss-param-pindex"></a><h3>ncm_likelihood_priors_add_gauss_param_pindex ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_priors_add_gauss_param_pindex
+                               (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                                <em class="parameter"><code>const <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a> *pi</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mu</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-add-gauss-param-pindex.parameters" id="ncm-likelihood-priors-add-gauss-param-pindex.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pi</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mu</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sigma</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-add-gauss-param-name" id="ncm-likelihood-priors-add-gauss-param-name"></a><h3>ncm_likelihood_priors_add_gauss_param_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_priors_add_gauss_param_name
+                               (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mu</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-add-gauss-param-name.parameters" id="ncm-likelihood-priors-add-gauss-param-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mu</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sigma</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-add-gauss-func" id="ncm-likelihood-priors-add-gauss-func"></a><h3>ncm_likelihood_priors_add_gauss_func ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_priors_add_gauss_func (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcmMSetFunc.html" title="NcmMSetFunc"><span class="type">NcmMSetFunc</span></a> *mean_func</code></em>,
+                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mu</code></em>,
+                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma</code></em>,
+                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> var</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-add-gauss-func.parameters" id="ncm-likelihood-priors-add-gauss-func.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mean_func</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mu</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sigma</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>var</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-add-flat-param" id="ncm-likelihood-priors-add-flat-param"></a><h3>ncm_likelihood_priors_add_flat_param ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_priors_add_flat_param (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>,
+                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x_low</code></em>,
+                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x_upp</code></em>,
+                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> scale</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-add-flat-param.parameters" id="ncm-likelihood-priors-add-flat-param.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_low</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_upp</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>scale</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-add-flat-param-pindex" id="ncm-likelihood-priors-add-flat-param-pindex"></a><h3>ncm_likelihood_priors_add_flat_param_pindex ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_priors_add_flat_param_pindex
+                               (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                                <em class="parameter"><code>const <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a> *pi</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x_low</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x_upp</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> scale</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-add-flat-param-pindex.parameters" id="ncm-likelihood-priors-add-flat-param-pindex.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pi</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_low</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_upp</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>scale</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-add-flat-param-name" id="ncm-likelihood-priors-add-flat-param-name"></a><h3>ncm_likelihood_priors_add_flat_param_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_priors_add_flat_param_name
+                               (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x_low</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x_upp</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> scale</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-add-flat-param-name.parameters" id="ncm-likelihood-priors-add-flat-param-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_low</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_upp</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>scale</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-add-flat-func" id="ncm-likelihood-priors-add-flat-func"></a><h3>ncm_likelihood_priors_add_flat_func ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_priors_add_flat_func (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                                     <em class="parameter"><code><a class="link" href="NcmMSetFunc.html" title="NcmMSetFunc"><span class="type">NcmMSetFunc</span></a> *mean_func</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x_low</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x_upp</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> scale</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> variable</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-add-flat-func.parameters" id="ncm-likelihood-priors-add-flat-func.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mean_func</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_low</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_upp</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>scale</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>variable</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-peek-f" id="ncm-likelihood-priors-peek-f"></a><h3>ncm_likelihood_priors_peek_f ()</h3>
+<pre class="programlisting"><a class="link" href="NcmPrior.html" title="NcmPrior"><span class="returnvalue">NcmPrior</span></a> *
+ncm_likelihood_priors_peek_f (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-peek-f.parameters" id="ncm-likelihood-priors-peek-f.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-peek-f.returns" id="ncm-likelihood-priors-peek-f.returns"></a><h4>Returns</h4>
+<p>FIXME. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-length-f" id="ncm-likelihood-priors-length-f"></a><h3>ncm_likelihood_priors_length_f ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_likelihood_priors_length_f (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-length-f.parameters" id="ncm-likelihood-priors-length-f.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-length-f.returns" id="ncm-likelihood-priors-length-f.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-peek-m2lnL" id="ncm-likelihood-priors-peek-m2lnL"></a><h3>ncm_likelihood_priors_peek_m2lnL ()</h3>
+<pre class="programlisting"><a class="link" href="NcmPrior.html" title="NcmPrior"><span class="returnvalue">NcmPrior</span></a> *
+ncm_likelihood_priors_peek_m2lnL (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-peek-m2lnL.parameters" id="ncm-likelihood-priors-peek-m2lnL.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-peek-m2lnL.returns" id="ncm-likelihood-priors-peek-m2lnL.returns"></a><h4>Returns</h4>
+<p>FIXME. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-length-m2lnL" id="ncm-likelihood-priors-length-m2lnL"></a><h3>ncm_likelihood_priors_length_m2lnL ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_likelihood_priors_length_m2lnL (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-length-m2lnL.parameters" id="ncm-likelihood-priors-length-m2lnL.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-length-m2lnL.returns" id="ncm-likelihood-priors-length-m2lnL.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-has-leastsquares-J" id="ncm-likelihood-has-leastsquares-J"></a><h3>ncm_likelihood_has_leastsquares_J ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_likelihood_has_leastsquares_J (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-has-leastsquares-J.parameters" id="ncm-likelihood-has-leastsquares-J.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-likelihood-has-leastsquares-J.returns" id="ncm-likelihood-has-leastsquares-J.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-has-m2lnL-grad" id="ncm-likelihood-has-m2lnL-grad"></a><h3>ncm_likelihood_has_m2lnL_grad ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_likelihood_has_m2lnL_grad (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-has-m2lnL-grad.parameters" id="ncm-likelihood-has-m2lnL-grad.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-likelihood-has-m2lnL-grad.returns" id="ncm-likelihood-has-m2lnL-grad.returns"></a><h4>Returns</h4>
+<p> FIXME</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-leastsquares-f" id="ncm-likelihood-priors-leastsquares-f"></a><h3>ncm_likelihood_priors_leastsquares_f ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_priors_leastsquares_f (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *priors_f</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-leastsquares-f.parameters" id="ncm-likelihood-priors-leastsquares-f.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>priors_f</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-leastsquares-f" id="ncm-likelihood-leastsquares-f"></a><h3>ncm_likelihood_leastsquares_f ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_leastsquares_f (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *f</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-leastsquares-f.parameters" id="ncm-likelihood-leastsquares-f.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>f</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-leastsquares-J" id="ncm-likelihood-leastsquares-J"></a><h3>ncm_likelihood_leastsquares_J ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_leastsquares_J (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *J</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-leastsquares-J.parameters" id="ncm-likelihood-leastsquares-J.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>J</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-leastsquares-f-J" id="ncm-likelihood-leastsquares-f-J"></a><h3>ncm_likelihood_leastsquares_f_J ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_leastsquares_f_J (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *f</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *J</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-leastsquares-f-J.parameters" id="ncm-likelihood-leastsquares-f-J.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>f</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>J</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-m2lnL-val" id="ncm-likelihood-priors-m2lnL-val"></a><h3>ncm_likelihood_priors_m2lnL_val ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_priors_m2lnL_val (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *priors_m2lnL</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-m2lnL-val.parameters" id="ncm-likelihood-priors-m2lnL-val.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>priors_m2lnL</p></td>
+<td class="parameter_description"><p>FIXME. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-priors-m2lnL-vec" id="ncm-likelihood-priors-m2lnL-vec"></a><h3>ncm_likelihood_priors_m2lnL_vec ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_priors_m2lnL_vec (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *priors_m2lnL_v</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-priors-m2lnL-vec.parameters" id="ncm-likelihood-priors-m2lnL-vec.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>priors_m2lnL_v</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-m2lnL-val" id="ncm-likelihood-m2lnL-val"></a><h3>ncm_likelihood_m2lnL_val ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_m2lnL_val (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                          <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *m2lnL</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-m2lnL-val.parameters" id="ncm-likelihood-m2lnL-val.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>m2lnL</p></td>
+<td class="parameter_description"><p>FIXME. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-m2lnL-grad" id="ncm-likelihood-m2lnL-grad"></a><h3>ncm_likelihood_m2lnL_grad ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_m2lnL_grad (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *grad</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-m2lnL-grad.parameters" id="ncm-likelihood-m2lnL-grad.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>grad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-likelihood-m2lnL-val-grad" id="ncm-likelihood-m2lnL-val-grad"></a><h3>ncm_likelihood_m2lnL_val_grad ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_likelihood_m2lnL_val_grad (<em class="parameter"><code><a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a> *lh</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *m2lnL</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *grad</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="ncm-likelihood-m2lnL-val-grad.parameters" id="ncm-likelihood-m2lnL-val-grad.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>lh</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmLikelihood.html" title="NcmLikelihood"><span class="type">NcmLikelihood</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>m2lnL</p></td>
+<td class="parameter_description"><p>FIXME. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>grad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmLikelihood.property-details" id="NcmLikelihood.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmLikelihood--dataset" id="NcmLikelihood--dataset"></a><h3>The <code class="literal">“dataset”</code> property</h3>
+<pre class="programlisting">  “dataset”                  <a class="link" href="NcmDataset.html" title="NcmDataset"><span class="type">NcmDataset</span></a> *</pre>
+<p>Dataset object.</p>
+<p>Owner: NcmLikelihood</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmLikelihood--m2lnL-v" id="NcmLikelihood--m2lnL-v"></a><h3>The <code class="literal">“m2lnL-v”</code> property</h3>
+<pre class="programlisting">  “m2lnL-v”                  <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
+<p>m2lnL vector.</p>
+<p>Owner: NcmLikelihood</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmLikelihood--priors-f" id="NcmLikelihood--priors-f"></a><h3>The <code class="literal">“priors-f”</code> property</h3>
+<pre class="programlisting">  “priors-f”                 <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</pre>
+<p>Priors f array.</p>
+<p>Owner: NcmLikelihood</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmLikelihood--priors-m2lnL" id="NcmLikelihood--priors-m2lnL"></a><h3>The <code class="literal">“priors-m2lnL”</code> property</h3>
+<pre class="programlisting">  “priors-m2lnL”             <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</pre>
+<p>Priors m2lnL array.</p>
+<p>Owner: NcmLikelihood</p>
+<p>Flags: Read / Write</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

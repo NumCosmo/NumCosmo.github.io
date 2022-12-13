@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmDataGaussCov: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s16.html" title="MCMC Testing" />
+<link rel="prev" href="NcmModelMVND.html" title="NcmModelMVND" />
+<link rel="next" href="NcmModelRosenbrock.html" title="NcmModelRosenbrock" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmDataGaussCovMVND.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmDataGaussCovMVND.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s16.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcmModelMVND.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmModelRosenbrock.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmDataGaussCovMVND" id="NcmDataGaussCovMVND"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmDataGaussCovMVND.top_of_page" id="NcmDataGaussCovMVND.top_of_page"></a>NcmDataGaussCov</span></h2>
+<p>NcmDataGaussCov — Multivariate Normal Distribution -- covariance provided.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmDataGaussCovMVND.functions" id="NcmDataGaussCovMVND.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="NcmDataGaussCovMVND.html#NcmDataGaussCovMVNDBound" title="NcmDataGaussCovMVNDBound ()">*NcmDataGaussCovMVNDBound</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="returnvalue">NcmDataGaussCovMVND</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGaussCovMVND.html#ncm-data-gauss-cov-mvnd-new" title="ncm_data_gauss_cov_mvnd_new ()">ncm_data_gauss_cov_mvnd_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="returnvalue">NcmDataGaussCovMVND</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGaussCovMVND.html#ncm-data-gauss-cov-mvnd-new-full" title="ncm_data_gauss_cov_mvnd_new_full ()">ncm_data_gauss_cov_mvnd_new_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="returnvalue">NcmDataGaussCovMVND</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGaussCovMVND.html#ncm-data-gauss-cov-mvnd-ref" title="ncm_data_gauss_cov_mvnd_ref ()">ncm_data_gauss_cov_mvnd_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGaussCovMVND.html#ncm-data-gauss-cov-mvnd-free" title="ncm_data_gauss_cov_mvnd_free ()">ncm_data_gauss_cov_mvnd_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGaussCovMVND.html#ncm-data-gauss-cov-mvnd-clear" title="ncm_data_gauss_cov_mvnd_clear ()">ncm_data_gauss_cov_mvnd_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGaussCovMVND.html#ncm-data-gauss-cov-mvnd-gen-cov-mean" title="ncm_data_gauss_cov_mvnd_gen_cov_mean ()">ncm_data_gauss_cov_mvnd_gen_cov_mean</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGaussCovMVND.html#ncm-data-gauss-cov-mvnd-set-cov-mean" title="ncm_data_gauss_cov_mvnd_set_cov_mean ()">ncm_data_gauss_cov_mvnd_set_cov_mean</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGaussCovMVND.html#ncm-data-gauss-cov-mvnd-peek-mean" title="ncm_data_gauss_cov_mvnd_peek_mean ()">ncm_data_gauss_cov_mvnd_peek_mean</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGaussCovMVND.html#ncm-data-gauss-cov-mvnd-gen" title="ncm_data_gauss_cov_mvnd_gen ()">ncm_data_gauss_cov_mvnd_gen</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGaussCovMVND.html#ncm-data-gauss-cov-mvnd-est-ratio" title="ncm_data_gauss_cov_mvnd_est_ratio ()">ncm_data_gauss_cov_mvnd_est_ratio</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGaussCovMVND.html#ncm-data-gauss-cov-mvnd-log-info" title="ncm_data_gauss_cov_mvnd_log_info ()">ncm_data_gauss_cov_mvnd_log_info</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmDataGaussCovMVND.object-hierarchy" id="NcmDataGaussCovMVND.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcmData.html" title="NcmData">NcmData</a>
+        <span class="lineart">╰──</span> <a class="link" href="NcmDataGaussCov.html" title="NcmDataGaussCov">NcmDataGaussCov</a>
+            <span class="lineart">╰──</span> NcmDataGaussCovMVND
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmDataGaussCovMVND.description" id="NcmDataGaussCovMVND.description"></a><h2>Description</h2>
+<p>Multivariate Normal distribution which uses the covariance matrix as input.
+It should be used with its companion object <a class="link" href="NcmModelMVND.html" title="NcmModelMVND"><span class="type">NcmModelMVND</span></a>.</p>
+</div>
+<div class="refsect1">
+<a name="NcmDataGaussCovMVND.functions_details" id="NcmDataGaussCovMVND.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="NcmDataGaussCovMVNDBound" id="NcmDataGaussCovMVNDBound"></a><h3>NcmDataGaussCovMVNDBound ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="c_punctuation">(</span>*NcmDataGaussCovMVNDBound<span class="c_punctuation">)</span> (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> obj</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *y</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-gauss-cov-mvnd-new" id="ncm-data-gauss-cov-mvnd-new"></a><h3>ncm_data_gauss_cov_mvnd_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="returnvalue">NcmDataGaussCovMVND</span></a> *
+ncm_data_gauss_cov_mvnd_new (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> dim</code></em>);</pre>
+<p>Creates a new <em class="parameter"><code>dim</code></em>
+-dimensional MVND.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-new.parameters" id="ncm-data-gauss-cov-mvnd-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>dim</p></td>
+<td class="parameter_description"><p>dimension of the MVND</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-new.returns" id="ncm-data-gauss-cov-mvnd-new.returns"></a><h4>Returns</h4>
+<p> the newly created object.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-gauss-cov-mvnd-new-full" id="ncm-data-gauss-cov-mvnd-new-full"></a><h3>ncm_data_gauss_cov_mvnd_new_full ()</h3>
+<pre class="programlisting"><a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="returnvalue">NcmDataGaussCovMVND</span></a> *
+ncm_data_gauss_cov_mvnd_new_full (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> dim</code></em>,
+                                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma_min</code></em>,
+                                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma_max</code></em>,
+                                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> cor_level</code></em>,
+                                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mean_min</code></em>,
+                                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mean_max</code></em>,
+                                  <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
+<p>Creates a new <em class="parameter"><code>dim</code></em>
+-dimensional MVND and generate using <em class="parameter"><code>rng</code></em>
+ a mean 
+and correlation matrix using the parameters above.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-new-full.parameters" id="ncm-data-gauss-cov-mvnd-new-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dim</p></td>
+<td class="parameter_description"><p>dimension of the MVND</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sigma_min</p></td>
+<td class="parameter_description"><p>minimum value of $\sigma_i$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sigma_max</p></td>
+<td class="parameter_description"><p>maximum value of $\sigma_i$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cor_level</p></td>
+<td class="parameter_description"><p>correlation level</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mean_min</p></td>
+<td class="parameter_description"><p>minimum mean $\mu_i$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mean_max</p></td>
+<td class="parameter_description"><p>maximum mean $\mu_i$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rng</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-new-full.returns" id="ncm-data-gauss-cov-mvnd-new-full.returns"></a><h4>Returns</h4>
+<p> the newly created object.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-gauss-cov-mvnd-ref" id="ncm-data-gauss-cov-mvnd-ref"></a><h3>ncm_data_gauss_cov_mvnd_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="returnvalue">NcmDataGaussCovMVND</span></a> *
+ncm_data_gauss_cov_mvnd_ref (<em class="parameter"><code><a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a> *data_mvnd</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>data_mvnd</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-ref.parameters" id="ncm-data-gauss-cov-mvnd-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data_mvnd</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-ref.returns" id="ncm-data-gauss-cov-mvnd-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>data_mvnd</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-gauss-cov-mvnd-free" id="ncm-data-gauss-cov-mvnd-free"></a><h3>ncm_data_gauss_cov_mvnd_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_gauss_cov_mvnd_free (<em class="parameter"><code><a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a> *data_mvnd</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>data_mvnd</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-free.parameters" id="ncm-data-gauss-cov-mvnd-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data_mvnd</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-gauss-cov-mvnd-clear" id="ncm-data-gauss-cov-mvnd-clear"></a><h3>ncm_data_gauss_cov_mvnd_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_gauss_cov_mvnd_clear (<em class="parameter"><code><a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a> **data_mvnd</code></em>);</pre>
+<p>If <em class="parameter"><code>data_mvnd</code></em>
+ is different from NULL, decreases the reference count of 
+<em class="parameter"><code>data_mvnd</code></em>
+ by one and sets <em class="parameter"><code>data_mvnd</code></em>
+ to NULL.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-clear.parameters" id="ncm-data-gauss-cov-mvnd-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data_mvnd</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-gauss-cov-mvnd-gen-cov-mean" id="ncm-data-gauss-cov-mvnd-gen-cov-mean"></a><h3>ncm_data_gauss_cov_mvnd_gen_cov_mean ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_gauss_cov_mvnd_gen_cov_mean (<em class="parameter"><code><a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a> *data_mvnd</code></em>,
+                                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma_min</code></em>,
+                                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma_max</code></em>,
+                                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> cor_level</code></em>,
+                                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mean_min</code></em>,
+                                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mean_max</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
+<p>Generates using <em class="parameter"><code>rng</code></em>
+ the mean and correlation matrix using 
+the parameters above.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-gen-cov-mean.parameters" id="ncm-data-gauss-cov-mvnd-gen-cov-mean.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data_mvnd</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sigma_min</p></td>
+<td class="parameter_description"><p>minimum value of $\sigma_i$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sigma_max</p></td>
+<td class="parameter_description"><p>maximum value of $\sigma_i$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cor_level</p></td>
+<td class="parameter_description"><p>correlation level</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mean_min</p></td>
+<td class="parameter_description"><p>minimum mean $\mu_i$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mean_max</p></td>
+<td class="parameter_description"><p>maximum mean $\mu_i$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rng</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-gauss-cov-mvnd-set-cov-mean" id="ncm-data-gauss-cov-mvnd-set-cov-mean"></a><h3>ncm_data_gauss_cov_mvnd_set_cov_mean ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_gauss_cov_mvnd_set_cov_mean (<em class="parameter"><code><a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a> *data_mvnd</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *mean</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cov</code></em>);</pre>
+<p>Sets the mean and covariance of <em class="parameter"><code>data_mvnd</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-set-cov-mean.parameters" id="ncm-data-gauss-cov-mvnd-set-cov-mean.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data_mvnd</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mean</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-gauss-cov-mvnd-peek-mean" id="ncm-data-gauss-cov-mvnd-peek-mean"></a><h3>ncm_data_gauss_cov_mvnd_peek_mean ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+ncm_data_gauss_cov_mvnd_peek_mean (<em class="parameter"><code><a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a> *data_mvnd</code></em>);</pre>
+<p>Peeks current mean vector.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-peek-mean.parameters" id="ncm-data-gauss-cov-mvnd-peek-mean.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data_mvnd</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-peek-mean.returns" id="ncm-data-gauss-cov-mvnd-peek-mean.returns"></a><h4>Returns</h4>
+<p>the current mean vector. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-gauss-cov-mvnd-gen" id="ncm-data-gauss-cov-mvnd-gen"></a><h3>ncm_data_gauss_cov_mvnd_gen ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+ncm_data_gauss_cov_mvnd_gen (<em class="parameter"><code><a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a> *data_mvnd</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> obj</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcmDataGaussCovMVND.html#NcmDataGaussCovMVNDBound" title="NcmDataGaussCovMVNDBound ()"><span class="type">NcmDataGaussCovMVNDBound</span></a> bound</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>,
+                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> *N</code></em>);</pre>
+<p>Generates one realization of the MVND. If <em class="parameter"><code>bound</code></em>
+ is not NULL,
+generates realizations untill <em class="parameter"><code>bound</code></em>
+ returns TRUE.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-gen.parameters" id="ncm-data-gauss-cov-mvnd-gen.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data_mvnd</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a pointer to use in <em class="parameter"><code>bound</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bound</p></td>
+<td class="parameter_description"><p>a NcmDataGaussCovMVNDBound. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rng</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>N</p></td>
+<td class="parameter_description"><p>number of realizations necessary to generate a valid one. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-gen.returns" id="ncm-data-gauss-cov-mvnd-gen.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> (should not be modified). </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-gauss-cov-mvnd-est-ratio" id="ncm-data-gauss-cov-mvnd-est-ratio"></a><h3>ncm_data_gauss_cov_mvnd_est_ratio ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_data_gauss_cov_mvnd_est_ratio (<em class="parameter"><code><a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a> *data_mvnd</code></em>,
+                                   <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> obj</code></em>,
+                                   <em class="parameter"><code><a class="link" href="NcmDataGaussCovMVND.html#NcmDataGaussCovMVNDBound" title="NcmDataGaussCovMVNDBound ()"><span class="type">NcmDataGaussCovMVNDBound</span></a> bound</code></em>,
+                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> *N</code></em>,
+                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> *Nin</code></em>,
+                                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>,
+                                   <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
+<p>Estimate the ratio between accepted realizations and total number 
+of realizations. The variable <em class="parameter"><code>reltol</code></em>
+ controls the relative tolerance
+on the ratio estimate. The variables <em class="parameter"><code>N</code></em>
+ and <em class="parameter"><code>Nin</code></em>
+ can be used to inform
+previous number of realizations.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-est-ratio.parameters" id="ncm-data-gauss-cov-mvnd-est-ratio.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data_mvnd</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a pointer to use in <em class="parameter"><code>bound</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bound</p></td>
+<td class="parameter_description"><p>a NcmDataGaussCovMVNDBound. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>N</p></td>
+<td class="parameter_description"><p>total number of realizations. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>Nin</p></td>
+<td class="parameter_description"><p>number of realizations accepted. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>reltol</p></td>
+<td class="parameter_description"><p>relative tolerance</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rng</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-est-ratio.returns" id="ncm-data-gauss-cov-mvnd-est-ratio.returns"></a><h4>Returns</h4>
+<p> estimated ratio</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-gauss-cov-mvnd-log-info" id="ncm-data-gauss-cov-mvnd-log-info"></a><h3>ncm_data_gauss_cov_mvnd_log_info ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_gauss_cov_mvnd_log_info (<em class="parameter"><code><a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a> *data_mvnd</code></em>);</pre>
+<p>Logs mean and covariance matrix.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-mvnd-log-info.parameters" id="ncm-data-gauss-cov-mvnd-log-info.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data_mvnd</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCovMVND</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

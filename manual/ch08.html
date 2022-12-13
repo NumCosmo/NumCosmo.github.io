@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Large Scale Structure: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="prev" href="NcHIPertITwoFluids.html" title="NcHIPertITwoFluids" />
+<link rel="next" href="NcWindow.html" title="NcWindow" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><img src="up-insensitive.png" width="16" height="16" border="0" /></td>
+<td><a accesskey="p" href="NcHIPertITwoFluids.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcWindow.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h1 class="title">
+<a name="id-1.9" id="id-1.9"></a>Large Scale Structure</h1></div></div></div>
+<div class="toc"><dl class="toc">
+<dt><span class="section"><a href="ch08.html#id-1.9.2">Window Function</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcWindow.html">NcWindow</a></span><span class="refpurpose"> — Abstract class for window functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcWindowTophat.html">NcWindowTophat</a></span><span class="refpurpose"> — A top-hat window function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcWindowGaussian.html">NcWindowGaussian</a></span><span class="refpurpose"> — A gaussian window function.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch08s02.html">Transfer Function</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcTransferFunc.html">NcTransferFunc</a></span><span class="refpurpose"> — Abstrac class for perturbation transfer function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcTransferFuncBBKS.html">NcTransferFuncBBKS</a></span><span class="refpurpose"> — Bardeen, Bond, Kaiser and Szalay (BBKS) transfer function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcTransferFuncEH.html">NcTransferFuncEH</a></span><span class="refpurpose"> — Eisenstein-Hu fitting function for the transfer function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcTransferFuncCAMB.html">NcTransferFuncCAMB</a></span><span class="refpurpose"> — Transfer function using CAMB as backend.</span>
+</dt>
+</dl></dd>
+<dt>
+<span class="refentrytitle"><a href="NcGrowthFunc.html">NcGrowthFunc</a></span><span class="refpurpose"> — Growth function of linear perturbations.</span>
+</dt>
+<dt><span class="section"><a href="ch08s03.html">Matter Power Spectrum</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcPowspecML.html">NcPowspecML</a></span><span class="refpurpose"> — Abstract class for linear matter power spectrum implementation.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcPowspecMLFixSpline.html">NcPowspecMLFixSpline</a></span><span class="refpurpose"> — Class for linear matter power spectrum from a fixed spline.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcPowspecMLTransfer.html">NcPowspecMLTransfer</a></span><span class="refpurpose"> — Class for linear matter power spectrum from a transfer function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcPowspecMLCBE.html">NcPowspecMLCBE</a></span><span class="refpurpose"> — linear matter power spectrum from CLASS backend.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcPowspecMNL.html">NcPowspecMNL</a></span><span class="refpurpose"> — Abstrac class for non-linear matter power spectrum implementation.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcPowspecMNLHaloFit.html">NcPowspecMNLHaloFit</a></span><span class="refpurpose"> — nonlinear matter power spectrum from Halofit model.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch08s04.html"> Density Profile</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcHaloDensityProfile.html">NcHaloDensityProfile</a></span><span class="refpurpose"> — Abstract class for density profile functions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloDensityProfileNFW.html">NcHaloDensityProfileNFW</a></span><span class="refpurpose"> — Density profile of Navarro-Frenk-White type.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloDensityProfileEinasto.html">NcHaloDensityProfileEinasto</a></span><span class="refpurpose"> — Density profile of Einasto type.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloDensityProfileDK14.html">NcHaloDensityProfileDK14</a></span><span class="refpurpose"> — Density profile of Diemer \&amp; Kravtsov type.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloDensityProfileHernquist.html">NcHaloDensityProfileHernquist</a></span><span class="refpurpose"> — Density profile of Hernquist type.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch08s05.html">Multiplicity Function</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFunc.html">NcMultiplicityFunc</a></span><span class="refpurpose"> — Dark matter halo multiplicity function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncPS.html">NcMultiplicityFuncPS</a></span><span class="refpurpose"> — Dark matter halo -- Press-Schechter multiplicity function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncST.html">NcMultiplicityFuncST</a></span><span class="refpurpose"> — Dark matter halo -- Sheth-Tormen multiplicity function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncJenkins.html">NcMultiplicityFuncJenkins</a></span><span class="refpurpose"> — Dark matter halo -- Jenkins multiplicity function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncWarren.html">NcMultiplicityFuncWarren</a></span><span class="refpurpose"> — Dark matter halo -- Warren multiplicity function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncTinker.html">NcMultiplicityFuncTinker</a></span><span class="refpurpose"> — Dark matter halo -- Tinker multiplicity function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncTinkerMeanNormalized.html">NcMultiplicityFuncTinkerMeanNormalized</a></span><span class="refpurpose"> — Dark matter halo -- Tinker normalized multiplicity function mean matter density.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncCrocce.html">NcMultiplicityFuncCrocce</a></span><span class="refpurpose"> — Dark matter halo -- Crocce multiplicity function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncBocquet.html">NcMultiplicityFuncBocquet</a></span><span class="refpurpose"> — Dark matter halo -- Bocquet multiplicity function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcMultiplicityFuncWatson.html">NcMultiplicityFuncWatson</a></span><span class="refpurpose"> — Dark matter halo -- Watson multiplicity function.</span>
+</dt>
+</dl></dd>
+<dt>
+<span class="refentrytitle"><a href="NcHaloMassFunction.html">NcHaloMassFunction</a></span><span class="refpurpose"> — Clusters mass function.</span>
+</dt>
+<dt><span class="section"><a href="ch08s06.html">Halo Bias Function Type</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcHaloBiasType.html">NcHaloBiasType</a></span><span class="refpurpose"> — Abstract class for halo bias function type.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloBiasTypePS.html">NcHaloBiasTypePS</a></span><span class="refpurpose"> — Press-Schechter halo bias function type.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloBiasTypeSTSpher.html">NcHaloBiasTypeSTSpher</a></span><span class="refpurpose"> — Sheth-Tormen spherical halo bias function type.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloBiasTypeSTEllip.html">NcHaloBiasTypeSTEllip</a></span><span class="refpurpose"> — Sheth-Tormen elliptical halo bias function type.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloBiasTypeTinker.html">NcHaloBiasTypeTinker</a></span><span class="refpurpose"> — Tinker halo bias function type.</span>
+</dt>
+</dl></dd>
+<dt>
+<span class="refentrytitle"><a href="NcHaloBiasFunc.html">NcHaloBiasFunc</a></span><span class="refpurpose"> — Mean halo bias function.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxyAcf.html">NcGalaxyAcf</a></span><span class="refpurpose"> — Galaxy angular correlation function.</span>
+</dt>
+<dt><span class="section"><a href="ch08s07.html">Cluster Redshift</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcClusterRedshift.html">NcClusterRedshift</a></span><span class="refpurpose"> — Abstract class for cluster redshift distributions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterRedshiftNodist.html">NcClusterRedshiftNodist</a></span><span class="refpurpose"> — Cluster abundance redshift real redshift distribution.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterPhotozGauss.html">NcClusterPhotozGauss</a></span><span class="refpurpose"> — Individual gaussian photometric distribution for clusters.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterPhotozGaussGlobal.html">NcClusterPhotozGaussGlobal</a></span><span class="refpurpose"> — Global gaussian photometric distribution for clusters.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch08s08.html">Cluster Mass</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMass.html">NcClusterMass</a></span><span class="refpurpose"> — Abstract class for cluster mass distributions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMassNodist.html">NcClusterMassNodist</a></span><span class="refpurpose"> — Cluster mass real mass distribution.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMassLnnormal.html">NcClusterMassLnnormal</a></span><span class="refpurpose"> — Cluster mass ln-normal distribution.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMassVanderlinde.html">NcClusterMassVanderlinde</a></span><span class="refpurpose"> — Sunyaev-Zel'dovich cluster mass distribution.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMassBenson.html">NcClusterMassBenson</a></span><span class="refpurpose"> — Sunyaev-Zel'dovich cluster mass distribution.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMassBensonXRay.html">NcClusterMassBensonXRay</a></span><span class="refpurpose"> — Sunyaev-Zel'dovich and x-ray cluster abundance mass distribution.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMassPlCL.html">NcClusterMassPlCL</a></span><span class="refpurpose"> — Planck-CLASH Cluster Mass Distribution</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterMassAscaso.html">NcClusterMassAscaso</a></span><span class="refpurpose"> — FIXME</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch08s09.html">Cross-correlations</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcXcor.html">Cross-correlations</a></span><span class="refpurpose"> — Angular auto- and cross-spectra.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcXcorAB.html">NcXcorAB</a></span><span class="refpurpose"> — Cross-correlations data storage object.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcXcorLimberKernel.html">NcXcorLimberKernel</a></span><span class="refpurpose"> — Abstract object for the kernels of projected observables used in cross-correlations.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcXcorLimberKernelGal.html">NcXcorLimberKernelGal</a></span><span class="refpurpose"> — implementation of <span class="type">NcXcorLimberKernel</span> for galaxy density</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcXcorLimberKernelCMBLensing.html">NcXcorLimberKernelCMBLensing</a></span><span class="refpurpose"> — implementation of <span class="type">NcXcorLimberKernel</span> for CMB lensing</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcXcorLimberKernelWeakLensing.html">NcXcorLimberKernelWeakLensing</a></span><span class="refpurpose"> — implementation of <span class="type">NcXcorLimberKernel</span> for galaxy weak lensing</span>
+</dt>
+</dl></dd>
+<dt>
+<span class="refentrytitle"><a href="NcClusterAbundance.html">NcClusterAbundance</a></span><span class="refpurpose"> — Cluster abundance distribution</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcClusterPseudoCounts.html">NcClusterPseudoCounts</a></span><span class="refpurpose"> — FIXME</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcCorClusterCmbLensLimber.html">NcCorClusterCmbLensLimber</a></span><span class="refpurpose"> — Cluster and CMB lensing correlation using halo model and Limber approximation.</span>
+</dt>
+<dt><span class="section"><a href="ch08s10.html">Galaxy Redshift</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxyRedshift.html">NcGalaxyRedshift</a></span><span class="refpurpose"> — Abstract class describing galaxy redshifts.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxyRedshiftSpec.html">NcGalaxyRedshiftSpec</a></span><span class="refpurpose"> — Class describing spectroscopic galaxy redshifts.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxyRedshiftSpline.html">NcGalaxyRedshiftSpline</a></span><span class="refpurpose"> — Class describing spectroscopic galaxy redshifts.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxyRedshiftGauss.html">NcGalaxyRedshiftGauss</a></span><span class="refpurpose"> — Class describing Gaussian photometric galaxy redshifts.</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch08s11.html">Weak Lensing</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="NcWLSurfaceMassDensity.html">NcWLSurfaceMassDensity</a></span><span class="refpurpose"> — Weak lensing surface mass density</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcReducedShearClusterMass.html">NcReducedShearClusterMass</a></span><span class="refpurpose"> — FIXME cluster mass estimation via reduced shear</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcReducedShearCalib.html">NcReducedShearCalib</a></span><span class="refpurpose"> — Reduced Shear Calibration</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcReducedShearCalibWtg.html">NcReducedShearCalibWtg</a></span><span class="refpurpose"> — Reduced Shear Calibration</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxyWL.html">NcGalaxyWL</a></span><span class="refpurpose"> — Object containing galaxy weak lensing data</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxyWLDist.html">NcGalaxyWLDist</a></span><span class="refpurpose"> — Abstract class describing galaxy wl_dists.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxyWLReducedShearGauss.html">NcGalaxyWLReducedShearGauss</a></span><span class="refpurpose"> — Abstract class describing galaxy weak lensing reduced shear Gaussian distribution</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxyWLProj.html">NcGalaxyWLProj</a></span><span class="refpurpose"> — Abstract class describing galaxy weak lensing reduced shear Gaussian distribution</span>
+</dt>
+</dl></dd>
+<dt><span class="section"><a href="ch08s12.html">Galaxy ACF</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="NcGalaxySelfunc.html">NcGalaxySelfunc</a></span><span class="refpurpose"> — Galaxy phenomelogical selection function.</span>
+</dt></dl></dd>
+</dl></div>
+<div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="id-1.9.2" id="id-1.9.2"></a>Window Function</h2></div></div></div></div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

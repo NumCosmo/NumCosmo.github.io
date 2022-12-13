@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmFitESMCMCWalkerAPES: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s15.html" title="MCMC and ESMCMC" />
+<link rel="prev" href="NcmFitESMCMCWalkerWalk.html" title="NcmFitESMCMCWalkerWalk" />
+<link rel="next" href="ch02s16.html" title="MCMC Testing" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmFitESMCMCWalkerAPES.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmFitESMCMCWalkerAPES.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmFitESMCMCWalkerAPES.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s15.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcmFitESMCMCWalkerWalk.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="ch02s16.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmFitESMCMCWalkerAPES" id="NcmFitESMCMCWalkerAPES"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmFitESMCMCWalkerAPES.top_of_page" id="NcmFitESMCMCWalkerAPES.top_of_page"></a>NcmFitESMCMCWalkerAPES</span></h2>
+<p>NcmFitESMCMCWalkerAPES — Ensemble sampler Markov Chain Monte Carlo walker - apes move.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmFitESMCMCWalkerAPES.functions" id="NcmFitESMCMCWalkerAPES.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="returnvalue">NcmFitESMCMCWalkerAPES</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-new" title="ncm_fit_esmcmc_walker_apes_new ()">ncm_fit_esmcmc_walker_apes_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="returnvalue">NcmFitESMCMCWalkerAPES</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-new-full" title="ncm_fit_esmcmc_walker_apes_new_full ()">ncm_fit_esmcmc_walker_apes_new_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="returnvalue">NcmFitESMCMCWalkerAPES</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-ref" title="ncm_fit_esmcmc_walker_apes_ref ()">ncm_fit_esmcmc_walker_apes_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-free" title="ncm_fit_esmcmc_walker_apes_free ()">ncm_fit_esmcmc_walker_apes_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-clear" title="ncm_fit_esmcmc_walker_apes_clear ()">ncm_fit_esmcmc_walker_apes_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-set-method" title="ncm_fit_esmcmc_walker_apes_set_method ()">ncm_fit_esmcmc_walker_apes_set_method</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-set-k-type" title="ncm_fit_esmcmc_walker_apes_set_k_type ()">ncm_fit_esmcmc_walker_apes_set_k_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-set-over-smooth" title="ncm_fit_esmcmc_walker_apes_set_over_smooth ()">ncm_fit_esmcmc_walker_apes_set_over_smooth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESMethod" title="enum NcmFitESMCMCWalkerAPESMethod"><span class="returnvalue">NcmFitESMCMCWalkerAPESMethod</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-get-method" title="ncm_fit_esmcmc_walker_apes_get_method ()">ncm_fit_esmcmc_walker_apes_get_method</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESKType" title="enum NcmFitESMCMCWalkerAPESKType"><span class="returnvalue">NcmFitESMCMCWalkerAPESKType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-get-k-type" title="ncm_fit_esmcmc_walker_apes_get_k_type ()">ncm_fit_esmcmc_walker_apes_get_k_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-get-over-smooth" title="ncm_fit_esmcmc_walker_apes_get_over_smooth ()">ncm_fit_esmcmc_walker_apes_get_over_smooth</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-use-interp" title="ncm_fit_esmcmc_walker_apes_use_interp ()">ncm_fit_esmcmc_walker_apes_use_interp</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-interp" title="ncm_fit_esmcmc_walker_apes_interp ()">ncm_fit_esmcmc_walker_apes_interp</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-peek-sds" title="ncm_fit_esmcmc_walker_apes_peek_sds ()">ncm_fit_esmcmc_walker_apes_peek_sds</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-set-local-frac" title="ncm_fit_esmcmc_walker_apes_set_local_frac ()">ncm_fit_esmcmc_walker_apes_set_local_frac</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-set-cov-fixed-from-mset" title="ncm_fit_esmcmc_walker_apes_set_cov_fixed_from_mset ()">ncm_fit_esmcmc_walker_apes_set_cov_fixed_from_mset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-set-cov-robust-diag" title="ncm_fit_esmcmc_walker_apes_set_cov_robust_diag ()">ncm_fit_esmcmc_walker_apes_set_cov_robust_diag</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-set-cov-robust" title="ncm_fit_esmcmc_walker_apes_set_cov_robust ()">ncm_fit_esmcmc_walker_apes_set_cov_robust</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmFitESMCMCWalkerAPES.properties" id="NcmFitESMCMCWalkerAPES.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESKType" title="enum NcmFitESMCMCWalkerAPESKType"><span class="type">NcmFitESMCMCWalkerAPESKType</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPES--kernel-type" title="The “kernel-type” property">kernel-type</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESMethod" title="enum NcmFitESMCMCWalkerAPESMethod"><span class="type">NcmFitESMCMCWalkerAPESMethod</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPES--method" title="The “method” property">method</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPES--over-smooth" title="The “over-smooth” property">over-smooth</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPES--use-interp" title="The “use-interp” property">use-interp</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmFitESMCMCWalkerAPES.other" id="NcmFitESMCMCWalkerAPES.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESMethod" title="enum NcmFitESMCMCWalkerAPESMethod">NcmFitESMCMCWalkerAPESMethod</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESKType" title="enum NcmFitESMCMCWalkerAPESKType">NcmFitESMCMCWalkerAPESKType</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmFitESMCMCWalkerAPES.object-hierarchy" id="NcmFitESMCMCWalkerAPES.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">├──</span> NcmFitESMCMCWalkerAPESKType
+    <span class="lineart">╰──</span> NcmFitESMCMCWalkerAPESMethod
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker">NcmFitESMCMCWalker</a>
+        <span class="lineart">╰──</span> NcmFitESMCMCWalkerAPES
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmFitESMCMCWalkerAPES.description" id="NcmFitESMCMCWalkerAPES.description"></a><h2>Description</h2>
+<p>Implementing apes move walker for <a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> (affine invariant).</p>
+<p>This object implements the Approximate Posterior Ensemble Sample (APES) step proposal for a walker.
+This proposal was developed by Sandro Dias Pinto Vitenti and implemented in this library. Below there is a description of the proposal.</p>
+<p>The APES proposal consists of using radial basis interpolation to generate an interpolant $\tilde{\pi}$ 
+from a target distribution $\pi$ and use this interpolant to propose new points for the walker. 
+By using a distribution $\tilde{\pi}$ that resembles the original target distribution, the APES proposal 
+generates samples that converge faster to the target distribution and are more independent when compared to other step proposals.</p>
+<p>The APES step is implemented as follows: suppose that there are $L$ walkers. They are divided into two blocks $L_1$ and $L_2$,
+containing the first and the second half of the walkers respectively. When proposing new points $Y$ for the walkers in the $L_1$ block,
+we use the points in the $L_2$ block to generate an interpolant $\tilde{\pi}_{L_2}$ and then propose points $Y \sim \tilde{\pi}_{L_2}$ 
+for the $L_1$ block. These points are accepted or rejected based on an acceptance probability $A(Y|X)$, and after the points of the first 
+block are updated, we do the same procedure for the $L_2$ block using the $L_1$ block. This procedure can be seen in the pseudocode below.</p>
+<p><span class="inlinemediaobject"><img src="apes.png" alt="apes_sketch" /></span></p>
+<p>The user must provide the input the values: <em class="parameter"><code>nwalkers</code></em>
+, <em class="parameter"><code>nparams</code></em>
+, <em class="parameter"><code>method</code></em>
+, <em class="parameter"><code>k</code></em>
+_<em class="parameter"><code>type</code></em>
+, <em class="parameter"><code>over</code></em>
+_<em class="parameter"><code>smooth</code></em>
+$ and <em class="parameter"><code>use</code></em>
+_<em class="parameter"><code>interp</code></em>
+ - <a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-new-full" title="ncm_fit_esmcmc_walker_apes_new_full ()"><code class="function">ncm_fit_esmcmc_walker_apes_new_full()</code></a>.
+The user can also initialize the object with: <em class="parameter"><code>nwalkers</code></em>
+, <em class="parameter"><code>nparams</code></em>
+ - <a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-new" title="ncm_fit_esmcmc_walker_apes_new ()"><code class="function">ncm_fit_esmcmc_walker_apes_new()</code></a> and let the remaining parameters as default, 
+which are defined in the properties of the class.
+For more information about the algorithm, check the explanation below.</p>
+<p>	- This object shall be used in the <a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> class to generate a Monte Carlo Markov Chain using an ensemble sampler. 
+               To see an example of its implementation, check the file example_rosenbrock.py in NumCosmo/examples.</p>
+<p>	- Regarding the radial basis interpolation method is implemented, check the <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class.</p>
+<p>	- Regarding the types of kernel used in the interpolation method as the radial basis function, check the <a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> class.</p>
+</div>
+<div class="refsect1">
+<a name="NcmFitESMCMCWalkerAPES.functions_details" id="NcmFitESMCMCWalkerAPES.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-new" id="ncm-fit-esmcmc-walker-apes-new"></a><h3>ncm_fit_esmcmc_walker_apes_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="returnvalue">NcmFitESMCMCWalkerAPES</span></a> *
+ncm_fit_esmcmc_walker_apes_new (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nwalkers</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nparams</code></em>);</pre>
+<p>Creates a new <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> to be used
+with <em class="parameter"><code>nwalkers</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-new.parameters" id="ncm-fit-esmcmc-walker-apes-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>nwalkers</p></td>
+<td class="parameter_description"><p>number of walkers</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>nparams</p></td>
+<td class="parameter_description"><p>number of parameters</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-new.returns" id="ncm-fit-esmcmc-walker-apes-new.returns"></a><h4>Returns</h4>
+<p>a new <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-new-full" id="ncm-fit-esmcmc-walker-apes-new-full"></a><h3>ncm_fit_esmcmc_walker_apes_new_full ()</h3>
+<pre class="programlisting"><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="returnvalue">NcmFitESMCMCWalkerAPES</span></a> *
+ncm_fit_esmcmc_walker_apes_new_full (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nwalkers</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nparams</code></em>,
+                                     <em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESMethod" title="enum NcmFitESMCMCWalkerAPESMethod"><span class="type">NcmFitESMCMCWalkerAPESMethod</span></a> method</code></em>,
+                                     <em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESKType" title="enum NcmFitESMCMCWalkerAPESKType"><span class="type">NcmFitESMCMCWalkerAPESKType</span></a> k_type</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> over_smooth</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_interp</code></em>);</pre>
+<p>Creates a new <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> to be used with <em class="parameter"><code>nwalkers</code></em>
+,
+interpolation method <em class="parameter"><code>method</code></em>
+, kernel <em class="parameter"><code>kernel</code></em>
+ and over-smooth parameter
+<em class="parameter"><code>over_smooth</code></em>
+. If <em class="parameter"><code>use_interp</code></em>
+ is TRUE computes the approximation
+interpolating the computed likelihood values, otherwise, use standard
+kernel density estimation.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-new-full.parameters" id="ncm-fit-esmcmc-walker-apes-new-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>nwalkers</p></td>
+<td class="parameter_description"><p>number of walkers</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>nparams</p></td>
+<td class="parameter_description"><p>number of parameters</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>method</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESMethod" title="enum NcmFitESMCMCWalkerAPESMethod"><span class="type">NcmFitESMCMCWalkerAPESMethod</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k_type</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESKType" title="enum NcmFitESMCMCWalkerAPESKType"><span class="type">NcmFitESMCMCWalkerAPESKType</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>over_smooth</p></td>
+<td class="parameter_description"><p>a double</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>use_interp</p></td>
+<td class="parameter_description"><p>a boolean</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-new-full.returns" id="ncm-fit-esmcmc-walker-apes-new-full.returns"></a><h4>Returns</h4>
+<p>a new <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-ref" id="ncm-fit-esmcmc-walker-apes-ref"></a><h3>ncm_fit_esmcmc_walker_apes_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="returnvalue">NcmFitESMCMCWalkerAPES</span></a> *
+ncm_fit_esmcmc_walker_apes_ref (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>apes</code></em>
+ atomically.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-ref.parameters" id="ncm-fit-esmcmc-walker-apes-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-ref.returns" id="ncm-fit-esmcmc-walker-apes-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>apes</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-free" id="ncm-fit-esmcmc-walker-apes-free"></a><h3>ncm_fit_esmcmc_walker_apes_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_esmcmc_walker_apes_free (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>apes</code></em>
+ atomically.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-free.parameters" id="ncm-fit-esmcmc-walker-apes-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-clear" id="ncm-fit-esmcmc-walker-apes-clear"></a><h3>ncm_fit_esmcmc_walker_apes_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_esmcmc_walker_apes_clear (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> **apes</code></em>);</pre>
+<p>Decreases the reference count of *<em class="parameter"><code>apes</code></em>
+ atomically and sets the pointer *<em class="parameter"><code>apes</code></em>
+ to null.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-clear.parameters" id="ncm-fit-esmcmc-walker-apes-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-set-method" id="ncm-fit-esmcmc-walker-apes-set-method"></a><h3>ncm_fit_esmcmc_walker_apes_set_method ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_esmcmc_walker_apes_set_method (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>,
+                                       <em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESMethod" title="enum NcmFitESMCMCWalkerAPESMethod"><span class="type">NcmFitESMCMCWalkerAPESMethod</span></a> method</code></em>);</pre>
+<p>Sets the estimation method to be used when building the
+posterior approximations.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-set-method.parameters" id="ncm-fit-esmcmc-walker-apes-set-method.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>method</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESMethod" title="enum NcmFitESMCMCWalkerAPESMethod"><span class="type">NcmFitESMCMCWalkerAPESMethod</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-set-k-type" id="ncm-fit-esmcmc-walker-apes-set-k-type"></a><h3>ncm_fit_esmcmc_walker_apes_set_k_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_esmcmc_walker_apes_set_k_type (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>,
+                                       <em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESKType" title="enum NcmFitESMCMCWalkerAPESKType"><span class="type">NcmFitESMCMCWalkerAPESKType</span></a> k_type</code></em>);</pre>
+<p>Sets the kernel to be used when building the
+posterior approximations.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-set-k-type.parameters" id="ncm-fit-esmcmc-walker-apes-set-k-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k_type</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESKType" title="enum NcmFitESMCMCWalkerAPESKType"><span class="type">NcmFitESMCMCWalkerAPESKType</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-set-over-smooth" id="ncm-fit-esmcmc-walker-apes-set-over-smooth"></a><h3>ncm_fit_esmcmc_walker_apes_set_over_smooth ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_esmcmc_walker_apes_set_over_smooth
+                               (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> os</code></em>);</pre>
+<p>Sets the over smooth parameter to adjust the interpolation
+bandwidth.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-set-over-smooth.parameters" id="ncm-fit-esmcmc-walker-apes-set-over-smooth.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>os</p></td>
+<td class="parameter_description"><p>a double</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-get-method" id="ncm-fit-esmcmc-walker-apes-get-method"></a><h3>ncm_fit_esmcmc_walker_apes_get_method ()</h3>
+<pre class="programlisting"><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESMethod" title="enum NcmFitESMCMCWalkerAPESMethod"><span class="returnvalue">NcmFitESMCMCWalkerAPESMethod</span></a>
+ncm_fit_esmcmc_walker_apes_get_method (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>);</pre>
+<p>Gets the currently used estimation method.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-get-method.parameters" id="ncm-fit-esmcmc-walker-apes-get-method.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-get-method.returns" id="ncm-fit-esmcmc-walker-apes-get-method.returns"></a><h4>Returns</h4>
+<p> currently used estimation method <a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESMethod" title="enum NcmFitESMCMCWalkerAPESMethod"><span class="type">NcmFitESMCMCWalkerAPESMethod</span></a>.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-get-k-type" id="ncm-fit-esmcmc-walker-apes-get-k-type"></a><h3>ncm_fit_esmcmc_walker_apes_get_k_type ()</h3>
+<pre class="programlisting"><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESKType" title="enum NcmFitESMCMCWalkerAPESKType"><span class="returnvalue">NcmFitESMCMCWalkerAPESKType</span></a>
+ncm_fit_esmcmc_walker_apes_get_k_type (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>);</pre>
+<p>Gets the currently used kernel.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-get-k-type.parameters" id="ncm-fit-esmcmc-walker-apes-get-k-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-get-k-type.returns" id="ncm-fit-esmcmc-walker-apes-get-k-type.returns"></a><h4>Returns</h4>
+<p> currently used kernel <a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESKType" title="enum NcmFitESMCMCWalkerAPESKType"><span class="type">NcmFitESMCMCWalkerAPESKType</span></a>.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-get-over-smooth" id="ncm-fit-esmcmc-walker-apes-get-over-smooth"></a><h3>ncm_fit_esmcmc_walker_apes_get_over_smooth ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_fit_esmcmc_walker_apes_get_over_smooth
+                               (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>);</pre>
+<p>Gets the currently used over-smooth parameter.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-get-over-smooth.parameters" id="ncm-fit-esmcmc-walker-apes-get-over-smooth.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-get-over-smooth.returns" id="ncm-fit-esmcmc-walker-apes-get-over-smooth.returns"></a><h4>Returns</h4>
+<p> currently used over-smooth.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-use-interp" id="ncm-fit-esmcmc-walker-apes-use-interp"></a><h3>ncm_fit_esmcmc_walker_apes_use_interp ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_esmcmc_walker_apes_use_interp (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>,
+                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_interp</code></em>);</pre>
+<p>Sets whether to use interpolation of the posterior approximation (<em class="parameter"><code>use_interp</code></em>
+ == TRUE)
+or kernel density estimate (<em class="parameter"><code>use_interp</code></em>
+ == FALSE).</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-use-interp.parameters" id="ncm-fit-esmcmc-walker-apes-use-interp.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>use_interp</p></td>
+<td class="parameter_description"><p>whether to use interpolation of the posterior</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-interp" id="ncm-fit-esmcmc-walker-apes-interp"></a><h3>ncm_fit_esmcmc_walker_apes_interp ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_fit_esmcmc_walker_apes_interp (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-interp.parameters" id="ncm-fit-esmcmc-walker-apes-interp.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-interp.returns" id="ncm-fit-esmcmc-walker-apes-interp.returns"></a><h4>Returns</h4>
+<p> whether interpolation is being used for posterior approximation.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-peek-sds" id="ncm-fit-esmcmc-walker-apes-peek-sds"></a><h3>ncm_fit_esmcmc_walker_apes_peek_sds ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_esmcmc_walker_apes_peek_sds (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>,
+                                     <em class="parameter"><code><a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> **sd0</code></em>,
+                                     <em class="parameter"><code><a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> **sd1</code></em>);</pre>
+<p>Peeks the currently used <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> objects.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-peek-sds.parameters" id="ncm-fit-esmcmc-walker-apes-peek-sds.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sd0</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sd1</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-set-local-frac" id="ncm-fit-esmcmc-walker-apes-set-local-frac"></a><h3>ncm_fit_esmcmc_walker_apes_set_local_frac ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_esmcmc_walker_apes_set_local_frac
+                               (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> local_frac</code></em>);</pre>
+<p>Sets the local fraction to use in VKDE.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-set-local-frac.parameters" id="ncm-fit-esmcmc-walker-apes-set-local-frac.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>local_frac</p></td>
+<td class="parameter_description"><p>a double determining the local fraction to use in VKDE.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-set-cov-fixed-from-mset" id="ncm-fit-esmcmc-walker-apes-set-cov-fixed-from-mset"></a><h3>ncm_fit_esmcmc_walker_apes_set_cov_fixed_from_mset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_esmcmc_walker_apes_set_cov_fixed_from_mset
+                               (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>Sets the fixed covariance to the KDE interpolation using
+the scales set into <em class="parameter"><code>mset</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-set-cov-fixed-from-mset.parameters" id="ncm-fit-esmcmc-walker-apes-set-cov-fixed-from-mset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> to get the covariance from.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-set-cov-robust-diag" id="ncm-fit-esmcmc-walker-apes-set-cov-robust-diag"></a><h3>ncm_fit_esmcmc_walker_apes_set_cov_robust_diag ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_esmcmc_walker_apes_set_cov_robust_diag
+                               (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>);</pre>
+<p>Sets the fixed covariance to the KDE interpolation using
+robust estimates of scale.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-set-cov-robust-diag.parameters" id="ncm-fit-esmcmc-walker-apes-set-cov-robust-diag.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-walker-apes-set-cov-robust" id="ncm-fit-esmcmc-walker-apes-set-cov-robust"></a><h3>ncm_fit_esmcmc_walker_apes_set_cov_robust ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_esmcmc_walker_apes_set_cov_robust
+                               (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>);</pre>
+<p>Sets the fixed covariance to the KDE interpolation using
+robust estimates of scale.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-walker-apes-set-cov-robust.parameters" id="ncm-fit-esmcmc-walker-apes-set-cov-robust.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>apes</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmFitESMCMCWalkerAPES.other_details" id="NcmFitESMCMCWalkerAPES.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcmFitESMCMCWalkerAPESMethod" id="NcmFitESMCMCWalkerAPESMethod"></a><h3>enum NcmFitESMCMCWalkerAPESMethod</h3>
+<p>Posterior estimation method.</p>
+<div class="refsect3">
+<a name="NcmFitESMCMCWalkerAPESMethod.members" id="NcmFitESMCMCWalkerAPESMethod.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-FIT-ESMCMC-WALKER-APES-METHOD-KDE:CAPS" id="NCM-FIT-ESMCMC-WALKER-APES-METHOD-KDE:CAPS"></a>NCM_FIT_ESMCMC_WALKER_APES_METHOD_KDE</p></td>
+<td class="enum_member_description">
+<p>Fixed kernel estimation.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-FIT-ESMCMC-WALKER-APES-METHOD-VKDE:CAPS" id="NCM-FIT-ESMCMC-WALKER-APES-METHOD-VKDE:CAPS"></a>NCM_FIT_ESMCMC_WALKER_APES_METHOD_VKDE</p></td>
+<td class="enum_member_description">
+<p>Variable kernel estimation.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitESMCMCWalkerAPESKType" id="NcmFitESMCMCWalkerAPESKType"></a><h3>enum NcmFitESMCMCWalkerAPESKType</h3>
+<p>Kernel used to build the approximate posterior.</p>
+<div class="refsect3">
+<a name="NcmFitESMCMCWalkerAPESKType.members" id="NcmFitESMCMCWalkerAPESKType.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-FIT-ESMCMC-WALKER-APES-KTYPE-CAUCHY:CAPS" id="NCM-FIT-ESMCMC-WALKER-APES-KTYPE-CAUCHY:CAPS"></a>NCM_FIT_ESMCMC_WALKER_APES_KTYPE_CAUCHY</p></td>
+<td class="enum_member_description">
+<p>Cauchy kernel.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-FIT-ESMCMC-WALKER-APES-KTYPE-ST3:CAPS" id="NCM-FIT-ESMCMC-WALKER-APES-KTYPE-ST3:CAPS"></a>NCM_FIT_ESMCMC_WALKER_APES_KTYPE_ST3</p></td>
+<td class="enum_member_description">
+<p>Student-t kernel with $\nu=3$.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-FIT-ESMCMC-WALKER-APES-KTYPE-GAUSS:CAPS" id="NCM-FIT-ESMCMC-WALKER-APES-KTYPE-GAUSS:CAPS"></a>NCM_FIT_ESMCMC_WALKER_APES_KTYPE_GAUSS</p></td>
+<td class="enum_member_description">
+<p>Gaussian kernel.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmFitESMCMCWalkerAPES.property-details" id="NcmFitESMCMCWalkerAPES.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmFitESMCMCWalkerAPES--kernel-type" id="NcmFitESMCMCWalkerAPES--kernel-type"></a><h3>The <code class="literal">“kernel-type”</code> property</h3>
+<pre class="programlisting">  “kernel-type”              <a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESKType" title="enum NcmFitESMCMCWalkerAPESKType"><span class="type">NcmFitESMCMCWalkerAPESKType</span></a></pre>
+<p>Kernel used in posterior approximation.</p>
+<p>Owner: NcmFitESMCMCWalkerAPES</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: NCM_FIT_ESMCMC_WALKER_APES_KTYPE_CAUCHY</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitESMCMCWalkerAPES--method" id="NcmFitESMCMCWalkerAPES--method"></a><h3>The <code class="literal">“method”</code> property</h3>
+<pre class="programlisting">  “method”                   <a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESMethod" title="enum NcmFitESMCMCWalkerAPESMethod"><span class="type">NcmFitESMCMCWalkerAPESMethod</span></a></pre>
+<p>Method used in posterior approximation.</p>
+<p>Owner: NcmFitESMCMCWalkerAPES</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: NCM_FIT_ESMCMC_WALKER_APES_METHOD_VKDE</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitESMCMCWalkerAPES--over-smooth" id="NcmFitESMCMCWalkerAPES--over-smooth"></a><h3>The <code class="literal">“over-smooth”</code> property</h3>
+<pre class="programlisting">  “over-smooth”              <span class="type">double</span></pre>
+<p>Over-smooth parameter used to adjust kernel bandwidth.</p>
+<p>Owner: NcmFitESMCMCWalkerAPES</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [1e-10,1e+10]</p>
+<p>Default value: 1</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmFitESMCMCWalkerAPES--use-interp" id="NcmFitESMCMCWalkerAPES--use-interp"></a><h3>The <code class="literal">“use-interp”</code> property</h3>
+<pre class="programlisting">  “use-interp”               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether to use interpolation to build the posterior approximation.</p>
+<p>Owner: NcmFitESMCMCWalkerAPES</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: TRUE</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

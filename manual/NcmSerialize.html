@@ -1,0 +1,2526 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmSerialize: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02.html#id-1.3.2" title="Miscellaneous Objects" />
+<link rel="prev" href="NcmNNLS.html" title="NcmNNLS" />
+<link rel="next" href="NcmObjArray.html" title="NcmObjArray" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmSerialize.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmSerialize.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmSerialize.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02.html#id-1.3.2"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcmNNLS.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmObjArray.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmSerialize" id="NcmSerialize"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmSerialize.top_of_page" id="NcmSerialize.top_of_page"></a>NcmSerialize</span></h2>
+<p>NcmSerialize — Serialization, deserialization and duplication object.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmSerialize.functions" id="NcmSerialize.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="returnvalue">NcmSerialize</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-new" title="ncm_serialize_new ()">ncm_serialize_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="returnvalue">NcmSerialize</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-ref" title="ncm_serialize_ref ()">ncm_serialize_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-free" title="ncm_serialize_free ()">ncm_serialize_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-unref" title="ncm_serialize_unref ()">ncm_serialize_unref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-clear" title="ncm_serialize_clear ()">ncm_serialize_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-reset" title="ncm_serialize_reset ()">ncm_serialize_reset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-clear-instances" title="ncm_serialize_clear_instances ()">ncm_serialize_clear_instances</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-log-stats" title="ncm_serialize_log_stats ()">ncm_serialize_log_stats</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-contain-instance" title="ncm_serialize_contain_instance ()">ncm_serialize_contain_instance</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-contain-name" title="ncm_serialize_contain_name ()">ncm_serialize_contain_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-count-instances" title="ncm_serialize_count_instances ()">ncm_serialize_count_instances</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-count-saved-serializations" title="ncm_serialize_count_saved_serializations ()">ncm_serialize_count_saved_serializations</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-peek-by-name" title="ncm_serialize_peek_by_name ()">ncm_serialize_peek_by_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-get-by-name" title="ncm_serialize_get_by_name ()">ncm_serialize_get_by_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-peek-name" title="ncm_serialize_peek_name ()">ncm_serialize_peek_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-set" title="ncm_serialize_set ()">ncm_serialize_set</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-unset" title="ncm_serialize_unset ()">ncm_serialize_unset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-remove-ser" title="ncm_serialize_remove_ser ()">ncm_serialize_remove_ser</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-is-named" title="ncm_serialize_is_named ()">ncm_serialize_is_named</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-set-property" title="ncm_serialize_set_property ()">ncm_serialize_set_property</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-set-property-from-key-file" title="ncm_serialize_set_property_from_key_file ()">ncm_serialize_set_property_from_key_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-from-variant" title="ncm_serialize_from_variant ()">ncm_serialize_from_variant</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-from-name-params" title="ncm_serialize_from_name_params ()">ncm_serialize_from_name_params</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-from-string" title="ncm_serialize_from_string ()">ncm_serialize_from_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-from-file" title="ncm_serialize_from_file ()">ncm_serialize_from_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-from-binfile" title="ncm_serialize_from_binfile ()">ncm_serialize_from_binfile</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-gvalue-to-gvariant" title="ncm_serialize_gvalue_to_gvariant ()">ncm_serialize_gvalue_to_gvariant</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-to-variant" title="ncm_serialize_to_variant ()">ncm_serialize_to_variant</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-to-string" title="ncm_serialize_to_string ()">ncm_serialize_to_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-to-file" title="ncm_serialize_to_file ()">ncm_serialize_to_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-to-binfile" title="ncm_serialize_to_binfile ()">ncm_serialize_to_binfile</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-dup-obj" title="ncm_serialize_dup_obj ()">ncm_serialize_dup_obj</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="returnvalue">NcmSerialize</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global" title="ncm_serialize_global ()">ncm_serialize_global</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-reset" title="ncm_serialize_global_reset ()">ncm_serialize_global_reset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-clear-instances" title="ncm_serialize_global_clear_instances ()">ncm_serialize_global_clear_instances</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-log-stats" title="ncm_serialize_global_log_stats ()">ncm_serialize_global_log_stats</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-contain-instance" title="ncm_serialize_global_contain_instance ()">ncm_serialize_global_contain_instance</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-contain-name" title="ncm_serialize_global_contain_name ()">ncm_serialize_global_contain_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-count-instances" title="ncm_serialize_global_count_instances ()">ncm_serialize_global_count_instances</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-count-saved-serializations" title="ncm_serialize_global_count_saved_serializations ()">ncm_serialize_global_count_saved_serializations</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-get-by-name" title="ncm_serialize_global_get_by_name ()">ncm_serialize_global_get_by_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-global-peek-name" title="ncm_serialize_global_global_peek_name ()">ncm_serialize_global_global_peek_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-set" title="ncm_serialize_global_set ()">ncm_serialize_global_set</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-unset" title="ncm_serialize_global_unset ()">ncm_serialize_global_unset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-remove-ser" title="ncm_serialize_global_remove_ser ()">ncm_serialize_global_remove_ser</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-is-named" title="ncm_serialize_global_is_named ()">ncm_serialize_global_is_named</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-set-property" title="ncm_serialize_global_set_property ()">ncm_serialize_global_set_property</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-set-property-from-key-file" title="ncm_serialize_global_set_property_from_key_file ()">ncm_serialize_global_set_property_from_key_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-from-variant" title="ncm_serialize_global_from_variant ()">ncm_serialize_global_from_variant</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-from-name-params" title="ncm_serialize_global_from_name_params ()">ncm_serialize_global_from_name_params</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-from-string" title="ncm_serialize_global_from_string ()">ncm_serialize_global_from_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-from-file" title="ncm_serialize_global_from_file ()">ncm_serialize_global_from_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-from-binfile" title="ncm_serialize_global_from_binfile ()">ncm_serialize_global_from_binfile</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-gvalue-to-gvariant" title="ncm_serialize_global_gvalue_to_gvariant ()">ncm_serialize_global_gvalue_to_gvariant</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-to-variant" title="ncm_serialize_global_to_variant ()">ncm_serialize_global_to_variant</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-to-string" title="ncm_serialize_global_to_string ()">ncm_serialize_global_to_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-to-file" title="ncm_serialize_global_to_file ()">ncm_serialize_global_to_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-to-binfile" title="ncm_serialize_global_to_binfile ()">ncm_serialize_global_to_binfile</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-dup-obj" title="ncm_serialize_global_dup_obj ()">ncm_serialize_global_dup_obj</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmSerialize.properties" id="NcmSerialize.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody><tr>
+<td class="property_type"><a class="link" href="NcmSerialize.html#NcmSerializeOpt" title="enum NcmSerializeOpt"><span class="type">NcmSerializeOpt</span></a></td>
+<td class="property_name"><a class="link" href="NcmSerialize.html#NcmSerialize--options" title="The “options” property">options</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmSerialize.other" id="NcmSerialize.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcmSerialize.html#NcmSerializeOpt" title="enum NcmSerializeOpt">NcmSerializeOpt</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmSerialize.html#NCM-SERIALIZE-PROPERTY-TYPE:CAPS" title="NCM_SERIALIZE_PROPERTY_TYPE">NCM_SERIALIZE_PROPERTY_TYPE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmSerialize.html#NCM-SERIALIZE-PROPERTIES-TYPE:CAPS" title="NCM_SERIALIZE_PROPERTIES_TYPE">NCM_SERIALIZE_PROPERTIES_TYPE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmSerialize.html#NCM-SERIALIZE-OBJECT-TYPE:CAPS" title="NCM_SERIALIZE_OBJECT_TYPE">NCM_SERIALIZE_OBJECT_TYPE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmSerialize.html#NCM-SERIALIZE-OBJECT-FORMAT:CAPS" title="NCM_SERIALIZE_OBJECT_FORMAT">NCM_SERIALIZE_OBJECT_FORMAT</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmSerialize.html#NCM-SERIALIZE-VECTOR-TYPE:CAPS" title="NCM_SERIALIZE_VECTOR_TYPE">NCM_SERIALIZE_VECTOR_TYPE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmSerialize.html#NCM-SERIALIZE-MATRIX-TYPE:CAPS" title="NCM_SERIALIZE_MATRIX_TYPE">NCM_SERIALIZE_MATRIX_TYPE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmSerialize.html#NCM-SERIALIZE-STRV-TYPE:CAPS" title="NCM_SERIALIZE_STRV_TYPE">NCM_SERIALIZE_STRV_TYPE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmSerialize.html#NCM-SERIALIZE-AUTOSAVE-NAME:CAPS" title="NCM_SERIALIZE_AUTOSAVE_NAME">NCM_SERIALIZE_AUTOSAVE_NAME</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmSerialize.html#NCM-SERIALIZE-AUTOSAVE-NFORMAT:CAPS" title="NCM_SERIALIZE_AUTOSAVE_NFORMAT">NCM_SERIALIZE_AUTOSAVE_NFORMAT</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmSerialize.object-hierarchy" id="NcmSerialize.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GFlags</a>
+    <span class="lineart">╰──</span> NcmSerializeOpt
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcmSerialize
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmSerialize.description" id="NcmSerialize.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcmSerialize.functions_details" id="NcmSerialize.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-serialize-new" id="ncm-serialize-new"></a><h3>ncm_serialize_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="returnvalue">NcmSerialize</span></a> *
+ncm_serialize_new (<em class="parameter"><code><a class="link" href="NcmSerialize.html#NcmSerializeOpt" title="enum NcmSerializeOpt"><span class="type">NcmSerializeOpt</span></a> sopt</code></em>);</pre>
+<p>Creates a new <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> object.</p>
+<div class="refsect3">
+<a name="ncm-serialize-new.parameters" id="ncm-serialize-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>sopt</p></td>
+<td class="parameter_description"><p>a set of options from <a class="link" href="NcmSerialize.html#NcmSerializeOpt" title="enum NcmSerializeOpt"><span class="type">NcmSerializeOpt</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-new.returns" id="ncm-serialize-new.returns"></a><h4>Returns</h4>
+<p> a new <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-ref" id="ncm-serialize-ref"></a><h3>ncm_serialize_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="returnvalue">NcmSerialize</span></a> *
+ncm_serialize_ref (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>ser</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-serialize-ref.parameters" id="ncm-serialize-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-ref.returns" id="ncm-serialize-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>ser</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-free" id="ncm-serialize-free"></a><h3>ncm_serialize_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_free (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>ser</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-serialize-free.parameters" id="ncm-serialize-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-unref" id="ncm-serialize-unref"></a><h3>ncm_serialize_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_unref (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>);</pre>
+<p>Same as <a class="link" href="NcmSerialize.html#ncm-serialize-free" title="ncm_serialize_free ()"><code class="function">ncm_serialize_free()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-unref.parameters" id="ncm-serialize-unref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-clear" id="ncm-serialize-clear"></a><h3>ncm_serialize_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_clear (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> **ser</code></em>);</pre>
+<p>Decreases the reference count of *<em class="parameter"><code>ser</code></em>
+ by one, and sets *<em class="parameter"><code>ser</code></em>
+ to NULL.</p>
+<div class="refsect3">
+<a name="ncm-serialize-clear.parameters" id="ncm-serialize-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-reset" id="ncm-serialize-reset"></a><h3>ncm_serialize_reset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_reset (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> autosave_only</code></em>);</pre>
+<p>Releases all objects in <em class="parameter"><code>ser</code></em>
+ and erase all serialized
+objects. If <em class="parameter"><code>autosave_only</code></em>
+ is TRUE it will release only
+autosaved objects.</p>
+<div class="refsect3">
+<a name="ncm-serialize-reset.parameters" id="ncm-serialize-reset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>autosave_only</p></td>
+<td class="parameter_description"><p>a boolean</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-clear-instances" id="ncm-serialize-clear-instances"></a><h3>ncm_serialize_clear_instances ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_clear_instances (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> autosave_only</code></em>);</pre>
+<p>Releases all objects in <em class="parameter"><code>ser</code></em>
+. If <em class="parameter"><code>autosave_only</code></em>
+ is TRUE 
+it will release only autosaved objects.</p>
+<div class="refsect3">
+<a name="ncm-serialize-clear-instances.parameters" id="ncm-serialize-clear-instances.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>autosave_only</p></td>
+<td class="parameter_description"><p>a boolean</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-log-stats" id="ncm-serialize-log-stats"></a><h3>ncm_serialize_log_stats ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_log_stats (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>);</pre>
+<p>Releases all objects in <em class="parameter"><code>ser</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-log-stats.parameters" id="ncm-serialize-log-stats.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-contain-instance" id="ncm-serialize-contain-instance"></a><h3>ncm_serialize_contain_instance ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_serialize_contain_instance (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> obj</code></em>);</pre>
+<p>Checks if the <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> instance <em class="parameter"><code>obj</code></em>
+ is contained in <em class="parameter"><code>ser</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-contain-instance.parameters" id="ncm-serialize-contain-instance.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-contain-instance.returns" id="ncm-serialize-contain-instance.returns"></a><h4>Returns</h4>
+<p> if <em class="parameter"><code>obj</code></em>
+is already in <em class="parameter"><code>ser</code></em>
+.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-contain-name" id="ncm-serialize-contain-name"></a><h3>ncm_serialize_contain_name ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_serialize_contain_name (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>Checks if there is an instance named <em class="parameter"><code>name</code></em>
+ in <em class="parameter"><code>ser</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-contain-name.parameters" id="ncm-serialize-contain-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>an instance name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-contain-name.returns" id="ncm-serialize-contain-name.returns"></a><h4>Returns</h4>
+<p> if there is instance named <em class="parameter"><code>name</code></em>
+in <em class="parameter"><code>ser</code></em>
+.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-count-instances" id="ncm-serialize-count-instances"></a><h3>ncm_serialize_count_instances ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_serialize_count_instances (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>);</pre>
+<p>Counts the number of instances registered in <em class="parameter"><code>ser</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-count-instances.parameters" id="ncm-serialize-count-instances.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-count-instances.returns" id="ncm-serialize-count-instances.returns"></a><h4>Returns</h4>
+<p> the number of instances in <em class="parameter"><code>ser</code></em>
+.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-count-saved-serializations" id="ncm-serialize-count-saved-serializations"></a><h3>ncm_serialize_count_saved_serializations ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_serialize_count_saved_serializations
+                               (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>);</pre>
+<p>Counts the number of instances registered in <em class="parameter"><code>ser</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-count-saved-serializations.parameters" id="ncm-serialize-count-saved-serializations.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-count-saved-serializations.returns" id="ncm-serialize-count-saved-serializations.returns"></a><h4>Returns</h4>
+<p> the number of instances in <em class="parameter"><code>ser</code></em>
+.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-peek-by-name" id="ncm-serialize-peek-by-name"></a><h3>ncm_serialize_peek_by_name ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+ncm_serialize_peek_by_name (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>Peeks the instance <em class="parameter"><code>name</code></em>
+ or null if there isn't a instance named <em class="parameter"><code>name</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-peek-by-name.parameters" id="ncm-serialize-peek-by-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>an instance name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-peek-by-name.returns" id="ncm-serialize-peek-by-name.returns"></a><h4>Returns</h4>
+<p>Gets the instance named <em class="parameter"><code>name</code></em>
+or NULL. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-get-by-name" id="ncm-serialize-get-by-name"></a><h3>ncm_serialize_get_by_name ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+ncm_serialize_get_by_name (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>Gets a new reference for the instance <em class="parameter"><code>name</code></em>
+ or null if there isn't a instance named <em class="parameter"><code>name</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-get-by-name.parameters" id="ncm-serialize-get-by-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>an instance name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-get-by-name.returns" id="ncm-serialize-get-by-name.returns"></a><h4>Returns</h4>
+<p>Gets the instance named <em class="parameter"><code>name</code></em>
+or NULL. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-peek-name" id="ncm-serialize-peek-name"></a><h3>ncm_serialize_peek_name ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_serialize_peek_name (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> obj</code></em>);</pre>
+<p>Gets the named associated to the instance <em class="parameter"><code>obj</code></em>
+, it is an error to call this function
+when the <em class="parameter"><code>obj</code></em>
+ is not contained in <em class="parameter"><code>ser</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-peek-name.parameters" id="ncm-serialize-peek-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-peek-name.returns" id="ncm-serialize-peek-name.returns"></a><h4>Returns</h4>
+<p>the name of <em class="parameter"><code>obj</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-set" id="ncm-serialize-set"></a><h3>ncm_serialize_set ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_set (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> obj</code></em>,
+                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> overwrite</code></em>);</pre>
+<p>Adds the object <em class="parameter"><code>obj</code></em>
+ to <em class="parameter"><code>ser</code></em>
+ using <em class="parameter"><code>name</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-set.parameters" id="ncm-serialize-set.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>the <em class="parameter"><code>obj</code></em>
+name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>overwrite</p></td>
+<td class="parameter_description"><p>whether to overwrite if there is already an object named <em class="parameter"><code>name</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-unset" id="ncm-serialize-unset"></a><h3>ncm_serialize_unset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_unset (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> obj</code></em>);</pre>
+<p>Removes the object <em class="parameter"><code>obj</code></em>
+ to <em class="parameter"><code>ser</code></em>
+ using <em class="parameter"><code>name</code></em>
+, it does nothing
+if the instance <em class="parameter"><code>obj</code></em>
+ is not present in <em class="parameter"><code>ser</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-unset.parameters" id="ncm-serialize-unset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-remove-ser" id="ncm-serialize-remove-ser"></a><h3>ncm_serialize_remove_ser ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_remove_ser (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> obj</code></em>);</pre>
+<p>Removes the object <em class="parameter"><code>obj</code></em>
+ to <em class="parameter"><code>ser</code></em>
+ using <em class="parameter"><code>name</code></em>
+, it does nothing
+if the instance <em class="parameter"><code>obj</code></em>
+ is not present in <em class="parameter"><code>ser</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-remove-ser.parameters" id="ncm-serialize-remove-ser.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-is-named" id="ncm-serialize-is-named"></a><h3>ncm_serialize_is_named ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_serialize_is_named (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                        <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *serobj</code></em>,
+                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **name</code></em>);</pre>
+<p>Checks if <em class="parameter"><code>serobj</code></em>
+ is a named serialized object, if so sets its name in <em class="parameter"><code>name</code></em>
+
+and returns TRUE.</p>
+<div class="refsect3">
+<a name="ncm-serialize-is-named.parameters" id="ncm-serialize-is-named.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>serobj</p></td>
+<td class="parameter_description"><p>serialized object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>object name. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-is-named.returns" id="ncm-serialize-is-named.returns"></a><h4>Returns</h4>
+<p> whether <em class="parameter"><code>serobj</code></em>
+is a named serialized object.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-set-property" id="ncm-serialize-set-property"></a><h3>ncm_serialize_set_property ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_set_property (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>,
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *prop_str</code></em>);</pre>
+<p>Deserialize the set of object properties in <em class="parameter"><code>params</code></em>
+ and sets the <em class="parameter"><code>obj</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-set-property.parameters" id="ncm-serialize-set-property.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prop_str</p></td>
+<td class="parameter_description"><p>a string containing the parameters to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-set-property-from-key-file" id="ncm-serialize-set-property-from-key-file"></a><h3>ncm_serialize_set_property_from_key_file ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_set_property_from_key_file
+                               (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *prop_file</code></em>);</pre>
+<p>Deserializes the set of object properties in <em class="parameter"><code>prop_file</code></em>
+ and sets the <em class="parameter"><code>obj</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-set-property-from-key-file.parameters" id="ncm-serialize-set-property-from-key-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prop_file</p></td>
+<td class="parameter_description"><p>a GKeyFile file containing the parameters to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-from-variant" id="ncm-serialize-from-variant"></a><h3>ncm_serialize_from_variant ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+ncm_serialize_from_variant (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *var_obj</code></em>);</pre>
+<p>Deserialize and returns the newly created object.</p>
+<div class="refsect3">
+<a name="ncm-serialize-from-variant.parameters" id="ncm-serialize-from-variant.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>var_obj</p></td>
+<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> containing the serialized version of the object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-from-variant.returns" id="ncm-serialize-from-variant.returns"></a><h4>Returns</h4>
+<p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-from-name-params" id="ncm-serialize-from-name-params"></a><h3>ncm_serialize_from_name_params ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+ncm_serialize_from_name_params (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *obj_name</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *params</code></em>);</pre>
+<p>Parses the serialized parameters and returns the newly created object using them.</p>
+<div class="refsect3">
+<a name="ncm-serialize-from-name-params.parameters" id="ncm-serialize-from-name-params.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj_name</p></td>
+<td class="parameter_description"><p>string containing the object name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>params</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> containing the object parameters.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-from-name-params.returns" id="ncm-serialize-from-name-params.returns"></a><h4>Returns</h4>
+<p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-from-string" id="ncm-serialize-from-string"></a><h3>ncm_serialize_from_string ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+ncm_serialize_from_string (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *obj_ser</code></em>);</pre>
+<p>Parses the serialized and returns the newly created object.</p>
+<div class="refsect3">
+<a name="ncm-serialize-from-string.parameters" id="ncm-serialize-from-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj_ser</p></td>
+<td class="parameter_description"><p>String containing the serialized version of the object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-from-string.returns" id="ncm-serialize-from-string.returns"></a><h4>Returns</h4>
+<p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-from-file" id="ncm-serialize-from-file"></a><h3>ncm_serialize_from_file ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+ncm_serialize_from_file (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>Parses the serialized string in <em class="parameter"><code>filename</code></em>
+ and returns the newly created object.</p>
+<div class="refsect3">
+<a name="ncm-serialize-from-file.parameters" id="ncm-serialize-from-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>File containing the serialized version of the object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-from-file.returns" id="ncm-serialize-from-file.returns"></a><h4>Returns</h4>
+<p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-from-binfile" id="ncm-serialize-from-binfile"></a><h3>ncm_serialize_from_binfile ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+ncm_serialize_from_binfile (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>Parses the serialized binary data in <em class="parameter"><code>filename</code></em>
+ and returns the newly created object.</p>
+<div class="refsect3">
+<a name="ncm-serialize-from-binfile.parameters" id="ncm-serialize-from-binfile.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>File containing the binary serialized version of the object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-from-binfile.returns" id="ncm-serialize-from-binfile.returns"></a><h4>Returns</h4>
+<p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-gvalue-to-gvariant" id="ncm-serialize-gvalue-to-gvariant"></a><h3>ncm_serialize_gvalue_to_gvariant ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+ncm_serialize_gvalue_to_gvariant (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-Generic-values.html#GValue-struct"><span class="type">GValue</span></a> *val</code></em>);</pre>
+<p>Converts a <a href="/usr/share/gtk-doc/html/gobject/gobject-Generic-values.html#GValue-struct"><span class="type">GValue</span></a> to a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-gvalue-to-gvariant.parameters" id="ncm-serialize-gvalue-to-gvariant.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>val</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-Generic-values.html#GValue-struct"><span class="type">GValue</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-gvalue-to-gvariant.returns" id="ncm-serialize-gvalue-to-gvariant.returns"></a><h4>Returns</h4>
+<p>A <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> convertion of <em class="parameter"><code>val</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-to-variant" id="ncm-serialize-to-variant"></a><h3>ncm_serialize_to_variant ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+ncm_serialize_to_variant (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>);</pre>
+<p>Serialize the <em class="parameter"><code>obj</code></em>
+ to a <em class="parameter"><code>GVariant</code></em>
+ representation.</p>
+<div class="refsect3">
+<a name="ncm-serialize-to-variant.parameters" id="ncm-serialize-to-variant.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-to-variant.returns" id="ncm-serialize-to-variant.returns"></a><h4>Returns</h4>
+<p>A <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> dictionary describing the <em class="parameter"><code>obj</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-to-string" id="ncm-serialize-to-string"></a><h3>ncm_serialize_to_string ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_serialize_to_string (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>,
+                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> valid_variant</code></em>);</pre>
+<p>Serialize the object <em class="parameter"><code>obj</code></em>
+ to a string.</p>
+<div class="refsect3">
+<a name="ncm-serialize-to-string.parameters" id="ncm-serialize-to-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>valid_variant</p></td>
+<td class="parameter_description"><p>whether to use a valid <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> representation.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-to-string.returns" id="ncm-serialize-to-string.returns"></a><h4>Returns</h4>
+<p>A string containing the serialized version of <em class="parameter"><code>obj</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-to-file" id="ncm-serialize-to-file"></a><h3>ncm_serialize_to_file ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_to_file (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>,
+                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>Serializes <em class="parameter"><code>obj</code></em>
+ and saves the string in <em class="parameter"><code>filename</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-to-file.parameters" id="ncm-serialize-to-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>File where to save the serialized version of the object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-to-binfile" id="ncm-serialize-to-binfile"></a><h3>ncm_serialize_to_binfile ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_to_binfile (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>,
+                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>Serializes <em class="parameter"><code>obj</code></em>
+ and saves the binary in <em class="parameter"><code>filename</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-to-binfile.parameters" id="ncm-serialize-to-binfile.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>File where to save the serialized version of the object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-dup-obj" id="ncm-serialize-dup-obj"></a><h3>ncm_serialize_dup_obj ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+ncm_serialize_dup_obj (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>);</pre>
+<p>Duplicates <em class="parameter"><code>obj</code></em>
+ by serializing and deserializing a new object.</p>
+<div class="refsect3">
+<a name="ncm-serialize-dup-obj.parameters" id="ncm-serialize-dup-obj.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-dup-obj.returns" id="ncm-serialize-dup-obj.returns"></a><h4>Returns</h4>
+<p>A duplicate of <em class="parameter"><code>obj</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global" id="ncm-serialize-global"></a><h3>ncm_serialize_global ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="returnvalue">NcmSerialize</span></a> *
+ncm_serialize_global (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Gets the global serialization object, instanciates it if necessary.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global.returns" id="ncm-serialize-global.returns"></a><h4>Returns</h4>
+<p>The global <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-reset" id="ncm-serialize-global-reset"></a><h3>ncm_serialize_global_reset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_global_reset (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> autosave_only</code></em>);</pre>
+<p>Releases all objects in global <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> and erase
+all serialized objects.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-reset.parameters" id="ncm-serialize-global-reset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>autosave_only</p></td>
+<td class="parameter_description"><p>a boolean</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-clear-instances" id="ncm-serialize-global-clear-instances"></a><h3>ncm_serialize_global_clear_instances ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_global_clear_instances (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> autosave_only</code></em>);</pre>
+<p>Releases all objects in global <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-clear-instances.parameters" id="ncm-serialize-global-clear-instances.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>autosave_only</p></td>
+<td class="parameter_description"><p>a boolean</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-log-stats" id="ncm-serialize-global-log-stats"></a><h3>ncm_serialize_global_log_stats ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_global_log_stats (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Releases all objects in global <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-contain-instance" id="ncm-serialize-global-contain-instance"></a><h3>ncm_serialize_global_contain_instance ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_serialize_global_contain_instance (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> obj</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-contain-instance" title="ncm_serialize_contain_instance ()"><code class="function">ncm_serialize_contain_instance()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-contain-instance.parameters" id="ncm-serialize-global-contain-instance.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-global-contain-instance.returns" id="ncm-serialize-global-contain-instance.returns"></a><h4>Returns</h4>
+<p> if <em class="parameter"><code>obj</code></em>
+is already in <em class="parameter"><code>ser</code></em>
+.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-contain-name" id="ncm-serialize-global-contain-name"></a><h3>ncm_serialize_global_contain_name ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_serialize_global_contain_name (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-contain-name" title="ncm_serialize_contain_name ()"><code class="function">ncm_serialize_contain_name()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-contain-name.parameters" id="ncm-serialize-global-contain-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>an instance name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-global-contain-name.returns" id="ncm-serialize-global-contain-name.returns"></a><h4>Returns</h4>
+<p> if there is instance named <em class="parameter"><code>name</code></em>
+in <em class="parameter"><code>ser</code></em>
+.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-count-instances" id="ncm-serialize-global-count-instances"></a><h3>ncm_serialize_global_count_instances ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_serialize_global_count_instances (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-count-instances" title="ncm_serialize_count_instances ()"><code class="function">ncm_serialize_count_instances()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-count-instances.returns" id="ncm-serialize-global-count-instances.returns"></a><h4>Returns</h4>
+<p> the number of instances in <em class="parameter"><code>ser</code></em>
+.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-count-saved-serializations" id="ncm-serialize-global-count-saved-serializations"></a><h3>ncm_serialize_global_count_saved_serializations ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_serialize_global_count_saved_serializations
+                               (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-count-saved-serializations" title="ncm_serialize_count_saved_serializations ()"><code class="function">ncm_serialize_count_saved_serializations()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-count-saved-serializations.returns" id="ncm-serialize-global-count-saved-serializations.returns"></a><h4>Returns</h4>
+<p> the number of instances in <em class="parameter"><code>ser</code></em>
+.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-get-by-name" id="ncm-serialize-global-get-by-name"></a><h3>ncm_serialize_global_get_by_name ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+ncm_serialize_global_get_by_name (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-get-by-name" title="ncm_serialize_get_by_name ()"><code class="function">ncm_serialize_get_by_name()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-get-by-name.parameters" id="ncm-serialize-global-get-by-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>an instance name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-global-get-by-name.returns" id="ncm-serialize-global-get-by-name.returns"></a><h4>Returns</h4>
+<p>Gets the instance named <em class="parameter"><code>name</code></em>
+or NULL. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-global-peek-name" id="ncm-serialize-global-global-peek-name"></a><h3>ncm_serialize_global_global_peek_name ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_serialize_global_global_peek_name (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> obj</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-set" id="ncm-serialize-global-set"></a><h3>ncm_serialize_global_set ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_global_set (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> obj</code></em>,
+                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> overwrite</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-set" title="ncm_serialize_set ()"><code class="function">ncm_serialize_set()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-set.parameters" id="ncm-serialize-global-set.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>the <em class="parameter"><code>obj</code></em>
+name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>overwrite</p></td>
+<td class="parameter_description"><p>whether to overwrite if there is already an object named <em class="parameter"><code>name</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-unset" id="ncm-serialize-global-unset"></a><h3>ncm_serialize_global_unset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_global_unset (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> obj</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-unset" title="ncm_serialize_unset ()"><code class="function">ncm_serialize_unset()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-unset.parameters" id="ncm-serialize-global-unset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-remove-ser" id="ncm-serialize-global-remove-ser"></a><h3>ncm_serialize_global_remove_ser ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_global_remove_ser (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> obj</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-remove-ser" title="ncm_serialize_remove_ser ()"><code class="function">ncm_serialize_remove_ser()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-remove-ser.parameters" id="ncm-serialize-global-remove-ser.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GObject]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-is-named" id="ncm-serialize-global-is-named"></a><h3>ncm_serialize_global_is_named ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_serialize_global_is_named (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *serobj</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **name</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-is-named" title="ncm_serialize_is_named ()"><code class="function">ncm_serialize_is_named()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-is-named.parameters" id="ncm-serialize-global-is-named.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>serobj</p></td>
+<td class="parameter_description"><p>serialized object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>object name. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-global-is-named.returns" id="ncm-serialize-global-is-named.returns"></a><h4>Returns</h4>
+<p> whether <em class="parameter"><code>serobj</code></em>
+is a named serialized object.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-set-property" id="ncm-serialize-global-set-property"></a><h3>ncm_serialize_global_set_property ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_global_set_property (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>,
+                                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *prop_str</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-set-property" title="ncm_serialize_set_property ()"><code class="function">ncm_serialize_set_property()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-set-property.parameters" id="ncm-serialize-global-set-property.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prop_str</p></td>
+<td class="parameter_description"><p>a string containing the parameters to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-set-property-from-key-file" id="ncm-serialize-global-set-property-from-key-file"></a><h3>ncm_serialize_global_set_property_from_key_file ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_global_set_property_from_key_file
+                               (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *prop_file</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-set-property" title="ncm_serialize_set_property ()"><code class="function">ncm_serialize_set_property()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-set-property-from-key-file.parameters" id="ncm-serialize-global-set-property-from-key-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>prop_file</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-Key-value-file-parser.html#GKeyFile"><span class="type">GKeyFile</span></a> containing the parameters to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-from-variant" id="ncm-serialize-global-from-variant"></a><h3>ncm_serialize_global_from_variant ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+ncm_serialize_global_from_variant (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *var_obj</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-from-variant" title="ncm_serialize_from_variant ()"><code class="function">ncm_serialize_from_variant()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-from-variant.parameters" id="ncm-serialize-global-from-variant.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>var_obj</p></td>
+<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> containing the serialized version of the object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-global-from-variant.returns" id="ncm-serialize-global-from-variant.returns"></a><h4>Returns</h4>
+<p>a new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> deserialized from <em class="parameter"><code>var_obj</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-from-name-params" id="ncm-serialize-global-from-name-params"></a><h3>ncm_serialize_global_from_name_params ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+ncm_serialize_global_from_name_params (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *obj_name</code></em>,
+                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *params</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-from-name-params" title="ncm_serialize_from_name_params ()"><code class="function">ncm_serialize_from_name_params()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-from-name-params.parameters" id="ncm-serialize-global-from-name-params.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>obj_name</p></td>
+<td class="parameter_description"><p>string containing the object name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>params</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> containing the object parameters.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-global-from-name-params.returns" id="ncm-serialize-global-from-name-params.returns"></a><h4>Returns</h4>
+<p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-from-string" id="ncm-serialize-global-from-string"></a><h3>ncm_serialize_global_from_string ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+ncm_serialize_global_from_string (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *obj_ser</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-from-string" title="ncm_serialize_from_string ()"><code class="function">ncm_serialize_from_string()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-from-string.parameters" id="ncm-serialize-global-from-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>obj_ser</p></td>
+<td class="parameter_description"><p>String containing the serialized version of the object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-global-from-string.returns" id="ncm-serialize-global-from-string.returns"></a><h4>Returns</h4>
+<p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-from-file" id="ncm-serialize-global-from-file"></a><h3>ncm_serialize_global_from_file ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+ncm_serialize_global_from_file (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-from-file" title="ncm_serialize_from_file ()"><code class="function">ncm_serialize_from_file()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-from-file.parameters" id="ncm-serialize-global-from-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>File containing the serialized version of the object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-global-from-file.returns" id="ncm-serialize-global-from-file.returns"></a><h4>Returns</h4>
+<p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-from-binfile" id="ncm-serialize-global-from-binfile"></a><h3>ncm_serialize_global_from_binfile ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+ncm_serialize_global_from_binfile (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-from-binfile" title="ncm_serialize_from_binfile ()"><code class="function">ncm_serialize_from_binfile()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-from-binfile.parameters" id="ncm-serialize-global-from-binfile.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>File containing the serialized version of the object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-global-from-binfile.returns" id="ncm-serialize-global-from-binfile.returns"></a><h4>Returns</h4>
+<p>A new <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-gvalue-to-gvariant" id="ncm-serialize-global-gvalue-to-gvariant"></a><h3>ncm_serialize_global_gvalue_to_gvariant ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+ncm_serialize_global_gvalue_to_gvariant
+                               (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-Generic-values.html#GValue-struct"><span class="type">GValue</span></a> *val</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-gvalue-to-gvariant" title="ncm_serialize_gvalue_to_gvariant ()"><code class="function">ncm_serialize_gvalue_to_gvariant()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-gvalue-to-gvariant.parameters" id="ncm-serialize-global-gvalue-to-gvariant.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>val</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-Generic-values.html#GValue-struct"><span class="type">GValue</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-global-gvalue-to-gvariant.returns" id="ncm-serialize-global-gvalue-to-gvariant.returns"></a><h4>Returns</h4>
+<p>A <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> convertion of <em class="parameter"><code>val</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-to-variant" id="ncm-serialize-global-to-variant"></a><h3>ncm_serialize_global_to_variant ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
+ncm_serialize_global_to_variant (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-to-variant" title="ncm_serialize_to_variant ()"><code class="function">ncm_serialize_to_variant()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-to-variant.parameters" id="ncm-serialize-global-to-variant.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-global-to-variant.returns" id="ncm-serialize-global-to-variant.returns"></a><h4>Returns</h4>
+<p>A <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> dictionary describing the <em class="parameter"><code>obj</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-to-string" id="ncm-serialize-global-to-string"></a><h3>ncm_serialize_global_to_string ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_serialize_global_to_string (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> valid_variant</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-to-string" title="ncm_serialize_to_string ()"><code class="function">ncm_serialize_to_string()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-to-string.parameters" id="ncm-serialize-global-to-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>valid_variant</p></td>
+<td class="parameter_description"><p>whether to use a valid <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> representation.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-global-to-string.returns" id="ncm-serialize-global-to-string.returns"></a><h4>Returns</h4>
+<p>A string containing the serialized version of <em class="parameter"><code>obj</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-to-file" id="ncm-serialize-global-to-file"></a><h3>ncm_serialize_global_to_file ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_global_to_file (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>,
+                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-to-file" title="ncm_serialize_to_file ()"><code class="function">ncm_serialize_to_file()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-to-file.parameters" id="ncm-serialize-global-to-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>File where to save the serialized version of the object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-to-binfile" id="ncm-serialize-global-to-binfile"></a><h3>ncm_serialize_global_to_binfile ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_global_to_binfile (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>,
+                                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-to-binfile" title="ncm_serialize_to_binfile ()"><code class="function">ncm_serialize_to_binfile()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-to-binfile.parameters" id="ncm-serialize-global-to-binfile.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>File where to save the serialized version of the object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-dup-obj" id="ncm-serialize-global-dup-obj"></a><h3>ncm_serialize_global_dup_obj ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+ncm_serialize_global_dup_obj (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-dup-obj" title="ncm_serialize_dup_obj ()"><code class="function">ncm_serialize_dup_obj()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-dup-obj.parameters" id="ncm-serialize-global-dup-obj.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-global-dup-obj.returns" id="ncm-serialize-global-dup-obj.returns"></a><h4>Returns</h4>
+<p>A duplicate of <em class="parameter"><code>obj</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmSerialize.other_details" id="NcmSerialize.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcmSerializeOpt" id="NcmSerializeOpt"></a><h3>enum NcmSerializeOpt</h3>
+<p>Options for serialization.</p>
+<div class="refsect3">
+<a name="NcmSerializeOpt.members" id="NcmSerializeOpt.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-SERIALIZE-OPT-NONE:CAPS" id="NCM-SERIALIZE-OPT-NONE:CAPS"></a>NCM_SERIALIZE_OPT_NONE</p></td>
+<td class="enum_member_description">
+<p>Use default serialization.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-SERIALIZE-OPT-AUTOSAVE-SER:CAPS" id="NCM-SERIALIZE-OPT-AUTOSAVE-SER:CAPS"></a>NCM_SERIALIZE_OPT_AUTOSAVE_SER</p></td>
+<td class="enum_member_description">
+<p>Whether to automatically include named deserialized objects in the named instances.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-SERIALIZE-OPT-AUTONAME-SER:CAPS" id="NCM-SERIALIZE-OPT-AUTONAME-SER:CAPS"></a>NCM_SERIALIZE_OPT_AUTONAME_SER</p></td>
+<td class="enum_member_description">
+<p>Whether to automatically name objects on serialization.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-SERIALIZE-OPT-CLEAN-DUP:CAPS" id="NCM-SERIALIZE-OPT-CLEAN-DUP:CAPS"></a>NCM_SERIALIZE_OPT_CLEAN_DUP</p></td>
+<td class="enum_member_description">
+<p>Combination of NCM_SERIALIZE_OPT_AUTOSAVE_SER and NCM_SERIALIZE_OPT_AUTONAME_SER</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-SERIALIZE-PROPERTY-TYPE:CAPS" id="NCM-SERIALIZE-PROPERTY-TYPE:CAPS"></a><h3>NCM_SERIALIZE_PROPERTY_TYPE</h3>
+<pre class="programlisting">#define NCM_SERIALIZE_PROPERTY_TYPE "{sv}"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-SERIALIZE-PROPERTIES-TYPE:CAPS" id="NCM-SERIALIZE-PROPERTIES-TYPE:CAPS"></a><h3>NCM_SERIALIZE_PROPERTIES_TYPE</h3>
+<pre class="programlisting">#define NCM_SERIALIZE_PROPERTIES_TYPE "a"NCM_SERIALIZE_PROPERTY_TYPE
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-SERIALIZE-OBJECT-TYPE:CAPS" id="NCM-SERIALIZE-OBJECT-TYPE:CAPS"></a><h3>NCM_SERIALIZE_OBJECT_TYPE</h3>
+<pre class="programlisting">#define NCM_SERIALIZE_OBJECT_TYPE "{s"NCM_SERIALIZE_PROPERTIES_TYPE"}"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-SERIALIZE-OBJECT-FORMAT:CAPS" id="NCM-SERIALIZE-OBJECT-FORMAT:CAPS"></a><h3>NCM_SERIALIZE_OBJECT_FORMAT</h3>
+<pre class="programlisting">#define NCM_SERIALIZE_OBJECT_FORMAT "{s@"NCM_SERIALIZE_PROPERTIES_TYPE"}"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-SERIALIZE-VECTOR-TYPE:CAPS" id="NCM-SERIALIZE-VECTOR-TYPE:CAPS"></a><h3>NCM_SERIALIZE_VECTOR_TYPE</h3>
+<pre class="programlisting">#define NCM_SERIALIZE_VECTOR_TYPE "ad"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-SERIALIZE-MATRIX-TYPE:CAPS" id="NCM-SERIALIZE-MATRIX-TYPE:CAPS"></a><h3>NCM_SERIALIZE_MATRIX_TYPE</h3>
+<pre class="programlisting">#define NCM_SERIALIZE_MATRIX_TYPE "aad"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-SERIALIZE-STRV-TYPE:CAPS" id="NCM-SERIALIZE-STRV-TYPE:CAPS"></a><h3>NCM_SERIALIZE_STRV_TYPE</h3>
+<pre class="programlisting">#define NCM_SERIALIZE_STRV_TYPE "as"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-SERIALIZE-AUTOSAVE-NAME:CAPS" id="NCM-SERIALIZE-AUTOSAVE-NAME:CAPS"></a><h3>NCM_SERIALIZE_AUTOSAVE_NAME</h3>
+<pre class="programlisting">#define NCM_SERIALIZE_AUTOSAVE_NAME "S"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-SERIALIZE-AUTOSAVE-NFORMAT:CAPS" id="NCM-SERIALIZE-AUTOSAVE-NFORMAT:CAPS"></a><h3>NCM_SERIALIZE_AUTOSAVE_NFORMAT</h3>
+<pre class="programlisting">#define NCM_SERIALIZE_AUTOSAVE_NFORMAT "%u"
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmSerialize.property-details" id="NcmSerialize.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmSerialize--options" id="NcmSerialize--options"></a><h3>The <code class="literal">“options”</code> property</h3>
+<pre class="programlisting">  “options”                  <a class="link" href="NcmSerialize.html#NcmSerializeOpt" title="enum NcmSerializeOpt"><span class="type">NcmSerializeOpt</span></a></pre>
+<p>Serialization options.</p>
+<p>Owner: NcmSerialize</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

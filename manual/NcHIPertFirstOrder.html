@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcHIPertFirstOrder: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch07.html" title="Perturbations" />
+<link rel="prev" href="NcHIPertBoltzmannStd.html" title="NcHIPertBoltzmannStd" />
+<link rel="next" href="NcHIPertGrav.html" title="NcHIPertGrav" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcHIPertFirstOrder.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcHIPertFirstOrder.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcHIPertFirstOrder.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch07.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcHIPertBoltzmannStd.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcHIPertGrav.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcHIPertFirstOrder" id="NcHIPertFirstOrder"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcHIPertFirstOrder.top_of_page" id="NcHIPertFirstOrder.top_of_page"></a>NcHIPertFirstOrder</span></h2>
+<p>NcHIPertFirstOrder — Base object for implementing first order perturbation in a Friedmann background.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcHIPertFirstOrder.functions" id="NcHIPertFirstOrder.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="returnvalue">NcHIPertFirstOrder</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-new" title="nc_hipert_first_order_new ()">nc_hipert_first_order_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="returnvalue">NcHIPertFirstOrder</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-new-full" title="nc_hipert_first_order_new_full ()">nc_hipert_first_order_new_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="returnvalue">NcHIPertFirstOrder</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-ref" title="nc_hipert_first_order_ref ()">nc_hipert_first_order_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-free" title="nc_hipert_first_order_free ()">nc_hipert_first_order_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-clear" title="nc_hipert_first_order_clear ()">nc_hipert_first_order_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-set-gauge" title="nc_hipert_first_order_set_gauge ()">nc_hipert_first_order_set_gauge</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertGrav.html#NcHIPertGravGauge" title="enum NcHIPertGravGauge"><span class="returnvalue">NcHIPertGravGauge</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-get-gauge" title="nc_hipert_first_order_get_gauge ()">nc_hipert_first_order_get_gauge</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-set-reltol" title="nc_hipert_first_order_set_reltol ()">nc_hipert_first_order_set_reltol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-set-abstol" title="nc_hipert_first_order_set_abstol ()">nc_hipert_first_order_set_abstol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-get-reltol" title="nc_hipert_first_order_get_reltol ()">nc_hipert_first_order_get_reltol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-get-abstol" title="nc_hipert_first_order_get_abstol ()">nc_hipert_first_order_get_abstol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-set-integ" title="nc_hipert_first_order_set_integ ()">nc_hipert_first_order_set_integ</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrderInteg" title="enum NcHIPertFirstOrderInteg"><span class="returnvalue">NcHIPertFirstOrderInteg</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-get-integ" title="nc_hipert_first_order_get_integ ()">nc_hipert_first_order_get_integ</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-set-grav" title="nc_hipert_first_order_set_grav ()">nc_hipert_first_order_set_grav</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertGrav.html" title="NcHIPertGrav"><span class="returnvalue">NcHIPertGrav</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-get-grav" title="nc_hipert_first_order_get_grav ()">nc_hipert_first_order_get_grav</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertGrav.html" title="NcHIPertGrav"><span class="returnvalue">NcHIPertGrav</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-peek-grav" title="nc_hipert_first_order_peek_grav ()">nc_hipert_first_order_peek_grav</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-add-comp" title="nc_hipert_first_order_add_comp ()">nc_hipert_first_order_add_comp</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-prepare" title="nc_hipert_first_order_prepare ()">nc_hipert_first_order_prepare</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertFirstOrder.properties" id="NcHIPertFirstOrder.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrder--abstol" title="The “abstol” property">abstol</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</td>
+<td class="property_name"><a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrder--comp-array" title="The “comp-array” property">comp-array</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *</td>
+<td class="property_name"><a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrder--distance" title="The “distance” property">distance</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="NcHIPertGrav.html#NcHIPertGravGauge" title="enum NcHIPertGravGauge"><span class="type">NcHIPertGravGauge</span></a></td>
+<td class="property_name"><a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrder--gauge" title="The “gauge” property">gauge</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcHIPertGrav.html" title="NcHIPertGrav"><span class="type">NcHIPertGrav</span></a> *</td>
+<td class="property_name"><a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrder--grav" title="The “grav” property">grav</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrderInteg" title="enum NcHIPertFirstOrderInteg"><span class="type">NcHIPertFirstOrderInteg</span></a></td>
+<td class="property_name"><a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrder--integ" title="The “integ” property">integ</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *</td>
+<td class="property_name"><a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrder--recomb" title="The “recomb” property">recomb</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrder--reltol" title="The “reltol” property">reltol</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="type">NcScalefactor</span></a> *</td>
+<td class="property_name"><a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrder--scalefactor" title="The “scalefactor” property">scalefactor</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertFirstOrder.other" id="NcHIPertFirstOrder.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrderInteg" title="enum NcHIPertFirstOrderInteg">NcHIPertFirstOrderInteg</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertFirstOrder.object-hierarchy" id="NcHIPertFirstOrder.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcHIPertFirstOrderInteg
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcHIPert.html" title="NcHIPert">NcHIPert</a>
+        <span class="lineart">╰──</span> <a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann">NcHIPertBoltzmann</a>
+            <span class="lineart">╰──</span> NcHIPertFirstOrder
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcHIPertFirstOrder.description" id="NcHIPertFirstOrder.description"></a><h2>Description</h2>
+<p>FIXME</p>
+</div>
+<div class="refsect1">
+<a name="NcHIPertFirstOrder.functions_details" id="NcHIPertFirstOrder.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="nc-hipert-first-order-new" id="nc-hipert-first-order-new"></a><h3>nc_hipert_first_order_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="returnvalue">NcHIPertFirstOrder</span></a> *
+nc_hipert_first_order_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a>.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-new.returns" id="nc-hipert-first-order-new.returns"></a><h4>Returns</h4>
+<p>the newly instantiated <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-new-full" id="nc-hipert-first-order-new-full"></a><h3>nc_hipert_first_order_new_full ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="returnvalue">NcHIPertFirstOrder</span></a> *
+nc_hipert_first_order_new_full (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="type">NcScalefactor</span></a> *a</code></em>);</pre>
+<p>Creates a new <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a>.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-new-full.parameters" id="nc-hipert-first-order-new-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dist</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>recomb</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>a</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="type">NcScalefactor</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-first-order-new-full.returns" id="nc-hipert-first-order-new-full.returns"></a><h4>Returns</h4>
+<p>the newly instantiated <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-ref" id="nc-hipert-first-order-ref"></a><h3>nc_hipert_first_order_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="returnvalue">NcHIPertFirstOrder</span></a> *
+nc_hipert_first_order_ref (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>fo</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-ref.parameters" id="nc-hipert-first-order-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-first-order-ref.returns" id="nc-hipert-first-order-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>fo</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-free" id="nc-hipert-first-order-free"></a><h3>nc_hipert_first_order_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_first_order_free (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>fo</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-free.parameters" id="nc-hipert-first-order-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-clear" id="nc-hipert-first-order-clear"></a><h3>nc_hipert_first_order_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_first_order_clear (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> **fo</code></em>);</pre>
+<p>Decreases the reference count of *<em class="parameter"><code>fo</code></em>
+ and sets the pointer *<em class="parameter"><code>fo</code></em>
+ to NULL.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-clear.parameters" id="nc-hipert-first-order-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-set-gauge" id="nc-hipert-first-order-set-gauge"></a><h3>nc_hipert_first_order_set_gauge ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_first_order_set_gauge (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcHIPertGrav.html#NcHIPertGravGauge" title="enum NcHIPertGravGauge"><span class="type">NcHIPertGravGauge</span></a> gauge</code></em>);</pre>
+<p>Sets the gauge to be used in the first order system.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-set-gauge.parameters" id="nc-hipert-first-order-set-gauge.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>gauge</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertGrav.html#NcHIPertGravGauge" title="enum NcHIPertGravGauge"><span class="type">NcHIPertGravGauge</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-get-gauge" id="nc-hipert-first-order-get-gauge"></a><h3>nc_hipert_first_order_get_gauge ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertGrav.html#NcHIPertGravGauge" title="enum NcHIPertGravGauge"><span class="returnvalue">NcHIPertGravGauge</span></a>
+nc_hipert_first_order_get_gauge (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>);</pre>
+<p>Gets the gauge used by <em class="parameter"><code>fo</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-get-gauge.parameters" id="nc-hipert-first-order-get-gauge.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-first-order-get-gauge.returns" id="nc-hipert-first-order-get-gauge.returns"></a><h4>Returns</h4>
+<p> the gauge used by <em class="parameter"><code>fo</code></em>
+</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-set-reltol" id="nc-hipert-first-order-set-reltol"></a><h3>nc_hipert_first_order_set_reltol ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_first_order_set_reltol (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>,
+                                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>);</pre>
+<p>Sets the relative tolerance to <em class="parameter"><code>reltol</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-set-reltol.parameters" id="nc-hipert-first-order-set-reltol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>reltol</p></td>
+<td class="parameter_description"><p>relative tolerance used during the integration</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-set-abstol" id="nc-hipert-first-order-set-abstol"></a><h3>nc_hipert_first_order_set_abstol ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_first_order_set_abstol (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>,
+                                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> abstol</code></em>);</pre>
+<p>Sets the absolute tolerance to <em class="parameter"><code>abstol</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-set-abstol.parameters" id="nc-hipert-first-order-set-abstol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>abstol</p></td>
+<td class="parameter_description"><p>absolute tolerance used during the integration</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-get-reltol" id="nc-hipert-first-order-get-reltol"></a><h3>nc_hipert_first_order_get_reltol ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_hipert_first_order_get_reltol (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>);</pre>
+<p>Gets the relative tolerance.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-get-reltol.parameters" id="nc-hipert-first-order-get-reltol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-first-order-get-reltol.returns" id="nc-hipert-first-order-get-reltol.returns"></a><h4>Returns</h4>
+<p> the current relative tolerance.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-get-abstol" id="nc-hipert-first-order-get-abstol"></a><h3>nc_hipert_first_order_get_abstol ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_hipert_first_order_get_abstol (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>);</pre>
+<p>Gets the absolute tolerance.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-get-abstol.parameters" id="nc-hipert-first-order-get-abstol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-first-order-get-abstol.returns" id="nc-hipert-first-order-get-abstol.returns"></a><h4>Returns</h4>
+<p> the current absolute tolerance.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-set-integ" id="nc-hipert-first-order-set-integ"></a><h3>nc_hipert_first_order_set_integ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_first_order_set_integ (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrderInteg" title="enum NcHIPertFirstOrderInteg"><span class="type">NcHIPertFirstOrderInteg</span></a> integ</code></em>);</pre>
+<p>Sets the integrator to be used.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-set-integ.parameters" id="nc-hipert-first-order-set-integ.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>integ</p></td>
+<td class="parameter_description"><p>integrator type <a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrderInteg" title="enum NcHIPertFirstOrderInteg"><span class="type">NcHIPertFirstOrderInteg</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-get-integ" id="nc-hipert-first-order-get-integ"></a><h3>nc_hipert_first_order_get_integ ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrderInteg" title="enum NcHIPertFirstOrderInteg"><span class="returnvalue">NcHIPertFirstOrderInteg</span></a>
+nc_hipert_first_order_get_integ (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>);</pre>
+<p>Gets the integrator used.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-get-integ.parameters" id="nc-hipert-first-order-get-integ.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-first-order-get-integ.returns" id="nc-hipert-first-order-get-integ.returns"></a><h4>Returns</h4>
+<p> the current integrator used by <em class="parameter"><code>fo</code></em>
+.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-set-grav" id="nc-hipert-first-order-set-grav"></a><h3>nc_hipert_first_order_set_grav ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_first_order_set_grav (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcHIPertGrav.html" title="NcHIPertGrav"><span class="type">NcHIPertGrav</span></a> *grav</code></em>);</pre>
+<p>Sets the gravitation object.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-set-grav.parameters" id="nc-hipert-first-order-set-grav.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>grav</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertGrav.html" title="NcHIPertGrav"><span class="type">NcHIPertGrav</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-get-grav" id="nc-hipert-first-order-get-grav"></a><h3>nc_hipert_first_order_get_grav ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertGrav.html" title="NcHIPertGrav"><span class="returnvalue">NcHIPertGrav</span></a> *
+nc_hipert_first_order_get_grav (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>);</pre>
+<p>Gets the gravitation <a class="link" href="NcHIPertGrav.html" title="NcHIPertGrav"><span class="type">NcHIPertGrav</span></a> object.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-get-grav.parameters" id="nc-hipert-first-order-get-grav.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-first-order-get-grav.returns" id="nc-hipert-first-order-get-grav.returns"></a><h4>Returns</h4>
+<p>the <a class="link" href="NcHIPertGrav.html" title="NcHIPertGrav"><span class="type">NcHIPertGrav</span></a> object used by <em class="parameter"><code>fo</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-peek-grav" id="nc-hipert-first-order-peek-grav"></a><h3>nc_hipert_first_order_peek_grav ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertGrav.html" title="NcHIPertGrav"><span class="returnvalue">NcHIPertGrav</span></a> *
+nc_hipert_first_order_peek_grav (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>);</pre>
+<p>Peeks the <a class="link" href="NcHIPertGrav.html" title="NcHIPertGrav"><span class="type">NcHIPertGrav</span></a> object.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-peek-grav.parameters" id="nc-hipert-first-order-peek-grav.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-first-order-peek-grav.returns" id="nc-hipert-first-order-peek-grav.returns"></a><h4>Returns</h4>
+<p>the <a class="link" href="NcHIPertGrav.html" title="NcHIPertGrav"><span class="type">NcHIPertGrav</span></a> object used by <em class="parameter"><code>fo</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-add-comp" id="nc-hipert-first-order-add-comp"></a><h3>nc_hipert_first_order_add_comp ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_first_order_add_comp (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcHIPertComp.html" title="NcHIPertComp"><span class="type">NcHIPertComp</span></a> *comp</code></em>);</pre>
+<p>Adds a new component <em class="parameter"><code>comp</code></em>
+ to the system.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-add-comp.parameters" id="nc-hipert-first-order-add-comp.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>comp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertComp.html" title="NcHIPertComp"><span class="type">NcHIPertComp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-hipert-first-order-prepare" id="nc-hipert-first-order-prepare"></a><h3>nc_hipert_first_order_prepare ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_first_order_prepare (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
+<p>Adds a new component <em class="parameter"><code>comp</code></em>
+ to the system.</p>
+<div class="refsect3">
+<a name="nc-hipert-first-order-prepare.parameters" id="nc-hipert-first-order-prepare.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertFirstOrder.other_details" id="NcHIPertFirstOrder.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcHIPertFirstOrderInteg" id="NcHIPertFirstOrderInteg"></a><h3>enum NcHIPertFirstOrderInteg</h3>
+<p>ODE integrators.</p>
+<div class="refsect3">
+<a name="NcHIPertFirstOrderInteg.members" id="NcHIPertFirstOrderInteg.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name" />
+<col class="enum_members_description" />
+<col width="200px" class="enum_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HIPERT-FIRST-ORDER-INTEG-CVODE:CAPS" id="NC-HIPERT-FIRST-ORDER-INTEG-CVODE:CAPS"></a>NC_HIPERT_FIRST_ORDER_INTEG_CVODE</p></td>
+<td class="enum_member_description">
+<p>CVode integrator</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HIPERT-FIRST-ORDER-INTEG-ARKODE:CAPS" id="NC-HIPERT-FIRST-ORDER-INTEG-ARKODE:CAPS"></a>NC_HIPERT_FIRST_ORDER_INTEG_ARKODE</p></td>
+<td class="enum_member_description">
+<p>ARKode integrator</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertFirstOrder.property-details" id="NcHIPertFirstOrder.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcHIPertFirstOrder--abstol" id="NcHIPertFirstOrder--abstol"></a><h3>The <code class="literal">“abstol”</code> property</h3>
+<pre class="programlisting">  “abstol”                   <span class="type">double</span></pre>
+<p>Absolute tolerance tolerance.</p>
+<p>Owner: NcHIPertFirstOrder</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPertFirstOrder--comp-array" id="NcHIPertFirstOrder--comp-array"></a><h3>The <code class="literal">“comp-array”</code> property</h3>
+<pre class="programlisting">  “comp-array”               <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</pre>
+<p>Components array.</p>
+<p>Owner: NcHIPertFirstOrder</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPertFirstOrder--distance" id="NcHIPertFirstOrder--distance"></a><h3>The <code class="literal">“distance”</code> property</h3>
+<pre class="programlisting">  “distance”                 <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *</pre>
+<p>Distance object.</p>
+<p>Owner: NcHIPertFirstOrder</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPertFirstOrder--gauge" id="NcHIPertFirstOrder--gauge"></a><h3>The <code class="literal">“gauge”</code> property</h3>
+<pre class="programlisting">  “gauge”                    <a class="link" href="NcHIPertGrav.html#NcHIPertGravGauge" title="enum NcHIPertGravGauge"><span class="type">NcHIPertGravGauge</span></a></pre>
+<p>Gauge.</p>
+<p>Owner: NcHIPertFirstOrder</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: NC_HIPERT_GRAV_GAUGE_SYNCHRONOUS</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPertFirstOrder--grav" id="NcHIPertFirstOrder--grav"></a><h3>The <code class="literal">“grav”</code> property</h3>
+<pre class="programlisting">  “grav”                     <a class="link" href="NcHIPertGrav.html" title="NcHIPertGrav"><span class="type">NcHIPertGrav</span></a> *</pre>
+<p>Gravitation object.</p>
+<p>Owner: NcHIPertFirstOrder</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPertFirstOrder--integ" id="NcHIPertFirstOrder--integ"></a><h3>The <code class="literal">“integ”</code> property</h3>
+<pre class="programlisting">  “integ”                    <a class="link" href="NcHIPertFirstOrder.html#NcHIPertFirstOrderInteg" title="enum NcHIPertFirstOrderInteg"><span class="type">NcHIPertFirstOrderInteg</span></a></pre>
+<p>ODE integrator.</p>
+<p>Owner: NcHIPertFirstOrder</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: NC_HIPERT_FIRST_ORDER_INTEG_ARKODE</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPertFirstOrder--recomb" id="NcHIPertFirstOrder--recomb"></a><h3>The <code class="literal">“recomb”</code> property</h3>
+<pre class="programlisting">  “recomb”                   <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *</pre>
+<p>Recombination object.</p>
+<p>Owner: NcHIPertFirstOrder</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPertFirstOrder--reltol" id="NcHIPertFirstOrder--reltol"></a><h3>The <code class="literal">“reltol”</code> property</h3>
+<pre class="programlisting">  “reltol”                   <span class="type">double</span></pre>
+<p>Relative tolerance.</p>
+<p>Owner: NcHIPertFirstOrder</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [0,1]</p>
+<p>Default value: 1e-07</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcHIPertFirstOrder--scalefactor" id="NcHIPertFirstOrder--scalefactor"></a><h3>The <code class="literal">“scalefactor”</code> property</h3>
+<pre class="programlisting">  “scalefactor”              <a class="link" href="NcScalefactor.html" title="NcScalefactor"><span class="type">NcScalefactor</span></a> *</pre>
+<p>Scale factor object.</p>
+<p>Owner: NcHIPertFirstOrder</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

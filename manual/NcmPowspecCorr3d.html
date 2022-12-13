@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmPowspecCorr3d: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s07.html" title="Power spectrum functions" />
+<link rel="prev" href="NcmPowspecSphereProj.html" title="NcmPowspecSphereProj" />
+<link rel="next" href="ch02s08.html" title="Harmonic Oscillator" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmPowspecCorr3d.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmPowspecCorr3d.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmPowspecCorr3d.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s07.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="NcmPowspecSphereProj.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="ch02s08.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmPowspecCorr3d" id="NcmPowspecCorr3d"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmPowspecCorr3d.top_of_page" id="NcmPowspecCorr3d.top_of_page"></a>NcmPowspecCorr3d</span></h2>
+<p>NcmPowspecCorr3d — Class to compute filtered power spectrum</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmPowspecCorr3d.stability-level" id="NcmPowspecCorr3d.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+</div>
+<div class="refsect1">
+<a name="NcmPowspecCorr3d.functions" id="NcmPowspecCorr3d.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="returnvalue">NcmPowspecCorr3d</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecCorr3d.html#ncm-powspec-corr3d-new" title="ncm_powspec_corr3d_new ()">ncm_powspec_corr3d_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="returnvalue">NcmPowspecCorr3d</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecCorr3d.html#ncm-powspec-corr3d-ref" title="ncm_powspec_corr3d_ref ()">ncm_powspec_corr3d_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecCorr3d.html#ncm-powspec-corr3d-free" title="ncm_powspec_corr3d_free ()">ncm_powspec_corr3d_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecCorr3d.html#ncm-powspec-corr3d-clear" title="ncm_powspec_corr3d_clear ()">ncm_powspec_corr3d_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecCorr3d.html#ncm-powspec-corr3d-prepare" title="ncm_powspec_corr3d_prepare ()">ncm_powspec_corr3d_prepare</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecCorr3d.html#ncm-powspec-corr3d-prepare-if-needed" title="ncm_powspec_corr3d_prepare_if_needed ()">ncm_powspec_corr3d_prepare_if_needed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecCorr3d.html#ncm-powspec-corr3d-set-lnr0" title="ncm_powspec_corr3d_set_lnr0 ()">ncm_powspec_corr3d_set_lnr0</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecCorr3d.html#ncm-powspec-corr3d-set-best-lnr0" title="ncm_powspec_corr3d_set_best_lnr0 ()">ncm_powspec_corr3d_set_best_lnr0</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecCorr3d.html#ncm-powspec-corr3d-set-zi" title="ncm_powspec_corr3d_set_zi ()">ncm_powspec_corr3d_set_zi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecCorr3d.html#ncm-powspec-corr3d-set-zf" title="ncm_powspec_corr3d_set_zf ()">ncm_powspec_corr3d_set_zf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecCorr3d.html#ncm-powspec-corr3d-get-r-min" title="ncm_powspec_corr3d_get_r_min ()">ncm_powspec_corr3d_get_r_min</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecCorr3d.html#ncm-powspec-corr3d-get-r-max" title="ncm_powspec_corr3d_get_r_max ()">ncm_powspec_corr3d_get_r_max</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecCorr3d.html#ncm-powspec-corr3d-eval-xi-lnr" title="ncm_powspec_corr3d_eval_xi_lnr ()">ncm_powspec_corr3d_eval_xi_lnr</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecCorr3d.html#ncm-powspec-corr3d-eval-xi" title="ncm_powspec_corr3d_eval_xi ()">ncm_powspec_corr3d_eval_xi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecCorr3d.properties" id="NcmPowspecCorr3d.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcmPowspecCorr3d.html#NcmPowspecCorr3d--lnr0" title="The “lnr0” property">lnr0</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmPowspec.html" title="NcmPowspec"><span class="type">NcmPowspec</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmPowspecCorr3d.html#NcmPowspecCorr3d--powerspectrum" title="The “powerspectrum” property">powerspectrum</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcmPowspecCorr3d.html#NcmPowspecCorr3d--reltol" title="The “reltol” property">reltol</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcmPowspecCorr3d.html#NcmPowspecCorr3d--reltol-z" title="The “reltol-z” property">reltol-z</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcmPowspecCorr3d.html#NcmPowspecCorr3d--zf" title="The “zf” property">zf</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcmPowspecCorr3d.html#NcmPowspecCorr3d--zi" title="The “zi” property">zi</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecCorr3d.other" id="NcmPowspecCorr3d.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody><tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmPowspecCorr3d.html#NCM-POWSPEC-CORR3D-DEFAULT-SIZE:CAPS" title="NCM_POWSPEC_CORR3D_DEFAULT_SIZE">NCM_POWSPEC_CORR3D_DEFAULT_SIZE</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecCorr3d.object-hierarchy" id="NcmPowspecCorr3d.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcmPowspecCorr3d
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecCorr3d.includes" id="NcmPowspecCorr3d.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;numcosmo/math/ncm_powspec_corr3d.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecCorr3d.description" id="NcmPowspecCorr3d.description"></a><h2>Description</h2>
+<p>This class computes the 3d spatial correlation function $\xi(r, z)$ from the power spectrum
+using the FFTLog approach (see <a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a> and <a class="link" href="NcmFftlogSBesselJ.html" title="NcmFftlogSBesselJ"><span class="type">NcmFftlogSBesselJ</span></a>),
+\begin{equation}\label{eq:variance}
+\xi(r, z) = \sigma^2(r, z) = \frac{1}{2\pi^2} \int_0^\infty k^2 \ P(k, z) j_0(kr) \ \mathrm{d}k,
+\end{equation}
+where $P(k, z)$ is the power spectrum at mode $k$ and redshift $z$ and $j_0(kr)$ is the order zero spherical bessel function.</p>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecCorr3d.functions_details" id="NcmPowspecCorr3d.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-powspec-corr3d-new" id="ncm-powspec-corr3d-new"></a><h3>ncm_powspec_corr3d_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="returnvalue">NcmPowspecCorr3d</span></a> *
+ncm_powspec_corr3d_new (<em class="parameter"><code><a class="link" href="NcmPowspec.html" title="NcmPowspec"><span class="type">NcmPowspec</span></a> *ps</code></em>);</pre>
+<p>Creates a new <a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a> from the power spectrum <em class="parameter"><code>ps</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-new.parameters" id="ncm-powspec-corr3d-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ps</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspec.html" title="NcmPowspec"><span class="type">NcmPowspec</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-new.returns" id="ncm-powspec-corr3d-new.returns"></a><h4>Returns</h4>
+<p>the newly created <a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-powspec-corr3d-ref" id="ncm-powspec-corr3d-ref"></a><h3>ncm_powspec_corr3d_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="returnvalue">NcmPowspecCorr3d</span></a> *
+ncm_powspec_corr3d_ref (<em class="parameter"><code><a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a> *psc</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>psc</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-ref.parameters" id="ncm-powspec-corr3d-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>psc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-ref.returns" id="ncm-powspec-corr3d-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>psc</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-powspec-corr3d-free" id="ncm-powspec-corr3d-free"></a><h3>ncm_powspec_corr3d_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_powspec_corr3d_free (<em class="parameter"><code><a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a> *psc</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>psc</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-free.parameters" id="ncm-powspec-corr3d-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>psc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-powspec-corr3d-clear" id="ncm-powspec-corr3d-clear"></a><h3>ncm_powspec_corr3d_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_powspec_corr3d_clear (<em class="parameter"><code><a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a> **psc</code></em>);</pre>
+<p>If <em class="parameter"><code>psc</code></em>
+ is different from NULL, decreases the reference count of
+<em class="parameter"><code>psc</code></em>
+ by one and sets <em class="parameter"><code>fftlog</code></em>
+ to NULL.</p>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-clear.parameters" id="ncm-powspec-corr3d-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>psc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-powspec-corr3d-prepare" id="ncm-powspec-corr3d-prepare"></a><h3>ncm_powspec_corr3d_prepare ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_powspec_corr3d_prepare (<em class="parameter"><code><a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a> *psc</code></em>,
+                            <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>);</pre>
+<p>Prepares the object applying the filter to the power spectrum.</p>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-prepare.parameters" id="ncm-powspec-corr3d-prepare.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>psc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-powspec-corr3d-prepare-if-needed" id="ncm-powspec-corr3d-prepare-if-needed"></a><h3>ncm_powspec_corr3d_prepare_if_needed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_powspec_corr3d_prepare_if_needed (<em class="parameter"><code><a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a> *psc</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>);</pre>
+<p>Prepares (if necessary) the object applying the filter to the power spectrum.</p>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-prepare-if-needed.parameters" id="ncm-powspec-corr3d-prepare-if-needed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>psc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-powspec-corr3d-set-lnr0" id="ncm-powspec-corr3d-set-lnr0"></a><h3>ncm_powspec_corr3d_set_lnr0 ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_powspec_corr3d_set_lnr0 (<em class="parameter"><code><a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a> *psc</code></em>,
+                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnr0</code></em>);</pre>
+<p>Sets the center of the transform output $\ln(r_0)$ (see <a class="link" href="NcmFftlog.html#ncm-fftlog-set-lnr0" title="ncm_fftlog_set_lnr0 ()"><code class="function">ncm_fftlog_set_lnr0()</code></a>).</p>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-set-lnr0.parameters" id="ncm-powspec-corr3d-set-lnr0.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>psc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnr0</p></td>
+<td class="parameter_description"><p>the output center value $\ln(r_0)$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-powspec-corr3d-set-best-lnr0" id="ncm-powspec-corr3d-set-best-lnr0"></a><h3>ncm_powspec_corr3d_set_best_lnr0 ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_powspec_corr3d_set_best_lnr0 (<em class="parameter"><code><a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a> *psc</code></em>);</pre>
+<p>Sets the value of $\ln(r_0)$ which gives the best results for
+the transformation based on the current value of $\ln(k_0)$,
+this is based in the rule of thumb $\mathrm{max}_{x^*}(j_l)$
+where $ x^* \approx l + 1$ (see <a class="link" href="NcmFftlogSBesselJ.html#ncm-fftlog-sbessel-j-set-best-lnr0" title="ncm_fftlog_sbessel_j_set_best_lnr0 ()"><code class="function">ncm_fftlog_sbessel_j_set_best_lnr0()</code></a>).</p>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-set-best-lnr0.parameters" id="ncm-powspec-corr3d-set-best-lnr0.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>psc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-powspec-corr3d-set-zi" id="ncm-powspec-corr3d-set-zi"></a><h3>ncm_powspec_corr3d_set_zi ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_powspec_corr3d_set_zi (<em class="parameter"><code><a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a> *psc</code></em>,
+                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zi</code></em>);</pre>
+<p>Sets the inital time $z_i$.</p>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-set-zi.parameters" id="ncm-powspec-corr3d-set-zi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>psc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zi</p></td>
+<td class="parameter_description"><p>the output initial time $z_i$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-powspec-corr3d-set-zf" id="ncm-powspec-corr3d-set-zf"></a><h3>ncm_powspec_corr3d_set_zf ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_powspec_corr3d_set_zf (<em class="parameter"><code><a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a> *psc</code></em>,
+                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zf</code></em>);</pre>
+<p>Sets the final time $z_f$.</p>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-set-zf.parameters" id="ncm-powspec-corr3d-set-zf.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>psc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zf</p></td>
+<td class="parameter_description"><p>the output final time $z_f$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-powspec-corr3d-get-r-min" id="ncm-powspec-corr3d-get-r-min"></a><h3>ncm_powspec_corr3d_get_r_min ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_powspec_corr3d_get_r_min (<em class="parameter"><code><a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a> *psc</code></em>);</pre>
+<p>This function returns $\xi(r, z)$'s minimum evaluated distance.</p>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-get-r-min.parameters" id="ncm-powspec-corr3d-get-r-min.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>psc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-get-r-min.returns" id="ncm-powspec-corr3d-get-r-min.returns"></a><h4>Returns</h4>
+<p> the minimum distance $r_{\mathrm{min}}$.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-powspec-corr3d-get-r-max" id="ncm-powspec-corr3d-get-r-max"></a><h3>ncm_powspec_corr3d_get_r_max ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_powspec_corr3d_get_r_max (<em class="parameter"><code><a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a> *psc</code></em>);</pre>
+<p>This function returns $\xi(r, z)$'s maximum evaluated distance.</p>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-get-r-max.parameters" id="ncm-powspec-corr3d-get-r-max.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>psc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-get-r-max.returns" id="ncm-powspec-corr3d-get-r-max.returns"></a><h4>Returns</h4>
+<p> the maximum distance $r_{\mathrm{max}}$.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-powspec-corr3d-eval-xi-lnr" id="ncm-powspec-corr3d-eval-xi-lnr"></a><h3>ncm_powspec_corr3d_eval_xi_lnr ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_powspec_corr3d_eval_xi_lnr (<em class="parameter"><code><a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a> *psc</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnr</code></em>);</pre>
+<p>Evaluates the function $\xi(z, r)$ at <em class="parameter"><code>lnr</code></em>
+ and <em class="parameter"><code>z</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-eval-xi-lnr.parameters" id="ncm-powspec-corr3d-eval-xi-lnr.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>psc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z</p></td>
+<td class="parameter_description"><p>redshift</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnr</p></td>
+<td class="parameter_description"><p>logarithm base e of $r$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-eval-xi-lnr.returns" id="ncm-powspec-corr3d-eval-xi-lnr.returns"></a><h4>Returns</h4>
+<p> $\xi(\ln r, z)$.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-powspec-corr3d-eval-xi" id="ncm-powspec-corr3d-eval-xi"></a><h3>ncm_powspec_corr3d_eval_xi ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_powspec_corr3d_eval_xi (<em class="parameter"><code><a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a> *psc</code></em>,
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> r</code></em>);</pre>
+<p>Evaluate the function $\xi(z, r)$ at <em class="parameter"><code>r</code></em>
+ and <em class="parameter"><code>z</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-eval-xi.parameters" id="ncm-powspec-corr3d-eval-xi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>psc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecCorr3d.html" title="NcmPowspecCorr3d"><span class="type">NcmPowspecCorr3d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z</p></td>
+<td class="parameter_description"><p>redshift $z$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>r</p></td>
+<td class="parameter_description"><p>distance $r$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-powspec-corr3d-eval-xi.returns" id="ncm-powspec-corr3d-eval-xi.returns"></a><h4>Returns</h4>
+<p> $\xi(r, z)$.</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecCorr3d.other_details" id="NcmPowspecCorr3d.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NCM-POWSPEC-CORR3D-DEFAULT-SIZE:CAPS" id="NCM-POWSPEC-CORR3D-DEFAULT-SIZE:CAPS"></a><h3>NCM_POWSPEC_CORR3D_DEFAULT_SIZE</h3>
+<pre class="programlisting">#define NCM_POWSPEC_CORR3D_DEFAULT_SIZE (200)
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecCorr3d.property-details" id="NcmPowspecCorr3d.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmPowspecCorr3d--lnr0" id="NcmPowspecCorr3d--lnr0"></a><h3>The <code class="literal">“lnr0”</code> property</h3>
+<pre class="programlisting">  “lnr0”                     <span class="type">double</span></pre>
+<p>The Center value for $\ln(r)$.</p>
+<p>Owner: NcmPowspecCorr3d</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmPowspecCorr3d--powerspectrum" id="NcmPowspecCorr3d--powerspectrum"></a><h3>The <code class="literal">“powerspectrum”</code> property</h3>
+<pre class="programlisting">  “powerspectrum”            <a class="link" href="NcmPowspec.html" title="NcmPowspec"><span class="type">NcmPowspec</span></a> *</pre>
+<p>The <a class="link" href="NcmPowspec.html" title="NcmPowspec"><span class="type">NcmPowspec</span></a> object to be transformed into $\xi(r, z)$.</p>
+<p>Owner: NcmPowspecCorr3d</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmPowspecCorr3d--reltol" id="NcmPowspecCorr3d--reltol"></a><h3>The <code class="literal">“reltol”</code> property</h3>
+<pre class="programlisting">  “reltol”                   <span class="type">double</span></pre>
+<p>The relative tolerance for calibration in the distance direction.</p>
+<p>Owner: NcmPowspecCorr3d</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [2.22045e-16,1]</p>
+<p>Default value: 0.001</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmPowspecCorr3d--reltol-z" id="NcmPowspecCorr3d--reltol-z"></a><h3>The <code class="literal">“reltol-z”</code> property</h3>
+<pre class="programlisting">  “reltol-z”                 <span class="type">double</span></pre>
+<p>The relative tolerance for calibration in the redshift direction.</p>
+<p>Owner: NcmPowspecCorr3d</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [2.22045e-16,1]</p>
+<p>Default value: 1e-06</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmPowspecCorr3d--zf" id="NcmPowspecCorr3d--zf"></a><h3>The <code class="literal">“zf”</code> property</h3>
+<pre class="programlisting">  “zf”                       <span class="type">double</span></pre>
+<p>The output final time $z_f$ of the correlation function, $\xi(r,z)$.</p>
+<p>Owner: NcmPowspecCorr3d</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 1</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmPowspecCorr3d--zi" id="NcmPowspecCorr3d--zi"></a><h3>The <code class="literal">“zi”</code> property</h3>
+<pre class="programlisting">  “zi”                       <span class="type">double</span></pre>
+<p>The output inital time $z_i$ of the correlation function, $\xi(r,z)$.</p>
+<p>Owner: NcmPowspecCorr3d</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>

@@ -1,0 +1,1531 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>NcmData: NumCosmo Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
+<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
+<link rel="up" href="ch02s12.html" title="Data Objects" />
+<link rel="prev" href="ch02s12.html" title="Data Objects" />
+<link rel="next" href="NcmDataset.html" title="NcmDataset" />
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="container.css" type="text/css" />
+<script type="text/x-mathjax-config">
+//<![CDATA[
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                                            equationNumbers: { autoNumber: "AMS" } },
+                                    messageStyle: "none"
+                });
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#NcmData.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#NcmData.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#NcmData.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
+<td><a accesskey="u" href="ch02s12.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
+<td><a accesskey="p" href="ch02s12.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
+<td><a accesskey="n" href="NcmDataset.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmData" id="NcmData"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmData.top_of_page" id="NcmData.top_of_page"></a>NcmData</span></h2>
+<p>NcmData — Abstract class for implementing data objects.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmData.functions" id="NcmData.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type" />
+<col class="functions_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="NcmData.html#NcmDataFisherMatrix" title="NcmDataFisherMatrix ()">*NcmDataFisherMatrix</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmData.html" title="NcmData"><span class="returnvalue">NcmData</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-ref" title="ncm_data_ref ()">ncm_data_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-free" title="ncm_data_free ()">ncm_data_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-clear" title="ncm_data_clear ()">ncm_data_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmData.html" title="NcmData"><span class="returnvalue">NcmData</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-dup" title="ncm_data_dup ()">ncm_data_dup</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmData.html" title="NcmData"><span class="returnvalue">NcmData</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-new-from-file" title="ncm_data_new_from_file ()">ncm_data_new_from_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-get-length" title="ncm_data_get_length ()">ncm_data_get_length</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-get-dof" title="ncm_data_get_dof ()">ncm_data_get_dof</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-set-init" title="ncm_data_set_init ()">ncm_data_set_init</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-set-desc" title="ncm_data_set_desc ()">ncm_data_set_desc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-take-desc" title="ncm_data_take_desc ()">ncm_data_take_desc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-peek-desc" title="ncm_data_peek_desc ()">ncm_data_peek_desc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-get-desc" title="ncm_data_get_desc ()">ncm_data_get_desc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-prepare" title="ncm_data_prepare ()">ncm_data_prepare</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-resample" title="ncm_data_resample ()">ncm_data_resample</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-bootstrap-create" title="ncm_data_bootstrap_create ()">ncm_data_bootstrap_create</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-bootstrap-remove" title="ncm_data_bootstrap_remove ()">ncm_data_bootstrap_remove</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-bootstrap-set" title="ncm_data_bootstrap_set ()">ncm_data_bootstrap_set</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-bootstrap-resample" title="ncm_data_bootstrap_resample ()">ncm_data_bootstrap_resample</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-bootstrap-enabled" title="ncm_data_bootstrap_enabled ()">ncm_data_bootstrap_enabled</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-leastsquares-f" title="ncm_data_leastsquares_f ()">ncm_data_leastsquares_f</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-leastsquares-J" title="ncm_data_leastsquares_J ()">ncm_data_leastsquares_J</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-leastsquares-f-J" title="ncm_data_leastsquares_f_J ()">ncm_data_leastsquares_f_J</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-m2lnL-val" title="ncm_data_m2lnL_val ()">ncm_data_m2lnL_val</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-m2lnL-grad" title="ncm_data_m2lnL_grad ()">ncm_data_m2lnL_grad</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-m2lnL-val-grad" title="ncm_data_m2lnL_val_grad ()">ncm_data_m2lnL_val_grad</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-mean-vector" title="ncm_data_mean_vector ()">ncm_data_mean_vector</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-sigma-vector" title="ncm_data_sigma_vector ()">ncm_data_sigma_vector</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-inv-cov-UH" title="ncm_data_inv_cov_UH ()">ncm_data_inv_cov_UH</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-fisher-matrix" title="ncm_data_fisher_matrix ()">ncm_data_fisher_matrix</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmData.properties" id="NcmData.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type" />
+<col width="300px" class="properties_name" />
+<col width="200px" class="properties_flags" />
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmBootstrap.html" title="NcmBootstrap"><span class="type">NcmBootstrap</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmData.html#NcmData--bootstrap" title="The “bootstrap” property">bootstrap</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<span class="type">char</span> *</td>
+<td class="property_name"><a class="link" href="NcmData.html#NcmData--desc" title="The “desc” property">desc</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="NcmData.html#NcmData--init" title="The “init” property">init</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<span class="type">char</span> *</td>
+<td class="property_name"><a class="link" href="NcmData.html#NcmData--long-desc" title="The “long-desc” property">long-desc</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<span class="type">char</span> *</td>
+<td class="property_name"><a class="link" href="NcmData.html#NcmData--name" title="The “name” property">name</a></td>
+<td class="property_flags">Read</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmData.other" id="NcmData.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmData.html#NcmDataClass" title="struct NcmDataClass">NcmDataClass</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmData.html#NCM-DATA-RESAMPLE-RNG-NAME:CAPS" title="NCM_DATA_RESAMPLE_RNG_NAME">NCM_DATA_RESAMPLE_RNG_NAME</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmData.object-hierarchy" id="NcmData.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> NcmData
+        <span class="lineart">├──</span> <a class="link" href="NcmDataGaussDiag.html" title="NcmDataGaussDiag">NcmDataGaussDiag</a>
+        <span class="lineart">├──</span> <a class="link" href="NcmDataGaussCov.html" title="NcmDataGaussCov">NcmDataGaussCov</a>
+        <span class="lineart">├──</span> <a class="link" href="NcmDataDist2d.html" title="NcmDataDist2d">NcmDataDist2d</a>
+        <span class="lineart">├──</span> <a class="link" href="NcmDataDist1d.html" title="NcmDataDist1d">NcmDataDist1d</a>
+        <span class="lineart">├──</span> <a class="link" href="NcmDataGauss.html" title="NcmDataGauss">NcmDataGauss</a>
+        <span class="lineart">├──</span> <a class="link" href="NcDataClusterNCount.html" title="NcDataClusterNCount">NcDataClusterNCount</a>
+        <span class="lineart">├──</span> <a class="link" href="NcDataClusterPseudoCounts.html" title="NcDataClusterPseudoCounts">NcDataClusterPseudoCounts</a>
+        <span class="lineart">├──</span> <a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL">NcDataClusterWL</a>
+        <span class="lineart">├──</span> <a class="link" href="NcDataPlanckLKL.html" title="NcDataPlanckLKL">NcDataPlanckLKL</a>
+        <span class="lineart">├──</span> <a class="link" href="NcDataReducedShearClusterMass.html" title="NcDataReducedShearClusterMass">NcDataReducedShearClusterMass</a>
+        <span class="lineart">├──</span> <a class="link" href="NcmDataFunnel.html" title="NcmDataFunnel">NcmDataFunnel</a>
+        <span class="lineart">├──</span> <a class="link" href="NcmDataPoisson.html" title="NcmDataPoisson">NcmDataPoisson</a>
+        <span class="lineart">╰──</span> <a class="link" href="NcmDataRosenbrock.html" title="NcmDataRosenbrock">NcmDataRosenbrock</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmData.description" id="NcmData.description"></a><h2>Description</h2>
+<p>The <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> object represent generic data. This is the root object used when
+building a statistical analysis. Every implementation of <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> envolves 
+the methods described in <a class="link" href="NcmData.html#NcmDataClass" title="struct NcmDataClass"><span class="type">NcmDataClass</span></a>.</p>
+<p>A <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> must implement, at least, the method <a class="link" href="NcmData.html#NcmDataClass.m2lnL-val"><span class="type">NcmDataClass.m2lnL_val</span></a> or 
+<a class="link" href="NcmData.html#NcmDataClass.leastsquares-f"><span class="type">NcmDataClass.leastsquares_f</span></a> to perform respectively likelihood or least
+squares analysis.</p>
+</div>
+<div class="refsect1">
+<a name="NcmData.functions_details" id="NcmData.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="NcmDataFisherMatrix" id="NcmDataFisherMatrix"></a><h3>NcmDataFisherMatrix ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*NcmDataFisherMatrix<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                        <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                        <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> **IM</code></em>);</pre>
+<p>Calculates the Fisher-information matrix <em class="parameter"><code>I</code></em>
+.</p>
+<div class="refsect3">
+<a name="NcmDataFisherMatrix.parameters" id="NcmDataFisherMatrix.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>IM</p></td>
+<td class="parameter_description"><p>The fisher matrix. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-ref" id="ncm-data-ref"></a><h3>ncm_data_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmData.html" title="NcmData"><span class="returnvalue">NcmData</span></a> *
+ncm_data_ref (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>);</pre>
+<p>Increase the reference count of <em class="parameter"><code>data</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-data-ref.parameters" id="ncm-data-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-ref.returns" id="ncm-data-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>data</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-free" id="ncm-data-free"></a><h3>ncm_data_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_free (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>);</pre>
+<p>Decrease the reference count of <em class="parameter"><code>data</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-data-free.parameters" id="ncm-data-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-clear" id="ncm-data-clear"></a><h3>ncm_data_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_clear (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> **data</code></em>);</pre>
+<p>Decrease the reference count of *<em class="parameter"><code>data</code></em>
+ and sets the pointer *<em class="parameter"><code>data</code></em>
+ to NULL.</p>
+<div class="refsect3">
+<a name="ncm-data-clear.parameters" id="ncm-data-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-dup" id="ncm-data-dup"></a><h3>ncm_data_dup ()</h3>
+<pre class="programlisting"><a class="link" href="NcmData.html" title="NcmData"><span class="returnvalue">NcmData</span></a> *
+ncm_data_dup (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+              <em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser_obj</code></em>);</pre>
+<p>Duplicate the <em class="parameter"><code>data</code></em>
+ object.</p>
+<div class="refsect3">
+<a name="ncm-data-dup.parameters" id="ncm-data-dup.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ser_obj</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-dup.returns" id="ncm-data-dup.returns"></a><h4>Returns</h4>
+<p>a duplicate of <em class="parameter"><code>data</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-new-from-file" id="ncm-data-new-from-file"></a><h3>ncm_data_new_from_file ()</h3>
+<pre class="programlisting"><a class="link" href="NcmData.html" title="NcmData"><span class="returnvalue">NcmData</span></a> *
+ncm_data_new_from_file (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>Creates a new <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> from <em class="parameter"><code>filename</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-data-new-from-file.parameters" id="ncm-data-new-from-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>file containing a serialized <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> child.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-new-from-file.returns" id="ncm-data-new-from-file.returns"></a><h4>Returns</h4>
+<p>the newly created <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-get-length" id="ncm-data-get-length"></a><h3>ncm_data_get_length ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_data_get_length (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>);</pre>
+<p>Return a integer representing the number of data points.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_length]</span></p>
+<div class="refsect3">
+<a name="ncm-data-get-length.parameters" id="ncm-data-get-length.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-get-length.returns" id="ncm-data-get-length.returns"></a><h4>Returns</h4>
+<p> number of data points.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-get-dof" id="ncm-data-get-dof"></a><h3>ncm_data_get_dof ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_data_get_dof (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>);</pre>
+<p>Calculates the degrees of freedom associated with the data.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_dof]</span></p>
+<div class="refsect3">
+<a name="ncm-data-get-dof.parameters" id="ncm-data-get-dof.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-get-dof.returns" id="ncm-data-get-dof.returns"></a><h4>Returns</h4>
+<p> degrees of freedom of the data.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-set-init" id="ncm-data-set-init"></a><h3>ncm_data_set_init ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_set_init (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> state</code></em>);</pre>
+<p>Sets the <em class="parameter"><code>data</code></em>
+ to initialized or not <em class="parameter"><code>state</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-data-set-init.parameters" id="ncm-data-set-init.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>a boolean</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-set-desc" id="ncm-data-set-desc"></a><h3>ncm_data_set_desc ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_set_desc (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *desc</code></em>);</pre>
+<p>Sets the <em class="parameter"><code>data</code></em>
+ description. It gets a copy of desc.</p>
+<div class="refsect3">
+<a name="ncm-data-set-desc.parameters" id="ncm-data-set-desc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>desc</p></td>
+<td class="parameter_description"><p>description.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-take-desc" id="ncm-data-take-desc"></a><h3>ncm_data_take_desc ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_take_desc (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *desc</code></em>);</pre>
+<p>Sets the <em class="parameter"><code>data</code></em>
+ description <em class="parameter"><code>desc</code></em>
+ without copying it, the <em class="parameter"><code>desc</code></em>
+ memory will
+be freed (<a href="/usr/share/gtk-doc/html/glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>) when the object is freed.</p>
+<div class="refsect3">
+<a name="ncm-data-take-desc.parameters" id="ncm-data-take-desc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>desc</p></td>
+<td class="parameter_description"><p>description.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-peek-desc" id="ncm-data-peek-desc"></a><h3>ncm_data_peek_desc ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_data_peek_desc (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>);</pre>
+<p>Gets <em class="parameter"><code>data</code></em>
+ description.</p>
+<div class="refsect3">
+<a name="ncm-data-peek-desc.parameters" id="ncm-data-peek-desc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-peek-desc.returns" id="ncm-data-peek-desc.returns"></a><h4>Returns</h4>
+<p>internal <em class="parameter"><code>data</code></em>
+description. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-get-desc" id="ncm-data-get-desc"></a><h3>ncm_data_get_desc ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_data_get_desc (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>);</pre>
+<p>Gets <em class="parameter"><code>data</code></em>
+ description.</p>
+<div class="refsect3">
+<a name="ncm-data-get-desc.parameters" id="ncm-data-get-desc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-get-desc.returns" id="ncm-data-get-desc.returns"></a><h4>Returns</h4>
+<p>copy of the <em class="parameter"><code>data</code></em>
+description. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-prepare" id="ncm-data-prepare"></a><h3>ncm_data_prepare ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_prepare (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                  <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>Prepare all models in <em class="parameter"><code>data</code></em>
+ necessary for the statistical calculations.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> prepare]</span></p>
+<div class="refsect3">
+<a name="ncm-data-prepare.parameters" id="ncm-data-prepare.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-resample" id="ncm-data-resample"></a><h3>ncm_data_resample ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_resample (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                   <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                   <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
+<p>Resample data in <em class="parameter"><code>data</code></em>
+ from the models contained in <em class="parameter"><code>mset</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> resample]</span></p>
+<div class="refsect3">
+<a name="ncm-data-resample.parameters" id="ncm-data-resample.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rng</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-bootstrap-create" id="ncm-data-bootstrap-create"></a><h3>ncm_data_bootstrap_create ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_bootstrap_create (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>);</pre>
+<p>Creates a bootstrap object inside of <em class="parameter"><code>data</code></em>
+. Uses the default bsize == fsize.</p>
+<div class="refsect3">
+<a name="ncm-data-bootstrap-create.parameters" id="ncm-data-bootstrap-create.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-bootstrap-remove" id="ncm-data-bootstrap-remove"></a><h3>ncm_data_bootstrap_remove ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_bootstrap_remove (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>);</pre>
+<p>Removes a bootstrap object inside of <em class="parameter"><code>data</code></em>
+ if any.</p>
+<div class="refsect3">
+<a name="ncm-data-bootstrap-remove.parameters" id="ncm-data-bootstrap-remove.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-bootstrap-set" id="ncm-data-bootstrap-set"></a><h3>ncm_data_bootstrap_set ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_bootstrap_set (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                        <em class="parameter"><code><a class="link" href="NcmBootstrap.html" title="NcmBootstrap"><span class="type">NcmBootstrap</span></a> *bstrap</code></em>);</pre>
+<p>Sets the <em class="parameter"><code>bstrap</code></em>
+ object in <em class="parameter"><code>data</code></em>
+ checking if they are compatible.</p>
+<div class="refsect3">
+<a name="ncm-data-bootstrap-set.parameters" id="ncm-data-bootstrap-set.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bstrap</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmBootstrap.html" title="NcmBootstrap"><span class="type">NcmBootstrap</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-bootstrap-resample" id="ncm-data-bootstrap-resample"></a><h3>ncm_data_bootstrap_resample ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_bootstrap_resample (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
+<p>Perform one bootstrap, i.e., resample the data with replacement.</p>
+<div class="refsect3">
+<a name="ncm-data-bootstrap-resample.parameters" id="ncm-data-bootstrap-resample.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rng</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-bootstrap-enabled" id="ncm-data-bootstrap-enabled"></a><h3>ncm_data_bootstrap_enabled ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_data_bootstrap_enabled (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>);</pre>
+<p>Checks whether bootstrap is enabled in <em class="parameter"><code>data</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-data-bootstrap-enabled.parameters" id="ncm-data-bootstrap-enabled.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-bootstrap-enabled.returns" id="ncm-data-bootstrap-enabled.returns"></a><h4>Returns</h4>
+<p> if bootstrap is enabled in <em class="parameter"><code>data</code></em>
+.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-leastsquares-f" id="ncm-data-leastsquares-f"></a><h3>ncm_data_leastsquares_f ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_leastsquares_f (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                         <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                         <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *f</code></em>);</pre>
+<p>Calculates the least squares vector $\vec{f}$ using the models contained in
+<em class="parameter"><code>mset</code></em>
+ and set the results in <em class="parameter"><code>f</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> leastsquares_f]</span></p>
+<div class="refsect3">
+<a name="ncm-data-leastsquares-f.parameters" id="ncm-data-leastsquares-f.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>f</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-leastsquares-J" id="ncm-data-leastsquares-J"></a><h3>ncm_data_leastsquares_J ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_leastsquares_J (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                         <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                         <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *J</code></em>);</pre>
+<p>Calculates the least squares jacobian matrix $$J_{ij} = \frac{df_i}{dx_j},$$
+where $f_i$ is the component of the least squares vector $\vec{f}$ and $x_j$
+is the j-th parameter.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> leastsquares_J]</span></p>
+<div class="refsect3">
+<a name="ncm-data-leastsquares-J.parameters" id="ncm-data-leastsquares-J.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>J</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-leastsquares-f-J" id="ncm-data-leastsquares-f-J"></a><h3>ncm_data_leastsquares_f_J ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_leastsquares_f_J (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *f</code></em>,
+                           <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *J</code></em>);</pre>
+<p>Calculates both least squares vector and matrix as in <a class="link" href="NcmData.html#ncm-data-leastsquares-f" title="ncm_data_leastsquares_f ()"><code class="function">ncm_data_leastsquares_f()</code></a>
+and <a class="link" href="NcmData.html#ncm-data-leastsquares-J" title="ncm_data_leastsquares_J ()"><code class="function">ncm_data_leastsquares_J()</code></a>.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> leastsquares_f_J]</span></p>
+<div class="refsect3">
+<a name="ncm-data-leastsquares-f-J.parameters" id="ncm-data-leastsquares-f-J.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>f</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>J</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-m2lnL-val" id="ncm-data-m2lnL-val"></a><h3>ncm_data_m2lnL_val ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_m2lnL_val (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                    <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *m2lnL</code></em>);</pre>
+<p>Calculates the value of $-2\ln(L)$, where $L$ represents the likelihood of
+the data given the models in <em class="parameter"><code>mset</code></em>
+. The result is stored in <em class="parameter"><code>m2lnL</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> m2lnL_val]</span></p>
+<div class="refsect3">
+<a name="ncm-data-m2lnL-val.parameters" id="ncm-data-m2lnL-val.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>m2lnL</p></td>
+<td class="parameter_description"><p>a <span class="type">double</span>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-m2lnL-grad" id="ncm-data-m2lnL-grad"></a><h3>ncm_data_m2lnL_grad ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_m2lnL_grad (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                     <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                     <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *grad</code></em>);</pre>
+<p>Calculates the gradient of $-2\ln(L)$, i.e., $$g_i = -2\frac{d\ln(L)}{dx_i}.$$ 
+where $L$ represents the likelihood of the data given the models in <em class="parameter"><code>mset</code></em>
+. 
+The result is stored in <em class="parameter"><code>grad</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> m2lnL_grad]</span></p>
+<div class="refsect3">
+<a name="ncm-data-m2lnL-grad.parameters" id="ncm-data-m2lnL-grad.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>grad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-m2lnL-val-grad" id="ncm-data-m2lnL-val-grad"></a><h3>ncm_data_m2lnL_val_grad ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_m2lnL_val_grad (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                         <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *m2lnL</code></em>,
+                         <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *grad</code></em>);</pre>
+<p>Calculates both the value and the gradient of $-2\ln(L)$ as in <a class="link" href="NcmData.html#ncm-data-m2lnL-val" title="ncm_data_m2lnL_val ()"><code class="function">ncm_data_m2lnL_val()</code></a> and
+<a class="link" href="NcmData.html#ncm-data-m2lnL-grad" title="ncm_data_m2lnL_grad ()"><code class="function">ncm_data_m2lnL_grad()</code></a>.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> m2lnL_val_grad]</span></p>
+<div class="refsect3">
+<a name="ncm-data-m2lnL-val-grad.parameters" id="ncm-data-m2lnL-val-grad.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>m2lnL</p></td>
+<td class="parameter_description"><p>a <span class="type">double</span>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>grad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-mean-vector" id="ncm-data-mean-vector"></a><h3>ncm_data_mean_vector ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_mean_vector (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                      <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                      <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *mu</code></em>);</pre>
+<p>Calculates the Gaussian mean vector (for non-Gaussian distribution
+it should calculate the Gaussian approximated mean of the actual 
+distribution).</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> mean_vector]</span></p>
+<div class="refsect3">
+<a name="ncm-data-mean-vector.parameters" id="ncm-data-mean-vector.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mu</p></td>
+<td class="parameter_description"><p>the mean output <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-sigma-vector" id="ncm-data-sigma-vector"></a><h3>ncm_data_sigma_vector ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_sigma_vector (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                       <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                       <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *sigma</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-inv-cov-UH" id="ncm-data-inv-cov-UH"></a><h3>ncm_data_inv_cov_UH ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_inv_cov_UH (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                     <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                     <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *H</code></em>);</pre>
+<p>Given the Cholesky decomposition of the inverse covariance $C^{-1} = L\cdotU$
+this function returns in-place the product $U\cdotH$.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> inv_cov_UH]</span></p>
+<div class="refsect3">
+<a name="ncm-data-inv-cov-UH.parameters" id="ncm-data-inv-cov-UH.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>H</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-fisher-matrix" id="ncm-data-fisher-matrix"></a><h3>ncm_data_fisher_matrix ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_fisher_matrix (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                        <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                        <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> **IM</code></em>);</pre>
+<p>Calculates the Fisher-information matrix <em class="parameter"><code>I</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> fisher_matrix]</span></p>
+<div class="refsect3">
+<a name="ncm-data-fisher-matrix.parameters" id="ncm-data-fisher-matrix.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>IM</p></td>
+<td class="parameter_description"><p>The fisher matrix. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmData.other_details" id="NcmData.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NcmDataClass" id="NcmDataClass"></a><h3>struct NcmDataClass</h3>
+<pre class="programlisting">struct NcmDataClass {
+  gboolean bootstrap;
+  guint (*get_length) (NcmData *data);
+  guint (*get_dof) (NcmData *data);
+  void (*begin) (NcmData *data);
+  void (*prepare) (NcmData *data, NcmMSet *mset);
+  void (*resample) (NcmData *data, NcmMSet *mset, NcmRNG *rng);
+  void (*leastsquares_f) (NcmData *data, NcmMSet *mset, NcmVector *f);
+  void (*leastsquares_J) (NcmData *data, NcmMSet *mset, NcmMatrix *J);
+  void (*leastsquares_f_J) (NcmData *data, NcmMSet *mset, NcmVector *f, NcmMatrix *J);
+  void (*m2lnL_val) (NcmData *data, NcmMSet *mset, gdouble *m2lnL);
+  void (*m2lnL_grad) (NcmData *data, NcmMSet *mset, NcmVector *grad);
+  void (*m2lnL_val_grad) (NcmData *data, NcmMSet *mset, gdouble *m2lnL, NcmVector *grad);
+  void (*mean_vector) (NcmData *data, NcmMSet *mset, NcmVector *mu);
+  void (*inv_cov_UH) (NcmData *data, NcmMSet *mset, NcmMatrix *H);
+  NcmDataFisherMatrix fisher_matrix;
+};
+</pre>
+<p>Virtual table for the <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> abstract class.</p>
+<div class="refsect3">
+<a name="NcmDataClass.members" id="NcmDataClass.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name" />
+<col class="struct_members_description" />
+<col width="200px" class="struct_members_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> <em class="structfield"><code><a name="NcmDataClass.bootstrap" id="NcmDataClass.bootstrap"></a>bootstrap</code></em>;</p></td>
+<td class="struct_member_description"><p>sets whenever the <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> implementations supports bootstrap.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.get-length" id="NcmDataClass.get-length"></a>get_length</code></em> ()</p></td>
+<td class="struct_member_description"><p>return the length associated to the <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> object.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.get-dof" id="NcmDataClass.get-dof"></a>get_dof</code></em> ()</p></td>
+<td class="struct_member_description"><p>return the effective degrees of freedom related to the <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>
+statistics (likelihood or $\chi^2$) this number does not represent
+necessarely the number of data points.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.begin" id="NcmDataClass.begin"></a>begin</code></em> ()</p></td>
+<td class="struct_member_description"><p>perform any model independent precalculation.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.prepare" id="NcmDataClass.prepare"></a>prepare</code></em> ()</p></td>
+<td class="struct_member_description"><p>perform any model dependent precalculation.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.resample" id="NcmDataClass.resample"></a>resample</code></em> ()</p></td>
+<td class="struct_member_description"><p>resample data from the models in <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.leastsquares-f" id="NcmDataClass.leastsquares-f"></a>leastsquares_f</code></em> ()</p></td>
+<td class="struct_member_description"><p>calculates the least squares $\vec{f}$ vector, i.e.,
+$\chi^2 \equiv \vec{f}\cdot\vec{f}$.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.leastsquares-J" id="NcmDataClass.leastsquares-J"></a>leastsquares_J</code></em> ()</p></td>
+<td class="struct_member_description"><p>calculates the least squares $\vec{f}$ vector derivatives
+with respect to the free parameter of <em class="parameter"><code>mset</code></em>
+.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.leastsquares-f-J" id="NcmDataClass.leastsquares-f-J"></a>leastsquares_f_J</code></em> ()</p></td>
+<td class="struct_member_description"><p>calculates both least squares vector and its derivatives.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.m2lnL-val" id="NcmDataClass.m2lnL-val"></a>m2lnL_val</code></em> ()</p></td>
+<td class="struct_member_description"><p>evaluate the minus two times the natural logarithim of the
+likelihood, i.e., $-2\ln(L)$.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.m2lnL-grad" id="NcmDataClass.m2lnL-grad"></a>m2lnL_grad</code></em> ()</p></td>
+<td class="struct_member_description"><p>evaluate the gradient of $-2\ln(L)$ with respect to the free
+parameters in <em class="parameter"><code>mset</code></em>
+.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.m2lnL-val-grad" id="NcmDataClass.m2lnL-val-grad"></a>m2lnL_val_grad</code></em> ()</p></td>
+<td class="struct_member_description"><p>evaluate the value and the gradient of $-2\ln(L)$.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.mean-vector" id="NcmDataClass.mean-vector"></a>mean_vector</code></em> ()</p></td>
+<td class="struct_member_description"><p>evaluate the Gaussian mean (approximation or not)</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.inv-cov-UH" id="NcmDataClass.inv-cov-UH"></a>inv_cov_UH</code></em> ()</p></td>
+<td class="struct_member_description"><p>evaluate the Gaussian inverse covariance matrix (approximation or not)</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="NcmData.html#NcmDataFisherMatrix" title="NcmDataFisherMatrix ()"><span class="type">NcmDataFisherMatrix</span></a> <em class="structfield"><code><a name="NcmDataClass.fisher-matrix" id="NcmDataClass.fisher-matrix"></a>fisher_matrix</code></em>;</p></td>
+<td class="struct_member_description"><p>calculates the Fisher matrix (based on a Gaussian approximation when it is the case) </p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-DATA-RESAMPLE-RNG-NAME:CAPS" id="NCM-DATA-RESAMPLE-RNG-NAME:CAPS"></a><h3>NCM_DATA_RESAMPLE_RNG_NAME</h3>
+<pre class="programlisting">#define NCM_DATA_RESAMPLE_RNG_NAME "data_resample"
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmData.property-details" id="NcmData.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmData--bootstrap" id="NcmData--bootstrap"></a><h3>The <code class="literal">“bootstrap”</code> property</h3>
+<pre class="programlisting">  “bootstrap”                <a class="link" href="NcmBootstrap.html" title="NcmBootstrap"><span class="type">NcmBootstrap</span></a> *</pre>
+<p>The <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> bootstrap object if any.</p>
+<p>Owner: NcmData</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmData--desc" id="NcmData--desc"></a><h3>The <code class="literal">“desc”</code> property</h3>
+<pre class="programlisting">  “desc”                     <span class="type">char</span> *</pre>
+<p>Description of the data object.</p>
+<p>Owner: NcmData</p>
+<p>Flags: Read / Write</p>
+<p>Default value: NULL</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmData--init" id="NcmData--init"></a><h3>The <code class="literal">“init”</code> property</h3>
+<pre class="programlisting">  “init”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Data initialized state.</p>
+<p>Owner: NcmData</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmData--long-desc" id="NcmData--long-desc"></a><h3>The <code class="literal">“long-desc”</code> property</h3>
+<pre class="programlisting">  “long-desc”                <span class="type">char</span> *</pre>
+<p>Description of the data object.</p>
+<p>Owner: NcmData</p>
+<p>Flags: Read / Write</p>
+<p>Default value: NULL</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmData--name" id="NcmData--name"></a><h3>The <code class="literal">“name”</code> property</h3>
+<pre class="programlisting">  “name”                     <span class="type">char</span> *</pre>
+<p>Name of the data object.</p>
+<p>Owner: NcmData</p>
+<p>Flags: Read</p>
+<p>Default value: NULL</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr />Generated by GTK-Doc V1.33.1</div>
+</div></div></body>
+</html>
