@@ -1,7 +1,9 @@
 ---
-jupyer: python3
-title: Samplers comparison
-toc-title: Table of contents
+layout: example
+title: Sampler comparisons
+desc: APES Emcee and Zeus sampler comparison
+category: Cosmology
+tags: [cosmology statistics python]
 ---
 
 **License**
