@@ -72,6 +72,14 @@
 </td>
 </tr>
 <tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="NcClusterAbundance.html#NcClusterAbundanceIntPd2NBias" title="NcClusterAbundanceIntPd2NBias ()">*NcClusterAbundanceIntPd2NBias</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
 <td class="define_keyword">#define</td>
 <td class="function_name">
 <a class="link" href="NcClusterAbundance.html#nc-cluster-abundance-d2NdzdlnM-val" title="nc_cluster_abundance_d2NdzdlnM_val()">nc_cluster_abundance_d2NdzdlnM_val</a><span class="c_punctuation">()</span>
@@ -339,7 +347,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<a class="link" href="NcHaloBiasFunc.html" title="NcHaloBiasFunc"><span class="type">NcHaloBiasFunc</span></a> *</td>
+<a class="link" href="NcHaloBias.html" title="NcHaloBias"><span class="type">NcHaloBias</span></a> *</td>
 <td class="property_name"><a class="link" href="NcClusterAbundance.html#NcClusterAbundance--mean-bias" title="The “mean-bias” property">mean-bias</a></td>
 <td class="property_flags">Read / Write / Construct Only</td>
 </tr>
@@ -406,6 +414,19 @@
 </div>
 <hr />
 <div class="refsect2">
+<a name="NcClusterAbundanceIntPd2NBias" id="NcClusterAbundanceIntPd2NBias"></a><h3>NcClusterAbundanceIntPd2NBias ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="c_punctuation">(</span>*NcClusterAbundanceIntPd2NBias<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcClusterAbundance.html" title="NcClusterAbundance"><span class="type">NcClusterAbundance</span></a> *cad</code></em>,
+                                  <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                  <em class="parameter"><code><a class="link" href="NcClusterRedshift.html" title="NcClusterRedshift"><span class="type">NcClusterRedshift</span></a> *clusterz</code></em>,
+                                  <em class="parameter"><code><a class="link" href="NcClusterMass.html" title="NcClusterMass"><span class="type">NcClusterMass</span></a> *clusterm</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lnM_obs</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lnM_obs_params</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *z_obs</code></em>,
+                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *z_obs_params</code></em>);</pre>
+</div>
+<hr />
+<div class="refsect2">
 <a name="nc-cluster-abundance-d2NdzdlnM-val" id="nc-cluster-abundance-d2NdzdlnM-val"></a><h3>nc_cluster_abundance_d2NdzdlnM_val()</h3>
 <pre class="programlisting">#define nc_cluster_abundance_d2NdzdlnM_val(cad, cp, lnM, z) (cad)-&gt;d2NdzdlnM_val (cad, cp, lnM, z)
 </pre>
@@ -433,7 +454,7 @@
 <a name="nc-cluster-abundance-new" id="nc-cluster-abundance-new"></a><h3>nc_cluster_abundance_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcClusterAbundance.html" title="NcClusterAbundance"><span class="returnvalue">NcClusterAbundance</span></a> *
 nc_cluster_abundance_new (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
-                          <em class="parameter"><code><a class="link" href="NcHaloBiasFunc.html" title="NcHaloBiasFunc"><span class="type">NcHaloBiasFunc</span></a> *mbiasf</code></em>);</pre>
+                          <em class="parameter"><code><a class="link" href="NcHaloBias.html" title="NcHaloBias"><span class="type">NcHaloBias</span></a> *mbiasf</code></em>);</pre>
 <p>This function allocates memory for a new <a class="link" href="NcClusterAbundance.html" title="NcClusterAbundance"><span class="type">NcClusterAbundance</span></a> object and sets its properties to the values from
 the input arguments.</p>
 <div class="refsect3">
@@ -452,7 +473,7 @@ the input arguments.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>mbiasf</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHaloBiasFunc.html" title="NcHaloBiasFunc"><span class="type">NcHaloBiasFunc</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloBias.html" title="NcHaloBias"><span class="type">NcHaloBias</span></a>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -468,7 +489,7 @@ the input arguments.</p>
 <a name="nc-cluster-abundance-nodist-new" id="nc-cluster-abundance-nodist-new"></a><h3>nc_cluster_abundance_nodist_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcClusterAbundance.html" title="NcClusterAbundance"><span class="returnvalue">NcClusterAbundance</span></a> *
 nc_cluster_abundance_nodist_new (<em class="parameter"><code><a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a> *mfp</code></em>,
-                                 <em class="parameter"><code><a class="link" href="NcHaloBiasFunc.html" title="NcHaloBiasFunc"><span class="type">NcHaloBiasFunc</span></a> *mbiasf</code></em>);</pre>
+                                 <em class="parameter"><code><a class="link" href="NcHaloBias.html" title="NcHaloBias"><span class="type">NcHaloBias</span></a> *mbiasf</code></em>);</pre>
 <p>This function allocates memory for a new <a class="link" href="NcClusterAbundance.html" title="NcClusterAbundance"><span class="type">NcClusterAbundance</span></a> object and sets its properties to the values from
 the input arguments.</p>
 <div class="refsect3">
@@ -482,12 +503,12 @@ the input arguments.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>mfp</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassFunction.html" title="NcHaloMassFunction"><span class="type">NcHaloMassFunction</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>mbiasf</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHaloBiasFunc.html" title="NcHaloBiasFunc"><span class="type">NcHaloBiasFunc</span></a>. </p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloBias.html" title="NcHaloBias"><span class="type">NcHaloBias</span></a>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -1539,7 +1560,7 @@ nc_cluster_abundance_mean_bias (<em class="parameter"><code><a class="link" href
 <hr />
 <div class="refsect2">
 <a name="NcClusterAbundance--mean-bias" id="NcClusterAbundance--mean-bias"></a><h3>The <code class="literal">“mean-bias”</code> property</h3>
-<pre class="programlisting">  “mean-bias”                <a class="link" href="NcHaloBiasFunc.html" title="NcHaloBiasFunc"><span class="type">NcHaloBiasFunc</span></a> *</pre>
+<pre class="programlisting">  “mean-bias”                <a class="link" href="NcHaloBias.html" title="NcHaloBias"><span class="type">NcHaloBias</span></a> *</pre>
 <p>FIXME</p>
 <p>Owner: NcClusterAbundance</p>
 <p>Flags: Read / Write / Construct Only</p>

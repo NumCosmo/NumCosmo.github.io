@@ -289,6 +289,14 @@
 </tr>
 <tr>
 <td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-to-yaml" title="ncm_serialize_to_yaml ()">ncm_serialize_to_yaml</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -305,10 +313,26 @@
 </tr>
 <tr>
 <td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-to-yaml-file" title="ncm_serialize_to_yaml_file ()">ncm_serialize_to_yaml_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="NcmSerialize.html#ncm-serialize-dup-obj" title="ncm_serialize_dup_obj ()">ncm_serialize_dup_obj</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-variant-to-yaml" title="ncm_serialize_variant_to_yaml ()">ncm_serialize_variant_to_yaml</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -505,6 +529,14 @@
 </tr>
 <tr>
 <td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-to-yaml" title="ncm_serialize_global_to_yaml ()">ncm_serialize_global_to_yaml</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -521,10 +553,26 @@
 </tr>
 <tr>
 <td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-to-yaml-file" title="ncm_serialize_global_to_yaml_file ()">ncm_serialize_global_to_yaml_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="NcmSerialize.html#ncm-serialize-global-dup-obj" title="ncm_serialize_global_dup_obj ()">ncm_serialize_global_dup_obj</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSerialize.html#ncm-serialize-global-variant-to-yaml" title="ncm_serialize_global_variant_to_yaml ()">ncm_serialize_global_variant_to_yaml</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 </tbody>
@@ -606,7 +654,17 @@
 </div>
 <div class="refsect1">
 <a name="NcmSerialize.description" id="NcmSerialize.description"></a><h2>Description</h2>
-<p>FIXME</p>
+<p>This object provides serialization, deserialization and duplication of objects.
+The serialization process is based on the <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> object system.</p>
+<p>Serialization is the process of converting an object into a stream of bytes to store the object
+or transmit it to memory, a database, or a file. Its main purpose is to save the state of an object
+in order to be able to recreate it when needed. The reverse process is called deserialization.</p>
+<p>One support for serialized data <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>.
+The <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> is a type-safe, reference counted, immutable, and memory-efficient container for arbitrary data.
+It is a generic container that can hold any type of data, including basic types such as integers and floating
+point numbers, strings, and byte arrays, as well as more complex types such as tuples, dictionaries, and variants.
+The <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> type system is designed to be extensible, so that new types can be added in the future.
+A serialized <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> object can be stored in binary or text format.</p>
 </div>
 <div class="refsect1">
 <a name="NcmSerialize.functions_details" id="NcmSerialize.functions_details"></a><h2>Functions</h2>
@@ -775,7 +833,7 @@ ncm_serialize_clear_instances (<em class="parameter"><code><a class="link" href=
                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> autosave_only</code></em>);</pre>
 <p>Releases all objects in <em class="parameter"><code>ser</code></em>
 . If <em class="parameter"><code>autosave_only</code></em>
- is TRUE 
+ is TRUE
 it will release only autosaved objects.</p>
 <div class="refsect3">
 <a name="ncm-serialize-clear-instances.parameters" id="ncm-serialize-clear-instances.parameters"></a><h4>Parameters</h4>
@@ -1614,6 +1672,43 @@ ncm_serialize_to_string (<em class="parameter"><code><a class="link" href="NcmSe
 </div>
 <hr />
 <div class="refsect2">
+<a name="ncm-serialize-to-yaml" id="ncm-serialize-to-yaml"></a><h3>ncm_serialize_to_yaml ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_serialize_to_yaml (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>);</pre>
+<p>Serialize the object <em class="parameter"><code>obj</code></em>
+ to a YAML string.</p>
+<div class="refsect3">
+<a name="ncm-serialize-to-yaml.parameters" id="ncm-serialize-to-yaml.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-to-yaml.returns" id="ncm-serialize-to-yaml.returns"></a><h4>Returns</h4>
+<p>A YAML string containing the serialized version of <em class="parameter"><code>obj</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
 <a name="ncm-serialize-to-file" id="ncm-serialize-to-file"></a><h3>ncm_serialize_to_file ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_serialize_to_file (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
@@ -1690,6 +1785,44 @@ ncm_serialize_to_binfile (<em class="parameter"><code><a class="link" href="NcmS
 </div>
 <hr />
 <div class="refsect2">
+<a name="ncm-serialize-to-yaml-file" id="ncm-serialize-to-yaml-file"></a><h3>ncm_serialize_to_yaml_file ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_to_yaml_file (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>,
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>Serializes <em class="parameter"><code>obj</code></em>
+ and saves the YAML string in <em class="parameter"><code>filename</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-serialize-to-yaml-file.parameters" id="ncm-serialize-to-yaml-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>File where to save the serialized version of the object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
 <a name="ncm-serialize-dup-obj" id="ncm-serialize-dup-obj"></a><h3>ncm_serialize_dup_obj ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
 ncm_serialize_dup_obj (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
@@ -1723,6 +1856,41 @@ ncm_serialize_dup_obj (<em class="parameter"><code><a class="link" href="NcmSeri
 <p>A duplicate of <em class="parameter"><code>obj</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-variant-to-yaml" id="ncm-serialize-variant-to-yaml"></a><h3>ncm_serialize_variant_to_yaml ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_serialize_variant_to_yaml (<em class="parameter"><code><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> *ser</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *var_obj</code></em>);</pre>
+<p>Converts a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> serialized to a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> to a YAML string.</p>
+<div class="refsect3">
+<a name="ncm-serialize-variant-to-yaml.parameters" id="ncm-serialize-variant-to-yaml.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>var_obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> serialized to a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-variant-to-yaml.returns" id="ncm-serialize-variant-to-yaml.returns"></a><h4>Returns</h4>
+<p> A pointer to the YAML string representation of the <em class="parameter"><code>var_obj</code></em>
+.</p>
 </div>
 </div>
 <hr />
@@ -2321,6 +2489,34 @@ ncm_serialize_global_to_string (<em class="parameter"><code><a href="/usr/share/
 </div>
 <hr />
 <div class="refsect2">
+<a name="ncm-serialize-global-to-yaml" id="ncm-serialize-global-to-yaml"></a><h3>ncm_serialize_global_to_yaml ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_serialize_global_to_yaml (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-to-yaml" title="ncm_serialize_to_yaml ()"><code class="function">ncm_serialize_to_yaml()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-to-yaml.parameters" id="ncm-serialize-global-to-yaml.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-global-to-yaml.returns" id="ncm-serialize-global-to-yaml.returns"></a><h4>Returns</h4>
+<p>A string containing the serialized version of <em class="parameter"><code>obj</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
 <a name="ncm-serialize-global-to-file" id="ncm-serialize-global-to-file"></a><h3>ncm_serialize_global_to_file ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_serialize_global_to_file (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>,
@@ -2381,6 +2577,36 @@ ncm_serialize_global_to_binfile (<em class="parameter"><code><a href="/usr/share
 </div>
 <hr />
 <div class="refsect2">
+<a name="ncm-serialize-global-to-yaml-file" id="ncm-serialize-global-to-yaml-file"></a><h3>ncm_serialize_global_to_yaml_file ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_serialize_global_to_yaml_file (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>,
+                                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-to-yaml-file" title="ncm_serialize_to_yaml_file ()"><code class="function">ncm_serialize_to_yaml_file()</code></a>.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-to-yaml-file.parameters" id="ncm-serialize-global-to-yaml-file.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>File where to save the serialized version of the object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
 <a name="ncm-serialize-global-dup-obj" id="ncm-serialize-global-dup-obj"></a><h3>ncm_serialize_global_dup_obj ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
 ncm_serialize_global_dup_obj (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>);</pre>
@@ -2405,6 +2631,34 @@ ncm_serialize_global_dup_obj (<em class="parameter"><code><a href="/usr/share/gt
 <p>A duplicate of <em class="parameter"><code>obj</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-serialize-global-variant-to-yaml" id="ncm-serialize-global-variant-to-yaml"></a><h3>ncm_serialize_global_variant_to_yaml ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_serialize_global_variant_to_yaml (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *var_obj</code></em>);</pre>
+<p>Global version of <a class="link" href="NcmSerialize.html#ncm-serialize-variant-to-yaml" title="ncm_serialize_variant_to_yaml ()"><code class="function">ncm_serialize_variant_to_yaml()</code></a>.
+Converts a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> serialized to a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> to a YAML string.</p>
+<div class="refsect3">
+<a name="ncm-serialize-global-variant-to-yaml.parameters" id="ncm-serialize-global-variant-to-yaml.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>var_obj</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> serialized to a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-serialize-global-variant-to-yaml.returns" id="ncm-serialize-global-variant-to-yaml.returns"></a><h4>Returns</h4>
+<p> A pointer to the YAML string representation of the <em class="parameter"><code>var_obj</code></em>
+.</p>
 </div>
 </div>
 </div>
@@ -2469,13 +2723,13 @@ ncm_serialize_global_dup_obj (<em class="parameter"><code><a href="/usr/share/gt
 <hr />
 <div class="refsect2">
 <a name="NCM-SERIALIZE-OBJECT-TYPE:CAPS" id="NCM-SERIALIZE-OBJECT-TYPE:CAPS"></a><h3>NCM_SERIALIZE_OBJECT_TYPE</h3>
-<pre class="programlisting">#define NCM_SERIALIZE_OBJECT_TYPE "{s"NCM_SERIALIZE_PROPERTIES_TYPE"}"
+<pre class="programlisting">#define NCM_SERIALIZE_OBJECT_TYPE "{s"NCM_SERIALIZE_PROPERTIES_TYPE "}"
 </pre>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NCM-SERIALIZE-OBJECT-FORMAT:CAPS" id="NCM-SERIALIZE-OBJECT-FORMAT:CAPS"></a><h3>NCM_SERIALIZE_OBJECT_FORMAT</h3>
-<pre class="programlisting">#define NCM_SERIALIZE_OBJECT_FORMAT "{s@"NCM_SERIALIZE_PROPERTIES_TYPE"}"
+<pre class="programlisting">#define NCM_SERIALIZE_OBJECT_FORMAT "{s@"NCM_SERIALIZE_PROPERTIES_TYPE "}"
 </pre>
 </div>
 <hr />

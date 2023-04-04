@@ -129,6 +129,14 @@
 </tr>
 <tr>
 <td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-is-init" title="ncm_data_is_init ()">ncm_data_is_init</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -212,6 +220,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="NcmData.html#ncm-data-bootstrap-enabled" title="ncm_data_bootstrap_enabled ()">ncm_data_bootstrap_enabled</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmBootstrap.html" title="NcmBootstrap"><span class="returnvalue">NcmBootstrap</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-peek-bootstrap" title="ncm_data_peek_bootstrap ()">ncm_data_peek_bootstrap</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -347,12 +363,20 @@
 </colgroup>
 <tbody>
 <tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmData.html#NCM-TYPE-DATA:CAPS" title="NCM_TYPE_DATA">NCM_TYPE_DATA</a></td>
+</tr>
+<tr>
 <td class="datatype_keyword">struct</td>
 <td class="function_name"><a class="link" href="NcmData.html#NcmDataClass" title="struct NcmDataClass">NcmDataClass</a></td>
 </tr>
 <tr>
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="NcmData.html#NCM-DATA-RESAMPLE-RNG-NAME:CAPS" title="NCM_DATA_RESAMPLE_RNG_NAME">NCM_DATA_RESAMPLE_RNG_NAME</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcmData.html#NcmData-struct" title="NcmData">NcmData</a></td>
 </tr>
 </tbody>
 </table></div>
@@ -372,6 +396,7 @@
         <span class="lineart">├──</span> <a class="link" href="NcDataPlanckLKL.html" title="NcDataPlanckLKL">NcDataPlanckLKL</a>
         <span class="lineart">├──</span> <a class="link" href="NcDataReducedShearClusterMass.html" title="NcDataReducedShearClusterMass">NcDataReducedShearClusterMass</a>
         <span class="lineart">├──</span> <a class="link" href="NcmDataFunnel.html" title="NcmDataFunnel">NcmDataFunnel</a>
+        <span class="lineart">├──</span> <a class="link" href="NcmDataGaussMix2D.html" title="NcmDataGaussMix2D">NcmDataGaussMix2D</a>
         <span class="lineart">├──</span> <a class="link" href="NcmDataPoisson.html" title="NcmDataPoisson">NcmDataPoisson</a>
         <span class="lineart">╰──</span> <a class="link" href="NcmDataRosenbrock.html" title="NcmDataRosenbrock">NcmDataRosenbrock</a>
 </pre>
@@ -379,10 +404,10 @@
 <div class="refsect1">
 <a name="NcmData.description" id="NcmData.description"></a><h2>Description</h2>
 <p>The <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> object represent generic data. This is the root object used when
-building a statistical analysis. Every implementation of <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> envolves 
+building a statistical analysis. Every implementation of <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> envolves
 the methods described in <a class="link" href="NcmData.html#NcmDataClass" title="struct NcmDataClass"><span class="type">NcmDataClass</span></a>.</p>
-<p>A <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> must implement, at least, the method <a class="link" href="NcmData.html#NcmDataClass.m2lnL-val"><span class="type">NcmDataClass.m2lnL_val</span></a> or 
-<a class="link" href="NcmData.html#NcmDataClass.leastsquares-f"><span class="type">NcmDataClass.leastsquares_f</span></a> to perform respectively likelihood or least
+<p>A <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> must implement, at least, the method <a class="link" href="NcmData.html#ncm-data-m2lnL-val" title="ncm_data_m2lnL_val ()"><code class="function">ncm_data_m2lnL_val()</code></a> or
+<a class="link" href="NcmData.html#ncm-data-leastsquares-f" title="ncm_data_leastsquares_f ()"><code class="function">ncm_data_leastsquares_f()</code></a> to perform respectively likelihood or least
 squares analysis.</p>
 </div>
 <div class="refsect1">
@@ -648,6 +673,32 @@ ncm_data_set_init (<em class="parameter"><code><a class="link" href="NcmData.htm
 </tr>
 </tbody>
 </table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-is-init" id="ncm-data-is-init"></a><h3>ncm_data_is_init ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_data_is_init (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-data-is-init.parameters" id="ncm-data-is-init.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-is-init.returns" id="ncm-data-is-init.returns"></a><h4>Returns</h4>
+<p> whether the <em class="parameter"><code>data</code></em>
+object is initialized.</p>
 </div>
 </div>
 <hr />
@@ -982,6 +1033,32 @@ ncm_data_bootstrap_enabled (<em class="parameter"><code><a class="link" href="Nc
 </div>
 <hr />
 <div class="refsect2">
+<a name="ncm-data-peek-bootstrap" id="ncm-data-peek-bootstrap"></a><h3>ncm_data_peek_bootstrap ()</h3>
+<pre class="programlisting"><a class="link" href="NcmBootstrap.html" title="NcmBootstrap"><span class="returnvalue">NcmBootstrap</span></a> *
+ncm_data_peek_bootstrap (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-data-peek-bootstrap.parameters" id="ncm-data-peek-bootstrap.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-peek-bootstrap.returns" id="ncm-data-peek-bootstrap.returns"></a><h4>Returns</h4>
+<p>the current <a class="link" href="NcmBootstrap.html" title="NcmBootstrap"><span class="type">NcmBootstrap</span></a> object or NULL. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
 <a name="ncm-data-leastsquares-f" id="ncm-data-leastsquares-f"></a><h3>ncm_data_leastsquares_f ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_data_leastsquares_f (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
@@ -1150,9 +1227,9 @@ the data given the models in <em class="parameter"><code>mset</code></em>
 ncm_data_m2lnL_grad (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
                      <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
                      <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *grad</code></em>);</pre>
-<p>Calculates the gradient of $-2\ln(L)$, i.e., $$g_i = -2\frac{d\ln(L)}{dx_i}.$$ 
+<p>Calculates the gradient of $-2\ln(L)$, i.e., $$g_i = -2\frac{d\ln(L)}{dx_i}.$$
 where $L$ represents the likelihood of the data given the models in <em class="parameter"><code>mset</code></em>
-. 
+.
 The result is stored in <em class="parameter"><code>grad</code></em>
 .</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> m2lnL_grad]</span></p>
@@ -1236,7 +1313,7 @@ ncm_data_mean_vector (<em class="parameter"><code><a class="link" href="NcmData.
                       <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
                       <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *mu</code></em>);</pre>
 <p>Calculates the Gaussian mean vector (for non-Gaussian distribution
-it should calculate the Gaussian approximated mean of the actual 
+it should calculate the Gaussian approximated mean of the actual
 distribution).</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> mean_vector]</span></p>
 <div class="refsect3">
@@ -1355,127 +1432,27 @@ ncm_data_fisher_matrix (<em class="parameter"><code><a class="link" href="NcmDat
 <div class="refsect1">
 <a name="NcmData.other_details" id="NcmData.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
+<a name="NCM-TYPE-DATA:CAPS" id="NCM-TYPE-DATA:CAPS"></a><h3>NCM_TYPE_DATA</h3>
+<pre class="programlisting">#define NCM_TYPE_DATA (ncm_data_get_type ())
+</pre>
+</div>
+<hr />
+<div class="refsect2">
 <a name="NcmDataClass" id="NcmDataClass"></a><h3>struct NcmDataClass</h3>
 <pre class="programlisting">struct NcmDataClass {
-  gboolean bootstrap;
-  guint (*get_length) (NcmData *data);
-  guint (*get_dof) (NcmData *data);
-  void (*begin) (NcmData *data);
-  void (*prepare) (NcmData *data, NcmMSet *mset);
-  void (*resample) (NcmData *data, NcmMSet *mset, NcmRNG *rng);
-  void (*leastsquares_f) (NcmData *data, NcmMSet *mset, NcmVector *f);
-  void (*leastsquares_J) (NcmData *data, NcmMSet *mset, NcmMatrix *J);
-  void (*leastsquares_f_J) (NcmData *data, NcmMSet *mset, NcmVector *f, NcmMatrix *J);
-  void (*m2lnL_val) (NcmData *data, NcmMSet *mset, gdouble *m2lnL);
-  void (*m2lnL_grad) (NcmData *data, NcmMSet *mset, NcmVector *grad);
-  void (*m2lnL_val_grad) (NcmData *data, NcmMSet *mset, gdouble *m2lnL, NcmVector *grad);
-  void (*mean_vector) (NcmData *data, NcmMSet *mset, NcmVector *mu);
-  void (*inv_cov_UH) (NcmData *data, NcmMSet *mset, NcmMatrix *H);
-  NcmDataFisherMatrix fisher_matrix;
 };
 </pre>
-<p>Virtual table for the <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> abstract class.</p>
-<div class="refsect3">
-<a name="NcmDataClass.members" id="NcmDataClass.members"></a><h4>Members</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="300px" class="struct_members_name" />
-<col class="struct_members_description" />
-<col width="200px" class="struct_members_annotations" />
-</colgroup>
-<tbody>
-<tr>
-<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> <em class="structfield"><code><a name="NcmDataClass.bootstrap" id="NcmDataClass.bootstrap"></a>bootstrap</code></em>;</p></td>
-<td class="struct_member_description"><p>sets whenever the <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> implementations supports bootstrap.</p></td>
-<td class="struct_member_annotations"> </td>
-</tr>
-<tr>
-<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.get-length" id="NcmDataClass.get-length"></a>get_length</code></em> ()</p></td>
-<td class="struct_member_description"><p>return the length associated to the <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> object.</p></td>
-<td class="struct_member_annotations"> </td>
-</tr>
-<tr>
-<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.get-dof" id="NcmDataClass.get-dof"></a>get_dof</code></em> ()</p></td>
-<td class="struct_member_description"><p>return the effective degrees of freedom related to the <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a>
-statistics (likelihood or $\chi^2$) this number does not represent
-necessarely the number of data points.</p></td>
-<td class="struct_member_annotations"> </td>
-</tr>
-<tr>
-<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.begin" id="NcmDataClass.begin"></a>begin</code></em> ()</p></td>
-<td class="struct_member_description"><p>perform any model independent precalculation.</p></td>
-<td class="struct_member_annotations"> </td>
-</tr>
-<tr>
-<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.prepare" id="NcmDataClass.prepare"></a>prepare</code></em> ()</p></td>
-<td class="struct_member_description"><p>perform any model dependent precalculation.</p></td>
-<td class="struct_member_annotations"> </td>
-</tr>
-<tr>
-<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.resample" id="NcmDataClass.resample"></a>resample</code></em> ()</p></td>
-<td class="struct_member_description"><p>resample data from the models in <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a>.</p></td>
-<td class="struct_member_annotations"> </td>
-</tr>
-<tr>
-<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.leastsquares-f" id="NcmDataClass.leastsquares-f"></a>leastsquares_f</code></em> ()</p></td>
-<td class="struct_member_description"><p>calculates the least squares $\vec{f}$ vector, i.e.,
-$\chi^2 \equiv \vec{f}\cdot\vec{f}$.</p></td>
-<td class="struct_member_annotations"> </td>
-</tr>
-<tr>
-<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.leastsquares-J" id="NcmDataClass.leastsquares-J"></a>leastsquares_J</code></em> ()</p></td>
-<td class="struct_member_description"><p>calculates the least squares $\vec{f}$ vector derivatives
-with respect to the free parameter of <em class="parameter"><code>mset</code></em>
-.</p></td>
-<td class="struct_member_annotations"> </td>
-</tr>
-<tr>
-<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.leastsquares-f-J" id="NcmDataClass.leastsquares-f-J"></a>leastsquares_f_J</code></em> ()</p></td>
-<td class="struct_member_description"><p>calculates both least squares vector and its derivatives.</p></td>
-<td class="struct_member_annotations"> </td>
-</tr>
-<tr>
-<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.m2lnL-val" id="NcmDataClass.m2lnL-val"></a>m2lnL_val</code></em> ()</p></td>
-<td class="struct_member_description"><p>evaluate the minus two times the natural logarithim of the
-likelihood, i.e., $-2\ln(L)$.</p></td>
-<td class="struct_member_annotations"> </td>
-</tr>
-<tr>
-<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.m2lnL-grad" id="NcmDataClass.m2lnL-grad"></a>m2lnL_grad</code></em> ()</p></td>
-<td class="struct_member_description"><p>evaluate the gradient of $-2\ln(L)$ with respect to the free
-parameters in <em class="parameter"><code>mset</code></em>
-.</p></td>
-<td class="struct_member_annotations"> </td>
-</tr>
-<tr>
-<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.m2lnL-val-grad" id="NcmDataClass.m2lnL-val-grad"></a>m2lnL_val_grad</code></em> ()</p></td>
-<td class="struct_member_description"><p>evaluate the value and the gradient of $-2\ln(L)$.</p></td>
-<td class="struct_member_annotations"> </td>
-</tr>
-<tr>
-<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.mean-vector" id="NcmDataClass.mean-vector"></a>mean_vector</code></em> ()</p></td>
-<td class="struct_member_description"><p>evaluate the Gaussian mean (approximation or not)</p></td>
-<td class="struct_member_annotations"> </td>
-</tr>
-<tr>
-<td class="struct_member_name"><p><em class="structfield"><code><a name="NcmDataClass.inv-cov-UH" id="NcmDataClass.inv-cov-UH"></a>inv_cov_UH</code></em> ()</p></td>
-<td class="struct_member_description"><p>evaluate the Gaussian inverse covariance matrix (approximation or not)</p></td>
-<td class="struct_member_annotations"> </td>
-</tr>
-<tr>
-<td class="struct_member_name"><p><a class="link" href="NcmData.html#NcmDataFisherMatrix" title="NcmDataFisherMatrix ()"><span class="type">NcmDataFisherMatrix</span></a> <em class="structfield"><code><a name="NcmDataClass.fisher-matrix" id="NcmDataClass.fisher-matrix"></a>fisher_matrix</code></em>;</p></td>
-<td class="struct_member_description"><p>calculates the Fisher matrix (based on a Gaussian approximation when it is the case) </p></td>
-<td class="struct_member_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
 </div>
 <hr />
 <div class="refsect2">
 <a name="NCM-DATA-RESAMPLE-RNG-NAME:CAPS" id="NCM-DATA-RESAMPLE-RNG-NAME:CAPS"></a><h3>NCM_DATA_RESAMPLE_RNG_NAME</h3>
 <pre class="programlisting">#define NCM_DATA_RESAMPLE_RNG_NAME "data_resample"
 </pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmData-struct" id="NcmData-struct"></a><h3>NcmData</h3>
+<pre class="programlisting">typedef struct _NcmData NcmData;</pre>
 </div>
 </div>
 <div class="refsect1">

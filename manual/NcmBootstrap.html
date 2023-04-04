@@ -212,6 +212,29 @@
 </table></div>
 </div>
 <div class="refsect1">
+<a name="NcmBootstrap.other" id="NcmBootstrap.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmBootstrap.html#NCM-TYPE-BOOTSTRAP:CAPS" title="NCM_TYPE_BOOTSTRAP">NCM_TYPE_BOOTSTRAP</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmBootstrap.html#NCM-BOOTSTRAP-RNG-NAME:CAPS" title="NCM_BOOTSTRAP_RNG_NAME">NCM_BOOTSTRAP_RNG_NAME</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcmBootstrap.html#NcmBootstrap-struct" title="NcmBootstrap">NcmBootstrap</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
 <a name="NcmBootstrap.object-hierarchy" id="NcmBootstrap.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> NcmBootstrap
@@ -219,7 +242,7 @@
 </div>
 <div class="refsect1">
 <a name="NcmBootstrap.description" id="NcmBootstrap.description"></a><h2>Description</h2>
-<p>This object generate random samples of indexes. These samples are used 
+<p>This object generate random samples of indexes. These samples are used
 to calculate statistics using different combinations of the same data set.</p>
 </div>
 <div class="refsect1">
@@ -402,7 +425,7 @@ ncm_bootstrap_set_fsize (<em class="parameter"><code><a class="link" href="NcmBo
 </tr>
 <tr>
 <td class="parameter_name"><p>fsize</p></td>
-<td class="parameter_description"><p>full sample size. </p></td>
+<td class="parameter_description"><p>full sample size.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -458,7 +481,7 @@ ncm_bootstrap_set_bsize (<em class="parameter"><code><a class="link" href="NcmBo
 </tr>
 <tr>
 <td class="parameter_name"><p>bsize</p></td>
-<td class="parameter_description"><p>bootstrap size. </p></td>
+<td class="parameter_description"><p>bootstrap size.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -497,7 +520,7 @@ ncm_bootstrap_get_bsize (<em class="parameter"><code><a class="link" href="NcmBo
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_bootstrap_resample (<em class="parameter"><code><a class="link" href="NcmBootstrap.html" title="NcmBootstrap"><span class="type">NcmBootstrap</span></a> *bstrap</code></em>,
                         <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
-<p>Sample with replacement <a class="link" href="NcmBootstrap.html#NcmBootstrap--bootstrap-size" title="The “bootstrap-size” property"><span class="type">“bootstrap-size”</span></a> from the 
+<p>Sample with replacement <a class="link" href="NcmBootstrap.html#NcmBootstrap--bootstrap-size" title="The “bootstrap-size” property"><span class="type">“bootstrap-size”</span></a> from the
 <a class="link" href="NcmBootstrap.html#NcmBootstrap--full-size" title="The “full-size” property"><span class="type">“full-size”</span></a> indexes.</p>
 <div class="refsect3">
 <a name="ncm-bootstrap-resample.parameters" id="ncm-bootstrap-resample.parameters"></a><h4>Parameters</h4>
@@ -528,9 +551,9 @@ ncm_bootstrap_resample (<em class="parameter"><code><a class="link" href="NcmBoo
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_bootstrap_remix (<em class="parameter"><code><a class="link" href="NcmBootstrap.html" title="NcmBootstrap"><span class="type">NcmBootstrap</span></a> *bstrap</code></em>,
                      <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
-<p>Sample without replacement <a class="link" href="NcmBootstrap.html#NcmBootstrap--bootstrap-size" title="The “bootstrap-size” property"><span class="type">“bootstrap-size”</span></a> from the 
+<p>Sample without replacement <a class="link" href="NcmBootstrap.html#NcmBootstrap--bootstrap-size" title="The “bootstrap-size” property"><span class="type">“bootstrap-size”</span></a> from the
 <a class="link" href="NcmBootstrap.html#NcmBootstrap--full-size" title="The “full-size” property"><span class="type">“full-size”</span></a> indexes. Note that in this case
-<a class="link" href="NcmBootstrap.html#NcmBootstrap--bootstrap-size" title="The “bootstrap-size” property"><span class="type">“bootstrap-size”</span></a> must be equal or smaller than 
+<a class="link" href="NcmBootstrap.html#NcmBootstrap--bootstrap-size" title="The “bootstrap-size” property"><span class="type">“bootstrap-size”</span></a> must be equal or smaller than
 <a class="link" href="NcmBootstrap.html#NcmBootstrap--full-size" title="The “full-size” property"><span class="type">“full-size”</span></a>.</p>
 <div class="refsect3">
 <a name="ncm-bootstrap-remix.parameters" id="ncm-bootstrap-remix.parameters"></a><h4>Parameters</h4>
@@ -596,7 +619,7 @@ ncm_bootstrap_get (<em class="parameter"><code><a class="link" href="NcmBootstra
 <a name="ncm-bootstrap-get-sortncomp" id="ncm-bootstrap-get-sortncomp"></a><h3>ncm_bootstrap_get_sortncomp ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
 ncm_bootstrap_get_sortncomp (<em class="parameter"><code><a class="link" href="NcmBootstrap.html" title="NcmBootstrap"><span class="type">NcmBootstrap</span></a> *bstrap</code></em>);</pre>
-<p>Fills an array with the sorted indexes followed by the number of 
+<p>Fills an array with the sorted indexes followed by the number of
 times they appear.</p>
 <div class="refsect3">
 <a name="ncm-bootstrap-get-sortncomp.parameters" id="ncm-bootstrap-get-sortncomp.parameters"></a><h4>Parameters</h4>
@@ -645,6 +668,25 @@ ncm_bootstrap_is_init (<em class="parameter"><code><a class="link" href="NcmBoot
 <p> whether <em class="parameter"><code>bstrap</code></em>
 is initialized.</p>
 </div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmBootstrap.other_details" id="NcmBootstrap.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NCM-TYPE-BOOTSTRAP:CAPS" id="NCM-TYPE-BOOTSTRAP:CAPS"></a><h3>NCM_TYPE_BOOTSTRAP</h3>
+<pre class="programlisting">#define NCM_TYPE_BOOTSTRAP (ncm_bootstrap_get_type ())
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NCM-BOOTSTRAP-RNG-NAME:CAPS" id="NCM-BOOTSTRAP-RNG-NAME:CAPS"></a><h3>NCM_BOOTSTRAP_RNG_NAME</h3>
+<pre class="programlisting">#define NCM_BOOTSTRAP_RNG_NAME "bootstrap"
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmBootstrap-struct" id="NcmBootstrap-struct"></a><h3>NcmBootstrap</h3>
+<pre class="programlisting">typedef struct _NcmBootstrap NcmBootstrap;</pre>
 </div>
 </div>
 <div class="refsect1">

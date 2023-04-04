@@ -136,22 +136,22 @@ the virtual methods of the <a class="link" href="NcmStatsDistKernel.html" title=
 Below, there are some definitions of the multivariate Student t distribution.
 For more information, check  [<a class="ulink" href="https://journal.r-project.org/archive/2013/RJ-2013-033/RJ-2013-033.pdf" target="_top">On Sampling from the Multivariate t
 Distribution, Marius Hofert</a>].</p>
-<p>The multivariate t distribution with $\nu$ degrees of freedom has its stochastic representation as 
+<p>The multivariate t distribution with $\nu$ degrees of freedom has its stochastic representation as
 \begin{align}
 \label{st}
 \textbf{X} &amp;= \mu + \sqrt{W} A \textbf{Z}
 ,\end{align}
 where $\textbf{Z}=(Z_1,Z_2,...,Z_n)$ is a $n$-dimension random vector whose components are independent normal random variables.
-$A$ is a $d \times n$ matrix, $\mu$ is a $d$-dimensional random vector that defines the mean of the distribution and  
+$A$ is a $d \times n$ matrix, $\mu$ is a $d$-dimensional random vector that defines the mean of the distribution and
 $W=\frac{\nu}{\chi^2}$, being $\chi^2$ a random variable following a chi-squared distribution with $\nu &gt; 0$ degrees of freedom.
-The covariance matrix is defined as $\Sigma =  AA^T$, such that the distribution of $\textbf{X}$ is uniquely defined by its 
-covariance matrix and the mean vector, that is, $\textbf{X} \sim t(\mu, \Sigma)$. </p>
+The covariance matrix is defined as $\Sigma =  AA^T$, such that the distribution of $\textbf{X}$ is uniquely defined by its
+covariance matrix and the mean vector, that is, $\textbf{X} \sim t(\mu, \Sigma)$.</p>
 <p>Assuming that $n=d$, the probability density function (pdf) of $\textbf{X}$ is
 \begin{align}
 \label{pdfst}
 f_{\textbf{X}(x)} = \frac{\Gamma\left(\frac{\nu + d}{2}\right)}{\Gamma\left(\frac{\nu}{2}\right)(2\pi)^{\frac{d}{2}} \sqrt{det \Sigma}} \left[1+\frac{(x-\mu)^T \Sigma^-1 (x-\mu)}{\nu}\right]^{-\frac{\nu + d}{2}}
 ,\end{align}
-considering that the covariance matrix is positive definite and $x \in \mathbb{R^d}$. Also, the covariance matrix can be 
+considering that the covariance matrix is positive definite and $x \in \mathbb{R^d}$. Also, the covariance matrix can be
 decomposed in its Cholesky decomposition,
 \begin{align}
 \Sigma = LL^t
@@ -160,8 +160,8 @@ where $L$ is a triangular matrix with positive definite values. This decompositi
 <p>The $\sqrt{W}$ factor makes the multivariate t distribution more flexible than the multivariate Gaussian distribution,
 especially on its tails. Therefore, for problems that require a smoother function, the multivariate t kernell shall be used.
 Also, as seen in equation \eqref{st}, the Student's t distribtuion can be generated using normal random variables, which makes the
-distribution easier to be generated. For the case $\nu \rightarrow \infty$, the multivariate t distribution becomes the Gaussian 
-distribution.   </p>
+distribution easier to be generated. For the case $\nu \rightarrow \infty$, the multivariate t distribution becomes the Gaussian
+distribution.</p>
 <p>This object uses the pdf given by equation \eqref{pdfst} to define a Student's t kernel, such that it can generate points distributed
 by multivariate t distributions.</p>
 <p>The user must provide the following input value: <em class="parameter"><code>dim</code></em>

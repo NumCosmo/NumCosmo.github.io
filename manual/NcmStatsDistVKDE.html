@@ -133,10 +133,10 @@
 <a name="NcmStatsDistVKDE.description" id="NcmStatsDistVKDE.description"></a><h2>Description</h2>
 <p>Abstract object to reconstruct an arbitrary N-dimensional probability distribution.
 This object provides the complementary tools to perform a radial basis interpolation
-in a multidimensional function using the <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class. </p>
-<p>This object sets the kernel $\phi$ to be used in the radial basis interpolation. This object also implements some 
+in a multidimensional function using the <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class.</p>
+<p>This object sets the kernel $\phi$ to be used in the radial basis interpolation. This object also implements some
 calculations needed in the <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class, such as the covariance matrices of the whole sample points and its Cholesky decompositions,
-the preparation of the interpolation matrix $IM$, the kernel normalization factors, and given a sample vector $\vec{x}$, the distribution 
+the preparation of the interpolation matrix $IM$, the kernel normalization factors, and given a sample vector $\vec{x}$, the distribution
 evaluated in these points. Some of these calculations are explained below.</p>
 <p>The <a class="link" href="NcmStatsDistVKDE.html" title="NcmStatsDistVKDE"><span class="type">NcmStatsDistVKDE</span></a> uses a different covariance matrix for each sample point. This feature is computed
 in the <a class="link" href="NcmStatsDist.html#ncm-stats-dist-prepare-kernel" title="ncm_stats_dist_prepare_kernel ()"><code class="function">ncm_stats_dist_prepare_kernel()</code></a> function. In this algorithm, one should define the <em class="parameter"><code>local_frac</code></em>
@@ -153,9 +153,9 @@ how the <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span clas
  - <a class="link" href="NcmStatsDist.html#ncm-stats-dist-set-split-frac" title="ncm_stats_dist_set_split_frac ()"><code class="function">ncm_stats_dist_set_split_frac()</code></a>,
 <em class="parameter"><code>over_smooth</code></em>
  - <a class="link" href="NcmStatsDist.html#ncm-stats-dist-set-over-smooth" title="ncm_stats_dist_set_over_smooth ()"><code class="function">ncm_stats_dist_set_over_smooth()</code></a>, <em class="parameter"><code>local_Frac</code></em>
- - <a class="link" href="NcmStatsDistVKDE.html#ncm-stats-dist-vkde-set-local-frac" title="ncm_stats_dist_vkde_set_local_frac ()"><code class="function">ncm_stats_dist_vkde_set_local_frac()</code></a>, $v(x)$ - <a class="link" href="NcmStatsDist.html#ncm-stats-dist-prepare-interp" title="ncm_stats_dist_prepare_interp ()"><code class="function">ncm_stats_dist_prepare_interp()</code></a>. 
+ - <a class="link" href="NcmStatsDistVKDE.html#ncm-stats-dist-vkde-set-local-frac" title="ncm_stats_dist_vkde_set_local_frac ()"><code class="function">ncm_stats_dist_vkde_set_local_frac()</code></a>, $v(x)$ - <a class="link" href="NcmStatsDist.html#ncm-stats-dist-prepare-interp" title="ncm_stats_dist_prepare_interp ()"><code class="function">ncm_stats_dist_prepare_interp()</code></a>.
 To see an example of how to use this object and the main functions that are called within each function, check the fluxogram at the end of this documentation,
-where the order of the functions that should be called by the user and some of the functions that the algorithm calls.      </p>
+where the order of the functions that should be called by the user and some of the functions that the algorithm calls.</p>
 <p><span class="inlinemediaobject"><img src="vkde.png" alt="vkde_sketch" /></span></p>
 </div>
 <div class="refsect1">

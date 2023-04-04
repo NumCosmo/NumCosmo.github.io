@@ -71,6 +71,22 @@
 <a class="link" href="NcmDataGauss.html#ncm-data-gauss-get-size" title="ncm_data_gauss_get_size ()">ncm_data_gauss_get_size</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="returnvalue">NcmMatrix</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGauss.html#ncm-data-gauss-peek-inv-cov" title="ncm_data_gauss_peek_inv_cov ()">ncm_data_gauss_peek_inv_cov</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGauss.html#ncm-data-gauss-peek-mean" title="ncm_data_gauss_peek_mean ()">ncm_data_gauss_peek_mean</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -99,6 +115,29 @@
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcmDataGauss.html#NcmDataGauss--n-points" title="The “n-points” property">n-points</a></td>
 <td class="property_flags">Read / Write / Construct</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmDataGauss.other" id="NcmDataGauss.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type" />
+<col class="other_proto_name" />
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmDataGauss.html#NCM-TYPE-DATA-GAUSS:CAPS" title="NCM_TYPE_DATA_GAUSS">NCM_TYPE_DATA_GAUSS</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmDataGauss.html#NcmDataGaussClass" title="struct NcmDataGaussClass">NcmDataGaussClass</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcmDataGauss.html#NcmDataGauss-struct" title="NcmDataGauss">NcmDataGauss</a></td>
 </tr>
 </tbody>
 </table></div>
@@ -175,6 +214,80 @@ ncm_data_gauss_get_size (<em class="parameter"><code><a class="link" href="NcmDa
 <a name="ncm-data-gauss-get-size.returns" id="ncm-data-gauss-get-size.returns"></a><h4>Returns</h4>
 <p> Data size.</p>
 </div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-gauss-peek-inv-cov" id="ncm-data-gauss-peek-inv-cov"></a><h3>ncm_data_gauss_peek_inv_cov ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="returnvalue">NcmMatrix</span></a> *
+ncm_data_gauss_peek_inv_cov (<em class="parameter"><code><a class="link" href="NcmDataGauss.html" title="NcmDataGauss"><span class="type">NcmDataGauss</span></a> *gauss</code></em>);</pre>
+<p>Gets the inverse covariance matrix.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-peek-inv-cov.parameters" id="ncm-data-gauss-peek-inv-cov.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>gauss</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDataGauss.html" title="NcmDataGauss"><span class="type">NcmDataGauss</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-gauss-peek-inv-cov.returns" id="ncm-data-gauss-peek-inv-cov.returns"></a><h4>Returns</h4>
+<p>Inverse covariance matrix. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-data-gauss-peek-mean" id="ncm-data-gauss-peek-mean"></a><h3>ncm_data_gauss_peek_mean ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+ncm_data_gauss_peek_mean (<em class="parameter"><code><a class="link" href="NcmDataGauss.html" title="NcmDataGauss"><span class="type">NcmDataGauss</span></a> *gauss</code></em>);</pre>
+<p>Gets the mean vector.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-peek-mean.parameters" id="ncm-data-gauss-peek-mean.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>gauss</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDataGauss.html" title="NcmDataGauss"><span class="type">NcmDataGauss</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-gauss-peek-mean.returns" id="ncm-data-gauss-peek-mean.returns"></a><h4>Returns</h4>
+<p>Mean vector. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmDataGauss.other_details" id="NcmDataGauss.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NCM-TYPE-DATA-GAUSS:CAPS" id="NCM-TYPE-DATA-GAUSS:CAPS"></a><h3>NCM_TYPE_DATA_GAUSS</h3>
+<pre class="programlisting">#define NCM_TYPE_DATA_GAUSS             (ncm_data_gauss_get_type ())
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmDataGaussClass" id="NcmDataGaussClass"></a><h3>struct NcmDataGaussClass</h3>
+<pre class="programlisting">struct NcmDataGaussClass {
+};
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmDataGauss-struct" id="NcmDataGauss-struct"></a><h3>NcmDataGauss</h3>
+<pre class="programlisting">typedef struct _NcmDataGauss NcmDataGauss;</pre>
 </div>
 </div>
 <div class="refsect1">

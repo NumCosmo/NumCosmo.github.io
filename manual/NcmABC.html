@@ -199,6 +199,46 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="returnvalue">NcmFitRunMsgs</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmABC.html#ncm-abc-get-mtype" title="ncm_abc_get_mtype ()">ncm_abc_get_mtype</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMSetCatalog.html" title="NcmMSetCatalog"><span class="returnvalue">NcmMSetCatalog</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmABC.html#ncm-abc-peek-catalog" title="ncm_abc_peek_catalog ()">ncm_abc_peek_catalog</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmDataset.html" title="NcmDataset"><span class="returnvalue">NcmDataset</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmABC.html#ncm-abc-peek-dataset" title="ncm_abc_peek_dataset ()">ncm_abc_peek_dataset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="returnvalue">NcmMatrix</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmABC.html#ncm-abc-peek-covar" title="ncm_abc_peek_covar ()">ncm_abc_peek_covar</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="returnvalue">NcmMSetTransKern</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmABC.html#ncm-abc-peek-trans-kern" title="ncm_abc_peek_trans_kern ()">ncm_abc_peek_trans_kern</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -317,10 +357,24 @@
 <col width="150px" class="other_proto_type" />
 <col class="other_proto_name" />
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmABC.html#NCM-TYPE-ABC:CAPS" title="NCM_TYPE_ABC">NCM_TYPE_ABC</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmABC.html#NcmABCClass" title="struct NcmABCClass">NcmABCClass</a></td>
+</tr>
+<tr>
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="NcmABC.html#NCM-ABC-MIN-SYNC-INTERVAL:CAPS" title="NCM_ABC_MIN_SYNC_INTERVAL">NCM_ABC_MIN_SYNC_INTERVAL</a></td>
-</tr></tbody>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcmABC.html#NcmABC-struct" title="NcmABC">NcmABC</a></td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect1">
@@ -332,7 +386,7 @@
 </div>
 <div class="refsect1">
 <a name="NcmABC.description" id="NcmABC.description"></a><h2>Description</h2>
-<p>FIXME</p>
+<p>Base class for Approximate Bayesian Computation (ABC) methods.</p>
 </div>
 <div class="refsect1">
 <a name="NcmABC.functions_details" id="NcmABC.functions_details"></a><h2>Functions</h2>
@@ -340,7 +394,8 @@
 <a name="ncm-abc-free" id="ncm-abc-free"></a><h3>ncm_abc_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_abc_free (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>);</pre>
-<p>FIXME</p>
+<p>Decreases the reference count of <em class="parameter"><code>abc</code></em>
+ by one.</p>
 <div class="refsect3">
 <a name="ncm-abc-free.parameters" id="ncm-abc-free.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -362,7 +417,12 @@ ncm_abc_free (<em class="parameter"><code><a class="link" href="NcmABC.html" tit
 <a name="ncm-abc-clear" id="ncm-abc-clear"></a><h3>ncm_abc_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_abc_clear (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> **abc</code></em>);</pre>
-<p>FIXME</p>
+<p>Decreases the reference count of *<em class="parameter"><code>abc</code></em>
+ by one, and sets the pointer *<em class="parameter"><code>abc</code></em>
+ to NULL.
+If <em class="parameter"><code>abc</code></em>
+ is NULL, this function does nothing.
+See also: <a class="link" href="NcmABC.html#ncm-abc-free" title="ncm_abc_free ()"><code class="function">ncm_abc_free()</code></a></p>
 <div class="refsect3">
 <a name="ncm-abc-clear.parameters" id="ncm-abc-clear.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -416,7 +476,7 @@ ncm_abc_mock_distance (<em class="parameter"><code><a class="link" href="NcmABC.
                        <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *thetastar</code></em>,
                        <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
 <p>Calculates the distance of the new point given by <em class="parameter"><code>thetastar</code></em>
- 
+
 given the old point <em class="parameter"><code>theta</code></em>
 .</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> mock_distance]</span></p>
@@ -504,7 +564,7 @@ ncm_abc_distance_prob (<em class="parameter"><code><a class="link" href="NcmABC.
 <a name="ncm-abc-update-tkern" id="ncm-abc-update-tkern"></a><h3>ncm_abc_update_tkern ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_abc_update_tkern (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>);</pre>
-<p>Updates the transition kernel present in <em class="parameter"><code>abc-&gt;tkern</code></em>
+<p>Updates the transition kernel present in <em class="parameter"><code>self-&gt;tkern</code></em>
 .</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> update_tkern]</span></p>
 <div class="refsect3">
@@ -585,7 +645,7 @@ ncm_abc_log_info (<em class="parameter"><code><a class="link" href="NcmABC.html"
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_abc_set_mtype (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>,
                    <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a> mtype</code></em>);</pre>
-<p>FIXME</p>
+<p>Sets the message type to be used by the ABC algorithm.</p>
 <div class="refsect3">
 <a name="ncm-abc-set-mtype.parameters" id="ncm-abc-set-mtype.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -615,7 +675,7 @@ ncm_abc_set_mtype (<em class="parameter"><code><a class="link" href="NcmABC.html
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_abc_set_data_file (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>,
                        <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
-<p>FIXME</p>
+<p>Sets the data file to be used by the ABC algorithm.</p>
 <div class="refsect3">
 <a name="ncm-abc-set-data-file.parameters" id="ncm-abc-set-data-file.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -645,7 +705,7 @@ ncm_abc_set_data_file (<em class="parameter"><code><a class="link" href="NcmABC.
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_abc_set_nthreads (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>,
                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nthreads</code></em>);</pre>
-<p>FIXME</p>
+<p>Sets the number of threads to be used by the ABC algorithm.</p>
 <div class="refsect3">
 <a name="ncm-abc-set-nthreads.parameters" id="ncm-abc-set-nthreads.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -675,7 +735,7 @@ ncm_abc_set_nthreads (<em class="parameter"><code><a class="link" href="NcmABC.h
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_abc_set_rng (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>,
                  <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
-<p>FIXME</p>
+<p>Sets the random number generator to be used by the ABC algorithm.</p>
 <div class="refsect3">
 <a name="ncm-abc-set-rng.parameters" id="ncm-abc-set-rng.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -705,7 +765,7 @@ ncm_abc_set_rng (<em class="parameter"><code><a class="link" href="NcmABC.html" 
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_abc_set_trans_kern (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>,
                         <em class="parameter"><code><a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a> *tkern</code></em>);</pre>
-<p>FIXME</p>
+<p>Sets the transition kernel to be used by the ABC algorithm.</p>
 <div class="refsect3">
 <a name="ncm-abc-set-trans-kern.parameters" id="ncm-abc-set-trans-kern.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -735,7 +795,8 @@ ncm_abc_set_trans_kern (<em class="parameter"><code><a class="link" href="NcmABC
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_abc_get_dist_quantile (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>,
                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> p</code></em>);</pre>
-<p>FIXME</p>
+<p>Sets the probability <em class="parameter"><code>p</code></em>
+ of the distance distribution.</p>
 <div class="refsect3">
 <a name="ncm-abc-get-dist-quantile.parameters" id="ncm-abc-get-dist-quantile.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -752,7 +813,7 @@ ncm_abc_get_dist_quantile (<em class="parameter"><code><a class="link" href="Ncm
 </tr>
 <tr>
 <td class="parameter_name"><p>p</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a probability</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -764,7 +825,7 @@ ncm_abc_get_dist_quantile (<em class="parameter"><code><a class="link" href="Ncm
 <a name="ncm-abc-get-accept-ratio" id="ncm-abc-get-accept-ratio"></a><h3>ncm_abc_get_accept_ratio ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_abc_get_accept_ratio (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>);</pre>
-<p>FIXME</p>
+<p>Computes the acceptance ratio of the ABC algorithm.</p>
 <div class="refsect3">
 <a name="ncm-abc-get-accept-ratio.parameters" id="ncm-abc-get-accept-ratio.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -782,7 +843,7 @@ ncm_abc_get_accept_ratio (<em class="parameter"><code><a class="link" href="NcmA
 </div>
 <div class="refsect3">
 <a name="ncm-abc-get-accept-ratio.returns" id="ncm-abc-get-accept-ratio.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> the acceptance ratio.</p>
 </div>
 </div>
 <hr />
@@ -791,7 +852,7 @@ ncm_abc_get_accept_ratio (<em class="parameter"><code><a class="link" href="NcmA
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_abc_update_epsilon (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>,
                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> epsilon</code></em>);</pre>
-<p>FIXME</p>
+<p>Sets the new epsilon value.</p>
 <div class="refsect3">
 <a name="ncm-abc-update-epsilon.parameters" id="ncm-abc-update-epsilon.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -820,7 +881,7 @@ ncm_abc_update_epsilon (<em class="parameter"><code><a class="link" href="NcmABC
 <a name="ncm-abc-get-epsilon" id="ncm-abc-get-epsilon"></a><h3>ncm_abc_get_epsilon ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_abc_get_epsilon (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>);</pre>
-<p>FIXME</p>
+<p>Gets the current epsilon value.</p>
 <div class="refsect3">
 <a name="ncm-abc-get-epsilon.parameters" id="ncm-abc-get-epsilon.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -838,7 +899,7 @@ ncm_abc_get_epsilon (<em class="parameter"><code><a class="link" href="NcmABC.ht
 </div>
 <div class="refsect3">
 <a name="ncm-abc-get-epsilon.returns" id="ncm-abc-get-epsilon.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> the current epsilon value.</p>
 </div>
 </div>
 <hr />
@@ -846,7 +907,7 @@ ncm_abc_get_epsilon (<em class="parameter"><code><a class="link" href="NcmABC.ht
 <a name="ncm-abc-get-depsilon" id="ncm-abc-get-depsilon"></a><h3>ncm_abc_get_depsilon ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_abc_get_depsilon (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>);</pre>
-<p>FIXME</p>
+<p>Gets the current delta epsilon value.</p>
 <div class="refsect3">
 <a name="ncm-abc-get-depsilon.parameters" id="ncm-abc-get-depsilon.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -864,7 +925,141 @@ ncm_abc_get_depsilon (<em class="parameter"><code><a class="link" href="NcmABC.h
 </div>
 <div class="refsect3">
 <a name="ncm-abc-get-depsilon.returns" id="ncm-abc-get-depsilon.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> the current delta epsilon value.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-abc-get-mtype" id="ncm-abc-get-mtype"></a><h3>ncm_abc_get_mtype ()</h3>
+<pre class="programlisting"><a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="returnvalue">NcmFitRunMsgs</span></a>
+ncm_abc_get_mtype (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>);</pre>
+<p>Gets the current <a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a> value.</p>
+<div class="refsect3">
+<a name="ncm-abc-get-mtype.parameters" id="ncm-abc-get-mtype.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>abc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-abc-get-mtype.returns" id="ncm-abc-get-mtype.returns"></a><h4>Returns</h4>
+<p> the current <a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a> value.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-abc-peek-catalog" id="ncm-abc-peek-catalog"></a><h3>ncm_abc_peek_catalog ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMSetCatalog.html" title="NcmMSetCatalog"><span class="returnvalue">NcmMSetCatalog</span></a> *
+ncm_abc_peek_catalog (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>);</pre>
+<p>Peeks the <a class="link" href="NcmMSetCatalog.html" title="NcmMSetCatalog"><span class="type">NcmMSetCatalog</span></a> used to store the sample points.</p>
+<div class="refsect3">
+<a name="ncm-abc-peek-catalog.parameters" id="ncm-abc-peek-catalog.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>abc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-abc-peek-catalog.returns" id="ncm-abc-peek-catalog.returns"></a><h4>Returns</h4>
+<p>the <a class="link" href="NcmMSetCatalog.html" title="NcmMSetCatalog"><span class="type">NcmMSetCatalog</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-abc-peek-dataset" id="ncm-abc-peek-dataset"></a><h3>ncm_abc_peek_dataset ()</h3>
+<pre class="programlisting"><a class="link" href="NcmDataset.html" title="NcmDataset"><span class="returnvalue">NcmDataset</span></a> *
+ncm_abc_peek_dataset (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>);</pre>
+<p>Peek the <a class="link" href="NcmDataset.html" title="NcmDataset"><span class="type">NcmDataset</span></a> containing the dataset.</p>
+<div class="refsect3">
+<a name="ncm-abc-peek-dataset.parameters" id="ncm-abc-peek-dataset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>abc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-abc-peek-dataset.returns" id="ncm-abc-peek-dataset.returns"></a><h4>Returns</h4>
+<p>the <a class="link" href="NcmDataset.html" title="NcmDataset"><span class="type">NcmDataset</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-abc-peek-covar" id="ncm-abc-peek-covar"></a><h3>ncm_abc_peek_covar ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="returnvalue">NcmMatrix</span></a> *
+ncm_abc_peek_covar (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>);</pre>
+<p>Gets the covariance matrix of the sample points.</p>
+<div class="refsect3">
+<a name="ncm-abc-peek-covar.parameters" id="ncm-abc-peek-covar.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>abc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-abc-peek-covar.returns" id="ncm-abc-peek-covar.returns"></a><h4>Returns</h4>
+<p>the covariance matrix. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-abc-peek-trans-kern" id="ncm-abc-peek-trans-kern"></a><h3>ncm_abc_peek_trans_kern ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="returnvalue">NcmMSetTransKern</span></a> *
+ncm_abc_peek_trans_kern (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>);</pre>
+<p>Peeks the <a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a> used to generate the sample points.</p>
+<div class="refsect3">
+<a name="ncm-abc-peek-trans-kern.parameters" id="ncm-abc-peek-trans-kern.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>abc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-abc-peek-trans-kern.returns" id="ncm-abc-peek-trans-kern.returns"></a><h4>Returns</h4>
+<p>the <a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr />
@@ -872,7 +1067,7 @@ ncm_abc_get_depsilon (<em class="parameter"><code><a class="link" href="NcmABC.h
 <a name="ncm-abc-start-run" id="ncm-abc-start-run"></a><h3>ncm_abc_start_run ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_abc_start_run (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>);</pre>
-<p>FIXME</p>
+<p>Starts the ABC run.</p>
 <div class="refsect3">
 <a name="ncm-abc-start-run.parameters" id="ncm-abc-start-run.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -894,7 +1089,7 @@ ncm_abc_start_run (<em class="parameter"><code><a class="link" href="NcmABC.html
 <a name="ncm-abc-end-run" id="ncm-abc-end-run"></a><h3>ncm_abc_end_run ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_abc_end_run (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>);</pre>
-<p>FIXME</p>
+<p>Ends the ABC run.</p>
 <div class="refsect3">
 <a name="ncm-abc-end-run.parameters" id="ncm-abc-end-run.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -916,7 +1111,7 @@ ncm_abc_end_run (<em class="parameter"><code><a class="link" href="NcmABC.html" 
 <a name="ncm-abc-reset" id="ncm-abc-reset"></a><h3>ncm_abc_reset ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_abc_reset (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>);</pre>
-<p>FIXME</p>
+<p>Resets the ABC run.</p>
 <div class="refsect3">
 <a name="ncm-abc-reset.parameters" id="ncm-abc-reset.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -970,7 +1165,7 @@ ncm_abc_run (<em class="parameter"><code><a class="link" href="NcmABC.html" titl
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_abc_mean_covar (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>,
                     <em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>);</pre>
-<p>FIXME</p>
+<p>Calculates the mean and covariance matrix of the accepted samples.</p>
 <div class="refsect3">
 <a name="ncm-abc-mean-covar.parameters" id="ncm-abc-mean-covar.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -999,7 +1194,7 @@ ncm_abc_mean_covar (<em class="parameter"><code><a class="link" href="NcmABC.htm
 <a name="ncm-abc-start-update" id="ncm-abc-start-update"></a><h3>ncm_abc_start_update ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_abc_start_update (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>);</pre>
-<p>FIXME</p>
+<p>Starts the update of the transition kernel.</p>
 <div class="refsect3">
 <a name="ncm-abc-start-update.parameters" id="ncm-abc-start-update.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1021,7 +1216,7 @@ ncm_abc_start_update (<em class="parameter"><code><a class="link" href="NcmABC.h
 <a name="ncm-abc-end-update" id="ncm-abc-end-update"></a><h3>ncm_abc_end_update ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_abc_end_update (<em class="parameter"><code><a class="link" href="NcmABC.html" title="NcmABC"><span class="type">NcmABC</span></a> *abc</code></em>);</pre>
-<p>FIXME</p>
+<p>Ends the ABC update.</p>
 <div class="refsect3">
 <a name="ncm-abc-end-update.parameters" id="ncm-abc-end-update.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1067,9 +1262,27 @@ if the first_id is non-zero it will run <em class="parameter"><code>n</code></em
 <div class="refsect1">
 <a name="NcmABC.other_details" id="NcmABC.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
+<a name="NCM-TYPE-ABC:CAPS" id="NCM-TYPE-ABC:CAPS"></a><h3>NCM_TYPE_ABC</h3>
+<pre class="programlisting">#define NCM_TYPE_ABC (ncm_abc_get_type ())
+</pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmABCClass" id="NcmABCClass"></a><h3>struct NcmABCClass</h3>
+<pre class="programlisting">struct NcmABCClass {
+};
+</pre>
+</div>
+<hr />
+<div class="refsect2">
 <a name="NCM-ABC-MIN-SYNC-INTERVAL:CAPS" id="NCM-ABC-MIN-SYNC-INTERVAL:CAPS"></a><h3>NCM_ABC_MIN_SYNC_INTERVAL</h3>
 <pre class="programlisting">#define NCM_ABC_MIN_SYNC_INTERVAL (10.0)
 </pre>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmABC-struct" id="NcmABC-struct"></a><h3>NcmABC</h3>
+<pre class="programlisting">typedef struct _NcmABC NcmABC;</pre>
 </div>
 </div>
 <div class="refsect1">

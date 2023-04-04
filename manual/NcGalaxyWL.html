@@ -43,7 +43,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="NcGalaxyWL.top_of_page" id="NcGalaxyWL.top_of_page"></a>NcGalaxyWL</span></h2>
-<p>NcGalaxyWL — Object containing galaxy weak lensing data</p>
+<p>NcGalaxyWL — Class describing galaxy weak lensing distributions.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -142,7 +142,10 @@
 </div>
 <div class="refsect1">
 <a name="NcGalaxyWL.description" id="NcGalaxyWL.description"></a><h2>Description</h2>
-<p>FIXME</p>
+<p>This class describes a galaxy weak lensing distribution.
+It is composed by a weak lensing distribution $P_\mathrm{wl}(g)$ and a redshift distribution $P(z)$.
+The weak lensing distribution is defined by the abstract class <a class="link" href="NcGalaxyWLDist.html" title="NcGalaxyWLDist"><span class="type">NcGalaxyWLDist</span></a>.
+The redshift distribution is defined by the abstract class <a class="link" href="NcGalaxyRedshift.html" title="NcGalaxyRedshift"><span class="type">NcGalaxyRedshift</span></a>.</p>
 </div>
 <div class="refsect1">
 <a name="NcGalaxyWL.functions_details" id="NcGalaxyWL.functions_details"></a><h2>Functions</h2>
@@ -151,7 +154,8 @@
 <pre class="programlisting"><a class="link" href="NcGalaxyWL.html" title="NcGalaxyWL"><span class="returnvalue">NcGalaxyWL</span></a> *
 nc_galaxy_wl_new (<em class="parameter"><code><a class="link" href="NcGalaxyWLDist.html" title="NcGalaxyWLDist"><span class="type">NcGalaxyWLDist</span></a> *wl_dist</code></em>,
                   <em class="parameter"><code><a class="link" href="NcGalaxyRedshift.html" title="NcGalaxyRedshift"><span class="type">NcGalaxyRedshift</span></a> *gz_dist</code></em>);</pre>
-<p>Creates a new galaxy weak lensing object.</p>
+<p>Creates a new galaxy weak lensing object.
+Requires an instance of <a class="link" href="NcGalaxyWLDist.html" title="NcGalaxyWLDist"><span class="type">NcGalaxyWLDist</span></a> and <a class="link" href="NcGalaxyRedshift.html" title="NcGalaxyRedshift"><span class="type">NcGalaxyRedshift</span></a>.</p>
 <div class="refsect3">
 <a name="nc-galaxy-wl-new.parameters" id="nc-galaxy-wl-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -341,7 +345,7 @@ nc_galaxy_wl_len (<em class="parameter"><code><a class="link" href="NcGalaxyWL.h
 <div class="refsect2">
 <a name="NcGalaxyWL--gz-dist" id="NcGalaxyWL--gz-dist"></a><h3>The <code class="literal">“gz-dist”</code> property</h3>
 <pre class="programlisting">  “gz-dist”                  <a class="link" href="NcGalaxyRedshift.html" title="NcGalaxyRedshift"><span class="type">NcGalaxyRedshift</span></a> *</pre>
-<p>FIXME</p>
+<p>A <a class="link" href="NcGalaxyRedshift.html" title="NcGalaxyRedshift"><span class="type">NcGalaxyRedshift</span></a> object.</p>
 <p>Owner: NcGalaxyWL</p>
 <p>Flags: Read / Write / Construct Only</p>
 </div>
@@ -349,7 +353,7 @@ nc_galaxy_wl_len (<em class="parameter"><code><a class="link" href="NcGalaxyWL.h
 <div class="refsect2">
 <a name="NcGalaxyWL--wl-dist" id="NcGalaxyWL--wl-dist"></a><h3>The <code class="literal">“wl-dist”</code> property</h3>
 <pre class="programlisting">  “wl-dist”                  <a class="link" href="NcGalaxyWLDist.html" title="NcGalaxyWLDist"><span class="type">NcGalaxyWLDist</span></a> *</pre>
-<p>FIXME</p>
+<p>A <a class="link" href="NcGalaxyWLDist.html" title="NcGalaxyWLDist"><span class="type">NcGalaxyWLDist</span></a> object.</p>
 <p>Owner: NcGalaxyWL</p>
 <p>Flags: Read / Write / Construct Only</p>
 </div>

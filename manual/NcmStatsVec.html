@@ -552,21 +552,21 @@ $$Cov(x,y)_n = \frac{N(x,y)_n}{W^\text{bias}_{n}}.$$</p>
 15
 16</pre></td>
         <td class="listing_code"><pre class="programlisting"><span class="c1">// Creates a new one dimensional NcmStatsVec to calculates mean and variance.</span>
-<span class="n">NcmStatsVec</span><span class="w"> </span><span class="o">*</span><span class="n">svec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ncm_stats_vec_new</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">NCM_STATS_VEC_VAR</span><span class="p">,</span><span class="w"> </span><span class="n">FALSE</span><span class="p">);</span><span class="w"></span>
+<span class="n">NcmStatsVec</span><span class="w"> </span><span class="o">*</span><span class="n">svec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ncm_stats_vec_new</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">NCM_STATS_VEC_VAR</span><span class="p">,</span><span class="w"> </span><span class="n">FALSE</span><span class="p">);</span>
 
 <span class="c1">// Set and update three different values of the only random variable.</span>
-<span class="n">ncm_stats_vec_set</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span><span class="w"></span>
-<span class="n">ncm_stats_vec_update</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">);</span><span class="w"></span>
-<span class="n">ncm_stats_vec_set</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">);</span><span class="w"></span>
-<span class="n">ncm_stats_vec_update</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">);</span><span class="w"></span>
-<span class="n">ncm_stats_vec_set</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">);</span><span class="w"></span>
-<span class="n">ncm_stats_vec_update</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">);</span><span class="w"></span>
+<span class="n">ncm_stats_vec_set</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span>
+<span class="n">ncm_stats_vec_update</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">);</span>
+<span class="n">ncm_stats_vec_set</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">);</span>
+<span class="n">ncm_stats_vec_update</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">);</span>
+<span class="n">ncm_stats_vec_set</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">);</span>
+<span class="n">ncm_stats_vec_update</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">);</span>
 
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">gdouble</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ncm_stats_vec_get_mean</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">gdouble</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ncm_stats_vec_get_var</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">...</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span></pre></td>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">gdouble</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ncm_stats_vec_get_mean</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="n">gdouble</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ncm_stats_vec_get_var</span><span class="w"> </span><span class="p">(</span><span class="n">svec</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="p">}</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -1375,7 +1375,7 @@ ncm_stats_vec_fit_ar_model (<em class="parameter"><code><a class="link" href="Nc
                             <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> **pacf</code></em>,
                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *ivar</code></em>,
                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *c_order</code></em>);</pre>
-<p>If order is zero the value of floor $\left[10 log_{10}(s) \right]$, where $s$ 
+<p>If order is zero the value of floor $\left[10 log_{10}(s) \right]$, where $s$
 is the number of points.</p>
 <div class="refsect3">
 <a name="ncm-stats-vec-fit-ar-model.parameters" id="ncm-stats-vec-fit-ar-model.parameters"></a><h4>Parameters</h4>
@@ -1498,11 +1498,11 @@ determined order. </p></td>
 ncm_stats_vec_estimate_const_break (<em class="parameter"><code><a class="link" href="NcmStatsVec.html" title="NcmStatsVec"><span class="type">NcmStatsVec</span></a> *svec</code></em>,
                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> p</code></em>);</pre>
 <p>Estimate mean $\mu$ and standard deviation $\sigma$ fitting the paramater <em class="parameter"><code>p</code></em>
- 
+
 using robust regression. Computes the time $t_0$ where the parameter <em class="parameter"><code>p</code></em>
- falls 
+ falls
 within the $\alpha\sigma$ from $\mu$, where $\alpha$ is implicitly defined by
-$$ \int_\alpha^\infty\chi_1(X)\mathrm{d}X = 1/N,$$ 
+$$ \int_\alpha^\infty\chi_1(X)\mathrm{d}X = 1/N,$$
 and $N$ is the size of the sample.</p>
 <div class="refsect3">
 <a name="ncm-stats-vec-estimate-const-break.parameters" id="ncm-stats-vec-estimate-const-break.parameters"></a><h4>Parameters</h4>
@@ -1541,7 +1541,7 @@ ncm_stats_vec_max_ess_time (<em class="parameter"><code><a class="link" href="Nc
                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *wp</code></em>,
                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *wp_order</code></em>,
                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *wp_ess</code></em>);</pre>
-<p>Calculates the time $t_m$ that maximizes the Effective Sample Size (ESS). 
+<p>Calculates the time $t_m$ that maximizes the Effective Sample Size (ESS).
 The variable <em class="parameter"><code>ntests</code></em>
  control the number of divisions where the ESS
 will be calculated, if it is zero the default 10 tests will be used.</p>
@@ -1609,7 +1609,7 @@ applying <em class="parameter"><code>ntests</code></em>
  Schruben tests sequentially, if <em class="parameter"><code>ntests</code></em>
  == 0
 it will use the default 10 tests. The variable <em class="parameter"><code>bindex</code></em>
- will 
+ will
 contains the smallest index where all p-values are smaller than
 <em class="parameter"><code>pvalue</code></em>
 , if <em class="parameter"><code>pvalue</code></em>
@@ -1617,7 +1617,7 @@ contains the smallest index where all p-values are smaller than
 <p>If the test is not satisfied by any index <em class="parameter"><code>bindex</code></em>
  will contain
 -1 and the return vector the p-values considering the whole system.</p>
-<p>See: </p>
+<p>See:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p><a class="link" href="refs.html#XHeidelberger1981">Heidelberger (1981)</a></p></li>
 <li class="listitem"><p><a class="link" href="refs.html#XSchruben1982">Schruben (1982)</a></p></li>
@@ -1685,7 +1685,7 @@ ncm_stats_vec_visual_heidel_diag (<em class="parameter"><code><a class="link" hr
                                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> fi</code></em>,
                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *mean</code></em>,
                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *var</code></em>);</pre>
-<p>Computes the empirical cumulative and the mean used to build 
+<p>Computes the empirical cumulative and the mean used to build
 the Heidelberger and Welch’s convergence diagnostic.</p>
 <p>See <a class="link" href="NcmStatsVec.html#ncm-stats-vec-heidel-diag" title="ncm_stats_vec_heidel_diag ()"><code class="function">ncm_stats_vec_heidel_diag()</code></a>.</p>
 <div class="refsect3">

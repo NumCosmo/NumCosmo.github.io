@@ -81,6 +81,30 @@
 </tr>
 <tr>
 <td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcMultiplicityFunc.html#nc-multiplicity-func-set-Delta" title="nc_multiplicity_func_set_Delta ()">nc_multiplicity_func_set_Delta</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcMultiplicityFunc.html#nc-multiplicity-func-get-Delta" title="nc_multiplicity_func_get_Delta ()">nc_multiplicity_func_get_Delta</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcMultiplicityFunc.html#nc-multiplicity-func-get-matter-Delta" title="nc_multiplicity_func_get_matter_Delta ()">nc_multiplicity_func_get_matter_Delta</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="NcMultiplicityFunc.html#NcMultiplicityFuncMassDef" title="enum NcMultiplicityFuncMassDef"><span class="returnvalue">NcMultiplicityFuncMassDef</span></a>
 </td>
 <td class="function_name">
@@ -122,11 +146,18 @@
 <col width="300px" class="properties_name" />
 <col width="200px" class="properties_flags" />
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcMultiplicityFunc.html#NcMultiplicityFunc--Delta" title="The “Delta” property">Delta</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
 <td class="property_type"><a class="link" href="NcMultiplicityFunc.html#NcMultiplicityFuncMassDef" title="enum NcMultiplicityFuncMassDef"><span class="type">NcMultiplicityFuncMassDef</span></a></td>
 <td class="property_name"><a class="link" href="NcMultiplicityFunc.html#NcMultiplicityFunc--mass-def" title="The “mass-def” property">mass-def</a></td>
 <td class="property_flags">Read / Write / Construct</td>
-</tr></tbody>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect1">
@@ -167,12 +198,12 @@
 </div>
 <div class="refsect1">
 <a name="NcMultiplicityFunc.description" id="NcMultiplicityFunc.description"></a><h2>Description</h2>
-<p>The  multiplicity function comprises information about the non-linear regime 
+<p>The  multiplicity function comprises information about the non-linear regime
 of halo (structure) formation. The mass function can be written as
 \begin{equation}\label{def:multip}
 \frac{dn (M,z)}{d\ln M} = - \frac{\rho_m (z)}{M} f(\sigma_R, z) \frac{1}{\sigma_R} \frac{d\sigma_R}{d\ln M},
 \end{equation}
-where $\rho_m(z)$ is the mean matter density at redshift $z$, $f(\sigma_R, z)$ is the multiplicity function, 
+where $\rho_m(z)$ is the mean matter density at redshift $z$, $f(\sigma_R, z)$ is the multiplicity function,
 and $\sigma_R$ is the variance of the linear density contrast filtered on the length scale $R$ associated to the
 mass $M$.</p>
 </div>
@@ -260,6 +291,105 @@ nc_multiplicity_func_set_mdef (<em class="parameter"><code><a class="link" href=
 </div>
 <hr />
 <div class="refsect2">
+<a name="nc-multiplicity-func-set-Delta" id="nc-multiplicity-func-set-Delta"></a><h3>nc_multiplicity_func_set_Delta ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_multiplicity_func_set_Delta (<em class="parameter"><code><a class="link" href="NcMultiplicityFunc.html" title="NcMultiplicityFunc"><span class="type">NcMultiplicityFunc</span></a> *mulf</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> Delta</code></em>);</pre>
+<p>Sets the Delta for mean or matter mass definition to mdef.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> set_Delta]</span></p>
+<div class="refsect3">
+<a name="nc-multiplicity-func-set-Delta.parameters" id="nc-multiplicity-func-set-Delta.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mulf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcMultiplicityFunc.html" title="NcMultiplicityFunc"><span class="type">NcMultiplicityFunc</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>Delta</p></td>
+<td class="parameter_description"><p>the $Delta$ value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-multiplicity-func-get-Delta" id="nc-multiplicity-func-get-Delta"></a><h3>nc_multiplicity_func_get_Delta ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_multiplicity_func_get_Delta (<em class="parameter"><code><a class="link" href="NcMultiplicityFunc.html" title="NcMultiplicityFunc"><span class="type">NcMultiplicityFunc</span></a> *mulf</code></em>);</pre>
+<p>Gets the Delta Value.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_Delta]</span></p>
+<div class="refsect3">
+<a name="nc-multiplicity-func-get-Delta.parameters" id="nc-multiplicity-func-get-Delta.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mulf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcMultiplicityFunc.html" title="NcMultiplicityFunc"><span class="type">NcMultiplicityFunc</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-multiplicity-func-get-Delta.returns" id="nc-multiplicity-func-get-Delta.returns"></a><h4>Returns</h4>
+<p> Delta.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="nc-multiplicity-func-get-matter-Delta" id="nc-multiplicity-func-get-matter-Delta"></a><h3>nc_multiplicity_func_get_matter_Delta ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+nc_multiplicity_func_get_matter_Delta (<em class="parameter"><code><a class="link" href="NcMultiplicityFunc.html" title="NcMultiplicityFunc"><span class="type">NcMultiplicityFunc</span></a> *mulf</code></em>,
+                                       <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
+                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>);</pre>
+<p>Gets the Delta Value with the matter density definition.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_matter_Delta]</span></p>
+<div class="refsect3">
+<a name="nc-multiplicity-func-get-matter-Delta.parameters" id="nc-multiplicity-func-get-matter-Delta.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mulf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcMultiplicityFunc.html" title="NcMultiplicityFunc"><span class="type">NcMultiplicityFunc</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cosmo</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>z</p></td>
+<td class="parameter_description"><p>the redshift $z$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-multiplicity-func-get-matter-Delta.returns" id="nc-multiplicity-func-get-matter-Delta.returns"></a><h4>Returns</h4>
+<p> Delta.</p>
+</div>
+</div>
+<hr />
+<div class="refsect2">
 <a name="nc-multiplicity-func-get-mdef" id="nc-multiplicity-func-get-mdef"></a><h3>nc_multiplicity_func_get_mdef ()</h3>
 <pre class="programlisting"><a class="link" href="NcMultiplicityFunc.html#NcMultiplicityFuncMassDef" title="enum NcMultiplicityFuncMassDef"><span class="returnvalue">NcMultiplicityFuncMassDef</span></a>
 nc_multiplicity_func_get_mdef (<em class="parameter"><code><a class="link" href="NcMultiplicityFunc.html" title="NcMultiplicityFunc"><span class="type">NcMultiplicityFunc</span></a> *mulf</code></em>);</pre>
@@ -338,8 +468,8 @@ nc_multiplicity_func_eval (<em class="parameter"><code><a class="link" href="NcM
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 nc_multiplicity_func_has_correction_factor
                                (<em class="parameter"><code><a class="link" href="NcMultiplicityFunc.html" title="NcMultiplicityFunc"><span class="type">NcMultiplicityFunc</span></a> *mulf</code></em>);</pre>
-<p>Checks if the multiplicity function has a correction factor, e.g., NcMultiplicityFuncBocquet (when using 
-critical density).</p>
+<p>Checks if the multiplicity function has a correction factor, e.g., NcMultiplicityFuncBocquet (when using
+matter density).</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> has_correction_factor]</span></p>
 <div class="refsect3">
 <a name="nc-multiplicity-func-has-correction-factor.parameters" id="nc-multiplicity-func-has-correction-factor.parameters"></a><h4>Parameters</h4>
@@ -478,10 +608,19 @@ For <em class="parameter"><code>NC_HALO_DENSITY_PROFILE_MASS_DEF_VIRIAL</code></
 <div class="refsect1">
 <a name="NcMultiplicityFunc.property-details" id="NcMultiplicityFunc.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
+<a name="NcMultiplicityFunc--Delta" id="NcMultiplicityFunc--Delta"></a><h3>The <code class="literal">“Delta”</code> property</h3>
+<pre class="programlisting">  “Delta”                    <span class="type">double</span></pre>
+<p>Delta.</p>
+<p>Owner: NcMultiplicityFunc</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 1</p>
+<p>Default value: 200</p>
+</div>
+<hr />
+<div class="refsect2">
 <a name="NcMultiplicityFunc--mass-def" id="NcMultiplicityFunc--mass-def"></a><h3>The <code class="literal">“mass-def”</code> property</h3>
 <pre class="programlisting">  “mass-def”                 <a class="link" href="NcMultiplicityFunc.html#NcMultiplicityFuncMassDef" title="enum NcMultiplicityFuncMassDef"><span class="type">NcMultiplicityFuncMassDef</span></a></pre>
 <p>It refers to the halo finder used to obtain the multiplicity function (e.g., SO and FoF), and
-
 the background density $\rho_\mathrm{bg}$ used in the mass definition \eqref{eq:mrr}.
 See the enumerator <a class="link" href="NcMultiplicityFunc.html#NcMultiplicityFuncMassDef" title="enum NcMultiplicityFuncMassDef"><span class="type">NcMultiplicityFuncMassDef</span></a> for more details about the
 background density definition.</p>

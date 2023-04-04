@@ -79,6 +79,14 @@
 <a class="link" href="NcmMSetTransKernCat.html#ncm-mset-trans-kern-cat-get-sampling" title="ncm_mset_trans_kern_cat_get_sampling ()">ncm_mset_trans_kern_cat_get_sampling</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmMSetTransKernCat.html#ncm-mset-trans-kern-cat-reset" title="ncm_mset_trans_kern_cat_reset ()">ncm_mset_trans_kern_cat_reset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -96,6 +104,21 @@
 <a class="link" href="NcmMSetCatalog.html" title="NcmMSetCatalog"><span class="type">NcmMSetCatalog</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmMSetTransKernCat.html#NcmMSetTransKernCat--catalog" title="The “catalog” property">catalog</a></td>
 <td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="NcmMSetTransKernCat.html#NcmMSetTransKernCat--choose-cut" title="The “choose-cut” property">choose-cut</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcmMSetTransKernCat.html#NcmMSetTransKernCat--choose-percentile" title="The “choose-percentile” property">choose-percentile</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcmMSetTransKernCat.html#NcmMSetTransKernCat--m2lnL-reltol" title="The “m2lnL-reltol” property">m2lnL-reltol</a></td>
+<td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
 <td class="property_type"><a class="link" href="NcmMSetTransKernCat.html#NcmMSetTransKernCatSampling" title="enum NcmMSetTransKernCatSampling"><span class="type">NcmMSetTransKernCatSampling</span></a></td>
@@ -164,8 +187,8 @@ object <em class="parameter"><code>sd</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>sd</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a></p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -233,6 +256,12 @@ ncm_mset_trans_kern_cat_get_sampling (<em class="parameter"><code><a class="link
 <p> the current sampling type <a class="link" href="NcmMSetTransKernCat.html" title="NcmMSetTransKernCat"><span class="type">NcmMSetTransKernCat</span></a>.</p>
 </div>
 </div>
+<hr />
+<div class="refsect2">
+<a name="ncm-mset-trans-kern-cat-reset" id="ncm-mset-trans-kern-cat-reset"></a><h3>ncm_mset_trans_kern_cat_reset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_mset_trans_kern_cat_reset (<em class="parameter"><code><a class="link" href="NcmMSetTransKernCat.html" title="NcmMSetTransKernCat"><span class="type">NcmMSetTransKernCat</span></a> *tcat</code></em>);</pre>
+</div>
 </div>
 <div class="refsect1">
 <a name="NcmMSetTransKernCat.other_details" id="NcmMSetTransKernCat.other_details"></a><h2>Types and Values</h2>
@@ -258,14 +287,14 @@ ncm_mset_trans_kern_cat_get_sampling (<em class="parameter"><code><a class="link
 <tr>
 <td class="enum_member_name"><p><a name="NCM-MSET-TRANS-KERN-CAT-SAMPLING-RBF-INTERP:CAPS" id="NCM-MSET-TRANS-KERN-CAT-SAMPLING-RBF-INTERP:CAPS"></a>NCM_MSET_TRANS_KERN_CAT_SAMPLING_RBF_INTERP</p></td>
 <td class="enum_member_description">
-<p>sampling from the RBF interpolation built using the last ensemble from the catalog </p>
+<p>sampling from the RBF interpolation built using the last ensemble from the catalog</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-MSET-TRANS-KERN-CAT-SAMPLING-KDE:CAPS" id="NCM-MSET-TRANS-KERN-CAT-SAMPLING-KDE:CAPS"></a>NCM_MSET_TRANS_KERN_CAT_SAMPLING_KDE</p></td>
 <td class="enum_member_description">
-<p>sampling from the KDE estimate built using the last ensemble from the catalog </p>
+<p>sampling from the KDE estimate built using the last ensemble from the catalog</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -282,6 +311,35 @@ ncm_mset_trans_kern_cat_get_sampling (<em class="parameter"><code><a class="link
 <p>catalog.</p>
 <p>Owner: NcmMSetTransKernCat</p>
 <p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmMSetTransKernCat--choose-cut" id="NcmMSetTransKernCat--choose-cut"></a><h3>The <code class="literal">“choose-cut”</code> property</h3>
+<pre class="programlisting">  “choose-cut”               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether to cut the catalog at the choose-percentile before choosing.</p>
+<p>Owner: NcmMSetTransKernCat</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: FALSE</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmMSetTransKernCat--choose-percentile" id="NcmMSetTransKernCat--choose-percentile"></a><h3>The <code class="literal">“choose-percentile”</code> property</h3>
+<pre class="programlisting">  “choose-percentile”        <span class="type">double</span></pre>
+<p>Max percentile to choose from.</p>
+<p>Owner: NcmMSetTransKernCat</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [0.01,1]</p>
+<p>Default value: 0.9</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmMSetTransKernCat--m2lnL-reltol" id="NcmMSetTransKernCat--m2lnL-reltol"></a><h3>The <code class="literal">“m2lnL-reltol”</code> property</h3>
+<pre class="programlisting">  “m2lnL-reltol”             <span class="type">double</span></pre>
+<p>Relative tolerance for m2lnL.</p>
+<p>Owner: NcmMSetTransKernCat</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [2.22045e-16,0.001]</p>
+<p>Default value: 1e-07</p>
 </div>
 <hr />
 <div class="refsect2">

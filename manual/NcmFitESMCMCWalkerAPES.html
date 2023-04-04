@@ -268,14 +268,14 @@
 <p>Implementing apes move walker for <a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> (affine invariant).</p>
 <p>This object implements the Approximate Posterior Ensemble Sample (APES) step proposal for a walker.
 This proposal was developed by Sandro Dias Pinto Vitenti and implemented in this library. Below there is a description of the proposal.</p>
-<p>The APES proposal consists of using radial basis interpolation to generate an interpolant $\tilde{\pi}$ 
-from a target distribution $\pi$ and use this interpolant to propose new points for the walker. 
-By using a distribution $\tilde{\pi}$ that resembles the original target distribution, the APES proposal 
+<p>The APES proposal consists of using radial basis interpolation to generate an interpolant $\tilde{\pi}$
+from a target distribution $\pi$ and use this interpolant to propose new points for the walker.
+By using a distribution $\tilde{\pi}$ that resembles the original target distribution, the APES proposal
 generates samples that converge faster to the target distribution and are more independent when compared to other step proposals.</p>
 <p>The APES step is implemented as follows: suppose that there are $L$ walkers. They are divided into two blocks $L_1$ and $L_2$,
 containing the first and the second half of the walkers respectively. When proposing new points $Y$ for the walkers in the $L_1$ block,
-we use the points in the $L_2$ block to generate an interpolant $\tilde{\pi}_{L_2}$ and then propose points $Y \sim \tilde{\pi}_{L_2}$ 
-for the $L_1$ block. These points are accepted or rejected based on an acceptance probability $A(Y|X)$, and after the points of the first 
+we use the points in the $L_2$ block to generate an interpolant $\tilde{\pi}_{L_2}$ and then propose points $Y \sim \tilde{\pi}_{L_2}$
+for the $L_1$ block. These points are accepted or rejected based on an acceptance probability $A(Y|X)$, and after the points of the first
 block are updated, we do the same procedure for the $L_2$ block using the $L_1$ block. This procedure can be seen in the pseudocode below.</p>
 <p><span class="inlinemediaobject"><img src="apes.png" alt="apes_sketch" /></span></p>
 <p>The user must provide the input the values: <em class="parameter"><code>nwalkers</code></em>
@@ -290,10 +290,10 @@ _<em class="parameter"><code>interp</code></em>
  - <a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-new-full" title="ncm_fit_esmcmc_walker_apes_new_full ()"><code class="function">ncm_fit_esmcmc_walker_apes_new_full()</code></a>.
 The user can also initialize the object with: <em class="parameter"><code>nwalkers</code></em>
 , <em class="parameter"><code>nparams</code></em>
- - <a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-new" title="ncm_fit_esmcmc_walker_apes_new ()"><code class="function">ncm_fit_esmcmc_walker_apes_new()</code></a> and let the remaining parameters as default, 
+ - <a class="link" href="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-new" title="ncm_fit_esmcmc_walker_apes_new ()"><code class="function">ncm_fit_esmcmc_walker_apes_new()</code></a> and let the remaining parameters as default,
 which are defined in the properties of the class.
 For more information about the algorithm, check the explanation below.</p>
-<p>	- This object shall be used in the <a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> class to generate a Monte Carlo Markov Chain using an ensemble sampler. 
+<p>	- This object shall be used in the <a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> class to generate a Monte Carlo Markov Chain using an ensemble sampler.
                To see an example of its implementation, check the file example_rosenbrock.py in NumCosmo/examples.</p>
 <p>	- Regarding the radial basis interpolation method is implemented, check the <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class.</p>
 <p>	- Regarding the types of kernel used in the interpolation method as the radial basis function, check the <a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> class.</p>
