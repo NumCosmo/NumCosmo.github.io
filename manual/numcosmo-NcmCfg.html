@@ -256,6 +256,14 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
+<a class="link" href="numcosmo-NcmCfg.html#ncm-cfg-set-blis-nthreads" title="ncm_cfg_set_blis_nthreads ()">ncm_cfg_set_blis_nthreads</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
 <a class="link" href="numcosmo-NcmCfg.html#ncm-cfg-set-mkl-nthreads" title="ncm_cfg_set_mkl_nthreads ()">ncm_cfg_set_mkl_nthreads</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -281,6 +289,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="numcosmo-NcmCfg.html#ncm-cfg-logfile-flush-now" title="ncm_cfg_logfile_flush_now ()">ncm_cfg_logfile_flush_now</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="numcosmo-NcmCfg.html#ncm-message-str" title="ncm_message_str ()">ncm_message_str</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -317,38 +333,6 @@
 </tr>
 <tr>
 <td class="function_type">
-<a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#FILE:CAPS" title="FILE"><span class="returnvalue">FILE</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="numcosmo-NcmCfg.html#ncm-cfg-fopen" title="ncm_cfg_fopen ()">ncm_cfg_fopen</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#FILE:CAPS" title="FILE"><span class="returnvalue">FILE</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="numcosmo-NcmCfg.html#ncm-cfg-vfopen" title="ncm_cfg_vfopen ()">ncm_cfg_vfopen</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="numcosmo-NcmCfg.html#ncm-cfg-load-spline" title="ncm_cfg_load_spline ()">ncm_cfg_load_spline</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="numcosmo-NcmCfg.html#ncm-cfg-save-spline" title="ncm_cfg_save_spline ()">ncm_cfg_save_spline</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 </td>
 <td class="function_name">
@@ -361,14 +345,6 @@
 </td>
 <td class="function_name">
 <a class="link" href="numcosmo-NcmCfg.html#ncm-cfg-command-line" title="ncm_cfg_command_line ()">ncm_cfg_command_line</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="numcosmo-NcmCfg.html#ncm-cfg-variant-to-array" title="ncm_cfg_variant_to_array ()">ncm_cfg_variant_to_array</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -1090,6 +1066,29 @@ ncm_cfg_set_openblas_nthreads (<em class="parameter"><code><a href="/usr/share/g
 </div>
 <hr />
 <div class="refsect2">
+<a name="ncm-cfg-set-blis-nthreads" id="ncm-cfg-set-blis-nthreads"></a><h3>ncm_cfg_set_blis_nthreads ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_cfg_set_blis_nthreads (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n</code></em>);</pre>
+<p>Sets BLIS number of threads to <em class="parameter"><code>n</code></em>
+ when available.</p>
+<div class="refsect3">
+<a name="ncm-cfg-set-blis-nthreads.parameters" id="ncm-cfg-set-blis-nthreads.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>number of threads</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
 <a name="ncm-cfg-set-mkl-nthreads" id="ncm-cfg-set-mkl-nthreads"></a><h3>ncm_cfg_set_mkl_nthreads ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_cfg_set_mkl_nthreads (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n</code></em>);</pre>
@@ -1161,6 +1160,28 @@ ncm_cfg_logfile_flush (<em class="parameter"><code><a href="/usr/share/gtk-doc/h
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_cfg_logfile_flush_now (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Flushes the log file.</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-message-str" id="ncm-message-str"></a><h3>ncm_message_str ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_message_str (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *msg</code></em>);</pre>
+<p>Logs a message string.</p>
+<div class="refsect3">
+<a name="ncm-message-str.parameters" id="ncm-message-str.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>msg</p></td>
+<td class="parameter_description"><p>a string</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
 </div>
 <hr />
 <div class="refsect2">
@@ -1291,174 +1312,6 @@ ncm_cfg_msg_sepa (<em class="parameter"><code><span class="type">void</span></co
 </div>
 <hr />
 <div class="refsect2">
-<a name="ncm-cfg-fopen" id="ncm-cfg-fopen"></a><h3>ncm_cfg_fopen ()</h3>
-<pre class="programlisting"><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#FILE:CAPS" title="FILE"><span class="returnvalue">FILE</span></a> *
-ncm_cfg_fopen (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>,
-               <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mode</code></em>,
-               <em class="parameter"><code>...</code></em>);</pre>
-<p>FIXME</p>
-<div class="refsect3">
-<a name="ncm-cfg-fopen.parameters" id="ncm-cfg-fopen.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>filename</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>mode</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>...</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="ncm-cfg-fopen.returns" id="ncm-cfg-fopen.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
-</div>
-</div>
-<hr />
-<div class="refsect2">
-<a name="ncm-cfg-vfopen" id="ncm-cfg-vfopen"></a><h3>ncm_cfg_vfopen ()</h3>
-<pre class="programlisting"><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#FILE:CAPS" title="FILE"><span class="returnvalue">FILE</span></a> *
-ncm_cfg_vfopen (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>,
-                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mode</code></em>,
-                <em class="parameter"><code><span class="type">va_list</span> ap</code></em>);</pre>
-<p>FIXME</p>
-<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
-<div class="refsect3">
-<a name="ncm-cfg-vfopen.parameters" id="ncm-cfg-vfopen.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>filename</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>mode</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>ap</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="ncm-cfg-vfopen.returns" id="ncm-cfg-vfopen.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
-</div>
-</div>
-<hr />
-<div class="refsect2">
-<a name="ncm-cfg-load-spline" id="ncm-cfg-load-spline"></a><h3>ncm_cfg_load_spline ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-ncm_cfg_load_spline (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>,
-                     <em class="parameter"><code>const <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-interp-type" title="gsl_interp_type"><span class="type">gsl_interp_type</span></a> *stype</code></em>,
-                     <em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> **s</code></em>,
-                     <em class="parameter"><code>...</code></em>);</pre>
-<p>FIXME</p>
-<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
-<div class="refsect3">
-<a name="ncm-cfg-load-spline.parameters" id="ncm-cfg-load-spline.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>filename</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>stype</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>s</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>...</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="ncm-cfg-load-spline.returns" id="ncm-cfg-load-spline.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
-</div>
-</div>
-<hr />
-<div class="refsect2">
-<a name="ncm-cfg-save-spline" id="ncm-cfg-save-spline"></a><h3>ncm_cfg_save_spline ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-ncm_cfg_save_spline (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>,
-                     <em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>,
-                     <em class="parameter"><code>...</code></em>);</pre>
-<p>FIXME</p>
-<div class="refsect3">
-<a name="ncm-cfg-save-spline.parameters" id="ncm-cfg-save-spline.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>filename</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>s</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>...</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="ncm-cfg-save-spline.returns" id="ncm-cfg-save-spline.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
-</div>
-</div>
-<hr />
-<div class="refsect2">
 <a name="ncm-cfg-get-data-filename" id="ncm-cfg-get-data-filename"></a><h3>ncm_cfg_get_data_filename ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 ncm_cfg_get_data_filename (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>,
@@ -1528,42 +1381,6 @@ ncm_cfg_command_line (<em class="parameter"><code><a href="/usr/share/gtk-doc/ht
 <div class="refsect3">
 <a name="ncm-cfg-command-line.returns" id="ncm-cfg-command-line.returns"></a><h4>Returns</h4>
 <p> FIXME</p>
-</div>
-</div>
-<hr />
-<div class="refsect2">
-<a name="ncm-cfg-variant-to-array" id="ncm-cfg-variant-to-array"></a><h3>ncm_cfg_variant_to_array ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
-ncm_cfg_variant_to_array (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *var</code></em>,
-                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> esize</code></em>);</pre>
-<p>FIXME</p>
-<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
-<div class="refsect3">
-<a name="ncm-cfg-variant-to-array.parameters" id="ncm-cfg-variant-to-array.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>var</p></td>
-<td class="parameter_description"><p>a variant of array type.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>esize</p></td>
-<td class="parameter_description"><p>element size.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="ncm-cfg-variant-to-array.returns" id="ncm-cfg-variant-to-array.returns"></a><h4>Returns</h4>
-<p>FIXME. </p>
-<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr />

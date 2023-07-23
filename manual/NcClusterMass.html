@@ -418,6 +418,7 @@ nc_cluster_mass_p (<em class="parameter"><code><a class="link" href="NcClusterMa
                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lnM_obs</code></em>,
                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lnM_obs_params</code></em>);</pre>
 <p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> P]</span></p>
 <div class="refsect3">
 <a name="nc-cluster-mass-p.parameters" id="nc-cluster-mass-p.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -479,6 +480,7 @@ nc_cluster_mass_intp (<em class="parameter"><code><a class="link" href="NcCluste
 in the range $[]$, namely,
 $$ intp = \int_{\ln M^{obs}_{min}}^{\ln M^{obs}_{max}} p \, d\ln M^{obs},$$
 where $p$ is [<a class="link" href="NcClusterMass.html#nc-cluster-mass-p" title="nc_cluster_mass_p ()"><code class="function">nc_cluster_mass_p()</code></a>].</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> intP]</span></p>
 <div class="refsect3">
 <a name="nc-cluster-mass-intp.parameters" id="nc-cluster-mass-intp.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -529,6 +531,7 @@ nc_cluster_mass_intp_bin (<em class="parameter"><code><a class="link" href="NcCl
                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lnM_obs_upper</code></em>,
                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lnM_obs_params</code></em>);</pre>
 <p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> intP_bin]</span></p>
 <div class="refsect3">
 <a name="nc-cluster-mass-intp-bin.parameters" id="nc-cluster-mass-intp-bin.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -592,7 +595,8 @@ nc_cluster_mass_resample (<em class="parameter"><code><a class="link" href="NcCl
                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lnM_obs</code></em>,
                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lnM_obs_params</code></em>,
                           <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
-<p>FIXME</p>
+<p>Generates a random sample of the observed mass proxies given the true mass and redshift.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> resample]</span></p>
 <div class="refsect3">
 <a name="nc-cluster-mass-resample.parameters" id="nc-cluster-mass-resample.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -625,12 +629,12 @@ nc_cluster_mass_resample (<em class="parameter"><code><a class="link" href="NcCl
 <tr>
 <td class="parameter_name"><p>lnM_obs</p></td>
 <td class="parameter_description"><p>logarithm base e of the observed mass. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lnM_obs_params</p></td>
 <td class="parameter_description"><p>observed mass params. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>rng</p></td>
@@ -642,7 +646,7 @@ nc_cluster_mass_resample (<em class="parameter"><code><a class="link" href="NcCl
 </div>
 <div class="refsect3">
 <a name="nc-cluster-mass-resample.returns" id="nc-cluster-mass-resample.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> TRUE if the sample was generated successfully within the limits of the observable mass proxies.</p>
 </div>
 </div>
 <hr />
@@ -656,6 +660,7 @@ nc_cluster_mass_p_limits (<em class="parameter"><code><a class="link" href="NcCl
                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lnM_lower</code></em>,
                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lnM_upper</code></em>);</pre>
 <p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> P_limits]</span></p>
 <div class="refsect3">
 <a name="nc-cluster-mass-p-limits.parameters" id="nc-cluster-mass-p-limits.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -711,6 +716,7 @@ nc_cluster_mass_p_bin_limits (<em class="parameter"><code><a class="link" href="
                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lnM_lower</code></em>,
                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lnM_upper</code></em>);</pre>
 <p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> P_bin_limits]</span></p>
 <div class="refsect3">
 <a name="nc-cluster-mass-p-bin-limits.parameters" id="nc-cluster-mass-p-bin-limits.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -771,6 +777,7 @@ nc_cluster_mass_n_limits (<em class="parameter"><code><a class="link" href="NcCl
 The function which will call this one is responsible to allocate memory for <em class="parameter"><code>lnM_lower</code></em>
  and <em class="parameter"><code>lnM_upper</code></em>
 .</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> N_limits]</span></p>
 <div class="refsect3">
 <a name="nc-cluster-mass-n-limits.parameters" id="nc-cluster-mass-n-limits.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -810,6 +817,7 @@ The function which will call this one is responsible to allocate memory for <em 
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_cluster_mass_volume (<em class="parameter"><code><a class="link" href="NcClusterMass.html" title="NcClusterMass"><span class="type">NcClusterMass</span></a> *clusterm</code></em>);</pre>
 <p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> volume]</span></p>
 <div class="refsect3">
 <a name="nc-cluster-mass-volume.parameters" id="nc-cluster-mass-volume.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -842,6 +850,7 @@ nc_cluster_mass_p_vec_z_lnMobs (<em class="parameter"><code><a class="link" href
                                 <em class="parameter"><code>const <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *lnM_obs_params</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Arrays.html#GArray"><span class="type">GArray</span></a> *res</code></em>);</pre>
 <p>FIXME</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> P_vec_z_lnMobs]</span></p>
 <div class="refsect3">
 <a name="nc-cluster-mass-p-vec-z-lnMobs.parameters" id="nc-cluster-mass-p-vec-z-lnMobs.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">

@@ -377,7 +377,7 @@ ncm_ode_spline_new_full (<em class="parameter"><code><a class="link" href="NcmSp
 </tr>
 <tr>
 <td class="parameter_name"><p>yi</p></td>
-<td class="parameter_description"><p>initial value of the function to be evaluated </p></td>
+<td class="parameter_description"><p>initial value of the function to be evaluated</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -395,7 +395,7 @@ ncm_ode_spline_new_full (<em class="parameter"><code><a class="link" href="NcmSp
 </div>
 <div class="refsect3">
 <a name="ncm-ode-spline-new-full.returns" id="ncm-ode-spline-new-full.returns"></a><h4>Returns</h4>
-<p> a new <a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a>. </p>
+<p> a new <a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a>.</p>
 </div>
 </div>
 <hr />
@@ -423,7 +423,7 @@ ncm_ode_spline_prepare (<em class="parameter"><code><a class="link" href="NcmOde
 <tr>
 <td class="parameter_name"><p>userdata</p></td>
 <td class="parameter_description"><p>ode additional parameters. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -505,7 +505,7 @@ ncm_ode_spline_set_interval (<em class="parameter"><code><a class="link" href="N
 </tr>
 <tr>
 <td class="parameter_name"><p>yi</p></td>
-<td class="parameter_description"><p>initial value of the function to be evaluated </p></td>
+<td class="parameter_description"><p>initial value of the function to be evaluated</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -546,7 +546,7 @@ ncm_ode_spline_set_reltol (<em class="parameter"><code><a class="link" href="Ncm
 </tr>
 <tr>
 <td class="parameter_name"><p>reltol</p></td>
-<td class="parameter_description"><p>relative tolerance of the ode integrator </p></td>
+<td class="parameter_description"><p>relative tolerance of the ode integrator</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -577,7 +577,7 @@ ncm_ode_spline_set_abstol (<em class="parameter"><code><a class="link" href="Ncm
 </tr>
 <tr>
 <td class="parameter_name"><p>abstol</p></td>
-<td class="parameter_description"><p>absolute tolerance of the ode integrator  </p></td>
+<td class="parameter_description"><p>absolute tolerance of the ode integrator</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -608,7 +608,7 @@ ncm_ode_spline_set_xi (<em class="parameter"><code><a class="link" href="NcmOdeS
 </tr>
 <tr>
 <td class="parameter_name"><p>xi</p></td>
-<td class="parameter_description"><p>initial point to integrate the edo </p></td>
+<td class="parameter_description"><p>initial point to integrate the edo</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -622,7 +622,7 @@ ncm_ode_spline_set_xi (<em class="parameter"><code><a class="link" href="NcmOdeS
 ncm_ode_spline_set_xf (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>);</pre>
 <p>This function sets the final point, <em class="parameter"><code>xf</code></em>
-, to integrate the edo. 
+, to integrate the edo.
 Note that if <em class="parameter"><code>yf</code></em>
  is also set, <em class="parameter"><code>yf</code></em>
  will take precedence.</p>
@@ -642,7 +642,7 @@ Note that if <em class="parameter"><code>yf</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>xf</p></td>
-<td class="parameter_description"><p>final point to integrate the edo </p></td>
+<td class="parameter_description"><p>final point to integrate the edo</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -672,7 +672,7 @@ ncm_ode_spline_set_yi (<em class="parameter"><code><a class="link" href="NcmOdeS
 </tr>
 <tr>
 <td class="parameter_name"><p>yi</p></td>
-<td class="parameter_description"><p>initial value of the function to be evaluated  </p></td>
+<td class="parameter_description"><p>initial value of the function to be evaluated</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -685,9 +685,9 @@ ncm_ode_spline_set_yi (<em class="parameter"><code><a class="link" href="NcmOdeS
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_ode_spline_set_yf (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> yf</code></em>);</pre>
-<p>This function sets the final value of the function to be evaluated. 
+<p>This function sets the final value of the function to be evaluated.
 When <em class="parameter"><code>yf</code></em>
- is reached, the edo's integration is stopped. 
+ is reached, the edo's integration is stopped.
 Note that if <em class="parameter"><code>xf</code></em>
  is also set, <em class="parameter"><code>yf</code></em>
  will take precedence.</p>
@@ -707,7 +707,7 @@ Note that if <em class="parameter"><code>xf</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>yf</p></td>
-<td class="parameter_description"><p>final value of the function to be evaluated </p></td>
+<td class="parameter_description"><p>final value of the function to be evaluated</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>

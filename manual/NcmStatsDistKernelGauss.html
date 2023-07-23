@@ -102,14 +102,14 @@ An N-dimensional Gaussian kernel used to compute the kernel density estimation f
 <p>This object defines a multivariate Gaussian kernel to be used in the <a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> class. Also, this object implements
 the virtual methods of the <a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> class. For more information, check the documentation of <a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a>.
 Below, there are some definitions of the multivariate Gaussian distribution. For more information, check  [<a class="ulink" href="https://journal.r-project.org/archive/2013/RJ-2013-033/RJ-2013-033.pdf" target="_top">On Sampling from the Multivariate t Distribution, Marius Hofert</a>].</p>
-<p>The multivariate Normal distribution has its stochastic representation as 
+<p>The multivariate Normal distribution has its stochastic representation as
 \begin{align}
 \textbf{X} &amp;= \mu + A \textbf{Z}
 ,\end{align}
 where $\textbf{Z}= (Z_1,Z_2,...,Z_n)$ is a $n$-dimension random vector whose components are independent normal random variables.
 $A$ is a $d \times n$ matrix and $\mu$ is a $d$-dimensional random vector that defines the mean of the distribution. The covariance
 matrix is defined as $\Sigma =  AA^T$, such that the distribtuion of $\textbf{X}$ is uniquely defined by its covariance matrix and the
-mean vector, that is,$ \textbf{X} \sim N(\mu, \Sigma)$. </p>
+mean vector, that is,$ \textbf{X} \sim N(\mu, \Sigma)$.</p>
 <p>Assuming that $n=d$, the probability density function (pdf) of $\textbf{X}$ is
 \begin{align}
 \label{pdf}
@@ -124,7 +124,7 @@ where $L$ is a triangular matrix with positive definite values. This decompositi
 <p>This object uses the pdf given by equation \eqref{pdf} to define a Gaussian kernel, such that it can generate points distributed
 by multivariate Gaussian distributions. The normal distribution is easy to sample from and therefore is commonly used as a kernel.</p>
 <p>The user must provide the following input value: <em class="parameter"><code>dim</code></em>
- - <a class="link" href="NcmStatsDistKernelGauss.html#ncm-stats-dist-kernel-gauss-new" title="ncm_stats_dist_kernel_gauss_new ()"><code class="function">ncm_stats_dist_kernel_gauss_new()</code></a>. Once this object is initialized, 
+ - <a class="link" href="NcmStatsDistKernelGauss.html#ncm-stats-dist-kernel-gauss-new" title="ncm_stats_dist_kernel_gauss_new ()"><code class="function">ncm_stats_dist_kernel_gauss_new()</code></a>. Once this object is initialized,
 the user can use the methods in the <a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> class with this object.</p>
 </div>
 <div class="refsect1">

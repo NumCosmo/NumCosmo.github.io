@@ -172,46 +172,46 @@
 <div class="refsect1">
 <a name="NcmStatsDistKernel.description" id="NcmStatsDistKernel.description"></a><h2>Description</h2>
 <p>An N-dimensional kernel used to compute the kernel density estimation function (KDE) in the <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class.</p>
-<p>This class provides the tools to generate a kernel function to be used in a kernel 
-density estimation method. Below is a quick review of the kernel density estimation method 
-and some properties of the kernel function, which are generalized for multidimensional problems. 
+<p>This class provides the tools to generate a kernel function to be used in a kernel
+density estimation method. Below is a quick review of the kernel density estimation method
+and some properties of the kernel function, which are generalized for multidimensional problems.
 For further information, check [<a class="ulink" href="https://www.routledge.com/Density-Estimation-for-Statistics-and-Data-Analysis/Silverman/p/book/9780412246203" target="_top">Density Estimation for Statistics and Data Analysis, B.W. Silverman</a>].</p>
-<p>Starting with the uni-dimensional case, let $X_1,...,X_n$ be independent and identically 
-distributed (iid) samples drawn from a distribution $f(x)$. The kernel density estimation of the function is 
+<p>Starting with the uni-dimensional case, let $X_1,...,X_n$ be independent and identically
+distributed (iid) samples drawn from a distribution $f(x)$. The kernel density estimation of the function is
 \begin{align}
 \tilde{f}(x) = \sum_{i=1}^{n}K\left(\frac{x-x_i}{h}\right)
 ,\end{align}
-where $K$ is the kernel function and $h$ is the bandwidth parameter. The kernel density 
-estimator function must be close to the true density function $f(x)$, which can be tested 
-by analyzing whether the estimator provides similar expected values as the function $f(x)$, 
+where $K$ is the kernel function and $h$ is the bandwidth parameter. The kernel density
+estimator function must be close to the true density function $f(x)$, which can be tested
+by analyzing whether the estimator provides similar expected values as the function $f(x)$,
 that is, the function $\tilde{f}(x)$ must minimize the mean square error (MSE)
 \begin{align}
 \label{eqmse}
 MSE_x(\tilde{f}) = E\left[\tilde{f}(x) - f(x)\right]^2
-,\end{align} 
-where $E$ represents the expected value. This value depends on the choice of the kernel function, 
-the data and the bandwidth. If the estimator $\tilde{f}(x)$ is close enough to the true function, 
+,\end{align}
+where $E$ represents the expected value. This value depends on the choice of the kernel function,
+the data and the bandwidth. If the estimator $\tilde{f}(x)$ is close enough to the true function,
 it shall be used to generate samples that are distributed by $f(x)$.</p>
 <p>The kernel $K$ is a symmetric function that must satisfy
 \begin{align}
-&amp;\int K(x)~dx = 1 
+&amp;\int K(x)~dx = 1
 .\end{align}
 Usually, the kernel function is a symmetric probability density function that is easy to sample from,
-but it is totally under the user's control. Using simple kernels, such as the Gaussian kernel, makes 
+but it is totally under the user's control. Using simple kernels, such as the Gaussian kernel, makes
 the kernel density estimator method a better alternative to generate samples when the desired distribution is a complicated function.</p>
 <p>For the multidimensional case, given i.i.d d-dimensional sample points $X_1,.., X_n$ distributed by $f(x)$,
 the multivariate kernel density estimator function $\tilde{f}(x)$ is given by
 \begin{align}
 \tilde{f}(x) = \frac{1}{h^d} \sum_{i=1}^n w_i K\left(\frac{x-x_i}{h}, \Sigma_i\right)
 ,\end{align}
-where $\Sigma_i$ is the covariance matrix of the $i$-th point (the kernels used in this library depend on the covariance matrix), 
+where $\Sigma_i$ is the covariance matrix of the $i$-th point (the kernels used in this library depend on the covariance matrix),
 $d$ is the dimension and $w_i$ is the weight attached to each kernel to find the minimal error in equation \eqref{eqmse}.</p>
-<p>The methods in this class define the type of kernel $K$, compute the bandwidth factor $h$, evaluate the kernel 
-function at a given $d$-dimensional point $x$ or at a given vector of points $\vec{x}$, and, given the weights $w_i$, 
+<p>The methods in this class define the type of kernel $K$, compute the bandwidth factor $h$, evaluate the kernel
+function at a given $d$-dimensional point $x$ or at a given vector of points $\vec{x}$, and, given the weights $w_i$,
 compute the kernel density estimation function $\tilde{f}(x)$.</p>
 <p>Besides the function <a class="link" href="NcmStatsDistKernel.html#ncm-stats-dist-kernel-get-dim" title="ncm_stats_dist_kernel_get_dim ()"><code class="function">ncm_stats_dist_kernel_get_dim()</code></a>, this class object only has virtual methods.
-Therefore, to use this object, the user must initialize one of the child objects (<a class="link" href="NcmStatsDistKernelGauss.html" title="NcmStatsDistKernelGauss"><span class="type">NcmStatsDistKernelGauss</span></a> or <a class="link" href="NcmStatsDistKernelST.html" title="NcmStatsDistKernelST"><span class="type">NcmStatsDistKernelST</span></a>). 
-Inside the child objects are the implemented functions, which must be defined for each specific type of kernel function. 
+Therefore, to use this object, the user must initialize one of the child objects (<a class="link" href="NcmStatsDistKernelGauss.html" title="NcmStatsDistKernelGauss"><span class="type">NcmStatsDistKernelGauss</span></a> or <a class="link" href="NcmStatsDistKernelST.html" title="NcmStatsDistKernelST"><span class="type">NcmStatsDistKernelST</span></a>).
+Inside the child objects are the implemented functions, which must be defined for each specific type of kernel function.
 Check the childs documentations for more information. More information about how the algorithm should be implemented is described below:</p>
 <p>	-This class is implemented in the <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class, where the <a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> class shall define
 	the type of kernel used in the interpolation function in <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> and how to compute values such as
@@ -219,7 +219,7 @@ Check the childs documentations for more information. More information about how
 	to perform other kernel calculations, although some of the methods are not implemented outside the
 	<a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class.</p>
 <p>	-This class does not possess the methods to compute the weights of each kernel. You may find this method in the
-	<a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class. </p>
+	<a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class.</p>
 <p>	-Every child object of this class can be used either in the <a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a> class or in the <a class="link" href="NcmStatsDistVKDE.html" title="NcmStatsDistVKDE"><span class="type">NcmStatsDistVKDE</span></a> class.</p>
 </div>
 <div class="refsect1">
@@ -488,6 +488,7 @@ ncm_stats_dist_kernel_eval_sum0_gamma_lambda
                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *chi2</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *weights</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *lnnorms</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *lnK</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *gamma</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lambda</code></em>);</pre>
 <p>Computes the weighted sum of kernels at $\chi^2=$<em class="parameter"><code>chi2</code></em>
@@ -527,6 +528,11 @@ each kernel has a different normalization factor.</p>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
+<td class="parameter_name"><p>lnK</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> to store the logarithm of the kernels</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
 <td class="parameter_name"><p>gamma</p></td>
 <td class="parameter_description"><p>$\gamma$. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
@@ -549,13 +555,14 @@ ncm_stats_dist_kernel_eval_sum1_gamma_lambda
                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *chi2</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *weights</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnnorm</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *lnK</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *gamma</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lambda</code></em>);</pre>
 <p>Computes the weighted sum of kernels at $\chi^2=$<em class="parameter"><code>chi2</code></em>
  (the density estimator function),
 $$ e^\gamma (1+\lambda) = \sum_i w_i\bar{K} (\chi^2_i) / u,$$
 where $\gamma = \ln(w_a\bar{K} (\chi^2_a) / u)$ and $a$ labels
-is the largest term of the sum. This function shall be used when 
+is the largest term of the sum. This function shall be used when
 all the kernels have the same normalization factor.</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> eval_sum1_gamma_lambda]</span></p>
 <div class="refsect3">
@@ -585,6 +592,11 @@ all the kernels have the same normalization factor.</p>
 <tr>
 <td class="parameter_name"><p>lnnorm</p></td>
 <td class="parameter_description"><p>a double</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lnK</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> to store the logarithm of the kernels</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>

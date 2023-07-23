@@ -103,6 +103,22 @@
 <a class="link" href="NcmStatsDistVKDE.html#ncm-stats-dist-vkde-get-local-frac" title="ncm_stats_dist_vkde_get_local_frac ()">ncm_stats_dist_vkde_get_local_frac</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDistVKDE.html#ncm-stats-dist-vkde-set-use-rot-href" title="ncm_stats_dist_vkde_set_use_rot_href ()">ncm_stats_dist_vkde_set_use_rot_href</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDistVKDE.html#ncm-stats-dist-vkde-get-use-rot-href" title="ncm_stats_dist_vkde_get_use_rot_href ()">ncm_stats_dist_vkde_get_use_rot_href</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -114,11 +130,18 @@
 <col width="300px" class="properties_name" />
 <col width="200px" class="properties_flags" />
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
 <td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcmStatsDistVKDE.html#NcmStatsDistVKDE--local-frac" title="The “local-frac” property">local-frac</a></td>
 <td class="property_flags">Read / Write / Construct</td>
-</tr></tbody>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="NcmStatsDistVKDE.html#NcmStatsDistVKDE--use-rot-href" title="The “use-rot-href” property">use-rot-href</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect1">
@@ -332,6 +355,61 @@ ncm_stats_dist_vkde_get_local_frac (<em class="parameter"><code><a class="link" 
 , the local kernel fraction.</p>
 </div>
 </div>
+<hr />
+<div class="refsect2">
+<a name="ncm-stats-dist-vkde-set-use-rot-href" id="ncm-stats-dist-vkde-set-use-rot-href"></a><h3>ncm_stats_dist_vkde_set_use_rot_href ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_stats_dist_vkde_set_use_rot_href (<em class="parameter"><code><a class="link" href="NcmStatsDistVKDE.html" title="NcmStatsDistVKDE"><span class="type">NcmStatsDistVKDE</span></a> *sdvkde</code></em>,
+                                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_rot_href</code></em>);</pre>
+<p>Sets whether to use the rule of thumb bandwidth for the</p>
+<div class="refsect3">
+<a name="ncm-stats-dist-vkde-set-use-rot-href.parameters" id="ncm-stats-dist-vkde-set-use-rot-href.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sdvkde</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDistVKDE.html" title="NcmStatsDistVKDE"><span class="type">NcmStatsDistVKDE</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>use_rot_href</p></td>
+<td class="parameter_description"><p>whether to use the rule of thumb bandwidth</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr />
+<div class="refsect2">
+<a name="ncm-stats-dist-vkde-get-use-rot-href" id="ncm-stats-dist-vkde-get-use-rot-href"></a><h3>ncm_stats_dist_vkde_get_use_rot_href ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_stats_dist_vkde_get_use_rot_href (<em class="parameter"><code><a class="link" href="NcmStatsDistVKDE.html" title="NcmStatsDistVKDE"><span class="type">NcmStatsDistVKDE</span></a> *sdvkde</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-stats-dist-vkde-get-use-rot-href.parameters" id="ncm-stats-dist-vkde-get-use-rot-href.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name" />
+<col class="parameters_description" />
+<col width="200px" class="parameters_annotations" />
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>sdvkde</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDistVKDE.html" title="NcmStatsDistVKDE"><span class="type">NcmStatsDistVKDE</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-stats-dist-vkde-get-use-rot-href.returns" id="ncm-stats-dist-vkde-get-use-rot-href.returns"></a><h4>Returns</h4>
+<p> whether to use the rule of thumb bandwidth.</p>
+</div>
+</div>
 </div>
 <div class="refsect1">
 <a name="NcmStatsDistVKDE.property-details" id="NcmStatsDistVKDE.property-details"></a><h2>Property Details</h2>
@@ -343,6 +421,15 @@ ncm_stats_dist_vkde_get_local_frac (<em class="parameter"><code><a class="link" 
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: [0.001,1]</p>
 <p>Default value: 0.05</p>
+</div>
+<hr />
+<div class="refsect2">
+<a name="NcmStatsDistVKDE--use-rot-href" id="NcmStatsDistVKDE--use-rot-href"></a><h3>The <code class="literal">“use-rot-href”</code> property</h3>
+<pre class="programlisting">  “use-rot-href”             <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether to use the href rule-of-thumb to compute the final bandwidth.</p>
+<p>Owner: NcmStatsDistVKDE</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: FALSE</p>
 </div>
 </div>
 </div>
