@@ -5,22 +5,22 @@ title: Download and installation
 
 ## Download
 
-Version {{ site.version }} of NumCosmo is the latest release version available from our web
-[releases site](http://download.savannah.gnu.org/releases/numcosmo/), the
-releases can also be found at NumCosmo github page [github releases](https://github.com/NumCosmo/NumCosmo/releases).
-You can also download the master branch [zip]({{site.github.repo}}/archive/master.zip)
-or [tarball]({{site.github.repo}}/archive/master.tar.gz).
-There are pre-compiled packages in [openSUSE Build Service](https://build.opensuse.org/project/show?project=home%3Avitenti).
-To compile NumCosmo on a Mac OS, it is possible to use HomeBrew, at [NumCosmo travis-ci page](https://travis-ci.org/NumCosmo/NumCosmo)
-one can find the log of the compilation containing the step-by-step process.
+Version {{ site.version }} of NumCosmo is the latest release version available at
+NumCosmo's GitHub page [github releases](https://github.com/NumCosmo/NumCosmo/releases).
 
-Travis-ci test build: [![Build Status](https://travis-ci.org/NumCosmo/NumCosmo.svg?branch=master)](https://travis-ci.org/NumCosmo/NumCosmo)
+To compile NumCosmo on a Mac OS, you can use HomeBrew. The compilation steps can be found in [NumCosmo GitHub actions](https://github.com/NumCosmo/NumCosmo/blob/master/.github/workflows/build_check.yml),
+providing a detailed, step-by-step process.
+
+[![Build Status](https://github.com/NumCosmo/NumCosmo/workflows/Build%20and%20Check/badge.svg)](https://github.com/NumCosmo/NumCosmo/actions) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Coverage Status](https://coveralls.io/repos/github/NumCosmo/NumCosmo/badge.svg?branch=master)](https://coveralls.io/github/NumCosmo/NumCosmo?branch=master)
 
 ## Install using conda
 
-NumCosmo and all necessary dependencies can be installed using conda (for the full anaconda installation click 
-[here](https://www.anaconda.com/download/) or [here](https://conda.io/miniconda.html) for miniconda).
-It is possible to install numcosmo with and without adding conda-forge to the installation channels:
+NumCosmo and all necessary dependencies can be installed using conda. 
+If you don't have conda installed, you can download the full Anaconda distribution from [here](https://www.anaconda.com/download/) or Miniconda from [here](https://conda.io/miniconda.html).
+
+### Installing NumCosmo without conda-forge
+
+To install NumCosmo without adding conda-forge to the installation channels, use the following command:
 
   - without adding conda-forge.
     ```bash
@@ -38,7 +38,7 @@ The requirements below can be found on most Linux distribution, click [here](#pa
 for a list of packages names for debian-like distributions and [here](#pack_rpm) for
 rpm based distributions.
 
-  - [Glib](http://www.gtk.org/) >= 2.28.0 --
+  - [Glib](http://www.gtk.org/) >= 2.44.0 --
     Data structures, threads, portability, memory allocation, etc.
   - [GSL](http://www.gnu.org/software/gsl/)  >= 1.15 --
     Several computational tools.
@@ -46,8 +46,6 @@ rpm based distributions.
     Big integers library.
   - [MPFR](http://www.mpfr.org/) >= 2.4.2 --
     Multiple precision float library.
-  - [Sundials](https://computation.llnl.gov/casc/sundials/main.html) >= 2.4.0 --
-    ODE solver library. This library is now encapsulated in NumCosmo build system and it is no longer required.
 
 ## Recommended packages
 
@@ -87,28 +85,23 @@ Below there is a small compilation of package names for some distributions.
   - For most systems the following packages can be found in the main repositories: *gobject-introspection*, *gir1.2-glib-2.0*, *libgirepository1.0-dev*, *gcc*, *pkg-config*, *libglib2.0-dev*, *libgmp3-dev*, *libmpfr-dev*, *libgsl0-dev*, *libfftw3-dev*.
     - If you want to build from the repository you also need: *autotools-dev*, *libtool*, *gtk-doc-tools*.
   - The other packages that are usually not found on the official repositories:
-    - For atlas support on Debian see: <http://wiki.debian.org/DebianScience/LinearAlgebraLibraries>.
-    - For atlas support on Ubuntu you need something similar to: *libatlas-base-dev*, *liblapack-dev*.
-    - NLopt and cfitsio sometimes can be found with the following package names: *libnlopt-dev*, *libcfitsio3-dev*.
+    - NLopt and cfitsio can be found with the following package names: *libnlopt-dev*, *libcfitsio3-dev*.
 
 ### Packages on RPM based distributions (including Fedora, OpenSuse, etc) <a id="pack_rpm"></a>
 
   - For most systems the following packages can be found in the main repositories: *pkg-config*, *gobject-introspection-devel*, *glib2-devel*, *gsl-devel*, *gmp-devel*, *mpfr-devel*, *fftw3-devel*.
     - If you want to build from the repository you also need: *autoconf*, *automake*, *libtool*, *gtk-doc*.
   - The other packages that are usually not found on the official repositories:
-    - NLopt, cfitsio, lapack and atlas sometimes can be found with the following package names: *nlopt-devel*, *libcfitsio-devel*, *lapack-devel*, *atlas-devel*, *lapack-devel*.
+    - NLopt, cfitsio, and lapack can be found with the following package names: *nlopt-devel*, *libcfitsio-devel*, *lapack-devel*, *atlas-devel*, *lapack-devel*.
 
 ## Building from repository: <a id="brepo"></a>
 
 To build from the git repository, you need to follow these steps before [configuring and compiling](#brelease).
 
-  - Generate the configure scripts and also run configure:
+  - Generate the configure scripts:
     ```bash
+    cd NumCosmo
     ./autogen.sh
-    ```
-  - Generate the configure scripts only:
-    ```bash
-    NOCONFIGURE=yes ./autogen.sh
     ```
     - The configure script is built at this point.
       Note that this requires the autotools developer enviroment (latest version recommended):
@@ -120,19 +113,21 @@ To build from the git repository, you need to follow these steps before [configu
       - [gtk-doc](http://www.gtk.org/gtk-doc/)
       - [gobject-introspection](https://wiki.gnome.org/action/show/Projects/GObjectIntrospection)
 
-
+  
 ## Configuring and compiling: <a id="brelease"></a>
 
 To build from a release package or after preparing the configure script, run:
-  - Configure the project
+  - Configure the project (preferably out-source):
     ```bash
-    ./configure (--help to see options)
+    cd NumCosmo
+    mkdir build
+    cd build
+    ../configure OPTIONS
     ```
-    - To build NumCosmo for maximum speed use the command:
-      ```bash
-      ./configure --enable-opt-cflags CFLAGS="-O3 -march=native"
-      ```
-      However, note that this will generate non-portable binaries.
+  - To compile a optimized version one can use the following options
+    ```bash
+    --enable-opt-cflags CFLAGS="-O3 -march=native -Wall -g" FCFLAGS="-O3 -march=native -Wall -g" FFLAGS="-O3 -march=native -Wall -g"
+    ```
   - Compile everything
     ```bash
     make (-j4 to compile using 4 parallel jobs)
@@ -141,7 +136,7 @@ To build from a release package or after preparing the configure script, run:
     ```bash
     make check
     ```
-  - Install the library
+  - Install the library (only if you know what you are doing)
     ```bash
     make install
     ```
@@ -175,46 +170,17 @@ git clone https://github.com/NumCosmo/NumCosmo.git
 If you are using the github version, you need to first [generate the configure script](#brepo).
 Then, configure and compile the library as described [above](#brelease), but **don't** *make install*.
 
-We need to export some environment variables:
-  - The base NumCosmo directory:
+We need to export some environment variables. A script is generated in the build directory, so the user can just run (and optionally add to the shell initialization):
   ```bash
-  export NUMCOSMO_DIR=$HOME/cosmology/NumCosmo
-  export NUMCOSMO_BUILD_DIR=$HOME/cosmology/NumCosmo
+  source $HOME/cosmology/NumCosmo/build/numcosmo_export.sh
   ```
-  Note that here we are building in the source directories, in a out-of-source
-  build NUMCOSMO_BUILD_DIR should point to the build directory.
-  - The NumCosmo's library directory to allow the dynamic loader to find it
-  ```bash
-  export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${NUMCOSMO_BUILD_DIR}/numcosmo/.libs/"
-  ```
-  - NumCosmo's data path to allow numcosmo to find the data files
-  ```bash
-  export NUMCOSMO_DATA_DIR="${NUMCOSMO_DIR}"
-  ```
-  - Typelib path to allow the bindings to find NumCosmo
-  ```bash
-  export GI_TYPELIB_PATH="${GI_TYPELIB_PATH}:${NUMCOSMO_BUILD_DIR}/numcosmo"
-  ```
-
-It is also a good idea to automate this process by adding these lines to your *.bashrc*:
-```bash
-export NUMCOSMO_DIR=$HOME/cosmology/NumCosmo
-export NUMCOSMO_BUILD_DIR=$HOME/cosmology/NumCosmo
-export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${NUMCOSMO_BUILD_DIR}/numcosmo/.libs/"
-export NUMCOSMO_DATA_DIR="${NUMCOSMO_DIR}"
-export LIBRARY_PATH="$LIBRARY_PATH:${NUMCOSMO_BUILD_DIR}/numcosmo/.libs"
-export CPATH="$CPATH:${NUMCOSMO_DIR}:${NUMCOSMO_DIR}/numcosmo:${NUMCOSMO_BUILD_DIR}:${NUMCOSMO_BUILD_DIR}/numcosmo"
-export GI_TYPELIB_PATH="${GI_TYPELIB_PATH}:${NUMCOSMO_BUILD_DIR}/numcosmo"
-```
 
 ### Compiling example_simple.c
 
 ```bash
 cd $NUMCOSMO_DIR/examples
 
-libtool --mode=link gcc -Wall example_simple.c -o example_simple  \
-  ${NUMCOSMO_BUILD_DIR}/numcosmo/libnumcosmo.la -I${NUMCOSMO_DIR} \
-  -I${NUMCOSMO_BUILD_DIR} `pkg-config --cflags glib-2.0`
+gcc -D_GNU_SOURCE -Wall example_simple.c -o example_simple -lnumcosmo -lgsl -lm $(pkg-config glib-2.0 gobject-2.0 --libs --cflags)
 ```
 
 {% include disqus-comments.html %}
