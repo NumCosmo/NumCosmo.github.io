@@ -1,13 +1,12 @@
----
+----
 layout: tutorial
 title: Samplers comparison
 desc: comparing the performance of four different samplers
----
-
+----
 
 # Samplers comparison
 
-**License**
+## License
 
 rosenbrock_simple
 
@@ -48,7 +47,7 @@ import zeus
 from pyhmc import hmc
 ```
 
-### Initialize NumCosmo and sampling parameters
+## Initialize NumCosmo and sampling parameters
 
 In this notebook, we will compare the performance of four different
 samplers: APES, Emcee, Zeus and PyHMC. To start, we will use the new
@@ -72,7 +71,7 @@ burin_steps = 500
 verbose = False
 ```
 
-### Probability definition
+## Probability definition
 
 In the cell below, we will define the unnormalized Rosenbrock
 distribution, which is known to be a difficult distribution to sample
@@ -111,7 +110,7 @@ ndim, nwalkers = 2, nwalkers
 p0 = np.random.randn(nwalkers, ndim)
 ```
 
-### Runnig NumComo’s APES
+## Running NumComo’s APES
 
 In the cell below, we will run NumCosmo’s APES algorithm using the
 configuration defined above.
@@ -165,11 +164,11 @@ mcat_zeus.trim(burin_steps)
 ### Running pyhmc: Hamiltonian Monte Carlo
 
 In the cell below, we will run the pyhmc algorithm with the same initial
-point `p0` generated previously, however since pyhmc is not an ensamble
+point `p0` generated previously, however since pyhmc is not an ensemble
 sampler we use only the first point. We will generate a chain of samples
 using pyhmc and store the resulting chain in a `Catalog` object.
 Moreover, here we need to remove a longer burn-in period of 1000
-samples, since pyhmc is not an ensamble sampler.
+samples, since pyhmc is not an ensemble sampler.
 
 ``` python
 chain_pyhmc, log_prob_pyhmc = hmc(
@@ -218,29 +217,29 @@ mcat_pyhmc.print_status()
 ```
 
     #----------------------------------------------------------------------------------
-    # NcmMSetCatalog: Current mean:   2.0344       1.0053       11.327     
-    # NcmMSetCatalog: Current msd:    0.0083706    0.011912     0.076219   
-    # NcmMSetCatalog: Current sd:     2.0651       3.2121       16.204     
-    # NcmMSetCatalog: Current var:    4.2647       10.318       262.57     
-    # NcmMSetCatalog: Current tau:    7.3933       6.189        9.956      
+    # NcmMSetCatalog: Current mean:   2.0118       1.0021       11.103     
+    # NcmMSetCatalog: Current msd:    0.0079207    0.012742     0.074897   
+    # NcmMSetCatalog: Current sd:     1.9888       3.1781       15.276     
+    # NcmMSetCatalog: Current var:    3.9551       10.1         233.36     
+    # NcmMSetCatalog: Current tau:    7.138        7.234        10.817     
     #----------------------------------------------------------------------------------
-    # NcmMSetCatalog: Current mean:   1.5146       0.8295       5.8938     
-    # NcmMSetCatalog: Current msd:    0.018357     0.095591     0.384      
-    # NcmMSetCatalog: Current sd:     1.5435       2.2827       7.4156     
-    # NcmMSetCatalog: Current var:    2.3825       5.2108       54.991     
-    # NcmMSetCatalog: Current tau:    63.645       789.13       1206.7     
+    # NcmMSetCatalog: Current mean:   1.5951       0.60027      6.0177     
+    # NcmMSetCatalog: Current msd:    0.021953     0.09409      0.3077     
+    # NcmMSetCatalog: Current sd:     1.6006       2.3792       7.3684     
+    # NcmMSetCatalog: Current var:    2.5621       5.6608       54.294     
+    # NcmMSetCatalog: Current tau:    84.648       703.76       784.71     
     #----------------------------------------------------------------------------------
-    # NcmMSetCatalog: Current mean:   1.7718       1.0068       8.7195     
-    # NcmMSetCatalog: Current msd:    0.031065     0.050285     0.31753    
-    # NcmMSetCatalog: Current sd:     1.6732       2.7759       10.643     
-    # NcmMSetCatalog: Current var:    2.7997       7.7057       113.28     
-    # NcmMSetCatalog: Current tau:    155.11       147.67       400.53     
+    # NcmMSetCatalog: Current mean:   1.7673       0.97194      8.5758     
+    # NcmMSetCatalog: Current msd:    0.028349     0.046361     0.30815    
+    # NcmMSetCatalog: Current sd:     1.7064       2.7625       11.019     
+    # NcmMSetCatalog: Current var:    2.912        7.6313       121.41     
+    # NcmMSetCatalog: Current tau:    124.2        126.74       351.94     
     #----------------------------------------------------------------------------------
-    # NcmMSetCatalog: Current mean:   1.7415      -0.84735      6.9407     
-    # NcmMSetCatalog: Current msd:    0.027216     0.44089      1.409      
-    # NcmMSetCatalog: Current sd:     2.95         2.4957       5.7804     
-    # NcmMSetCatalog: Current var:    8.7024       6.2287       33.413     
-    # NcmMSetCatalog: Current tau:    25.534       9362.1       17826      
+    # NcmMSetCatalog: Current mean:   1.7126       0.53742      2.8218     
+    # NcmMSetCatalog: Current msd:    0.028136     0.13137      0.45803    
+    # NcmMSetCatalog: Current sd:     2.0903       1.5917       3.3861     
+    # NcmMSetCatalog: Current var:    4.3695       2.5336       11.465     
+    # NcmMSetCatalog: Current tau:    54.353       2043.4       5489.3     
 
 ### Comparing the mean estimates
 
@@ -256,10 +255,10 @@ print(np.abs(mcat_zeus.get_mean() / mean - 1.0))
 print(np.abs(mcat_pyhmc.get_mean() / mean - 1.0))
 ```
 
-    [0.00534514 0.02974697]
-    [0.17050423 0.4642045 ]
-    [0.00682038 0.20732131]
-    [1.84735064 0.36902792]
+    [0.0020966  0.00939155]
+    [0.39972599 0.45293618]
+    [0.02806083 0.2203813 ]
+    [0.46258321 0.74347242]
 
 ### Comparing the standard deviation estimates
 
@@ -274,10 +273,10 @@ print(np.abs(np.sqrt(np.diagonal(mcat_zeus.get_covar())) / sigma - 1.0))
 print(np.abs(np.sqrt(np.diagonal(mcat_pyhmc.get_covar())) / sigma - 1.0))
 ```
 
-    [0.01576792 0.04574835]
-    [0.27814386 0.52142614]
-    [0.12217818 0.31313443]
-    [0.21077586 0.62695513]
+    [0.00499343 0.01413589]
+    [0.24761925 0.52446852]
+    [0.12642799 0.28888953]
+    [0.49665275 0.78147664]
 
 ### Using `getdist` on the chains
 
@@ -315,10 +314,9 @@ g.settings.linewidth = 0.01
 g.triangle_plot([mcs_apes, mcs_emcee, mcs_zeus, mcs_pyhmc], shaded=True)
 ```
 
-    auto bandwidth for theta_0 very small or failed (h=0.000264873376699719,N_eff=32286.89337404226). Using fallback (h=0.023574362536605796)
-    auto bandwidth for theta_1 very small or failed (h=0.0004570819762599289,N_eff=111770.21263323116). Using fallback (h=0.002694796107662412)
-    auto bandwidth for theta_1 very small or failed (h=0.00027723025285961926,N_eff=31660.725563384418). Using fallback (h=0.02142883143142616)
-    fine_bins_2D not large enough for optimal density: theta_0, theta_1
+    auto bandwidth for theta_0 very small or failed (h=0.0005832638183669094,N_eff=38411.13458893739). Using fallback (h=0.022408377246589863)
+    auto bandwidth for theta_1 very small or failed (h=0.0006114885736063465,N_eff=112997.872249284). Using fallback (h=0.003704573608527487)
+    auto bandwidth for theta_1 very small or failed (h=0.0014299159644314198,N_eff=14883.212703556037). Using fallback (h=0.007191755509401264)
     fine_bins_2D not large enough for optimal density: theta_0, theta_1
     fine_bins_2D not large enough for optimal density: theta_0, theta_1
     fine_bins_2D not large enough for optimal density: theta_0, theta_1
