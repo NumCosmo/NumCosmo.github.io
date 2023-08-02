@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 title: Samplers comparison
-desc: comparing the performance of four different samplers: APES, Emcee, Zeus and PyHMC
+desc: comparing the performance of four different samplers
 ---
 
 
