@@ -1,8 +1,8 @@
-----
+---
 layout: tutorial
 title: Samplers comparison
 desc: comparing the performance of four different samplers
-----
+---
 
 # Samplers comparison
 
