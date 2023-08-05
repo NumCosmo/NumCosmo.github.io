@@ -17,7 +17,7 @@ The library is implemented in C and takes advantage of the
 enabling a clean and object-oriented approach to development. 
 This design choice enhances the readability and maintainability of the codebase.
 
-**Key Features:**
+## Key Features:
 - **Numerical Cosmology:** NumCosmo is tailored to perform a wide range of numerical 
     calculations related to cosmology, such as computing cosmological distances, growth
     functions, power spectra, and other essential observables.
@@ -45,7 +45,7 @@ By combining numerical cosmology capabilities with statistical model analysis, N
 empowers researchers and developers to delve into complex cosmological phenomena, 
 advancing the understanding of the universe and its evolution.
 
-The available observables data-set objects are:
+## Available observables:
   - Type Ia Supernovae
   - Baryon Acoustic Oscillations
   - Cosmic Microwave Background
@@ -54,7 +54,7 @@ The available observables data-set objects are:
   - Hubble data H(z)
   - General cross-correlations module
 
-Currently it has the following statistical tools:
+## Statistical tools:
   - [NcmFit](manual/NcmFit.html) The library's best-fit finding capability is highly 
     flexible and versatile, offering the option to use different backend libraries such 
     as [GSL](http://www.gnu.org/software/gsl/) (GNU Scientific Library) and 
