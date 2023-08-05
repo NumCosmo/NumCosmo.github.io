@@ -17,7 +17,8 @@ The library is implemented in C and takes advantage of the
 enabling a clean and object-oriented approach to development. 
 This design choice enhances the readability and maintainability of the codebase.
 
-## Key Features:
+## Key Features
+
 - **Numerical Cosmology:** NumCosmo is tailored to perform a wide range of numerical 
     calculations related to cosmology, such as computing cosmological distances, growth
     functions, power spectra, and other essential observables.
