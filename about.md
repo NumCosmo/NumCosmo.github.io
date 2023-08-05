@@ -40,12 +40,12 @@ This design choice enhances the readability and maintainability of the codebase.
     that offers helpful utilities and simplified interfaces. This Python interface is 
     designed to streamline cosmological calculations and analysis for Python developers.
 
-
 By combining numerical cosmology capabilities with statistical model analysis, NumCosmo 
 empowers researchers and developers to delve into complex cosmological phenomena, 
 advancing the understanding of the universe and its evolution.
 
-## Available observables:
+## Available observables
+
   - Type Ia Supernovae
   - Baryon Acoustic Oscillations
   - Cosmic Microwave Background
@@ -54,7 +54,8 @@ advancing the understanding of the universe and its evolution.
   - Hubble data H(z)
   - General cross-correlations module
 
-## Statistical tools:
+## Statistical tools
+
   - [NcmFit](manual/NcmFit.html) The library's best-fit finding capability is highly 
     flexible and versatile, offering the option to use different backend libraries such 
     as [GSL](http://www.gnu.org/software/gsl/) (GNU Scientific Library) and 
