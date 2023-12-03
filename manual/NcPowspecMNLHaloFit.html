@@ -1,31 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>NcPowspecMNLHaloFit: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
-<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
-<link rel="up" href="ch08s03.html" title="Matter Power Spectrum" />
-<link rel="prev" href="NcPowspecMNL.html" title="NcPowspecMNL" />
-<link rel="next" href="ch08s04.html" title="Density Profile" />
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
-<link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="container.css" type="text/css" />
-<script type="text/x-mathjax-config">
-//<![CDATA[
-                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
-                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-                                            equationNumbers: { autoNumber: "AMS" } },
-                                    messageStyle: "none"
-                });
-//]]>
-</script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
-</script>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="NumCosmo Reference Manual">
+<link rel="up" href="ch08s03.html" title="Matter Power Spectrum">
+<link rel="prev" href="NcPowspecMNL.html" title="NcPowspecMNL">
+<link rel="next" href="ch08s04.html" title="Density Profile">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
@@ -33,30 +19,36 @@
                   <a href="#NcPowspecMNLHaloFit.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
                   <a href="#NcPowspecMNLHaloFit.properties" class="shortcut">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
-<td><a accesskey="u" href="ch08s03.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
-<td><a accesskey="p" href="NcPowspecMNL.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
-<td><a accesskey="n" href="ch08s04.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch08s03.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="NcPowspecMNL.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ch08s04.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
-<a name="NcPowspecMNLHaloFit" id="NcPowspecMNLHaloFit"></a><div class="titlepage"></div>
+<a name="NcPowspecMNLHaloFit"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="NcPowspecMNLHaloFit.top_of_page" id="NcPowspecMNLHaloFit.top_of_page"></a>NcPowspecMNLHaloFit</span></h2>
+<h2><span class="refentrytitle"><a name="NcPowspecMNLHaloFit.top_of_page"></a>NcPowspecMNLHaloFit</span></h2>
 <p>NcPowspecMNLHaloFit — nonlinear matter power spectrum from Halofit model.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="NcPowspecMNLHaloFit.stability-level" id="NcPowspecMNLHaloFit.stability-level"></a><h2>Stability Level</h2>
-<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+<a name="NcPowspecMNLHaloFit.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to
+develop applications to these interfaces, release them, and have confidence that
+they will run on all minor releases of the product (after the one in which the
+interface was introduced, and within the same major release). Even at a major
+release, incompatible changes are expected to be rare, and to have strong
+justifications.
+"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
 </div>
 <div class="refsect1">
-<a name="NcPowspecMNLHaloFit.functions" id="NcPowspecMNLHaloFit.functions"></a><h2>Functions</h2>
+<a name="NcPowspecMNLHaloFit.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_proto_type" />
-<col class="functions_proto_name" />
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -87,12 +79,12 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcPowspecMNLHaloFit.properties" id="NcPowspecMNLHaloFit.properties"></a><h2>Properties</h2>
+<a name="NcPowspecMNLHaloFit.properties"></a><h2>Properties</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="properties_type" />
-<col width="300px" class="properties_name" />
-<col width="200px" class="properties_flags" />
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
 </colgroup>
 <tbody>
 <tr>
@@ -107,7 +99,7 @@
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
 <td class="property_name"><a class="link" href="NcPowspecMNLHaloFit.html#NcPowspecMNLHaloFit--use-pkequal" title="The “use-pkequal” property">use-pkequal</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -120,11 +112,11 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcPowspecMNLHaloFit.other" id="NcPowspecMNLHaloFit.other"></a><h2>Types and Values</h2>
+<a name="NcPowspecMNLHaloFit.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="other_proto_type" />
-<col class="other_proto_name" />
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -159,42 +151,42 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcPowspecMNLHaloFit.object-hierarchy" id="NcPowspecMNLHaloFit.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+<a name="NcPowspecMNLHaloFit.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmPowspec.html" title="NcmPowspec">NcmPowspec</a>
         <span class="lineart">╰──</span> <a class="link" href="NcPowspecMNL.html" title="NcPowspecMNL">NcPowspecMNL</a>
             <span class="lineart">╰──</span> NcPowspecMNLHaloFit
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcPowspecMNLHaloFit.includes" id="NcPowspecMNLHaloFit.includes"></a><h2>Includes</h2>
+<a name="NcPowspecMNLHaloFit.includes"></a><h2>Includes</h2>
 <pre class="synopsis">#include &lt;numcosmo/nc_powspec_mnl_halofit.h&gt;
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcPowspecMNLHaloFit.description" id="NcPowspecMNLHaloFit.description"></a><h2>Description</h2>
+<a name="NcPowspecMNLHaloFit.description"></a><h2>Description</h2>
 <p>Provides the nonlinear matter power spectrum using Halofit model <a class="link" href="refs.html#XSmith2003">Smith et al (2003)</a>
 and <a class="link" href="refs.html#XTakahashi2012">Takahashi et al. (2012)</a>.</p>
 <p>For PKEqual see <a class="link" href="refs.html#XCasarini2009">Casarini et al. (2009)</a> and <a class="link" href="refs.html#XCasarini2016">Casarini et al. (2016)</a>.</p>
 </div>
 <div class="refsect1">
-<a name="NcPowspecMNLHaloFit.functions_details" id="NcPowspecMNLHaloFit.functions_details"></a><h2>Functions</h2>
+<a name="NcPowspecMNLHaloFit.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
-<a name="nc-powspec-mnl-halofit-new" id="nc-powspec-mnl-halofit-new"></a><h3>nc_powspec_mnl_halofit_new ()</h3>
+<a name="nc-powspec-mnl-halofit-new"></a><h3>nc_powspec_mnl_halofit_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcPowspecMNLHaloFit.html" title="NcPowspecMNLHaloFit"><span class="returnvalue">NcPowspecMNLHaloFit</span></a> *
 nc_powspec_mnl_halofit_new (<em class="parameter"><code><a class="link" href="NcPowspecML.html" title="NcPowspecML"><span class="type">NcPowspecML</span></a> *psml</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zmaxnl</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>);</pre>
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zmaxnl</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>);</pre>
 <p>Creates a new <a class="link" href="NcPowspecMNLHaloFit.html" title="NcPowspecMNLHaloFit"><span class="type">NcPowspecMNLHaloFit</span></a> from the transfer
 function <em class="parameter"><code>tf</code></em>
 .</p>
 <div class="refsect3">
-<a name="nc-powspec-mnl-halofit-new.parameters" id="nc-powspec-mnl-halofit-new.parameters"></a><h4>Parameters</h4>
+<a name="nc-powspec-mnl-halofit-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -216,25 +208,25 @@ function <em class="parameter"><code>tf</code></em>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="nc-powspec-mnl-halofit-new.returns" id="nc-powspec-mnl-halofit-new.returns"></a><h4>Returns</h4>
+<a name="nc-powspec-mnl-halofit-new.returns"></a><h4>Returns</h4>
 <p>the newly created <a class="link" href="NcPowspecMNLHaloFit.html" title="NcPowspecMNLHaloFit"><span class="type">NcPowspecMNLHaloFit</span></a>. </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="nc-powspec-mnl-halofit-set-kbounds-from-ml" id="nc-powspec-mnl-halofit-set-kbounds-from-ml"></a><h3>nc_powspec_mnl_halofit_set_kbounds_from_ml ()</h3>
+<a name="nc-powspec-mnl-halofit-set-kbounds-from-ml"></a><h3>nc_powspec_mnl_halofit_set_kbounds_from_ml ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_powspec_mnl_halofit_set_kbounds_from_ml
                                (<em class="parameter"><code><a class="link" href="NcPowspecMNLHaloFit.html" title="NcPowspecMNLHaloFit"><span class="type">NcPowspecMNLHaloFit</span></a> *pshf</code></em>);</pre>
 <p>Sets mode $k$ boundaries from the linear matter power spectrum.</p>
 <div class="refsect3">
-<a name="nc-powspec-mnl-halofit-set-kbounds-from-ml.parameters" id="nc-powspec-mnl-halofit-set-kbounds-from-ml.parameters"></a><h4>Parameters</h4>
+<a name="nc-powspec-mnl-halofit-set-kbounds-from-ml.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pshf</p></td>
@@ -244,21 +236,21 @@ nc_powspec_mnl_halofit_set_kbounds_from_ml
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="nc-powspec-mnl-halofit-pkequal" id="nc-powspec-mnl-halofit-pkequal"></a><h3>nc_powspec_mnl_halofit_pkequal ()</h3>
+<a name="nc-powspec-mnl-halofit-pkequal"></a><h3>nc_powspec_mnl_halofit_pkequal ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_powspec_mnl_halofit_pkequal (<em class="parameter"><code><a class="link" href="NcPowspecMNLHaloFit.html" title="NcPowspecMNLHaloFit"><span class="type">NcPowspecMNLHaloFit</span></a> *pshf</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> on</code></em>);</pre>
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> on</code></em>);</pre>
 <p>Whether to use PKEqual to adjust the HaloFit formula when using a <a class="link" href="NcHICosmoDECpl.html" title="NcHICosmoDECpl"><span class="type">NcHICosmoDECpl</span></a>
 model, see <a class="link" href="refs.html#XCasarini2009">Casarini et al. (2009)</a> and <a class="link" href="refs.html#XCasarini2016">Casarini et al. (2016)</a>.</p>
 <div class="refsect3">
-<a name="nc-powspec-mnl-halofit-pkequal.parameters" id="nc-powspec-mnl-halofit-pkequal.parameters"></a><h4>Parameters</h4>
+<a name="nc-powspec-mnl-halofit-pkequal.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -277,61 +269,61 @@ model, see <a class="link" href="refs.html#XCasarini2009">Casarini et al. (2009)
 </div>
 </div>
 <div class="refsect1">
-<a name="NcPowspecMNLHaloFit.other_details" id="NcPowspecMNLHaloFit.other_details"></a><h2>Types and Values</h2>
+<a name="NcPowspecMNLHaloFit.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
-<a name="NC-POWSPEC-MNL-HALOFIT-F1aPOW" id="NC-POWSPEC-MNL-HALOFIT-F1aPOW"></a><h3>NC_POWSPEC_MNL_HALOFIT_F1aPOW</h3>
+<a name="NC-POWSPEC-MNL-HALOFIT-F1aPOW"></a><h3>NC_POWSPEC_MNL_HALOFIT_F1aPOW</h3>
 <pre class="programlisting">#define NC_POWSPEC_MNL_HALOFIT_F1aPOW  (-0.0732)
 </pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NC-POWSPEC-MNL-HALOFIT-F2aPOW" id="NC-POWSPEC-MNL-HALOFIT-F2aPOW"></a><h3>NC_POWSPEC_MNL_HALOFIT_F2aPOW</h3>
+<a name="NC-POWSPEC-MNL-HALOFIT-F2aPOW"></a><h3>NC_POWSPEC_MNL_HALOFIT_F2aPOW</h3>
 <pre class="programlisting">#define NC_POWSPEC_MNL_HALOFIT_F2aPOW  (-0.1423)
 </pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NC-POWSPEC-MNL-HALOFIT-F3aPOW" id="NC-POWSPEC-MNL-HALOFIT-F3aPOW"></a><h3>NC_POWSPEC_MNL_HALOFIT_F3aPOW</h3>
+<a name="NC-POWSPEC-MNL-HALOFIT-F3aPOW"></a><h3>NC_POWSPEC_MNL_HALOFIT_F3aPOW</h3>
 <pre class="programlisting">#define NC_POWSPEC_MNL_HALOFIT_F3aPOW  (0.0725)
 </pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NC-POWSPEC-MNL-HALOFIT-F1bPOW" id="NC-POWSPEC-MNL-HALOFIT-F1bPOW"></a><h3>NC_POWSPEC_MNL_HALOFIT_F1bPOW</h3>
+<a name="NC-POWSPEC-MNL-HALOFIT-F1bPOW"></a><h3>NC_POWSPEC_MNL_HALOFIT_F1bPOW</h3>
 <pre class="programlisting">#define NC_POWSPEC_MNL_HALOFIT_F1bPOW  (-0.0307)
 </pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NC-POWSPEC-MNL-HALOFIT-F2bPOW" id="NC-POWSPEC-MNL-HALOFIT-F2bPOW"></a><h3>NC_POWSPEC_MNL_HALOFIT_F2bPOW</h3>
+<a name="NC-POWSPEC-MNL-HALOFIT-F2bPOW"></a><h3>NC_POWSPEC_MNL_HALOFIT_F2bPOW</h3>
 <pre class="programlisting">#define NC_POWSPEC_MNL_HALOFIT_F2bPOW  (-0.0585)
 </pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NC-POWSPEC-MNL-HALOFIT-F3bPOW" id="NC-POWSPEC-MNL-HALOFIT-F3bPOW"></a><h3>NC_POWSPEC_MNL_HALOFIT_F3bPOW</h3>
+<a name="NC-POWSPEC-MNL-HALOFIT-F3bPOW"></a><h3>NC_POWSPEC_MNL_HALOFIT_F3bPOW</h3>
 <pre class="programlisting">#define NC_POWSPEC_MNL_HALOFIT_F3bPOW  (0.0743)
 </pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NC-POWSPEC-MNL-HALOFIT-LOGRMIN:CAPS" id="NC-POWSPEC-MNL-HALOFIT-LOGRMIN:CAPS"></a><h3>NC_POWSPEC_MNL_HALOFIT_LOGRMIN</h3>
+<a name="NC-POWSPEC-MNL-HALOFIT-LOGRMIN:CAPS"></a><h3>NC_POWSPEC_MNL_HALOFIT_LOGRMIN</h3>
 <pre class="programlisting">#define NC_POWSPEC_MNL_HALOFIT_LOGRMIN (-35.000)
 </pre>
 </div>
 </div>
 <div class="refsect1">
-<a name="NcPowspecMNLHaloFit.property-details" id="NcPowspecMNLHaloFit.property-details"></a><h2>Property Details</h2>
+<a name="NcPowspecMNLHaloFit.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="NcPowspecMNLHaloFit--power-spec" id="NcPowspecMNLHaloFit--power-spec"></a><h3>The <code class="literal">“power-spec”</code> property</h3>
+<a name="NcPowspecMNLHaloFit--power-spec"></a><h3>The <code class="literal">“power-spec”</code> property</h3>
 <pre class="programlisting">  “power-spec”               <a class="link" href="NcPowspecML.html" title="NcPowspecML"><span class="type">NcPowspecML</span></a> *</pre>
 <p>The linear power spectrum <a class="link" href="NcPowspecML.html" title="NcPowspecML"><span class="type">NcPowspecML</span></a>.</p>
 <p>Owner: NcPowspecMNLHaloFit</p>
 <p>Flags: Read / Write / Construct Only</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcPowspecMNLHaloFit--reltol" id="NcPowspecMNLHaloFit--reltol"></a><h3>The <code class="literal">“reltol”</code> property</h3>
+<a name="NcPowspecMNLHaloFit--reltol"></a><h3>The <code class="literal">“reltol”</code> property</h3>
 <pre class="programlisting">  “reltol”                   <span class="type">double</span></pre>
 <p>The relative tolerance (precision) for halofit computations.</p>
 <p>Owner: NcPowspecMNLHaloFit</p>
@@ -339,18 +331,18 @@ model, see <a class="link" href="refs.html#XCasarini2009">Casarini et al. (2009)
 <p>Allowed values: [2.22045e-16,1]</p>
 <p>Default value: 0.001</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcPowspecMNLHaloFit--use-pkequal" id="NcPowspecMNLHaloFit--use-pkequal"></a><h3>The <code class="literal">“use-pkequal”</code> property</h3>
-<pre class="programlisting">  “use-pkequal”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<a name="NcPowspecMNLHaloFit--use-pkequal"></a><h3>The <code class="literal">“use-pkequal”</code> property</h3>
+<pre class="programlisting">  “use-pkequal”              <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Whether to use PKEqual.</p>
 <p>Owner: NcPowspecMNLHaloFit</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: FALSE</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcPowspecMNLHaloFit--zmaxnl" id="NcPowspecMNLHaloFit--zmaxnl"></a><h3>The <code class="literal">“zmaxnl”</code> property</h3>
+<a name="NcPowspecMNLHaloFit--zmaxnl"></a><h3>The <code class="literal">“zmaxnl”</code> property</h3>
 <pre class="programlisting">  “zmaxnl”                   <span class="type">double</span></pre>
 <p>The maximum redshift for the halofit correction.</p>
 <p>Owner: NcPowspecMNLHaloFit</p>
@@ -361,6 +353,6 @@ model, see <a class="link" href="refs.html#XCasarini2009">Casarini et al. (2009)
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.33.1</div>
-</div></div></body>
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
 </html>

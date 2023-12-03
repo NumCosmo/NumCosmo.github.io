@@ -1,31 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>NcmFitESMCMC: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
-<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
-<link rel="up" href="ch02s15.html" title="MCMC and ESMCMC" />
-<link rel="prev" href="NcmFitMCMC.html" title="NcmFitMCMC" />
-<link rel="next" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker" />
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
-<link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="container.css" type="text/css" />
-<script type="text/x-mathjax-config">
-//<![CDATA[
-                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
-                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-                                            equationNumbers: { autoNumber: "AMS" } },
-                                    messageStyle: "none"
-                });
-//]]>
-</script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
-</script>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="NumCosmo Reference Manual">
+<link rel="up" href="ch02s15.html" title="MCMC and ESMCMC">
+<link rel="prev" href="NcmFitMCMC.html" title="NcmFitMCMC">
+<link rel="next" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
@@ -33,26 +19,26 @@
                   <a href="#NcmFitESMCMC.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
                   <a href="#NcmFitESMCMC.properties" class="shortcut">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
-<td><a accesskey="u" href="ch02s15.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
-<td><a accesskey="p" href="NcmFitMCMC.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
-<td><a accesskey="n" href="NcmFitESMCMCWalker.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02s15.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="NcmFitMCMC.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="NcmFitESMCMCWalker.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
-<a name="NcmFitESMCMC" id="NcmFitESMCMC"></a><div class="titlepage"></div>
+<a name="NcmFitESMCMC"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="NcmFitESMCMC.top_of_page" id="NcmFitESMCMC.top_of_page"></a>NcmFitESMCMC</span></h2>
+<h2><span class="refentrytitle"><a name="NcmFitESMCMC.top_of_page"></a>NcmFitESMCMC</span></h2>
 <p>NcmFitESMCMC — Ensemble sampler Markov Chain Monte Carlo analysis.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="NcmFitESMCMC.functions" id="NcmFitESMCMC.functions"></a><h2>Functions</h2>
+<a name="NcmFitESMCMC.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_proto_type" />
-<col class="functions_proto_name" />
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -185,7 +171,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmFitESMCMC.html#ncm-fit-esmcmc-has-rng" title="ncm_fit_esmcmc_has_rng ()">ncm_fit_esmcmc_has_rng</a> <span class="c_punctuation">()</span>
@@ -193,7 +179,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmFitESMCMC.html#ncm-fit-esmcmc-get-accept-ratio" title="ncm_fit_esmcmc_get_accept_ratio ()">ncm_fit_esmcmc_get_accept_ratio</a> <span class="c_punctuation">()</span>
@@ -201,7 +187,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmFitESMCMC.html#ncm-fit-esmcmc-get-offboard-ratio" title="ncm_fit_esmcmc_get_offboard_ratio ()">ncm_fit_esmcmc_get_offboard_ratio</a> <span class="c_punctuation">()</span>
@@ -209,7 +195,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmFitESMCMC.html#ncm-fit-esmcmc-get-accept-ratio-last-update" title="ncm_fit_esmcmc_get_accept_ratio_last_update ()">ncm_fit_esmcmc_get_accept_ratio_last_update</a> <span class="c_punctuation">()</span>
@@ -217,7 +203,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmFitESMCMC.html#ncm-fit-esmcmc-get-offboard-ratio-last-update" title="ncm_fit_esmcmc_get_offboard_ratio_last_update ()">ncm_fit_esmcmc_get_offboard_ratio_last_update</a> <span class="c_punctuation">()</span>
@@ -313,7 +299,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmFitESMCMC.html#ncm-fit-esmcmc-validate" title="ncm_fit_esmcmc_validate ()">ncm_fit_esmcmc_validate</a> <span class="c_punctuation">()</span>
@@ -331,21 +317,21 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmFitESMCMC.properties" id="NcmFitESMCMC.properties"></a><h2>Properties</h2>
+<a name="NcmFitESMCMC.properties"></a><h2>Properties</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="properties_type" />
-<col width="300px" class="properties_name" />
-<col width="200px" class="properties_flags" />
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
 </colgroup>
 <tbody>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--auto-trim" title="The “auto-trim” property">auto-trim</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--auto-trim-div" title="The “auto-trim-div” property">auto-trim-div</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -368,7 +354,7 @@
 <td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--intermediary-log" title="The “intermediary-log” property">intermediary-log</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -388,7 +374,7 @@
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--min-runs" title="The “min-runs” property">min-runs</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -398,12 +384,12 @@
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--nthreads" title="The “nthreads” property">nthreads</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><span class="type">int</span></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--nwalkers" title="The “nwalkers” property">nwalkers</a></td>
 <td class="property_flags">Read / Write / Construct Only</td>
 </tr>
@@ -419,7 +405,7 @@
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
 <td class="property_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC--use-mpi" title="The “use-mpi” property">use-mpi</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -433,13 +419,17 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmFitESMCMC.other" id="NcmFitESMCMC.other"></a><h2>Types and Values</h2>
+<a name="NcmFitESMCMC.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="other_proto_type" />
-<col class="other_proto_name" />
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmFitESMCMC.html#NCM-TYPE-FIT-ESMCMC:CAPS" title="NCM_TYPE_FIT_ESMCMC">NCM_TYPE_FIT_ESMCMC</a></td>
+</tr>
 <tr>
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="NcmFitESMCMC.html#NCM-FIT-ESMCMC-MIN-SYNC-INTERVAL:CAPS" title="NCM_FIT_ESMCMC_MIN_SYNC_INTERVAL">NCM_FIT_ESMCMC_MIN_SYNC_INTERVAL</a></td>
@@ -456,37 +446,45 @@
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="NcmFitESMCMC.html#NCM-FIT-ESMCMC-MPI-OUT-LEN:CAPS" title="NCM_FIT_ESMCMC_MPI_OUT_LEN">NCM_FIT_ESMCMC_MPI_OUT_LEN</a></td>
 </tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcmFitESMCMC.html#NcmFitESMCMC-struct" title="NcmFitESMCMC">NcmFitESMCMC</a></td>
+</tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmFitESMCMC.object-hierarchy" id="NcmFitESMCMC.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+<a name="NcmFitESMCMC.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> NcmFitESMCMC
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcmFitESMCMC.description" id="NcmFitESMCMC.description"></a><h2>Description</h2>
-<p>FIXME</p>
+<a name="NcmFitESMCMC.description"></a><h2>Description</h2>
+<p><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> is a class that implements the Ensemble sampler Markov Chain
+Monte Carlo analysis. The object requires a <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> object to be set before
+running the analysis. The initial points are sampled from a <a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a>
+object. The walkers are defined by a <a class="link" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker"><span class="type">NcmFitESMCMCWalker</span></a> object.</p>
+<p>The <a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> object can be run in parallel using MPI.</p>
 </div>
 <div class="refsect1">
-<a name="NcmFitESMCMC.functions_details" id="NcmFitESMCMC.functions_details"></a><h2>Functions</h2>
+<a name="NcmFitESMCMC.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-new" id="ncm-fit-esmcmc-new"></a><h3>ncm_fit_esmcmc_new ()</h3>
+<a name="ncm-fit-esmcmc-new"></a><h3>ncm_fit_esmcmc_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="returnvalue">NcmFitESMCMC</span></a> *
 ncm_fit_esmcmc_new (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
-                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> nwalkers</code></em>,
+                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nwalkers</code></em>,
                     <em class="parameter"><code><a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a> *sampler</code></em>,
                     <em class="parameter"><code><a class="link" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker"><span class="type">NcmFitESMCMCWalker</span></a> *walker</code></em>,
                     <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a> mtype</code></em>);</pre>
-<p>FIXME</p>
+<p>Creates a new <a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> object using the given parameters.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-new.parameters" id="ncm-fit-esmcmc-new.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -511,35 +509,39 @@ ncm_fit_esmcmc_new (<em class="parameter"><code><a class="link" href="NcmFit.htm
 </tr>
 <tr>
 <td class="parameter_name"><p>mtype</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-new.returns" id="ncm-fit-esmcmc-new.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<a name="ncm-fit-esmcmc-new.returns"></a><h4>Returns</h4>
+<p>the newly created <a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> object. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-new-funcs-array" id="ncm-fit-esmcmc-new-funcs-array"></a><h3>ncm_fit_esmcmc_new_funcs_array ()</h3>
+<a name="ncm-fit-esmcmc-new-funcs-array"></a><h3>ncm_fit_esmcmc_new_funcs_array ()</h3>
 <pre class="programlisting"><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="returnvalue">NcmFitESMCMC</span></a> *
 ncm_fit_esmcmc_new_funcs_array (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> nwalkers</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nwalkers</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a> *sampler</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker"><span class="type">NcmFitESMCMCWalker</span></a> *walker</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a> mtype</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *funcs_array</code></em>);</pre>
-<p>FIXME</p>
+<p>Creates a new <a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> object using the given parameters.
+The <em class="parameter"><code>funcs_array</code></em>
+ is used to compute extra columns in the catalog.
+The functions must be scalar and constant.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-new-funcs-array.parameters" id="ncm-fit-esmcmc-new-funcs-array.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-new-funcs-array.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -564,7 +566,7 @@ ncm_fit_esmcmc_new_funcs_array (<em class="parameter"><code><a class="link" href
 </tr>
 <tr>
 <td class="parameter_name"><p>mtype</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -576,50 +578,55 @@ ncm_fit_esmcmc_new_funcs_array (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-new-funcs-array.returns" id="ncm-fit-esmcmc-new-funcs-array.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
-</div>
-</div>
-<hr />
-<div class="refsect2">
-<a name="ncm-fit-esmcmc-ref" id="ncm-fit-esmcmc-ref"></a><h3>ncm_fit_esmcmc_ref ()</h3>
-<pre class="programlisting"><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="returnvalue">NcmFitESMCMC</span></a> *
-ncm_fit_esmcmc_ref (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
-<p>FIXME</p>
-<div class="refsect3">
-<a name="ncm-fit-esmcmc-ref.parameters" id="ncm-fit-esmcmc-ref.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>esmcmc</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="ncm-fit-esmcmc-ref.returns" id="ncm-fit-esmcmc-ref.returns"></a><h4>Returns</h4>
-<p>FIXME. </p>
+<a name="ncm-fit-esmcmc-new-funcs-array.returns"></a><h4>Returns</h4>
+<p>the newly created <a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> object. </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-free" id="ncm-fit-esmcmc-free"></a><h3>ncm_fit_esmcmc_free ()</h3>
+<a name="ncm-fit-esmcmc-ref"></a><h3>ncm_fit_esmcmc_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="returnvalue">NcmFitESMCMC</span></a> *
+ncm_fit_esmcmc_ref (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>esmcmc</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>esmcmc</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-esmcmc-ref.returns"></a><h4>Returns</h4>
+<p>the same <em class="parameter"><code>esmcmc</code></em>
+object. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ncm-fit-esmcmc-free"></a><h3>ncm_fit_esmcmc_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_free (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
-<p>FIXME</p>
+<p>Decreases the reference count of <em class="parameter"><code>esmcmc</code></em>
+ by one. If the reference
+count reaches zero, all memory allocated by the object is released.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-free.parameters" id="ncm-fit-esmcmc-free.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-free.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -629,19 +636,23 @@ ncm_fit_esmcmc_free (<em class="parameter"><code><a class="link" href="NcmFitESM
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-clear" id="ncm-fit-esmcmc-clear"></a><h3>ncm_fit_esmcmc_clear ()</h3>
+<a name="ncm-fit-esmcmc-clear"></a><h3>ncm_fit_esmcmc_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_clear (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> **esmcmc</code></em>);</pre>
-<p>FIXME</p>
+<p>Decreases the reference count of <em class="parameter"><code>esmcmc</code></em>
+ by one. If the reference
+count reaches zero, all memory allocated by the object is released.
+The <em class="parameter"><code>esmcmc</code></em>
+ pointer is set to <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-clear.parameters" id="ncm-fit-esmcmc-clear.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-clear.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -651,20 +662,20 @@ ncm_fit_esmcmc_clear (<em class="parameter"><code><a class="link" href="NcmFitES
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-set-data-file" id="ncm-fit-esmcmc-set-data-file"></a><h3>ncm_fit_esmcmc_set_data_file ()</h3>
+<a name="ncm-fit-esmcmc-set-data-file"></a><h3>ncm_fit_esmcmc_set_data_file ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_set_data_file (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
-                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
-<p>FIXME</p>
+                              <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>Sets the data file to use for the chains catalog.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-set-data-file.parameters" id="ncm-fit-esmcmc-set-data-file.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-set-data-file.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -681,27 +692,27 @@ ncm_fit_esmcmc_set_data_file (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-set-sampler" id="ncm-fit-esmcmc-set-sampler"></a><h3>ncm_fit_esmcmc_set_sampler ()</h3>
+<a name="ncm-fit-esmcmc-set-sampler"></a><h3>ncm_fit_esmcmc_set_sampler ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_set_sampler (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
                             <em class="parameter"><code><a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a> *sampler</code></em>);</pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-set-mtype" id="ncm-fit-esmcmc-set-mtype"></a><h3>ncm_fit_esmcmc_set_mtype ()</h3>
+<a name="ncm-fit-esmcmc-set-mtype"></a><h3>ncm_fit_esmcmc_set_mtype ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_set_mtype (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
                           <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a> mtype</code></em>);</pre>
-<p>FIXME</p>
+<p>Sets the type of messages to use when running.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-set-mtype.parameters" id="ncm-fit-esmcmc-set-mtype.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-set-mtype.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -711,29 +722,29 @@ ncm_fit_esmcmc_set_mtype (<em class="parameter"><code><a class="link" href="NcmF
 </tr>
 <tr>
 <td class="parameter_name"><p>mtype</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-set-nthreads" id="ncm-fit-esmcmc-set-nthreads"></a><h3>ncm_fit_esmcmc_set_nthreads ()</h3>
+<a name="ncm-fit-esmcmc-set-nthreads"></a><h3>ncm_fit_esmcmc_set_nthreads ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_set_nthreads (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
-                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nthreads</code></em>);</pre>
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nthreads</code></em>);</pre>
 <p>If <em class="parameter"><code>nthreads</code></em>
  is larger than nwalkers / 2, it will be set to
 nwalkers / 2.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-set-nthreads.parameters" id="ncm-fit-esmcmc-set-nthreads.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-set-nthreads.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -750,12 +761,12 @@ nwalkers / 2.</p>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-use-mpi" id="ncm-fit-esmcmc-use-mpi"></a><h3>ncm_fit_esmcmc_use_mpi ()</h3>
+<a name="ncm-fit-esmcmc-use-mpi"></a><h3>ncm_fit_esmcmc_use_mpi ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_use_mpi (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
-                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_mpi</code></em>);</pre>
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_mpi</code></em>);</pre>
 <p>If <em class="parameter"><code>use_mpi</code></em>
  is TRUE then the parallelization will be accomplished
 using MPI if any slaves are available. If no slaves are available
@@ -763,12 +774,12 @@ then it falls back to threads.</p>
 <p>Note that parallelization will only occur if the number of threads
 set using <a class="link" href="NcmFitESMCMC.html#ncm-fit-esmcmc-set-nthreads" title="ncm_fit_esmcmc_set_nthreads ()"><code class="function">ncm_fit_esmcmc_set_nthreads()</code></a> is larger than one.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-use-mpi.parameters" id="ncm-fit-esmcmc-use-mpi.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-use-mpi.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -785,20 +796,20 @@ set using <a class="link" href="NcmFitESMCMC.html#ncm-fit-esmcmc-set-nthreads" t
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-set-rng" id="ncm-fit-esmcmc-set-rng"></a><h3>ncm_fit_esmcmc_set_rng ()</h3>
+<a name="ncm-fit-esmcmc-set-rng"></a><h3>ncm_fit_esmcmc_set_rng ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_set_rng (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
                         <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
-<p>FIXME</p>
+<p>Sets the random number generator to use.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-set-rng.parameters" id="ncm-fit-esmcmc-set-rng.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-set-rng.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -808,29 +819,29 @@ ncm_fit_esmcmc_set_rng (<em class="parameter"><code><a class="link" href="NcmFit
 </tr>
 <tr>
 <td class="parameter_name"><p>rng</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-set-auto-trim" id="ncm-fit-esmcmc-set-auto-trim"></a><h3>ncm_fit_esmcmc_set_auto_trim ()</h3>
+<a name="ncm-fit-esmcmc-set-auto-trim"></a><h3>ncm_fit_esmcmc_set_auto_trim ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_set_auto_trim (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
-                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> enable</code></em>);</pre>
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> enable</code></em>);</pre>
 <p>If <em class="parameter"><code>enable</code></em>
  is TRUE turns on the auto-trimming when performing a
 run_lre.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-set-auto-trim.parameters" id="ncm-fit-esmcmc-set-auto-trim.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-set-auto-trim.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -847,20 +858,20 @@ run_lre.</p>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-set-auto-trim-div" id="ncm-fit-esmcmc-set-auto-trim-div"></a><h3>ncm_fit_esmcmc_set_auto_trim_div ()</h3>
+<a name="ncm-fit-esmcmc-set-auto-trim-div"></a><h3>ncm_fit_esmcmc_set_auto_trim_div ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_set_auto_trim_div (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
-                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> div</code></em>);</pre>
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> div</code></em>);</pre>
 <p>Sets the divisor for the auto trim tests.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-set-auto-trim-div.parameters" id="ncm-fit-esmcmc-set-auto-trim-div.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-set-auto-trim-div.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -877,20 +888,20 @@ ncm_fit_esmcmc_set_auto_trim_div (<em class="parameter"><code><a class="link" hr
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-set-auto-trim-type" id="ncm-fit-esmcmc-set-auto-trim-type"></a><h3>ncm_fit_esmcmc_set_auto_trim_type ()</h3>
+<a name="ncm-fit-esmcmc-set-auto-trim-type"></a><h3>ncm_fit_esmcmc_set_auto_trim_type ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_set_auto_trim_type (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
                                    <em class="parameter"><code><a class="link" href="NcmMSetCatalog.html#NcmMSetCatalogTrimType" title="enum NcmMSetCatalogTrimType"><span class="type">NcmMSetCatalogTrimType</span></a> ttype</code></em>);</pre>
 <p>Sets the trim type.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-set-auto-trim-type.parameters" id="ncm-fit-esmcmc-set-auto-trim-type.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-set-auto-trim-type.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -907,20 +918,20 @@ ncm_fit_esmcmc_set_auto_trim_type (<em class="parameter"><code><a class="link" h
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-set-min-runs" id="ncm-fit-esmcmc-set-min-runs"></a><h3>ncm_fit_esmcmc_set_min_runs ()</h3>
+<a name="ncm-fit-esmcmc-set-min-runs"></a><h3>ncm_fit_esmcmc_set_min_runs ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_set_min_runs (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
-                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> min_runs</code></em>);</pre>
+                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> min_runs</code></em>);</pre>
 <p>Sets the minimum number of runs between tests.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-set-min-runs.parameters" id="ncm-fit-esmcmc-set-min-runs.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-set-min-runs.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -937,20 +948,20 @@ ncm_fit_esmcmc_set_min_runs (<em class="parameter"><code><a class="link" href="N
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-set-max-runs-time" id="ncm-fit-esmcmc-set-max-runs-time"></a><h3>ncm_fit_esmcmc_set_max_runs_time ()</h3>
+<a name="ncm-fit-esmcmc-set-max-runs-time"></a><h3>ncm_fit_esmcmc_set_max_runs_time ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_set_max_runs_time (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
-                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> max_runs_time</code></em>);</pre>
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> max_runs_time</code></em>);</pre>
 <p>Sets the maximum time for the runs between tests.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-set-max-runs-time.parameters" id="ncm-fit-esmcmc-set-max-runs-time.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-set-max-runs-time.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -967,19 +978,18 @@ ncm_fit_esmcmc_set_max_runs_time (<em class="parameter"><code><a class="link" hr
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-has-rng" id="ncm-fit-esmcmc-has-rng"></a><h3>ncm_fit_esmcmc_has_rng ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<a name="ncm-fit-esmcmc-has-rng"></a><h3>ncm_fit_esmcmc_has_rng ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 ncm_fit_esmcmc_has_rng (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
-<p>FIXME</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-has-rng.parameters" id="ncm-fit-esmcmc-has-rng.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-has-rng.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -989,23 +999,24 @@ ncm_fit_esmcmc_has_rng (<em class="parameter"><code><a class="link" href="NcmFit
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-has-rng.returns" id="ncm-fit-esmcmc-has-rng.returns"></a><h4>Returns</h4>
+<a name="ncm-fit-esmcmc-has-rng.returns"></a><h4>Returns</h4>
 <p> whether there is a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> set.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-get-accept-ratio" id="ncm-fit-esmcmc-get-accept-ratio"></a><h3>ncm_fit_esmcmc_get_accept_ratio ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-fit-esmcmc-get-accept-ratio"></a><h3>ncm_fit_esmcmc_get_accept_ratio ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_fit_esmcmc_get_accept_ratio (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
-<p>FIXME</p>
+<p>The acceptance ratio is the ratio of accepted proposals over the
+total number of proposals.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-get-accept-ratio.parameters" id="ncm-fit-esmcmc-get-accept-ratio.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-get-accept-ratio.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -1015,23 +1026,24 @@ ncm_fit_esmcmc_get_accept_ratio (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-get-accept-ratio.returns" id="ncm-fit-esmcmc-get-accept-ratio.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<a name="ncm-fit-esmcmc-get-accept-ratio.returns"></a><h4>Returns</h4>
+<p> the acceptance ratio.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-get-offboard-ratio" id="ncm-fit-esmcmc-get-offboard-ratio"></a><h3>ncm_fit_esmcmc_get_offboard_ratio ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-fit-esmcmc-get-offboard-ratio"></a><h3>ncm_fit_esmcmc_get_offboard_ratio ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_fit_esmcmc_get_offboard_ratio (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
-<p>FIXME</p>
+<p>The offboard ratio is the ratio of offboard proposals over the
+total number of proposals.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-get-offboard-ratio.parameters" id="ncm-fit-esmcmc-get-offboard-ratio.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-get-offboard-ratio.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -1041,24 +1053,25 @@ ncm_fit_esmcmc_get_offboard_ratio (<em class="parameter"><code><a class="link" h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-get-offboard-ratio.returns" id="ncm-fit-esmcmc-get-offboard-ratio.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<a name="ncm-fit-esmcmc-get-offboard-ratio.returns"></a><h4>Returns</h4>
+<p> the offboard ratio.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-get-accept-ratio-last-update" id="ncm-fit-esmcmc-get-accept-ratio-last-update"></a><h3>ncm_fit_esmcmc_get_accept_ratio_last_update ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-fit-esmcmc-get-accept-ratio-last-update"></a><h3>ncm_fit_esmcmc_get_accept_ratio_last_update ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_fit_esmcmc_get_accept_ratio_last_update
                                (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
-<p>FIXME</p>
+<p>The acceptance ratio is the ratio of accepted proposals over the
+total number of proposals during the last update.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-get-accept-ratio-last-update.parameters" id="ncm-fit-esmcmc-get-accept-ratio-last-update.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-get-accept-ratio-last-update.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -1068,24 +1081,25 @@ ncm_fit_esmcmc_get_accept_ratio_last_update
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-get-accept-ratio-last-update.returns" id="ncm-fit-esmcmc-get-accept-ratio-last-update.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<a name="ncm-fit-esmcmc-get-accept-ratio-last-update.returns"></a><h4>Returns</h4>
+<p> the acceptance ratio.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-get-offboard-ratio-last-update" id="ncm-fit-esmcmc-get-offboard-ratio-last-update"></a><h3>ncm_fit_esmcmc_get_offboard_ratio_last_update ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-fit-esmcmc-get-offboard-ratio-last-update"></a><h3>ncm_fit_esmcmc_get_offboard_ratio_last_update ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_fit_esmcmc_get_offboard_ratio_last_update
                                (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
-<p>FIXME</p>
+<p>The offboard ratio is the ratio of offboard proposals over the
+total number of proposals during the last update.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-get-offboard-ratio-last-update.parameters" id="ncm-fit-esmcmc-get-offboard-ratio-last-update.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-get-offboard-ratio-last-update.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -1095,23 +1109,24 @@ ncm_fit_esmcmc_get_offboard_ratio_last_update
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-get-offboard-ratio-last-update.returns" id="ncm-fit-esmcmc-get-offboard-ratio-last-update.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<a name="ncm-fit-esmcmc-get-offboard-ratio-last-update.returns"></a><h4>Returns</h4>
+<p> the offboard ratio.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-start-run" id="ncm-fit-esmcmc-start-run"></a><h3>ncm_fit_esmcmc_start_run ()</h3>
+<a name="ncm-fit-esmcmc-start-run"></a><h3>ncm_fit_esmcmc_start_run ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_start_run (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
-<p>FIXME</p>
+<p>Starts the run. This method should be called before any other
+run related method.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-start-run.parameters" id="ncm-fit-esmcmc-start-run.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-start-run.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -1121,19 +1136,20 @@ ncm_fit_esmcmc_start_run (<em class="parameter"><code><a class="link" href="NcmF
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-end-run" id="ncm-fit-esmcmc-end-run"></a><h3>ncm_fit_esmcmc_end_run ()</h3>
+<a name="ncm-fit-esmcmc-end-run"></a><h3>ncm_fit_esmcmc_end_run ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_end_run (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
-<p>FIXME</p>
+<p>Terminates the run. This method should be called after all
+run related methods.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-end-run.parameters" id="ncm-fit-esmcmc-end-run.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-end-run.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -1143,19 +1159,19 @@ ncm_fit_esmcmc_end_run (<em class="parameter"><code><a class="link" href="NcmFit
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-reset" id="ncm-fit-esmcmc-reset"></a><h3>ncm_fit_esmcmc_reset ()</h3>
+<a name="ncm-fit-esmcmc-reset"></a><h3>ncm_fit_esmcmc_reset ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_reset (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
-<p>FIXME</p>
+<p>Resets the run.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-reset.parameters" id="ncm-fit-esmcmc-reset.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-reset.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -1165,23 +1181,23 @@ ncm_fit_esmcmc_reset (<em class="parameter"><code><a class="link" href="NcmFitES
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-run" id="ncm-fit-esmcmc-run"></a><h3>ncm_fit_esmcmc_run ()</h3>
+<a name="ncm-fit-esmcmc-run"></a><h3>ncm_fit_esmcmc_run ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_run (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
-                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
+                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
 <p>Runs the Monte Carlo until it reaches the <em class="parameter"><code>n</code></em>
 -th realization. Note that
 if the first_id is non-zero it will run <em class="parameter"><code>n</code></em>
  - first_id realizations.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-run.parameters" id="ncm-fit-esmcmc-run.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-run.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1198,24 +1214,24 @@ if the first_id is non-zero it will run <em class="parameter"><code>n</code></em
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-run-lre" id="ncm-fit-esmcmc-run-lre"></a><h3>ncm_fit_esmcmc_run_lre ()</h3>
+<a name="ncm-fit-esmcmc-run-lre"></a><h3>ncm_fit_esmcmc_run_lre ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_run_lre (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
-                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> prerun</code></em>,
-                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lre</code></em>);</pre>
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> prerun</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lre</code></em>);</pre>
 <p>Runs the ESMCMC algorithm until the least relative error is less than <em class="parameter"><code>lre</code></em>
 .
 It runs at least <em class="parameter"><code>prerun</code></em>
  pre-runs before starting the algorithm.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-run-lre.parameters" id="ncm-fit-esmcmc-run-lre.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-run-lre.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1237,21 +1253,26 @@ It runs at least <em class="parameter"><code>prerun</code></em>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-run-burnin" id="ncm-fit-esmcmc-run-burnin"></a><h3>ncm_fit_esmcmc_run_burnin ()</h3>
+<a name="ncm-fit-esmcmc-run-burnin"></a><h3>ncm_fit_esmcmc_run_burnin ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_run_burnin (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
-                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> prerun</code></em>,
-                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> ntimes</code></em>);</pre>
-<p>FIXME</p>
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> prerun</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> ntimes</code></em>);</pre>
+<p>Runs the ESMCMC algorithm until the <em class="parameter"><code>prerun</code></em>
+-th iterations are reached.
+Then it runs <em class="parameter"><code>ntimes</code></em>
+ times the estimated constant break.</p>
+<p>The constant break is the number of iterations after which the variance
+of the m2lnL is constant.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-run-burnin.parameters" id="ncm-fit-esmcmc-run-burnin.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-run-burnin.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1261,31 +1282,31 @@ ncm_fit_esmcmc_run_burnin (<em class="parameter"><code><a class="link" href="Ncm
 </tr>
 <tr>
 <td class="parameter_name"><p>prerun</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>number of pre-runs</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>ntimes</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>multiplication factor</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-mean-covar" id="ncm-fit-esmcmc-mean-covar"></a><h3>ncm_fit_esmcmc_mean_covar ()</h3>
+<a name="ncm-fit-esmcmc-mean-covar"></a><h3>ncm_fit_esmcmc_mean_covar ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_mean_covar (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
-<p>FIXME</p>
+<p>Calculates the mean and covariance of the generated catalog.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-mean-covar.parameters" id="ncm-fit-esmcmc-mean-covar.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-mean-covar.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -1295,20 +1316,20 @@ ncm_fit_esmcmc_mean_covar (<em class="parameter"><code><a class="link" href="Ncm
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-peek-ser" id="ncm-fit-esmcmc-peek-ser"></a><h3>ncm_fit_esmcmc_peek_ser ()</h3>
+<a name="ncm-fit-esmcmc-peek-ser"></a><h3>ncm_fit_esmcmc_peek_ser ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="returnvalue">NcmSerialize</span></a> *
 ncm_fit_esmcmc_peek_ser (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
 <p>Peeks the internal <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> object from <em class="parameter"><code>esmcmc</code></em>
 .</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-peek-ser.parameters" id="ncm-fit-esmcmc-peek-ser.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-peek-ser.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -1318,25 +1339,25 @@ ncm_fit_esmcmc_peek_ser (<em class="parameter"><code><a class="link" href="NcmFi
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-peek-ser.returns" id="ncm-fit-esmcmc-peek-ser.returns"></a><h4>Returns</h4>
+<a name="ncm-fit-esmcmc-peek-ser.returns"></a><h4>Returns</h4>
 <p>the internal <a class="link" href="NcmSerialize.html" title="NcmSerialize"><span class="type">NcmSerialize</span></a> object. </p>
 <p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-get-catalog" id="ncm-fit-esmcmc-get-catalog"></a><h3>ncm_fit_esmcmc_get_catalog ()</h3>
+<a name="ncm-fit-esmcmc-get-catalog"></a><h3>ncm_fit_esmcmc_get_catalog ()</h3>
 <pre class="programlisting"><a class="link" href="NcmMSetCatalog.html" title="NcmMSetCatalog"><span class="returnvalue">NcmMSetCatalog</span></a> *
 ncm_fit_esmcmc_get_catalog (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
 <p>Gets the generated catalog of <em class="parameter"><code>esmcmc</code></em>
 .</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-get-catalog.parameters" id="ncm-fit-esmcmc-get-catalog.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-get-catalog.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -1346,25 +1367,25 @@ ncm_fit_esmcmc_get_catalog (<em class="parameter"><code><a class="link" href="Nc
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-get-catalog.returns" id="ncm-fit-esmcmc-get-catalog.returns"></a><h4>Returns</h4>
+<a name="ncm-fit-esmcmc-get-catalog.returns"></a><h4>Returns</h4>
 <p>the generated catalog. </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-peek-catalog" id="ncm-fit-esmcmc-peek-catalog"></a><h3>ncm_fit_esmcmc_peek_catalog ()</h3>
+<a name="ncm-fit-esmcmc-peek-catalog"></a><h3>ncm_fit_esmcmc_peek_catalog ()</h3>
 <pre class="programlisting"><a class="link" href="NcmMSetCatalog.html" title="NcmMSetCatalog"><span class="returnvalue">NcmMSetCatalog</span></a> *
 ncm_fit_esmcmc_peek_catalog (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
 <p>Gets the generated catalog of <em class="parameter"><code>esmcmc</code></em>
 .</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-peek-catalog.parameters" id="ncm-fit-esmcmc-peek-catalog.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-peek-catalog.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -1374,24 +1395,24 @@ ncm_fit_esmcmc_peek_catalog (<em class="parameter"><code><a class="link" href="N
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-peek-catalog.returns" id="ncm-fit-esmcmc-peek-catalog.returns"></a><h4>Returns</h4>
+<a name="ncm-fit-esmcmc-peek-catalog.returns"></a><h4>Returns</h4>
 <p>the generated catalog. </p>
 <p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-peek-fit" id="ncm-fit-esmcmc-peek-fit"></a><h3>ncm_fit_esmcmc_peek_fit ()</h3>
+<a name="ncm-fit-esmcmc-peek-fit"></a><h3>ncm_fit_esmcmc_peek_fit ()</h3>
 <pre class="programlisting"><a class="link" href="NcmFit.html" title="NcmFit"><span class="returnvalue">NcmFit</span></a> *
 ncm_fit_esmcmc_peek_fit (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
 <p>Gets the <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> object used by the sampler.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-peek-fit.parameters" id="ncm-fit-esmcmc-peek-fit.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-peek-fit.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -1401,18 +1422,18 @@ ncm_fit_esmcmc_peek_fit (<em class="parameter"><code><a class="link" href="NcmFi
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-peek-fit.returns" id="ncm-fit-esmcmc-peek-fit.returns"></a><h4>Returns</h4>
+<a name="ncm-fit-esmcmc-peek-fit.returns"></a><h4>Returns</h4>
 <p>the <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> object. </p>
 <p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-validate" id="ncm-fit-esmcmc-validate"></a><h3>ncm_fit_esmcmc_validate ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<a name="ncm-fit-esmcmc-validate"></a><h3>ncm_fit_esmcmc_validate ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 ncm_fit_esmcmc_validate (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> pi</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> pf</code></em>);</pre>
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> pi</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> pf</code></em>);</pre>
 <p>Recalculates the value of $-2\ln(L)$ and compares
 with the values found in the catalog. This function
 is particularly useful to check if any problem occured
@@ -1421,12 +1442,12 @@ during a multithread evaluation of the likelihood.</p>
  == 0 performs the validation from  <em class="parameter"><code>pi</code></em>
  to the end.</p>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-validate.parameters" id="ncm-fit-esmcmc-validate.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-validate.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1448,22 +1469,22 @@ during a multithread evaluation of the likelihood.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-validate.returns" id="ncm-fit-esmcmc-validate.returns"></a><h4>Returns</h4>
+<a name="ncm-fit-esmcmc-validate.returns"></a><h4>Returns</h4>
 <p> Whether the validation was TRUE or FALSE.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-esmcmc-peek-walker" id="ncm-fit-esmcmc-peek-walker"></a><h3>ncm_fit_esmcmc_peek_walker ()</h3>
+<a name="ncm-fit-esmcmc-peek-walker"></a><h3>ncm_fit_esmcmc_peek_walker ()</h3>
 <pre class="programlisting"><a class="link" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker"><span class="returnvalue">NcmFitESMCMCWalker</span></a> *
 ncm_fit_esmcmc_peek_walker (<em class="parameter"><code><a class="link" href="NcmFitESMCMC.html" title="NcmFitESMCMC"><span class="type">NcmFitESMCMC</span></a> *esmcmc</code></em>);</pre>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-peek-walker.parameters" id="ncm-fit-esmcmc-peek-walker.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-esmcmc-peek-walker.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>esmcmc</p></td>
@@ -1473,96 +1494,107 @@ ncm_fit_esmcmc_peek_walker (<em class="parameter"><code><a class="link" href="Nc
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-fit-esmcmc-peek-walker.returns" id="ncm-fit-esmcmc-peek-walker.returns"></a><h4>Returns</h4>
+<a name="ncm-fit-esmcmc-peek-walker.returns"></a><h4>Returns</h4>
 <p>the currently used walker <a class="link" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker"><span class="type">NcmFitESMCMCWalker</span></a>. </p>
 <p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 </div>
 <div class="refsect1">
-<a name="NcmFitESMCMC.other_details" id="NcmFitESMCMC.other_details"></a><h2>Types and Values</h2>
+<a name="NcmFitESMCMC.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
-<a name="NCM-FIT-ESMCMC-MIN-SYNC-INTERVAL:CAPS" id="NCM-FIT-ESMCMC-MIN-SYNC-INTERVAL:CAPS"></a><h3>NCM_FIT_ESMCMC_MIN_SYNC_INTERVAL</h3>
+<a name="NCM-TYPE-FIT-ESMCMC:CAPS"></a><h3>NCM_TYPE_FIT_ESMCMC</h3>
+<pre class="programlisting">#define NCM_TYPE_FIT_ESMCMC (ncm_fit_esmcmc_get_type ())
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="NCM-FIT-ESMCMC-MIN-SYNC-INTERVAL:CAPS"></a><h3>NCM_FIT_ESMCMC_MIN_SYNC_INTERVAL</h3>
 <pre class="programlisting">#define NCM_FIT_ESMCMC_MIN_SYNC_INTERVAL (10.0)
 </pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NCM-FIT-ESMCMC-M2LNL-ID:CAPS" id="NCM-FIT-ESMCMC-M2LNL-ID:CAPS"></a><h3>NCM_FIT_ESMCMC_M2LNL_ID</h3>
+<a name="NCM-FIT-ESMCMC-M2LNL-ID:CAPS"></a><h3>NCM_FIT_ESMCMC_M2LNL_ID</h3>
 <pre class="programlisting">#define NCM_FIT_ESMCMC_M2LNL_ID (0)
 </pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NCM-FIT-ESMCMC-MPI-IN-LEN:CAPS" id="NCM-FIT-ESMCMC-MPI-IN-LEN:CAPS"></a><h3>NCM_FIT_ESMCMC_MPI_IN_LEN</h3>
+<a name="NCM-FIT-ESMCMC-MPI-IN-LEN:CAPS"></a><h3>NCM_FIT_ESMCMC_MPI_IN_LEN</h3>
 <pre class="programlisting">#define NCM_FIT_ESMCMC_MPI_IN_LEN (3)
 </pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NCM-FIT-ESMCMC-MPI-OUT-LEN:CAPS" id="NCM-FIT-ESMCMC-MPI-OUT-LEN:CAPS"></a><h3>NCM_FIT_ESMCMC_MPI_OUT_LEN</h3>
+<a name="NCM-FIT-ESMCMC-MPI-OUT-LEN:CAPS"></a><h3>NCM_FIT_ESMCMC_MPI_OUT_LEN</h3>
 <pre class="programlisting">#define NCM_FIT_ESMCMC_MPI_OUT_LEN (1)
 </pre>
 </div>
+<hr>
+<div class="refsect2">
+<a name="NcmFitESMCMC-struct"></a><h3>NcmFitESMCMC</h3>
+<pre class="programlisting">typedef struct _NcmFitESMCMC NcmFitESMCMC;</pre>
+</div>
 </div>
 <div class="refsect1">
-<a name="NcmFitESMCMC.property-details" id="NcmFitESMCMC.property-details"></a><h2>Property Details</h2>
+<a name="NcmFitESMCMC.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="NcmFitESMCMC--auto-trim" id="NcmFitESMCMC--auto-trim"></a><h3>The <code class="literal">“auto-trim”</code> property</h3>
-<pre class="programlisting">  “auto-trim”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<a name="NcmFitESMCMC--auto-trim"></a><h3>The <code class="literal">“auto-trim”</code> property</h3>
+<pre class="programlisting">  “auto-trim”                <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Whether to automatically trim the catalog.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: FALSE</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--auto-trim-div" id="NcmFitESMCMC--auto-trim-div"></a><h3>The <code class="literal">“auto-trim-div”</code> property</h3>
-<pre class="programlisting">  “auto-trim-div”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<a name="NcmFitESMCMC--auto-trim-div"></a><h3>The <code class="literal">“auto-trim-div”</code> property</h3>
+<pre class="programlisting">  “auto-trim-div”            <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Automatically trim divisor.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 100</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--data-file" id="NcmFitESMCMC--data-file"></a><h3>The <code class="literal">“data-file”</code> property</h3>
+<a name="NcmFitESMCMC--data-file"></a><h3>The <code class="literal">“data-file”</code> property</h3>
 <pre class="programlisting">  “data-file”                <span class="type">char</span> *</pre>
 <p>Data filename.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--fit" id="NcmFitESMCMC--fit"></a><h3>The <code class="literal">“fit”</code> property</h3>
+<a name="NcmFitESMCMC--fit"></a><h3>The <code class="literal">“fit”</code> property</h3>
 <pre class="programlisting">  “fit”                      <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *</pre>
 <p>Fit object.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct Only</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--function-array" id="NcmFitESMCMC--function-array"></a><h3>The <code class="literal">“function-array”</code> property</h3>
+<a name="NcmFitESMCMC--function-array"></a><h3>The <code class="literal">“function-array”</code> property</h3>
 <pre class="programlisting">  “function-array”           <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</pre>
 <p>Functions array.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct Only</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--intermediary-log" id="NcmFitESMCMC--intermediary-log"></a><h3>The <code class="literal">“intermediary-log”</code> property</h3>
-<pre class="programlisting">  “intermediary-log”         <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<a name="NcmFitESMCMC--intermediary-log"></a><h3>The <code class="literal">“intermediary-log”</code> property</h3>
+<pre class="programlisting">  “intermediary-log”         <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Number of intermediary logs.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 5</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--log-time-interval" id="NcmFitESMCMC--log-time-interval"></a><h3>The <code class="literal">“log-time-interval”</code> property</h3>
+<a name="NcmFitESMCMC--log-time-interval"></a><h3>The <code class="literal">“log-time-interval”</code> property</h3>
 <pre class="programlisting">  “log-time-interval”        <span class="type">double</span></pre>
 <p>Time interval between log.</p>
 <p>Owner: NcmFitESMCMC</p>
@@ -1570,9 +1602,9 @@ ncm_fit_esmcmc_peek_walker (<em class="parameter"><code><a class="link" href="Nc
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 60</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--lre-step" id="NcmFitESMCMC--lre-step"></a><h3>The <code class="literal">“lre-step”</code> property</h3>
+<a name="NcmFitESMCMC--lre-step"></a><h3>The <code class="literal">“lre-step”</code> property</h3>
 <pre class="programlisting">  “lre-step”                 <span class="type">double</span></pre>
 <p>Step size in the lre run.</p>
 <p>Owner: NcmFitESMCMC</p>
@@ -1580,9 +1612,9 @@ ncm_fit_esmcmc_peek_walker (<em class="parameter"><code><a class="link" href="Nc
 <p>Allowed values: [0.01,1]</p>
 <p>Default value: 0.1</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--max-runs-time" id="NcmFitESMCMC--max-runs-time"></a><h3>The <code class="literal">“max-runs-time”</code> property</h3>
+<a name="NcmFitESMCMC--max-runs-time"></a><h3>The <code class="literal">“max-runs-time”</code> property</h3>
 <pre class="programlisting">  “max-runs-time”            <span class="type">double</span></pre>
 <p>Maximum time between runs.</p>
 <p>Owner: NcmFitESMCMC</p>
@@ -1590,73 +1622,73 @@ ncm_fit_esmcmc_peek_walker (<em class="parameter"><code><a class="link" href="Nc
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 7200</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--min-runs" id="NcmFitESMCMC--min-runs"></a><h3>The <code class="literal">“min-runs”</code> property</h3>
-<pre class="programlisting">  “min-runs”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<a name="NcmFitESMCMC--min-runs"></a><h3>The <code class="literal">“min-runs”</code> property</h3>
+<pre class="programlisting">  “min-runs”                 <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Minumum number of runs.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 10</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--mtype" id="NcmFitESMCMC--mtype"></a><h3>The <code class="literal">“mtype”</code> property</h3>
+<a name="NcmFitESMCMC--mtype"></a><h3>The <code class="literal">“mtype”</code> property</h3>
 <pre class="programlisting">  “mtype”                    <a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a></pre>
 <p>Run messages type.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NCM_FIT_RUN_MSGS_SIMPLE</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--nthreads" id="NcmFitESMCMC--nthreads"></a><h3>The <code class="literal">“nthreads”</code> property</h3>
-<pre class="programlisting">  “nthreads”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<a name="NcmFitESMCMC--nthreads"></a><h3>The <code class="literal">“nthreads”</code> property</h3>
+<pre class="programlisting">  “nthreads”                 <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Number of threads to run.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--nwalkers" id="NcmFitESMCMC--nwalkers"></a><h3>The <code class="literal">“nwalkers”</code> property</h3>
-<pre class="programlisting">  “nwalkers”                 <span class="type">int</span></pre>
+<a name="NcmFitESMCMC--nwalkers"></a><h3>The <code class="literal">“nwalkers”</code> property</h3>
+<pre class="programlisting">  “nwalkers”                 <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Number of walkers.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct Only</p>
 <p>Allowed values: &gt;= 1</p>
 <p>Default value: 1</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--sampler" id="NcmFitESMCMC--sampler"></a><h3>The <code class="literal">“sampler”</code> property</h3>
+<a name="NcmFitESMCMC--sampler"></a><h3>The <code class="literal">“sampler”</code> property</h3>
 <pre class="programlisting">  “sampler”                  <a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern"><span class="type">NcmMSetTransKern</span></a> *</pre>
 <p>Initial points sampler.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--trim-type" id="NcmFitESMCMC--trim-type"></a><h3>The <code class="literal">“trim-type”</code> property</h3>
+<a name="NcmFitESMCMC--trim-type"></a><h3>The <code class="literal">“trim-type”</code> property</h3>
 <pre class="programlisting">  “trim-type”                <a class="link" href="NcmMSetCatalog.html#NcmMSetCatalogTrimType" title="enum NcmMSetCatalogTrimType"><span class="type">NcmMSetCatalogTrimType</span></a></pre>
 <p>Trimming tests to apply.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: NCM_MSET_CATALOG_TRIM_TYPE_ESS</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--use-mpi" id="NcmFitESMCMC--use-mpi"></a><h3>The <code class="literal">“use-mpi”</code> property</h3>
-<pre class="programlisting">  “use-mpi”                  <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<a name="NcmFitESMCMC--use-mpi"></a><h3>The <code class="literal">“use-mpi”</code> property</h3>
+<pre class="programlisting">  “use-mpi”                  <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Use MPI instead of threads.</p>
 <p>Owner: NcmFitESMCMC</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: TRUE</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitESMCMC--walker" id="NcmFitESMCMC--walker"></a><h3>The <code class="literal">“walker”</code> property</h3>
+<a name="NcmFitESMCMC--walker"></a><h3>The <code class="literal">“walker”</code> property</h3>
 <pre class="programlisting">  “walker”                   <a class="link" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker"><span class="type">NcmFitESMCMCWalker</span></a> *</pre>
 <p>Walker object.</p>
 <p>Owner: NcmFitESMCMC</p>
@@ -1665,6 +1697,6 @@ ncm_fit_esmcmc_peek_walker (<em class="parameter"><code><a class="link" href="Nc
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.33.1</div>
-</div></div></body>
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
 </html>

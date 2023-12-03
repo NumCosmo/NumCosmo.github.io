@@ -1,31 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>NcPowspecMLFixSpline: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
-<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
-<link rel="up" href="ch08s03.html" title="Matter Power Spectrum" />
-<link rel="prev" href="NcPowspecML.html" title="NcPowspecML" />
-<link rel="next" href="NcPowspecMLTransfer.html" title="NcPowspecMLTransfer" />
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
-<link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="container.css" type="text/css" />
-<script type="text/x-mathjax-config">
-//<![CDATA[
-                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
-                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-                                            equationNumbers: { autoNumber: "AMS" } },
-                                    messageStyle: "none"
-                });
-//]]>
-</script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
-</script>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="NumCosmo Reference Manual">
+<link rel="up" href="ch08s03.html" title="Matter Power Spectrum">
+<link rel="prev" href="NcPowspecML.html" title="NcPowspecML">
+<link rel="next" href="NcPowspecMLTransfer.html" title="NcPowspecMLTransfer">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
@@ -33,30 +19,36 @@
                   <a href="#NcPowspecMLFixSpline.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
                   <a href="#NcPowspecMLFixSpline.properties" class="shortcut">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
-<td><a accesskey="u" href="ch08s03.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
-<td><a accesskey="p" href="NcPowspecML.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
-<td><a accesskey="n" href="NcPowspecMLTransfer.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch08s03.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="NcPowspecML.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="NcPowspecMLTransfer.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
-<a name="NcPowspecMLFixSpline" id="NcPowspecMLFixSpline"></a><div class="titlepage"></div>
+<a name="NcPowspecMLFixSpline"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="NcPowspecMLFixSpline.top_of_page" id="NcPowspecMLFixSpline.top_of_page"></a>NcPowspecMLFixSpline</span></h2>
+<h2><span class="refentrytitle"><a name="NcPowspecMLFixSpline.top_of_page"></a>NcPowspecMLFixSpline</span></h2>
 <p>NcPowspecMLFixSpline — Class for linear matter power spectrum from a fixed spline.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="NcPowspecMLFixSpline.stability-level" id="NcPowspecMLFixSpline.stability-level"></a><h2>Stability Level</h2>
-<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+<a name="NcPowspecMLFixSpline.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to
+develop applications to these interfaces, release them, and have confidence that
+they will run on all minor releases of the product (after the one in which the
+interface was introduced, and within the same major release). Even at a major
+release, incompatible changes are expected to be rare, and to have strong
+justifications.
+"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
 </div>
 <div class="refsect1">
-<a name="NcPowspecMLFixSpline.functions" id="NcPowspecMLFixSpline.functions"></a><h2>Functions</h2>
+<a name="NcPowspecMLFixSpline.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_proto_type" />
-<col class="functions_proto_name" />
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -79,12 +71,12 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcPowspecMLFixSpline.properties" id="NcPowspecMLFixSpline.properties"></a><h2>Properties</h2>
+<a name="NcPowspecMLFixSpline.properties"></a><h2>Properties</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="properties_type" />
-<col width="300px" class="properties_name" />
-<col width="200px" class="properties_flags" />
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
 </colgroup>
 <tbody><tr>
 <td class="property_type">
@@ -95,39 +87,39 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcPowspecMLFixSpline.object-hierarchy" id="NcPowspecMLFixSpline.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+<a name="NcPowspecMLFixSpline.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmPowspec.html" title="NcmPowspec">NcmPowspec</a>
         <span class="lineart">╰──</span> <a class="link" href="NcPowspecML.html" title="NcPowspecML">NcPowspecML</a>
             <span class="lineart">╰──</span> NcPowspecMLFixSpline
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcPowspecMLFixSpline.includes" id="NcPowspecMLFixSpline.includes"></a><h2>Includes</h2>
+<a name="NcPowspecMLFixSpline.includes"></a><h2>Includes</h2>
 <pre class="synopsis">#include &lt;numcosmo/nc_powspec_ml_fix_spline.h&gt;
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcPowspecMLFixSpline.description" id="NcPowspecMLFixSpline.description"></a><h2>Description</h2>
+<a name="NcPowspecMLFixSpline.description"></a><h2>Description</h2>
 <p>Provides a linear matter power spectrum as a function of mode $k$ at a redshift $z_0$ computing
 a spline, whose knots and the respective $P(k, z = z_0)$ values are provided in a file.</p>
 </div>
 <div class="refsect1">
-<a name="NcPowspecMLFixSpline.functions_details" id="NcPowspecMLFixSpline.functions_details"></a><h2>Functions</h2>
+<a name="NcPowspecMLFixSpline.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
-<a name="nc-powspec-ml-fix-spline-new" id="nc-powspec-ml-fix-spline-new"></a><h3>nc_powspec_ml_fix_spline_new ()</h3>
+<a name="nc-powspec-ml-fix-spline-new"></a><h3>nc_powspec_ml_fix_spline_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcPowspecMLFixSpline.html" title="NcPowspecMLFixSpline"><span class="returnvalue">NcPowspecMLFixSpline</span></a> *
-nc_powspec_ml_fix_spline_new (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+nc_powspec_ml_fix_spline_new (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
 <p>Creates a new <a class="link" href="NcPowspecMLFixSpline.html" title="NcPowspecMLFixSpline"><span class="type">NcPowspecMLFixSpline</span></a> from a spline of the power spectrum,
 $P(k, z=z_0)$ at a given redshift $z_0$, which is present in the serialized object <em class="parameter"><code>filename</code></em>
 .</p>
 <div class="refsect3">
-<a name="nc-powspec-ml-fix-spline-new.parameters" id="nc-powspec-ml-fix-spline-new.parameters"></a><h4>Parameters</h4>
+<a name="nc-powspec-ml-fix-spline-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>filename</p></td>
@@ -137,26 +129,26 @@ $P(k, z=z_0)$ at a given redshift $z_0$, which is present in the serialized obje
 </table></div>
 </div>
 <div class="refsect3">
-<a name="nc-powspec-ml-fix-spline-new.returns" id="nc-powspec-ml-fix-spline-new.returns"></a><h4>Returns</h4>
+<a name="nc-powspec-ml-fix-spline-new.returns"></a><h4>Returns</h4>
 <p>the newly created <a class="link" href="NcPowspecMLFixSpline.html" title="NcPowspecMLFixSpline"><span class="type">NcPowspecMLFixSpline</span></a>. </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="nc-powspec-ml-fix-spline-set-file" id="nc-powspec-ml-fix-spline-set-file"></a><h3>nc_powspec_ml_fix_spline_set_file ()</h3>
+<a name="nc-powspec-ml-fix-spline-set-file"></a><h3>nc_powspec_ml_fix_spline_set_file ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_powspec_ml_fix_spline_set_file (<em class="parameter"><code><a class="link" href="NcPowspecMLFixSpline.html" title="NcPowspecMLFixSpline"><span class="type">NcPowspecMLFixSpline</span></a> *ps_fs</code></em>,
-                                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+                                   <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
 <p>Attributes a spline of the power spectrum at a redshift $z_0$, P(k, z_0), from <em class="parameter"><code>filename</code></em>
 .</p>
 <div class="refsect3">
-<a name="nc-powspec-ml-fix-spline-set-file.parameters" id="nc-powspec-ml-fix-spline-set-file.parameters"></a><h4>Parameters</h4>
+<a name="nc-powspec-ml-fix-spline-set-file.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -175,9 +167,9 @@ nc_powspec_ml_fix_spline_set_file (<em class="parameter"><code><a class="link" h
 </div>
 </div>
 <div class="refsect1">
-<a name="NcPowspecMLFixSpline.property-details" id="NcPowspecMLFixSpline.property-details"></a><h2>Property Details</h2>
+<a name="NcPowspecMLFixSpline.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="NcPowspecMLFixSpline--filename" id="NcPowspecMLFixSpline--filename"></a><h3>The <code class="literal">“filename”</code> property</h3>
+<a name="NcPowspecMLFixSpline--filename"></a><h3>The <code class="literal">“filename”</code> property</h3>
 <pre class="programlisting">  “filename”                 <span class="type">char</span> *</pre>
 <p>The file name containing $P(k, z=z_0)$ in a serialized <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> format.</p>
 <p>Owner: NcPowspecMLFixSpline</p>
@@ -187,6 +179,6 @@ nc_powspec_ml_fix_spline_set_file (<em class="parameter"><code><a class="link" h
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.33.1</div>
-</div></div></body>
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
 </html>

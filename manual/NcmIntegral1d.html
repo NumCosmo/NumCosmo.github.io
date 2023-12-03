@@ -1,31 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>NcmIntegral1d: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
-<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
-<link rel="up" href="ch02.html#id-1.3.2" title="Miscellaneous Objects" />
-<link rel="prev" href="NcmObjArray.html" title="NcmObjArray" />
-<link rel="next" href="NcmIntegral1dPtr.html" title="NcmIntegral1dPtr" />
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
-<link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="container.css" type="text/css" />
-<script type="text/x-mathjax-config">
-//<![CDATA[
-                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
-                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-                                            equationNumbers: { autoNumber: "AMS" } },
-                                    messageStyle: "none"
-                });
-//]]>
-</script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
-</script>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="NumCosmo Reference Manual">
+<link rel="up" href="ch02.html#id-1.3.2" title="Miscellaneous Objects">
+<link rel="prev" href="NcmObjArray.html" title="NcmObjArray">
+<link rel="next" href="NcmIntegral1dPtr.html" title="NcmIntegral1dPtr">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
@@ -33,35 +19,41 @@
                   <a href="#NcmIntegral1d.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
                   <a href="#NcmIntegral1d.properties" class="shortcut">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
-<td><a accesskey="u" href="ch02.html#id-1.3.2"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
-<td><a accesskey="p" href="NcmObjArray.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
-<td><a accesskey="n" href="NcmIntegral1dPtr.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html#id-1.3.2"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="NcmObjArray.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="NcmIntegral1dPtr.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
-<a name="NcmIntegral1d" id="NcmIntegral1d"></a><div class="titlepage"></div>
+<a name="NcmIntegral1d"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="NcmIntegral1d.top_of_page" id="NcmIntegral1d.top_of_page"></a>NcmIntegral1d</span></h2>
+<h2><span class="refentrytitle"><a name="NcmIntegral1d.top_of_page"></a>NcmIntegral1d</span></h2>
 <p>NcmIntegral1d — One dimensional integration object.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="NcmIntegral1d.stability-level" id="NcmIntegral1d.stability-level"></a><h2>Stability Level</h2>
-<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+<a name="NcmIntegral1d.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to
+develop applications to these interfaces, release them, and have confidence that
+they will run on all minor releases of the product (after the one in which the
+interface was introduced, and within the same major release). Even at a major
+release, incompatible changes are expected to be rare, and to have strong
+justifications.
+"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
 </div>
 <div class="refsect1">
-<a name="NcmIntegral1d.functions" id="NcmIntegral1d.functions"></a><h2>Functions</h2>
+<a name="NcmIntegral1d.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_proto_type" />
-<col class="functions_proto_name" />
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <span class="c_punctuation">(</span><a class="link" href="NcmIntegral1d.html#NcmIntegral1dF" title="NcmIntegral1dF ()">*NcmIntegral1dF</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
@@ -125,7 +117,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegral1d.html#ncm-integral1d-get-partition" title="ncm_integral1d_get_partition ()">ncm_integral1d_get_partition</a> <span class="c_punctuation">()</span>
@@ -133,7 +125,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegral1d.html#ncm-integral1d-get-rule" title="ncm_integral1d_get_rule ()">ncm_integral1d_get_rule</a> <span class="c_punctuation">()</span>
@@ -141,7 +133,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegral1d.html#ncm-integral1d-get-reltol" title="ncm_integral1d_get_reltol ()">ncm_integral1d_get_reltol</a> <span class="c_punctuation">()</span>
@@ -149,7 +141,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegral1d.html#ncm-integral1d-get-abstol" title="ncm_integral1d_get_abstol ()">ncm_integral1d_get_abstol</a> <span class="c_punctuation">()</span>
@@ -157,7 +149,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegral1d.html#ncm-integral1d-integrand" title="ncm_integral1d_integrand ()">ncm_integral1d_integrand</a> <span class="c_punctuation">()</span>
@@ -165,7 +157,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegral1d.html#ncm-integral1d-eval" title="ncm_integral1d_eval ()">ncm_integral1d_eval</a> <span class="c_punctuation">()</span>
@@ -173,7 +165,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegral1d.html#ncm-integral1d-eval-gauss-hermite-p" title="ncm_integral1d_eval_gauss_hermite_p ()">ncm_integral1d_eval_gauss_hermite_p</a> <span class="c_punctuation">()</span>
@@ -181,7 +173,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegral1d.html#ncm-integral1d-eval-gauss-hermite" title="ncm_integral1d_eval_gauss_hermite ()">ncm_integral1d_eval_gauss_hermite</a> <span class="c_punctuation">()</span>
@@ -189,7 +181,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegral1d.html#ncm-integral1d-eval-gauss-hermite-r-p" title="ncm_integral1d_eval_gauss_hermite_r_p ()">ncm_integral1d_eval_gauss_hermite_r_p</a> <span class="c_punctuation">()</span>
@@ -197,7 +189,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegral1d.html#ncm-integral1d-eval-gauss-hermite-mur" title="ncm_integral1d_eval_gauss_hermite_mur ()">ncm_integral1d_eval_gauss_hermite_mur</a> <span class="c_punctuation">()</span>
@@ -205,7 +197,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegral1d.html#ncm-integral1d-eval-gauss-hermite1-p" title="ncm_integral1d_eval_gauss_hermite1_p ()">ncm_integral1d_eval_gauss_hermite1_p</a> <span class="c_punctuation">()</span>
@@ -213,7 +205,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegral1d.html#ncm-integral1d-eval-gauss-hermite1-r-p" title="ncm_integral1d_eval_gauss_hermite1_r_p ()">ncm_integral1d_eval_gauss_hermite1_r_p</a> <span class="c_punctuation">()</span>
@@ -221,7 +213,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegral1d.html#ncm-integral1d-eval-gauss-laguerre" title="ncm_integral1d_eval_gauss_laguerre ()">ncm_integral1d_eval_gauss_laguerre</a> <span class="c_punctuation">()</span>
@@ -229,7 +221,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegral1d.html#ncm-integral1d-eval-gauss-laguerre-r" title="ncm_integral1d_eval_gauss_laguerre_r ()">ncm_integral1d_eval_gauss_laguerre_r</a> <span class="c_punctuation">()</span>
@@ -239,12 +231,12 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmIntegral1d.properties" id="NcmIntegral1d.properties"></a><h2>Properties</h2>
+<a name="NcmIntegral1d.properties"></a><h2>Properties</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="properties_type" />
-<col width="300px" class="properties_name" />
-<col width="200px" class="properties_flags" />
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
 </colgroup>
 <tbody>
 <tr>
@@ -253,7 +245,7 @@
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcmIntegral1d.html#NcmIntegral1d--partition" title="The “partition” property">partition</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -263,7 +255,7 @@
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcmIntegral1d.html#NcmIntegral1d--rule" title="The “rule” property">rule</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -271,11 +263,11 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmIntegral1d.other" id="NcmIntegral1d.other"></a><h2>Types and Values</h2>
+<a name="NcmIntegral1d.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="other_proto_type" />
-<col class="other_proto_name" />
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -298,44 +290,44 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmIntegral1d.object-hierarchy" id="NcmIntegral1d.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+<a name="NcmIntegral1d.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> NcmIntegral1d
         <span class="lineart">╰──</span> <a class="link" href="NcmIntegral1dPtr.html" title="NcmIntegral1dPtr">NcmIntegral1dPtr</a>
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcmIntegral1d.includes" id="NcmIntegral1d.includes"></a><h2>Includes</h2>
+<a name="NcmIntegral1d.includes"></a><h2>Includes</h2>
 <pre class="synopsis">#include &lt;numcosmo/math/ncm_integral1d.h&gt;
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcmIntegral1d.description" id="NcmIntegral1d.description"></a><h2>Description</h2>
+<a name="NcmIntegral1d.description"></a><h2>Description</h2>
 <p>This object is used to perform one dimensional integration.</p>
 </div>
 <div class="refsect1">
-<a name="NcmIntegral1d.functions_details" id="NcmIntegral1d.functions_details"></a><h2>Functions</h2>
+<a name="NcmIntegral1d.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
-<a name="NcmIntegral1dF" id="NcmIntegral1dF"></a><h3>NcmIntegral1dF ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="NcmIntegral1dF"></a><h3>NcmIntegral1dF ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 <span class="c_punctuation">(</span>*NcmIntegral1dF<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
-                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
-                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> w</code></em>);</pre>
+                   <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                   <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> w</code></em>);</pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-ref" id="ncm-integral1d-ref"></a><h3>ncm_integral1d_ref ()</h3>
+<a name="ncm-integral1d-ref"></a><h3>ncm_integral1d_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="returnvalue">NcmIntegral1d</span></a> *
 ncm_integral1d_ref (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>);</pre>
 <p>Increases the reference count of <em class="parameter"><code>int1d</code></em>
  by one.</p>
 <div class="refsect3">
-<a name="ncm-integral1d-ref.parameters" id="ncm-integral1d-ref.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-ref.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>int1d</p></td>
@@ -345,26 +337,26 @@ ncm_integral1d_ref (<em class="parameter"><code><a class="link" href="NcmIntegra
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-integral1d-ref.returns" id="ncm-integral1d-ref.returns"></a><h4>Returns</h4>
+<a name="ncm-integral1d-ref.returns"></a><h4>Returns</h4>
 <p><em class="parameter"><code>int1d</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-free" id="ncm-integral1d-free"></a><h3>ncm_integral1d_free ()</h3>
+<a name="ncm-integral1d-free"></a><h3>ncm_integral1d_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_integral1d_free (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>);</pre>
 <p>Decreases the reference count of <em class="parameter"><code>int1d</code></em>
  by one.</p>
 <div class="refsect3">
-<a name="ncm-integral1d-free.parameters" id="ncm-integral1d-free.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-free.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>int1d</p></td>
@@ -374,9 +366,9 @@ ncm_integral1d_free (<em class="parameter"><code><a class="link" href="NcmIntegr
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-clear" id="ncm-integral1d-clear"></a><h3>ncm_integral1d_clear ()</h3>
+<a name="ncm-integral1d-clear"></a><h3>ncm_integral1d_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_integral1d_clear (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> **int1d</code></em>);</pre>
 <p>If *<em class="parameter"><code>int1d</code></em>
@@ -385,12 +377,12 @@ count of *<em class="parameter"><code>int1d</code></em>
  by one and sets *<em class="parameter"><code>int1d</code></em>
  to NULL.</p>
 <div class="refsect3">
-<a name="ncm-integral1d-clear.parameters" id="ncm-integral1d-clear.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-clear.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>int1d</p></td>
@@ -400,21 +392,21 @@ count of *<em class="parameter"><code>int1d</code></em>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-set-partition" id="ncm-integral1d-set-partition"></a><h3>ncm_integral1d_set_partition ()</h3>
+<a name="ncm-integral1d-set-partition"></a><h3>ncm_integral1d_set_partition ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_integral1d_set_partition (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
-                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> partition</code></em>);</pre>
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> partition</code></em>);</pre>
 <p>Sets the max number of subintervals to <em class="parameter"><code>partition</code></em>
 .</p>
 <div class="refsect3">
-<a name="ncm-integral1d-set-partition.parameters" id="ncm-integral1d-set-partition.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-set-partition.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -431,21 +423,21 @@ ncm_integral1d_set_partition (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-set-rule" id="ncm-integral1d-set-rule"></a><h3>ncm_integral1d_set_rule ()</h3>
+<a name="ncm-integral1d-set-rule"></a><h3>ncm_integral1d_set_rule ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_integral1d_set_rule (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> rule</code></em>);</pre>
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> rule</code></em>);</pre>
 <p>Sets the Gauss-Kronrod <em class="parameter"><code>rule</code></em>
  to use.</p>
 <div class="refsect3">
-<a name="ncm-integral1d-set-rule.parameters" id="ncm-integral1d-set-rule.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-set-rule.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -462,21 +454,21 @@ ncm_integral1d_set_rule (<em class="parameter"><code><a class="link" href="NcmIn
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-set-reltol" id="ncm-integral1d-set-reltol"></a><h3>ncm_integral1d_set_reltol ()</h3>
+<a name="ncm-integral1d-set-reltol"></a><h3>ncm_integral1d_set_reltol ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_integral1d_set_reltol (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
-                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>);</pre>
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>);</pre>
 <p>Sets the relative tolerance <em class="parameter"><code>reltol</code></em>
  to use.</p>
 <div class="refsect3">
-<a name="ncm-integral1d-set-reltol.parameters" id="ncm-integral1d-set-reltol.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-set-reltol.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -493,21 +485,21 @@ ncm_integral1d_set_reltol (<em class="parameter"><code><a class="link" href="Ncm
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-set-abstol" id="ncm-integral1d-set-abstol"></a><h3>ncm_integral1d_set_abstol ()</h3>
+<a name="ncm-integral1d-set-abstol"></a><h3>ncm_integral1d_set_abstol ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_integral1d_set_abstol (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
-                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> abstol</code></em>);</pre>
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> abstol</code></em>);</pre>
 <p>Sets the absolute tolerance <em class="parameter"><code>reltol</code></em>
  to use.</p>
 <div class="refsect3">
-<a name="ncm-integral1d-set-abstol.parameters" id="ncm-integral1d-set-abstol.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-set-abstol.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -524,18 +516,18 @@ ncm_integral1d_set_abstol (<em class="parameter"><code><a class="link" href="Ncm
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-get-partition" id="ncm-integral1d-get-partition"></a><h3>ncm_integral1d_get_partition ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<a name="ncm-integral1d-get-partition"></a><h3>ncm_integral1d_get_partition ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 ncm_integral1d_get_partition (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>);</pre>
 <div class="refsect3">
-<a name="ncm-integral1d-get-partition.parameters" id="ncm-integral1d-get-partition.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-get-partition.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>int1d</p></td>
@@ -545,22 +537,22 @@ ncm_integral1d_get_partition (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-integral1d-get-partition.returns" id="ncm-integral1d-get-partition.returns"></a><h4>Returns</h4>
+<a name="ncm-integral1d-get-partition.returns"></a><h4>Returns</h4>
 <p> the maximum number of subdivisions used.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-get-rule" id="ncm-integral1d-get-rule"></a><h3>ncm_integral1d_get_rule ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<a name="ncm-integral1d-get-rule"></a><h3>ncm_integral1d_get_rule ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 ncm_integral1d_get_rule (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>);</pre>
 <div class="refsect3">
-<a name="ncm-integral1d-get-rule.parameters" id="ncm-integral1d-get-rule.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-get-rule.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>int1d</p></td>
@@ -570,22 +562,22 @@ ncm_integral1d_get_rule (<em class="parameter"><code><a class="link" href="NcmIn
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-integral1d-get-rule.returns" id="ncm-integral1d-get-rule.returns"></a><h4>Returns</h4>
+<a name="ncm-integral1d-get-rule.returns"></a><h4>Returns</h4>
 <p> the Gauss-Kronrod rule used.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-get-reltol" id="ncm-integral1d-get-reltol"></a><h3>ncm_integral1d_get_reltol ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-integral1d-get-reltol"></a><h3>ncm_integral1d_get_reltol ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_integral1d_get_reltol (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>);</pre>
 <div class="refsect3">
-<a name="ncm-integral1d-get-reltol.parameters" id="ncm-integral1d-get-reltol.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-get-reltol.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>int1d</p></td>
@@ -595,22 +587,22 @@ ncm_integral1d_get_reltol (<em class="parameter"><code><a class="link" href="Ncm
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-integral1d-get-reltol.returns" id="ncm-integral1d-get-reltol.returns"></a><h4>Returns</h4>
+<a name="ncm-integral1d-get-reltol.returns"></a><h4>Returns</h4>
 <p> the relative tolerance used.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-get-abstol" id="ncm-integral1d-get-abstol"></a><h3>ncm_integral1d_get_abstol ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-integral1d-get-abstol"></a><h3>ncm_integral1d_get_abstol ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_integral1d_get_abstol (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>);</pre>
 <div class="refsect3">
-<a name="ncm-integral1d-get-abstol.parameters" id="ncm-integral1d-get-abstol.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-get-abstol.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>int1d</p></td>
@@ -620,34 +612,34 @@ ncm_integral1d_get_abstol (<em class="parameter"><code><a class="link" href="Ncm
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-integral1d-get-abstol.returns" id="ncm-integral1d-get-abstol.returns"></a><h4>Returns</h4>
+<a name="ncm-integral1d-get-abstol.returns"></a><h4>Returns</h4>
 <p> the absolute tolerance used.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-integrand" id="ncm-integral1d-integrand"></a><h3>ncm_integral1d_integrand ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-integral1d-integrand"></a><h3>ncm_integral1d_integrand ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_integral1d_integrand (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
-                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
-                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> w</code></em>);</pre>
+                          <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
+                          <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> w</code></em>);</pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-eval" id="ncm-integral1d-eval"></a><h3>ncm_integral1d_eval ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-integral1d-eval"></a><h3>ncm_integral1d_eval ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_integral1d_eval (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
-                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>,
-                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>,
-                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
+                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>,
+                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
 <p>Evaluated the integral $I_F(x_i, x_f) = \int_{x_i}^{x_f}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
-<a name="ncm-integral1d-eval.parameters" id="ncm-integral1d-eval.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-eval.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -674,24 +666,24 @@ ncm_integral1d_eval (<em class="parameter"><code><a class="link" href="NcmIntegr
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-integral1d-eval.returns" id="ncm-integral1d-eval.returns"></a><h4>Returns</h4>
+<a name="ncm-integral1d-eval.returns"></a><h4>Returns</h4>
 <p> the value of the integral $I_F(x_i, x_f)$.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-eval-gauss-hermite-p" id="ncm-integral1d-eval-gauss-hermite-p"></a><h3>ncm_integral1d_eval_gauss_hermite_p ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-integral1d-eval-gauss-hermite-p"></a><h3>ncm_integral1d_eval_gauss_hermite_p ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_integral1d_eval_gauss_hermite_p (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
-                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
+                                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
 <p>Evaluated the integral $H^p_F = \int_{0}^{\infty}e^{-x^2/2}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-hermite-p.parameters" id="ncm-integral1d-eval-gauss-hermite-p.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-eval-gauss-hermite-p.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -708,24 +700,24 @@ ncm_integral1d_eval_gauss_hermite_p (<em class="parameter"><code><a class="link"
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-hermite-p.returns" id="ncm-integral1d-eval-gauss-hermite-p.returns"></a><h4>Returns</h4>
+<a name="ncm-integral1d-eval-gauss-hermite-p.returns"></a><h4>Returns</h4>
 <p> the value of the integral $H^p_F$.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-eval-gauss-hermite" id="ncm-integral1d-eval-gauss-hermite"></a><h3>ncm_integral1d_eval_gauss_hermite ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-integral1d-eval-gauss-hermite"></a><h3>ncm_integral1d_eval_gauss_hermite ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_integral1d_eval_gauss_hermite (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
-                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
+                                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
 <p>Evaluated the integral $H_F = \int_{-\infty}^{\infty}e^{-x^2/2}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-hermite.parameters" id="ncm-integral1d-eval-gauss-hermite.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-eval-gauss-hermite.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -742,25 +734,25 @@ ncm_integral1d_eval_gauss_hermite (<em class="parameter"><code><a class="link" h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-hermite.returns" id="ncm-integral1d-eval-gauss-hermite.returns"></a><h4>Returns</h4>
+<a name="ncm-integral1d-eval-gauss-hermite.returns"></a><h4>Returns</h4>
 <p> the value of the integral $H_F$.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-eval-gauss-hermite-r-p" id="ncm-integral1d-eval-gauss-hermite-r-p"></a><h3>ncm_integral1d_eval_gauss_hermite_r_p ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-integral1d-eval-gauss-hermite-r-p"></a><h3>ncm_integral1d_eval_gauss_hermite_r_p ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_integral1d_eval_gauss_hermite_r_p (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
-                                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> r</code></em>,
-                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
+                                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> r</code></em>,
+                                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
 <p>Evaluated the integral $H^p_F = \int_{0}^{\infty}e^{-x^2r^2/2}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-hermite-r-p.parameters" id="ncm-integral1d-eval-gauss-hermite-r-p.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-eval-gauss-hermite-r-p.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -782,26 +774,26 @@ ncm_integral1d_eval_gauss_hermite_r_p (<em class="parameter"><code><a class="lin
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-hermite-r-p.returns" id="ncm-integral1d-eval-gauss-hermite-r-p.returns"></a><h4>Returns</h4>
+<a name="ncm-integral1d-eval-gauss-hermite-r-p.returns"></a><h4>Returns</h4>
 <p> the value of the integral $H^p_F$.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-eval-gauss-hermite-mur" id="ncm-integral1d-eval-gauss-hermite-mur"></a><h3>ncm_integral1d_eval_gauss_hermite_mur ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-integral1d-eval-gauss-hermite-mur"></a><h3>ncm_integral1d_eval_gauss_hermite_mur ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_integral1d_eval_gauss_hermite_mur (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
-                                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> r</code></em>,
-                                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mu</code></em>,
-                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
+                                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> r</code></em>,
+                                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mu</code></em>,
+                                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
 <p>Evaluated the integral $H_F = \int_{-\infty}^{\infty}e^{-(x-\mu)^2r^2/2}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-hermite-mur.parameters" id="ncm-integral1d-eval-gauss-hermite-mur.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-eval-gauss-hermite-mur.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -828,24 +820,24 @@ ncm_integral1d_eval_gauss_hermite_mur (<em class="parameter"><code><a class="lin
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-hermite-mur.returns" id="ncm-integral1d-eval-gauss-hermite-mur.returns"></a><h4>Returns</h4>
+<a name="ncm-integral1d-eval-gauss-hermite-mur.returns"></a><h4>Returns</h4>
 <p> the value of the integral $H_F$.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-eval-gauss-hermite1-p" id="ncm-integral1d-eval-gauss-hermite1-p"></a><h3>ncm_integral1d_eval_gauss_hermite1_p ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-integral1d-eval-gauss-hermite1-p"></a><h3>ncm_integral1d_eval_gauss_hermite1_p ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_integral1d_eval_gauss_hermite1_p (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
-                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
+                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
 <p>Evaluated the integral $H^p_F = \int_{0}^{\infty}xe^{-x^2/2}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-hermite1-p.parameters" id="ncm-integral1d-eval-gauss-hermite1-p.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-eval-gauss-hermite1-p.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -862,26 +854,26 @@ ncm_integral1d_eval_gauss_hermite1_p (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-hermite1-p.returns" id="ncm-integral1d-eval-gauss-hermite1-p.returns"></a><h4>Returns</h4>
+<a name="ncm-integral1d-eval-gauss-hermite1-p.returns"></a><h4>Returns</h4>
 <p> the value of the integral $H^p_F$.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-eval-gauss-hermite1-r-p" id="ncm-integral1d-eval-gauss-hermite1-r-p"></a><h3>ncm_integral1d_eval_gauss_hermite1_r_p ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-integral1d-eval-gauss-hermite1-r-p"></a><h3>ncm_integral1d_eval_gauss_hermite1_r_p ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_integral1d_eval_gauss_hermite1_r_p
                                (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
-                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> r</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> r</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
 <p>Evaluated the integral $H^p_F = \int_{0}^{\infty}xe^{-x^2r^2/2}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-hermite1-r-p.parameters" id="ncm-integral1d-eval-gauss-hermite1-r-p.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-eval-gauss-hermite1-r-p.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -903,24 +895,24 @@ ncm_integral1d_eval_gauss_hermite1_r_p
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-hermite1-r-p.returns" id="ncm-integral1d-eval-gauss-hermite1-r-p.returns"></a><h4>Returns</h4>
+<a name="ncm-integral1d-eval-gauss-hermite1-r-p.returns"></a><h4>Returns</h4>
 <p> the value of the integral $H^p_F$.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-eval-gauss-laguerre" id="ncm-integral1d-eval-gauss-laguerre"></a><h3>ncm_integral1d_eval_gauss_laguerre ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-integral1d-eval-gauss-laguerre"></a><h3>ncm_integral1d_eval_gauss_laguerre ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_integral1d_eval_gauss_laguerre (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
-                                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
+                                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
 <p>Evaluated the integral $L_F = \int_{0}^{\infty}e^{-x}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-laguerre.parameters" id="ncm-integral1d-eval-gauss-laguerre.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-eval-gauss-laguerre.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -937,25 +929,25 @@ ncm_integral1d_eval_gauss_laguerre (<em class="parameter"><code><a class="link" 
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-laguerre.returns" id="ncm-integral1d-eval-gauss-laguerre.returns"></a><h4>Returns</h4>
+<a name="ncm-integral1d-eval-gauss-laguerre.returns"></a><h4>Returns</h4>
 <p> the value of the integral $L_F$.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-integral1d-eval-gauss-laguerre-r" id="ncm-integral1d-eval-gauss-laguerre-r"></a><h3>ncm_integral1d_eval_gauss_laguerre_r ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-integral1d-eval-gauss-laguerre-r"></a><h3>ncm_integral1d_eval_gauss_laguerre_r ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_integral1d_eval_gauss_laguerre_r (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
-                                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> r</code></em>,
-                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
+                                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> r</code></em>,
+                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *err</code></em>);</pre>
 <p>Evaluated the integral $L_F = \int_{0}^{\infty}e^{-xr}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-laguerre-r.parameters" id="ncm-integral1d-eval-gauss-laguerre-r.parameters"></a><h4>Parameters</h4>
+<a name="ncm-integral1d-eval-gauss-laguerre-r.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -977,41 +969,41 @@ ncm_integral1d_eval_gauss_laguerre_r (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-integral1d-eval-gauss-laguerre-r.returns" id="ncm-integral1d-eval-gauss-laguerre-r.returns"></a><h4>Returns</h4>
+<a name="ncm-integral1d-eval-gauss-laguerre-r.returns"></a><h4>Returns</h4>
 <p> the value of the integral $L_F$.</p>
 </div>
 </div>
 </div>
 <div class="refsect1">
-<a name="NcmIntegral1d.other_details" id="NcmIntegral1d.other_details"></a><h2>Types and Values</h2>
+<a name="NcmIntegral1d.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
-<a name="NCM-INTEGRAL1D-DEFAULT-PARTITION:CAPS" id="NCM-INTEGRAL1D-DEFAULT-PARTITION:CAPS"></a><h3>NCM_INTEGRAL1D_DEFAULT_PARTITION</h3>
+<a name="NCM-INTEGRAL1D-DEFAULT-PARTITION:CAPS"></a><h3>NCM_INTEGRAL1D_DEFAULT_PARTITION</h3>
 <pre class="programlisting">#define NCM_INTEGRAL1D_DEFAULT_PARTITION 100000
 </pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NCM-INTEGRAL1D-DEFAULT-ALG:CAPS" id="NCM-INTEGRAL1D-DEFAULT-ALG:CAPS"></a><h3>NCM_INTEGRAL1D_DEFAULT_ALG</h3>
+<a name="NCM-INTEGRAL1D-DEFAULT-ALG:CAPS"></a><h3>NCM_INTEGRAL1D_DEFAULT_ALG</h3>
 <pre class="programlisting">#define NCM_INTEGRAL1D_DEFAULT_ALG 6
 </pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NCM-INTEGRAL1D-DEFAULT-RELTOL:CAPS" id="NCM-INTEGRAL1D-DEFAULT-RELTOL:CAPS"></a><h3>NCM_INTEGRAL1D_DEFAULT_RELTOL</h3>
+<a name="NCM-INTEGRAL1D-DEFAULT-RELTOL:CAPS"></a><h3>NCM_INTEGRAL1D_DEFAULT_RELTOL</h3>
 <pre class="programlisting">#define NCM_INTEGRAL1D_DEFAULT_RELTOL 1e-13
 </pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NCM-INTEGRAL1D-DEFAULT-ABSTOL:CAPS" id="NCM-INTEGRAL1D-DEFAULT-ABSTOL:CAPS"></a><h3>NCM_INTEGRAL1D_DEFAULT_ABSTOL</h3>
+<a name="NCM-INTEGRAL1D-DEFAULT-ABSTOL:CAPS"></a><h3>NCM_INTEGRAL1D_DEFAULT_ABSTOL</h3>
 <pre class="programlisting">#define NCM_INTEGRAL1D_DEFAULT_ABSTOL 0.0
 </pre>
 </div>
 </div>
 <div class="refsect1">
-<a name="NcmIntegral1d.property-details" id="NcmIntegral1d.property-details"></a><h2>Property Details</h2>
+<a name="NcmIntegral1d.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="NcmIntegral1d--abstol" id="NcmIntegral1d--abstol"></a><h3>The <code class="literal">“abstol”</code> property</h3>
+<a name="NcmIntegral1d--abstol"></a><h3>The <code class="literal">“abstol”</code> property</h3>
 <pre class="programlisting">  “abstol”                   <span class="type">double</span></pre>
 <p>Integral absolute tolerance.</p>
 <p>Owner: NcmIntegral1d</p>
@@ -1019,19 +1011,19 @@ ncm_integral1d_eval_gauss_laguerre_r (<em class="parameter"><code><a class="link
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmIntegral1d--partition" id="NcmIntegral1d--partition"></a><h3>The <code class="literal">“partition”</code> property</h3>
-<pre class="programlisting">  “partition”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<a name="NcmIntegral1d--partition"></a><h3>The <code class="literal">“partition”</code> property</h3>
+<pre class="programlisting">  “partition”                <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Integral maximum partititon.</p>
 <p>Owner: NcmIntegral1d</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 10</p>
 <p>Default value: 100000</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmIntegral1d--reltol" id="NcmIntegral1d--reltol"></a><h3>The <code class="literal">“reltol”</code> property</h3>
+<a name="NcmIntegral1d--reltol"></a><h3>The <code class="literal">“reltol”</code> property</h3>
 <pre class="programlisting">  “reltol”                   <span class="type">double</span></pre>
 <p>Integral relative tolerance.</p>
 <p>Owner: NcmIntegral1d</p>
@@ -1039,10 +1031,10 @@ ncm_integral1d_eval_gauss_laguerre_r (<em class="parameter"><code><a class="link
 <p>Allowed values: [0,1]</p>
 <p>Default value: 1e-13</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmIntegral1d--rule" id="NcmIntegral1d--rule"></a><h3>The <code class="literal">“rule”</code> property</h3>
-<pre class="programlisting">  “rule”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<a name="NcmIntegral1d--rule"></a><h3>The <code class="literal">“rule”</code> property</h3>
+<pre class="programlisting">  “rule”                     <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Integration rule.</p>
 <p>Owner: NcmIntegral1d</p>
 <p>Flags: Read / Write / Construct</p>
@@ -1052,6 +1044,6 @@ ncm_integral1d_eval_gauss_laguerre_r (<em class="parameter"><code><a class="link
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.33.1</div>
-</div></div></body>
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
 </html>

@@ -1,31 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>NcmSplineFuncTest: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
-<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
-<link rel="up" href="ch02s05.html" title="Splines 1D" />
-<link rel="prev" href="numcosmo-NcmSplineFunc.html" title="NcmSplineFunc" />
-<link rel="next" href="NcmOdeSpline.html" title="NcmOdeSpline" />
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
-<link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="container.css" type="text/css" />
-<script type="text/x-mathjax-config">
-//<![CDATA[
-                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
-                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-                                            equationNumbers: { autoNumber: "AMS" } },
-                                    messageStyle: "none"
-                });
-//]]>
-</script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
-</script>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="NumCosmo Reference Manual">
+<link rel="up" href="ch02s05.html" title="Splines 1D">
+<link rel="prev" href="numcosmo-NcmSplineFunc.html" title="NcmSplineFunc">
+<link rel="next" href="NcmOdeSpline.html" title="NcmOdeSpline">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
@@ -33,30 +19,43 @@
                   <a href="#NcmSplineFuncTest.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
                   <a href="#NcmSplineFuncTest.properties" class="shortcut">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
-<td><a accesskey="u" href="ch02s05.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
-<td><a accesskey="p" href="numcosmo-NcmSplineFunc.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
-<td><a accesskey="n" href="NcmOdeSpline.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02s05.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="numcosmo-NcmSplineFunc.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="NcmOdeSpline.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
-<a name="NcmSplineFuncTest" id="NcmSplineFuncTest"></a><div class="titlepage"></div>
+<a name="NcmSplineFuncTest"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="NcmSplineFuncTest.top_of_page" id="NcmSplineFuncTest.top_of_page"></a>NcmSplineFuncTest</span></h2>
+<h2><span class="refentrytitle"><a name="NcmSplineFuncTest.top_of_page"></a>NcmSplineFuncTest</span></h2>
 <p>NcmSplineFuncTest — test suite to analyze the NcmSplineFunc's knots distribution.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="NcmSplineFuncTest.stability-level" id="NcmSplineFuncTest.stability-level"></a><h2>Stability Level</h2>
-<acronym title="Unstable interfaces are experimental or transitional. They are typically used to&#10;give outside developers early access to new or rapidly changing technology, or&#10;to provide an interim solution to a problem where a more general solution is&#10;anticipated. No claims are made about either source or binary compatibility from&#10;one minor release to the next.&#10;&#10;The Unstable interface level is a warning that these interfaces are  subject to&#10;change without warning and should not be used in unbundled products.&#10;&#10;Given such caveats, customer impact need not be a factor when considering&#10;incompatible changes to an Unstable interface in a major or minor release.&#10;Nonetheless, when such changes are introduced, the changes should still be&#10;mentioned in the release notes for the affected release.&#10;"><span class="acronym">Unstable</span></acronym>, unless otherwise indicated
+<a name="NcmSplineFuncTest.stability-level"></a><h2>Stability Level</h2>
+<acronym title="Unstable interfaces are experimental or transitional. They are typically used to
+give outside developers early access to new or rapidly changing technology, or
+to provide an interim solution to a problem where a more general solution is
+anticipated. No claims are made about either source or binary compatibility from
+one minor release to the next.
+
+The Unstable interface level is a warning that these interfaces are  subject to
+change without warning and should not be used in unbundled products.
+
+Given such caveats, customer impact need not be a factor when considering
+incompatible changes to an Unstable interface in a major or minor release.
+Nonetheless, when such changes are introduced, the changes should still be
+mentioned in the release notes for the affected release.
+"><span class="acronym">Unstable</span></acronym>, unless otherwise indicated
 </div>
 <div class="refsect1">
-<a name="NcmSplineFuncTest.functions" id="NcmSplineFuncTest.functions"></a><h2>Functions</h2>
+<a name="NcmSplineFuncTest.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_proto_type" />
-<col class="functions_proto_name" />
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -117,7 +116,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-get-ngrid" title="ncm_spline_func_test_get_ngrid ()">ncm_spline_func_test_get_ngrid</a> <span class="c_punctuation">()</span>
@@ -133,7 +132,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>
+<a href="../glib/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-get-seed" title="ncm_spline_func_test_get_seed ()">ncm_spline_func_test_get_seed</a> <span class="c_punctuation">()</span>
@@ -181,7 +180,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-get-xi" title="ncm_spline_func_test_get_xi ()">ncm_spline_func_test_get_xi</a> <span class="c_punctuation">()</span>
@@ -197,7 +196,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-get-xf" title="ncm_spline_func_test_get_xf ()">ncm_spline_func_test_get_xf</a> <span class="c_punctuation">()</span>
@@ -213,7 +212,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-get-rel-error" title="ncm_spline_func_test_get_rel_error ()">ncm_spline_func_test_get_rel_error</a> <span class="c_punctuation">()</span>
@@ -229,7 +228,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-get-scale" title="ncm_spline_func_test_get_scale ()">ncm_spline_func_test_get_scale</a> <span class="c_punctuation">()</span>
@@ -245,7 +244,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-get-out-threshold" title="ncm_spline_func_test_get_out_threshold ()">ncm_spline_func_test_get_out_threshold</a> <span class="c_punctuation">()</span>
@@ -335,16 +334,16 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmSplineFuncTest.properties" id="NcmSplineFuncTest.properties"></a><h2>Properties</h2>
+<a name="NcmSplineFuncTest.properties"></a><h2>Properties</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="properties_type" />
-<col width="300px" class="properties_name" />
-<col width="200px" class="properties_flags" />
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
 </colgroup>
 <tbody>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcmSplineFuncTest.html#NcmSplineFuncTest--ngrid" title="The “ngrid” property">ngrid</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -365,7 +364,7 @@
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></td>
 <td class="property_name"><a class="link" href="NcmSplineFuncTest.html#NcmSplineFuncTest--seed" title="The “seed” property">seed</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -388,11 +387,11 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmSplineFuncTest.other" id="NcmSplineFuncTest.other"></a><h2>Types and Values</h2>
+<a name="NcmSplineFuncTest.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="other_proto_type" />
-<col class="other_proto_name" />
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -407,21 +406,21 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmSplineFuncTest.object-hierarchy" id="NcmSplineFuncTest.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<a name="NcmSplineFuncTest.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
     <span class="lineart">├──</span> NcmSplineFuncTestType
     <span class="lineart">╰──</span> NcmSplineFuncTestTypePDF
-    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> NcmSplineFuncTest
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcmSplineFuncTest.includes" id="NcmSplineFuncTest.includes"></a><h2>Includes</h2>
+<a name="NcmSplineFuncTest.includes"></a><h2>Includes</h2>
 <pre class="synopsis">#include &lt;numcosmo/math/ncm_spline_func_test.h&gt;
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcmSplineFuncTest.description" id="NcmSplineFuncTest.description"></a><h2>Description</h2>
+<a name="NcmSplineFuncTest.description"></a><h2>Description</h2>
 <p>This module is intended to be a test suite for the <a class="ulink" href="numcosmo-NcmSplineFunc.html" target="_top">NcmSplineFunc</a> object. 
 It performs a brute force approach to check if the required tolerance (<a class="link" href="NcmSplineFuncTest.html#NcmSplineFuncTest--rel-error" title="The “rel-error” property"><span class="type">“rel-error”</span></a> and <a class="link" href="NcmSplineFuncTest.html#NcmSplineFuncTest--scale" title="The “scale” property"><span class="type">“scale”</span></a>) 
 was achieved throughout the entire desired range [<a class="link" href="NcmSplineFuncTest.html#NcmSplineFuncTest--xi" title="The “xi” property"><span class="type">“xi”</span></a>, <a class="link" href="NcmSplineFuncTest.html#NcmSplineFuncTest--xf" title="The “xf” property"><span class="type">“xf”</span></a>] 
@@ -453,7 +452,7 @@ and its limiting points are fixed at <a class="link" href="NcmSplineFuncTest.htm
 <p>The randomness goal is to produce a base function with several shapes. 
 The <a class="link" href="NcmSplineFuncTest.html#NcmSplineFuncTestTypePDF" title="enum NcmSplineFuncTestTypePDF"><span class="type">NcmSplineFuncTestTypePDF</span></a> type provides the switch between both available PDFs. </p>
 <div class="refsect2">
-<a name="set-par" id="set-par"></a><h3>Setting the parameters</h3>
+<a name="set-par"></a><h3>Setting the parameters</h3>
 <p>In order to provide the base function parameters, the user has two options: </p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem"><p><a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-set-params-info" title="ncm_spline_func_test_set_params_info ()"><code class="function">ncm_spline_func_test_set_params_info()</code></a>: the user must supply a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> with the number of rows as the number of parameters and two columns.
@@ -479,13 +478,13 @@ The <a class="link" href="NcmSplineFuncTest.html#NCM-SPLINE-FUNC-TEST-TYPE-COSIN
 </li>
 </ul></div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="grid-ex" id="grid-ex"></a><h3>One grid examples</h3>
+<a name="grid-ex"></a><h3>One grid examples</h3>
 <p>To perform one grid statistics, it is needed to place <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-set-one-grid-stats" title="ncm_spline_func_test_set_one_grid_stats ()"><code class="function">ncm_spline_func_test_set_one_grid_stats()</code></a> after preparing it (<a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-prepare" title="ncm_spline_func_test_prepare ()"><code class="function">ncm_spline_func_test_prepare()</code></a>).
 Two examples are shown below together with their results.</p>
 <div class="refsect3">
-<a name="7th-ex" id="7th-ex"></a><h4>Example: 7th degree polynomial interpolation.</h4>
+<a name="7th-ex"></a><h4>Example: 7th degree polynomial interpolation.</h4>
 <div class="informalexample">
   <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
     <tbody>
@@ -552,9 +551,9 @@ Two examples are shown below together with their results.</p>
 
 <span class="w">  </span><span class="n">ncm_spline_func_test_log_vals_one_grid_stats</span><span class="w"> </span><span class="p">(</span><span class="n">sft</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">ncm_spline_func_test_save_grid_functions_to_txt</span><span class="w"> </span><span class="p">(</span><span class="n">sft</span><span class="p">,</span><span class="w"> </span><span class="s">"functions.txt"</span><span class="p">);</span>
+<span class="w">  </span><span class="n">ncm_spline_func_test_save_grid_functions_to_txt</span><span class="w"> </span><span class="p">(</span><span class="n">sft</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;functions.txt&quot;</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">ncm_spline_func_test_save_knots_to_txt</span><span class="w"> </span><span class="p">(</span><span class="n">sft</span><span class="p">,</span><span class="w"> </span><span class="s">"knots.txt"</span><span class="p">);</span>
+<span class="w">  </span><span class="n">ncm_spline_func_test_save_knots_to_txt</span><span class="w"> </span><span class="p">(</span><span class="n">sft</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;knots.txt&quot;</span><span class="p">);</span>
 
 <span class="w">  </span><span class="n">ncm_spline_func_test_unref</span><span class="w"> </span><span class="p">(</span><span class="n">sft</span><span class="p">);</span>
 
@@ -617,7 +616,7 @@ It is given in percentage of the number of knots (<a class="link" href="NcmSplin
 </ul></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.6.9.9.9.4" id="id-1.3.6.9.9.9.4"></a><h4>Example: cosine summation with 50 terms.</h4>
+<a name="id-1.3.6.9.9.9.4"></a><h4>Example: cosine summation with 50 terms.</h4>
 <div class="informalexample">
   <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
     <tbody>
@@ -743,14 +742,14 @@ This fact is due to the <a class="ulink" href="numcosmo-NcmSplineFunc.html" targ
 It is a much more conservative approach compared to <a class="link" href="numcosmo-NcmSplineFunc.html#NCM-SPLINE-FUNCTION-SPLINE:CAPS"><span class="type">NCM_SPLINE_FUNCTION_SPLINE</span></a>, applied in the previous example.   </p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="mc-ex" id="mc-ex"></a><h3>Monte Carlo examples</h3>
+<a name="mc-ex"></a><h3>Monte Carlo examples</h3>
 <p>To perform a Monte Carlo statistics it is needed to place <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-monte-carlo-and-save-to-txt" title="ncm_spline_func_test_monte_carlo_and_save_to_txt ()"><code class="function">ncm_spline_func_test_monte_carlo_and_save_to_txt()</code></a> 
 or <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-monte-carlo" title="ncm_spline_func_test_monte_carlo ()"><code class="function">ncm_spline_func_test_monte_carlo()</code></a> after preparing it (<a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-prepare" title="ncm_spline_func_test_prepare ()"><code class="function">ncm_spline_func_test_prepare()</code></a>).</p>
 <p>Two examples are shown below, together with their results.</p>
 <div class="refsect3">
-<a name="id-1.3.6.9.9.10.4" id="id-1.3.6.9.9.10.4"></a><h4>Example: 5th degree polynomial interpolation with 1 million realizations.</h4>
+<a name="id-1.3.6.9.9.10.4"></a><h4>Example: 5th degree polynomial interpolation with 1 million realizations.</h4>
 <div class="informalexample">
   <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
     <tbody>
@@ -797,7 +796,7 @@ or <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-monte-carlo
 
 <span class="w">  </span><span class="n">ncm_spline_func_test_prepare</span><span class="w"> </span><span class="p">(</span><span class="n">sft</span><span class="p">,</span><span class="w"> </span><span class="n">NCM_SPLINE_FUNCTION_SPLINE</span><span class="p">,</span><span class="w"> </span><span class="n">NCM_SPLINE_FUNC_TEST_TYPE_PDF_FLAT</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">ncm_spline_func_test_monte_carlo_and_save_to_txt</span><span class="w"> </span><span class="p">(</span><span class="n">sft</span><span class="p">,</span><span class="w"> </span><span class="n">nsim</span><span class="p">,</span><span class="w"> </span><span class="s">"mc.txt"</span><span class="p">);</span>
+<span class="w">  </span><span class="n">ncm_spline_func_test_monte_carlo_and_save_to_txt</span><span class="w"> </span><span class="p">(</span><span class="n">sft</span><span class="p">,</span><span class="w"> </span><span class="n">nsim</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mc.txt&quot;</span><span class="p">);</span>
 
 <span class="w">  </span><span class="n">ncm_spline_func_test_log_vals_mc_stats</span><span class="w"> </span><span class="p">(</span><span class="n">sft</span><span class="p">);</span>
 
@@ -872,7 +871,7 @@ To check this apparent contradiction, it is needed to look into the "mc.txt" fil
 <a class="ulink" href="numcosmo-NcmSplineFunc.html" target="_top">NcmSplineFunc</a> $\hat{f}(x)$ should have outliers with high values, probably indicating some issue with those functions.</p>
 </div>
 <div class="refsect3">
-<a name="id-1.3.6.9.9.10.5" id="id-1.3.6.9.9.10.5"></a><h4>Example: user supplied function with 100 thousand realizations.</h4>
+<a name="id-1.3.6.9.9.10.5"></a><h4>Example: user supplied function with 100 thousand realizations.</h4>
 <div class="informalexample">
   <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
     <tbody>
@@ -1090,38 +1089,38 @@ the results from NcmSplineFunc are quite remarkable.
 </div>
 </div>
 <div class="refsect1">
-<a name="NcmSplineFuncTest.functions_details" id="NcmSplineFuncTest.functions_details"></a><h2>Functions</h2>
+<a name="NcmSplineFuncTest.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
-<a name="NcmSplineFuncTestPrepare" id="NcmSplineFuncTestPrepare"></a><h3>NcmSplineFuncTestPrepare ()</h3>
+<a name="NcmSplineFuncTestPrepare"></a><h3>NcmSplineFuncTestPrepare ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-<span class="c_punctuation">(</span>*NcmSplineFuncTestPrepare<span class="c_punctuation">)</span> (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> p</code></em>);</pre>
+<span class="c_punctuation">(</span>*NcmSplineFuncTestPrepare<span class="c_punctuation">)</span> (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> p</code></em>);</pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-new" id="ncm-spline-func-test-new"></a><h3>ncm_spline_func_test_new ()</h3>
+<a name="ncm-spline-func-test-new"></a><h3>ncm_spline_func_test_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="returnvalue">NcmSplineFuncTest</span></a> *
 ncm_spline_func_test_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Allocates memory for a new <a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> suite
 with the default parameters values.</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-new.returns" id="ncm-spline-func-test-new.returns"></a><h4>Returns</h4>
+<a name="ncm-spline-func-test-new.returns"></a><h4>Returns</h4>
 <p> a new <a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a>.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-ref" id="ncm-spline-func-test-ref"></a><h3>ncm_spline_func_test_ref ()</h3>
+<a name="ncm-spline-func-test-ref"></a><h3>ncm_spline_func_test_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="returnvalue">NcmSplineFuncTest</span></a> *
 ncm_spline_func_test_ref (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>);</pre>
 <p>Increases the reference count of <em class="parameter"><code>sft</code></em>
  by one atomically.</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-ref.parameters" id="ncm-spline-func-test-ref.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-ref.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sft</p></td>
@@ -1131,15 +1130,15 @@ ncm_spline_func_test_ref (<em class="parameter"><code><a class="link" href="NcmS
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-ref.returns" id="ncm-spline-func-test-ref.returns"></a><h4>Returns</h4>
+<a name="ncm-spline-func-test-ref.returns"></a><h4>Returns</h4>
 <p><em class="parameter"><code>sft</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-unref" id="ncm-spline-func-test-unref"></a><h3>ncm_spline_func_test_unref ()</h3>
+<a name="ncm-spline-func-test-unref"></a><h3>ncm_spline_func_test_unref ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_unref (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>);</pre>
 <p>Atomically decrements the reference count of <em class="parameter"><code>sft</code></em>
@@ -1147,12 +1146,12 @@ ncm_spline_func_test_unref (<em class="parameter"><code><a class="link" href="Nc
 If the reference count drops to 0, all memory allocated by <em class="parameter"><code>sft</code></em>
  is released.</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-unref.parameters" id="ncm-spline-func-test-unref.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-unref.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sft</p></td>
@@ -1162,9 +1161,9 @@ If the reference count drops to 0, all memory allocated by <em class="parameter"
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-clear" id="ncm-spline-func-test-clear"></a><h3>ncm_spline_func_test_clear ()</h3>
+<a name="ncm-spline-func-test-clear"></a><h3>ncm_spline_func_test_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_clear (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> **sft</code></em>);</pre>
 <p>If <em class="parameter"><code>sft</code></em>
@@ -1176,12 +1175,12 @@ all memory allocated by <em class="parameter"><code>sft</code></em>
  is released and <em class="parameter"><code>sft</code></em>
  is set to NULL.</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-clear.parameters" id="ncm-spline-func-test-clear.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-clear.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sft</p></td>
@@ -1191,21 +1190,21 @@ all memory allocated by <em class="parameter"><code>sft</code></em>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-set-type" id="ncm-spline-func-test-set-type"></a><h3>ncm_spline_func_test_set_type ()</h3>
+<a name="ncm-spline-func-test-set-type"></a><h3>ncm_spline_func_test_set_type ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_set_type (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
                                <em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html#NcmSplineFuncTestType" title="enum NcmSplineFuncTestType"><span class="type">NcmSplineFuncTestType</span></a> type</code></em>);</pre>
 <p>Sets the type method to generate the base function
 to be used as test to the <a class="ulink" href="numcosmo-NcmSplineFunc.html" target="_top">NcmSplineFunc</a> object.</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-set-type.parameters" id="ncm-spline-func-test-set-type.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-set-type.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1222,23 +1221,23 @@ to be used as test to the <a class="ulink" href="numcosmo-NcmSplineFunc.html" ta
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-set-ngrid" id="ncm-spline-func-test-set-ngrid"></a><h3>ncm_spline_func_test_set_ngrid ()</h3>
+<a name="ncm-spline-func-test-set-ngrid"></a><h3>ncm_spline_func_test_set_ngrid ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_set_ngrid (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
-                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> ngrid</code></em>);</pre>
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> ngrid</code></em>);</pre>
 <p>Sets the number of knots in the linear grid used to compare the base function with <a class="ulink" href="numcosmo-NcmSplineFunc.html" target="_top">NcmSplineFunc</a>.</p>
 <p>The knots are evenly distributed in the range [<em class="parameter"><code>xi</code></em>
 , <em class="parameter"><code>xf</code></em>
 ], including both limiting points.</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-set-ngrid.parameters" id="ncm-spline-func-test-set-ngrid.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-set-ngrid.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1255,18 +1254,18 @@ ncm_spline_func_test_set_ngrid (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-get-ngrid" id="ncm-spline-func-test-get-ngrid"></a><h3>ncm_spline_func_test_get_ngrid ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<a name="ncm-spline-func-test-get-ngrid"></a><h3>ncm_spline_func_test_get_ngrid ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 ncm_spline_func_test_get_ngrid (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>);</pre>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-ngrid.parameters" id="ncm-spline-func-test-get-ngrid.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-get-ngrid.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sft</p></td>
@@ -1276,28 +1275,28 @@ ncm_spline_func_test_get_ngrid (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-ngrid.returns" id="ncm-spline-func-test-get-ngrid.returns"></a><h4>Returns</h4>
+<a name="ncm-spline-func-test-get-ngrid.returns"></a><h4>Returns</h4>
 <p> the number of knots in the range [<em class="parameter"><code>xi</code></em>
 , <em class="parameter"><code>xf</code></em>
 ], including both limiting points.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-set-seed" id="ncm-spline-func-test-set-seed"></a><h3>ncm_spline_func_test_set_seed ()</h3>
+<a name="ncm-spline-func-test-set-seed"></a><h3>ncm_spline_func_test_set_seed ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_set_seed (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
-                               <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> seed</code></em>);</pre>
+                               <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> seed</code></em>);</pre>
 <p>Sets the seed for the random number generator. Must be a positive integer.
 If it is set to zero, it generates a seed internally.</p>
 <p>See also <a class="link" href="NcmRNG.html#ncm-rng-set-seed" title="ncm_rng_set_seed ()"><span class="type">ncm_rng_set_seed</span></a> and <a class="link" href="NcmRNG.html#ncm-rng-set-random-seed" title="ncm_rng_set_random_seed ()"><span class="type">ncm_rng_set_random_seed</span></a> from <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a>.</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-set-seed.parameters" id="ncm-spline-func-test-set-seed.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-set-seed.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1314,18 +1313,18 @@ If it is set to zero, it generates a seed internally.</p>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-get-seed" id="ncm-spline-func-test-get-seed"></a><h3>ncm_spline_func_test_get_seed ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>
+<a name="ncm-spline-func-test-get-seed"></a><h3>ncm_spline_func_test_get_seed ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>
 ncm_spline_func_test_get_seed (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>);</pre>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-seed.parameters" id="ncm-spline-func-test-get-seed.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-get-seed.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sft</p></td>
@@ -1335,14 +1334,14 @@ ncm_spline_func_test_get_seed (<em class="parameter"><code><a class="link" href=
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-seed.returns" id="ncm-spline-func-test-get-seed.returns"></a><h4>Returns</h4>
+<a name="ncm-spline-func-test-get-seed.returns"></a><h4>Returns</h4>
 <p> the random number generator <em class="parameter"><code>seed</code></em>
 .</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-set-params-info" id="ncm-spline-func-test-set-params-info"></a><h3>ncm_spline_func_test_set_params_info ()</h3>
+<a name="ncm-spline-func-test-set-params-info"></a><h3>ncm_spline_func_test_set_params_info ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_set_params_info (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
                                       <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *par_info</code></em>);</pre>
@@ -1351,12 +1350,12 @@ ncm_spline_func_test_set_params_info (<em class="parameter"><code><a class="link
 <p>The matrix must have dimensions (rows = number of parameters, cols = 2).</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>columns: (min, max) for a flat PDF or (mean, sigma) for a normal PDF.</p></li></ul></div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-set-params-info.parameters" id="ncm-spline-func-test-set-params-info.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-set-params-info.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1373,15 +1372,15 @@ ncm_spline_func_test_set_params_info (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-set-params-info-all" id="ncm-spline-func-test-set-params-info-all"></a><h3>ncm_spline_func_test_set_params_info_all ()</h3>
+<a name="ncm-spline-func-test-set-params-info-all"></a><h3>ncm_spline_func_test_set_params_info_all ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_set_params_info_all
                                (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
-                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> npar</code></em>,
-                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> p1</code></em>,
-                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> p2</code></em>);</pre>
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> npar</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> p1</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> p2</code></em>);</pre>
 <p>Sets all values of the matrix <em class="parameter"><code>par_info</code></em>
  to <em class="parameter"><code>p1</code></em>
  and <em class="parameter"><code>p2</code></em>
@@ -1395,12 +1394,12 @@ in order to create the base function and to perform statistics.</p>
  = mean, <em class="parameter"><code>p2</code></em>
  = sigma) for a normal PDF.</p></li></ul></div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-set-params-info-all.parameters" id="ncm-spline-func-test-set-params-info-all.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-set-params-info-all.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1427,18 +1426,18 @@ in order to create the base function and to perform statistics.</p>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-get-params-info" id="ncm-spline-func-test-get-params-info"></a><h3>ncm_spline_func_test_get_params_info ()</h3>
+<a name="ncm-spline-func-test-get-params-info"></a><h3>ncm_spline_func_test_get_params_info ()</h3>
 <pre class="programlisting"><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="returnvalue">NcmMatrix</span></a> *
 ncm_spline_func_test_get_params_info (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>);</pre>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-params-info.parameters" id="ncm-spline-func-test-get-params-info.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-get-params-info.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sft</p></td>
@@ -1448,14 +1447,14 @@ ncm_spline_func_test_get_params_info (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-params-info.returns" id="ncm-spline-func-test-get-params-info.returns"></a><h4>Returns</h4>
+<a name="ncm-spline-func-test-get-params-info.returns"></a><h4>Returns</h4>
 <p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> with parameters information. </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-peek-current-params" id="ncm-spline-func-test-peek-current-params"></a><h3>ncm_spline_func_test_peek_current_params ()</h3>
+<a name="ncm-spline-func-test-peek-current-params"></a><h3>ncm_spline_func_test_peek_current_params ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
 ncm_spline_func_test_peek_current_params
                                (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>);</pre>
@@ -1464,12 +1463,12 @@ as in the user provided in <a class="link" href="NcmMatrix.html" title="NcmMatri
 .</p>
 <p>This function is necessary when <a class="link" href="NcmSplineFuncTest.html#NCM-SPLINE-FUNC-TEST-TYPE-USER:CAPS"><span class="type">NCM_SPLINE_FUNC_TEST_TYPE_USER</span></a> is applied.</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-peek-current-params.parameters" id="ncm-spline-func-test-peek-current-params.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-peek-current-params.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sft</p></td>
@@ -1479,26 +1478,26 @@ as in the user provided in <a class="link" href="NcmMatrix.html" title="NcmMatri
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-peek-current-params.returns" id="ncm-spline-func-test-peek-current-params.returns"></a><h4>Returns</h4>
+<a name="ncm-spline-func-test-peek-current-params.returns"></a><h4>Returns</h4>
 <p>a pointer to the currrent parameters vector. </p>
 <p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-set-xi" id="ncm-spline-func-test-set-xi"></a><h3>ncm_spline_func_test_set_xi ()</h3>
+<a name="ncm-spline-func-test-set-xi"></a><h3>ncm_spline_func_test_set_xi ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_set_xi (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
-                             <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>);</pre>
+                             <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>);</pre>
 <p>Sets the initial abscissa value to <em class="parameter"><code>xi</code></em>
 .</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-set-xi.parameters" id="ncm-spline-func-test-set-xi.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-set-xi.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1515,18 +1514,18 @@ ncm_spline_func_test_set_xi (<em class="parameter"><code><a class="link" href="N
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-get-xi" id="ncm-spline-func-test-get-xi"></a><h3>ncm_spline_func_test_get_xi ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-spline-func-test-get-xi"></a><h3>ncm_spline_func_test_get_xi ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_spline_func_test_get_xi (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>);</pre>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-xi.parameters" id="ncm-spline-func-test-get-xi.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-get-xi.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sft</p></td>
@@ -1536,26 +1535,26 @@ ncm_spline_func_test_get_xi (<em class="parameter"><code><a class="link" href="N
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-xi.returns" id="ncm-spline-func-test-get-xi.returns"></a><h4>Returns</h4>
+<a name="ncm-spline-func-test-get-xi.returns"></a><h4>Returns</h4>
 <p> the initial abscissa value <em class="parameter"><code>xi</code></em>
 .</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-set-xf" id="ncm-spline-func-test-set-xf"></a><h3>ncm_spline_func_test_set_xf ()</h3>
+<a name="ncm-spline-func-test-set-xf"></a><h3>ncm_spline_func_test_set_xf ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_set_xf (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
-                             <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>);</pre>
+                             <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>);</pre>
 <p>Sets the final abscissa value to <em class="parameter"><code>xf</code></em>
 .</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-set-xf.parameters" id="ncm-spline-func-test-set-xf.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-set-xf.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1572,18 +1571,18 @@ ncm_spline_func_test_set_xf (<em class="parameter"><code><a class="link" href="N
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-get-xf" id="ncm-spline-func-test-get-xf"></a><h3>ncm_spline_func_test_get_xf ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-spline-func-test-get-xf"></a><h3>ncm_spline_func_test_get_xf ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_spline_func_test_get_xf (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>);</pre>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-xf.parameters" id="ncm-spline-func-test-get-xf.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-get-xf.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sft</p></td>
@@ -1593,26 +1592,26 @@ ncm_spline_func_test_get_xf (<em class="parameter"><code><a class="link" href="N
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-xf.returns" id="ncm-spline-func-test-get-xf.returns"></a><h4>Returns</h4>
+<a name="ncm-spline-func-test-get-xf.returns"></a><h4>Returns</h4>
 <p> the final abscissa value <em class="parameter"><code>xf</code></em>
 .</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-set-rel-error" id="ncm-spline-func-test-set-rel-error"></a><h3>ncm_spline_func_test_set_rel_error ()</h3>
+<a name="ncm-spline-func-test-set-rel-error"></a><h3>ncm_spline_func_test_set_rel_error ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_set_rel_error (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
-                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> rel_error</code></em>);</pre>
+                                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> rel_error</code></em>);</pre>
 <p>Sets the relative error (tolerance) used by <a class="ulink" href="numcosmo-NcmSplineFunc.html" target="_top">NcmSplineFunc</a> object when defining its knots.</p>
 <p>See also <a class="link" href="numcosmo-NcmSplineFunc.html#ncm-spline-set-func" title="ncm_spline_set_func ()"><span class="type">ncm_spline_set_func</span></a> and <a class="link" href="numcosmo-NcmSplineFunc.html#ncm-spline-set-func-scale" title="ncm_spline_set_func_scale ()"><span class="type">ncm_spline_set_func_scale</span></a> from <a class="ulink" href="numcosmo-NcmSplineFunc.html" target="_top">NcmSplineFunc</a>.</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-set-rel-error.parameters" id="ncm-spline-func-test-set-rel-error.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-set-rel-error.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1629,18 +1628,18 @@ ncm_spline_func_test_set_rel_error (<em class="parameter"><code><a class="link" 
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-get-rel-error" id="ncm-spline-func-test-get-rel-error"></a><h3>ncm_spline_func_test_get_rel_error ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-spline-func-test-get-rel-error"></a><h3>ncm_spline_func_test_get_rel_error ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_spline_func_test_get_rel_error (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>);</pre>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-rel-error.parameters" id="ncm-spline-func-test-get-rel-error.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-get-rel-error.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sft</p></td>
@@ -1650,28 +1649,28 @@ ncm_spline_func_test_get_rel_error (<em class="parameter"><code><a class="link" 
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-rel-error.returns" id="ncm-spline-func-test-get-rel-error.returns"></a><h4>Returns</h4>
+<a name="ncm-spline-func-test-get-rel-error.returns"></a><h4>Returns</h4>
 <p> the relative error <em class="parameter"><code>rel_error</code></em>
 .</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-set-scale" id="ncm-spline-func-test-set-scale"></a><h3>ncm_spline_func_test_set_scale ()</h3>
+<a name="ncm-spline-func-test-set-scale"></a><h3>ncm_spline_func_test_set_scale ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_set_scale (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
-                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> scale</code></em>);</pre>
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> scale</code></em>);</pre>
 <p>Sets the <em class="parameter"><code>scale</code></em>
 . It is used to compute the absolute tolerance.
 See Eq. \eqref{eq:condition}. </p>
 <p>See also <a class="link" href="numcosmo-NcmSplineFunc.html#ncm-spline-set-func-scale" title="ncm_spline_set_func_scale ()"><span class="type">ncm_spline_set_func_scale</span></a> from <a class="ulink" href="numcosmo-NcmSplineFunc.html" target="_top">NcmSplineFunc</a>.</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-set-scale.parameters" id="ncm-spline-func-test-set-scale.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-set-scale.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1688,18 +1687,18 @@ See Eq. \eqref{eq:condition}. </p>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-get-scale" id="ncm-spline-func-test-get-scale"></a><h3>ncm_spline_func_test_get_scale ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-spline-func-test-get-scale"></a><h3>ncm_spline_func_test_get_scale ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_spline_func_test_get_scale (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>);</pre>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-scale.parameters" id="ncm-spline-func-test-get-scale.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-get-scale.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sft</p></td>
@@ -1709,18 +1708,18 @@ ncm_spline_func_test_get_scale (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-scale.returns" id="ncm-spline-func-test-get-scale.returns"></a><h4>Returns</h4>
+<a name="ncm-spline-func-test-get-scale.returns"></a><h4>Returns</h4>
 <p> the <em class="parameter"><code>scale</code></em>
 .</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-set-out-threshold" id="ncm-spline-func-test-set-out-threshold"></a><h3>ncm_spline_func_test_set_out_threshold ()</h3>
+<a name="ncm-spline-func-test-set-out-threshold"></a><h3>ncm_spline_func_test_set_out_threshold ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_set_out_threshold
                                (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
-                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> out_threshold</code></em>);</pre>
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> out_threshold</code></em>);</pre>
 <p>Sets the outliers threshold in a grid in order to save the functions informations 
 for further analysis.ncm_spline_func_test_save_grid_functions_to_txt() 
 and <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-save-knots-to-txt" title="ncm_spline_func_test_save_knots_to_txt ()"><code class="function">ncm_spline_func_test_save_knots_to_txt()</code></a>.
@@ -1731,12 +1730,12 @@ the interpolated points with the function , "interpolated_points_with_outlier_ab
 <p>The threshold is given in percentage of <em class="parameter"><code>ngrid</code></em>
 .</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-set-out-threshold.parameters" id="ncm-spline-func-test-set-out-threshold.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-set-out-threshold.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1753,19 +1752,19 @@ the interpolated points with the function , "interpolated_points_with_outlier_ab
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-get-out-threshold" id="ncm-spline-func-test-get-out-threshold"></a><h3>ncm_spline_func_test_get_out_threshold ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-spline-func-test-get-out-threshold"></a><h3>ncm_spline_func_test_get_out_threshold ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_spline_func_test_get_out_threshold
                                (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>);</pre>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-out-threshold.parameters" id="ncm-spline-func-test-get-out-threshold.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-get-out-threshold.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sft</p></td>
@@ -1775,14 +1774,14 @@ ncm_spline_func_test_get_out_threshold
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-get-out-threshold.returns" id="ncm-spline-func-test-get-out-threshold.returns"></a><h4>Returns</h4>
+<a name="ncm-spline-func-test-get-out-threshold.returns"></a><h4>Returns</h4>
 <p> <em class="parameter"><code>out_threshold</code></em>
 .</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-set-user-gsl-function" id="ncm-spline-func-test-set-user-gsl-function"></a><h3>ncm_spline_func_test_set_user_gsl_function ()</h3>
+<a name="ncm-spline-func-test-set-user-gsl-function"></a><h3>ncm_spline_func_test_set_user_gsl_function ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_set_user_gsl_function
                                (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
@@ -1790,12 +1789,12 @@ ncm_spline_func_test_set_user_gsl_function
 <p>Sets the user supplied <a class="ulink" href="https://www.gnu.org/software/gsl/" target="_top">GSL</a> function as base for the test.</p>
 <p>See also <a class="ulink" href="https://www.gnu.org/software/gsl/doc/html/roots.html?highlight=gsl_function#c.gsl_function" target="_top">gsl_function</a> for more information.</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-set-user-gsl-function.parameters" id="ncm-spline-func-test-set-user-gsl-function.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-set-user-gsl-function.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1812,9 +1811,9 @@ ncm_spline_func_test_set_user_gsl_function
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-set-prepare-user-function" id="ncm-spline-func-test-set-prepare-user-function"></a><h3>ncm_spline_func_test_set_prepare_user_function ()</h3>
+<a name="ncm-spline-func-test-set-prepare-user-function"></a><h3>ncm_spline_func_test_set_prepare_user_function ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_set_prepare_user_function
                                (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
@@ -1822,12 +1821,12 @@ ncm_spline_func_test_set_prepare_user_function
 <p>Sets the user supplied prepare function. It will be called one before computing
 the function provided by <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-set-user-gsl-function" title="ncm_spline_func_test_set_user_gsl_function ()"><code class="function">ncm_spline_func_test_set_user_gsl_function()</code></a>.</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-set-prepare-user-function.parameters" id="ncm-spline-func-test-set-prepare-user-function.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-set-prepare-user-function.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1844,9 +1843,9 @@ the function provided by <a class="link" href="NcmSplineFuncTest.html#ncm-spline
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-prepare" id="ncm-spline-func-test-prepare"></a><h3>ncm_spline_func_test_prepare ()</h3>
+<a name="ncm-spline-func-test-prepare"></a><h3>ncm_spline_func_test_prepare ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_prepare (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
                               <em class="parameter"><code><a class="link" href="numcosmo-NcmSplineFunc.html#NcmSplineFuncType" title="enum NcmSplineFuncType"><span class="type">NcmSplineFuncType</span></a> ftype</code></em>,
@@ -1855,12 +1854,12 @@ ncm_spline_func_test_prepare (<em class="parameter"><code><a class="link" href="
 one grid statistics, <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-set-one-grid-stats" title="ncm_spline_func_test_set_one_grid_stats ()"><code class="function">ncm_spline_func_test_set_one_grid_stats()</code></a>,
  and also Monte Carlo statistics, <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-monte-carlo" title="ncm_spline_func_test_monte_carlo ()"><code class="function">ncm_spline_func_test_monte_carlo()</code></a> and <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-monte-carlo-and-save-to-txt" title="ncm_spline_func_test_monte_carlo_and_save_to_txt ()"><code class="function">ncm_spline_func_test_monte_carlo_and_save_to_txt()</code></a>.</p>
 <div class="refsect3">
-<a name="ncm-spline-func-test-prepare.parameters" id="ncm-spline-func-test-prepare.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-prepare.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1882,9 +1881,9 @@ one grid statistics, <a class="link" href="NcmSplineFuncTest.html#ncm-spline-fun
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-set-one-grid-stats" id="ncm-spline-func-test-set-one-grid-stats"></a><h3>ncm_spline_func_test_set_one_grid_stats ()</h3>
+<a name="ncm-spline-func-test-set-one-grid-stats"></a><h3>ncm_spline_func_test_set_one_grid_stats ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_set_one_grid_stats
                                (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>);</pre>
@@ -1893,12 +1892,12 @@ ncm_spline_func_test_set_one_grid_stats
    It must be called after <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-prepare" title="ncm_spline_func_test_prepare ()"><code class="function">ncm_spline_func_test_prepare()</code></a>.
   </p></div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-set-one-grid-stats.parameters" id="ncm-spline-func-test-set-one-grid-stats.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-set-one-grid-stats.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sft</p></td>
@@ -1908,24 +1907,24 @@ ncm_spline_func_test_set_one_grid_stats
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-monte-carlo" id="ncm-spline-func-test-monte-carlo"></a><h3>ncm_spline_func_test_monte_carlo ()</h3>
+<a name="ncm-spline-func-test-monte-carlo"></a><h3>ncm_spline_func_test_monte_carlo ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_monte_carlo (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
-                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nsim</code></em>);</pre>
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nsim</code></em>);</pre>
 <p>Performs a Monte Carlo simulation on the base function.</p>
 <p>See <a class="link" href="NcmSplineFuncTest.html#NcmSplineFuncTestType" title="enum NcmSplineFuncTestType"><span class="type">NcmSplineFuncTestType</span></a> and <a class="link" href="NcmSplineFuncTest.html#NcmSplineFuncTestTypePDF" title="enum NcmSplineFuncTestTypePDF"><span class="type">NcmSplineFuncTestTypePDF</span></a> for the available options.</p>
 <div class="note"><p>
     It must be called after <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-prepare" title="ncm_spline_func_test_prepare ()"><code class="function">ncm_spline_func_test_prepare()</code></a>.
   </p></div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-monte-carlo.parameters" id="ncm-spline-func-test-monte-carlo.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-monte-carlo.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -1942,9 +1941,9 @@ ncm_spline_func_test_monte_carlo (<em class="parameter"><code><a class="link" hr
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-log-vals-one-grid-stats" id="ncm-spline-func-test-log-vals-one-grid-stats"></a><h3>ncm_spline_func_test_log_vals_one_grid_stats ()</h3>
+<a name="ncm-spline-func-test-log-vals-one-grid-stats"></a><h3>ncm_spline_func_test_log_vals_one_grid_stats ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_log_vals_one_grid_stats
                                (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>);</pre>
@@ -1954,12 +1953,12 @@ ncm_spline_func_test_log_vals_one_grid_stats
    It must be called after <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-set-one-grid-stats" title="ncm_spline_func_test_set_one_grid_stats ()"><code class="function">ncm_spline_func_test_set_one_grid_stats()</code></a>. 
   </p></div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-log-vals-one-grid-stats.parameters" id="ncm-spline-func-test-log-vals-one-grid-stats.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-log-vals-one-grid-stats.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sft</p></td>
@@ -1969,13 +1968,13 @@ ncm_spline_func_test_log_vals_one_grid_stats
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-save-grid-functions-to-txt" id="ncm-spline-func-test-save-grid-functions-to-txt"></a><h3>ncm_spline_func_test_save_grid_functions_to_txt ()</h3>
+<a name="ncm-spline-func-test-save-grid-functions-to-txt"></a><h3>ncm_spline_func_test_save_grid_functions_to_txt ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_save_grid_functions_to_txt
                                (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *fname</code></em>);</pre>
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *fname</code></em>);</pre>
 <p>Saves one grid functions in the text <em class="parameter"><code>fname</code></em>
  file. The colums are:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -1988,12 +1987,12 @@ ncm_spline_func_test_save_grid_functions_to_txt
    It must be called after <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-set-one-grid-stats" title="ncm_spline_func_test_set_one_grid_stats ()"><code class="function">ncm_spline_func_test_set_one_grid_stats()</code></a>. 
   </p></div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-save-grid-functions-to-txt.parameters" id="ncm-spline-func-test-save-grid-functions-to-txt.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-save-grid-functions-to-txt.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -2010,25 +2009,25 @@ ncm_spline_func_test_save_grid_functions_to_txt
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-save-knots-to-txt" id="ncm-spline-func-test-save-knots-to-txt"></a><h3>ncm_spline_func_test_save_knots_to_txt ()</h3>
+<a name="ncm-spline-func-test-save-knots-to-txt"></a><h3>ncm_spline_func_test_save_knots_to_txt ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_save_knots_to_txt
                                (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *fname</code></em>);</pre>
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *fname</code></em>);</pre>
 <p>Saves the knots defined by <a class="ulink" href="numcosmo-NcmSplineFunc.html" target="_top">NcmSplineFunc</a> in the text file <em class="parameter"><code>fname</code></em>
  (only the current grid).</p>
 <div class="note"><p>
    It must be called after <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-set-one-grid-stats" title="ncm_spline_func_test_set_one_grid_stats ()"><code class="function">ncm_spline_func_test_set_one_grid_stats()</code></a>. 
   </p></div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-save-knots-to-txt.parameters" id="ncm-spline-func-test-save-knots-to-txt.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-save-knots-to-txt.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -2045,14 +2044,14 @@ ncm_spline_func_test_save_knots_to_txt
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-monte-carlo-and-save-to-txt" id="ncm-spline-func-test-monte-carlo-and-save-to-txt"></a><h3>ncm_spline_func_test_monte_carlo_and_save_to_txt ()</h3>
+<a name="ncm-spline-func-test-monte-carlo-and-save-to-txt"></a><h3>ncm_spline_func_test_monte_carlo_and_save_to_txt ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_monte_carlo_and_save_to_txt
                                (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nsim</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *fname</code></em>);</pre>
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nsim</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *fname</code></em>);</pre>
 <p>Performs a Monte Carlo simulation on the base function
 and saves some statistics in the <em class="parameter"><code>fname</code></em>
  file.</p>
@@ -2062,12 +2061,12 @@ and saves some statistics in the <em class="parameter"><code>fname</code></em>
     It must be called after <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-prepare" title="ncm_spline_func_test_prepare ()"><code class="function">ncm_spline_func_test_prepare()</code></a>.
   </p></div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-monte-carlo-and-save-to-txt.parameters" id="ncm-spline-func-test-monte-carlo-and-save-to-txt.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-monte-carlo-and-save-to-txt.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -2089,9 +2088,9 @@ and saves some statistics in the <em class="parameter"><code>fname</code></em>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-spline-func-test-log-vals-mc-stats" id="ncm-spline-func-test-log-vals-mc-stats"></a><h3>ncm_spline_func_test_log_vals_mc_stats ()</h3>
+<a name="ncm-spline-func-test-log-vals-mc-stats"></a><h3>ncm_spline_func_test_log_vals_mc_stats ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_spline_func_test_log_vals_mc_stats
                                (<em class="parameter"><code><a class="link" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest"><span class="type">NcmSplineFuncTest</span></a> *sft</code></em>);</pre>
@@ -2101,12 +2100,12 @@ ncm_spline_func_test_log_vals_mc_stats
    It must be called after <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-monte-carlo" title="ncm_spline_func_test_monte_carlo ()"><code class="function">ncm_spline_func_test_monte_carlo()</code></a> or <a class="link" href="NcmSplineFuncTest.html#ncm-spline-func-test-monte-carlo-and-save-to-txt" title="ncm_spline_func_test_monte_carlo_and_save_to_txt ()"><code class="function">ncm_spline_func_test_monte_carlo_and_save_to_txt()</code></a>. 
   </p></div>
 <div class="refsect3">
-<a name="ncm-spline-func-test-log-vals-mc-stats.parameters" id="ncm-spline-func-test-log-vals-mc-stats.parameters"></a><h4>Parameters</h4>
+<a name="ncm-spline-func-test-log-vals-mc-stats.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sft</p></td>
@@ -2118,42 +2117,42 @@ ncm_spline_func_test_log_vals_mc_stats
 </div>
 </div>
 <div class="refsect1">
-<a name="NcmSplineFuncTest.other_details" id="NcmSplineFuncTest.other_details"></a><h2>Types and Values</h2>
+<a name="NcmSplineFuncTest.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
-<a name="NcmSplineFuncTestType" id="NcmSplineFuncTestType"></a><h3>enum NcmSplineFuncTestType</h3>
+<a name="NcmSplineFuncTestType"></a><h3>enum NcmSplineFuncTestType</h3>
 <p>Enum to choose which base function to be used in the test suite.</p>
 <div class="refsect3">
-<a name="NcmSplineFuncTestType.members" id="NcmSplineFuncTestType.members"></a><h4>Members</h4>
+<a name="NcmSplineFuncTestType.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="300px" class="enum_members_name" />
-<col class="enum_members_description" />
-<col width="200px" class="enum_members_annotations" />
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
 </colgroup>
 <tbody>
 <tr>
-<td class="enum_member_name"><p><a name="NCM-SPLINE-FUNC-TEST-TYPE-POLYNOMIAL:CAPS" id="NCM-SPLINE-FUNC-TEST-TYPE-POLYNOMIAL:CAPS"></a>NCM_SPLINE_FUNC_TEST_TYPE_POLYNOMIAL</p></td>
+<td class="enum_member_name"><p><a name="NCM-SPLINE-FUNC-TEST-TYPE-POLYNOMIAL:CAPS"></a>NCM_SPLINE_FUNC_TEST_TYPE_POLYNOMIAL</p></td>
 <td class="enum_member_description">
 <p>polynomial interpolation.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
-<td class="enum_member_name"><p><a name="NCM-SPLINE-FUNC-TEST-TYPE-COSINE:CAPS" id="NCM-SPLINE-FUNC-TEST-TYPE-COSINE:CAPS"></a>NCM_SPLINE_FUNC_TEST_TYPE_COSINE</p></td>
+<td class="enum_member_name"><p><a name="NCM-SPLINE-FUNC-TEST-TYPE-COSINE:CAPS"></a>NCM_SPLINE_FUNC_TEST_TYPE_COSINE</p></td>
 <td class="enum_member_description">
 <p>cosine series.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
-<td class="enum_member_name"><p><a name="NCM-SPLINE-FUNC-TEST-TYPE-RBF:CAPS" id="NCM-SPLINE-FUNC-TEST-TYPE-RBF:CAPS"></a>NCM_SPLINE_FUNC_TEST_TYPE_RBF</p></td>
+<td class="enum_member_name"><p><a name="NCM-SPLINE-FUNC-TEST-TYPE-RBF:CAPS"></a>NCM_SPLINE_FUNC_TEST_TYPE_RBF</p></td>
 <td class="enum_member_description">
 <p>RBF interpolation.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
-<td class="enum_member_name"><p><a name="NCM-SPLINE-FUNC-TEST-TYPE-USER:CAPS" id="NCM-SPLINE-FUNC-TEST-TYPE-USER:CAPS"></a>NCM_SPLINE_FUNC_TEST_TYPE_USER</p></td>
+<td class="enum_member_name"><p><a name="NCM-SPLINE-FUNC-TEST-TYPE-USER:CAPS"></a>NCM_SPLINE_FUNC_TEST_TYPE_USER</p></td>
 <td class="enum_member_description">
 <p>user supplied function.</p>
 </td>
@@ -2163,28 +2162,28 @@ ncm_spline_func_test_log_vals_mc_stats
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmSplineFuncTestTypePDF" id="NcmSplineFuncTestTypePDF"></a><h3>enum NcmSplineFuncTestTypePDF</h3>
+<a name="NcmSplineFuncTestTypePDF"></a><h3>enum NcmSplineFuncTestTypePDF</h3>
 <p>Enum to choose which PDF type.</p>
 <div class="refsect3">
-<a name="NcmSplineFuncTestTypePDF.members" id="NcmSplineFuncTestTypePDF.members"></a><h4>Members</h4>
+<a name="NcmSplineFuncTestTypePDF.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="300px" class="enum_members_name" />
-<col class="enum_members_description" />
-<col width="200px" class="enum_members_annotations" />
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
 </colgroup>
 <tbody>
 <tr>
-<td class="enum_member_name"><p><a name="NCM-SPLINE-FUNC-TEST-TYPE-PDF-FLAT:CAPS" id="NCM-SPLINE-FUNC-TEST-TYPE-PDF-FLAT:CAPS"></a>NCM_SPLINE_FUNC_TEST_TYPE_PDF_FLAT</p></td>
+<td class="enum_member_name"><p><a name="NCM-SPLINE-FUNC-TEST-TYPE-PDF-FLAT:CAPS"></a>NCM_SPLINE_FUNC_TEST_TYPE_PDF_FLAT</p></td>
 <td class="enum_member_description">
 <p>a flat PDF (see <a class="link" href="NcmRNG.html#ncm-rng-uniform-gen" title="ncm_rng_uniform_gen ()"><span class="type">ncm_rng_uniform_gen</span></a>).</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
-<td class="enum_member_name"><p><a name="NCM-SPLINE-FUNC-TEST-TYPE-PDF-NORMAL:CAPS" id="NCM-SPLINE-FUNC-TEST-TYPE-PDF-NORMAL:CAPS"></a>NCM_SPLINE_FUNC_TEST_TYPE_PDF_NORMAL</p></td>
+<td class="enum_member_name"><p><a name="NCM-SPLINE-FUNC-TEST-TYPE-PDF-NORMAL:CAPS"></a>NCM_SPLINE_FUNC_TEST_TYPE_PDF_NORMAL</p></td>
 <td class="enum_member_description">
 <p>a gaussian PDF (see <a class="link" href="NcmRNG.html#ncm-rng-gaussian-gen" title="ncm_rng_gaussian_gen ()"><span class="type">ncm_rng_gaussian_gen</span></a>).</p>
 </td>
@@ -2196,10 +2195,10 @@ ncm_spline_func_test_log_vals_mc_stats
 </div>
 </div>
 <div class="refsect1">
-<a name="NcmSplineFuncTest.property-details" id="NcmSplineFuncTest.property-details"></a><h2>Property Details</h2>
+<a name="NcmSplineFuncTest.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="NcmSplineFuncTest--ngrid" id="NcmSplineFuncTest--ngrid"></a><h3>The <code class="literal">“ngrid”</code> property</h3>
-<pre class="programlisting">  “ngrid”                    <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<a name="NcmSplineFuncTest--ngrid"></a><h3>The <code class="literal">“ngrid”</code> property</h3>
+<pre class="programlisting">  “ngrid”                    <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>The number of knots to evaluate the comparison between the base function with the
 the spline from <a class="ulink" href="numcosmo-NcmSplineFunc.html" target="_top">NcmSplineFunc</a> and the spline created with a homogeneous
 
@@ -2212,9 +2211,9 @@ distribution of knots but with the same number as <a class="ulink" href="numcosm
 <p>Allowed values: &gt;= 10</p>
 <p>Default value: 1000</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmSplineFuncTest--par-info" id="NcmSplineFuncTest--par-info"></a><h3>The <code class="literal">“par-info”</code> property</h3>
+<a name="NcmSplineFuncTest--par-info"></a><h3>The <code class="literal">“par-info”</code> property</h3>
 <pre class="programlisting">  “par-info”                 <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *</pre>
 <p><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> with the test function parameters information.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -2224,9 +2223,9 @@ distribution of knots but with the same number as <a class="ulink" href="numcosm
 <p>Owner: NcmSplineFuncTest</p>
 <p>Flags: Read / Write</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmSplineFuncTest--rel-error" id="NcmSplineFuncTest--rel-error"></a><h3>The <code class="literal">“rel-error”</code> property</h3>
+<a name="NcmSplineFuncTest--rel-error"></a><h3>The <code class="literal">“rel-error”</code> property</h3>
 <pre class="programlisting">  “rel-error”                <span class="type">double</span></pre>
 <p>Relative error (tolerance) used by <a class="ulink" href="numcosmo-NcmSplineFunc.html" target="_top">NcmSplineFunc</a> object when defining its knots.</p>
 <p>Owner: NcmSplineFuncTest</p>
@@ -2234,9 +2233,9 @@ distribution of knots but with the same number as <a class="ulink" href="numcosm
 <p>Allowed values: [2.22045e-16,1]</p>
 <p>Default value: 1e-08</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmSplineFuncTest--scale" id="NcmSplineFuncTest--scale"></a><h3>The <code class="literal">“scale”</code> property</h3>
+<a name="NcmSplineFuncTest--scale"></a><h3>The <code class="literal">“scale”</code> property</h3>
 <pre class="programlisting">  “scale”                    <span class="type">double</span></pre>
 <p>Scale of function. It is used to compute the absolute tolerance.</p>
 <p>Owner: NcmSplineFuncTest</p>
@@ -2244,28 +2243,28 @@ distribution of knots but with the same number as <a class="ulink" href="numcosm
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmSplineFuncTest--seed" id="NcmSplineFuncTest--seed"></a><h3>The <code class="literal">“seed”</code> property</h3>
-<pre class="programlisting">  “seed”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></pre>
+<a name="NcmSplineFuncTest--seed"></a><h3>The <code class="literal">“seed”</code> property</h3>
+<pre class="programlisting">  “seed”                     <a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></pre>
 <p>The seed for the random number generator <em class="parameter"><code>rng</code></em>
 .</p>
 <p>Owner: NcmSplineFuncTest</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &lt;= 4294967295</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmSplineFuncTest--type" id="NcmSplineFuncTest--type"></a><h3>The <code class="literal">“type”</code> property</h3>
+<a name="NcmSplineFuncTest--type"></a><h3>The <code class="literal">“type”</code> property</h3>
 <pre class="programlisting">  “type”                     <a class="link" href="NcmSplineFuncTest.html#NcmSplineFuncTestType" title="enum NcmSplineFuncTestType"><span class="type">NcmSplineFuncTestType</span></a></pre>
 <p>The method applied to test the <a class="ulink" href="numcosmo-NcmSplineFunc.html" target="_top">NcmSplineFunc</a> object.</p>
 <p>Owner: NcmSplineFuncTest</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: NCM_SPLINE_FUNC_TEST_TYPE_POLYNOMIAL</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmSplineFuncTest--xf" id="NcmSplineFuncTest--xf"></a><h3>The <code class="literal">“xf”</code> property</h3>
+<a name="NcmSplineFuncTest--xf"></a><h3>The <code class="literal">“xf”</code> property</h3>
 <pre class="programlisting">  “xf”                       <span class="type">double</span></pre>
 <p>The final abscissa value <em class="parameter"><code>xf</code></em>
  to performe the comparison.</p>
@@ -2273,9 +2272,9 @@ distribution of knots but with the same number as <a class="ulink" href="numcosm
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: 1</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmSplineFuncTest--xi" id="NcmSplineFuncTest--xi"></a><h3>The <code class="literal">“xi”</code> property</h3>
+<a name="NcmSplineFuncTest--xi"></a><h3>The <code class="literal">“xi”</code> property</h3>
 <pre class="programlisting">  “xi”                       <span class="type">double</span></pre>
 <p>The initial abscissa value <em class="parameter"><code>xi</code></em>
  to performe the comparison.</p>
@@ -2286,6 +2285,6 @@ distribution of knots but with the same number as <a class="ulink" href="numcosm
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.33.1</div>
-</div></div></body>
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
 </html>

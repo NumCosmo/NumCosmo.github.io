@@ -1,74 +1,58 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>NcWindow: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
-<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
-<link rel="up" href="ch08.html#id-1.9.2" title="Window Function" />
-<link rel="prev" href="ch08.html" title="Large Scale Structure" />
-<link rel="next" href="NcWindowTophat.html" title="NcWindowTophat" />
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
-<link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="container.css" type="text/css" />
-<script type="text/x-mathjax-config">
-//<![CDATA[
-                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
-                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-                                            equationNumbers: { autoNumber: "AMS" } },
-                                    messageStyle: "none"
-                });
-//]]>
-</script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
-</script>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="NumCosmo Reference Manual">
+<link rel="up" href="ch08.html#id-1.9.2" title="Window Function">
+<link rel="prev" href="ch08.html" title="Large Scale Structure">
+<link rel="next" href="NcWindowTophat.html" title="NcWindowTophat">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
                   <a href="#NcWindow.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
                   <a href="#NcWindow.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
-<td><a accesskey="u" href="ch08.html#id-1.9.2"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
-<td><a accesskey="p" href="ch08.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
-<td><a accesskey="n" href="NcWindowTophat.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch08.html#id-1.9.2"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch08.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="NcWindowTophat.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
-<a name="NcWindow" id="NcWindow"></a><div class="titlepage"></div>
+<a name="NcWindow"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="NcWindow.top_of_page" id="NcWindow.top_of_page"></a>NcWindow</span></h2>
+<h2><span class="refentrytitle"><a name="NcWindow.top_of_page"></a>NcWindow</span></h2>
 <p>NcWindow — Abstract class for window functions.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="NcWindow.stability-level" id="NcWindow.stability-level"></a><h2>Stability Level</h2>
-<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+<a name="NcWindow.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to
+develop applications to these interfaces, release them, and have confidence that
+they will run on all minor releases of the product (after the one in which the
+interface was introduced, and within the same major release). Even at a major
+release, incompatible changes are expected to be rare, and to have strong
+justifications.
+"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
 </div>
 <div class="refsect1">
-<a name="NcWindow.functions" id="NcWindow.functions"></a><h2>Functions</h2>
+<a name="NcWindow.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_proto_type" />
-<col class="functions_proto_name" />
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
 <td class="function_type">
-<a class="link" href="NcWindow.html" title="NcWindow"><span class="returnvalue">NcWindow</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="NcWindow.html#nc-window-new-from-name" title="nc_window_new_from_name ()">nc_window_new_from_name</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcWindow.html#nc-window-volume" title="nc_window_volume ()">nc_window_volume</a> <span class="c_punctuation">()</span>
@@ -76,7 +60,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcWindow.html#nc-window-eval-fourier" title="nc_window_eval_fourier ()">nc_window_eval_fourier</a> <span class="c_punctuation">()</span>
@@ -84,7 +68,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcWindow.html#nc-window-deriv-fourier" title="nc_window_deriv_fourier ()">nc_window_deriv_fourier</a> <span class="c_punctuation">()</span>
@@ -92,7 +76,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcWindow.html#nc-window-eval-realspace" title="nc_window_eval_realspace ()">nc_window_eval_realspace</a> <span class="c_punctuation">()</span>
@@ -118,20 +102,20 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcWindow.object-hierarchy" id="NcWindow.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+<a name="NcWindow.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> NcWindow
         <span class="lineart">├──</span> <a class="link" href="NcWindowGaussian.html" title="NcWindowGaussian">NcWindowGaussian</a>
         <span class="lineart">╰──</span> <a class="link" href="NcWindowTophat.html" title="NcWindowTophat">NcWindowTophat</a>
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcWindow.includes" id="NcWindow.includes"></a><h2>Includes</h2>
+<a name="NcWindow.includes"></a><h2>Includes</h2>
 <pre class="synopsis">#include &lt;numcosmo/lss/nc_window.h&gt;
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcWindow.description" id="NcWindow.description"></a><h2>Description</h2>
+<a name="NcWindow.description"></a><h2>Description</h2>
 <p>This module comprises the set of functions to compute the window function in both real
 and Fourier spaces as well as its derivative with respect to the scale $R$ in Fourier space.</p>
 <p>In order to study the statistical properties of the density fluctuation field at a certain
@@ -140,48 +124,21 @@ contrast at scale $R$, we convolve the window function in the Fourier space with
 <p>Seee also: <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatwin2"><span class="type">NcmFftlogTophatwin2</span></a> an <a class="link" href="NcmFftlogGausswin2.html" title="NcmFftlogGausswin2"><span class="type">NcmFftlogGausswin2</span></a>.</p>
 </div>
 <div class="refsect1">
-<a name="NcWindow.functions_details" id="NcWindow.functions_details"></a><h2>Functions</h2>
+<a name="NcWindow.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
-<a name="nc-window-new-from-name" id="nc-window-new-from-name"></a><h3>nc_window_new_from_name ()</h3>
-<pre class="programlisting"><a class="link" href="NcWindow.html" title="NcWindow"><span class="returnvalue">NcWindow</span></a> *
-nc_window_new_from_name (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *window_name</code></em>);</pre>
-<p>This function returns a new <a class="link" href="NcWindow.html" title="NcWindow"><span class="type">NcWindow</span></a> whose type is defined by <em class="parameter"><code>window_name</code></em>
- string.</p>
-<div class="refsect3">
-<a name="nc-window-new-from-name.parameters" id="nc-window-new-from-name.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>window_name</p></td>
-<td class="parameter_description"><p>"<a class="link" href="NcWindowTophat.html" title="NcWindowTophat"><span class="type">NcWindowTophat</span></a>" or "<a class="link" href="NcWindowGaussian.html" title="NcWindowGaussian"><span class="type">NcWindowGaussian</span></a>"</p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="nc-window-new-from-name.returns" id="nc-window-new-from-name.returns"></a><h4>Returns</h4>
-<p> A new <a class="link" href="NcWindow.html" title="NcWindow"><span class="type">NcWindow</span></a>.</p>
-</div>
-</div>
-<hr />
-<div class="refsect2">
-<a name="nc-window-volume" id="nc-window-volume"></a><h3>nc_window_volume ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="nc-window-volume"></a><h3>nc_window_volume ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_window_volume (<em class="parameter"><code><a class="link" href="NcWindow.html" title="NcWindow"><span class="type">NcWindow</span></a> *wf</code></em>);</pre>
 <p>This function returns the volume of the region (with radius 1) defined by the window function.</p>
 <p>Top-hat volume: <a class="link" href="NcWindowTophat.html#NC-WINDOW-VOLUME-TOPHAT:CAPS" title="NC_WINDOW_VOLUME_TOPHAT"><span class="type">NC_WINDOW_VOLUME_TOPHAT</span></a>.</p>
 <p>Gaussian volume: <a class="link" href="NcWindowGaussian.html#NC-WINDOW-VOLUME-GAUSSIAN:CAPS" title="NC_WINDOW_VOLUME_GAUSSIAN"><span class="type">NC_WINDOW_VOLUME_GAUSSIAN</span></a>.</p>
 <div class="refsect3">
-<a name="nc-window-volume.parameters" id="nc-window-volume.parameters"></a><h4>Parameters</h4>
+<a name="nc-window-volume.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>wf</p></td>
@@ -191,26 +148,26 @@ nc_window_volume (<em class="parameter"><code><a class="link" href="NcWindow.htm
 </table></div>
 </div>
 <div class="refsect3">
-<a name="nc-window-volume.returns" id="nc-window-volume.returns"></a><h4>Returns</h4>
+<a name="nc-window-volume.returns"></a><h4>Returns</h4>
 <p> The volume (with radius 1) defined by <em class="parameter"><code>wf</code></em>
 .</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="nc-window-eval-fourier" id="nc-window-eval-fourier"></a><h3>nc_window_eval_fourier ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="nc-window-eval-fourier"></a><h3>nc_window_eval_fourier ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_window_eval_fourier (<em class="parameter"><code>const <a class="link" href="NcWindow.html" title="NcWindow"><span class="type">NcWindow</span></a> *wf</code></em>,
-                        <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>,
-                        <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> R</code></em>);</pre>
+                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>,
+                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> R</code></em>);</pre>
 <p>This function computes the window function in the Fourier space.</p>
 <div class="refsect3">
-<a name="nc-window-eval-fourier.parameters" id="nc-window-eval-fourier.parameters"></a><h4>Parameters</h4>
+<a name="nc-window-eval-fourier.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -232,28 +189,28 @@ nc_window_eval_fourier (<em class="parameter"><code>const <a class="link" href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="nc-window-eval-fourier.returns" id="nc-window-eval-fourier.returns"></a><h4>Returns</h4>
+<a name="nc-window-eval-fourier.returns"></a><h4>Returns</h4>
 <p> The value of the window function in the Fourier space at scale <em class="parameter"><code>R</code></em>
 .</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="nc-window-deriv-fourier" id="nc-window-deriv-fourier"></a><h3>nc_window_deriv_fourier ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="nc-window-deriv-fourier"></a><h3>nc_window_deriv_fourier ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_window_deriv_fourier (<em class="parameter"><code>const <a class="link" href="NcWindow.html" title="NcWindow"><span class="type">NcWindow</span></a> *wf</code></em>,
-                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>,
-                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> R</code></em>);</pre>
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>,
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> R</code></em>);</pre>
 <p>This function returns the derivative with respect to <em class="parameter"><code>R</code></em>
  of the window function
 in the Fourier space.</p>
 <div class="refsect3">
-<a name="nc-window-deriv-fourier.parameters" id="nc-window-deriv-fourier.parameters"></a><h4>Parameters</h4>
+<a name="nc-window-deriv-fourier.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -275,26 +232,26 @@ in the Fourier space.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="nc-window-deriv-fourier.returns" id="nc-window-deriv-fourier.returns"></a><h4>Returns</h4>
+<a name="nc-window-deriv-fourier.returns"></a><h4>Returns</h4>
 <p> The value of the first derivative of the window function in the Fourier space at scale <em class="parameter"><code>R</code></em>
 .</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="nc-window-eval-realspace" id="nc-window-eval-realspace"></a><h3>nc_window_eval_realspace ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="nc-window-eval-realspace"></a><h3>nc_window_eval_realspace ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 nc_window_eval_realspace (<em class="parameter"><code>const <a class="link" href="NcWindow.html" title="NcWindow"><span class="type">NcWindow</span></a> *wf</code></em>,
-                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> r</code></em>,
-                          <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> R</code></em>);</pre>
+                          <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> r</code></em>,
+                          <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> R</code></em>);</pre>
 <p>This function computes the window function in real space.</p>
 <div class="refsect3">
-<a name="nc-window-eval-realspace.parameters" id="nc-window-eval-realspace.parameters"></a><h4>Parameters</h4>
+<a name="nc-window-eval-realspace.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -316,14 +273,14 @@ nc_window_eval_realspace (<em class="parameter"><code>const <a class="link" href
 </table></div>
 </div>
 <div class="refsect3">
-<a name="nc-window-eval-realspace.returns" id="nc-window-eval-realspace.returns"></a><h4>Returns</h4>
+<a name="nc-window-eval-realspace.returns"></a><h4>Returns</h4>
 <p> The value of the window function in the real space at scale <em class="parameter"><code>R</code></em>
 .</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="nc-window-free" id="nc-window-free"></a><h3>nc_window_free ()</h3>
+<a name="nc-window-free"></a><h3>nc_window_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_window_free (<em class="parameter"><code><a class="link" href="NcWindow.html" title="NcWindow"><span class="type">NcWindow</span></a> *wf</code></em>);</pre>
 <p>Atomically decrements the reference count of <em class="parameter"><code>wf</code></em>
@@ -331,12 +288,12 @@ nc_window_free (<em class="parameter"><code><a class="link" href="NcWindow.html"
 all memory allocated by <em class="parameter"><code>wf</code></em>
  is released.</p>
 <div class="refsect3">
-<a name="nc-window-free.parameters" id="nc-window-free.parameters"></a><h4>Parameters</h4>
+<a name="nc-window-free.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>wf</p></td>
@@ -346,9 +303,9 @@ all memory allocated by <em class="parameter"><code>wf</code></em>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="nc-window-clear" id="nc-window-clear"></a><h3>nc_window_clear ()</h3>
+<a name="nc-window-clear"></a><h3>nc_window_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_window_clear (<em class="parameter"><code><a class="link" href="NcWindow.html" title="NcWindow"><span class="type">NcWindow</span></a> **wf</code></em>);</pre>
 <p>Atomically decrements the reference count of <em class="parameter"><code>wf</code></em>
@@ -356,12 +313,12 @@ nc_window_clear (<em class="parameter"><code><a class="link" href="NcWindow.html
 all memory allocated by <em class="parameter"><code>wf</code></em>
  is released. Set the pointer to NULL.</p>
 <div class="refsect3">
-<a name="nc-window-clear.parameters" id="nc-window-clear.parameters"></a><h4>Parameters</h4>
+<a name="nc-window-clear.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>wf</p></td>
@@ -374,6 +331,6 @@ all memory allocated by <em class="parameter"><code>wf</code></em>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.33.1</div>
-</div></div></body>
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
 </html>

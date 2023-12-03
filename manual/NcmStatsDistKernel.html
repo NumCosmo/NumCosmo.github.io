@@ -1,31 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>NcmStatsDistKernel: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
-<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
-<link rel="up" href="ch02s14.html" title="Multivariate density estimation" />
-<link rel="prev" href="NcmStatsDistVKDE.html" title="NcmStatsDistVKDE" />
-<link rel="next" href="NcmStatsDistKernelGauss.html" title="NcmStatsDistKernelGauss" />
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
-<link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="container.css" type="text/css" />
-<script type="text/x-mathjax-config">
-//<![CDATA[
-                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
-                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-                                            equationNumbers: { autoNumber: "AMS" } },
-                                    messageStyle: "none"
-                });
-//]]>
-</script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
-</script>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="NumCosmo Reference Manual">
+<link rel="up" href="ch02s14.html" title="Multivariate density estimation">
+<link rel="prev" href="NcmStatsDistVKDE.html" title="NcmStatsDistVKDE">
+<link rel="next" href="NcmStatsDistKernelGauss.html" title="NcmStatsDistKernelGauss">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
@@ -33,26 +19,26 @@
                   <a href="#NcmStatsDistKernel.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
                   <a href="#NcmStatsDistKernel.properties" class="shortcut">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
-<td><a accesskey="u" href="ch02s14.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
-<td><a accesskey="p" href="NcmStatsDistVKDE.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
-<td><a accesskey="n" href="NcmStatsDistKernelGauss.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02s14.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="NcmStatsDistVKDE.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="NcmStatsDistKernelGauss.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
-<a name="NcmStatsDistKernel" id="NcmStatsDistKernel"></a><div class="titlepage"></div>
+<a name="NcmStatsDistKernel"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="NcmStatsDistKernel.top_of_page" id="NcmStatsDistKernel.top_of_page"></a>NcmStatsDistKernel</span></h2>
+<h2><span class="refentrytitle"><a name="NcmStatsDistKernel.top_of_page"></a>NcmStatsDistKernel</span></h2>
 <p>NcmStatsDistKernel — An N-dimensional kernel used to compute the kernel density estimation function (KDE) in the <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="NcmStatsDistKernel.functions" id="NcmStatsDistKernel.functions"></a><h2>Functions</h2>
+<a name="NcmStatsDistKernel.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_proto_type" />
-<col class="functions_proto_name" />
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -81,7 +67,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmStatsDistKernel.html#ncm-stats-dist-kernel-get-dim" title="ncm_stats_dist_kernel_get_dim ()">ncm_stats_dist_kernel_get_dim</a> <span class="c_punctuation">()</span>
@@ -89,7 +75,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmStatsDistKernel.html#ncm-stats-dist-kernel-get-rot-bandwidth" title="ncm_stats_dist_kernel_get_rot_bandwidth ()">ncm_stats_dist_kernel_get_rot_bandwidth</a> <span class="c_punctuation">()</span>
@@ -97,7 +83,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmStatsDistKernel.html#ncm-stats-dist-kernel-get-lnnorm" title="ncm_stats_dist_kernel_get_lnnorm ()">ncm_stats_dist_kernel_get_lnnorm</a> <span class="c_punctuation">()</span>
@@ -105,7 +91,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmStatsDistKernel.html#ncm-stats-dist-kernel-eval-unnorm" title="ncm_stats_dist_kernel_eval_unnorm ()">ncm_stats_dist_kernel_eval_unnorm</a> <span class="c_punctuation">()</span>
@@ -147,30 +133,30 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmStatsDistKernel.properties" id="NcmStatsDistKernel.properties"></a><h2>Properties</h2>
+<a name="NcmStatsDistKernel.properties"></a><h2>Properties</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="properties_type" />
-<col width="300px" class="properties_name" />
-<col width="200px" class="properties_flags" />
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
 </colgroup>
 <tbody><tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcmStatsDistKernel.html#NcmStatsDistKernel--dimension" title="The “dimension” property">dimension</a></td>
 <td class="property_flags">Read / Write / Construct Only</td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmStatsDistKernel.object-hierarchy" id="NcmStatsDistKernel.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+<a name="NcmStatsDistKernel.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> NcmStatsDistKernel
         <span class="lineart">├──</span> <a class="link" href="NcmStatsDistKernelGauss.html" title="NcmStatsDistKernelGauss">NcmStatsDistKernelGauss</a>
         <span class="lineart">╰──</span> <a class="link" href="NcmStatsDistKernelST.html" title="NcmStatsDistKernelST">NcmStatsDistKernelST</a>
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcmStatsDistKernel.description" id="NcmStatsDistKernel.description"></a><h2>Description</h2>
+<a name="NcmStatsDistKernel.description"></a><h2>Description</h2>
 <p>An N-dimensional kernel used to compute the kernel density estimation function (KDE) in the <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> class.</p>
 <p>This class provides the tools to generate a kernel function to be used in a kernel
 density estimation method. Below is a quick review of the kernel density estimation method
@@ -223,20 +209,20 @@ Check the childs documentations for more information. More information about how
 <p>	-Every child object of this class can be used either in the <a class="link" href="NcmStatsDistKDE.html" title="NcmStatsDistKDE"><span class="type">NcmStatsDistKDE</span></a> class or in the <a class="link" href="NcmStatsDistVKDE.html" title="NcmStatsDistVKDE"><span class="type">NcmStatsDistVKDE</span></a> class.</p>
 </div>
 <div class="refsect1">
-<a name="NcmStatsDistKernel.functions_details" id="NcmStatsDistKernel.functions_details"></a><h2>Functions</h2>
+<a name="NcmStatsDistKernel.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
-<a name="ncm-stats-dist-kernel-ref" id="ncm-stats-dist-kernel-ref"></a><h3>ncm_stats_dist_kernel_ref ()</h3>
+<a name="ncm-stats-dist-kernel-ref"></a><h3>ncm_stats_dist_kernel_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="returnvalue">NcmStatsDistKernel</span></a> *
 ncm_stats_dist_kernel_ref (<em class="parameter"><code><a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> *sdk</code></em>);</pre>
 <p>Increase the reference of <em class="parameter"><code>sdk</code></em>
  by one.</p>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-ref.parameters" id="ncm-stats-dist-kernel-ref.parameters"></a><h4>Parameters</h4>
+<a name="ncm-stats-dist-kernel-ref.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sdk</p></td>
@@ -246,26 +232,26 @@ ncm_stats_dist_kernel_ref (<em class="parameter"><code><a class="link" href="Ncm
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-ref.returns" id="ncm-stats-dist-kernel-ref.returns"></a><h4>Returns</h4>
+<a name="ncm-stats-dist-kernel-ref.returns"></a><h4>Returns</h4>
 <p><em class="parameter"><code>sdk</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-stats-dist-kernel-free" id="ncm-stats-dist-kernel-free"></a><h3>ncm_stats_dist_kernel_free ()</h3>
+<a name="ncm-stats-dist-kernel-free"></a><h3>ncm_stats_dist_kernel_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_stats_dist_kernel_free (<em class="parameter"><code><a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> *sdk</code></em>);</pre>
 <p>Decrease the reference count of <em class="parameter"><code>sdk</code></em>
  by one.</p>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-free.parameters" id="ncm-stats-dist-kernel-free.parameters"></a><h4>Parameters</h4>
+<a name="ncm-stats-dist-kernel-free.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sdk</p></td>
@@ -275,9 +261,9 @@ ncm_stats_dist_kernel_free (<em class="parameter"><code><a class="link" href="Nc
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-stats-dist-kernel-clear" id="ncm-stats-dist-kernel-clear"></a><h3>ncm_stats_dist_kernel_clear ()</h3>
+<a name="ncm-stats-dist-kernel-clear"></a><h3>ncm_stats_dist_kernel_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_stats_dist_kernel_clear (<em class="parameter"><code><a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> **sdk</code></em>);</pre>
 <p>Decrease the reference count of <em class="parameter"><code>stats_dist_nd_kde_gauss</code></em>
@@ -285,12 +271,12 @@ ncm_stats_dist_kernel_clear (<em class="parameter"><code><a class="link" href="N
  to
 NULL.</p>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-clear.parameters" id="ncm-stats-dist-kernel-clear.parameters"></a><h4>Parameters</h4>
+<a name="ncm-stats-dist-kernel-clear.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sdk</p></td>
@@ -300,20 +286,20 @@ NULL.</p>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-stats-dist-kernel-get-dim" id="ncm-stats-dist-kernel-get-dim"></a><h3>ncm_stats_dist_kernel_get_dim ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<a name="ncm-stats-dist-kernel-get-dim"></a><h3>ncm_stats_dist_kernel_get_dim ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 ncm_stats_dist_kernel_get_dim (<em class="parameter"><code><a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> *sdk</code></em>);</pre>
 <p>Gets current kernel dimension.</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_dim]</span></p>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-get-dim.parameters" id="ncm-stats-dist-kernel-get-dim.parameters"></a><h4>Parameters</h4>
+<a name="ncm-stats-dist-kernel-get-dim.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sdk</p></td>
@@ -323,28 +309,28 @@ ncm_stats_dist_kernel_get_dim (<em class="parameter"><code><a class="link" href=
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-get-dim.returns" id="ncm-stats-dist-kernel-get-dim.returns"></a><h4>Returns</h4>
+<a name="ncm-stats-dist-kernel-get-dim.returns"></a><h4>Returns</h4>
 <p> current kernel dimension.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-stats-dist-kernel-get-rot-bandwidth" id="ncm-stats-dist-kernel-get-rot-bandwidth"></a><h3>ncm_stats_dist_kernel_get_rot_bandwidth ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-stats-dist-kernel-get-rot-bandwidth"></a><h3>ncm_stats_dist_kernel_get_rot_bandwidth ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_stats_dist_kernel_get_rot_bandwidth
                                (<em class="parameter"><code><a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> *sdk</code></em>,
-                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> n</code></em>);</pre>
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> n</code></em>);</pre>
 <p>Computes the rule-of-thumb bandwidth for a interpolation
 using <em class="parameter"><code>n</code></em>
  kernels.</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_rot_bandwidth]</span></p>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-get-rot-bandwidth.parameters" id="ncm-stats-dist-kernel-get-rot-bandwidth.parameters"></a><h4>Parameters</h4>
+<a name="ncm-stats-dist-kernel-get-rot-bandwidth.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -361,26 +347,26 @@ using <em class="parameter"><code>n</code></em>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-get-rot-bandwidth.returns" id="ncm-stats-dist-kernel-get-rot-bandwidth.returns"></a><h4>Returns</h4>
+<a name="ncm-stats-dist-kernel-get-rot-bandwidth.returns"></a><h4>Returns</h4>
 <p> the rule-of-thumb bandwidth.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-stats-dist-kernel-get-lnnorm" id="ncm-stats-dist-kernel-get-lnnorm"></a><h3>ncm_stats_dist_kernel_get_lnnorm ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-stats-dist-kernel-get-lnnorm"></a><h3>ncm_stats_dist_kernel_get_lnnorm ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_stats_dist_kernel_get_lnnorm (<em class="parameter"><code><a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> *sdk</code></em>,
                                   <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cov_decomp</code></em>);</pre>
 <p>Computes the kernel normalization for a given covariance <em class="parameter"><code>cov_decomp</code></em>
 .</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_lnnorm]</span></p>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-get-lnnorm.parameters" id="ncm-stats-dist-kernel-get-lnnorm.parameters"></a><h4>Parameters</h4>
+<a name="ncm-stats-dist-kernel-get-lnnorm.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -397,26 +383,26 @@ ncm_stats_dist_kernel_get_lnnorm (<em class="parameter"><code><a class="link" hr
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-get-lnnorm.returns" id="ncm-stats-dist-kernel-get-lnnorm.returns"></a><h4>Returns</h4>
+<a name="ncm-stats-dist-kernel-get-lnnorm.returns"></a><h4>Returns</h4>
 <p> the kernel normalization logarithm.</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-stats-dist-kernel-eval-unnorm" id="ncm-stats-dist-kernel-eval-unnorm"></a><h3>ncm_stats_dist_kernel_eval_unnorm ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a name="ncm-stats-dist-kernel-eval-unnorm"></a><h3>ncm_stats_dist_kernel_eval_unnorm ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_stats_dist_kernel_eval_unnorm (<em class="parameter"><code><a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> *sdk</code></em>,
-                                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> chi2</code></em>);</pre>
+                                   <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> chi2</code></em>);</pre>
 <p>Computes the unnormalized kernel at $\chi^2=$<em class="parameter"><code>chi2</code></em>
 .</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> eval_unnorm]</span></p>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-eval-unnorm.parameters" id="ncm-stats-dist-kernel-eval-unnorm.parameters"></a><h4>Parameters</h4>
+<a name="ncm-stats-dist-kernel-eval-unnorm.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -433,14 +419,14 @@ ncm_stats_dist_kernel_eval_unnorm (<em class="parameter"><code><a class="link" h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-eval-unnorm.returns" id="ncm-stats-dist-kernel-eval-unnorm.returns"></a><h4>Returns</h4>
+<a name="ncm-stats-dist-kernel-eval-unnorm.returns"></a><h4>Returns</h4>
 <p> the unnormalized kernel at $\chi^2=$<em class="parameter"><code>chi2</code></em>
 .</p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-stats-dist-kernel-eval-unnorm-vec" id="ncm-stats-dist-kernel-eval-unnorm-vec"></a><h3>ncm_stats_dist_kernel_eval_unnorm_vec ()</h3>
+<a name="ncm-stats-dist-kernel-eval-unnorm-vec"></a><h3>ncm_stats_dist_kernel_eval_unnorm_vec ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_stats_dist_kernel_eval_unnorm_vec (<em class="parameter"><code><a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> *sdk</code></em>,
                                        <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *chi2</code></em>,
@@ -452,12 +438,12 @@ and store the results at <em class="parameter"><code>Ku</code></em>
 .</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> eval_unnorm_vec]</span></p>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-eval-unnorm-vec.parameters" id="ncm-stats-dist-kernel-eval-unnorm-vec.parameters"></a><h4>Parameters</h4>
+<a name="ncm-stats-dist-kernel-eval-unnorm-vec.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -479,9 +465,9 @@ and store the results at <em class="parameter"><code>Ku</code></em>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-stats-dist-kernel-eval-sum0-gamma-lambda" id="ncm-stats-dist-kernel-eval-sum0-gamma-lambda"></a><h3>ncm_stats_dist_kernel_eval_sum0_gamma_lambda ()</h3>
+<a name="ncm-stats-dist-kernel-eval-sum0-gamma-lambda"></a><h3>ncm_stats_dist_kernel_eval_sum0_gamma_lambda ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_stats_dist_kernel_eval_sum0_gamma_lambda
                                (<em class="parameter"><code><a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> *sdk</code></em>,
@@ -489,8 +475,8 @@ ncm_stats_dist_kernel_eval_sum0_gamma_lambda
                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *weights</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *lnnorms</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *lnK</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *gamma</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lambda</code></em>);</pre>
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *gamma</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lambda</code></em>);</pre>
 <p>Computes the weighted sum of kernels at $\chi^2=$<em class="parameter"><code>chi2</code></em>
  (the density estimator function),
 $$ e^\gamma (1+\lambda) = \sum_i w_i\bar{K} (\chi^2_i) / u_i,$$
@@ -499,12 +485,12 @@ is the largest term of the sum. This function shall be used when
 each kernel has a different normalization factor.</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> eval_sum0_gamma_lambda]</span></p>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-eval-sum0-gamma-lambda.parameters" id="ncm-stats-dist-kernel-eval-sum0-gamma-lambda.parameters"></a><h4>Parameters</h4>
+<a name="ncm-stats-dist-kernel-eval-sum0-gamma-lambda.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -546,18 +532,18 @@ each kernel has a different normalization factor.</p>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-stats-dist-kernel-eval-sum1-gamma-lambda" id="ncm-stats-dist-kernel-eval-sum1-gamma-lambda"></a><h3>ncm_stats_dist_kernel_eval_sum1_gamma_lambda ()</h3>
+<a name="ncm-stats-dist-kernel-eval-sum1-gamma-lambda"></a><h3>ncm_stats_dist_kernel_eval_sum1_gamma_lambda ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_stats_dist_kernel_eval_sum1_gamma_lambda
                                (<em class="parameter"><code><a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> *sdk</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *chi2</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *weights</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnnorm</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> lnnorm</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *lnK</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *gamma</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lambda</code></em>);</pre>
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *gamma</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *lambda</code></em>);</pre>
 <p>Computes the weighted sum of kernels at $\chi^2=$<em class="parameter"><code>chi2</code></em>
  (the density estimator function),
 $$ e^\gamma (1+\lambda) = \sum_i w_i\bar{K} (\chi^2_i) / u,$$
@@ -566,12 +552,12 @@ is the largest term of the sum. This function shall be used when
 all the kernels have the same normalization factor.</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> eval_sum1_gamma_lambda]</span></p>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-eval-sum1-gamma-lambda.parameters" id="ncm-stats-dist-kernel-eval-sum1-gamma-lambda.parameters"></a><h4>Parameters</h4>
+<a name="ncm-stats-dist-kernel-eval-sum1-gamma-lambda.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -613,13 +599,13 @@ all the kernels have the same normalization factor.</p>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-stats-dist-kernel-sample" id="ncm-stats-dist-kernel-sample"></a><h3>ncm_stats_dist_kernel_sample ()</h3>
+<a name="ncm-stats-dist-kernel-sample"></a><h3>ncm_stats_dist_kernel_sample ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_stats_dist_kernel_sample (<em class="parameter"><code><a class="link" href="NcmStatsDistKernel.html" title="NcmStatsDistKernel"><span class="type">NcmStatsDistKernel</span></a> *sdk</code></em>,
                               <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cov_decomp</code></em>,
-                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> href</code></em>,
+                              <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> href</code></em>,
                               <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *mu</code></em>,
                               <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *y</code></em>,
                               <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
@@ -632,12 +618,12 @@ location vector <em class="parameter"><code>mu</code></em>
 .</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> sample]</span></p>
 <div class="refsect3">
-<a name="ncm-stats-dist-kernel-sample.parameters" id="ncm-stats-dist-kernel-sample.parameters"></a><h4>Parameters</h4>
+<a name="ncm-stats-dist-kernel-sample.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -676,10 +662,10 @@ location vector <em class="parameter"><code>mu</code></em>
 </div>
 </div>
 <div class="refsect1">
-<a name="NcmStatsDistKernel.property-details" id="NcmStatsDistKernel.property-details"></a><h2>Property Details</h2>
+<a name="NcmStatsDistKernel.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="NcmStatsDistKernel--dimension" id="NcmStatsDistKernel--dimension"></a><h3>The <code class="literal">“dimension”</code> property</h3>
-<pre class="programlisting">  “dimension”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<a name="NcmStatsDistKernel--dimension"></a><h3>The <code class="literal">“dimension”</code> property</h3>
+<pre class="programlisting">  “dimension”                <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Kernel dimension.</p>
 <p>Owner: NcmStatsDistKernel</p>
 <p>Flags: Read / Write / Construct Only</p>
@@ -689,6 +675,6 @@ location vector <em class="parameter"><code>mu</code></em>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.33.1</div>
-</div></div></body>
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
 </html>

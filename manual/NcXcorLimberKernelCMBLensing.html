@@ -1,31 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>NcXcorLimberKernelCMBLensing: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
-<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
-<link rel="up" href="ch08s09.html" title="Cross-correlations" />
-<link rel="prev" href="NcXcorLimberKernelGal.html" title="NcXcorLimberKernelGal" />
-<link rel="next" href="NcXcorLimberKernelWeakLensing.html" title="NcXcorLimberKernelWeakLensing" />
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
-<link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="container.css" type="text/css" />
-<script type="text/x-mathjax-config">
-//<![CDATA[
-                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
-                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-                                            equationNumbers: { autoNumber: "AMS" } },
-                                    messageStyle: "none"
-                });
-//]]>
-</script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
-</script>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="NumCosmo Reference Manual">
+<link rel="up" href="ch08s09.html" title="Cross-correlations">
+<link rel="prev" href="NcXcorLimberKernelGal.html" title="NcXcorLimberKernelGal">
+<link rel="next" href="NcXcorLimberKernelWeakLensing.html" title="NcXcorLimberKernelWeakLensing">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
@@ -33,26 +19,26 @@
                   <a href="#NcXcorLimberKernelCMBLensing.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
                   <a href="#NcXcorLimberKernelCMBLensing.properties" class="shortcut">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
-<td><a accesskey="u" href="ch08s09.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
-<td><a accesskey="p" href="NcXcorLimberKernelGal.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
-<td><a accesskey="n" href="NcXcorLimberKernelWeakLensing.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch08s09.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="NcXcorLimberKernelGal.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="NcXcorLimberKernelWeakLensing.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
-<a name="NcXcorLimberKernelCMBLensing" id="NcXcorLimberKernelCMBLensing"></a><div class="titlepage"></div>
+<a name="NcXcorLimberKernelCMBLensing"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="NcXcorLimberKernelCMBLensing.top_of_page" id="NcXcorLimberKernelCMBLensing.top_of_page"></a>NcXcorLimberKernelCMBLensing</span></h2>
+<h2><span class="refentrytitle"><a name="NcXcorLimberKernelCMBLensing.top_of_page"></a>NcXcorLimberKernelCMBLensing</span></h2>
 <p>NcXcorLimberKernelCMBLensing — implementation of <a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel"><span class="type">NcXcorLimberKernel</span></a> for CMB lensing</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="NcXcorLimberKernelCMBLensing.functions" id="NcXcorLimberKernelCMBLensing.functions"></a><h2>Functions</h2>
+<a name="NcXcorLimberKernelCMBLensing.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_proto_type" />
-<col class="functions_proto_name" />
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody><tr>
 <td class="function_type">
@@ -65,12 +51,12 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcXcorLimberKernelCMBLensing.properties" id="NcXcorLimberKernelCMBLensing.properties"></a><h2>Properties</h2>
+<a name="NcXcorLimberKernelCMBLensing.properties"></a><h2>Properties</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="properties_type" />
-<col width="300px" class="properties_name" />
-<col width="200px" class="properties_flags" />
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
 </colgroup>
 <tbody>
 <tr>
@@ -95,11 +81,11 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcXcorLimberKernelCMBLensing.other" id="NcXcorLimberKernelCMBLensing.other"></a><h2>Types and Values</h2>
+<a name="NcXcorLimberKernelCMBLensing.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="other_proto_type" />
-<col class="other_proto_name" />
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -114,38 +100,38 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcXcorLimberKernelCMBLensing.object-hierarchy" id="NcXcorLimberKernelCMBLensing.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<a name="NcXcorLimberKernelCMBLensing.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
     <span class="lineart">╰──</span> NcXcorLimberKernelCMBLensingSParams
-    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmModel.html" title="NcmModel">NcmModel</a>
         <span class="lineart">╰──</span> <a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel">NcXcorLimberKernel</a>
             <span class="lineart">╰──</span> NcXcorLimberKernelCMBLensing
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcXcorLimberKernelCMBLensing.description" id="NcXcorLimberKernelCMBLensing.description"></a><h2>Description</h2>
+<a name="NcXcorLimberKernelCMBLensing.description"></a><h2>Description</h2>
 <p>The kernel is given by
 \begin{equation}
    W^{\kappa_\mathrm{CMB}} (z) = \frac{3}{2} \frac{\Omega_m H_0^2}{c} \frac{(1+z)}{H(z)} \chi(z) \frac{\chi(z_*) - \chi(z)}{\chi(z_*)}.
 \end{equation}</p>
 </div>
 <div class="refsect1">
-<a name="NcXcorLimberKernelCMBLensing.functions_details" id="NcXcorLimberKernelCMBLensing.functions_details"></a><h2>Functions</h2>
+<a name="NcXcorLimberKernelCMBLensing.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
-<a name="nc-xcor-limber-kernel-cmb-lensing-new" id="nc-xcor-limber-kernel-cmb-lensing-new"></a><h3>nc_xcor_limber_kernel_cmb_lensing_new ()</h3>
+<a name="nc-xcor-limber-kernel-cmb-lensing-new"></a><h3>nc_xcor_limber_kernel_cmb_lensing_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcXcorLimberKernelCMBLensing.html" title="NcXcorLimberKernelCMBLensing"><span class="returnvalue">NcXcorLimberKernelCMBLensing</span></a> *
 nc_xcor_limber_kernel_cmb_lensing_new (<em class="parameter"><code><a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *dist</code></em>,
                                        <em class="parameter"><code><a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *recomb</code></em>,
                                        <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *Nl</code></em>);</pre>
 <p>FIXME</p>
 <div class="refsect3">
-<a name="nc-xcor-limber-kernel-cmb-lensing-new.parameters" id="nc-xcor-limber-kernel-cmb-lensing-new.parameters"></a><h4>Parameters</h4>
+<a name="nc-xcor-limber-kernel-cmb-lensing-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -167,26 +153,26 @@ nc_xcor_limber_kernel_cmb_lensing_new (<em class="parameter"><code><a class="lin
 </table></div>
 </div>
 <div class="refsect3">
-<a name="nc-xcor-limber-kernel-cmb-lensing-new.returns" id="nc-xcor-limber-kernel-cmb-lensing-new.returns"></a><h4>Returns</h4>
+<a name="nc-xcor-limber-kernel-cmb-lensing-new.returns"></a><h4>Returns</h4>
 <p> FIXME</p>
 </div>
 </div>
 </div>
 <div class="refsect1">
-<a name="NcXcorLimberKernelCMBLensing.other_details" id="NcXcorLimberKernelCMBLensing.other_details"></a><h2>Types and Values</h2>
+<a name="NcXcorLimberKernelCMBLensing.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
-<a name="NcXcorLimberKernelCMBLensingSParams" id="NcXcorLimberKernelCMBLensingSParams"></a><h3>enum NcXcorLimberKernelCMBLensingSParams</h3>
+<a name="NcXcorLimberKernelCMBLensingSParams"></a><h3>enum NcXcorLimberKernelCMBLensingSParams</h3>
 <p>FIXME</p>
 <div class="refsect3">
-<a name="NcXcorLimberKernelCMBLensingSParams.members" id="NcXcorLimberKernelCMBLensingSParams.members"></a><h4>Members</h4>
+<a name="NcXcorLimberKernelCMBLensingSParams.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="300px" class="enum_members_name" />
-<col class="enum_members_description" />
-<col width="200px" class="enum_members_annotations" />
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
 </colgroup>
 <tbody><tr>
-<td class="enum_member_name"><p><a name="NC-XCOR-LIMBER-KERNEL-CMB-LENSING-SPARAM-LEN:CAPS" id="NC-XCOR-LIMBER-KERNEL-CMB-LENSING-SPARAM-LEN:CAPS"></a>NC_XCOR_LIMBER_KERNEL_CMB_LENSING_SPARAM_LEN</p></td>
+<td class="enum_member_name"><p><a name="NC-XCOR-LIMBER-KERNEL-CMB-LENSING-SPARAM-LEN:CAPS"></a>NC_XCOR_LIMBER_KERNEL_CMB_LENSING_SPARAM_LEN</p></td>
 <td class="enum_member_description">
 <p>FIXME</p>
 </td>
@@ -195,33 +181,33 @@ nc_xcor_limber_kernel_cmb_lensing_new (<em class="parameter"><code><a class="lin
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NC-XCOR-LIMBER-KERNEL-CMB-LENSING-DEFAULT-PARAMS-ABSTOL:CAPS" id="NC-XCOR-LIMBER-KERNEL-CMB-LENSING-DEFAULT-PARAMS-ABSTOL:CAPS"></a><h3>NC_XCOR_LIMBER_KERNEL_CMB_LENSING_DEFAULT_PARAMS_ABSTOL</h3>
+<a name="NC-XCOR-LIMBER-KERNEL-CMB-LENSING-DEFAULT-PARAMS-ABSTOL:CAPS"></a><h3>NC_XCOR_LIMBER_KERNEL_CMB_LENSING_DEFAULT_PARAMS_ABSTOL</h3>
 <pre class="programlisting">#define NC_XCOR_LIMBER_KERNEL_CMB_LENSING_DEFAULT_PARAMS_ABSTOL (0.0)
 </pre>
 </div>
 </div>
 <div class="refsect1">
-<a name="NcXcorLimberKernelCMBLensing.property-details" id="NcXcorLimberKernelCMBLensing.property-details"></a><h2>Property Details</h2>
+<a name="NcXcorLimberKernelCMBLensing.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="NcXcorLimberKernelCMBLensing--Nl" id="NcXcorLimberKernelCMBLensing--Nl"></a><h3>The <code class="literal">“Nl”</code> property</h3>
+<a name="NcXcorLimberKernelCMBLensing--Nl"></a><h3>The <code class="literal">“Nl”</code> property</h3>
 <pre class="programlisting">  “Nl”                       <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
 <p>FIXME Set correct values (limits)</p>
 <p>Owner: NcXcorLimberKernelCMBLensing</p>
 <p>Flags: Read / Write</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcXcorLimberKernelCMBLensing--dist" id="NcXcorLimberKernelCMBLensing--dist"></a><h3>The <code class="literal">“dist”</code> property</h3>
+<a name="NcXcorLimberKernelCMBLensing--dist"></a><h3>The <code class="literal">“dist”</code> property</h3>
 <pre class="programlisting">  “dist”                     <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *</pre>
 <p>FIXME Set correct values (limits)</p>
 <p>Owner: NcXcorLimberKernelCMBLensing</p>
 <p>Flags: Read / Write</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcXcorLimberKernelCMBLensing--recomb" id="NcXcorLimberKernelCMBLensing--recomb"></a><h3>The <code class="literal">“recomb”</code> property</h3>
+<a name="NcXcorLimberKernelCMBLensing--recomb"></a><h3>The <code class="literal">“recomb”</code> property</h3>
 <pre class="programlisting">  “recomb”                   <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *</pre>
 <p>FIXME Set correct values (limits)</p>
 <p>Owner: NcXcorLimberKernelCMBLensing</p>
@@ -230,6 +216,6 @@ nc_xcor_limber_kernel_cmb_lensing_new (<em class="parameter"><code><a class="lin
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.33.1</div>
-</div></div></body>
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
 </html>

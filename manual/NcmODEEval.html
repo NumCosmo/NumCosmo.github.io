@@ -1,31 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>NcmODEEval: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
-<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
-<link rel="up" href="ch02s03.html" title="ODE Solvers objects" />
-<link rel="prev" href="NcmODE.html" title="NcmODE" />
-<link rel="next" href="ch02s04.html" title="FFTLog" />
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
-<link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="container.css" type="text/css" />
-<script type="text/x-mathjax-config">
-//<![CDATA[
-                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
-                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-                                            equationNumbers: { autoNumber: "AMS" } },
-                                    messageStyle: "none"
-                });
-//]]>
-</script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
-</script>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="NumCosmo Reference Manual">
+<link rel="up" href="ch02s03.html" title="ODE Solvers objects">
+<link rel="prev" href="NcmODE.html" title="NcmODE">
+<link rel="next" href="ch02s04.html" title="FFTLog">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
@@ -33,35 +19,41 @@
                   <a href="#NcmODEEval.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
                   <a href="#NcmODEEval.properties" class="shortcut">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
-<td><a accesskey="u" href="ch02s03.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
-<td><a accesskey="p" href="NcmODE.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
-<td><a accesskey="n" href="ch02s04.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02s03.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="NcmODE.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ch02s04.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
-<a name="NcmODEEval" id="NcmODEEval"></a><div class="titlepage"></div>
+<a name="NcmODEEval"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="NcmODEEval.top_of_page" id="NcmODEEval.top_of_page"></a>NcmODEEval</span></h2>
+<h2><span class="refentrytitle"><a name="NcmODEEval.top_of_page"></a>NcmODEEval</span></h2>
 <p>NcmODEEval — Abstract class for ODE system evaluation</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="NcmODEEval.stability-level" id="NcmODEEval.stability-level"></a><h2>Stability Level</h2>
-<acronym title="The intention of a Stable interface is to enable arbitrary third parties to&#10;develop applications to these interfaces, release them, and have confidence that&#10;they will run on all minor releases of the product (after the one in which the&#10;interface was introduced, and within the same major release). Even at a major&#10;release, incompatible changes are expected to be rare, and to have strong&#10;justifications.&#10;"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+<a name="NcmODEEval.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to
+develop applications to these interfaces, release them, and have confidence that
+they will run on all minor releases of the product (after the one in which the
+interface was introduced, and within the same major release). Even at a major
+release, incompatible changes are expected to be rare, and to have strong
+justifications.
+"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
 </div>
 <div class="refsect1">
-<a name="NcmODEEval.functions" id="NcmODEEval.functions"></a><h2>Functions</h2>
+<a name="NcmODEEval.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_proto_type" />
-<col class="functions_proto_name" />
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
 </td>
 <td class="function_name">
 <span class="c_punctuation">(</span><a class="link" href="NcmODEEval.html#NcmODEEvalF" title="NcmODEEvalF ()">*NcmODEEvalF</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
@@ -69,7 +61,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
 </td>
 <td class="function_name">
 <span class="c_punctuation">(</span><a class="link" href="NcmODEEval.html#NcmODEEvalJDense" title="NcmODEEvalJDense ()">*NcmODEEvalJDense</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
@@ -101,7 +93,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmODEEval.html#ncm-ode-eval-df" title="ncm_ode_eval_df ()">ncm_ode_eval_df</a> <span class="c_punctuation">()</span>
@@ -109,7 +101,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmODEEval.html#ncm-ode-eval-J-dense" title="ncm_ode_eval_J_dense ()">ncm_ode_eval_J_dense</a> <span class="c_punctuation">()</span>
@@ -131,26 +123,26 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmODEEval.properties" id="NcmODEEval.properties"></a><h2>Properties</h2>
+<a name="NcmODEEval.properties"></a><h2>Properties</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="properties_type" />
-<col width="300px" class="properties_name" />
-<col width="200px" class="properties_flags" />
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
 </colgroup>
 <tbody><tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="NcmODEEval.html#NcmODEEval--sys-size" title="The “sys-size” property">sys-size</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmODEEval.other" id="NcmODEEval.other"></a><h2>Types and Values</h2>
+<a name="NcmODEEval.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="other_proto_type" />
-<col class="other_proto_name" />
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody><tr>
 <td class="datatype_keyword">enum</td>
@@ -159,60 +151,60 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmODEEval.object-hierarchy" id="NcmODEEval.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<a name="NcmODEEval.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
     <span class="lineart">╰──</span> NcmODEEvalReturn
-    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> NcmODEEval
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcmODEEval.includes" id="NcmODEEval.includes"></a><h2>Includes</h2>
+<a name="NcmODEEval.includes"></a><h2>Includes</h2>
 <pre class="synopsis">#include &lt;numcosmo/math/ncm_ode_eval.h&gt;
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcmODEEval.description" id="NcmODEEval.description"></a><h2>Description</h2>
+<a name="NcmODEEval.description"></a><h2>Description</h2>
 <p>This class implement an abstract interface between
 the Ordinary differential equation (ODE) system (see <a class="link" href="NcmODE.html" title="NcmODE"><span class="type">NcmODE</span></a>)
 and the evaluation of its derivatives $\mathrm{d}f$ and
 its Jacobian matrix $J$.</p>
 </div>
 <div class="refsect1">
-<a name="NcmODEEval.functions_details" id="NcmODEEval.functions_details"></a><h2>Functions</h2>
+<a name="NcmODEEval.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
-<a name="NcmODEEvalF" id="NcmODEEvalF"></a><h3>NcmODEEvalF ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+<a name="NcmODEEvalF"></a><h3>NcmODEEvalF ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
 <span class="c_punctuation">(</span>*NcmODEEvalF<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcmODEEval.html" title="NcmODEEval"><span class="type">NcmODEEval</span></a> *ode_eval</code></em>,
-                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sys_size</code></em>,
-                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> t</code></em>,
-                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict f</code></em>,
-                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict df</code></em>);</pre>
+                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sys_size</code></em>,
+                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> t</code></em>,
+                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict f</code></em>,
+                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict df</code></em>);</pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmODEEvalJDense" id="NcmODEEvalJDense"></a><h3>NcmODEEvalJDense ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+<a name="NcmODEEvalJDense"></a><h3>NcmODEEvalJDense ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
 <span class="c_punctuation">(</span>*NcmODEEvalJDense<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcmODEEval.html" title="NcmODEEval"><span class="type">NcmODEEval</span></a> *ode_eval</code></em>,
-                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sys_size</code></em>,
-                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> t</code></em>,
-                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict f</code></em>,
-                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> ** restrict J_col</code></em>);</pre>
+                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sys_size</code></em>,
+                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> t</code></em>,
+                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict f</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> ** restrict J_col</code></em>);</pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-ode-eval-ref" id="ncm-ode-eval-ref"></a><h3>ncm_ode_eval_ref ()</h3>
+<a name="ncm-ode-eval-ref"></a><h3>ncm_ode_eval_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcmODEEval.html" title="NcmODEEval"><span class="returnvalue">NcmODEEval</span></a> *
 ncm_ode_eval_ref (<em class="parameter"><code><a class="link" href="NcmODEEval.html" title="NcmODEEval"><span class="type">NcmODEEval</span></a> *ode_eval</code></em>);</pre>
 <p>Increases the reference count of <em class="parameter"><code>ode_eval</code></em>
  by one atomically.</p>
 <div class="refsect3">
-<a name="ncm-ode-eval-ref.parameters" id="ncm-ode-eval-ref.parameters"></a><h4>Parameters</h4>
+<a name="ncm-ode-eval-ref.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>ode_eval</p></td>
@@ -222,15 +214,15 @@ ncm_ode_eval_ref (<em class="parameter"><code><a class="link" href="NcmODEEval.h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-ode-eval-ref.returns" id="ncm-ode-eval-ref.returns"></a><h4>Returns</h4>
+<a name="ncm-ode-eval-ref.returns"></a><h4>Returns</h4>
 <p><em class="parameter"><code>ode_eval</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-ode-eval-free" id="ncm-ode-eval-free"></a><h3>ncm_ode_eval_free ()</h3>
+<a name="ncm-ode-eval-free"></a><h3>ncm_ode_eval_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_ode_eval_free (<em class="parameter"><code><a class="link" href="NcmODEEval.html" title="NcmODEEval"><span class="type">NcmODEEval</span></a> *ode_eval</code></em>);</pre>
 <p>Atomically decrements the reference count of <em class="parameter"><code>ode_eval</code></em>
@@ -238,12 +230,12 @@ ncm_ode_eval_free (<em class="parameter"><code><a class="link" href="NcmODEEval.
 If the reference count drops to 0, all memory allocated by <em class="parameter"><code>ode_eval</code></em>
  is released.</p>
 <div class="refsect3">
-<a name="ncm-ode-eval-free.parameters" id="ncm-ode-eval-free.parameters"></a><h4>Parameters</h4>
+<a name="ncm-ode-eval-free.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>ode_eval</p></td>
@@ -253,9 +245,9 @@ If the reference count drops to 0, all memory allocated by <em class="parameter"
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-ode-eval-clear" id="ncm-ode-eval-clear"></a><h3>ncm_ode_eval_clear ()</h3>
+<a name="ncm-ode-eval-clear"></a><h3>ncm_ode_eval_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_ode_eval_clear (<em class="parameter"><code><a class="link" href="NcmODEEval.html" title="NcmODEEval"><span class="type">NcmODEEval</span></a> **ode_eval</code></em>);</pre>
 <p>If <em class="parameter"><code>ode_eval</code></em>
@@ -267,12 +259,12 @@ by <em class="parameter"><code>ode_eval</code></em>
  is released and <em class="parameter"><code>ode_eval</code></em>
  is set to NULL.</p>
 <div class="refsect3">
-<a name="ncm-ode-eval-clear.parameters" id="ncm-ode-eval-clear.parameters"></a><h4>Parameters</h4>
+<a name="ncm-ode-eval-clear.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>ode_eval</p></td>
@@ -282,15 +274,15 @@ by <em class="parameter"><code>ode_eval</code></em>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-ode-eval-df" id="ncm-ode-eval-df"></a><h3>ncm_ode_eval_df ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+<a name="ncm-ode-eval-df"></a><h3>ncm_ode_eval_df ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
 ncm_ode_eval_df (<em class="parameter"><code><a class="link" href="NcmODEEval.html" title="NcmODEEval"><span class="type">NcmODEEval</span></a> *ode_eval</code></em>,
-                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sys_size</code></em>,
-                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> t</code></em>,
-                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict f</code></em>,
-                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict df</code></em>);</pre>
+                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sys_size</code></em>,
+                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> t</code></em>,
+                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict f</code></em>,
+                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict df</code></em>);</pre>
 <p>Computes the time derivatives of the ODE system in <em class="parameter"><code>df</code></em>
  using the
 current state in <em class="parameter"><code>f</code></em>
@@ -298,12 +290,12 @@ current state in <em class="parameter"><code>f</code></em>
 <p>Return: status</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> df]</span></p>
 <div class="refsect3">
-<a name="ncm-ode-eval-df.parameters" id="ncm-ode-eval-df.parameters"></a><h4>Parameters</h4>
+<a name="ncm-ode-eval-df.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -335,15 +327,15 @@ current state in <em class="parameter"><code>f</code></em>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-ode-eval-J-dense" id="ncm-ode-eval-J-dense"></a><h3>ncm_ode_eval_J_dense ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+<a name="ncm-ode-eval-J-dense"></a><h3>ncm_ode_eval_J_dense ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
 ncm_ode_eval_J_dense (<em class="parameter"><code><a class="link" href="NcmODEEval.html" title="NcmODEEval"><span class="type">NcmODEEval</span></a> *ode_eval</code></em>,
-                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sys_size</code></em>,
-                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> t</code></em>,
-                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict f</code></em>,
-                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> ** restrict J_col</code></em>);</pre>
+                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sys_size</code></em>,
+                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> t</code></em>,
+                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict f</code></em>,
+                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> ** restrict J_col</code></em>);</pre>
 <p>Computes the jacobian matrix $J$ of the ODE system in <em class="parameter"><code>J_col</code></em>
  using the
 current state in <em class="parameter"><code>f</code></em>
@@ -351,12 +343,12 @@ current state in <em class="parameter"><code>f</code></em>
 <p>Return: status</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> J_dense]</span></p>
 <div class="refsect3">
-<a name="ncm-ode-eval-J-dense.parameters" id="ncm-ode-eval-J-dense.parameters"></a><h4>Parameters</h4>
+<a name="ncm-ode-eval-J-dense.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -388,32 +380,32 @@ current state in <em class="parameter"><code>f</code></em>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NCM-ODE-EVAL-DECLARE-IMPL:CAPS" id="NCM-ODE-EVAL-DECLARE-IMPL:CAPS"></a><h3>NCM_ODE_EVAL_DECLARE_IMPL()</h3>
+<a name="NCM-ODE-EVAL-DECLARE-IMPL:CAPS"></a><h3>NCM_ODE_EVAL_DECLARE_IMPL()</h3>
 <pre class="programlisting">#define             NCM_ODE_EVAL_DECLARE_IMPL(ModuleObjName, module_obj_name, MODULE, OBJ_NAME, LocalStruct)</pre>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NCM-ODE-EVAL-DEFINE-IMPL:CAPS" id="NCM-ODE-EVAL-DEFINE-IMPL:CAPS"></a><h3>NCM_ODE_EVAL_DEFINE_IMPL()</h3>
+<a name="NCM-ODE-EVAL-DEFINE-IMPL:CAPS"></a><h3>NCM_ODE_EVAL_DEFINE_IMPL()</h3>
 <pre class="programlisting">#define             NCM_ODE_EVAL_DEFINE_IMPL(ModuleObjName, module_obj_name, MODULE, OBJ_NAME, LocalStruct, df0, J_dense0, clean_ls0)</pre>
 </div>
 </div>
 <div class="refsect1">
-<a name="NcmODEEval.other_details" id="NcmODEEval.other_details"></a><h2>Types and Values</h2>
+<a name="NcmODEEval.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
-<a name="NcmODEEvalReturn" id="NcmODEEvalReturn"></a><h3>enum NcmODEEvalReturn</h3>
+<a name="NcmODEEvalReturn"></a><h3>enum NcmODEEvalReturn</h3>
 <p>NcmODEEval return codes.</p>
 <div class="refsect3">
-<a name="NcmODEEvalReturn.members" id="NcmODEEvalReturn.members"></a><h4>Members</h4>
+<a name="NcmODEEvalReturn.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="300px" class="enum_members_name" />
-<col class="enum_members_description" />
-<col width="200px" class="enum_members_annotations" />
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
 </colgroup>
 <tbody><tr>
-<td class="enum_member_name"><p><a name="NCM-ODE-EVAL-RETURN-SUCCESS:CAPS" id="NCM-ODE-EVAL-RETURN-SUCCESS:CAPS"></a>NCM_ODE_EVAL_RETURN_SUCCESS</p></td>
+<td class="enum_member_name"><p><a name="NCM-ODE-EVAL-RETURN-SUCCESS:CAPS"></a>NCM_ODE_EVAL_RETURN_SUCCESS</p></td>
 <td class="enum_member_description">
 <p>if computation was done with success</p>
 </td>
@@ -424,10 +416,10 @@ current state in <em class="parameter"><code>f</code></em>
 </div>
 </div>
 <div class="refsect1">
-<a name="NcmODEEval.property-details" id="NcmODEEval.property-details"></a><h2>Property Details</h2>
+<a name="NcmODEEval.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="NcmODEEval--sys-size" id="NcmODEEval--sys-size"></a><h3>The <code class="literal">“sys-size”</code> property</h3>
-<pre class="programlisting">  “sys-size”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<a name="NcmODEEval--sys-size"></a><h3>The <code class="literal">“sys-size”</code> property</h3>
+<pre class="programlisting">  “sys-size”                 <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>The ordinary differential equation (EDO) system size.</p>
 <p>Owner: NcmODEEval</p>
 <p>Flags: Read / Write / Construct</p>
@@ -437,6 +429,6 @@ current state in <em class="parameter"><code>f</code></em>
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.33.1</div>
-</div></div></body>
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
 </html>

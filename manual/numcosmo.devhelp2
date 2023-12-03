@@ -26,6 +26,7 @@
         <sub name="NcmTimer" link="NcmTimer.html"/>
         <sub name="NcmRNG" link="NcmRNG.html"/>
         <sub name="NcmQuaternion" link="NcmQuaternion.html"/>
+        <sub name="ncm_cblas" link="numcosmo-ncm-cblas.html"/>
       </sub>
       <sub name="MPI Objects" link="ch02s02.html">
         <sub name="NcmMPIJob" link="NcmMPIJob.html"/>
@@ -128,7 +129,7 @@
         <sub name="NcmMSetTransKernCat" link="NcmMSetTransKernCat.html"/>
         <sub name="NcmFitState" link="NcmFitState.html"/>
         <sub name="NcmFit" link="NcmFit.html"/>
-        <sub name="NLopt Interface Object" link="NcmFitNLOpt.html"/>
+        <sub name="NLopt Interface Object" link="numcosmo-NLopt-Interface-Object.html"/>
         <sub name="NcmFitNLOptEnum" link="numcosmo-NcmFitNLOptEnum.html"/>
         <sub name="NcmFitGSLLS" link="NcmFitGSLLS.html"/>
         <sub name="NcmFitGSLMM" link="NcmFitGSLMM.html"/>
@@ -400,14 +401,10 @@
     <sub name="Annotation Glossary" link="annotation-glossary.html"/>
   </chapters>
   <functions>
-    <keyword type="macro" name="NUMCOSMO_HAVE_FFTW3" link="numcosmo-NumCosmo-building-configuration.html#NUMCOSMO-HAVE-FFTW3:CAPS"/>
-    <keyword type="macro" name="NUMCOSMO_HAVE_FFTW3F" link="numcosmo-NumCosmo-building-configuration.html#NUMCOSMO-HAVE-FFTW3F:CAPS"/>
-    <keyword type="macro" name="NUMCOSMO_HAVE_CFITSIO" link="numcosmo-NumCosmo-building-configuration.html#NUMCOSMO-HAVE-CFITSIO:CAPS"/>
     <keyword type="macro" name="NUMCOSMO_HAVE_NLOPT" link="numcosmo-NumCosmo-building-configuration.html#NUMCOSMO-HAVE-NLOPT:CAPS"/>
+    <keyword type="macro" name="NUMCOSMO_HAVE_MPI" link="numcosmo-NumCosmo-building-configuration.html#NUMCOSMO-HAVE-MPI:CAPS"/>
     <keyword type="macro" name="NUMCOSMO_HAVE_INLINE" link="numcosmo-NumCosmo-building-configuration.html#NUMCOSMO-HAVE-INLINE:CAPS"/>
     <keyword type="macro" name="NCM_INLINE" link="numcosmo-NumCosmo-building-configuration.html#NCM-INLINE:CAPS"/>
-    <keyword type="macro" name="CBLAS_H" link="numcosmo-NumCosmo-building-configuration.html#CBLAS-H:CAPS"/>
-    <keyword type="macro" name="NCM_BLAS_NOT_TYPEDEFED" link="numcosmo-NumCosmo-building-configuration.html#NCM-BLAS-NOT-TYPEDEFED:CAPS"/>
     <keyword type="macro" name="NUMCOSMO_MAJOR_VERSION" link="numcosmo-NumCosmo-building-configuration.html#NUMCOSMO-MAJOR-VERSION:CAPS"/>
     <keyword type="macro" name="NUMCOSMO_MINOR_VERSION" link="numcosmo-NumCosmo-building-configuration.html#NUMCOSMO-MINOR-VERSION:CAPS"/>
     <keyword type="macro" name="NUMCOSMO_MICRO_VERSION" link="numcosmo-NumCosmo-building-configuration.html#NUMCOSMO-MICRO-VERSION:CAPS"/>
@@ -786,6 +783,7 @@
     <keyword type="function" name="ncm_vector_const_new_variant ()" link="NcmVector.html#ncm-vector-const-new-variant"/>
     <keyword type="function" name="ncm_vector_const_new_data ()" link="NcmVector.html#ncm-vector-const-new-data"/>
     <keyword type="function" name="ncm_vector_get_subvector ()" link="NcmVector.html#ncm-vector-get-subvector"/>
+    <keyword type="function" name="ncm_vector_get_subvector2 ()" link="NcmVector.html#ncm-vector-get-subvector2"/>
     <keyword type="function" name="ncm_vector_get_subvector_stride ()" link="NcmVector.html#ncm-vector-get-subvector-stride"/>
     <keyword type="function" name="ncm_vector_get_variant ()" link="NcmVector.html#ncm-vector-get-variant"/>
     <keyword type="function" name="ncm_vector_peek_variant ()" link="NcmVector.html#ncm-vector-peek-variant"/>
@@ -834,6 +832,7 @@
     <keyword type="function" name="ncm_vector_dup_array ()" link="NcmVector.html#ncm-vector-dup-array"/>
     <keyword type="function" name="ncm_vector_data ()" link="NcmVector.html#ncm-vector-data"/>
     <keyword type="function" name="ncm_vector_const_data ()" link="NcmVector.html#ncm-vector-const-data"/>
+    <keyword type="function" name="ncm_vector_replace_data ()" link="NcmVector.html#ncm-vector-replace-data"/>
     <keyword type="function" name="ncm_vector_gsl ()" link="NcmVector.html#ncm-vector-gsl"/>
     <keyword type="function" name="ncm_vector_const_gsl ()" link="NcmVector.html#ncm-vector-const-gsl"/>
     <keyword type="function" name="ncm_vector_dot ()" link="NcmVector.html#ncm-vector-dot"/>
@@ -1123,10 +1122,15 @@
     <keyword type="function" name="ncm_integral_nd_get_reltol ()" link="NcmIntegralND.html#ncm-integral-nd-get-reltol"/>
     <keyword type="function" name="ncm_integral_nd_get_abstol ()" link="NcmIntegralND.html#ncm-integral-nd-get-abstol"/>
     <keyword type="function" name="ncm_integral_nd_eval ()" link="NcmIntegralND.html#ncm-integral-nd-eval"/>
+    <keyword type="macro" name="NCM_INTEGRAL_ND_DEFINE_TYPE_WITH_FREE()" link="NcmIntegralND.html#NCM-INTEGRAL-ND-DEFINE-TYPE-WITH-FREE:CAPS"/>
+    <keyword type="macro" name="NCM_INTEGRAL_ND_DEFINE_TYPE()" link="NcmIntegralND.html#NCM-INTEGRAL-ND-DEFINE-TYPE:CAPS"/>
+    <keyword type="macro" name="NCM_TYPE_INTEGRAL_ND" link="NcmIntegralND.html#NCM-TYPE-INTEGRAL-ND:CAPS"/>
+    <keyword type="struct" name="struct NcmIntegralNDClass" link="NcmIntegralND.html#NcmIntegralNDClass"/>
     <keyword type="enum" name="enum NcmIntegralNDMethod" link="NcmIntegralND.html#NcmIntegralNDMethod"/>
     <keyword type="enum" name="enum NcmIntegralNDError" link="NcmIntegralND.html#NcmIntegralNDError"/>
     <keyword type="macro" name="NCM_INTEGRAL_ND_DEFAULT_RELTOL" link="NcmIntegralND.html#NCM-INTEGRAL-ND-DEFAULT-RELTOL:CAPS"/>
     <keyword type="macro" name="NCM_INTEGRAL_ND_DEFAULT_ABSTOL" link="NcmIntegralND.html#NCM-INTEGRAL-ND-DEFAULT-ABSTOL:CAPS"/>
+    <keyword type="struct" name="NcmIntegralND" link="NcmIntegralND.html#NcmIntegralND-struct"/>
     <keyword type="property" name="The “abstol” property" link="NcmIntegralND.html#NcmIntegralND--abstol"/>
     <keyword type="property" name="The “error” property" link="NcmIntegralND.html#NcmIntegralND--error"/>
     <keyword type="property" name="The “maxeval” property" link="NcmIntegralND.html#NcmIntegralND--maxeval"/>
@@ -1269,6 +1273,13 @@
     <keyword type="function" name="ncm_quaternion_inv_rotate ()" link="NcmQuaternion.html#ncm-quaternion-inv-rotate"/>
     <keyword type="macro" name="NCM_QUATERNION_INIT" link="NcmQuaternion.html#NCM-QUATERNION-INIT:CAPS"/>
     <keyword type="macro" name="NCM_QUATERNION_INIT_I" link="NcmQuaternion.html#NCM-QUATERNION-INIT-I:CAPS"/>
+    <keyword type="macro" name="CBLAS_H" link="numcosmo-ncm-cblas.html#CBLAS-H:CAPS"/>
+    <keyword type="typedef" name="CBLAS_INDEX_t" link="numcosmo-ncm-cblas.html#CBLAS-INDEX-t"/>
+    <keyword type="typedef" name="CBLAS_ORDER_t" link="numcosmo-ncm-cblas.html#CBLAS-ORDER-t"/>
+    <keyword type="typedef" name="CBLAS_TRANSPOSE_t" link="numcosmo-ncm-cblas.html#CBLAS-TRANSPOSE-t"/>
+    <keyword type="typedef" name="CBLAS_UPLO_t" link="numcosmo-ncm-cblas.html#CBLAS-UPLO-t"/>
+    <keyword type="typedef" name="CBLAS_DIAG_t" link="numcosmo-ncm-cblas.html#CBLAS-DIAG-t"/>
+    <keyword type="typedef" name="CBLAS_SIDE_t" link="numcosmo-ncm-cblas.html#CBLAS-SIDE-t"/>
     <keyword type="function" name="ncm_mpi_job_ref ()" link="NcmMPIJob.html#ncm-mpi-job-ref"/>
     <keyword type="function" name="ncm_mpi_job_free ()" link="NcmMPIJob.html#ncm-mpi-job-free"/>
     <keyword type="function" name="ncm_mpi_job_clear ()" link="NcmMPIJob.html#ncm-mpi-job-clear"/>
@@ -2369,7 +2380,6 @@
     <keyword type="function" name="ncm_data_free ()" link="NcmData.html#ncm-data-free"/>
     <keyword type="function" name="ncm_data_clear ()" link="NcmData.html#ncm-data-clear"/>
     <keyword type="function" name="ncm_data_dup ()" link="NcmData.html#ncm-data-dup"/>
-    <keyword type="function" name="ncm_data_new_from_file ()" link="NcmData.html#ncm-data-new-from-file"/>
     <keyword type="function" name="ncm_data_get_length ()" link="NcmData.html#ncm-data-get-length"/>
     <keyword type="function" name="ncm_data_get_dof ()" link="NcmData.html#ncm-data-get-dof"/>
     <keyword type="function" name="ncm_data_set_init ()" link="NcmData.html#ncm-data-set-init"/>
@@ -2387,11 +2397,7 @@
     <keyword type="function" name="ncm_data_bootstrap_enabled ()" link="NcmData.html#ncm-data-bootstrap-enabled"/>
     <keyword type="function" name="ncm_data_peek_bootstrap ()" link="NcmData.html#ncm-data-peek-bootstrap"/>
     <keyword type="function" name="ncm_data_leastsquares_f ()" link="NcmData.html#ncm-data-leastsquares-f"/>
-    <keyword type="function" name="ncm_data_leastsquares_J ()" link="NcmData.html#ncm-data-leastsquares-J"/>
-    <keyword type="function" name="ncm_data_leastsquares_f_J ()" link="NcmData.html#ncm-data-leastsquares-f-J"/>
     <keyword type="function" name="ncm_data_m2lnL_val ()" link="NcmData.html#ncm-data-m2lnL-val"/>
-    <keyword type="function" name="ncm_data_m2lnL_grad ()" link="NcmData.html#ncm-data-m2lnL-grad"/>
-    <keyword type="function" name="ncm_data_m2lnL_val_grad ()" link="NcmData.html#ncm-data-m2lnL-val-grad"/>
     <keyword type="function" name="ncm_data_mean_vector ()" link="NcmData.html#ncm-data-mean-vector"/>
     <keyword type="function" name="ncm_data_sigma_vector ()" link="NcmData.html#ncm-data-sigma-vector"/>
     <keyword type="function" name="ncm_data_inv_cov_UH ()" link="NcmData.html#ncm-data-inv-cov-UH"/>
@@ -2429,18 +2435,10 @@
     <keyword type="function" name="ncm_dataset_log_info ()" link="NcmDataset.html#ncm-dataset-log-info"/>
     <keyword type="function" name="ncm_dataset_get_info ()" link="NcmDataset.html#ncm-dataset-get-info"/>
     <keyword type="function" name="ncm_dataset_has_leastsquares_f ()" link="NcmDataset.html#ncm-dataset-has-leastsquares-f"/>
-    <keyword type="function" name="ncm_dataset_has_leastsquares_J ()" link="NcmDataset.html#ncm-dataset-has-leastsquares-J"/>
-    <keyword type="function" name="ncm_dataset_has_leastsquares_f_J ()" link="NcmDataset.html#ncm-dataset-has-leastsquares-f-J"/>
     <keyword type="function" name="ncm_dataset_has_m2lnL_val ()" link="NcmDataset.html#ncm-dataset-has-m2lnL-val"/>
-    <keyword type="function" name="ncm_dataset_has_m2lnL_grad ()" link="NcmDataset.html#ncm-dataset-has-m2lnL-grad"/>
-    <keyword type="function" name="ncm_dataset_has_m2lnL_val_grad ()" link="NcmDataset.html#ncm-dataset-has-m2lnL-val-grad"/>
     <keyword type="function" name="ncm_dataset_leastsquares_f ()" link="NcmDataset.html#ncm-dataset-leastsquares-f"/>
-    <keyword type="function" name="ncm_dataset_leastsquares_J ()" link="NcmDataset.html#ncm-dataset-leastsquares-J"/>
-    <keyword type="function" name="ncm_dataset_leastsquares_f_J ()" link="NcmDataset.html#ncm-dataset-leastsquares-f-J"/>
     <keyword type="function" name="ncm_dataset_m2lnL_val ()" link="NcmDataset.html#ncm-dataset-m2lnL-val"/>
     <keyword type="function" name="ncm_dataset_m2lnL_vec ()" link="NcmDataset.html#ncm-dataset-m2lnL-vec"/>
-    <keyword type="function" name="ncm_dataset_m2lnL_grad ()" link="NcmDataset.html#ncm-dataset-m2lnL-grad"/>
-    <keyword type="function" name="ncm_dataset_m2lnL_val_grad ()" link="NcmDataset.html#ncm-dataset-m2lnL-val-grad"/>
     <keyword type="function" name="ncm_dataset_m2lnL_i_val ()" link="NcmDataset.html#ncm-dataset-m2lnL-i-val"/>
     <keyword type="function" name="ncm_dataset_fisher_matrix ()" link="NcmDataset.html#ncm-dataset-fisher-matrix"/>
     <keyword type="macro" name="NCM_TYPE_DATASET" link="NcmDataset.html#NCM-TYPE-DATASET:CAPS"/>
@@ -2565,8 +2563,10 @@
     <keyword type="function" name="ncm_stats_vec_peek_row ()" link="NcmStatsVec.html#ncm-stats-vec-peek-row"/>
     <keyword type="function" name="ncm_stats_vec_get_param_at ()" link="NcmStatsVec.html#ncm-stats-vec-get-param-at"/>
     <keyword type="macro" name="NCM_STATS_VEC_HEIDEL_PVAL_COR()" link="NcmStatsVec.html#NCM-STATS-VEC-HEIDEL-PVAL-COR:CAPS"/>
+    <keyword type="macro" name="NCM_TYPE_STATS_VEC" link="NcmStatsVec.html#NCM-TYPE-STATS-VEC:CAPS"/>
     <keyword type="enum" name="enum NcmStatsVecType" link="NcmStatsVec.html#NcmStatsVecType"/>
     <keyword type="enum" name="enum NcmStatsVecARType" link="NcmStatsVec.html#NcmStatsVecARType"/>
+    <keyword type="struct" name="NcmStatsVec" link="NcmStatsVec.html#NcmStatsVec-struct"/>
     <keyword type="property" name="The “length” property" link="NcmStatsVec.html#NcmStatsVec--length"/>
     <keyword type="property" name="The “save-x” property" link="NcmStatsVec.html#NcmStatsVec--save-x"/>
     <keyword type="property" name="The “type” property" link="NcmStatsVec.html#NcmStatsVec--type"/>
@@ -2673,17 +2673,11 @@
     <keyword type="function" name="ncm_likelihood_priors_length_f ()" link="NcmLikelihood.html#ncm-likelihood-priors-length-f"/>
     <keyword type="function" name="ncm_likelihood_priors_peek_m2lnL ()" link="NcmLikelihood.html#ncm-likelihood-priors-peek-m2lnL"/>
     <keyword type="function" name="ncm_likelihood_priors_length_m2lnL ()" link="NcmLikelihood.html#ncm-likelihood-priors-length-m2lnL"/>
-    <keyword type="function" name="ncm_likelihood_has_leastsquares_J ()" link="NcmLikelihood.html#ncm-likelihood-has-leastsquares-J"/>
-    <keyword type="function" name="ncm_likelihood_has_m2lnL_grad ()" link="NcmLikelihood.html#ncm-likelihood-has-m2lnL-grad"/>
     <keyword type="function" name="ncm_likelihood_priors_leastsquares_f ()" link="NcmLikelihood.html#ncm-likelihood-priors-leastsquares-f"/>
     <keyword type="function" name="ncm_likelihood_leastsquares_f ()" link="NcmLikelihood.html#ncm-likelihood-leastsquares-f"/>
-    <keyword type="function" name="ncm_likelihood_leastsquares_J ()" link="NcmLikelihood.html#ncm-likelihood-leastsquares-J"/>
-    <keyword type="function" name="ncm_likelihood_leastsquares_f_J ()" link="NcmLikelihood.html#ncm-likelihood-leastsquares-f-J"/>
     <keyword type="function" name="ncm_likelihood_priors_m2lnL_val ()" link="NcmLikelihood.html#ncm-likelihood-priors-m2lnL-val"/>
     <keyword type="function" name="ncm_likelihood_priors_m2lnL_vec ()" link="NcmLikelihood.html#ncm-likelihood-priors-m2lnL-vec"/>
     <keyword type="function" name="ncm_likelihood_m2lnL_val ()" link="NcmLikelihood.html#ncm-likelihood-m2lnL-val"/>
-    <keyword type="function" name="ncm_likelihood_m2lnL_grad ()" link="NcmLikelihood.html#ncm-likelihood-m2lnL-grad"/>
-    <keyword type="function" name="ncm_likelihood_m2lnL_val_grad ()" link="NcmLikelihood.html#ncm-likelihood-m2lnL-val-grad"/>
     <keyword type="property" name="The “dataset” property" link="NcmLikelihood.html#NcmLikelihood--dataset"/>
     <keyword type="property" name="The “m2lnL-v” property" link="NcmLikelihood.html#NcmLikelihood--m2lnL-v"/>
     <keyword type="property" name="The “priors-f” property" link="NcmLikelihood.html#NcmLikelihood--priors-f"/>
@@ -2905,15 +2899,43 @@
     <keyword type="function" name="ncm_fit_state_clear ()" link="NcmFitState.html#ncm-fit-state-clear"/>
     <keyword type="function" name="ncm_fit_state_set_all ()" link="NcmFitState.html#ncm-fit-state-set-all"/>
     <keyword type="function" name="ncm_fit_state_reset ()" link="NcmFitState.html#ncm-fit-state-reset"/>
-    <keyword type="function" name="ncm_fit_state_realloc ()" link="NcmFitState.html#ncm-fit-state-realloc"/>
     <keyword type="function" name="ncm_fit_state_set_ls ()" link="NcmFitState.html#ncm-fit-state-set-ls"/>
+    <keyword type="function" name="ncm_fit_state_set_fparam_len ()" link="NcmFitState.html#ncm-fit-state-set-fparam-len"/>
+    <keyword type="function" name="ncm_fit_state_get_fparam_len ()" link="NcmFitState.html#ncm-fit-state-get-fparam-len"/>
+    <keyword type="function" name="ncm_fit_state_set_data_len ()" link="NcmFitState.html#ncm-fit-state-set-data-len"/>
+    <keyword type="function" name="ncm_fit_state_get_data_len ()" link="NcmFitState.html#ncm-fit-state-get-data-len"/>
+    <keyword type="function" name="ncm_fit_state_set_dof ()" link="NcmFitState.html#ncm-fit-state-set-dof"/>
+    <keyword type="function" name="ncm_fit_state_get_dof ()" link="NcmFitState.html#ncm-fit-state-get-dof"/>
+    <keyword type="function" name="ncm_fit_state_add_iter ()" link="NcmFitState.html#ncm-fit-state-add-iter"/>
     <keyword type="function" name="ncm_fit_state_set_niter ()" link="NcmFitState.html#ncm-fit-state-set-niter"/>
     <keyword type="function" name="ncm_fit_state_get_niter ()" link="NcmFitState.html#ncm-fit-state-get-niter"/>
+    <keyword type="function" name="ncm_fit_state_add_func_eval ()" link="NcmFitState.html#ncm-fit-state-add-func-eval"/>
+    <keyword type="function" name="ncm_fit_state_set_func_eval ()" link="NcmFitState.html#ncm-fit-state-set-func-eval"/>
+    <keyword type="function" name="ncm_fit_state_get_func_eval ()" link="NcmFitState.html#ncm-fit-state-get-func-eval"/>
+    <keyword type="function" name="ncm_fit_state_add_grad_eval ()" link="NcmFitState.html#ncm-fit-state-add-grad-eval"/>
+    <keyword type="function" name="ncm_fit_state_set_grad_eval ()" link="NcmFitState.html#ncm-fit-state-set-grad-eval"/>
+    <keyword type="function" name="ncm_fit_state_get_grad_eval ()" link="NcmFitState.html#ncm-fit-state-get-grad-eval"/>
     <keyword type="function" name="ncm_fit_state_set_m2lnL_prec ()" link="NcmFitState.html#ncm-fit-state-set-m2lnL-prec"/>
     <keyword type="function" name="ncm_fit_state_get_m2lnL_prec ()" link="NcmFitState.html#ncm-fit-state-get-m2lnL-prec"/>
+    <keyword type="function" name="ncm_fit_state_set_m2lnL_curval ()" link="NcmFitState.html#ncm-fit-state-set-m2lnL-curval"/>
+    <keyword type="function" name="ncm_fit_state_get_m2lnL_curval ()" link="NcmFitState.html#ncm-fit-state-get-m2lnL-curval"/>
     <keyword type="function" name="ncm_fit_state_set_params_prec ()" link="NcmFitState.html#ncm-fit-state-set-params-prec"/>
     <keyword type="function" name="ncm_fit_state_get_params_prec ()" link="NcmFitState.html#ncm-fit-state-get-params-prec"/>
-    <keyword type="function" name="ncm_fit_state_get_data_len ()" link="NcmFitState.html#ncm-fit-state-get-data-len"/>
+    <keyword type="function" name="ncm_fit_state_set_elapsed_time ()" link="NcmFitState.html#ncm-fit-state-set-elapsed-time"/>
+    <keyword type="function" name="ncm_fit_state_get_elapsed_time ()" link="NcmFitState.html#ncm-fit-state-get-elapsed-time"/>
+    <keyword type="function" name="ncm_fit_state_set_has_covar ()" link="NcmFitState.html#ncm-fit-state-set-has-covar"/>
+    <keyword type="function" name="ncm_fit_state_has_covar ()" link="NcmFitState.html#ncm-fit-state-has-covar"/>
+    <keyword type="function" name="ncm_fit_state_set_is_best_fit ()" link="NcmFitState.html#ncm-fit-state-set-is-best-fit"/>
+    <keyword type="function" name="ncm_fit_state_is_best_fit ()" link="NcmFitState.html#ncm-fit-state-is-best-fit"/>
+    <keyword type="function" name="ncm_fit_state_set_is_least_squares ()" link="NcmFitState.html#ncm-fit-state-set-is-least-squares"/>
+    <keyword type="function" name="ncm_fit_state_is_least_squares ()" link="NcmFitState.html#ncm-fit-state-is-least-squares"/>
+    <keyword type="function" name="ncm_fit_state_peek_fparams ()" link="NcmFitState.html#ncm-fit-state-peek-fparams"/>
+    <keyword type="function" name="ncm_fit_state_peek_hessian ()" link="NcmFitState.html#ncm-fit-state-peek-hessian"/>
+    <keyword type="function" name="ncm_fit_state_peek_covar ()" link="NcmFitState.html#ncm-fit-state-peek-covar"/>
+    <keyword type="function" name="ncm_fit_state_peek_f ()" link="NcmFitState.html#ncm-fit-state-peek-f"/>
+    <keyword type="function" name="ncm_fit_state_peek_J ()" link="NcmFitState.html#ncm-fit-state-peek-J"/>
+    <keyword type="macro" name="NCM_TYPE_FIT_STATE" link="NcmFitState.html#NCM-TYPE-FIT-STATE:CAPS"/>
+    <keyword type="struct" name="NcmFitState" link="NcmFitState.html#NcmFitState-struct"/>
     <keyword type="property" name="The “data-len” property" link="NcmFitState.html#NcmFitState--data-len"/>
     <keyword type="property" name="The “dof” property" link="NcmFitState.html#NcmFitState--dof"/>
     <keyword type="property" name="The “fparam-len” property" link="NcmFitState.html#NcmFitState--fparam-len"/>
@@ -2926,7 +2948,7 @@
     <keyword type="function" name="_NcmFitLSFJ ()" link="NcmFit.html#NcmFitLSFJ"/>
     <keyword type="function" name="_NcmFitM2lnLGrad ()" link="NcmFit.html#NcmFitM2lnLGrad"/>
     <keyword type="function" name="_NcmFitM2lnLValGrad ()" link="NcmFit.html#NcmFitM2lnLValGrad"/>
-    <keyword type="function" name="ncm_fit_new ()" link="NcmFit.html#ncm-fit-new"/>
+    <keyword type="function" name="ncm_fit_factory ()" link="NcmFit.html#ncm-fit-factory"/>
     <keyword type="function" name="ncm_fit_ref ()" link="NcmFit.html#ncm-fit-ref"/>
     <keyword type="function" name="ncm_fit_copy_new ()" link="NcmFit.html#ncm-fit-copy-new"/>
     <keyword type="function" name="ncm_fit_dup ()" link="NcmFit.html#ncm-fit-dup"/>
@@ -2934,16 +2956,24 @@
     <keyword type="function" name="ncm_fit_clear ()" link="NcmFit.html#ncm-fit-clear"/>
     <keyword type="function" name="ncm_fit_set_sub_fit ()" link="NcmFit.html#ncm-fit-set-sub-fit"/>
     <keyword type="function" name="ncm_fit_get_sub_fit ()" link="NcmFit.html#ncm-fit-get-sub-fit"/>
+    <keyword type="function" name="ncm_fit_has_sub_fit ()" link="NcmFit.html#ncm-fit-has-sub-fit"/>
     <keyword type="function" name="ncm_fit_set_grad_type ()" link="NcmFit.html#ncm-fit-set-grad-type"/>
     <keyword type="function" name="ncm_fit_set_maxiter ()" link="NcmFit.html#ncm-fit-set-maxiter"/>
     <keyword type="function" name="ncm_fit_set_m2lnL_reltol ()" link="NcmFit.html#ncm-fit-set-m2lnL-reltol"/>
     <keyword type="function" name="ncm_fit_set_m2lnL_abstol ()" link="NcmFit.html#ncm-fit-set-m2lnL-abstol"/>
     <keyword type="function" name="ncm_fit_set_params_reltol ()" link="NcmFit.html#ncm-fit-set-params-reltol"/>
+    <keyword type="function" name="ncm_fit_set_messages ()" link="NcmFit.html#ncm-fit-set-messages"/>
+    <keyword type="function" name="ncm_fit_get_grad_type ()" link="NcmFit.html#ncm-fit-get-grad-type"/>
     <keyword type="function" name="ncm_fit_get_maxiter ()" link="NcmFit.html#ncm-fit-get-maxiter"/>
     <keyword type="function" name="ncm_fit_get_m2lnL_reltol ()" link="NcmFit.html#ncm-fit-get-m2lnL-reltol"/>
     <keyword type="function" name="ncm_fit_get_m2lnL_abstol ()" link="NcmFit.html#ncm-fit-get-m2lnL-abstol"/>
     <keyword type="function" name="ncm_fit_get_params_reltol ()" link="NcmFit.html#ncm-fit-get-params-reltol"/>
+    <keyword type="function" name="ncm_fit_get_messages ()" link="NcmFit.html#ncm-fit-get-messages"/>
+    <keyword type="function" name="ncm_fit_is_least_squares ()" link="NcmFit.html#ncm-fit-is-least-squares"/>
     <keyword type="function" name="ncm_fit_peek_mset ()" link="NcmFit.html#ncm-fit-peek-mset"/>
+    <keyword type="function" name="ncm_fit_peek_state ()" link="NcmFit.html#ncm-fit-peek-state"/>
+    <keyword type="function" name="ncm_fit_peek_likelihood ()" link="NcmFit.html#ncm-fit-peek-likelihood"/>
+    <keyword type="function" name="ncm_fit_peek_diff ()" link="NcmFit.html#ncm-fit-peek-diff"/>
     <keyword type="function" name="ncm_fit_params_set ()" link="NcmFit.html#ncm-fit-params-set"/>
     <keyword type="function" name="ncm_fit_params_set_vector ()" link="NcmFit.html#ncm-fit-params-set-vector"/>
     <keyword type="function" name="ncm_fit_params_set_vector_offset ()" link="NcmFit.html#ncm-fit-params-set-vector-offset"/>
@@ -2954,9 +2984,10 @@
     <keyword type="function" name="ncm_fit_add_inequality_constraint ()" link="NcmFit.html#ncm-fit-add-inequality-constraint"/>
     <keyword type="function" name="ncm_fit_remove_equality_constraints ()" link="NcmFit.html#ncm-fit-remove-equality-constraints"/>
     <keyword type="function" name="ncm_fit_remove_inequality_constraints ()" link="NcmFit.html#ncm-fit-remove-inequality-constraints"/>
-    <keyword type="function" name="ncm_fit_has_equality_constraints ()" link="NcmFit.html#ncm-fit-has-equality-constraints"/>
-    <keyword type="function" name="ncm_fit_has_inequality_constraints ()" link="NcmFit.html#ncm-fit-has-inequality-constraints"/>
-    <keyword type="function" name="ncm_fit_is_least_squares ()" link="NcmFit.html#ncm-fit-is-least-squares"/>
+    <keyword type="function" name="ncm_fit_equality_constraints_len ()" link="NcmFit.html#ncm-fit-equality-constraints-len"/>
+    <keyword type="function" name="ncm_fit_inequality_constraints_len ()" link="NcmFit.html#ncm-fit-inequality-constraints-len"/>
+    <keyword type="function" name="ncm_fit_get_equality_constraint ()" link="NcmFit.html#ncm-fit-get-equality-constraint"/>
+    <keyword type="function" name="ncm_fit_get_inequality_constraint ()" link="NcmFit.html#ncm-fit-get-inequality-constraint"/>
     <keyword type="function" name="ncm_fit_get_desc ()" link="NcmFit.html#ncm-fit-get-desc"/>
     <keyword type="function" name="ncm_fit_log_info ()" link="NcmFit.html#ncm-fit-log-info"/>
     <keyword type="function" name="ncm_fit_log_covar ()" link="NcmFit.html#ncm-fit-log-covar"/>
@@ -2965,38 +2996,18 @@
     <keyword type="function" name="ncm_fit_log_step ()" link="NcmFit.html#ncm-fit-log-step"/>
     <keyword type="function" name="ncm_fit_log_step_error ()" link="NcmFit.html#ncm-fit-log-step-error"/>
     <keyword type="function" name="ncm_fit_log_end ()" link="NcmFit.html#ncm-fit-log-end"/>
-    <keyword type="function" name="ncm_fit_fishermatrix_print ()" link="NcmFit.html#ncm-fit-fishermatrix-print"/>
     <keyword type="function" name="ncm_fit_data_m2lnL_val ()" link="NcmFit.html#ncm-fit-data-m2lnL-val"/>
     <keyword type="function" name="ncm_fit_priors_m2lnL_val ()" link="NcmFit.html#ncm-fit-priors-m2lnL-val"/>
     <keyword type="function" name="ncm_fit_m2lnL_val ()" link="NcmFit.html#ncm-fit-m2lnL-val"/>
     <keyword type="function" name="ncm_fit_ls_f ()" link="NcmFit.html#ncm-fit-ls-f"/>
     <keyword type="function" name="ncm_fit_m2lnL_grad ()" link="NcmFit.html#ncm-fit-m2lnL-grad"/>
-    <keyword type="function" name="ncm_fit_m2lnL_grad_an ()" link="NcmFit.html#ncm-fit-m2lnL-grad-an"/>
-    <keyword type="function" name="ncm_fit_m2lnL_grad_nd_fo ()" link="NcmFit.html#ncm-fit-m2lnL-grad-nd-fo"/>
-    <keyword type="function" name="ncm_fit_m2lnL_grad_nd_ce ()" link="NcmFit.html#ncm-fit-m2lnL-grad-nd-ce"/>
-    <keyword type="function" name="ncm_fit_m2lnL_grad_nd_ac ()" link="NcmFit.html#ncm-fit-m2lnL-grad-nd-ac"/>
-    <keyword type="function" name="ncm_fit_m2lnL_hessian_nd_ce ()" link="NcmFit.html#ncm-fit-m2lnL-hessian-nd-ce"/>
     <keyword type="function" name="ncm_fit_m2lnL_val_grad ()" link="NcmFit.html#ncm-fit-m2lnL-val-grad"/>
-    <keyword type="function" name="ncm_fit_m2lnL_val_grad_an ()" link="NcmFit.html#ncm-fit-m2lnL-val-grad-an"/>
-    <keyword type="function" name="ncm_fit_m2lnL_val_grad_nd_fo ()" link="NcmFit.html#ncm-fit-m2lnL-val-grad-nd-fo"/>
-    <keyword type="function" name="ncm_fit_m2lnL_val_grad_nd_ce ()" link="NcmFit.html#ncm-fit-m2lnL-val-grad-nd-ce"/>
-    <keyword type="function" name="ncm_fit_m2lnL_val_grad_nd_ac ()" link="NcmFit.html#ncm-fit-m2lnL-val-grad-nd-ac"/>
     <keyword type="function" name="ncm_fit_ls_J ()" link="NcmFit.html#ncm-fit-ls-J"/>
-    <keyword type="function" name="ncm_fit_ls_J_an ()" link="NcmFit.html#ncm-fit-ls-J-an"/>
-    <keyword type="function" name="ncm_fit_ls_J_nd_fo ()" link="NcmFit.html#ncm-fit-ls-J-nd-fo"/>
-    <keyword type="function" name="ncm_fit_ls_J_nd_ce ()" link="NcmFit.html#ncm-fit-ls-J-nd-ce"/>
-    <keyword type="function" name="ncm_fit_ls_J_nd_ac ()" link="NcmFit.html#ncm-fit-ls-J-nd-ac"/>
     <keyword type="function" name="ncm_fit_ls_f_J ()" link="NcmFit.html#ncm-fit-ls-f-J"/>
-    <keyword type="function" name="ncm_fit_ls_f_J_an ()" link="NcmFit.html#ncm-fit-ls-f-J-an"/>
-    <keyword type="function" name="ncm_fit_ls_f_J_nd_fo ()" link="NcmFit.html#ncm-fit-ls-f-J-nd-fo"/>
-    <keyword type="function" name="ncm_fit_ls_f_J_nd_ce ()" link="NcmFit.html#ncm-fit-ls-f-J-nd-ce"/>
-    <keyword type="function" name="ncm_fit_ls_f_J_nd_ac ()" link="NcmFit.html#ncm-fit-ls-f-J-nd-ac"/>
-    <keyword type="function" name="ncm_fit_fisher_to_covar ()" link="NcmFit.html#ncm-fit-fisher-to-covar"/>
     <keyword type="function" name="ncm_fit_obs_fisher ()" link="NcmFit.html#ncm-fit-obs-fisher"/>
+    <keyword type="function" name="ncm_fit_ls_fisher ()" link="NcmFit.html#ncm-fit-ls-fisher"/>
     <keyword type="function" name="ncm_fit_fisher ()" link="NcmFit.html#ncm-fit-fisher"/>
-    <keyword type="function" name="ncm_fit_numdiff_m2lnL_hessian ()" link="NcmFit.html#ncm-fit-numdiff-m2lnL-hessian"/>
-    <keyword type="function" name="ncm_fit_numdiff_m2lnL_covar ()" link="NcmFit.html#ncm-fit-numdiff-m2lnL-covar"/>
-    <keyword type="function" name="ncm_fit_ls_covar ()" link="NcmFit.html#ncm-fit-ls-covar"/>
+    <keyword type="function" name="ncm_fit_numdiff_m2lnL_covar ()" link="NcmFit.html#ncm-fit-numdiff-m2lnL-covar" deprecated="0.18.2: Use ncm_fit_obs_fisher() instead."/>
     <keyword type="function" name="ncm_fit_numdiff_m2lnL_lndet_covar ()" link="NcmFit.html#ncm-fit-numdiff-m2lnL-lndet-covar"/>
     <keyword type="function" name="ncm_fit_get_covar ()" link="NcmFit.html#ncm-fit-get-covar"/>
     <keyword type="function" name="ncm_fit_covar_var ()" link="NcmFit.html#ncm-fit-covar-var"/>
@@ -3007,7 +3018,6 @@
     <keyword type="function" name="ncm_fit_covar_fparam_sd ()" link="NcmFit.html#ncm-fit-covar-fparam-sd"/>
     <keyword type="function" name="ncm_fit_covar_fparam_cov ()" link="NcmFit.html#ncm-fit-covar-fparam-cov"/>
     <keyword type="function" name="ncm_fit_covar_fparam_cor ()" link="NcmFit.html#ncm-fit-covar-fparam-cor"/>
-    <keyword type="function" name="ncm_fit_residual_ks_test ()" link="NcmFit.html#ncm-fit-residual-ks-test"/>
     <keyword type="function" name="ncm_fit_lr_test_range ()" link="NcmFit.html#ncm-fit-lr-test-range"/>
     <keyword type="function" name="ncm_fit_dprob ()" link="NcmFit.html#ncm-fit-dprob"/>
     <keyword type="function" name="ncm_fit_lr_test ()" link="NcmFit.html#ncm-fit-lr-test"/>
@@ -3019,13 +3029,16 @@
     <keyword type="function" name="ncm_fit_type_constrain_error ()" link="NcmFit.html#ncm-fit-type-constrain-error"/>
     <keyword type="function" name="ncm_fit_function_error ()" link="NcmFit.html#ncm-fit-function-error"/>
     <keyword type="function" name="ncm_fit_function_cov ()" link="NcmFit.html#ncm-fit-function-cov"/>
+    <keyword type="macro" name="NCM_TYPE_FIT" link="NcmFit.html#NCM-TYPE-FIT:CAPS"/>
     <keyword type="enum" name="enum NcmFitType" link="NcmFit.html#NcmFitType"/>
     <keyword type="enum" name="enum NcmFitGradType" link="NcmFit.html#NcmFitGradType"/>
     <keyword type="enum" name="enum NcmFitRunMsgs" link="NcmFit.html#NcmFitRunMsgs"/>
+    <keyword type="struct" name="struct NcmFitClass" link="NcmFit.html#NcmFitClass"/>
     <keyword type="macro" name="NCM_FIT_DEFAULT_M2LNL_RELTOL" link="NcmFit.html#NCM-FIT-DEFAULT-M2LNL-RELTOL:CAPS"/>
     <keyword type="macro" name="NCM_FIT_DEFAULT_M2LNL_ABSTOL" link="NcmFit.html#NCM-FIT-DEFAULT-M2LNL-ABSTOL:CAPS"/>
     <keyword type="macro" name="NCM_FIT_DEFAULT_PARAMS_RELTOL" link="NcmFit.html#NCM-FIT-DEFAULT-PARAMS-RELTOL:CAPS"/>
     <keyword type="macro" name="NCM_FIT_DEFAULT_MAXITER" link="NcmFit.html#NCM-FIT-DEFAULT-MAXITER:CAPS"/>
+    <keyword type="struct" name="NcmFit" link="NcmFit.html#NcmFit-struct"/>
     <keyword type="property" name="The “equality-constraints” property" link="NcmFit.html#NcmFit--equality-constraints"/>
     <keyword type="property" name="The “equality-constraints-tot” property" link="NcmFit.html#NcmFit--equality-constraints-tot"/>
     <keyword type="property" name="The “grad-type” property" link="NcmFit.html#NcmFit--grad-type"/>
@@ -3039,32 +3052,42 @@
     <keyword type="property" name="The “params-reltol” property" link="NcmFit.html#NcmFit--params-reltol"/>
     <keyword type="property" name="The “state” property" link="NcmFit.html#NcmFit--state"/>
     <keyword type="property" name="The “sub-fit” property" link="NcmFit.html#NcmFit--sub-fit"/>
-    <keyword type="function" name="ncm_fit_nlopt_new ()" link="NcmFitNLOpt.html#ncm-fit-nlopt-new"/>
-    <keyword type="function" name="ncm_fit_nlopt_local_new ()" link="NcmFitNLOpt.html#ncm-fit-nlopt-local-new"/>
-    <keyword type="function" name="ncm_fit_nlopt_set_algo ()" link="NcmFitNLOpt.html#ncm-fit-nlopt-set-algo"/>
-    <keyword type="function" name="ncm_fit_nlopt_set_local_algo ()" link="NcmFitNLOpt.html#ncm-fit-nlopt-set-local-algo"/>
-    <keyword type="function" name="ncm_fit_nlopt_new_by_name ()" link="NcmFitNLOpt.html#ncm-fit-nlopt-new-by-name"/>
-    <keyword type="function" name="ncm_fit_nlopt_new_default ()" link="NcmFitNLOpt.html#ncm-fit-nlopt-new-default"/>
-    <keyword type="property" name="The “algorithm” property" link="NcmFitNLOpt.html#NcmFitNLOpt--algorithm"/>
-    <keyword type="property" name="The “local-algorithm” property" link="NcmFitNLOpt.html#NcmFitNLOpt--local-algorithm"/>
+    <keyword type="function" name="ncm_fit_nlopt_new ()" link="numcosmo-NLopt-Interface-Object.html#ncm-fit-nlopt-new"/>
+    <keyword type="function" name="ncm_fit_nlopt_local_new ()" link="numcosmo-NLopt-Interface-Object.html#ncm-fit-nlopt-local-new"/>
+    <keyword type="function" name="ncm_fit_nlopt_set_algo ()" link="numcosmo-NLopt-Interface-Object.html#ncm-fit-nlopt-set-algo"/>
+    <keyword type="function" name="ncm_fit_nlopt_set_local_algo ()" link="numcosmo-NLopt-Interface-Object.html#ncm-fit-nlopt-set-local-algo"/>
+    <keyword type="function" name="ncm_fit_nlopt_new_by_name ()" link="numcosmo-NLopt-Interface-Object.html#ncm-fit-nlopt-new-by-name"/>
+    <keyword type="function" name="ncm_fit_nlopt_new_default ()" link="numcosmo-NLopt-Interface-Object.html#ncm-fit-nlopt-new-default"/>
+    <keyword type="macro" name="NCM_TYPE_FIT_NLOPT" link="numcosmo-NLopt-Interface-Object.html#NCM-TYPE-FIT-NLOPT:CAPS"/>
+    <keyword type="struct" name="NcmFitNLOpt" link="numcosmo-NLopt-Interface-Object.html#NcmFitNLOpt-struct"/>
+    <keyword type="property" name="The “algorithm” property" link="numcosmo-NLopt-Interface-Object.html#NcmFitNLOpt--algorithm"/>
+    <keyword type="property" name="The “local-algorithm” property" link="numcosmo-NLopt-Interface-Object.html#NcmFitNLOpt--local-algorithm"/>
     <keyword type="function" name="ncm_fit_gsl_ls_new ()" link="NcmFitGSLLS.html#ncm-fit-gsl-ls-new"/>
+    <keyword type="macro" name="NCM_TYPE_FIT_GSL_LS" link="NcmFitGSLLS.html#NCM-TYPE-FIT-GSL-LS:CAPS"/>
+    <keyword type="struct" name="NcmFitGSLLS" link="NcmFitGSLLS.html#NcmFitGSLLS-struct"/>
     <keyword type="function" name="ncm_fit_gsl_mm_new ()" link="NcmFitGSLMM.html#ncm-fit-gsl-mm-new"/>
     <keyword type="function" name="ncm_fit_gsl_mm_new_default ()" link="NcmFitGSLMM.html#ncm-fit-gsl-mm-new-default"/>
     <keyword type="function" name="ncm_fit_gsl_mm_new_by_name ()" link="NcmFitGSLMM.html#ncm-fit-gsl-mm-new-by-name"/>
     <keyword type="function" name="ncm_fit_gsl_mm_set_algo ()" link="NcmFitGSLMM.html#ncm-fit-gsl-mm-set-algo"/>
+    <keyword type="macro" name="NCM_TYPE_FIT_GSL_MM" link="NcmFitGSLMM.html#NCM-TYPE-FIT-GSL-MM:CAPS"/>
     <keyword type="enum" name="enum NcmFitGSLMMAlgos" link="NcmFitGSLMM.html#NcmFitGSLMMAlgos"/>
+    <keyword type="struct" name="NcmFitGSLMM" link="NcmFitGSLMM.html#NcmFitGSLMM-struct"/>
     <keyword type="property" name="The “algorithm” property" link="NcmFitGSLMM.html#NcmFitGSLMM--algorithm"/>
     <keyword type="function" name="ncm_fit_gsl_mms_new ()" link="NcmFitGSLMMS.html#ncm-fit-gsl-mms-new"/>
     <keyword type="function" name="ncm_fit_gsl_mms_new_default ()" link="NcmFitGSLMMS.html#ncm-fit-gsl-mms-new-default"/>
     <keyword type="function" name="ncm_fit_gsl_mms_new_by_name ()" link="NcmFitGSLMMS.html#ncm-fit-gsl-mms-new-by-name"/>
     <keyword type="function" name="ncm_fit_gsl_mms_set_algo ()" link="NcmFitGSLMMS.html#ncm-fit-gsl-mms-set-algo"/>
+    <keyword type="macro" name="NCM_TYPE_FIT_GSL_MMS" link="NcmFitGSLMMS.html#NCM-TYPE-FIT-GSL-MMS:CAPS"/>
     <keyword type="enum" name="enum NcmFitGSLMMSAlgos" link="NcmFitGSLMMS.html#NcmFitGSLMMSAlgos"/>
+    <keyword type="struct" name="NcmFitGSLMMS" link="NcmFitGSLMMS.html#NcmFitGSLMMS-struct"/>
     <keyword type="property" name="The “algorithm” property" link="NcmFitGSLMMS.html#NcmFitGSLMMS--algorithm"/>
     <keyword type="function" name="ncm_fit_levmar_new ()" link="NcmFitLevmar.html#ncm-fit-levmar-new"/>
     <keyword type="function" name="ncm_fit_levmar_new_default ()" link="NcmFitLevmar.html#ncm-fit-levmar-new-default"/>
     <keyword type="function" name="ncm_fit_levmar_new_by_name ()" link="NcmFitLevmar.html#ncm-fit-levmar-new-by-name"/>
     <keyword type="function" name="ncm_fit_levmar_set_algo ()" link="NcmFitLevmar.html#ncm-fit-levmar-set-algo"/>
+    <keyword type="macro" name="NCM_TYPE_FIT_LEVMAR" link="NcmFitLevmar.html#NCM-TYPE-FIT-LEVMAR:CAPS"/>
     <keyword type="enum" name="enum NcmFitLevmarAlgos" link="NcmFitLevmar.html#NcmFitLevmarAlgos"/>
+    <keyword type="struct" name="NcmFitLevmar" link="NcmFitLevmar.html#NcmFitLevmar-struct"/>
     <keyword type="property" name="The “algorithm” property" link="NcmFitLevmar.html#NcmFitLevmar--algorithm"/>
     <keyword type="function" name="NcmFitMCResample ()" link="NcmFitMC.html#NcmFitMCResample"/>
     <keyword type="function" name="ncm_fit_mc_new ()" link="NcmFitMC.html#ncm-fit-mc-new"/>
@@ -3077,6 +3100,7 @@
     <keyword type="function" name="ncm_fit_mc_keep_order ()" link="NcmFitMC.html#ncm-fit-mc-keep-order"/>
     <keyword type="function" name="ncm_fit_mc_set_fiducial ()" link="NcmFitMC.html#ncm-fit-mc-set-fiducial"/>
     <keyword type="function" name="ncm_fit_mc_set_rng ()" link="NcmFitMC.html#ncm-fit-mc-set-rng"/>
+    <keyword type="function" name="ncm_fit_mc_is_running ()" link="NcmFitMC.html#ncm-fit-mc-is-running"/>
     <keyword type="function" name="ncm_fit_mc_start_run ()" link="NcmFitMC.html#ncm-fit-mc-start-run"/>
     <keyword type="function" name="ncm_fit_mc_end_run ()" link="NcmFitMC.html#ncm-fit-mc-end-run"/>
     <keyword type="function" name="ncm_fit_mc_reset ()" link="NcmFitMC.html#ncm-fit-mc-reset"/>
@@ -3085,8 +3109,11 @@
     <keyword type="function" name="ncm_fit_mc_run_lre ()" link="NcmFitMC.html#ncm-fit-mc-run-lre"/>
     <keyword type="function" name="ncm_fit_mc_mean_covar ()" link="NcmFitMC.html#ncm-fit-mc-mean-covar"/>
     <keyword type="function" name="ncm_fit_mc_get_catalog ()" link="NcmFitMC.html#ncm-fit-mc-get-catalog"/>
+    <keyword type="function" name="ncm_fit_mc_peek_catalog ()" link="NcmFitMC.html#ncm-fit-mc-peek-catalog"/>
+    <keyword type="macro" name="NCM_TYPE_FIT_MC" link="NcmFitMC.html#NCM-TYPE-FIT-MC:CAPS"/>
     <keyword type="enum" name="enum NcmFitMCResampleType" link="NcmFitMC.html#NcmFitMCResampleType"/>
     <keyword type="macro" name="NCM_FIT_MC_MIN_SYNC_INTERVAL" link="NcmFitMC.html#NCM-FIT-MC-MIN-SYNC-INTERVAL:CAPS"/>
+    <keyword type="struct" name="NcmFitMC" link="NcmFitMC.html#NcmFitMC-struct"/>
     <keyword type="property" name="The “fiducial” property" link="NcmFitMC.html#NcmFitMC--fiducial"/>
     <keyword type="property" name="The “fit” property" link="NcmFitMC.html#NcmFitMC--fit"/>
     <keyword type="property" name="The “keep-order” property" link="NcmFitMC.html#NcmFitMC--keep-order"/>
@@ -3100,6 +3127,8 @@
     <keyword type="function" name="ncm_fit_mcbs_set_rng ()" link="NcmFitMCBS.html#ncm-fit-mcbs-set-rng"/>
     <keyword type="function" name="ncm_fit_mcbs_run ()" link="NcmFitMCBS.html#ncm-fit-mcbs-run"/>
     <keyword type="function" name="ncm_fit_mcbs_get_catalog ()" link="NcmFitMCBS.html#ncm-fit-mcbs-get-catalog"/>
+    <keyword type="macro" name="NCM_TYPE_FIT_MCBS" link="NcmFitMCBS.html#NCM-TYPE-FIT-MCBS:CAPS"/>
+    <keyword type="struct" name="NcmFitMCBS" link="NcmFitMCBS.html#NcmFitMCBS-struct"/>
     <keyword type="property" name="The “filename” property" link="NcmFitMCBS.html#NcmFitMCBS--filename"/>
     <keyword type="property" name="The “fit” property" link="NcmFitMCBS.html#NcmFitMCBS--fit"/>
     <keyword type="function" name="ncm_lh_ratio1d_new ()" link="NcmLHRatio1d.html#ncm-lh-ratio1d-new"/>
@@ -3107,7 +3136,9 @@
     <keyword type="function" name="ncm_lh_ratio1d_clear ()" link="NcmLHRatio1d.html#ncm-lh-ratio1d-clear"/>
     <keyword type="function" name="ncm_lh_ratio1d_set_pindex ()" link="NcmLHRatio1d.html#ncm-lh-ratio1d-set-pindex"/>
     <keyword type="function" name="ncm_lh_ratio1d_find_bounds ()" link="NcmLHRatio1d.html#ncm-lh-ratio1d-find-bounds"/>
+    <keyword type="macro" name="NCM_TYPE_LH_RATIO1D" link="NcmLHRatio1d.html#NCM-TYPE-LH-RATIO1D:CAPS"/>
     <keyword type="enum" name="enum NcmLHRatio1dRoot" link="NcmLHRatio1d.html#NcmLHRatio1dRoot"/>
+    <keyword type="struct" name="NcmLHRatio1d" link="NcmLHRatio1d.html#NcmLHRatio1d-struct"/>
     <keyword type="property" name="The “constraint” property" link="NcmLHRatio1d.html#NcmLHRatio1d--constraint"/>
     <keyword type="property" name="The “fit” property" link="NcmLHRatio1d.html#NcmLHRatio1d--fit"/>
     <keyword type="property" name="The “pi” property" link="NcmLHRatio1d.html#NcmLHRatio1d--pi"/>
@@ -3121,9 +3152,10 @@
     <keyword type="function" name="ncm_lh_ratio2d_region_free ()" link="NcmLHRatio2d.html#ncm-lh-ratio2d-region-free"/>
     <keyword type="function" name="ncm_lh_ratio2d_region_clear ()" link="NcmLHRatio2d.html#ncm-lh-ratio2d-region-clear"/>
     <keyword type="function" name="ncm_lh_ratio2d_region_print ()" link="NcmLHRatio2d.html#ncm-lh-ratio2d-region-print"/>
+    <keyword type="macro" name="NCM_TYPE_LH_RATIO2D" link="NcmLHRatio2d.html#NCM-TYPE-LH-RATIO2D:CAPS"/>
     <keyword type="enum" name="enum NcmLHRatio2dRoot" link="NcmLHRatio2d.html#NcmLHRatio2dRoot"/>
-    <keyword type="struct" name="struct NcmLHRatio2dPoint" link="NcmLHRatio2d.html#NcmLHRatio2dPoint"/>
     <keyword type="struct" name="struct NcmLHRatio2dRegion" link="NcmLHRatio2d.html#NcmLHRatio2dRegion-struct"/>
+    <keyword type="struct" name="NcmLHRatio2d" link="NcmLHRatio2d.html#NcmLHRatio2d-struct"/>
     <keyword type="property" name="The “border-prec” property" link="NcmLHRatio2d.html#NcmLHRatio2d--border-prec"/>
     <keyword type="property" name="The “fit” property" link="NcmLHRatio2d.html#NcmLHRatio2d--fit"/>
     <keyword type="property" name="The “pi1” property" link="NcmLHRatio2d.html#NcmLHRatio2d--pi1"/>
@@ -3277,7 +3309,9 @@
     <keyword type="function" name="ncm_fit_mcmc_run_lre ()" link="NcmFitMCMC.html#ncm-fit-mcmc-run-lre"/>
     <keyword type="function" name="ncm_fit_mcmc_mean_covar ()" link="NcmFitMCMC.html#ncm-fit-mcmc-mean-covar"/>
     <keyword type="function" name="ncm_fit_mcmc_get_catalog ()" link="NcmFitMCMC.html#ncm-fit-mcmc-get-catalog"/>
+    <keyword type="macro" name="NCM_TYPE_FIT_MCMC" link="NcmFitMCMC.html#NCM-TYPE-FIT-MCMC:CAPS"/>
     <keyword type="macro" name="NCM_FIT_MCMC_MIN_SYNC_INTERVAL" link="NcmFitMCMC.html#NCM-FIT-MCMC-MIN-SYNC-INTERVAL:CAPS"/>
+    <keyword type="struct" name="NcmFitMCMC" link="NcmFitMCMC.html#NcmFitMCMC-struct"/>
     <keyword type="property" name="The “fit” property" link="NcmFitMCMC.html#NcmFitMCMC--fit"/>
     <keyword type="property" name="The “mtype” property" link="NcmFitMCMC.html#NcmFitMCMC--mtype"/>
     <keyword type="property" name="The “nthreads” property" link="NcmFitMCMC.html#NcmFitMCMC--nthreads"/>
@@ -3316,10 +3350,12 @@
     <keyword type="function" name="ncm_fit_esmcmc_peek_fit ()" link="NcmFitESMCMC.html#ncm-fit-esmcmc-peek-fit"/>
     <keyword type="function" name="ncm_fit_esmcmc_validate ()" link="NcmFitESMCMC.html#ncm-fit-esmcmc-validate"/>
     <keyword type="function" name="ncm_fit_esmcmc_peek_walker ()" link="NcmFitESMCMC.html#ncm-fit-esmcmc-peek-walker"/>
+    <keyword type="macro" name="NCM_TYPE_FIT_ESMCMC" link="NcmFitESMCMC.html#NCM-TYPE-FIT-ESMCMC:CAPS"/>
     <keyword type="macro" name="NCM_FIT_ESMCMC_MIN_SYNC_INTERVAL" link="NcmFitESMCMC.html#NCM-FIT-ESMCMC-MIN-SYNC-INTERVAL:CAPS"/>
     <keyword type="macro" name="NCM_FIT_ESMCMC_M2LNL_ID" link="NcmFitESMCMC.html#NCM-FIT-ESMCMC-M2LNL-ID:CAPS"/>
     <keyword type="macro" name="NCM_FIT_ESMCMC_MPI_IN_LEN" link="NcmFitESMCMC.html#NCM-FIT-ESMCMC-MPI-IN-LEN:CAPS"/>
     <keyword type="macro" name="NCM_FIT_ESMCMC_MPI_OUT_LEN" link="NcmFitESMCMC.html#NCM-FIT-ESMCMC-MPI-OUT-LEN:CAPS"/>
+    <keyword type="struct" name="NcmFitESMCMC" link="NcmFitESMCMC.html#NcmFitESMCMC-struct"/>
     <keyword type="property" name="The “auto-trim” property" link="NcmFitESMCMC.html#NcmFitESMCMC--auto-trim"/>
     <keyword type="property" name="The “auto-trim-div” property" link="NcmFitESMCMC.html#NcmFitESMCMC--auto-trim-div"/>
     <keyword type="property" name="The “data-file” property" link="NcmFitESMCMC.html#NcmFitESMCMC--data-file"/>
@@ -3337,7 +3373,6 @@
     <keyword type="property" name="The “trim-type” property" link="NcmFitESMCMC.html#NcmFitESMCMC--trim-type"/>
     <keyword type="property" name="The “use-mpi” property" link="NcmFitESMCMC.html#NcmFitESMCMC--use-mpi"/>
     <keyword type="property" name="The “walker” property" link="NcmFitESMCMC.html#NcmFitESMCMC--walker"/>
-    <keyword type="function" name="ncm_fit_esmcmc_walker_new_from_name ()" link="NcmFitESMCMCWalker.html#ncm-fit-esmcmc-walker-new-from-name"/>
     <keyword type="function" name="ncm_fit_esmcmc_walker_ref ()" link="NcmFitESMCMCWalker.html#ncm-fit-esmcmc-walker-ref"/>
     <keyword type="function" name="ncm_fit_esmcmc_walker_free ()" link="NcmFitESMCMCWalker.html#ncm-fit-esmcmc-walker-free"/>
     <keyword type="function" name="ncm_fit_esmcmc_walker_clear ()" link="NcmFitESMCMCWalker.html#ncm-fit-esmcmc-walker-clear"/>
@@ -3351,6 +3386,9 @@
     <keyword type="function" name="ncm_fit_esmcmc_walker_prob_norm ()" link="NcmFitESMCMCWalker.html#ncm-fit-esmcmc-walker-prob-norm"/>
     <keyword type="function" name="ncm_fit_esmcmc_walker_clean ()" link="NcmFitESMCMCWalker.html#ncm-fit-esmcmc-walker-clean"/>
     <keyword type="function" name="ncm_fit_esmcmc_walker_desc ()" link="NcmFitESMCMCWalker.html#ncm-fit-esmcmc-walker-desc"/>
+    <keyword type="macro" name="NCM_TYPE_FIT_ESMCMC_WALKER" link="NcmFitESMCMCWalker.html#NCM-TYPE-FIT-ESMCMC-WALKER:CAPS"/>
+    <keyword type="struct" name="struct NcmFitESMCMCWalkerClass" link="NcmFitESMCMCWalker.html#NcmFitESMCMCWalkerClass"/>
+    <keyword type="struct" name="NcmFitESMCMCWalker" link="NcmFitESMCMCWalker.html#NcmFitESMCMCWalker-struct"/>
     <keyword type="property" name="The “nparams” property" link="NcmFitESMCMCWalker.html#NcmFitESMCMCWalker--nparams"/>
     <keyword type="property" name="The “size” property" link="NcmFitESMCMCWalker.html#NcmFitESMCMCWalker--size"/>
     <keyword type="function" name="ncm_fit_esmcmc_walker_stretch_new ()" link="NcmFitESMCMCWalkerStretch.html#ncm-fit-esmcmc-walker-stretch-new"/>
@@ -3359,11 +3397,15 @@
     <keyword type="function" name="ncm_fit_esmcmc_walker_stretch_set_box ()" link="NcmFitESMCMCWalkerStretch.html#ncm-fit-esmcmc-walker-stretch-set-box"/>
     <keyword type="function" name="ncm_fit_esmcmc_walker_stretch_set_box_mset ()" link="NcmFitESMCMCWalkerStretch.html#ncm-fit-esmcmc-walker-stretch-set-box-mset"/>
     <keyword type="function" name="ncm_fit_esmcmc_walker_stretch_multi ()" link="NcmFitESMCMCWalkerStretch.html#ncm-fit-esmcmc-walker-stretch-multi"/>
+    <keyword type="macro" name="NCM_TYPE_FIT_ESMCMC_WALKER_STRETCH" link="NcmFitESMCMCWalkerStretch.html#NCM-TYPE-FIT-ESMCMC-WALKER-STRETCH:CAPS"/>
+    <keyword type="struct" name="NcmFitESMCMCWalkerStretch" link="NcmFitESMCMCWalkerStretch.html#NcmFitESMCMCWalkerStretch-struct"/>
     <keyword type="property" name="The “multi-stretch” property" link="NcmFitESMCMCWalkerStretch.html#NcmFitESMCMCWalkerStretch--multi-stretch"/>
     <keyword type="property" name="The “scale” property" link="NcmFitESMCMCWalkerStretch.html#NcmFitESMCMCWalkerStretch--scale"/>
     <keyword type="function" name="ncm_fit_esmcmc_walker_walk_new ()" link="NcmFitESMCMCWalkerWalk.html#ncm-fit-esmcmc-walker-walk-new"/>
     <keyword type="function" name="ncm_fit_esmcmc_walker_walk_set_scale ()" link="NcmFitESMCMCWalkerWalk.html#ncm-fit-esmcmc-walker-walk-set-scale"/>
     <keyword type="function" name="ncm_fit_esmcmc_walker_walk_get_scale ()" link="NcmFitESMCMCWalkerWalk.html#ncm-fit-esmcmc-walker-walk-get-scale"/>
+    <keyword type="macro" name="NCM_TYPE_FIT_ESMCMC_WALKER_WALK" link="NcmFitESMCMCWalkerWalk.html#NCM-TYPE-FIT-ESMCMC-WALKER-WALK:CAPS"/>
+    <keyword type="struct" name="NcmFitESMCMCWalkerWalk" link="NcmFitESMCMCWalkerWalk.html#NcmFitESMCMCWalkerWalk-struct"/>
     <keyword type="property" name="The “scale” property" link="NcmFitESMCMCWalkerWalk.html#NcmFitESMCMCWalkerWalk--scale"/>
     <keyword type="function" name="ncm_fit_esmcmc_walker_apes_new ()" link="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-new"/>
     <keyword type="function" name="ncm_fit_esmcmc_walker_apes_new_full ()" link="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-new-full"/>
@@ -3385,8 +3427,10 @@
     <keyword type="function" name="ncm_fit_esmcmc_walker_apes_set_cov_fixed_from_mset ()" link="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-set-cov-fixed-from-mset"/>
     <keyword type="function" name="ncm_fit_esmcmc_walker_apes_set_cov_robust_diag ()" link="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-set-cov-robust-diag"/>
     <keyword type="function" name="ncm_fit_esmcmc_walker_apes_set_cov_robust ()" link="NcmFitESMCMCWalkerAPES.html#ncm-fit-esmcmc-walker-apes-set-cov-robust"/>
+    <keyword type="macro" name="NCM_TYPE_FIT_ESMCMC_WALKER_APES" link="NcmFitESMCMCWalkerAPES.html#NCM-TYPE-FIT-ESMCMC-WALKER-APES:CAPS"/>
     <keyword type="enum" name="enum NcmFitESMCMCWalkerAPESMethod" link="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESMethod"/>
     <keyword type="enum" name="enum NcmFitESMCMCWalkerAPESKType" link="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESKType"/>
+    <keyword type="struct" name="NcmFitESMCMCWalkerAPES" link="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPES-struct"/>
     <keyword type="property" name="The “kernel-type” property" link="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPES--kernel-type"/>
     <keyword type="property" name="The “method” property" link="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPES--method"/>
     <keyword type="property" name="The “over-smooth” property" link="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPES--over-smooth"/>
@@ -3436,6 +3480,8 @@
     <keyword type="function" name="ncm_data_gaussmix2d_ref ()" link="NcmDataGaussMix2D.html#ncm-data-gaussmix2d-ref"/>
     <keyword type="function" name="ncm_data_gaussmix2d_free ()" link="NcmDataGaussMix2D.html#ncm-data-gaussmix2d-free"/>
     <keyword type="function" name="ncm_data_gaussmix2d_clear ()" link="NcmDataGaussMix2D.html#ncm-data-gaussmix2d-clear"/>
+    <keyword type="macro" name="NCM_TYPE_DATA_GAUSSMIX2D" link="NcmDataGaussMix2D.html#NCM-TYPE-DATA-GAUSSMIX2D:CAPS"/>
+    <keyword type="struct" name="NcmDataGaussMix2D" link="NcmDataGaussMix2D.html#NcmDataGaussMix2D-struct"/>
     <keyword type="function" name="ncm_model_funnel_new ()" link="NcmModelFunnel.html#ncm-model-funnel-new"/>
     <keyword type="function" name="ncm_model_funnel_ref ()" link="NcmModelFunnel.html#ncm-model-funnel-ref"/>
     <keyword type="function" name="ncm_model_funnel_free ()" link="NcmModelFunnel.html#ncm-model-funnel-free"/>
@@ -3605,7 +3651,6 @@
     <keyword type="function" name="nc_hicosmo_set_NMassNu_impl ()" link="NcHICosmo.html#nc-hicosmo-set-NMassNu-impl"/>
     <keyword type="function" name="nc_hicosmo_set_MassNuInfo_impl ()" link="NcHICosmo.html#nc-hicosmo-set-MassNuInfo-impl"/>
     <keyword type="function" name="nc_hicosmo_set_get_bg_var_impl ()" link="NcHICosmo.html#nc-hicosmo-set-get-bg-var-impl"/>
-    <keyword type="function" name="nc_hicosmo_new_from_name ()" link="NcHICosmo.html#nc-hicosmo-new-from-name"/>
     <keyword type="function" name="nc_hicosmo_ref ()" link="NcHICosmo.html#nc-hicosmo-ref"/>
     <keyword type="function" name="nc_hicosmo_free ()" link="NcHICosmo.html#nc-hicosmo-free"/>
     <keyword type="function" name="nc_hicosmo_clear ()" link="NcHICosmo.html#nc-hicosmo-clear"/>
@@ -4094,7 +4139,6 @@
     <keyword type="property" name="The “zf” property" link="NcHICosmoQRBFRprior.html#NcHICosmoQRBF--zf"/>
     <keyword type="property" name="The “lambda” property" link="NcHICosmoQRBFRprior.html#NcHICosmoQRBFRprior--lambda"/>
     <keyword type="function" name="NcHIPrimFunc1 ()" link="NcHIPrim.html#NcHIPrimFunc1"/>
-    <keyword type="function" name="nc_hiprim_new_from_name ()" link="NcHIPrim.html#nc-hiprim-new-from-name"/>
     <keyword type="function" name="nc_hiprim_ref ()" link="NcHIPrim.html#nc-hiprim-ref"/>
     <keyword type="function" name="nc_hiprim_free ()" link="NcHIPrim.html#nc-hiprim-free"/>
     <keyword type="function" name="nc_hiprim_clear ()" link="NcHIPrim.html#nc-hiprim-clear"/>
@@ -4225,7 +4269,6 @@
     <keyword type="property" name="The “n-SA-fit” property" link="NcHIPrimSBPL.html#NcHIPrimSBPL--n-SA-fit"/>
     <keyword type="property" name="The “n-T” property" link="NcHIPrimSBPL.html#NcHIPrimSBPL--n-T"/>
     <keyword type="property" name="The “n-T-fit” property" link="NcHIPrimSBPL.html#NcHIPrimSBPL--n-T-fit"/>
-    <keyword type="function" name="nc_planck_fi_new_from_name ()" link="NcPlanckFI.html#nc-planck-fi-new-from-name"/>
     <keyword type="function" name="nc_planck_fi_ref ()" link="NcPlanckFI.html#nc-planck-fi-ref"/>
     <keyword type="function" name="nc_planck_fi_free ()" link="NcPlanckFI.html#nc-planck-fi-free"/>
     <keyword type="function" name="nc_planck_fi_clear ()" link="NcPlanckFI.html#nc-planck-fi-clear"/>
@@ -4707,7 +4750,6 @@
     <keyword type="property" name="The “dist” property" link="NcScalefactor.html#NcScalefactor--dist"/>
     <keyword type="property" name="The “reltol” property" link="NcScalefactor.html#NcScalefactor--reltol"/>
     <keyword type="property" name="The “zf” property" link="NcScalefactor.html#NcScalefactor--zf"/>
-    <keyword type="function" name="nc_recomb_new_from_name ()" link="NcRecomb.html#nc-recomb-new-from-name"/>
     <keyword type="function" name="nc_recomb_ref ()" link="NcRecomb.html#nc-recomb-ref"/>
     <keyword type="function" name="nc_recomb_free ()" link="NcRecomb.html#nc-recomb-free"/>
     <keyword type="function" name="nc_recomb_clear ()" link="NcRecomb.html#nc-recomb-clear"/>
@@ -4790,7 +4832,6 @@
     <keyword type="function" name="nc_recomb_cbe_set_cbe ()" link="NcRecombCBE.html#nc-recomb-cbe-set-cbe"/>
     <keyword type="function" name="nc_recomb_cbe_peek_cbe ()" link="NcRecombCBE.html#nc-recomb-cbe-peek-cbe"/>
     <keyword type="property" name="The “cbe” property" link="NcRecombCBE.html#NcRecombCBE--cbe"/>
-    <keyword type="function" name="nc_hireion_new_from_name ()" link="NcHIReion.html#nc-hireion-new-from-name"/>
     <keyword type="function" name="nc_hireion_ref ()" link="NcHIReion.html#nc-hireion-ref"/>
     <keyword type="function" name="nc_hireion_free ()" link="NcHIReion.html#nc-hireion-free"/>
     <keyword type="function" name="nc_hireion_clear ()" link="NcHIReion.html#nc-hireion-clear"/>
@@ -4938,7 +4979,6 @@
     <keyword type="function" name="NcHIPertWKBGetNuV ()" link="NcHIPertWKB.html#NcHIPertWKBGetNuV"/>
     <keyword type="function" name="NcHIPertWKBGetMnuDmnu ()" link="NcHIPertWKB.html#NcHIPertWKBGetMnuDmnu"/>
     <keyword type="function" name="NcHIPertWKBGetVal ()" link="NcHIPertWKB.html#NcHIPertWKBGetVal"/>
-    <keyword type="function" name="nc_hipert_wkb_new_by_name ()" link="NcHIPertWKB.html#nc-hipert-wkb-new-by-name"/>
     <keyword type="function" name="nc_hipert_wkb_ref ()" link="NcHIPertWKB.html#nc-hipert-wkb-ref"/>
     <keyword type="function" name="nc_hipert_wkb_free ()" link="NcHIPertWKB.html#nc-hipert-wkb-free"/>
     <keyword type="function" name="nc_hipert_wkb_clear ()" link="NcHIPertWKB.html#nc-hipert-wkb-clear"/>
@@ -5445,7 +5485,6 @@
     <keyword type="macro" name="NC_HIPERT_ITWO_FLUIDS_VARS_P_I1" link="NcHIPertITwoFluids.html#NC-HIPERT-ITWO-FLUIDS-VARS-P-I1:CAPS"/>
     <keyword type="macro" name="NC_HIPERT_ITWO_FLUIDS_VARS_P_I2" link="NcHIPertITwoFluids.html#NC-HIPERT-ITWO-FLUIDS-VARS-P-I2:CAPS"/>
     <keyword type="struct" name="struct NcHIPertITwoFluidsTV" link="NcHIPertITwoFluids.html#NcHIPertITwoFluidsTV-struct"/>
-    <keyword type="function" name="nc_window_new_from_name ()" link="NcWindow.html#nc-window-new-from-name"/>
     <keyword type="function" name="nc_window_volume ()" link="NcWindow.html#nc-window-volume"/>
     <keyword type="function" name="nc_window_eval_fourier ()" link="NcWindow.html#nc-window-eval-fourier"/>
     <keyword type="function" name="nc_window_deriv_fourier ()" link="NcWindow.html#nc-window-deriv-fourier"/>
@@ -5456,7 +5495,6 @@
     <keyword type="macro" name="NC_WINDOW_VOLUME_TOPHAT" link="NcWindowTophat.html#NC-WINDOW-VOLUME-TOPHAT:CAPS"/>
     <keyword type="function" name="nc_window_gaussian_new ()" link="NcWindowGaussian.html#nc-window-gaussian-new"/>
     <keyword type="macro" name="NC_WINDOW_VOLUME_GAUSSIAN" link="NcWindowGaussian.html#NC-WINDOW-VOLUME-GAUSSIAN:CAPS"/>
-    <keyword type="function" name="nc_transfer_func_new_from_name ()" link="NcTransferFunc.html#nc-transfer-func-new-from-name"/>
     <keyword type="function" name="nc_transfer_func_ref ()" link="NcTransferFunc.html#nc-transfer-func-ref"/>
     <keyword type="function" name="nc_transfer_func_free ()" link="NcTransferFunc.html#nc-transfer-func-free"/>
     <keyword type="function" name="nc_transfer_func_clear ()" link="NcTransferFunc.html#nc-transfer-func-clear"/>
@@ -5491,7 +5529,6 @@
     <keyword type="property" name="The “abstol” property" link="NcGrowthFunc.html#NcGrowthFunc--abstol"/>
     <keyword type="property" name="The “reltol” property" link="NcGrowthFunc.html#NcGrowthFunc--reltol"/>
     <keyword type="property" name="The “x-i” property" link="NcGrowthFunc.html#NcGrowthFunc--x-i"/>
-    <keyword type="function" name="nc_powspec_ml_new_from_name ()" link="NcPowspecML.html#nc-powspec-ml-new-from-name"/>
     <keyword type="function" name="nc_powspec_ml_ref ()" link="NcPowspecML.html#nc-powspec-ml-ref"/>
     <keyword type="function" name="nc_powspec_ml_free ()" link="NcPowspecML.html#nc-powspec-ml-free"/>
     <keyword type="function" name="nc_powspec_ml_clear ()" link="NcPowspecML.html#nc-powspec-ml-clear"/>
@@ -5522,7 +5559,6 @@
     <keyword type="property" name="The “cbe” property" link="NcPowspecMLCBE.html#NcPowspecMLCBE--cbe"/>
     <keyword type="property" name="The “intern-k-max” property" link="NcPowspecMLCBE.html#NcPowspecMLCBE--intern-k-max"/>
     <keyword type="property" name="The “intern-k-min” property" link="NcPowspecMLCBE.html#NcPowspecMLCBE--intern-k-min"/>
-    <keyword type="function" name="nc_powspec_mnl_new_from_name ()" link="NcPowspecMNL.html#nc-powspec-mnl-new-from-name"/>
     <keyword type="function" name="nc_powspec_mnl_ref ()" link="NcPowspecMNL.html#nc-powspec-mnl-ref"/>
     <keyword type="function" name="nc_powspec_mnl_free ()" link="NcPowspecMNL.html#nc-powspec-mnl-free"/>
     <keyword type="function" name="nc_powspec_mnl_clear ()" link="NcPowspecMNL.html#nc-powspec-mnl-clear"/>
@@ -5540,7 +5576,6 @@
     <keyword type="property" name="The “reltol” property" link="NcPowspecMNLHaloFit.html#NcPowspecMNLHaloFit--reltol"/>
     <keyword type="property" name="The “use-pkequal” property" link="NcPowspecMNLHaloFit.html#NcPowspecMNLHaloFit--use-pkequal"/>
     <keyword type="property" name="The “zmaxnl” property" link="NcPowspecMNLHaloFit.html#NcPowspecMNLHaloFit--zmaxnl"/>
-    <keyword type="function" name="nc_halo_density_profile_new_from_name ()" link="NcHaloDensityProfile.html#nc-halo-density-profile-new-from-name"/>
     <keyword type="function" name="nc_halo_density_profile_ref ()" link="NcHaloDensityProfile.html#nc-halo-density-profile-ref"/>
     <keyword type="function" name="nc_halo_density_profile_free ()" link="NcHaloDensityProfile.html#nc-halo-density-profile-free"/>
     <keyword type="function" name="nc_halo_density_profile_clear ()" link="NcHaloDensityProfile.html#nc-halo-density-profile-clear"/>
@@ -5767,7 +5802,6 @@
     <keyword type="function" name="nc_galaxy_acf_prepare_psi ()" link="NcGalaxyAcf.html#nc-galaxy-acf-prepare-psi"/>
     <keyword type="function" name="nc_cluster_redshift_class_obs_len ()" link="NcClusterRedshift.html#nc-cluster-redshift-class-obs-len"/>
     <keyword type="function" name="nc_cluster_redshift_class_obs_params_len ()" link="NcClusterRedshift.html#nc-cluster-redshift-class-obs-params-len"/>
-    <keyword type="function" name="nc_cluster_redshift_new_from_name ()" link="NcClusterRedshift.html#nc-cluster-redshift-new-from-name"/>
     <keyword type="function" name="nc_cluster_redshift_ref ()" link="NcClusterRedshift.html#nc-cluster-redshift-ref"/>
     <keyword type="function" name="nc_cluster_redshift_free ()" link="NcClusterRedshift.html#nc-cluster-redshift-free"/>
     <keyword type="function" name="nc_cluster_redshift_clear ()" link="NcClusterRedshift.html#nc-cluster-redshift-clear"/>
@@ -5779,8 +5813,6 @@
     <keyword type="function" name="nc_cluster_redshift_p_bin_limits ()" link="NcClusterRedshift.html#nc-cluster-redshift-p-bin-limits"/>
     <keyword type="function" name="nc_cluster_redshift_n_limits ()" link="NcClusterRedshift.html#nc-cluster-redshift-n-limits"/>
     <keyword type="function" name="nc_cluster_redshift_volume ()" link="NcClusterRedshift.html#nc-cluster-redshift-volume"/>
-    <keyword type="function" name="nc_cluster_redshift_obs_len ()" link="NcClusterRedshift.html#nc-cluster-redshift-obs-len"/>
-    <keyword type="function" name="nc_cluster_redshift_obs_params_len ()" link="NcClusterRedshift.html#nc-cluster-redshift-obs-params-len"/>
     <keyword type="function" name="nc_cluster_redshift_log_all_models ()" link="NcClusterRedshift.html#nc-cluster-redshift-log-all-models"/>
     <keyword type="enum" name="enum NcClusterRedshiftImpl" link="NcClusterRedshift.html#NcClusterRedshiftImpl"/>
     <keyword type="macro" name="NC_CLUSTER_REDSHIFT_IMPL_ALL" link="NcClusterRedshift.html#NC-CLUSTER-REDSHIFT-IMPL-ALL:CAPS"/>
@@ -5808,7 +5840,6 @@
     <keyword type="property" name="The “z-bias-fit” property" link="NcClusterPhotozGaussGlobal.html#NcClusterPhotozGaussGlobal--z-bias-fit"/>
     <keyword type="function" name="nc_cluster_mass_class_obs_len ()" link="NcClusterMass.html#nc-cluster-mass-class-obs-len"/>
     <keyword type="function" name="nc_cluster_mass_class_obs_params_len ()" link="NcClusterMass.html#nc-cluster-mass-class-obs-params-len"/>
-    <keyword type="function" name="nc_cluster_mass_new_from_name ()" link="NcClusterMass.html#nc-cluster-mass-new-from-name"/>
     <keyword type="function" name="nc_cluster_mass_ref ()" link="NcClusterMass.html#nc-cluster-mass-ref"/>
     <keyword type="function" name="nc_cluster_mass_free ()" link="NcClusterMass.html#nc-cluster-mass-free"/>
     <keyword type="function" name="nc_cluster_mass_clear ()" link="NcClusterMass.html#nc-cluster-mass-clear"/>
@@ -5821,8 +5852,6 @@
     <keyword type="function" name="nc_cluster_mass_n_limits ()" link="NcClusterMass.html#nc-cluster-mass-n-limits"/>
     <keyword type="function" name="nc_cluster_mass_volume ()" link="NcClusterMass.html#nc-cluster-mass-volume"/>
     <keyword type="function" name="nc_cluster_mass_p_vec_z_lnMobs ()" link="NcClusterMass.html#nc-cluster-mass-p-vec-z-lnMobs"/>
-    <keyword type="function" name="nc_cluster_mass_obs_len ()" link="NcClusterMass.html#nc-cluster-mass-obs-len"/>
-    <keyword type="function" name="nc_cluster_mass_obs_params_len ()" link="NcClusterMass.html#nc-cluster-mass-obs-params-len"/>
     <keyword type="function" name="nc_cluster_mass_log_all_models ()" link="NcClusterMass.html#nc-cluster-mass-log-all-models"/>
     <keyword type="enum" name="enum NcClusterMassImpl" link="NcClusterMass.html#NcClusterMassImpl"/>
     <keyword type="macro" name="NC_CLUSTER_MASS_IMPL_ALL" link="NcClusterMass.html#NC-CLUSTER-MASS-IMPL-ALL:CAPS"/>
@@ -5957,8 +5986,6 @@
     <keyword type="function" name="nc_xcor_ref ()" link="NcXcor.html#nc-xcor-ref"/>
     <keyword type="function" name="nc_xcor_free ()" link="NcXcor.html#nc-xcor-free"/>
     <keyword type="function" name="nc_xcor_clear ()" link="NcXcor.html#nc-xcor-clear"/>
-    <keyword type="function" name="nc_xcor_kinetic_copy ()" link="NcXcor.html#nc-xcor-kinetic-copy"/>
-    <keyword type="function" name="nc_xcor_kinetic_free ()" link="NcXcor.html#nc-xcor-kinetic-free"/>
     <keyword type="function" name="nc_xcor_prepare ()" link="NcXcor.html#nc-xcor-prepare"/>
     <keyword type="function" name="nc_xcor_limber ()" link="NcXcor.html#nc-xcor-limber"/>
     <keyword type="enum" name="enum NcXcorLimberMethod" link="NcXcor.html#NcXcorLimberMethod"/>
@@ -5979,10 +6006,11 @@
     <keyword type="property" name="The “ell-lik-min” property" link="NcXcorAB.html#NcXcorAB--ell-lik-min"/>
     <keyword type="property" name="The “ell-th-cut-off” property" link="NcXcorAB.html#NcXcorAB--ell-th-cut-off"/>
     <keyword type="property" name="The “mixing” property" link="NcXcorAB.html#NcXcorAB--mixing"/>
-    <keyword type="function" name="nc_xcor_limber_kernel_new_from_name ()" link="NcXcorLimberKernel.html#nc-xcor-limber-kernel-new-from-name"/>
     <keyword type="function" name="nc_xcor_limber_kernel_ref ()" link="NcXcorLimberKernel.html#nc-xcor-limber-kernel-ref"/>
     <keyword type="function" name="nc_xcor_limber_kernel_free ()" link="NcXcorLimberKernel.html#nc-xcor-limber-kernel-free"/>
     <keyword type="function" name="nc_xcor_limber_kernel_clear ()" link="NcXcorLimberKernel.html#nc-xcor-limber-kernel-clear"/>
+    <keyword type="function" name="nc_xcor_kinetic_copy ()" link="NcXcorLimberKernel.html#nc-xcor-kinetic-copy"/>
+    <keyword type="function" name="nc_xcor_kinetic_free ()" link="NcXcorLimberKernel.html#nc-xcor-kinetic-free"/>
     <keyword type="function" name="nc_xcor_limber_kernel_obs_len ()" link="NcXcorLimberKernel.html#nc-xcor-limber-kernel-obs-len"/>
     <keyword type="function" name="nc_xcor_limber_kernel_obs_params_len ()" link="NcXcorLimberKernel.html#nc-xcor-limber-kernel-obs-params-len"/>
     <keyword type="function" name="nc_xcor_limber_kernel_eval ()" link="NcXcorLimberKernel.html#nc-xcor-limber-kernel-eval"/>
@@ -5992,7 +6020,8 @@
     <keyword type="function" name="nc_xcor_limber_kernel_log_all_models ()" link="NcXcorLimberKernel.html#nc-xcor-limber-kernel-log-all-models"/>
     <keyword type="enum" name="enum NcXcorLimberKernelImpl" link="NcXcorLimberKernel.html#NcXcorLimberKernelImpl"/>
     <keyword type="macro" name="NC_XCOR_LIMBER_KERNEL_IMPL_ALL" link="NcXcorLimberKernel.html#NC-XCOR-LIMBER-KERNEL-IMPL-ALL:CAPS"/>
-    <keyword type="struct" name="NcXcorKinetic" link="NcXcorLimberKernel.html#NcXcorKinetic-struct"/>
+    <keyword type="struct" name="struct NcXcorKinetic" link="NcXcorLimberKernel.html#NcXcorKinetic-struct"/>
+    <keyword type="struct" name="struct NcXcorLimberKernel" link="NcXcorLimberKernel.html#NcXcorLimberKernel-struct"/>
     <keyword type="property" name="The “zmax” property" link="NcXcorLimberKernel.html#NcXcorLimberKernel--zmax"/>
     <keyword type="property" name="The “zmin” property" link="NcXcorLimberKernel.html#NcXcorLimberKernel--zmin"/>
     <keyword type="function" name="nc_xcor_limber_kernel_gal_new ()" link="NcXcorLimberKernelGal.html#nc-xcor-limber-kernel-gal-new"/>
@@ -6789,7 +6818,6 @@
     <keyword type="constant" name="NCM_FIT_TYPE_GSL_MMS" link="NcmFit.html#NCM-FIT-TYPE-GSL-MMS:CAPS"/>
     <keyword type="constant" name="NCM_FIT_TYPE_LEVMAR" link="NcmFit.html#NCM-FIT-TYPE-LEVMAR:CAPS"/>
     <keyword type="constant" name="NCM_FIT_TYPE_NLOPT" link="NcmFit.html#NCM-FIT-TYPE-NLOPT:CAPS"/>
-    <keyword type="constant" name="NCM_FIT_GRAD_ANALYTICAL" link="NcmFit.html#NCM-FIT-GRAD-ANALYTICAL:CAPS"/>
     <keyword type="constant" name="NCM_FIT_GRAD_NUMDIFF_FORWARD" link="NcmFit.html#NCM-FIT-GRAD-NUMDIFF-FORWARD:CAPS"/>
     <keyword type="constant" name="NCM_FIT_GRAD_NUMDIFF_CENTRAL" link="NcmFit.html#NCM-FIT-GRAD-NUMDIFF-CENTRAL:CAPS"/>
     <keyword type="constant" name="NCM_FIT_GRAD_NUMDIFF_ACCURATE" link="NcmFit.html#NCM-FIT-GRAD-NUMDIFF-ACCURATE:CAPS"/>
@@ -6818,6 +6846,7 @@
     <keyword type="constant" name="NCM_STATS_DIST_CV_NONE" link="NcmStatsDist.html#NCM-STATS-DIST-CV-NONE:CAPS"/>
     <keyword type="constant" name="NCM_STATS_DIST_CV_SPLIT" link="NcmStatsDist.html#NCM-STATS-DIST-CV-SPLIT:CAPS"/>
     <keyword type="constant" name="NCM_STATS_DIST_CV_SPLIT_NOFIT" link="NcmStatsDist.html#NCM-STATS-DIST-CV-SPLIT-NOFIT:CAPS"/>
+    <keyword type="constant" name="NCM_STATS_DIST_CV_LOO" link="NcmStatsDist.html#NCM-STATS-DIST-CV-LOO:CAPS"/>
     <keyword type="constant" name="NCM_STATS_DIST_KDE_COV_TYPE_SAMPLE" link="NcmStatsDistKDE.html#NCM-STATS-DIST-KDE-COV-TYPE-SAMPLE:CAPS"/>
     <keyword type="constant" name="NCM_STATS_DIST_KDE_COV_TYPE_FIXED" link="NcmStatsDistKDE.html#NCM-STATS-DIST-KDE-COV-TYPE-FIXED:CAPS"/>
     <keyword type="constant" name="NCM_STATS_DIST_KDE_COV_TYPE_ROBUST_DIAG" link="NcmStatsDistKDE.html#NCM-STATS-DIST-KDE-COV-TYPE-ROBUST-DIAG:CAPS"/>
@@ -7384,6 +7413,8 @@
     <keyword type="member" name="NcHIPertGravInfo-struct.dsigma-deps" link="NcHIPertGrav.html#NcHIPertGravInfo-struct.dsigma-deps"/>
     <keyword type="member" name="NcHIPertGravInfo-struct.psi-deps" link="NcHIPertGrav.html#NcHIPertGravInfo-struct.psi-deps"/>
     <keyword type="member" name="NcHIPertGravInfo-struct.dotpsi-deps" link="NcHIPertGrav.html#NcHIPertGravInfo-struct.dotpsi-deps"/>
+    <keyword type="member" name="NcXcorKinetic-struct.xi-z" link="NcXcorLimberKernel.html#NcXcorKinetic-struct.xi-z"/>
+    <keyword type="member" name="NcXcorKinetic-struct.E-z" link="NcXcorLimberKernel.html#NcXcorKinetic-struct.E-z"/>
     <keyword type="member" name="NcmMemoryPoolSlice.p" link="numcosmo-NcmMemoryPool.html#NcmMemoryPoolSlice.p"/>
     <keyword type="member" name="NcmMemoryPoolSlice.in-use" link="numcosmo-NcmMemoryPool.html#NcmMemoryPoolSlice.in-use"/>
     <keyword type="member" name="NcmMemoryPoolSlice.mp" link="numcosmo-NcmMemoryPool.html#NcmMemoryPoolSlice.mp"/>

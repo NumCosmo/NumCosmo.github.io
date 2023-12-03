@@ -1,31 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>NcmFitMCBS: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot" />
-<link rel="home" href="index.html" title="NumCosmo Reference Manual" />
-<link rel="up" href="ch02s13.html" title="Statistical Analysis" />
-<link rel="prev" href="NcmFitMC.html" title="NcmFitMC" />
-<link rel="next" href="NcmLHRatio1d.html" title="NcmLHRatio1d" />
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)" />
-<link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="container.css" type="text/css" />
-<script type="text/x-mathjax-config">
-//<![CDATA[
-                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-                                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
-                                    TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-                                            equationNumbers: { autoNumber: "AMS" } },
-                                    messageStyle: "none"
-                });
-//]]>
-</script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
-</script>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="NumCosmo Reference Manual">
+<link rel="up" href="ch02s13.html" title="Statistical Analysis">
+<link rel="prev" href="NcmFitMC.html" title="NcmFitMC">
+<link rel="next" href="NcmLHRatio1d.html" title="NcmLHRatio1d">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div id="container" class="gtk-doc"><div class="content">
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
@@ -33,26 +19,43 @@
                   <a href="#NcmFitMCBS.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
                   <a href="#NcmFitMCBS.properties" class="shortcut">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home" /></a></td>
-<td><a accesskey="u" href="ch02s13.html"><img src="up.png" width="16" height="16" border="0" alt="Up" /></a></td>
-<td><a accesskey="p" href="NcmFitMC.html"><img src="left.png" width="16" height="16" border="0" alt="Prev" /></a></td>
-<td><a accesskey="n" href="NcmLHRatio1d.html"><img src="right.png" width="16" height="16" border="0" alt="Next" /></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02s13.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="NcmFitMC.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="NcmLHRatio1d.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
-<a name="NcmFitMCBS" id="NcmFitMCBS"></a><div class="titlepage"></div>
+<a name="NcmFitMCBS"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="NcmFitMCBS.top_of_page" id="NcmFitMCBS.top_of_page"></a>NcmFitMCBS</span></h2>
+<h2><span class="refentrytitle"><a name="NcmFitMCBS.top_of_page"></a>NcmFitMCBS</span></h2>
 <p>NcmFitMCBS — Monte Carlo and bootstrap analysis.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="NcmFitMCBS.functions" id="NcmFitMCBS.functions"></a><h2>Functions</h2>
+<a name="NcmFitMCBS.stability-level"></a><h2>Stability Level</h2>
+<acronym title="Unstable interfaces are experimental or transitional. They are typically used to
+give outside developers early access to new or rapidly changing technology, or
+to provide an interim solution to a problem where a more general solution is
+anticipated. No claims are made about either source or binary compatibility from
+one minor release to the next.
+
+The Unstable interface level is a warning that these interfaces are  subject to
+change without warning and should not be used in unbundled products.
+
+Given such caveats, customer impact need not be a factor when considering
+incompatible changes to an Unstable interface in a major or minor release.
+Nonetheless, when such changes are introduced, the changes should still be
+mentioned in the release notes for the affected release.
+"><span class="acronym">Unstable</span></acronym>, unless otherwise indicated
+</div>
+<div class="refsect1">
+<a name="NcmFitMCBS.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_proto_type" />
-<col class="functions_proto_name" />
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -115,12 +118,12 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmFitMCBS.properties" id="NcmFitMCBS.properties"></a><h2>Properties</h2>
+<a name="NcmFitMCBS.properties"></a><h2>Properties</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="properties_type" />
-<col width="300px" class="properties_name" />
-<col width="200px" class="properties_flags" />
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
 </colgroup>
 <tbody>
 <tr>
@@ -139,55 +142,86 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="NcmFitMCBS.object-hierarchy" id="NcmFitMCBS.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+<a name="NcmFitMCBS.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmFitMCBS.html#NCM-TYPE-FIT-MCBS:CAPS" title="NCM_TYPE_FIT_MCBS">NCM_TYPE_FIT_MCBS</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcmFitMCBS.html#NcmFitMCBS-struct" title="NcmFitMCBS">NcmFitMCBS</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmFitMCBS.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> NcmFitMCBS
 </pre>
 </div>
 <div class="refsect1">
-<a name="NcmFitMCBS.description" id="NcmFitMCBS.description"></a><h2>Description</h2>
-<p>FIXME</p>
+<a name="NcmFitMCBS.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;numcosmo/math/ncm_fit_mcbs.h&gt;
+</pre>
 </div>
 <div class="refsect1">
-<a name="NcmFitMCBS.functions_details" id="NcmFitMCBS.functions_details"></a><h2>Functions</h2>
+<a name="NcmFitMCBS.description"></a><h2>Description</h2>
+<p>This class implements the Monte Carlo and bootstrap analysis.
+It performs a Monte Carlo analysis where for each sample of the
+likelihood function, a bootstrap analysis is performed.
+The results are stored in a <a class="link" href="NcmMSetCatalog.html" title="NcmMSetCatalog"><span class="type">NcmMSetCatalog</span></a>.</p>
+<p>The main objective of this class is to provide a way to estimate
+the accuracy of the bootstrap analysis.</p>
+</div>
+<div class="refsect1">
+<a name="NcmFitMCBS.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
-<a name="ncm-fit-mcbs-new" id="ncm-fit-mcbs-new"></a><h3>ncm_fit_mcbs_new ()</h3>
+<a name="ncm-fit-mcbs-new"></a><h3>ncm_fit_mcbs_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcmFitMCBS.html" title="NcmFitMCBS"><span class="returnvalue">NcmFitMCBS</span></a> *
 ncm_fit_mcbs_new (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>);</pre>
-<p>FIXME</p>
+<p>Creates a new <a class="link" href="NcmFitMCBS.html" title="NcmFitMCBS"><span class="type">NcmFitMCBS</span></a> object.</p>
 <div class="refsect3">
-<a name="ncm-fit-mcbs-new.parameters" id="ncm-fit-mcbs-new.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-mcbs-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fit</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-fit-mcbs-new.returns" id="ncm-fit-mcbs-new.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<a name="ncm-fit-mcbs-new.returns"></a><h4>Returns</h4>
+<p>a new <a class="link" href="NcmFitMCBS.html" title="NcmFitMCBS"><span class="type">NcmFitMCBS</span></a> object. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-mcbs-free" id="ncm-fit-mcbs-free"></a><h3>ncm_fit_mcbs_free ()</h3>
+<a name="ncm-fit-mcbs-free"></a><h3>ncm_fit_mcbs_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_mcbs_free (<em class="parameter"><code><a class="link" href="NcmFitMCBS.html" title="NcmFitMCBS"><span class="type">NcmFitMCBS</span></a> *mcbs</code></em>);</pre>
-<p>FIXME</p>
+<p>Decreases the reference count of <em class="parameter"><code>mcbs</code></em>
+ by one.</p>
 <div class="refsect3">
-<a name="ncm-fit-mcbs-free.parameters" id="ncm-fit-mcbs-free.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-mcbs-free.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>mcbs</p></td>
@@ -197,19 +231,22 @@ ncm_fit_mcbs_free (<em class="parameter"><code><a class="link" href="NcmFitMCBS.
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-mcbs-clear" id="ncm-fit-mcbs-clear"></a><h3>ncm_fit_mcbs_clear ()</h3>
+<a name="ncm-fit-mcbs-clear"></a><h3>ncm_fit_mcbs_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_mcbs_clear (<em class="parameter"><code><a class="link" href="NcmFitMCBS.html" title="NcmFitMCBS"><span class="type">NcmFitMCBS</span></a> **mcbs</code></em>);</pre>
-<p>FIXME</p>
+<p>If *<em class="parameter"><code>mcbs</code></em>
+ is not <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, decreases its reference count by one and
+sets *<em class="parameter"><code>mcbs</code></em>
+ to <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
 <div class="refsect3">
-<a name="ncm-fit-mcbs-clear.parameters" id="ncm-fit-mcbs-clear.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-mcbs-clear.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>mcbs</p></td>
@@ -219,20 +256,20 @@ ncm_fit_mcbs_clear (<em class="parameter"><code><a class="link" href="NcmFitMCBS
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-mcbs-set-filename" id="ncm-fit-mcbs-set-filename"></a><h3>ncm_fit_mcbs_set_filename ()</h3>
+<a name="ncm-fit-mcbs-set-filename"></a><h3>ncm_fit_mcbs_set_filename ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_mcbs_set_filename (<em class="parameter"><code><a class="link" href="NcmFitMCBS.html" title="NcmFitMCBS"><span class="type">NcmFitMCBS</span></a> *mcbs</code></em>,
-                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
-<p>FIXME</p>
+                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+<p>Sets the filename of the data to be used in the analysis.</p>
 <div class="refsect3">
-<a name="ncm-fit-mcbs-set-filename.parameters" id="ncm-fit-mcbs-set-filename.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-mcbs-set-filename.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -242,27 +279,27 @@ ncm_fit_mcbs_set_filename (<em class="parameter"><code><a class="link" href="Ncm
 </tr>
 <tr>
 <td class="parameter_name"><p>filename</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a filename</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-mcbs-set-rng" id="ncm-fit-mcbs-set-rng"></a><h3>ncm_fit_mcbs_set_rng ()</h3>
+<a name="ncm-fit-mcbs-set-rng"></a><h3>ncm_fit_mcbs_set_rng ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_mcbs_set_rng (<em class="parameter"><code><a class="link" href="NcmFitMCBS.html" title="NcmFitMCBS"><span class="type">NcmFitMCBS</span></a> *mcbs</code></em>,
                       <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
-<p>FIXME</p>
+<p>Sets the random number generator to be used in the analysis.</p>
 <div class="refsect3">
-<a name="ncm-fit-mcbs-set-rng.parameters" id="ncm-fit-mcbs-set-rng.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-mcbs-set-rng.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -272,34 +309,37 @@ ncm_fit_mcbs_set_rng (<em class="parameter"><code><a class="link" href="NcmFitMC
 </tr>
 <tr>
 <td class="parameter_name"><p>rng</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-mcbs-run" id="ncm-fit-mcbs-run"></a><h3>ncm_fit_mcbs_run ()</h3>
+<a name="ncm-fit-mcbs-run"></a><h3>ncm_fit_mcbs_run ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_mcbs_run (<em class="parameter"><code><a class="link" href="NcmFitMCBS.html" title="NcmFitMCBS"><span class="type">NcmFitMCBS</span></a> *mcbs</code></em>,
                   <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *fiduc</code></em>,
-                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> ni</code></em>,
-                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nf</code></em>,
-                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nbstraps</code></em>,
+                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> ni</code></em>,
+                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nf</code></em>,
+                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nbstraps</code></em>,
                   <em class="parameter"><code><a class="link" href="NcmFitMC.html#NcmFitMCResampleType" title="enum NcmFitMCResampleType"><span class="type">NcmFitMCResampleType</span></a> rtype</code></em>,
                   <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a> mtype</code></em>,
-                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> bsmt</code></em>);</pre>
-<p>FIXME</p>
+                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> bsmt</code></em>);</pre>
+<p>Runs the Monte Carlo and bootstrap analysis.
+The results are stored in the catalog of <em class="parameter"><code>mcbs</code></em>
+.
+The catalog is cleared before the analysis.</p>
 <p>WARNING not working correctly with bsmt &gt; 0 FIXME</p>
 <div class="refsect3">
-<a name="ncm-fit-mcbs-run.parameters" id="ncm-fit-mcbs-run.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-mcbs-run.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody>
 <tr>
@@ -309,57 +349,57 @@ ncm_fit_mcbs_run (<em class="parameter"><code><a class="link" href="NcmFitMCBS.h
 </tr>
 <tr>
 <td class="parameter_name"><p>fiduc</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>ni</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>index of the first sample to be used in the analysis</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>nf</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>index of the last sample to be used in the analysis</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>nbstraps</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>number of bootstrap samples</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>rtype</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFitMC.html#NcmFitMCResampleType" title="enum NcmFitMCResampleType"><span class="type">NcmFitMCResampleType</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>mtype</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>bsmt</p></td>
-<td class="parameter_description"><p>FIXME</p></td>
+<td class="parameter_description"><p>number of threads to be used in the bootstrap analysis</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="ncm-fit-mcbs-get-catalog" id="ncm-fit-mcbs-get-catalog"></a><h3>ncm_fit_mcbs_get_catalog ()</h3>
+<a name="ncm-fit-mcbs-get-catalog"></a><h3>ncm_fit_mcbs_get_catalog ()</h3>
 <pre class="programlisting"><a class="link" href="NcmMSetCatalog.html" title="NcmMSetCatalog"><span class="returnvalue">NcmMSetCatalog</span></a> *
 ncm_fit_mcbs_get_catalog (<em class="parameter"><code><a class="link" href="NcmFitMCBS.html" title="NcmFitMCBS"><span class="type">NcmFitMCBS</span></a> *mcbs</code></em>);</pre>
 <p>Gets the generated catalog of <em class="parameter"><code>mcbs</code></em>
 .</p>
 <div class="refsect3">
-<a name="ncm-fit-mcbs-get-catalog.parameters" id="ncm-fit-mcbs-get-catalog.parameters"></a><h4>Parameters</h4>
+<a name="ncm-fit-mcbs-get-catalog.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="parameters_name" />
-<col class="parameters_description" />
-<col width="200px" class="parameters_annotations" />
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>mcbs</p></td>
@@ -369,25 +409,38 @@ ncm_fit_mcbs_get_catalog (<em class="parameter"><code><a class="link" href="NcmF
 </table></div>
 </div>
 <div class="refsect3">
-<a name="ncm-fit-mcbs-get-catalog.returns" id="ncm-fit-mcbs-get-catalog.returns"></a><h4>Returns</h4>
+<a name="ncm-fit-mcbs-get-catalog.returns"></a><h4>Returns</h4>
 <p>the generated catalog. </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 </div>
 <div class="refsect1">
-<a name="NcmFitMCBS.property-details" id="NcmFitMCBS.property-details"></a><h2>Property Details</h2>
+<a name="NcmFitMCBS.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
-<a name="NcmFitMCBS--filename" id="NcmFitMCBS--filename"></a><h3>The <code class="literal">“filename”</code> property</h3>
+<a name="NCM-TYPE-FIT-MCBS:CAPS"></a><h3>NCM_TYPE_FIT_MCBS</h3>
+<pre class="programlisting">#define NCM_TYPE_FIT_MCBS (ncm_fit_mcbs_get_type ())
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="NcmFitMCBS-struct"></a><h3>NcmFitMCBS</h3>
+<pre class="programlisting">typedef struct _NcmFitMCBS NcmFitMCBS;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmFitMCBS.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmFitMCBS--filename"></a><h3>The <code class="literal">“filename”</code> property</h3>
 <pre class="programlisting">  “filename”                 <span class="type">char</span> *</pre>
 <p>Data filename.</p>
 <p>Owner: NcmFitMCBS</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
 </div>
-<hr />
+<hr>
 <div class="refsect2">
-<a name="NcmFitMCBS--fit" id="NcmFitMCBS--fit"></a><h3>The <code class="literal">“fit”</code> property</h3>
+<a name="NcmFitMCBS--fit"></a><h3>The <code class="literal">“fit”</code> property</h3>
 <pre class="programlisting">  “fit”                      <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *</pre>
 <p>Fit object.</p>
 <p>Owner: NcmFitMCBS</p>
@@ -396,6 +449,6 @@ ncm_fit_mcbs_get_catalog (<em class="parameter"><code><a class="link" href="NcmF
 </div>
 </div>
 <div class="footer">
-<hr />Generated by GTK-Doc V1.33.1</div>
-</div></div></body>
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
 </html>
