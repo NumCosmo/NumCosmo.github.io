@@ -11,9 +11,9 @@ menu: examples
           {% for node in pages_list %}
           {% if node.title != null and node.layout == "example" and node.url contains "/examples/" and node.url != "/examples/" %}
           <li class="post-list-item">
-              <h2 class="post-list-title">
+              <h3 class="post-list-title">
                   <a class="hvr-underline-from-center" href="{{ site.url }}{{ node.url }}">{{ node.title }}</a>
-              </h2>
+              </h3>
               <p class="post-list-description">
                   {{ node.desc | strip_html | strip }}
               </p>
