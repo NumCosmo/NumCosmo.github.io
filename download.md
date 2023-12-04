@@ -101,7 +101,7 @@ To build from the git repository you can follow the steps below.
 These instructions are for developers, if you just want to use NumCosmo, you should install it using conda.
 
 NumCosmo uses the [meson](https://mesonbuild.com/) build system, which requires python3. 
-Meson is available on most distributions, but if you don't have it, you can follow the [instructions](https://mesonbuild.com/SimpleStart.html#installing-a-compiler-toolchain).
+Meson is available on most distributions, but if you don't have it, you can follow the [instructions](https://mesonbuild.com/SimpleStart.html).
 
   - Configure the project, here we use the default options:
     ```bash
