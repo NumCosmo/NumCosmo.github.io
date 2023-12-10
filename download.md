@@ -62,6 +62,7 @@ The requirements below can be found on most Linux distribution, click [here](#pa
 ### Recommended packages
 
   - [NLOpt](http://ab-initio.mit.edu/wiki/index.php/NLopt) -- Several general purpose minimization algorithms.
+  - [libfyaml](https://github.com/pantoniou/libfyaml) -- A fancy 1.2 YAML and JSON parser/writer.
 
 ### Optional packages
 
@@ -70,30 +71,66 @@ The requirements below can be found on most Linux distribution, click [here](#pa
     * <http://www.openblas.net/>
     * <https://software.intel.com/en-us/intel-mkl>
   - [Lapack](http://www.netlib.org/lapack/) --
-    Linear Algebra PACKage    
+    Linear Algebra PACKage
   - [gtk-doc](https://www.gtk.org/gtk-doc/)
     GTK-Doc is used to generate API documentation from comments added to C code, only needed to generate new releases.
   - [ARB](http://fredrikj.net/arb/)
     C library for arbitrary-precision interval arithmetic.
 
-### Packages from popular distributions
+### Installing Prerequisites
 
-Many prerequisites and optional packages can be found in popular distributions. 
-Below there is a small compilation of package names for some distributions.
+To streamline the installation process, we provide instructions for installing prerequisites on Debian-like systems (including Ubuntu) and Mac OS using Homebrew.
 
-### Packages on Debian like systems (including Ubuntu) <a id="pack_deb"></a>
+#### Debian-like Systems (including Ubuntu) <a id="pack_deb"></a>
 
-  - For most systems the following packages can be found in the main repositories: *gobject-introspection*, *gir1.2-glib-2.0*, *libgirepository1.0-dev*, *gcc*, *pkg-config*, *libglib2.0-dev*, *libgmp3-dev*, *libmpfr-dev*, *libgsl0-dev*, *libfftw3-dev*.
-    - If you want to build from the repository you also need: *autotools-dev*, *libtool*, *gtk-doc-tools*.
-  - The other packages that are usually not found on the official repositories:
-    - NLopt and cfitsio can be found with the following package names: *libnlopt-dev*, *libcfitsio3-dev*.
+On Debian-like systems, you can install the required packages from the main repositories using the following command:
+```bash
+sudo apt-get install \
+gobject-introspection \
+gir1.2-glib-2.0 \
+libgirepository1.0-dev \
+gcc \
+gfortran \
+pkg-config \
+libglib2.0-dev \
+libgmp3-dev \
+libmpfr-dev \
+libgsl0-dev \
+libfftw3-dev \
+libopenblas-dev \
+libflint-arb-dev \
+libcfitsio-dev \
+libfyaml-dev \
+libnlopt-dev \
+libhdf5-dev \
+gtk-doc-tools
+```
 
-### Packages on RPM based distributions (including Fedora, OpenSuse, etc) <a id="pack_rpm"></a>
+#### Mac OS using Homebrew
 
-  - For most systems the following packages can be found in the main repositories: *pkg-config*, *gobject-introspection-devel*, *glib2-devel*, *gsl-devel*, *gmp-devel*, *mpfr-devel*, *fftw3-devel*.
-    - If you want to build from the repository you also need: *autoconf*, *automake*, *libtool*, *gtk-doc*.
-  - The other packages that are usually not found on the official repositories:
-    - NLopt, cfitsio, and lapack can be found with the following package names: *nlopt-devel*, *libcfitsio-devel*, *lapack-devel*, *atlas-devel*, *lapack-devel*.
+For Mac OS users, Homebrew simplifies the installation process. Execute the following command to install the required packages:
+```bash
+brew install \
+gobject-introspection \
+gsl \
+gmp \
+mpfr \
+fftw \
+cfitsio \
+libfyaml \
+nlopt \
+gfortran \
+gtk-doc \
+glib \
+openblas
+```
+
+#### Python packages using pip
+
+For Python-related functionality and building system, install the following using pip:
+```bash
+pip install meson ninja pytest numpy
+```
 
 ### Building from repository: <a id="brepo"></a>
 
@@ -112,7 +149,7 @@ Meson is available on most distributions, but if you don't have it, you can foll
   - Compile everything
     ```bash
     meson compile -C build
-    ```  
+    ```
   - Optionally run the library unit testing
     ```bash
     meson test -C build
