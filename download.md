@@ -165,7 +165,7 @@ Meson is available on most distributions, but if you don't have it, you can foll
     source build/numcosmo_export.sh
     ```
 
-  ### MambaForge Installation Guide for NumCosmo Library <a id="mamba"></a>
+### MambaForge Installation Guide for NumCosmo Library <a id="mamba"></a>
 
 MambaForge streamlines the installation process for NumCosmo Library on Linux and Mac OS. These self-contained steps eliminate the need for additional instructions. Follow these guidelines when building from the repository or a release. Execute the following command to install the required packages,
 these commands must be executed in the root directory of the NumCosmo repository:
