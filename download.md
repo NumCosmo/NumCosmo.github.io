@@ -165,6 +165,37 @@ Meson is available on most distributions, but if you don't have it, you can foll
     source build/numcosmo_export.sh
     ```
 
+  ### MambaForge Installation Guide for NumCosmo Library <a id="mamba"></a>
+
+MambaForge streamlines the installation process for NumCosmo Library on Linux and Mac OS. These self-contained steps eliminate the need for additional instructions. Follow these guidelines when building from the repository or a release. Execute the following command to install the required packages,
+these commands must be executed in the root directory of the NumCosmo repository:
+```bash
+  mamba env create -n numcosmo_developer -f devel_environment.yml
+  conda activate numcosmo_developer
+  [[ -e $GCC_AR ]] && AR=$GCC_AR
+  [[ -e $GCC_NM ]] && NM=$GCC_NM
+  [[ -e $GCC_RANLIB ]] && RANLIB=$GCC_RANLIB
+  meson setup build --libdir=$CONDA_PREFIX/lib --prefix=$CONDA_PREFIX
+  meson compile -C build
+  ```
+
+  To test the installation, run the unit tests:
+  ```bash
+  meson test -C build
+  ```
+
+  If you prefer using the library without installation, export specific environment variables. A script is generated in the build directory for easy execution (and optional addition to shell initialization):
+  ```bash
+  source build/numcosmo_export.sh
+  ```
+  This script sets essential environment variables such as LD_LIBRARY_PATH and PYTHONPATH, enabling library usage without installation. Keep in mind that these variables apply only to the current shell session, necessitating their execution each time a new terminal is opened. Additionally, these variables may cause meson setup to fail, so unset them before rerunning meson setup.
+
+  For library installation in your conda environment, use:
+  ```bash
+  meson install -C build
+  ```
+  Note that during library development, run meson install each time you modify the library to reflect changes in the conda environment.
+
 ### Compiling example_simple.c
 
 ```bash
