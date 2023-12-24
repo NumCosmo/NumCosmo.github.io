@@ -1,28 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NcmPowspecFilter: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="NumCosmo Reference Manual">
-<link rel="up" href="ch02s07.html" title="Power spectrum functions">
-<link rel="prev" href="NcmPowspec.html" title="NcmPowspec">
-<link rel="next" href="NcmPowspecSphereProj.html" title="NcmPowspecSphereProj">
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
-<link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#NcmPowspecFilter.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#NcmPowspecFilter.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#NcmPowspecFilter.properties" class="shortcut">Properties</a></span>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch02s06.html" rel="up" title="Power spectrum functions"/>
+<link href="NcmPowspec.html" rel="prev" title="NcmPowspec"/>
+<link href="NcmPowspecSphereProj.html" rel="next" title="NcmPowspecSphereProj"/>
+<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmPowspecFilter.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmPowspecFilter.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmPowspecFilter.properties">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch02s07.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="NcmPowspec.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="NcmPowspecSphereProj.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch02s06.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcmPowspec.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcmPowspecSphereProj.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcmPowspecFilter"></a><div class="titlepage"></div>
@@ -31,7 +45,7 @@
 <h2><span class="refentrytitle"><a name="NcmPowspecFilter.top_of_page"></a>NcmPowspecFilter</span></h2>
 <p>NcmPowspecFilter — Class to compute filtered power spectrum</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td align="right" class="gallery_image" valign="top"></td>
 </tr></table></div>
 <div class="refsect1">
 <a name="NcmPowspecFilter.stability-level"></a><h2>Stability Level</h2>
@@ -45,10 +59,10 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmPowspecFilter.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="functions_proto_type">
-<col class="functions_proto_name">
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -128,6 +142,22 @@ justifications.
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
+<a class="link" href="NcmPowspecFilter.html#ncm-powspec-filter-set-reltol" title="ncm_powspec_filter_set_reltol ()">ncm_powspec_filter_set_reltol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecFilter.html#ncm-powspec-filter-set-reltol-z" title="ncm_powspec_filter_set_reltol_z ()">ncm_powspec_filter_set_reltol_z</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
 <a class="link" href="NcmPowspecFilter.html#ncm-powspec-filter-set-zi" title="ncm_powspec_filter_set_zi ()">ncm_powspec_filter_set_zi</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -153,6 +183,30 @@ justifications.
 </td>
 <td class="function_name">
 <a class="link" href="NcmPowspecFilter.html#ncm-powspec-filter-require-zf" title="ncm_powspec_filter_require_zf ()">ncm_powspec_filter_require_zf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmPowspecFilter.html#NcmPowspecFilterType" title="enum NcmPowspecFilterType"><span class="returnvalue">NcmPowspecFilterType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecFilter.html#ncm-powspec-filter-get-filter-type" title="ncm_powspec_filter_get_filter_type ()">ncm_powspec_filter_get_filter_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecFilter.html#ncm-powspec-filter-get-reltol" title="ncm_powspec_filter_get_reltol ()">ncm_powspec_filter_get_reltol</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecFilter.html#ncm-powspec-filter-get-reltol-z" title="ncm_powspec_filter_get_reltol_z ()">ncm_powspec_filter_get_reltol_z</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -259,16 +313,24 @@ justifications.
 <a class="link" href="NcmPowspecFilter.html#ncm-powspec-filter-volume-rm3" title="ncm_powspec_filter_volume_rm3 ()">ncm_powspec_filter_volume_rm3</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmPowspec.html" title="NcmPowspec"><span class="returnvalue">NcmPowspec</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecFilter.html#ncm-powspec-filter-peek-powspec" title="ncm_powspec_filter_peek_powspec ()">ncm_powspec_filter_peek_powspec</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="NcmPowspecFilter.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
+<div class="informaltable"><table border="0" class="informaltable">
 <colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -312,12 +374,16 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmPowspecFilter.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="other_proto_type">
-<col class="other_proto_name">
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
 </colgroup>
 <tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmPowspecFilter.html#NCM-TYPE-POWSPEC-FILTER:CAPS" title="NCM_TYPE_POWSPEC_FILTER">NCM_TYPE_POWSPEC_FILTER</a></td>
+</tr>
 <tr>
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="NcmPowspecFilter.html#NcmPowspecFilterType" title="enum NcmPowspecFilterType">NcmPowspecFilterType</a></td>
@@ -325,6 +391,10 @@ justifications.
 <tr>
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="NcmPowspecFilter.html#NCM-POWSPEC-FILTER-DEFAULT-SIZE:CAPS" title="NCM_POWSPEC_FILTER_DEFAULT_SIZE">NCM_POWSPEC_FILTER_DEFAULT_SIZE</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcmPowspecFilter.html#NcmPowspecFilter-struct" title="NcmPowspecFilter">NcmPowspecFilter</a></td>
 </tr>
 </tbody>
 </table></div>
@@ -344,10 +414,10 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmPowspecFilter.description"></a><h2>Description</h2>
-<p>This class computes the filtered power spectrum, $\sigma^2(k, r)$, and its derivatives with respect to $\ln r$ 
+<p>This class computes the filtered power spectrum, $\sigma^2(k, r)$, and its derivatives with respect to $\ln r$
 (<a class="link" href="NcmPowspecFilter.html#ncm-powspec-filter-eval-dnvar-dlnrn" title="ncm_powspec_filter_eval_dnvar_dlnrn ()"><code class="function">ncm_powspec_filter_eval_dnvar_dlnrn()</code></a>) using the FFTLog approach (see <a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a>),
 \begin{equation}\label{eq:variance}
-\sigma^2(r, z) = \frac{1}{2\pi^2} \int_0^\infty k^2 \ P(k, z) \vert W(k,r) \vert^2 \ \mathrm{d}k, 
+\sigma^2(r, z) = \frac{1}{2\pi^2} \int_0^\infty k^2 \ P(k, z) \vert W(k,r) \vert^2 \ \mathrm{d}k,
 \end{equation}
 where $P(k, z)$ is the power spectrum at mode $k$ and redshift $z$ and $W(k, r)$ is the filter (or window function).</p>
 </div>
@@ -362,11 +432,11 @@ ncm_powspec_filter_new (<em class="parameter"><code><a class="link" href="NcmPow
 .</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -388,7 +458,7 @@ ncm_powspec_filter_new (<em class="parameter"><code><a class="link" href="NcmPow
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-ref"></a><h3>ncm_powspec_filter_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="returnvalue">NcmPowspecFilter</span></a> *
@@ -397,11 +467,11 @@ ncm_powspec_filter_ref (<em class="parameter"><code><a class="link" href="NcmPow
  by one atomically.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-ref.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>psf</p></td>
@@ -417,7 +487,7 @@ ncm_powspec_filter_ref (<em class="parameter"><code><a class="link" href="NcmPow
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-free"></a><h3>ncm_powspec_filter_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -428,11 +498,11 @@ If the reference count drops to 0, all memory allocated by <em class="parameter"
  is released.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-free.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>psf</p></td>
@@ -442,7 +512,7 @@ If the reference count drops to 0, all memory allocated by <em class="parameter"
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-clear"></a><h3>ncm_powspec_filter_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -457,11 +527,11 @@ all memory allocated by <em class="parameter"><code>psf</code></em>
  is set to NULL.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-clear.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>psf</p></td>
@@ -471,7 +541,7 @@ all memory allocated by <em class="parameter"><code>psf</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-prepare"></a><h3>ncm_powspec_filter_prepare ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -480,11 +550,11 @@ ncm_powspec_filter_prepare (<em class="parameter"><code><a class="link" href="Nc
 <p>Prepares the object applying the filter to the power spectrum.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-prepare.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -501,7 +571,7 @@ ncm_powspec_filter_prepare (<em class="parameter"><code><a class="link" href="Nc
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-prepare-if-needed"></a><h3>ncm_powspec_filter_prepare_if_needed ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -510,11 +580,11 @@ ncm_powspec_filter_prepare_if_needed (<em class="parameter"><code><a class="link
 <p>Prepares (if necessary) the object applying the filter to the power spectrum.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-prepare-if-needed.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -531,7 +601,7 @@ ncm_powspec_filter_prepare_if_needed (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-set-type"></a><h3>ncm_powspec_filter_set_type ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -541,11 +611,11 @@ ncm_powspec_filter_set_type (<em class="parameter"><code><a class="link" href="N
  of the <a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> to be used.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-set-type.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -562,7 +632,7 @@ ncm_powspec_filter_set_type (<em class="parameter"><code><a class="link" href="N
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-set-lnr0"></a><h3>ncm_powspec_filter_set_lnr0 ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -571,11 +641,11 @@ ncm_powspec_filter_set_lnr0 (<em class="parameter"><code><a class="link" href="N
 <p>Sets the center of the transform output $\ln(r_0)$ (see <a class="link" href="NcmFftlog.html#ncm-fftlog-set-lnr0" title="ncm_fftlog_set_lnr0 ()"><code class="function">ncm_fftlog_set_lnr0()</code></a>).</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-set-lnr0.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -592,7 +662,7 @@ ncm_powspec_filter_set_lnr0 (<em class="parameter"><code><a class="link" href="N
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-set-best-lnr0"></a><h3>ncm_powspec_filter_set_best_lnr0 ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -601,11 +671,11 @@ ncm_powspec_filter_set_best_lnr0 (<em class="parameter"><code><a class="link" hr
 the transformation based on the current value of $\ln(k_0)$.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-set-best-lnr0.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>psf</p></td>
@@ -615,7 +685,67 @@ the transformation based on the current value of $\ln(k_0)$.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
+<div class="refsect2">
+<a name="ncm-powspec-filter-set-reltol"></a><h3>ncm_powspec_filter_set_reltol ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_powspec_filter_set_reltol (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>,
+                               <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>);</pre>
+<p>Sets the relative tolerance for calibration in the distance direction.</p>
+<div class="refsect3">
+<a name="ncm-powspec-filter-set-reltol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>psf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>reltol</p></td>
+<td class="parameter_description"><p>the relative tolerance for calibration</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-powspec-filter-set-reltol-z"></a><h3>ncm_powspec_filter_set_reltol_z ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_powspec_filter_set_reltol_z (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>,
+                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol_z</code></em>);</pre>
+<p>Sets the relative tolerance for calibration in the redshift direction.</p>
+<div class="refsect3">
+<a name="ncm-powspec-filter-set-reltol-z.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>psf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>reltol_z</p></td>
+<td class="parameter_description"><p>the relative tolerance for calibration in the redshift direction</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-set-zi"></a><h3>ncm_powspec_filter_set_zi ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -624,11 +754,11 @@ ncm_powspec_filter_set_zi (<em class="parameter"><code><a class="link" href="Ncm
 <p>Sets the inital time $z_i$.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-set-zi.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -645,7 +775,7 @@ ncm_powspec_filter_set_zi (<em class="parameter"><code><a class="link" href="Ncm
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-set-zf"></a><h3>ncm_powspec_filter_set_zf ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -654,11 +784,11 @@ ncm_powspec_filter_set_zf (<em class="parameter"><code><a class="link" href="Ncm
 <p>Sets the final time $z_f$.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-set-zf.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -675,7 +805,7 @@ ncm_powspec_filter_set_zf (<em class="parameter"><code><a class="link" href="Ncm
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-require-zi"></a><h3>ncm_powspec_filter_require_zi ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -684,11 +814,11 @@ ncm_powspec_filter_require_zi (<em class="parameter"><code><a class="link" href=
 <p>Require the initial time of at least $z_i$.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-require-zi.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -705,7 +835,7 @@ ncm_powspec_filter_require_zi (<em class="parameter"><code><a class="link" href=
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-require-zf"></a><h3>ncm_powspec_filter_require_zf ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -714,11 +844,11 @@ ncm_powspec_filter_require_zf (<em class="parameter"><code><a class="link" href=
 <p>Requires the final time of at least $z_f$.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-require-zf.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -735,7 +865,85 @@ ncm_powspec_filter_require_zf (<em class="parameter"><code><a class="link" href=
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
+<div class="refsect2">
+<a name="ncm-powspec-filter-get-filter-type"></a><h3>ncm_powspec_filter_get_filter_type ()</h3>
+<pre class="programlisting"><a class="link" href="NcmPowspecFilter.html#NcmPowspecFilterType" title="enum NcmPowspecFilterType"><span class="returnvalue">NcmPowspecFilterType</span></a>
+ncm_powspec_filter_get_filter_type (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>);</pre>
+<p>Gets the type of filter used.</p>
+<div class="refsect3">
+<a name="ncm-powspec-filter-get-filter-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>psf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-powspec-filter-get-filter-type.returns"></a><h4>Returns</h4>
+<p> the type of filter used.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-powspec-filter-get-reltol"></a><h3>ncm_powspec_filter_get_reltol ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_powspec_filter_get_reltol (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>);</pre>
+<p>Gets the relative tolerance for calibration in the distance direction.</p>
+<div class="refsect3">
+<a name="ncm-powspec-filter-get-reltol.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>psf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-powspec-filter-get-reltol.returns"></a><h4>Returns</h4>
+<p> the relative tolerance for calibration in the distance direction.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-powspec-filter-get-reltol-z"></a><h3>ncm_powspec_filter_get_reltol_z ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_powspec_filter_get_reltol_z (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>);</pre>
+<p>Gets the relative tolerance for calibration in the redshift direction.</p>
+<div class="refsect3">
+<a name="ncm-powspec-filter-get-reltol-z.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>psf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-powspec-filter-get-reltol-z.returns"></a><h4>Returns</h4>
+<p> the relative tolerance for calibration in the redshift direction.</p>
+</div>
+</div>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-get-r-min"></a><h3>ncm_powspec_filter_get_r_min ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -743,11 +951,11 @@ ncm_powspec_filter_get_r_min (<em class="parameter"><code><a class="link" href="
 <p>This function returns $\sigma^2(r, z)$'s minimum evaluated distance.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-get-r-min.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>psf</p></td>
@@ -761,7 +969,7 @@ ncm_powspec_filter_get_r_min (<em class="parameter"><code><a class="link" href="
 <p> the minimum distance $r_{\mathrm{min}}$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-get-r-max"></a><h3>ncm_powspec_filter_get_r_max ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -769,11 +977,11 @@ ncm_powspec_filter_get_r_max (<em class="parameter"><code><a class="link" href="
 <p>This function returns $\sigma^2(r, z)$'s maximum evaluated distance.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-get-r-max.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>psf</p></td>
@@ -787,7 +995,7 @@ ncm_powspec_filter_get_r_max (<em class="parameter"><code><a class="link" href="
 <p> the maximum distance $r_{\mathrm{max}}$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-eval-lnvar-lnr"></a><h3>ncm_powspec_filter_eval_lnvar_lnr ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -799,11 +1007,11 @@ ncm_powspec_filter_eval_lnvar_lnr (<em class="parameter"><code><a class="link" h
 .</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-lnvar-lnr.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -829,7 +1037,7 @@ ncm_powspec_filter_eval_lnvar_lnr (<em class="parameter"><code><a class="link" h
 <p> $\ln \left[ \sigma^2(\ln r, z)  \right]$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-eval-var"></a><h3>ncm_powspec_filter_eval_var ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -839,11 +1047,11 @@ ncm_powspec_filter_eval_var (<em class="parameter"><code><a class="link" href="N
 <p>Evaluate the filtered variance at $r$.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-var.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -869,7 +1077,7 @@ ncm_powspec_filter_eval_var (<em class="parameter"><code><a class="link" href="N
 <p> $\sigma^2(r, z)$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-eval-var-lnr"></a><h3>ncm_powspec_filter_eval_var_lnr ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -881,11 +1089,11 @@ ncm_powspec_filter_eval_var_lnr (<em class="parameter"><code><a class="link" hre
 .</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-var-lnr.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -911,7 +1119,7 @@ ncm_powspec_filter_eval_var_lnr (<em class="parameter"><code><a class="link" hre
 <p> $\sigma^2(\ln r, z)$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-eval-sigma-lnr"></a><h3>ncm_powspec_filter_eval_sigma_lnr ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -923,11 +1131,11 @@ ncm_powspec_filter_eval_sigma_lnr (<em class="parameter"><code><a class="link" h
 .</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-sigma-lnr.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -953,7 +1161,7 @@ ncm_powspec_filter_eval_sigma_lnr (<em class="parameter"><code><a class="link" h
 <p> $\sqrt{ \sigma^2(\ln r, z) }$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-eval-sigma"></a><h3>ncm_powspec_filter_eval_sigma ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -965,11 +1173,11 @@ ncm_powspec_filter_eval_sigma (<em class="parameter"><code><a class="link" href=
 .</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-sigma.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -995,7 +1203,7 @@ ncm_powspec_filter_eval_sigma (<em class="parameter"><code><a class="link" href=
 <p> $\sqrt{ \sigma^2(r, z) }$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-eval-dvar-dlnr"></a><h3>ncm_powspec_filter_eval_dvar_dlnr ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1008,11 +1216,11 @@ variance with respect to $\ln r$ at <em class="parameter"><code>lnr</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-dvar-dlnr.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1038,7 +1246,7 @@ variance with respect to $\ln r$ at <em class="parameter"><code>lnr</code></em>
 <p> $\frac{\mathrm{d} \sigma^2(\ln r, z) }{\mathrm{d} \ln r }$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-eval-dlnvar-dlnr"></a><h3>ncm_powspec_filter_eval_dlnvar_dlnr ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1051,11 +1259,11 @@ variance with respect to $\ln r$ at <em class="parameter"><code>lnr</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-dlnvar-dlnr.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1081,7 +1289,7 @@ variance with respect to $\ln r$ at <em class="parameter"><code>lnr</code></em>
 <p>  $\frac{\mathrm{d} \left[ \ln \sigma^2(\ln r, z) \right] }{\mathrm{d} \ln r }$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-eval-dlnvar-dr"></a><h3>ncm_powspec_filter_eval_dlnvar_dr ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1094,11 +1302,11 @@ variance with respect to $r$ at <em class="parameter"><code>lnr</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-dlnvar-dr.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1124,7 +1332,7 @@ variance with respect to $r$ at <em class="parameter"><code>lnr</code></em>
 <p>  $\frac{\mathrm{d} \left[ \ln \sigma^2(\ln r, z) \right] }{\mathrm{d} r }$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-eval-dnvar-dlnrn"></a><h3>ncm_powspec_filter_eval_dnvar_dlnrn ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1143,11 +1351,11 @@ ncm_powspec_filter_eval_dnvar_dlnrn (<em class="parameter"><code><a class="link"
 </ul></div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-dnvar-dlnrn.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1178,7 +1386,7 @@ ncm_powspec_filter_eval_dnvar_dlnrn (<em class="parameter"><code><a class="link"
 <p> one of the four derivatives described above.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-eval-dnlnvar-dlnrn"></a><h3>ncm_powspec_filter_eval_dnlnvar_dlnrn ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1197,11 +1405,11 @@ ncm_powspec_filter_eval_dnlnvar_dlnrn (<em class="parameter"><code><a class="lin
 </ul></div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-eval-dnlnvar-dlnrn.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1232,7 +1440,7 @@ ncm_powspec_filter_eval_dnlnvar_dlnrn (<em class="parameter"><code><a class="lin
 <p> one of the four derivatives described above.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-powspec-filter-volume-rm3"></a><h3>ncm_powspec_filter_volume_rm3 ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1240,11 +1448,11 @@ ncm_powspec_filter_volume_rm3 (<em class="parameter"><code><a class="link" href=
 <p>Calculates the volume of the filter over $r^3$.</p>
 <div class="refsect3">
 <a name="ncm-powspec-filter-volume-rm3.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>psf</p></td>
@@ -1255,23 +1463,56 @@ ncm_powspec_filter_volume_rm3 (<em class="parameter"><code><a class="link" href=
 </div>
 <div class="refsect3">
 <a name="ncm-powspec-filter-volume-rm3.returns"></a><h4>Returns</h4>
-<p> Filter's volume over the radius squared $V r^{-3}$. </p>
+<p> Filter's volume over the radius squared $V r^{-3}$.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-powspec-filter-peek-powspec"></a><h3>ncm_powspec_filter_peek_powspec ()</h3>
+<pre class="programlisting"><a class="link" href="NcmPowspec.html" title="NcmPowspec"><span class="returnvalue">NcmPowspec</span></a> *
+ncm_powspec_filter_peek_powspec (<em class="parameter"><code><a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a> *psf</code></em>);</pre>
+<p>Gets the <a class="link" href="NcmPowspec.html" title="NcmPowspec"><span class="type">NcmPowspec</span></a> object used to compute the filtered variance $\sigma^{2}(r,z)$.</p>
+<div class="refsect3">
+<a name="ncm-powspec-filter-peek-powspec.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>psf</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecFilter.html" title="NcmPowspecFilter"><span class="type">NcmPowspecFilter</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-powspec-filter-peek-powspec.returns"></a><h4>Returns</h4>
+<p>the <a class="link" href="NcmPowspec.html" title="NcmPowspec"><span class="type">NcmPowspec</span></a> object. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 </div>
 <div class="refsect1">
 <a name="NcmPowspecFilter.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
+<a name="NCM-TYPE-POWSPEC-FILTER:CAPS"></a><h3>NCM_TYPE_POWSPEC_FILTER</h3>
+<pre class="programlisting">#define NCM_TYPE_POWSPEC_FILTER (ncm_powspec_filter_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="NcmPowspecFilterType"></a><h3>enum NcmPowspecFilterType</h3>
 <p>Filter type to apply to the power spectrum.
 See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatwin2"><span class="type">NcmFftlogTophatwin2</span></a> and <a class="link" href="NcmFftlogGausswin2.html" title="NcmFftlogGausswin2"><span class="type">NcmFftlogGausswin2</span></a>, for the top-hat and Gaussian filters, respectively.</p>
 <div class="refsect3">
 <a name="NcmPowspecFilterType.members"></a><h4>Members</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="300px" class="enum_members_name">
-<col class="enum_members_description">
-<col width="200px" class="enum_members_annotations">
+<col class="enum_members_name" width="300px"/>
+<col class="enum_members_description"/>
+<col class="enum_members_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1292,11 +1533,16 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-POWSPEC-FILTER-DEFAULT-SIZE:CAPS"></a><h3>NCM_POWSPEC_FILTER_DEFAULT_SIZE</h3>
 <pre class="programlisting">#define NCM_POWSPEC_FILTER_DEFAULT_SIZE (200)
 </pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcmPowspecFilter-struct"></a><h3>NcmPowspecFilter</h3>
+<pre class="programlisting">typedef struct _NcmPowspecFilter NcmPowspecFilter;</pre>
 </div>
 </div>
 <div class="refsect1">
@@ -1309,7 +1555,7 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <p>Flags: Read / Write</p>
 <p>Default value: 0</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmPowspecFilter--powerspectrum"></a><h3>The <code class="literal">“powerspectrum”</code> property</h3>
 <pre class="programlisting">  “powerspectrum”            <a class="link" href="NcmPowspec.html" title="NcmPowspec"><span class="type">NcmPowspec</span></a> *</pre>
@@ -1317,7 +1563,7 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <p>Owner: NcmPowspecFilter</p>
 <p>Flags: Read / Write / Construct Only</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmPowspecFilter--reltol"></a><h3>The <code class="literal">“reltol”</code> property</h3>
 <pre class="programlisting">  “reltol”                   <span class="type">double</span></pre>
@@ -1327,7 +1573,7 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <p>Allowed values: [2.22045e-16,1]</p>
 <p>Default value: 0.001</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmPowspecFilter--reltol-z"></a><h3>The <code class="literal">“reltol-z”</code> property</h3>
 <pre class="programlisting">  “reltol-z”                 <span class="type">double</span></pre>
@@ -1337,7 +1583,7 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <p>Allowed values: [2.22045e-16,1]</p>
 <p>Default value: 1e-06</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmPowspecFilter--type"></a><h3>The <code class="literal">“type”</code> property</h3>
 <pre class="programlisting">  “type”                     <a class="link" href="NcmPowspecFilter.html#NcmPowspecFilterType" title="enum NcmPowspecFilterType"><span class="type">NcmPowspecFilterType</span></a></pre>
@@ -1346,7 +1592,7 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: NCM_POWSPEC_FILTER_TYPE_TOPHAT</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmPowspecFilter--zf"></a><h3>The <code class="literal">“zf”</code> property</h3>
 <pre class="programlisting">  “zf”                       <span class="type">double</span></pre>
@@ -1355,7 +1601,7 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 <p>Flags: Read / Write</p>
 <p>Default value: 1</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmPowspecFilter--zi"></a><h3>The <code class="literal">“zi”</code> property</h3>
 <pre class="programlisting">  “zi”                       <span class="type">double</span></pre>
@@ -1367,6 +1613,6 @@ See also <a class="link" href="NcmFftlogTophatwin2.html" title="NcmFftlogTophatw
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

@@ -1,28 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NcmSpline: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="NumCosmo Reference Manual">
-<link rel="up" href="ch02s05.html" title="Splines 1D">
-<link rel="prev" href="ch02s05.html" title="Splines 1D">
-<link rel="next" href="NcmSplineGsl.html" title="NcmSplineGsl">
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
-<link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#NcmSpline.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#NcmSpline.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#NcmSpline.properties" class="shortcut">Properties</a></span>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch02s04.html" rel="up" title="Splines 1D"/>
+<link href="ch02s04.html" rel="prev" title="Splines 1D"/>
+<link href="NcmSplineGsl.html" rel="next" title="NcmSplineGsl"/>
+<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmSpline.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmSpline.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmSpline.properties">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch02s05.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="ch02s05.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="NcmSplineGsl.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch02s04.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="ch02s04.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcmSplineGsl.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcmSpline"></a><div class="titlepage"></div>
@@ -31,7 +45,7 @@
 <h2><span class="refentrytitle"><a name="NcmSpline.top_of_page"></a>NcmSpline</span></h2>
 <p>NcmSpline — Abstract class for implementing splines.</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td align="right" class="gallery_image" valign="top"></td>
 </tr></table></div>
 <div class="refsect1">
 <a name="NcmSpline.stability-level"></a><h2>Stability Level</h2>
@@ -45,10 +59,10 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmSpline.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="functions_proto_type">
-<col class="functions_proto_name">
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -117,6 +131,14 @@ justifications.
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-interp-accel" title="gsl_interp_accel"><span class="returnvalue">gsl_interp_accel</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSpline.html#ncm-spline-peek-acc" title="ncm_spline_peek_acc ()">ncm_spline_peek_acc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -181,10 +203,34 @@ justifications.
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSpline.html#ncm-spline-peek-xv" title="ncm_spline_peek_xv ()">ncm_spline_peek_xv</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmSpline.html#ncm-spline-peek-yv" title="ncm_spline_peek_yv ()">ncm_spline_peek_yv</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcmSpline.html#ncm-spline-get-bounds" title="ncm_spline_get_bounds ()">ncm_spline_get_bounds</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmSpline.html#ncm-spline-is-init" title="ncm_spline_is_init ()">ncm_spline_is_init</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -288,11 +334,11 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmSpline.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
+<div class="informaltable"><table border="0" class="informaltable">
 <colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -311,6 +357,29 @@ justifications.
 <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmSpline.html#NcmSpline--y" title="The “y” property">y</a></td>
 <td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmSpline.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmSpline.html#NCM-TYPE-SPLINE:CAPS" title="NCM_TYPE_SPLINE">NCM_TYPE_SPLINE</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmSpline.html#NcmSplineClass" title="struct NcmSplineClass">NcmSplineClass</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcmSpline.html#NcmSpline-struct" title="NcmSpline">NcmSpline</a></td>
 </tr>
 </tbody>
 </table></div>
@@ -344,11 +413,11 @@ ncm_spline_copy_empty (<em class="parameter"><code>const <a class="link" href="N
  into an initialized empty <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> of a specific type.</p>
 <div class="refsect3">
 <a name="ncm-spline-copy-empty.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>s</p></td>
@@ -363,7 +432,7 @@ ncm_spline_copy_empty (<em class="parameter"><code>const <a class="link" href="N
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-copy"></a><h3>ncm_spline_copy ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
@@ -373,11 +442,11 @@ ncm_spline_copy (<em class="parameter"><code>const <a class="link" href="NcmSpli
 <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of a new <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a>.</p>
 <div class="refsect3">
 <a name="ncm-spline-copy.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>s</p></td>
@@ -392,7 +461,7 @@ ncm_spline_copy (<em class="parameter"><code>const <a class="link" href="NcmSpli
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-new"></a><h3>ncm_spline_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
@@ -407,11 +476,11 @@ given in the <a class="link" href="NcmVector.html" title="NcmVector"><span class
 .</p>
 <div class="refsect3">
 <a name="ncm-spline-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -444,7 +513,7 @@ given in the <a class="link" href="NcmVector.html" title="NcmVector"><span class
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-new-array"></a><h3>ncm_spline_new_array ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
@@ -459,11 +528,11 @@ given in the GArray <em class="parameter"><code>y</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-spline-new-array.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -496,7 +565,7 @@ given in the GArray <em class="parameter"><code>y</code></em>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-new-data"></a><h3>ncm_spline_new_data ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
@@ -512,11 +581,11 @@ given in the array <em class="parameter"><code>y</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-spline-new-data.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -556,7 +625,7 @@ and <em class="parameter"><code>y</code></em>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-set"></a><h3>ncm_spline_set ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
@@ -571,11 +640,11 @@ ncm_spline_set (<em class="parameter"><code><a class="link" href="NcmSpline.html
 The two vectors must have the same length.</p>
 <div class="refsect3">
 <a name="ncm-spline-set.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -609,7 +678,7 @@ or FALSE to not prepare it</p></td>
 <p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-ref"></a><h3>ncm_spline_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
@@ -618,11 +687,11 @@ ncm_spline_ref (<em class="parameter"><code><a class="link" href="NcmSpline.html
  by one.</p>
 <div class="refsect3">
 <a name="ncm-spline-ref.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>s</p></td>
@@ -638,7 +707,7 @@ ncm_spline_ref (<em class="parameter"><code><a class="link" href="NcmSpline.html
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-acc"></a><h3>ncm_spline_acc ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -653,11 +722,11 @@ Therefore, it should not be called concomitantly by two different threads.</p>
 it can accessan out-of-bound index.</p>
 <div class="refsect3">
 <a name="ncm-spline-acc.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -674,7 +743,36 @@ it can accessan out-of-bound index.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
+<div class="refsect2">
+<a name="ncm-spline-peek-acc"></a><h3>ncm_spline_peek_acc ()</h3>
+<pre class="programlisting"><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-interp-accel" title="gsl_interp_accel"><span class="returnvalue">gsl_interp_accel</span></a> *
+ncm_spline_peek_acc (<em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>);</pre>
+<p>This function returns the spline accelerator if it is enabled.
+Otherwise, it returns NULL.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="ncm-spline-peek-acc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>s</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-spline-peek-acc.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-interp-accel" title="gsl_interp_accel"><span class="type">gsl_interp_accel</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-set-len"></a><h3>ncm_spline_set_len ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -687,11 +785,11 @@ allocated with different length it frees the current vectors
 and allocates new ones.</p>
 <div class="refsect3">
 <a name="ncm-spline-set-len.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -708,7 +806,7 @@ and allocates new ones.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-set-xv"></a><h3>ncm_spline_set_xv ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -719,11 +817,11 @@ ncm_spline_set_xv (<em class="parameter"><code><a class="link" href="NcmSpline.h
  as the knot vector of the spline.</p>
 <div class="refsect3">
 <a name="ncm-spline-set-xv.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -746,7 +844,7 @@ or FALSE to not prepare it</p></td>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-set-yv"></a><h3>ncm_spline_set_yv ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -759,11 +857,11 @@ ncm_spline_set_yv (<em class="parameter"><code><a class="link" href="NcmSpline.h
 comprises the function values computed at the knots of the spline.</p>
 <div class="refsect3">
 <a name="ncm-spline-set-yv.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -786,7 +884,7 @@ or FALSE to not prepare it</p></td>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-set-array"></a><h3>ncm_spline_set_array ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -800,11 +898,11 @@ ncm_spline_set_array (<em class="parameter"><code><a class="link" href="NcmSplin
 of the spline.</p>
 <div class="refsect3">
 <a name="ncm-spline-set-array.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -833,7 +931,7 @@ or FALSE to not prepare it</p></td>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-set-data-static"></a><h3>ncm_spline_set_data_static ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -848,11 +946,11 @@ ncm_spline_set_data_static (<em class="parameter"><code><a class="link" href="Nc
 of the spline.</p>
 <div class="refsect3">
 <a name="ncm-spline-set-data-static.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -888,7 +986,7 @@ or FALSE to not prepare it</p></td>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-get-len"></a><h3>ncm_spline_get_len ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -896,11 +994,11 @@ ncm_spline_get_len (<em class="parameter"><code><a class="link" href="NcmSpline.
 <p>This function gets the length of the spline.</p>
 <div class="refsect3">
 <a name="ncm-spline-get-len.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>s</p></td>
@@ -914,20 +1012,20 @@ ncm_spline_get_len (<em class="parameter"><code><a class="link" href="NcmSpline.
 <p> spline's size.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-get-xv"></a><h3>ncm_spline_get_xv ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
 ncm_spline_get_xv (<em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>);</pre>
 <p>This function returns the <em class="parameter"><code>s</code></em>
- <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of knots.</p>
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of knots.</p>
 <div class="refsect3">
 <a name="ncm-spline-get-xv.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>s</p></td>
@@ -942,20 +1040,20 @@ ncm_spline_get_xv (<em class="parameter"><code><a class="link" href="NcmSpline.h
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-get-yv"></a><h3>ncm_spline_get_yv ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
 ncm_spline_get_yv (<em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>);</pre>
 <p>This function returns the <em class="parameter"><code>s</code></em>
- <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of the values of the function to be interpolated.</p>
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of the values of the function to be interpolated.</p>
 <div class="refsect3">
 <a name="ncm-spline-get-yv.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>s</p></td>
@@ -970,7 +1068,63 @@ ncm_spline_get_yv (<em class="parameter"><code><a class="link" href="NcmSpline.h
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
+<div class="refsect2">
+<a name="ncm-spline-peek-xv"></a><h3>ncm_spline_peek_xv ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+ncm_spline_peek_xv (<em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>);</pre>
+<p>This function returns the <em class="parameter"><code>s</code></em>
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of knots.</p>
+<div class="refsect3">
+<a name="ncm-spline-peek-xv.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>s</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-spline-peek-xv.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-spline-peek-yv"></a><h3>ncm_spline_peek_yv ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+ncm_spline_peek_yv (<em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>);</pre>
+<p>This function returns the <em class="parameter"><code>s</code></em>
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of the values of the function to be interpolated.</p>
+<div class="refsect3">
+<a name="ncm-spline-peek-yv.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>s</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-spline-peek-yv.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-get-bounds"></a><h3>ncm_spline_get_bounds ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -981,11 +1135,11 @@ ncm_spline_get_bounds (<em class="parameter"><code><a class="link" href="NcmSpli
 .</p>
 <div class="refsect3">
 <a name="ncm-spline-get-bounds.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1007,7 +1161,35 @@ ncm_spline_get_bounds (<em class="parameter"><code><a class="link" href="NcmSpli
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
+<div class="refsect2">
+<a name="ncm-spline-is-init"></a><h3>ncm_spline_is_init ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+ncm_spline_is_init (<em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>);</pre>
+<p>This function returns TRUE if <em class="parameter"><code>s</code></em>
+ is initialized or FALSE otherwise.</p>
+<div class="refsect3">
+<a name="ncm-spline-is-init.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>s</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-spline-is-init.returns"></a><h4>Returns</h4>
+<p> TRUE if <em class="parameter"><code>s</code></em>
+is initialized or FALSE otherwise.</p>
+</div>
+</div>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-free"></a><h3>ncm_spline_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1018,11 +1200,11 @@ all memory allocated by <em class="parameter"><code>s</code></em>
  is released.</p>
 <div class="refsect3">
 <a name="ncm-spline-free.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>s</p></td>
@@ -1032,7 +1214,7 @@ all memory allocated by <em class="parameter"><code>s</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-clear"></a><h3>ncm_spline_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1043,11 +1225,11 @@ all memory allocated by <em class="parameter"><code>s</code></em>
  is released. The pointer is set to NULL.</p>
 <div class="refsect3">
 <a name="ncm-spline-clear.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>s</p></td>
@@ -1057,7 +1239,7 @@ all memory allocated by <em class="parameter"><code>s</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-prepare"></a><h3>ncm_spline_prepare ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1068,11 +1250,11 @@ to compute its first and second derivatives (<a class="link" href="NcmSpline.htm
 and integration (<a class="link" href="NcmSpline.html#ncm-spline-eval-integ" title="ncm_spline_eval_integ ()"><span class="type">ncm_spline_eval_integ</span></a>).</p>
 <div class="refsect3">
 <a name="ncm-spline-prepare.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>s</p></td>
@@ -1082,7 +1264,7 @@ and integration (<a class="link" href="NcmSpline.html#ncm-spline-eval-integ" tit
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-prepare-base"></a><h3>ncm_spline_prepare_base ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1092,11 +1274,11 @@ ncm_spline_prepare_base (<em class="parameter"><code><a class="link" href="NcmSp
 bidimensional spline.</p>
 <div class="refsect3">
 <a name="ncm-spline-prepare-base.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>s</p></td>
@@ -1106,7 +1288,7 @@ bidimensional spline.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-eval"></a><h3>ncm_spline_eval ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1114,11 +1296,11 @@ ncm_spline_eval (<em class="parameter"><code>const <a class="link" href="NcmSpli
                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-spline-eval.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1140,7 +1322,7 @@ ncm_spline_eval (<em class="parameter"><code>const <a class="link" href="NcmSpli
 .</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-eval-deriv"></a><h3>ncm_spline_eval_deriv ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1148,11 +1330,11 @@ ncm_spline_eval_deriv (<em class="parameter"><code>const <a class="link" href="N
                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-spline-eval-deriv.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1174,7 +1356,7 @@ ncm_spline_eval_deriv (<em class="parameter"><code>const <a class="link" href="N
 .</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-eval-deriv2"></a><h3>ncm_spline_eval_deriv2 ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1182,11 +1364,11 @@ ncm_spline_eval_deriv2 (<em class="parameter"><code>const <a class="link" href="
                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-spline-eval-deriv2.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1208,7 +1390,7 @@ ncm_spline_eval_deriv2 (<em class="parameter"><code>const <a class="link" href="
 .</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-eval-deriv-nmax"></a><h3>ncm_spline_eval_deriv_nmax ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1216,11 +1398,11 @@ ncm_spline_eval_deriv_nmax (<em class="parameter"><code>const <a class="link" hr
                             <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-spline-eval-deriv-nmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1242,7 +1424,7 @@ ncm_spline_eval_deriv_nmax (<em class="parameter"><code>const <a class="link" hr
 .</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-eval-integ"></a><h3>ncm_spline_eval_integ ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1251,11 +1433,11 @@ ncm_spline_eval_integ (<em class="parameter"><code>const <a class="link" href="N
                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x1</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-spline-eval-integ.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1283,18 +1465,18 @@ ncm_spline_eval_integ (<em class="parameter"><code>const <a class="link" href="N
 ].</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-is-empty"></a><h3>ncm_spline_is_empty ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 ncm_spline_is_empty (<em class="parameter"><code>const <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-spline-is-empty.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>s</p></td>
@@ -1309,18 +1491,18 @@ ncm_spline_is_empty (<em class="parameter"><code>const <a class="link" href="Ncm
 is empty or FALSE otherwise.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-min-size"></a><h3>ncm_spline_min_size ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>
 ncm_spline_min_size (<em class="parameter"><code>const <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-spline-min-size.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>s</p></td>
@@ -1334,7 +1516,7 @@ ncm_spline_min_size (<em class="parameter"><code>const <a class="link" href="Ncm
 <p> Minimum number of knots required.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-get-index"></a><h3>ncm_spline_get_index ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -1342,11 +1524,11 @@ ncm_spline_get_index (<em class="parameter"><code>const <a class="link" href="Nc
                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-spline-get-index.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1370,6 +1552,26 @@ belongs to.</p>
 </div>
 </div>
 <div class="refsect1">
+<a name="NcmSpline.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NCM-TYPE-SPLINE:CAPS"></a><h3>NCM_TYPE_SPLINE</h3>
+<pre class="programlisting">#define NCM_TYPE_SPLINE (ncm_spline_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcmSplineClass"></a><h3>struct NcmSplineClass</h3>
+<pre class="programlisting">struct NcmSplineClass {
+};
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcmSpline-struct"></a><h3>NcmSpline</h3>
+<pre class="programlisting">typedef struct _NcmSpline NcmSpline;</pre>
+</div>
+</div>
+<div class="refsect1">
 <a name="NcmSpline.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="NcmSpline--length"></a><h3>The <code class="literal">“length”</code> property</h3>
@@ -1379,7 +1581,7 @@ belongs to.</p>
 <p>Flags: Read / Write / Construct Only</p>
 <p>Default value: 0</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmSpline--x"></a><h3>The <code class="literal">“x”</code> property</h3>
 <pre class="programlisting">  “x”                        <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
@@ -1387,7 +1589,7 @@ belongs to.</p>
 <p>Owner: NcmSpline</p>
 <p>Flags: Read / Write</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmSpline--y"></a><h3>The <code class="literal">“y”</code> property</h3>
 <pre class="programlisting">  “y”                        <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
@@ -1398,6 +1600,6 @@ belongs to.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

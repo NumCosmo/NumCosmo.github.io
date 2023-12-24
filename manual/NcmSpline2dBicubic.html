@@ -1,27 +1,41 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NcmSpline2dBicubic: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="NumCosmo Reference Manual">
-<link rel="up" href="ch02s06.html" title="Splines 2D">
-<link rel="prev" href="NcmSpline2dSpline.html" title="NcmSpline2dSpline">
-<link rel="next" href="NcmSpline2dGsl.html" title="NcmSpline2dGsl">
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
-<link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#NcmSpline2dBicubic.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#NcmSpline2dBicubic.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch02s05.html" rel="up" title="Splines 2D"/>
+<link href="NcmSpline2dSpline.html" rel="prev" title="NcmSpline2dSpline"/>
+<link href="NcmSpline2dGsl.html" rel="next" title="NcmSpline2dGsl"/>
+<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmSpline2dBicubic.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmSpline2dBicubic.object-hierarchy">Object Hierarchy</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch02s06.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="NcmSpline2dSpline.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="NcmSpline2dGsl.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch02s05.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcmSpline2dSpline.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcmSpline2dGsl.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcmSpline2dBicubic"></a><div class="titlepage"></div>
@@ -30,7 +44,7 @@
 <h2><span class="refentrytitle"><a name="NcmSpline2dBicubic.top_of_page"></a>NcmSpline2dBicubic</span></h2>
 <p>NcmSpline2dBicubic — Bidimensional bicubic spline</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td align="right" class="gallery_image" valign="top"></td>
 </tr></table></div>
 <div class="refsect1">
 <a name="NcmSpline2dBicubic.stability-level"></a><h2>Stability Level</h2>
@@ -44,10 +58,10 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmSpline2dBicubic.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="functions_proto_type">
-<col class="functions_proto_name">
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -64,24 +78,6 @@ justifications.
 </td>
 <td class="function_name">
 <a class="link" href="NcmSpline2dBicubic.html#ncm-spline2d-bicubic-notaknot-new" title="ncm_spline2d_bicubic_notaknot_new ()">ncm_spline2d_bicubic_notaknot_new</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="define_keyword">#define</td>
-<td class="function_name">
-<a class="link" href="NcmSpline2dBicubic.html#NCM-SPLINE2D-BICUBIC-COEFF-INDEX:CAPS" title="NCM_SPLINE2D_BICUBIC_COEFF_INDEX()">NCM_SPLINE2D_BICUBIC_COEFF_INDEX</a><span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="define_keyword">#define</td>
-<td class="function_name">
-<a class="link" href="NcmSpline2dBicubic.html#NCM-SPLINE2D-BICUBIC-COEFF:CAPS" title="NCM_SPLINE2D_BICUBIC_COEFF()">NCM_SPLINE2D_BICUBIC_COEFF</a><span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="define_keyword">#define</td>
-<td class="function_name">
-<a class="link" href="NcmSpline2dBicubic.html#NCM-SPLINE2D-BICUBIC-STRUCT:CAPS" title="NCM_SPLINE2D_BICUBIC_STRUCT()">NCM_SPLINE2D_BICUBIC_STRUCT</a><span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -145,19 +141,19 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmSpline2dBicubic.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="other_proto_type">
-<col class="other_proto_name">
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
-<td class="datatype_keyword">struct</td>
-<td class="function_name"><a class="link" href="NcmSpline2dBicubic.html#NcmSpline2dBicubicCoeffs" title="struct NcmSpline2dBicubicCoeffs">NcmSpline2dBicubicCoeffs</a></td>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmSpline2dBicubic.html#NCM-TYPE-SPLINE2D-BICUBIC:CAPS" title="NCM_TYPE_SPLINE2D_BICUBIC">NCM_TYPE_SPLINE2D_BICUBIC</a></td>
 </tr>
 <tr>
 <td class="datatype_keyword">struct</td>
-<td class="function_name"><a class="link" href="NcmSpline2dBicubic.html#NcmSpline2dBicubicOptimizeInt" title="struct _NcmSpline2dBicubicOptimizeInt">_NcmSpline2dBicubicOptimizeInt</a></td>
+<td class="function_name"><a class="link" href="NcmSpline2dBicubic.html#NcmSpline2dBicubicCoeffs" title="struct NcmSpline2dBicubicCoeffs">NcmSpline2dBicubicCoeffs</a></td>
 </tr>
 <tr>
 <td class="define_keyword">#define</td>
@@ -191,6 +187,10 @@ justifications.
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="NcmSpline2dBicubic.html#NCM-SPLINE2D-BICUBIC-FXY:CAPS" title="NCM_SPLINE2D_BICUBIC_FXY">NCM_SPLINE2D_BICUBIC_FXY</a></td>
 </tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcmSpline2dBicubic.html#NcmSpline2dBicubic-struct" title="NcmSpline2dBicubic">NcmSpline2dBicubic</a></td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -220,11 +220,11 @@ ncm_spline2d_bicubic_new (<em class="parameter"><code><a class="link" href="NcmS
 .</p>
 <div class="refsect3">
 <a name="ncm-spline2d-bicubic-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>s</p></td>
@@ -238,7 +238,7 @@ ncm_spline2d_bicubic_new (<em class="parameter"><code><a class="link" href="NcmS
 <p> A new <a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="type">NcmSpline2d</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline2d-bicubic-notaknot-new"></a><h3>ncm_spline2d_bicubic_notaknot_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="returnvalue">NcmSpline2d</span></a> *
@@ -250,25 +250,7 @@ ncm_spline2d_bicubic_notaknot_new (<em class="parameter"><code><span class="type
 <p> A new <a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="type">NcmSpline2d</span></a>.</p>
 </div>
 </div>
-<hr>
-<div class="refsect2">
-<a name="NCM-SPLINE2D-BICUBIC-COEFF-INDEX:CAPS"></a><h3>NCM_SPLINE2D_BICUBIC_COEFF_INDEX()</h3>
-<pre class="programlisting">#define NCM_SPLINE2D_BICUBIC_COEFF_INDEX(s2d, i, j) ((s2d)-&gt;z_x-&gt;len * (i) + (j))
-</pre>
-</div>
-<hr>
-<div class="refsect2">
-<a name="NCM-SPLINE2D-BICUBIC-COEFF:CAPS"></a><h3>NCM_SPLINE2D_BICUBIC_COEFF()</h3>
-<pre class="programlisting">#define NCM_SPLINE2D_BICUBIC_COEFF(s2d, i, j) ((s2d)-&gt;bicoeff[NCM_SPLINE2D_BICUBIC_COEFF_INDEX (s2d, i, j)].ij)
-</pre>
-</div>
-<hr>
-<div class="refsect2">
-<a name="NCM-SPLINE2D-BICUBIC-STRUCT:CAPS"></a><h3>NCM_SPLINE2D_BICUBIC_STRUCT()</h3>
-<pre class="programlisting">#define NCM_SPLINE2D_BICUBIC_STRUCT(s2d, i, j) ((s2d)-&gt;bicoeff[NCM_SPLINE2D_BICUBIC_COEFF_INDEX (s2d, i, j)])
-</pre>
-</div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline2d-bicubic-eval-poly"></a><h3>ncm_spline2d_bicubic_eval_poly ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -276,7 +258,7 @@ ncm_spline2d_bicubic_eval_poly (<em class="parameter"><code>const <a class="link
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> y</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline2d-bicubic-fij-to-aij"></a><h3>ncm_spline2d_bicubic_fij_to_aij ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -285,7 +267,7 @@ ncm_spline2d_bicubic_fij_to_aij (<em class="parameter"><code><a class="link" hre
                                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> dy</code></em>,
                                  <em class="parameter"><code><a class="link" href="NcmSpline2dBicubic.html#NcmSpline2dBicubicCoeffs" title="struct NcmSpline2dBicubicCoeffs"><span class="type">NcmSpline2dBicubicCoeffs</span></a> *sa</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline2d-bicubic-bi"></a><h3>ncm_spline2d_bicubic_bi ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -294,7 +276,7 @@ ncm_spline2d_bicubic_bi (<em class="parameter"><code><a class="link" href="NcmSp
                          <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *yv</code></em>,
                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> i</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline2d-bicubic-bi-bip1"></a><h3>ncm_spline2d_bicubic_bi_bip1 ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -305,7 +287,7 @@ ncm_spline2d_bicubic_bi_bip1 (<em class="parameter"><code><a class="link" href="
                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *b_i</code></em>,
                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *b_ip1</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline2d-bicubic-integ-dx-coeffs"></a><h3>ncm_spline2d_bicubic_integ_dx_coeffs ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -313,7 +295,7 @@ ncm_spline2d_bicubic_integ_dx_coeffs (<em class="parameter"><code><a class="link
                                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> dy</code></em>,
                                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *coeffs</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline2d-bicubic-integ-dy-coeffs"></a><h3>ncm_spline2d_bicubic_integ_dy_coeffs ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -321,7 +303,7 @@ ncm_spline2d_bicubic_integ_dy_coeffs (<em class="parameter"><code><a class="link
                                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> dx</code></em>,
                                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *coeffs</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline2d-bicubic-integ-eval2d"></a><h3>ncm_spline2d_bicubic_integ_eval2d ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -337,70 +319,74 @@ ncm_spline2d_bicubic_integ_eval2d (<em class="parameter"><code><a class="link" h
 <div class="refsect1">
 <a name="NcmSpline2dBicubic.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
+<a name="NCM-TYPE-SPLINE2D-BICUBIC:CAPS"></a><h3>NCM_TYPE_SPLINE2D_BICUBIC</h3>
+<pre class="programlisting">#define NCM_TYPE_SPLINE2D_BICUBIC (ncm_spline2d_bicubic_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="NcmSpline2dBicubicCoeffs"></a><h3>struct NcmSpline2dBicubicCoeffs</h3>
 <pre class="programlisting">struct NcmSpline2dBicubicCoeffs {
 };
 </pre>
-<p>FIXME</p>
+<p>Structure to hold the coefficients of a bicubic spline.</p>
 </div>
-<hr>
-<div class="refsect2">
-<a name="NcmSpline2dBicubicOptimizeInt"></a><h3>struct _NcmSpline2dBicubicOptimizeInt</h3>
-<pre class="programlisting">struct _NcmSpline2dBicubicOptimizeInt {
-};
-</pre>
-</div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SPLINE2D-BICUBIC-00:CAPS"></a><h3>NCM_SPLINE2D_BICUBIC_00</h3>
 <pre class="programlisting">#define NCM_SPLINE2D_BICUBIC_00 (0)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SPLINE2D-BICUBIC-10:CAPS"></a><h3>NCM_SPLINE2D_BICUBIC_10</h3>
 <pre class="programlisting">#define NCM_SPLINE2D_BICUBIC_10 (1)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SPLINE2D-BICUBIC-01:CAPS"></a><h3>NCM_SPLINE2D_BICUBIC_01</h3>
 <pre class="programlisting">#define NCM_SPLINE2D_BICUBIC_01 (2)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SPLINE2D-BICUBIC-11:CAPS"></a><h3>NCM_SPLINE2D_BICUBIC_11</h3>
 <pre class="programlisting">#define NCM_SPLINE2D_BICUBIC_11 (3)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SPLINE2D-BICUBIC-F:CAPS"></a><h3>NCM_SPLINE2D_BICUBIC_F</h3>
 <pre class="programlisting">#define NCM_SPLINE2D_BICUBIC_F   (0)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SPLINE2D-BICUBIC-FX:CAPS"></a><h3>NCM_SPLINE2D_BICUBIC_FX</h3>
 <pre class="programlisting">#define NCM_SPLINE2D_BICUBIC_FX  (1)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SPLINE2D-BICUBIC-FY:CAPS"></a><h3>NCM_SPLINE2D_BICUBIC_FY</h3>
 <pre class="programlisting">#define NCM_SPLINE2D_BICUBIC_FY  (2)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SPLINE2D-BICUBIC-FXY:CAPS"></a><h3>NCM_SPLINE2D_BICUBIC_FXY</h3>
 <pre class="programlisting">#define NCM_SPLINE2D_BICUBIC_FXY (3)
 </pre>
 </div>
+<hr/>
+<div class="refsect2">
+<a name="NcmSpline2dBicubic-struct"></a><h3>NcmSpline2dBicubic</h3>
+<pre class="programlisting">typedef struct _NcmSpline2dBicubic NcmSpline2dBicubic;</pre>
+</div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

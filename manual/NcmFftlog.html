@@ -1,28 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NcmFftlog: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="NumCosmo Reference Manual">
-<link rel="up" href="ch02s04.html" title="FFTLog">
-<link rel="prev" href="ch02s04.html" title="FFTLog">
-<link rel="next" href="NcmFftlogSBesselJ.html" title="NcmFftlogSBesselJ">
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
-<link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#NcmFftlog.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#NcmFftlog.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#NcmFftlog.properties" class="shortcut">Properties</a></span>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch02s03.html" rel="up" title="FFTLog"/>
+<link href="ch02s03.html" rel="prev" title="FFTLog"/>
+<link href="NcmFftlogSBesselJ.html" rel="next" title="NcmFftlogSBesselJ"/>
+<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmFftlog.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmFftlog.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmFftlog.properties">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch02s04.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="ch02s04.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="NcmFftlogSBesselJ.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch02s03.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="ch02s03.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcmFftlogSBesselJ.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcmFftlog"></a><div class="titlepage"></div>
@@ -31,7 +45,7 @@
 <h2><span class="refentrytitle"><a name="NcmFftlog.top_of_page"></a>NcmFftlog</span></h2>
 <p>NcmFftlog — Abstract class for implementing logarithm fast fourier transform.</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td align="right" class="gallery_image" valign="top"></td>
 </tr></table></div>
 <div class="refsect1">
 <a name="NcmFftlog.stability-level"></a><h2>Stability Level</h2>
@@ -45,10 +59,10 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmFftlog.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="functions_proto_type">
-<col class="functions_proto_name">
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -423,11 +437,11 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmFftlog.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
+<div class="informaltable"><table border="0" class="informaltable">
 <colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -501,10 +515,10 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmFftlog.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="other_proto_type">
-<col class="other_proto_name">
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -615,7 +629,7 @@ and then pass a vector containing the values of the function computed at each kn
 <span class="c_punctuation">(</span>*NcmFftlogFunc<span class="c_punctuation">)</span> (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-ref"></a><h3>ncm_fftlog_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="returnvalue">NcmFftlog</span></a> *
@@ -624,11 +638,11 @@ ncm_fftlog_ref (<em class="parameter"><code><a class="link" href="NcmFftlog.html
  by one.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-ref.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -644,7 +658,7 @@ ncm_fftlog_ref (<em class="parameter"><code><a class="link" href="NcmFftlog.html
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-free"></a><h3>ncm_fftlog_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -653,11 +667,11 @@ ncm_fftlog_free (<em class="parameter"><code><a class="link" href="NcmFftlog.htm
  by one.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-free.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -667,7 +681,7 @@ ncm_fftlog_free (<em class="parameter"><code><a class="link" href="NcmFftlog.htm
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-clear"></a><h3>ncm_fftlog_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -679,11 +693,11 @@ ncm_fftlog_clear (<em class="parameter"><code><a class="link" href="NcmFftlog.ht
  to NULL.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-clear.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -693,7 +707,7 @@ ncm_fftlog_clear (<em class="parameter"><code><a class="link" href="NcmFftlog.ht
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-peek-name"></a><h3>ncm_fftlog_peek_name ()</h3>
 <pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
@@ -702,11 +716,11 @@ ncm_fftlog_peek_name (<em class="parameter"><code><a class="link" href="NcmFftlo
 's associated name.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-peek-name.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -721,7 +735,7 @@ ncm_fftlog_peek_name (<em class="parameter"><code><a class="link" href="NcmFftlo
 <p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-reset"></a><h3>ncm_fftlog_reset ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -730,11 +744,11 @@ ncm_fftlog_reset (<em class="parameter"><code><a class="link" href="NcmFftlog.ht
 their recomputation.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-reset.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -744,7 +758,7 @@ their recomputation.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-set-nderivs"></a><h3>ncm_fftlog_set_nderivs ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -754,11 +768,11 @@ ncm_fftlog_set_nderivs (<em class="parameter"><code><a class="link" href="NcmFft
  as the number of derivatives to calculate.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-set-nderivs.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -775,7 +789,7 @@ ncm_fftlog_set_nderivs (<em class="parameter"><code><a class="link" href="NcmFft
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-nderivs"></a><h3>ncm_fftlog_get_nderivs ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -784,11 +798,11 @@ ncm_fftlog_get_nderivs (<em class="parameter"><code><a class="link" href="NcmFft
 calculating.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-nderivs.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -802,7 +816,7 @@ calculating.</p>
 <p> the number of derivatives calculated.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-set-lnr0"></a><h3>ncm_fftlog_set_lnr0 ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -811,11 +825,11 @@ ncm_fftlog_set_lnr0 (<em class="parameter"><code><a class="link" href="NcmFftlog
 <p>Sets the center of the transform output $\ln(r_0)$.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-set-lnr0.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -832,7 +846,7 @@ ncm_fftlog_set_lnr0 (<em class="parameter"><code><a class="link" href="NcmFftlog
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-lnr0"></a><h3>ncm_fftlog_get_lnr0 ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -840,11 +854,11 @@ ncm_fftlog_get_lnr0 (<em class="parameter"><code><a class="link" href="NcmFftlog
 <p>Gets the center of the transform output.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-lnr0.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -858,7 +872,7 @@ ncm_fftlog_get_lnr0 (<em class="parameter"><code><a class="link" href="NcmFftlog
 <p> the output center $\ln(r_0)$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-set-lnk0"></a><h3>ncm_fftlog_set_lnk0 ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -867,11 +881,11 @@ ncm_fftlog_set_lnk0 (<em class="parameter"><code><a class="link" href="NcmFftlog
 <p>Sets the center of the transform input $\ln(k_0)$.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-set-lnk0.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -888,7 +902,7 @@ ncm_fftlog_set_lnk0 (<em class="parameter"><code><a class="link" href="NcmFftlog
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-lnk0"></a><h3>ncm_fftlog_get_lnk0 ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -896,11 +910,11 @@ ncm_fftlog_get_lnk0 (<em class="parameter"><code><a class="link" href="NcmFftlog
 <p>Gets the center of the transform input $\ln(k_0)$.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-lnk0.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -914,7 +928,7 @@ ncm_fftlog_get_lnk0 (<em class="parameter"><code><a class="link" href="NcmFftlog
 <p> the input center $\ln(k_0)$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-set-size"></a><h3>ncm_fftlog_set_size ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -925,11 +939,11 @@ given the input number of knots <em class="parameter"><code>n</code></em>
 , plus padding.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-set-size.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -946,7 +960,7 @@ given the input number of knots <em class="parameter"><code>n</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-set-padding"></a><h3>ncm_fftlog_set_padding ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -955,11 +969,11 @@ ncm_fftlog_set_padding (<em class="parameter"><code><a class="link" href="NcmFft
 <p>Sets the size of the padding in percetange of the interval.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-set-padding.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -976,7 +990,7 @@ ncm_fftlog_set_padding (<em class="parameter"><code><a class="link" href="NcmFft
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-padding"></a><h3>ncm_fftlog_get_padding ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -984,11 +998,11 @@ ncm_fftlog_get_padding (<em class="parameter"><code><a class="link" href="NcmFft
 <p>Gets the padding percentage.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-padding.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -1002,7 +1016,7 @@ ncm_fftlog_get_padding (<em class="parameter"><code><a class="link" href="NcmFft
 <p> the padding percentage.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-set-noring"></a><h3>ncm_fftlog_set_noring ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1011,11 +1025,11 @@ ncm_fftlog_set_noring (<em class="parameter"><code><a class="link" href="NcmFftl
 <p>Sets whether to use the no-ringing adjustment of $\ln(r_0)$.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-set-noring.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1032,18 +1046,18 @@ ncm_fftlog_set_noring (<em class="parameter"><code><a class="link" href="NcmFftl
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-noring"></a><h3>ncm_fftlog_get_noring ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 ncm_fftlog_get_noring (<em class="parameter"><code><a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a> *fftlog</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-fftlog-get-noring.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -1057,7 +1071,7 @@ ncm_fftlog_get_noring (<em class="parameter"><code><a class="link" href="NcmFftl
 <p> whether no-ringing condition is activated.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-set-length"></a><h3>ncm_fftlog_set_length ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1067,11 +1081,11 @@ ncm_fftlog_set_length (<em class="parameter"><code><a class="link" href="NcmFftl
 , where the function is periodic in logarithmic space $\ln k$.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-set-length.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1088,7 +1102,7 @@ ncm_fftlog_set_length (<em class="parameter"><code><a class="link" href="NcmFftl
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-use-eval-interval"></a><h3>ncm_fftlog_use_eval_interval ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1098,11 +1112,11 @@ ncm_fftlog_use_eval_interval (<em class="parameter"><code><a class="link" href="
 See <a class="link" href="NcmFftlog.html#ncm-fftlog-set-eval-r-min" title="ncm_fftlog_set_eval_r_min ()"><code class="function">ncm_fftlog_set_eval_r_min()</code></a> and <a class="link" href="NcmFftlog.html#ncm-fftlog-set-eval-r-max" title="ncm_fftlog_set_eval_r_max ()"><code class="function">ncm_fftlog_set_eval_r_max()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-use-eval-interval.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1119,7 +1133,7 @@ See <a class="link" href="NcmFftlog.html#ncm-fftlog-set-eval-r-min" title="ncm_f
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-use-smooth-padding"></a><h3>ncm_fftlog_use_smooth_padding ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1130,11 +1144,11 @@ input function which is continuous at the border and drops to a scale
 determined by <a class="link" href="NcmFftlog.html#ncm-fftlog-set-smooth-padding-scale" title="ncm_fftlog_set_smooth_padding_scale ()"><code class="function">ncm_fftlog_set_smooth_padding_scale()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-use-smooth-padding.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1151,7 +1165,7 @@ determined by <a class="link" href="NcmFftlog.html#ncm-fftlog-set-smooth-padding
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-set-smooth-padding-scale"></a><h3>ncm_fftlog_set_smooth_padding_scale ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1161,11 +1175,11 @@ ncm_fftlog_set_smooth_padding_scale (<em class="parameter"><code><a class="link"
 is turned on.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-set-smooth-padding-scale.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1182,7 +1196,7 @@ is turned on.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-smooth-padding-scale"></a><h3>ncm_fftlog_get_smooth_padding_scale ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1190,11 +1204,11 @@ ncm_fftlog_get_smooth_padding_scale (<em class="parameter"><code><a class="link"
 <p>Gets the log10 of the current value of the smoothing scale $s$.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-smooth-padding-scale.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -1208,7 +1222,7 @@ ncm_fftlog_get_smooth_padding_scale (<em class="parameter"><code><a class="link"
 <p> $\log_{10}(s)$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-set-eval-r-min"></a><h3>ncm_fftlog_set_eval_r_min ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1218,11 +1232,11 @@ ncm_fftlog_set_eval_r_min (<em class="parameter"><code><a class="link" href="Ncm
 .</p>
 <div class="refsect3">
 <a name="ncm-fftlog-set-eval-r-min.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1239,7 +1253,7 @@ ncm_fftlog_set_eval_r_min (<em class="parameter"><code><a class="link" href="Ncm
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-set-eval-r-max"></a><h3>ncm_fftlog_set_eval_r_max ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1249,11 +1263,11 @@ ncm_fftlog_set_eval_r_max (<em class="parameter"><code><a class="link" href="Ncm
 .</p>
 <div class="refsect3">
 <a name="ncm-fftlog-set-eval-r-max.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1270,18 +1284,18 @@ ncm_fftlog_set_eval_r_max (<em class="parameter"><code><a class="link" href="Ncm
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-eval-r-min"></a><h3>ncm_fftlog_get_eval_r_min ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_fftlog_get_eval_r_min (<em class="parameter"><code><a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a> *fftlog</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-fftlog-get-eval-r-min.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -1295,18 +1309,18 @@ ncm_fftlog_get_eval_r_min (<em class="parameter"><code><a class="link" href="Ncm
 <p> the value of $r_\mathrm{min}$</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-eval-r-max"></a><h3>ncm_fftlog_get_eval_r_max ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_fftlog_get_eval_r_max (<em class="parameter"><code><a class="link" href="NcmFftlog.html" title="NcmFftlog"><span class="type">NcmFftlog</span></a> *fftlog</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-fftlog-get-eval-r-max.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -1320,7 +1334,7 @@ ncm_fftlog_get_eval_r_max (<em class="parameter"><code><a class="link" href="Ncm
 <p> the value of $r_\mathrm{max}$</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-Ym"></a><h3>ncm_fftlog_get_Ym ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a> *
@@ -1329,11 +1343,11 @@ ncm_fftlog_get_Ym (<em class="parameter"><code><a class="link" href="NcmFftlog.h
 <p>Computes the $Y_m$ vector.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-Ym.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1355,7 +1369,7 @@ ncm_fftlog_get_Ym (<em class="parameter"><code><a class="link" href="NcmFftlog.h
 <p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=size]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-lnk-vector"></a><h3>ncm_fftlog_get_lnk_vector ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1364,11 +1378,11 @@ ncm_fftlog_get_lnk_vector (<em class="parameter"><code><a class="link" href="Ncm
 <p>Computes the $\ln k$ vector.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-lnk-vector.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1385,7 +1399,7 @@ ncm_fftlog_get_lnk_vector (<em class="parameter"><code><a class="link" href="Ncm
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-eval-by-vector"></a><h3>ncm_fftlog_eval_by_vector ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1395,11 +1409,11 @@ ncm_fftlog_eval_by_vector (<em class="parameter"><code><a class="link" href="Ncm
  is a vector which contains the values of the function at each knot $\ln k_m$.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-eval-by-vector.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1416,7 +1430,7 @@ ncm_fftlog_eval_by_vector (<em class="parameter"><code><a class="link" href="Ncm
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-eval-by-function"></a><h3>ncm_fftlog_eval_by_function ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1427,11 +1441,11 @@ ncm_fftlog_eval_by_function (<em class="parameter"><code><a class="link" href="N
  at each knot $\ln k_m$.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-eval-by-function.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1454,7 +1468,7 @@ user data</p></td>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-eval-by-gsl-function"></a><h3>ncm_fftlog_eval_by_gsl_function ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1465,11 +1479,11 @@ ncm_fftlog_eval_by_gsl_function (<em class="parameter"><code><a class="link" hre
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-fftlog-eval-by-gsl-function.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1486,7 +1500,7 @@ ncm_fftlog_eval_by_gsl_function (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-prepare-splines"></a><h3>ncm_fftlog_prepare_splines ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1495,11 +1509,11 @@ ncm_fftlog_prepare_splines (<em class="parameter"><code><a class="link" href="Nc
 and, if required, its n-order derivatives.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-prepare-splines.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -1509,7 +1523,7 @@ and, if required, its n-order derivatives.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-vector-lnr"></a><h3>ncm_fftlog_get_vector_lnr ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -1517,11 +1531,11 @@ ncm_fftlog_get_vector_lnr (<em class="parameter"><code><a class="link" href="Ncm
 <p>Gets the vector of the $\ln r$ knots.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-vector-lnr.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -1536,7 +1550,7 @@ ncm_fftlog_get_vector_lnr (<em class="parameter"><code><a class="link" href="Ncm
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-vector-Gr"></a><h3>ncm_fftlog_get_vector_Gr ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -1548,11 +1562,11 @@ its <em class="parameter"><code>nderiv</code></em>
 -th derivative with respect to $\ln r$.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-vector-Gr.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1575,7 +1589,7 @@ its <em class="parameter"><code>nderiv</code></em>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-peek-spline-Gr"></a><h3>ncm_fftlog_peek_spline_Gr ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
@@ -1588,11 +1602,11 @@ or the spline of the <em class="parameter"><code>nderiv</code></em>
 respect to $\ln r$.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-peek-spline-Gr.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1615,7 +1629,7 @@ component of the spline. </p>
 <p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-eval-output"></a><h3>ncm_fftlog_eval_output ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1628,11 +1642,11 @@ at the point <em class="parameter"><code>lnr</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-fftlog-eval-output.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1659,7 +1673,7 @@ at the point <em class="parameter"><code>lnr</code></em>
 .</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-calibrate-size"></a><h3>ncm_fftlog_calibrate_size ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1672,11 +1686,11 @@ the required precision <em class="parameter"><code>reltol</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-fftlog-calibrate-size.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1704,7 +1718,7 @@ user data</p></td>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-calibrate-size-gsl"></a><h3>ncm_fftlog_calibrate_size_gsl ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1717,11 +1731,11 @@ the required precision <em class="parameter"><code>reltol</code></em>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-fftlog-calibrate-size-gsl.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1743,7 +1757,7 @@ the required precision <em class="parameter"><code>reltol</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-size"></a><h3>ncm_fftlog_get_size ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -1751,11 +1765,11 @@ ncm_fftlog_get_size (<em class="parameter"><code><a class="link" href="NcmFftlog
 <p>Gets the number of knots $N^\prime$ where the integrated function is evaluated.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-size.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -1769,7 +1783,7 @@ ncm_fftlog_get_size (<em class="parameter"><code><a class="link" href="NcmFftlog
 <p> the number of knots $N^\prime$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-full-size"></a><h3>ncm_fftlog_get_full_size ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
@@ -1778,11 +1792,11 @@ ncm_fftlog_get_full_size (<em class="parameter"><code><a class="link" href="NcmF
 plus padding.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-full-size.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -1796,7 +1810,7 @@ plus padding.</p>
 <p> the total number of knots $N_f^\prime$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-norma"></a><h3>ncm_fftlog_get_norma ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1805,11 +1819,11 @@ ncm_fftlog_get_norma (<em class="parameter"><code><a class="link" href="NcmFftlo
 plus padding.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-norma.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -1823,7 +1837,7 @@ plus padding.</p>
 <p> the total number of knots $N_f^\prime$ (double).</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-length"></a><h3>ncm_fftlog_get_length ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1831,11 +1845,11 @@ ncm_fftlog_get_length (<em class="parameter"><code><a class="link" href="NcmFftl
 <p>Gets the value of the ``physical'' period, i.e., period of the fundamental interval.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-length.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -1849,7 +1863,7 @@ ncm_fftlog_get_length (<em class="parameter"><code><a class="link" href="NcmFftl
 <p> the period $L$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-full-length"></a><h3>ncm_fftlog_get_full_length ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1857,11 +1871,11 @@ ncm_fftlog_get_full_length (<em class="parameter"><code><a class="link" href="Nc
 <p>Gets the value of the total period, i.e., period defined by the fundamental interval plus the padding size.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-full-length.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>fftlog</p></td>
@@ -1875,7 +1889,7 @@ ncm_fftlog_get_full_length (<em class="parameter"><code><a class="link" href="Nc
 <p> the total period $L_T$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-mode-index"></a><h3>ncm_fftlog_get_mode_index ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
@@ -1886,11 +1900,11 @@ ncm_fftlog_get_mode_index (<em class="parameter"><code><a class="link" href="Ncm
 to the label $n$ in Eq. \eqref{eq:Gr_decomp}.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-mode-index.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1911,7 +1925,7 @@ to the label $n$ in Eq. \eqref{eq:Gr_decomp}.</p>
 <p> the index of the mode</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-get-array-index"></a><h3>ncm_fftlog_get_array_index ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
@@ -1922,11 +1936,11 @@ ncm_fftlog_get_array_index (<em class="parameter"><code><a class="link" href="Nc
 in the fft array of the element $n$ in Eq. \eqref{eq:Gr_decomp}.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-get-array-index.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1948,7 +1962,7 @@ in the fft array of the element $n$ in Eq. \eqref{eq:Gr_decomp}.</p>
 </p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fftlog-peek-output-vector"></a><h3>ncm_fftlog_peek_output_vector ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -1960,11 +1974,11 @@ its <em class="parameter"><code>comp</code></em>
 -th derivative with respect to $\ln r$.</p>
 <div class="refsect3">
 <a name="ncm-fftlog-peek-output-vector.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1995,14 +2009,14 @@ its <em class="parameter"><code>comp</code></em>
 <pre class="programlisting">#define NCM_TYPE_FFTLOG (ncm_fftlog_get_type ())
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFftlogClass"></a><h3>struct NcmFftlogClass</h3>
 <pre class="programlisting">struct NcmFftlogClass {
 };
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFftlog-struct"></a><h3>NcmFftlog</h3>
 <pre class="programlisting">typedef struct _NcmFftlog NcmFftlog;</pre>
@@ -2018,7 +2032,7 @@ its <em class="parameter"><code>comp</code></em>
 <p>Flags: Read / Write / Construct Only</p>
 <p>Default value: 1</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFftlog--N"></a><h3>The <code class="literal">“N”</code> property</h3>
 <pre class="programlisting">  “N”                        <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
@@ -2027,7 +2041,7 @@ its <em class="parameter"><code>comp</code></em>
 <p>Flags: Read / Write</p>
 <p>Default value: 10</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFftlog--eval-r-max"></a><h3>The <code class="literal">“eval-r-max”</code> property</h3>
 <pre class="programlisting">  “eval-r-max”               <span class="type">double</span></pre>
@@ -2037,7 +2051,7 @@ its <em class="parameter"><code>comp</code></em>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 1.79769e+308</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFftlog--eval-r-min"></a><h3>The <code class="literal">“eval-r-min”</code> property</h3>
 <pre class="programlisting">  “eval-r-min”               <span class="type">double</span></pre>
@@ -2047,7 +2061,7 @@ its <em class="parameter"><code>comp</code></em>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFftlog--lnk0"></a><h3>The <code class="literal">“lnk0”</code> property</h3>
 <pre class="programlisting">  “lnk0”                     <span class="type">double</span></pre>
@@ -2056,7 +2070,7 @@ its <em class="parameter"><code>comp</code></em>
 <p>Flags: Read / Write / Construct Only</p>
 <p>Default value: 0</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFftlog--lnr0"></a><h3>The <code class="literal">“lnr0”</code> property</h3>
 <pre class="programlisting">  “lnr0”                     <span class="type">double</span></pre>
@@ -2065,7 +2079,7 @@ its <em class="parameter"><code>comp</code></em>
 <p>Flags: Read / Write / Construct Only</p>
 <p>Default value: 0</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFftlog--name"></a><h3>The <code class="literal">“name”</code> property</h3>
 <pre class="programlisting">  “name”                     <span class="type">char</span> *</pre>
@@ -2074,7 +2088,7 @@ its <em class="parameter"><code>comp</code></em>
 <p>Flags: Read</p>
 <p>Default value: "fftlog_default_wisdown"</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFftlog--nderivs"></a><h3>The <code class="literal">“nderivs”</code> property</h3>
 <pre class="programlisting">  “nderivs”                  <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
@@ -2083,7 +2097,7 @@ its <em class="parameter"><code>comp</code></em>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: 0</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFftlog--no-ringing"></a><h3>The <code class="literal">“no-ringing”</code> property</h3>
 <pre class="programlisting">  “no-ringing”               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
@@ -2092,7 +2106,7 @@ its <em class="parameter"><code>comp</code></em>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: TRUE</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFftlog--padding"></a><h3>The <code class="literal">“padding”</code> property</h3>
 <pre class="programlisting">  “padding”                  <span class="type">double</span></pre>
@@ -2102,7 +2116,7 @@ its <em class="parameter"><code>comp</code></em>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 1</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFftlog--smooth-padding-scale"></a><h3>The <code class="literal">“smooth-padding-scale”</code> property</h3>
 <pre class="programlisting">  “smooth-padding-scale”     <span class="type">double</span></pre>
@@ -2111,7 +2125,7 @@ its <em class="parameter"><code>comp</code></em>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: -200</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFftlog--use-eval-int"></a><h3>The <code class="literal">“use-eval-int”</code> property</h3>
 <pre class="programlisting">  “use-eval-int”             <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
@@ -2120,7 +2134,7 @@ its <em class="parameter"><code>comp</code></em>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: FALSE</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFftlog--use-smooth-padding"></a><h3>The <code class="literal">“use-smooth-padding”</code> property</h3>
 <pre class="programlisting">  “use-smooth-padding”       <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
@@ -2132,6 +2146,6 @@ its <em class="parameter"><code>comp</code></em>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

@@ -1,28 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NcmFitESMCMCWalkerAPES: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="NumCosmo Reference Manual">
-<link rel="up" href="ch02s15.html" title="MCMC and ESMCMC">
-<link rel="prev" href="NcmFitESMCMCWalkerWalk.html" title="NcmFitESMCMCWalkerWalk">
-<link rel="next" href="ch02s16.html" title="MCMC Testing">
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
-<link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#NcmFitESMCMCWalkerAPES.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#NcmFitESMCMCWalkerAPES.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#NcmFitESMCMCWalkerAPES.properties" class="shortcut">Properties</a></span>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch02s14.html" rel="up" title="MCMC and ESMCMC"/>
+<link href="NcmFitESMCMCWalkerWalk.html" rel="prev" title="NcmFitESMCMCWalkerWalk"/>
+<link href="ch02s15.html" rel="next" title="MCMC Testing"/>
+<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmFitESMCMCWalkerAPES.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmFitESMCMCWalkerAPES.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmFitESMCMCWalkerAPES.properties">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch02s15.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="NcmFitESMCMCWalkerWalk.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="ch02s16.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch02s14.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcmFitESMCMCWalkerWalk.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="ch02s15.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcmFitESMCMCWalkerAPES"></a><div class="titlepage"></div>
@@ -31,14 +45,14 @@
 <h2><span class="refentrytitle"><a name="NcmFitESMCMCWalkerAPES.top_of_page"></a>NcmFitESMCMCWalkerAPES</span></h2>
 <p>NcmFitESMCMCWalkerAPES — Ensemble sampler Markov Chain Monte Carlo walker - apes move.</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td align="right" class="gallery_image" valign="top"></td>
 </tr></table></div>
 <div class="refsect1">
 <a name="NcmFitESMCMCWalkerAPES.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="functions_proto_type">
-<col class="functions_proto_name">
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -206,11 +220,11 @@
 </div>
 <div class="refsect1">
 <a name="NcmFitESMCMCWalkerAPES.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
+<div class="informaltable"><table border="0" class="informaltable">
 <colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -243,10 +257,10 @@
 </div>
 <div class="refsect1">
 <a name="NcmFitESMCMCWalkerAPES.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="other_proto_type">
-<col class="other_proto_name">
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -292,7 +306,7 @@ containing the first and the second half of the walkers respectively. When propo
 we use the points in the $L_2$ block to generate an interpolant $\tilde{\pi}_{L_2}$ and then propose points $Y \sim \tilde{\pi}_{L_2}$
 for the $L_1$ block. These points are accepted or rejected based on an acceptance probability $A(Y|X)$, and after the points of the first
 block are updated, we do the same procedure for the $L_2$ block using the $L_1$ block. This procedure can be seen in the pseudocode below.</p>
-<p><span class="inlinemediaobject"><img src="apes.png" alt="apes_sketch"></span></p>
+<p><span class="inlinemediaobject"><img alt="apes_sketch" src="apes.png"/></span></p>
 <p>The user must provide the input the values: <em class="parameter"><code>nwalkers</code></em>
 , <em class="parameter"><code>nparams</code></em>
 , <em class="parameter"><code>method</code></em>
@@ -325,11 +339,11 @@ with <em class="parameter"><code>nwalkers</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -351,7 +365,7 @@ with <em class="parameter"><code>nwalkers</code></em>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-new-full"></a><h3>ncm_fit_esmcmc_walker_apes_new_full ()</h3>
 <pre class="programlisting"><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="returnvalue">NcmFitESMCMCWalkerAPES</span></a> *
@@ -373,11 +387,11 @@ interpolating the computed likelihood values, otherwise, use standard
 kernel density estimation.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-new-full.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -419,7 +433,7 @@ kernel density estimation.</p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-ref"></a><h3>ncm_fit_esmcmc_walker_apes_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="returnvalue">NcmFitESMCMCWalkerAPES</span></a> *
@@ -428,11 +442,11 @@ ncm_fit_esmcmc_walker_apes_ref (<em class="parameter"><code><a class="link" href
  atomically.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-ref.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>apes</p></td>
@@ -448,7 +462,7 @@ ncm_fit_esmcmc_walker_apes_ref (<em class="parameter"><code><a class="link" href
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-free"></a><h3>ncm_fit_esmcmc_walker_apes_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -457,11 +471,11 @@ ncm_fit_esmcmc_walker_apes_free (<em class="parameter"><code><a class="link" hre
  atomically.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-free.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>apes</p></td>
@@ -471,7 +485,7 @@ ncm_fit_esmcmc_walker_apes_free (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-clear"></a><h3>ncm_fit_esmcmc_walker_apes_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -481,11 +495,11 @@ ncm_fit_esmcmc_walker_apes_clear (<em class="parameter"><code><a class="link" hr
  to null.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-clear.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>apes</p></td>
@@ -495,7 +509,7 @@ ncm_fit_esmcmc_walker_apes_clear (<em class="parameter"><code><a class="link" hr
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-set-method"></a><h3>ncm_fit_esmcmc_walker_apes_set_method ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -505,11 +519,11 @@ ncm_fit_esmcmc_walker_apes_set_method (<em class="parameter"><code><a class="lin
 posterior approximations.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-set-method.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -526,7 +540,7 @@ posterior approximations.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-set-k-type"></a><h3>ncm_fit_esmcmc_walker_apes_set_k_type ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -536,11 +550,11 @@ ncm_fit_esmcmc_walker_apes_set_k_type (<em class="parameter"><code><a class="lin
 posterior approximations.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-set-k-type.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -557,7 +571,7 @@ posterior approximations.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-set-over-smooth"></a><h3>ncm_fit_esmcmc_walker_apes_set_over_smooth ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -568,11 +582,11 @@ ncm_fit_esmcmc_walker_apes_set_over_smooth
 bandwidth.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-set-over-smooth.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -589,7 +603,7 @@ bandwidth.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-get-method"></a><h3>ncm_fit_esmcmc_walker_apes_get_method ()</h3>
 <pre class="programlisting"><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESMethod" title="enum NcmFitESMCMCWalkerAPESMethod"><span class="returnvalue">NcmFitESMCMCWalkerAPESMethod</span></a>
@@ -597,11 +611,11 @@ ncm_fit_esmcmc_walker_apes_get_method (<em class="parameter"><code><a class="lin
 <p>Gets the currently used estimation method.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-get-method.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>apes</p></td>
@@ -615,7 +629,7 @@ ncm_fit_esmcmc_walker_apes_get_method (<em class="parameter"><code><a class="lin
 <p> currently used estimation method <a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESMethod" title="enum NcmFitESMCMCWalkerAPESMethod"><span class="type">NcmFitESMCMCWalkerAPESMethod</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-get-k-type"></a><h3>ncm_fit_esmcmc_walker_apes_get_k_type ()</h3>
 <pre class="programlisting"><a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESKType" title="enum NcmFitESMCMCWalkerAPESKType"><span class="returnvalue">NcmFitESMCMCWalkerAPESKType</span></a>
@@ -623,11 +637,11 @@ ncm_fit_esmcmc_walker_apes_get_k_type (<em class="parameter"><code><a class="lin
 <p>Gets the currently used kernel.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-get-k-type.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>apes</p></td>
@@ -641,7 +655,7 @@ ncm_fit_esmcmc_walker_apes_get_k_type (<em class="parameter"><code><a class="lin
 <p> currently used kernel <a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESKType" title="enum NcmFitESMCMCWalkerAPESKType"><span class="type">NcmFitESMCMCWalkerAPESKType</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-get-over-smooth"></a><h3>ncm_fit_esmcmc_walker_apes_get_over_smooth ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -650,11 +664,11 @@ ncm_fit_esmcmc_walker_apes_get_over_smooth
 <p>Gets the currently used over-smooth parameter.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-get-over-smooth.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>apes</p></td>
@@ -668,7 +682,7 @@ ncm_fit_esmcmc_walker_apes_get_over_smooth
 <p> currently used over-smooth.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-use-interp"></a><h3>ncm_fit_esmcmc_walker_apes_use_interp ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -680,11 +694,11 @@ or kernel density estimate (<em class="parameter"><code>use_interp</code></em>
  == FALSE).</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-use-interp.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -701,18 +715,18 @@ or kernel density estimate (<em class="parameter"><code>use_interp</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-interp"></a><h3>ncm_fit_esmcmc_walker_apes_interp ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 ncm_fit_esmcmc_walker_apes_interp (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-interp.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>apes</p></td>
@@ -726,7 +740,7 @@ ncm_fit_esmcmc_walker_apes_interp (<em class="parameter"><code><a class="link" h
 <p> whether interpolation is being used for posterior approximation.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-set-use-threads"></a><h3>ncm_fit_esmcmc_walker_apes_set_use_threads ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -737,11 +751,11 @@ ncm_fit_esmcmc_walker_apes_set_use_threads
 approximation.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-set-use-threads.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -758,7 +772,7 @@ approximation.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-get-use-threads"></a><h3>ncm_fit_esmcmc_walker_apes_get_use_threads ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
@@ -766,11 +780,11 @@ ncm_fit_esmcmc_walker_apes_get_use_threads
                                (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES"><span class="type">NcmFitESMCMCWalkerAPES</span></a> *apes</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-get-use-threads.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>apes</p></td>
@@ -785,7 +799,7 @@ ncm_fit_esmcmc_walker_apes_get_use_threads
 approximation.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-peek-sds"></a><h3>ncm_fit_esmcmc_walker_apes_peek_sds ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -795,11 +809,11 @@ ncm_fit_esmcmc_walker_apes_peek_sds (<em class="parameter"><code><a class="link"
 <p>Peeks the currently used <a class="link" href="NcmStatsDist.html" title="NcmStatsDist"><span class="type">NcmStatsDist</span></a> objects.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-peek-sds.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -821,7 +835,7 @@ ncm_fit_esmcmc_walker_apes_peek_sds (<em class="parameter"><code><a class="link"
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-set-local-frac"></a><h3>ncm_fit_esmcmc_walker_apes_set_local_frac ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -831,11 +845,11 @@ ncm_fit_esmcmc_walker_apes_set_local_frac
 <p>Sets the local fraction to use in VKDE.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-set-local-frac.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -852,7 +866,7 @@ ncm_fit_esmcmc_walker_apes_set_local_frac
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-set-cov-fixed-from-mset"></a><h3>ncm_fit_esmcmc_walker_apes_set_cov_fixed_from_mset ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -864,11 +878,11 @@ the scales set into <em class="parameter"><code>mset</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-set-cov-fixed-from-mset.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -885,7 +899,7 @@ the scales set into <em class="parameter"><code>mset</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-set-cov-robust-diag"></a><h3>ncm_fit_esmcmc_walker_apes_set_cov_robust_diag ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -895,11 +909,11 @@ ncm_fit_esmcmc_walker_apes_set_cov_robust_diag
 robust estimates of scale.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-set-cov-robust-diag.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>apes</p></td>
@@ -909,7 +923,7 @@ robust estimates of scale.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-fit-esmcmc-walker-apes-set-cov-robust"></a><h3>ncm_fit_esmcmc_walker_apes_set_cov_robust ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -919,11 +933,11 @@ ncm_fit_esmcmc_walker_apes_set_cov_robust
 robust estimates of scale.</p>
 <div class="refsect3">
 <a name="ncm-fit-esmcmc-walker-apes-set-cov-robust.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>apes</p></td>
@@ -941,17 +955,17 @@ robust estimates of scale.</p>
 <pre class="programlisting">#define NCM_TYPE_FIT_ESMCMC_WALKER_APES (ncm_fit_esmcmc_walker_apes_get_type ())
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFitESMCMCWalkerAPESMethod"></a><h3>enum NcmFitESMCMCWalkerAPESMethod</h3>
 <p>Posterior estimation method.</p>
 <div class="refsect3">
 <a name="NcmFitESMCMCWalkerAPESMethod.members"></a><h4>Members</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="300px" class="enum_members_name">
-<col class="enum_members_description">
-<col width="200px" class="enum_members_annotations">
+<col class="enum_members_name" width="300px"/>
+<col class="enum_members_description"/>
+<col class="enum_members_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -972,17 +986,17 @@ robust estimates of scale.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFitESMCMCWalkerAPESKType"></a><h3>enum NcmFitESMCMCWalkerAPESKType</h3>
 <p>Kernel used to build the approximate posterior.</p>
 <div class="refsect3">
 <a name="NcmFitESMCMCWalkerAPESKType.members"></a><h4>Members</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="300px" class="enum_members_name">
-<col class="enum_members_description">
-<col width="200px" class="enum_members_annotations">
+<col class="enum_members_name" width="300px"/>
+<col class="enum_members_description"/>
+<col class="enum_members_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1010,7 +1024,7 @@ robust estimates of scale.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFitESMCMCWalkerAPES-struct"></a><h3>NcmFitESMCMCWalkerAPES</h3>
 <pre class="programlisting">typedef struct _NcmFitESMCMCWalkerAPES NcmFitESMCMCWalkerAPES;</pre>
@@ -1026,7 +1040,7 @@ robust estimates of scale.</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: NCM_FIT_ESMCMC_WALKER_APES_KTYPE_CAUCHY</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFitESMCMCWalkerAPES--method"></a><h3>The <code class="literal">“method”</code> property</h3>
 <pre class="programlisting">  “method”                   <a class="link" href="NcmFitESMCMCWalkerAPES.html#NcmFitESMCMCWalkerAPESMethod" title="enum NcmFitESMCMCWalkerAPESMethod"><span class="type">NcmFitESMCMCWalkerAPESMethod</span></a></pre>
@@ -1035,7 +1049,7 @@ robust estimates of scale.</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: NCM_FIT_ESMCMC_WALKER_APES_METHOD_VKDE</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFitESMCMCWalkerAPES--over-smooth"></a><h3>The <code class="literal">“over-smooth”</code> property</h3>
 <pre class="programlisting">  “over-smooth”              <span class="type">double</span></pre>
@@ -1045,7 +1059,7 @@ robust estimates of scale.</p>
 <p>Allowed values: [1e-10,1e+10]</p>
 <p>Default value: 1</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFitESMCMCWalkerAPES--use-interp"></a><h3>The <code class="literal">“use-interp”</code> property</h3>
 <pre class="programlisting">  “use-interp”               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
@@ -1054,7 +1068,7 @@ robust estimates of scale.</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: TRUE</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmFitESMCMCWalkerAPES--use-threads"></a><h3>The <code class="literal">“use-threads”</code> property</h3>
 <pre class="programlisting">  “use-threads”              <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
@@ -1066,6 +1080,6 @@ robust estimates of scale.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

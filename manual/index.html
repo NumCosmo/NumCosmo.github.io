@@ -1,27 +1,41 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NumCosmo Reference Manual: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="NumCosmo Reference Manual">
-<link rel="next" href="ch01.html" title="NumCosmo Overview">
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
-<link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch01.html" rel="next" title="NumCosmo Overview"/>
+<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
 <div class="book">
 <div class="titlepage">
 <div>
-<div><table class="navigation" id="top" width="100%" cellpadding="2" cellspacing="0"><tr><th valign="middle"><p class="title">NumCosmo Reference Manual</p></th></tr></table></div>
+<div><table cellpadding="2" cellspacing="0" class="navigation" id="top" width="100%"><tr><th valign="middle"><p class="title">NumCosmo Reference Manual</p></th></tr></table></div>
 <div><p class="releaseinfo">
-    for NumCosmo 0.19.0.
+    for NumCosmo 0.19.2.
     The latest version of this documentation can be found on-line at
     <a class="ulink" href="https://numcosmo.github.io/manual/" target="_top">https://numcosmo.github.io/manual/</a>,      
     <a class="ulink" href="https://numcosmo.github.io/" target="_top">NumCosmo website</a>.
   </p></div>
 </div>
-<hr>
+<hr/>
 </div>
 <div class="toc"><dl class="toc">
 <dt><span class="chapter"><a href="ch01.html">NumCosmo Overview</a></span></dt>
@@ -54,6 +68,9 @@
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmDiff.html">NcmDiff</a></span><span class="refpurpose"> — Numerical differentiation object</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="numcosmo-NcmDTuple.html">NcmDTuple</a></span><span class="refpurpose"> — Fixed sized array of double values.</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmVector.html">NcmVector</a></span><span class="refpurpose"> — Vector object representing arrays of doubles.</span>
@@ -116,16 +133,7 @@
 <span class="refentrytitle"><a href="NcmMPIJobFEval.html">NcmMPIJobFEval</a></span><span class="refpurpose"> — MPI job object for evaluating fit steps</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s03.html">ODE Solvers objects</a></span></dt>
-<dd><dl>
-<dt>
-<span class="refentrytitle"><a href="NcmODE.html">NcmODE</a></span><span class="refpurpose"> — Abstract class for ODE solvers</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="NcmODEEval.html">NcmODEEval</a></span><span class="refpurpose"> — Abstract class for ODE system evaluation</span>
-</dt>
-</dl></dd>
-<dt><span class="section"><a href="ch02s04.html">FFTLog</a></span></dt>
+<dt><span class="section"><a href="ch02s03.html">FFTLog</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmFftlog.html">NcmFftlog</a></span><span class="refpurpose"> — Abstract class for implementing logarithm fast fourier transform.</span>
@@ -143,7 +151,7 @@
 <span class="refentrytitle"><a href="NcmFftlogGausswin2.html">NcmFftlogGausswin2</a></span><span class="refpurpose"> — Logarithm fast fourier transform for a kernel given by the square of a Gaussian window function.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s05.html">Splines 1D</a></span></dt>
+<dt><span class="section"><a href="ch02s04.html">Splines 1D</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmSpline.html">NcmSpline</a></span><span class="refpurpose"> — Abstract class for implementing splines.</span>
@@ -170,10 +178,10 @@
 <span class="refentrytitle"><a href="NcmSplineFuncTest.html">NcmSplineFuncTest</a></span><span class="refpurpose"> — test suite to analyze the NcmSplineFunc's knots distribution.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcmOdeSpline.html">NcmOdeSpline</a></span><span class="refpurpose"> — Automatic generation of splines from ODE solvers (<span class="type">NcmODE</span>).</span>
+<span class="refentrytitle"><a href="NcmOdeSpline.html">NcmOdeSpline</a></span><span class="refpurpose"> — Automatic generation of splines from ODE solvers.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s06.html">Splines 2D</a></span></dt>
+<dt><span class="section"><a href="ch02s05.html">Splines 2D</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmSpline2d.html">NcmSpline2d</a></span><span class="refpurpose"> — Abstract class for implementing bidimensional splines.</span>
@@ -188,7 +196,7 @@
 <span class="refentrytitle"><a href="NcmSpline2dGsl.html">NcmSpline2dGsl</a></span><span class="refpurpose"> — Implements spline from spline method using The GNU Scientific Library (GSL) as base splines.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s07.html">Power spectrum functions</a></span></dt>
+<dt><span class="section"><a href="ch02s06.html">Power spectrum functions</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmPowspec.html">NcmPowspec</a></span><span class="refpurpose"> — Abstrac class for power spectrum implementation.</span>
@@ -203,7 +211,7 @@
 <span class="refentrytitle"><a href="NcmPowspecCorr3d.html">NcmPowspecCorr3d</a></span><span class="refpurpose"> — Class to compute filtered power spectrum</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s08.html">Harmonic Oscillator</a></span></dt>
+<dt><span class="section"><a href="ch02s07.html">Harmonic Oscillator</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmHOAA.html">NcmHOAA</a></span><span class="refpurpose"> — Abstract class for Harmonic Oscillator calculation through AA variables.</span>
@@ -212,7 +220,7 @@
 <span class="refentrytitle"><a href="NcmCSQ1D.html">NcmCSQ1D</a></span><span class="refpurpose"> — Abstract class for Harmonic Oscillator calculation through complex structure quantization.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s09.html">Special Functions</a></span></dt>
+<dt><span class="section"><a href="ch02s08.html">Special Functions</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="numcosmo-NcmMpsfTrigInt.html">NcmMpsfTrigInt</a></span><span class="refpurpose"> — Multiple precision sin integral implementation.</span>
@@ -230,7 +238,7 @@
 <span class="refentrytitle"><a href="NcmSFSphericalHarmonics.html">NcmSFSphericalHarmonics</a></span><span class="refpurpose"> — Spherical Harmonics object</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s10.html">Models and Parameters</a></span></dt>
+<dt><span class="section"><a href="ch02s09.html">Models and Parameters</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmModel.html">NcmModel</a></span><span class="refpurpose"> — Abstract class for implementing models.</span>
@@ -259,11 +267,8 @@
 <dt>
 <span class="refentrytitle"><a href="NcmMSetFuncList.html">NcmMSetFuncList</a></span><span class="refpurpose"> — NcmMSet Functions list.</span>
 </dt>
-<dt>
-<span class="refentrytitle"><a href="NcmCalc.html">NcmData</a></span><span class="refpurpose"> — Abstract class for implementing calculator objects.</span>
-</dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s11.html">Reparametrization</a></span></dt>
+<dt><span class="section"><a href="ch02s10.html">Reparametrization</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmReparam.html">NcmReparam</a></span><span class="refpurpose"> — Abstract class for model reparametrization.</span>
@@ -272,7 +277,7 @@
 <span class="refentrytitle"><a href="NcmReparamLinear.html">NcmReparamLinear</a></span><span class="refpurpose"> — Linear reparametrization object.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s12.html">Data Objects</a></span></dt>
+<dt><span class="section"><a href="ch02s11.html">Data Objects</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmData.html">NcmData</a></span><span class="refpurpose"> — Abstract class for implementing data objects.</span>
@@ -299,7 +304,7 @@
 <span class="refentrytitle"><a href="NcmDataDist2d.html">NcmDataDist2d</a></span><span class="refpurpose"> — Abstract class for two-variables distribution data.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s13.html">Statistical Analysis</a></span></dt>
+<dt><span class="section"><a href="ch02s12.html">Statistical Analysis</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmStatsVec.html">NcmStatsVec</a></span><span class="refpurpose"> — An online statistics vector.</span>
@@ -326,7 +331,7 @@
 <span class="refentrytitle"><a href="NcmLikelihood.html">NcmLikelihood</a></span><span class="refpurpose"> — Likelihood combining a NcmDataset and priors.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcmPrior.html">NcmPrior</a></span><span class="refpurpose"> — A prior for NcmLikelihood.</span>
+<span class="refentrytitle"><a href="NcmPrior.html">NcmPrior</a></span><span class="refpurpose"> — Base class for prior distributions.</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmPriorGauss.html">NcmPriorGauss</a></span><span class="refpurpose"> — A gaussian prior for NcmLikelihood</span>
@@ -335,16 +340,16 @@
 <span class="refentrytitle"><a href="NcmPriorGaussParam.html">NcmPriorGaussParam</a></span><span class="refpurpose"> — a gaussian prior on a parameter</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcmPriorGaussFunc.html">NcmPriorGaussFunc</a></span><span class="refpurpose"> — a gaussian prior on a parameter</span>
+<span class="refentrytitle"><a href="NcmPriorGaussFunc.html">NcmPriorGaussFunc</a></span><span class="refpurpose"> — a gaussian prior on a parameter.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcmPriorFlat.html">NcmPriorFlat</a></span><span class="refpurpose"> — A flat prior for NcmLikelihood</span>
+<span class="refentrytitle"><a href="NcmPriorFlat.html">NcmPriorFlat</a></span><span class="refpurpose"> — Base class for flat prior distributions.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcmPriorFlatParam.html">NcmPriorFlatParam</a></span><span class="refpurpose"> — a flat prior on a parameter</span>
+<span class="refentrytitle"><a href="NcmPriorFlatParam.html">NcmPriorFlatParam</a></span><span class="refpurpose"> — a flat prior on a sampling parameter.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcmPriorFlatFunc.html">NcmPriorFlatFunc</a></span><span class="refpurpose"> — a flat prior on a parameter</span>
+<span class="refentrytitle"><a href="NcmPriorFlatFunc.html">NcmPriorFlatFunc</a></span><span class="refpurpose"> — flat prior on a derived quantity.</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmMSetCatalog.html">NcmMSetCatalog</a></span><span class="refpurpose"> — Ordered catalog of different NcmMSet parameter values.</span>
@@ -353,13 +358,13 @@
 <span class="refentrytitle"><a href="NcmMSetTransKern.html">NcmMSetTransKern</a></span><span class="refpurpose"> — Abstract Class for a transition kernel and prior.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcmMSetTransKernFlat.html">NcmMSetTransKernFlat</a></span><span class="refpurpose"> — Multivariate flat sampler.</span>
+<span class="refentrytitle"><a href="NcmMSetTransKernFlat.html">NcmMSetTransKernFlat</a></span><span class="refpurpose"> — Multivariate flat sampler</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmMSetTransKernGauss.html">NcmMSetTransKernGauss</a></span><span class="refpurpose"> — A multivariate gaussian sampler.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcmMSetTransKernCat.html">NcmMSetTransKernCat</a></span><span class="refpurpose"> — Catalog sampler.</span>
+<span class="refentrytitle"><a href="NcmMSetTransKernCat.html">NcmMSetTransKernCat</a></span><span class="refpurpose"> — Catalog sampler</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmFitState.html">NcmFitState</a></span><span class="refpurpose"> — State of a NcmFit object.</span>
@@ -401,7 +406,7 @@
 <span class="refentrytitle"><a href="NcmABC.html">NcmABC</a></span><span class="refpurpose"> — Abstract class for Approximate Bayesian Computation (ABC).</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s14.html">Multivariate density estimation</a></span></dt>
+<dt><span class="section"><a href="ch02s13.html">Multivariate density estimation</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmStatsDist.html">NcmStatsDist</a></span><span class="refpurpose"> — Abstract class for implementing N-dimensional probability distributions.</span>
@@ -423,7 +428,7 @@ An N-dimensional Gaussian kernel used to compute the kernel density estimation f
 <span class="refentrytitle"><a href="NcmStatsDistKernelST.html">NcmStatsDistKernelST</a></span><span class="refpurpose"> — An N-dimensional Student's t kernel used to compute the kernel density estimation function (KDE) in the <span class="type">NcmStatsDist</span> class.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s15.html">MCMC and ESMCMC</a></span></dt>
+<dt><span class="section"><a href="ch02s14.html">MCMC and ESMCMC</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmFitMCMC.html">NcmFitMCMC</a></span><span class="refpurpose"> — Markov Chain Monte Carlo analysis.</span>
@@ -444,7 +449,7 @@ An N-dimensional Gaussian kernel used to compute the kernel density estimation f
 <span class="refentrytitle"><a href="NcmFitESMCMCWalkerAPES.html">NcmFitESMCMCWalkerAPES</a></span><span class="refpurpose"> — Ensemble sampler Markov Chain Monte Carlo walker - apes move.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s16.html">MCMC Testing</a></span></dt>
+<dt><span class="section"><a href="ch02s15.html">MCMC Testing</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcmModelMVND.html">NcmModelMVND</a></span><span class="refpurpose"> — Multivariate Normal Distribution mean model.</span>
@@ -468,11 +473,11 @@ An N-dimensional Gaussian kernel used to compute the kernel density estimation f
 <span class="refentrytitle"><a href="NcmDataFunnel.html">NcmDataFunnel</a></span><span class="refpurpose"> — Funnel distribution.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch02s17.html">Spherical maps and Healpix</a></span></dt>
+<dt><span class="section"><a href="ch02s16.html">Spherical maps and Healpix</a></span></dt>
 <dd><dl><dt>
 <span class="refentrytitle"><a href="NcmSphereMap.html">NcmSphereMap</a></span><span class="refpurpose"> — An re-implementation of Healpix.</span>
 </dt></dl></dd>
-<dt><span class="section"><a href="ch02s18.html">GObject introspection compatibility</a></span></dt>
+<dt><span class="section"><a href="ch02s17.html">GObject introspection compatibility</a></span></dt>
 <dd><dl><dt>
 <span class="refentrytitle"><a href="numcosmo-Gir-Scanning-Compatibility.html">Gir Scanning Compatibility</a></span><span class="refpurpose"> — Gir scanning types stubs.</span>
 </dt></dl></dd>
@@ -1046,6 +1051,6 @@ An N-dimensional Gaussian kernel used to compute the kernel density estimation f
 </dl></div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

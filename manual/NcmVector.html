@@ -1,28 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NcmVector: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="NumCosmo Reference Manual">
-<link rel="up" href="ch02.html#id-1.3.2" title="Miscellaneous Objects">
-<link rel="prev" href="NcmDiff.html" title="NcmDiff">
-<link rel="next" href="NcmMatrix.html" title="NcmMatrix">
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
-<link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#NcmVector.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#NcmVector.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#NcmVector.properties" class="shortcut">Properties</a></span>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch02.html#id-1.3.2" rel="up" title="Miscellaneous Objects"/>
+<link href="numcosmo-NcmDTuple.html" rel="prev" title="NcmDTuple"/>
+<link href="NcmMatrix.html" rel="next" title="NcmMatrix"/>
+<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmVector.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmVector.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmVector.properties">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch02.html#id-1.3.2"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="NcmDiff.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="NcmMatrix.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch02.html#id-1.3.2"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="numcosmo-NcmDTuple.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcmMatrix.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcmVector"></a><div class="titlepage"></div>
@@ -31,7 +45,7 @@
 <h2><span class="refentrytitle"><a name="NcmVector.top_of_page"></a>NcmVector</span></h2>
 <p>NcmVector — Vector object representing arrays of doubles.</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td align="right" class="gallery_image" valign="top"></td>
 </tr></table></div>
 <div class="refsect1">
 <a name="NcmVector.stability-level"></a><h2>Stability Level</h2>
@@ -45,10 +59,10 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmVector.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="functions_proto_type">
-<col class="functions_proto_name">
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -759,11 +773,11 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmVector.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
+<div class="informaltable"><table border="0" class="informaltable">
 <colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="property_type">
@@ -775,15 +789,25 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmVector.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="other_proto_type">
-<col class="other_proto_name">
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmVector.html#NCM-TYPE-VECTOR:CAPS" title="NCM_TYPE_VECTOR">NCM_TYPE_VECTOR</a></td>
+</tr>
+<tr>
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="NcmVector.html#NcmVectorInternal" title="enum NcmVectorInternal">NcmVectorInternal</a></td>
-</tr></tbody>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmVector.html#NcmVector-struct" title="struct NcmVector">NcmVector</a></td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect1">
@@ -813,13 +837,13 @@ Also includes several vector operations.</p>
                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>,
                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-N2VECTOR:CAPS"></a><h3>NCM_N2VECTOR()</h3>
 <pre class="programlisting">#define NCM_N2VECTOR(v) ((NcmVector *) ((v)-&gt;content))
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-new"></a><h3>ncm_vector_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -829,11 +853,11 @@ with <em class="parameter"><code>n</code></em>
  components.</p>
 <div class="refsect3">
 <a name="ncm-vector-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>n</p></td>
@@ -847,7 +871,7 @@ with <em class="parameter"><code>n</code></em>
 <p> A new <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-new-full"></a><h3>ncm_vector_new_full ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -864,11 +888,11 @@ This function saves <em class="parameter"><code>userdata</code></em>
 when it is no longer necessary.</p>
 <div class="refsect3">
 <a name="ncm-vector-new-full.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -904,7 +928,7 @@ when it is no longer necessary.</p>
 <p> A new <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-new-fftw"></a><h3>ncm_vector_new_fftw ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -915,11 +939,11 @@ with <em class="parameter"><code>n</code></em>
 by fftw* functions.</p>
 <div class="refsect3">
 <a name="ncm-vector-new-fftw.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>size</p></td>
@@ -933,7 +957,7 @@ by fftw* functions.</p>
 <p> A new <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-new-gsl"></a><h3>ncm_vector_new_gsl ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -945,11 +969,11 @@ The <em class="parameter"><code>gv</code></em>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-vector-new-gsl.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>gv</p></td>
@@ -963,7 +987,7 @@ The <em class="parameter"><code>gv</code></em>
 <p> A new <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-new-gsl-static"></a><h3>ncm_vector_new_gsl_static ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -975,11 +999,11 @@ The <em class="parameter"><code>gv</code></em>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-vector-new-gsl-static.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>gv</p></td>
@@ -993,7 +1017,7 @@ The <em class="parameter"><code>gv</code></em>
 <p> A new <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-new-array"></a><h3>ncm_vector_new_array ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -1004,11 +1028,11 @@ The <em class="parameter"><code>a</code></em>
  array must not be freed.</p>
 <div class="refsect3">
 <a name="ncm-vector-new-array.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>a</p></td>
@@ -1023,7 +1047,7 @@ The <em class="parameter"><code>a</code></em>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-new-data-slice"></a><h3>ncm_vector_new_data_slice ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -1039,11 +1063,11 @@ The <em class="parameter"><code>d</code></em>
  vector must not be freed.</p>
 <div class="refsect3">
 <a name="ncm-vector-new-data-slice.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1069,7 +1093,7 @@ The <em class="parameter"><code>d</code></em>
 <p> A new <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-new-data-malloc"></a><h3>ncm_vector_new_data_malloc ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -1084,11 +1108,11 @@ The <em class="parameter"><code>d</code></em>
  vector must not be freed.</p>
 <div class="refsect3">
 <a name="ncm-vector-new-data-malloc.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1114,7 +1138,7 @@ The <em class="parameter"><code>d</code></em>
 <p> A new <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-new-data-static"></a><h3>ncm_vector_new_data_static ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -1127,11 +1151,11 @@ The memory allocated is kept during all time life of the object and
 must not be freed during this period.</p>
 <div class="refsect3">
 <a name="ncm-vector-new-data-static.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1157,7 +1181,7 @@ must not be freed during this period.</p>
 <p> A new <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-new-data-dup"></a><h3>ncm_vector_new_data_dup ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -1170,11 +1194,11 @@ It allocate a new vector and copy the contents of <em class="parameter"><code>d<
  into it.</p>
 <div class="refsect3">
 <a name="ncm-vector-new-data-dup.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1201,7 +1225,7 @@ It allocate a new vector and copy the contents of <em class="parameter"><code>d<
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-new-variant"></a><h3>ncm_vector_new_variant ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -1210,11 +1234,11 @@ ncm_vector_new_variant (<em class="parameter"><code><a href="../glib/glib-GVaria
 memory for the vector.</p>
 <div class="refsect3">
 <a name="ncm-vector-new-variant.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>var</p></td>
@@ -1228,7 +1252,7 @@ memory for the vector.</p>
 <p> A new <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-ref"></a><h3>ncm_vector_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -1237,11 +1261,11 @@ ncm_vector_ref (<em class="parameter"><code><a class="link" href="NcmVector.html
  by one atomically.</p>
 <div class="refsect3">
 <a name="ncm-vector-ref.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -1257,7 +1281,7 @@ ncm_vector_ref (<em class="parameter"><code><a class="link" href="NcmVector.html
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-const-ref"></a><h3>ncm_vector_const_ref ()</h3>
 <pre class="programlisting">const <a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -1266,11 +1290,11 @@ ncm_vector_const_ref (<em class="parameter"><code>const <a class="link" href="Nc
  by one atomically.</p>
 <div class="refsect3">
 <a name="ncm-vector-const-ref.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -1286,7 +1310,7 @@ ncm_vector_const_ref (<em class="parameter"><code>const <a class="link" href="Nc
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-const-new-variant"></a><h3>ncm_vector_const_new_variant ()</h3>
 <pre class="programlisting">const <a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -1296,11 +1320,11 @@ a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-const-new-variant.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>var</p></td>
@@ -1315,7 +1339,7 @@ a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-const-new-data"></a><h3>ncm_vector_const_new_data ()</h3>
 <pre class="programlisting">const <a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -1328,11 +1352,11 @@ The memory allocated is kept during all time life of the object and
 must not be freed during this period.</p>
 <div class="refsect3">
 <a name="ncm-vector-const-new-data.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1358,7 +1382,7 @@ must not be freed during this period.</p>
 <p> A new constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-get-subvector"></a><h3>ncm_vector_get_subvector ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -1374,11 +1398,11 @@ The new vector has <em class="parameter"><code>size</code></em>
  elements.</p>
 <div class="refsect3">
 <a name="ncm-vector-get-subvector.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1405,7 +1429,7 @@ The new vector has <em class="parameter"><code>size</code></em>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-get-subvector2"></a><h3>ncm_vector_get_subvector2 ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1427,11 +1451,11 @@ The new vector has <em class="parameter"><code>size</code></em>
 then the function will lead to a memory leak.</p>
 <div class="refsect3">
 <a name="ncm-vector-get-subvector2.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1458,7 +1482,7 @@ then the function will lead to a memory leak.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-get-subvector-stride"></a><h3>ncm_vector_get_subvector_stride ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -1475,11 +1499,11 @@ The new vector has <em class="parameter"><code>size</code></em>
  elements.</p>
 <div class="refsect3">
 <a name="ncm-vector-get-subvector-stride.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1511,7 +1535,7 @@ The new vector has <em class="parameter"><code>size</code></em>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-get-variant"></a><h3>ncm_vector_get_variant ()</h3>
 <pre class="programlisting"><a href="../glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
@@ -1522,11 +1546,11 @@ original vector <em class="parameter"><code>cv</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-get-variant.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -1541,7 +1565,7 @@ original vector <em class="parameter"><code>cv</code></em>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-peek-variant"></a><h3>ncm_vector_peek_variant ()</h3>
 <pre class="programlisting"><a href="../glib/glib-GVariant.html#GVariant"><span class="returnvalue">GVariant</span></a> *
@@ -1553,11 +1577,11 @@ The vector <em class="parameter"><code>cv</code></em>
 If the vector has stride != 1 then <a class="link" href="NcmVector.html#ncm-vector-get-variant" title="ncm_vector_get_variant ()"><code class="function">ncm_vector_get_variant()</code></a> is called.</p>
 <div class="refsect3">
 <a name="ncm-vector-peek-variant.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -1572,7 +1596,7 @@ If the vector has stride != 1 then <a class="link" href="NcmVector.html#ncm-vect
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-log-vals"></a><h3>ncm_vector_log_vals ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1586,11 +1610,11 @@ ncm_vector_log_vals (<em class="parameter"><code>const <a class="link" href="Ncm
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-log-vals.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1617,7 +1641,7 @@ ncm_vector_log_vals (<em class="parameter"><code>const <a class="link" href="Ncm
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-log-vals-avpb"></a><h3>ncm_vector_log_vals_avpb ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1634,11 +1658,11 @@ ncm_vector_log_vals_avpb (<em class="parameter"><code>const <a class="link" href
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-log-vals-avpb.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1670,7 +1694,7 @@ ncm_vector_log_vals_avpb (<em class="parameter"><code>const <a class="link" href
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-log-vals-func"></a><h3>ncm_vector_log_vals_func ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1686,11 +1710,11 @@ ncm_vector_log_vals_func (<em class="parameter"><code>const <a class="link" href
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-log-vals-func.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1723,7 +1747,7 @@ ncm_vector_log_vals_func (<em class="parameter"><code>const <a class="link" href
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-set-from-variant"></a><h3>ncm_vector_set_from_variant ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1737,11 +1761,11 @@ if <em class="parameter"><code>cv</code></em>
  differ in size.</p>
 <div class="refsect3">
 <a name="ncm-vector-set-from-variant.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1758,7 +1782,7 @@ if <em class="parameter"><code>cv</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-dnrm2"></a><h3>ncm_vector_dnrm2 ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -1768,11 +1792,11 @@ ncm_vector_dnrm2 (<em class="parameter"><code>const <a class="link" href="NcmVec
 $\vert\text{cv}\vert_2$.</p>
 <div class="refsect3">
 <a name="ncm-vector-dnrm2.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -1786,7 +1810,7 @@ $\vert\text{cv}\vert_2$.</p>
 <p> $\vert\text{cv}\vert_2$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-axpy"></a><h3>ncm_vector_axpy ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1799,11 +1823,11 @@ $=\alpha\times$ <em class="parameter"><code>cv2</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-axpy.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1825,7 +1849,7 @@ $=\alpha\times$ <em class="parameter"><code>cv2</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-cmp"></a><h3>ncm_vector_cmp ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1836,11 +1860,11 @@ puts the weighted difference in <em class="parameter"><code>cv1</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-cmp.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1857,7 +1881,7 @@ puts the weighted difference in <em class="parameter"><code>cv1</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-cmp2"></a><h3>ncm_vector_cmp2 ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
@@ -1869,11 +1893,11 @@ ncm_vector_cmp2 (<em class="parameter"><code>const <a class="link" href="NcmVect
 returns the number of components that do not match.</p>
 <div class="refsect3">
 <a name="ncm-vector-cmp2.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1904,7 +1928,7 @@ returns the number of components that do not match.</p>
 <p> the number of components that do not match.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-sub-round-off"></a><h3>ncm_vector_sub_round_off ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1916,11 +1940,11 @@ subtraction of <em class="parameter"><code>cv1</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-sub-round-off.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1937,7 +1961,7 @@ subtraction of <em class="parameter"><code>cv1</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-reciprocal"></a><h3>ncm_vector_reciprocal ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1946,11 +1970,11 @@ ncm_vector_reciprocal (<em class="parameter"><code><a class="link" href="NcmVect
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-reciprocal.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -1960,7 +1984,7 @@ ncm_vector_reciprocal (<em class="parameter"><code><a class="link" href="NcmVect
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-square"></a><h3>ncm_vector_square ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1969,11 +1993,11 @@ ncm_vector_square (<em class="parameter"><code><a class="link" href="NcmVector.h
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-square.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -1983,7 +2007,7 @@ ncm_vector_square (<em class="parameter"><code><a class="link" href="NcmVector.h
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-sqrt"></a><h3>ncm_vector_sqrt ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1992,11 +2016,11 @@ ncm_vector_sqrt (<em class="parameter"><code><a class="link" href="NcmVector.htm
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-sqrt.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -2006,7 +2030,7 @@ ncm_vector_sqrt (<em class="parameter"><code><a class="link" href="NcmVector.htm
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-hypot"></a><h3>ncm_vector_hypot ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2020,11 +2044,11 @@ where $x_1^i$ and $x_2^i$ are the components of <em class="parameter"><code>cv1<
 respectively.</p>
 <div class="refsect3">
 <a name="ncm-vector-hypot.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2046,7 +2070,7 @@ respectively.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-sum-cpts"></a><h3>ncm_vector_sum_cpts ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -2054,11 +2078,11 @@ ncm_vector_sum_cpts (<em class="parameter"><code>const <a class="link" href="Ncm
 <p>Calculates the sum of the components.</p>
 <div class="refsect3">
 <a name="ncm-vector-sum-cpts.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -2073,7 +2097,7 @@ ncm_vector_sum_cpts (<em class="parameter"><code>const <a class="link" href="Ncm
 components.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-mean"></a><h3>ncm_vector_mean ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -2081,11 +2105,11 @@ ncm_vector_mean (<em class="parameter"><code>const <a class="link" href="NcmVect
 <p>Calculates the mean of the components.</p>
 <div class="refsect3">
 <a name="ncm-vector-mean.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -2100,7 +2124,7 @@ ncm_vector_mean (<em class="parameter"><code>const <a class="link" href="NcmVect
 components.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-const-new-gsl"></a><h3>ncm_vector_const_new_gsl ()</h3>
 <pre class="programlisting">const <a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -2110,11 +2134,11 @@ ncm_vector_const_new_gsl (<em class="parameter"><code>const <a class="link" href
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-vector-const-new-gsl.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>gv</p></td>
@@ -2128,7 +2152,7 @@ ncm_vector_const_new_gsl (<em class="parameter"><code>const <a class="link" href
 <p> A new constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-get"></a><h3>ncm_vector_get ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -2136,11 +2160,11 @@ ncm_vector_get (<em class="parameter"><code>const <a class="link" href="NcmVecto
                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-vector-get.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2163,7 +2187,7 @@ ncm_vector_get (<em class="parameter"><code>const <a class="link" href="NcmVecto
 .</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-fast-get"></a><h3>ncm_vector_fast_get ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -2171,11 +2195,11 @@ ncm_vector_fast_get (<em class="parameter"><code>const <a class="link" href="Ncm
                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-vector-fast-get.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2198,7 +2222,7 @@ ncm_vector_fast_get (<em class="parameter"><code>const <a class="link" href="Ncm
 assuming stride == 1.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-ptr"></a><h3>ncm_vector_ptr ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a> *
@@ -2206,11 +2230,11 @@ ncm_vector_ptr (<em class="parameter"><code><a class="link" href="NcmVector.html
                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-vector-ptr.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2233,7 +2257,7 @@ ncm_vector_ptr (<em class="parameter"><code><a class="link" href="NcmVector.html
 .</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-fast-ptr"></a><h3>ncm_vector_fast_ptr ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a> *
@@ -2241,11 +2265,11 @@ ncm_vector_fast_ptr (<em class="parameter"><code><a class="link" href="NcmVector
                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-vector-fast-ptr.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2268,7 +2292,7 @@ ncm_vector_fast_ptr (<em class="parameter"><code><a class="link" href="NcmVector
 assuming stride == 1.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-const-ptr"></a><h3>ncm_vector_const_ptr ()</h3>
 <pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a> *
@@ -2276,11 +2300,11 @@ ncm_vector_const_ptr (<em class="parameter"><code>const <a class="link" href="Nc
                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-vector-const-ptr.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2303,7 +2327,7 @@ ncm_vector_const_ptr (<em class="parameter"><code>const <a class="link" href="Nc
 .</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-set"></a><h3>ncm_vector_set ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2316,11 +2340,11 @@ ncm_vector_set (<em class="parameter"><code><a class="link" href="NcmVector.html
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-set.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2342,7 +2366,7 @@ ncm_vector_set (<em class="parameter"><code><a class="link" href="NcmVector.html
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-fast-set"></a><h3>ncm_vector_fast_set ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2355,11 +2379,11 @@ ncm_vector_fast_set (<em class="parameter"><code><a class="link" href="NcmVector
  assuming stride == 1.</p>
 <div class="refsect3">
 <a name="ncm-vector-fast-set.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2381,7 +2405,7 @@ ncm_vector_fast_set (<em class="parameter"><code><a class="link" href="NcmVector
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-addto"></a><h3>ncm_vector_addto ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2394,11 +2418,11 @@ ncm_vector_addto (<em class="parameter"><code><a class="link" href="NcmVector.ht
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-addto.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2420,7 +2444,7 @@ ncm_vector_addto (<em class="parameter"><code><a class="link" href="NcmVector.ht
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-fast-addto"></a><h3>ncm_vector_fast_addto ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2433,11 +2457,11 @@ ncm_vector_fast_addto (<em class="parameter"><code><a class="link" href="NcmVect
  assuming stride == 1.</p>
 <div class="refsect3">
 <a name="ncm-vector-fast-addto.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2459,7 +2483,7 @@ ncm_vector_fast_addto (<em class="parameter"><code><a class="link" href="NcmVect
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-subfrom"></a><h3>ncm_vector_subfrom ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2472,11 +2496,11 @@ ncm_vector_subfrom (<em class="parameter"><code><a class="link" href="NcmVector.
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-subfrom.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2498,7 +2522,7 @@ ncm_vector_subfrom (<em class="parameter"><code><a class="link" href="NcmVector.
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-fast-subfrom"></a><h3>ncm_vector_fast_subfrom ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2511,11 +2535,11 @@ ncm_vector_fast_subfrom (<em class="parameter"><code><a class="link" href="NcmVe
  assuming stride == 1.</p>
 <div class="refsect3">
 <a name="ncm-vector-fast-subfrom.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2537,7 +2561,7 @@ ncm_vector_fast_subfrom (<em class="parameter"><code><a class="link" href="NcmVe
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-mulby"></a><h3>ncm_vector_mulby ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2550,11 +2574,11 @@ ncm_vector_mulby (<em class="parameter"><code><a class="link" href="NcmVector.ht
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-mulby.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2576,7 +2600,7 @@ ncm_vector_mulby (<em class="parameter"><code><a class="link" href="NcmVector.ht
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-fast-mulby"></a><h3>ncm_vector_fast_mulby ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2588,11 +2612,11 @@ ncm_vector_fast_mulby (<em class="parameter"><code><a class="link" href="NcmVect
  assuming stride == 1.</p>
 <div class="refsect3">
 <a name="ncm-vector-fast-mulby.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2614,7 +2638,7 @@ ncm_vector_fast_mulby (<em class="parameter"><code><a class="link" href="NcmVect
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-set-all"></a><h3>ncm_vector_set_all ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2625,11 +2649,11 @@ ncm_vector_set_all (<em class="parameter"><code><a class="link" href="NcmVector.
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-set-all.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2646,7 +2670,7 @@ ncm_vector_set_all (<em class="parameter"><code><a class="link" href="NcmVector.
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-set-data"></a><h3>ncm_vector_set_data ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2660,11 +2684,11 @@ ncm_vector_set_data (<em class="parameter"><code><a class="link" href="NcmVector
  must match the vector size.</p>
 <div class="refsect3">
 <a name="ncm-vector-set-data.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2686,7 +2710,7 @@ ncm_vector_set_data (<em class="parameter"><code><a class="link" href="NcmVector
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-set-array"></a><h3>ncm_vector_set_array ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2699,11 +2723,11 @@ ncm_vector_set_array (<em class="parameter"><code><a class="link" href="NcmVecto
  must match the vector size.</p>
 <div class="refsect3">
 <a name="ncm-vector-set-array.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2720,7 +2744,7 @@ ncm_vector_set_array (<em class="parameter"><code><a class="link" href="NcmVecto
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-scale"></a><h3>ncm_vector_scale ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2731,11 +2755,11 @@ ncm_vector_scale (<em class="parameter"><code><a class="link" href="NcmVector.ht
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-scale.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2752,7 +2776,7 @@ ncm_vector_scale (<em class="parameter"><code><a class="link" href="NcmVector.ht
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-add-constant"></a><h3>ncm_vector_add_constant ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2763,11 +2787,11 @@ ncm_vector_add_constant (<em class="parameter"><code><a class="link" href="NcmVe
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-add-constant.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2784,7 +2808,7 @@ ncm_vector_add_constant (<em class="parameter"><code><a class="link" href="NcmVe
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-mul"></a><h3>ncm_vector_mul ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2796,11 +2820,11 @@ ncm_vector_mul (<em class="parameter"><code><a class="link" href="NcmVector.html
 The two vectors must have the same length.</p>
 <div class="refsect3">
 <a name="ncm-vector-mul.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2817,7 +2841,7 @@ The two vectors must have the same length.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-div"></a><h3>ncm_vector_div ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2829,11 +2853,11 @@ ncm_vector_div (<em class="parameter"><code><a class="link" href="NcmVector.html
 The two vectors must have the same length.</p>
 <div class="refsect3">
 <a name="ncm-vector-div.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2850,7 +2874,7 @@ The two vectors must have the same length.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-add"></a><h3>ncm_vector_add ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2862,11 +2886,11 @@ ncm_vector_add (<em class="parameter"><code><a class="link" href="NcmVector.html
 The two vectors must have the same length.</p>
 <div class="refsect3">
 <a name="ncm-vector-add.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2883,7 +2907,7 @@ The two vectors must have the same length.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-sub"></a><h3>ncm_vector_sub ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2895,11 +2919,11 @@ ncm_vector_sub (<em class="parameter"><code><a class="link" href="NcmVector.html
 The two vectors must have the same length.</p>
 <div class="refsect3">
 <a name="ncm-vector-sub.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2916,7 +2940,7 @@ The two vectors must have the same length.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-set-zero"></a><h3>ncm_vector_set_zero ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2925,11 +2949,11 @@ ncm_vector_set_zero (<em class="parameter"><code><a class="link" href="NcmVector
  to zero.</p>
 <div class="refsect3">
 <a name="ncm-vector-set-zero.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -2939,7 +2963,7 @@ ncm_vector_set_zero (<em class="parameter"><code><a class="link" href="NcmVector
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-memcpy"></a><h3>ncm_vector_memcpy ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2951,11 +2975,11 @@ ncm_vector_memcpy (<em class="parameter"><code><a class="link" href="NcmVector.h
 The two vectors must have the same length.</p>
 <div class="refsect3">
 <a name="ncm-vector-memcpy.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -2972,7 +2996,7 @@ The two vectors must have the same length.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-memcpy2"></a><h3>ncm_vector_memcpy2 ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -2991,11 +3015,11 @@ to the vector <em class="parameter"><code>cv1</code></em>
 It is useful for vectors with different sizes.</p>
 <div class="refsect3">
 <a name="ncm-vector-memcpy2.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -3029,7 +3053,7 @@ It is useful for vectors with different sizes.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-get-array"></a><h3>ncm_vector_get_array ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
@@ -3039,11 +3063,11 @@ ncm_vector_get_array (<em class="parameter"><code><a class="link" href="NcmVecto
  was created with <a class="link" href="NcmVector.html#ncm-vector-new-array" title="ncm_vector_new_array ()"><code class="function">ncm_vector_new_array()</code></a>.</p>
 <div class="refsect3">
 <a name="ncm-vector-get-array.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3058,7 +3082,7 @@ ncm_vector_get_array (<em class="parameter"><code><a class="link" href="NcmVecto
 <p><span class="annotation">[<acronym title="The caller owns the data container, but not the data inside it."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-dup-array"></a><h3>ncm_vector_dup_array ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Arrays.html#GArray"><span class="returnvalue">GArray</span></a> *
@@ -3067,11 +3091,11 @@ ncm_vector_dup_array (<em class="parameter"><code><a class="link" href="NcmVecto
  into it. The array must not be freed.</p>
 <div class="refsect3">
 <a name="ncm-vector-dup-array.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3086,7 +3110,7 @@ ncm_vector_dup_array (<em class="parameter"><code><a class="link" href="NcmVecto
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-data"></a><h3>ncm_vector_data ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a> *
@@ -3095,11 +3119,11 @@ ncm_vector_data (<em class="parameter"><code><a class="link" href="NcmVector.htm
  data.</p>
 <div class="refsect3">
 <a name="ncm-vector-data.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3115,7 +3139,7 @@ data. </p>
 <p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-const-data"></a><h3>ncm_vector_const_data ()</h3>
 <pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a> *
@@ -3124,11 +3148,11 @@ ncm_vector_const_data (<em class="parameter"><code>const <a class="link" href="N
  data.</p>
 <div class="refsect3">
 <a name="ncm-vector-const-data.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3144,7 +3168,7 @@ data. </p>
 <p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-replace-data"></a><h3>ncm_vector_replace_data ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -3161,11 +3185,11 @@ and that the original data was statically allocated.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-vector-replace-data.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -3182,7 +3206,7 @@ and that the original data was statically allocated.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-gsl"></a><h3>ncm_vector_gsl ()</h3>
 <pre class="programlisting"><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector" title="gsl_vector"><span class="returnvalue">gsl_vector</span></a> *
@@ -3192,11 +3216,11 @@ ncm_vector_gsl (<em class="parameter"><code><a class="link" href="NcmVector.html
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-vector-gsl.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3210,7 +3234,7 @@ ncm_vector_gsl (<em class="parameter"><code><a class="link" href="NcmVector.html
 <p> a pointer to a <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector" title="gsl_vector"><span class="type">gsl_vector</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-const-gsl"></a><h3>ncm_vector_const_gsl ()</h3>
 <pre class="programlisting">const <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector" title="gsl_vector"><span class="returnvalue">gsl_vector</span></a> *
@@ -3220,11 +3244,11 @@ ncm_vector_const_gsl (<em class="parameter"><code>const <a class="link" href="Nc
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-vector-const-gsl.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3238,7 +3262,7 @@ ncm_vector_const_gsl (<em class="parameter"><code>const <a class="link" href="Nc
 <p> a constant pointer to a <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-vector" title="gsl_vector"><span class="type">gsl_vector</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-dot"></a><h3>ncm_vector_dot ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -3249,11 +3273,11 @@ ncm_vector_dot (<em class="parameter"><code>const <a class="link" href="NcmVecto
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-dot.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -3274,7 +3298,7 @@ ncm_vector_dot (<em class="parameter"><code>const <a class="link" href="NcmVecto
 <p> $\vec{v}_1 \cdot \vec{v}_2$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-len"></a><h3>ncm_vector_len ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -3283,11 +3307,11 @@ ncm_vector_len (<em class="parameter"><code>const <a class="link" href="NcmVecto
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-len.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3302,7 +3326,7 @@ ncm_vector_len (<em class="parameter"><code>const <a class="link" href="NcmVecto
 .</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-stride"></a><h3>ncm_vector_stride ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -3311,11 +3335,11 @@ ncm_vector_stride (<em class="parameter"><code>const <a class="link" href="NcmVe
 .</p>
 <div class="refsect3">
 <a name="ncm-vector-stride.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3330,7 +3354,7 @@ ncm_vector_stride (<em class="parameter"><code>const <a class="link" href="NcmVe
 .</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-get-max"></a><h3>ncm_vector_get_max ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -3338,11 +3362,11 @@ ncm_vector_get_max (<em class="parameter"><code>const <a class="link" href="NcmV
 <p>Gets the maximum value of the vector components.</p>
 <div class="refsect3">
 <a name="ncm-vector-get-max.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3356,7 +3380,7 @@ ncm_vector_get_max (<em class="parameter"><code>const <a class="link" href="NcmV
 <p> the maximum value of the vector components.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-get-min"></a><h3>ncm_vector_get_min ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -3364,11 +3388,11 @@ ncm_vector_get_min (<em class="parameter"><code>const <a class="link" href="NcmV
 <p>Gets the minimum value of the vector components.</p>
 <div class="refsect3">
 <a name="ncm-vector-get-min.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3382,7 +3406,7 @@ ncm_vector_get_min (<em class="parameter"><code>const <a class="link" href="NcmV
 <p> the minimum value of the vector components.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-get-max-index"></a><h3>ncm_vector_get_max_index ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>
@@ -3390,11 +3414,11 @@ ncm_vector_get_max_index (<em class="parameter"><code>const <a class="link" href
 <p>Gets the index of the maximal vector component.</p>
 <div class="refsect3">
 <a name="ncm-vector-get-max-index.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3408,7 +3432,7 @@ ncm_vector_get_max_index (<em class="parameter"><code>const <a class="link" href
 <p> the index of the maximal component.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-get-min-index"></a><h3>ncm_vector_get_min_index ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>
@@ -3416,11 +3440,11 @@ ncm_vector_get_min_index (<em class="parameter"><code>const <a class="link" href
 <p>Gets the index of the minimal vector component.</p>
 <div class="refsect3">
 <a name="ncm-vector-get-min-index.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3434,7 +3458,7 @@ ncm_vector_get_min_index (<em class="parameter"><code>const <a class="link" href
 <p> the index of the minimal component.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-get-minmax"></a><h3>ncm_vector_get_minmax ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -3444,11 +3468,11 @@ ncm_vector_get_minmax (<em class="parameter"><code>const <a class="link" href="N
 <p>Gets the minimum/maximum value of the vector components.</p>
 <div class="refsect3">
 <a name="ncm-vector-get-minmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -3472,7 +3496,7 @@ ncm_vector_get_minmax (<em class="parameter"><code>const <a class="link" href="N
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-is-finite"></a><h3>ncm_vector_is_finite ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
@@ -3481,11 +3505,11 @@ ncm_vector_is_finite (<em class="parameter"><code>const <a class="link" href="Nc
 Otherwise returns TRUE.</p>
 <div class="refsect3">
 <a name="ncm-vector-is-finite.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3500,7 +3524,7 @@ Otherwise returns TRUE.</p>
 are finite.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-lt"></a><h3>ncm_vector_lt ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
@@ -3514,11 +3538,11 @@ of <em class="parameter"><code>cv1</code></em>
 's.</p>
 <div class="refsect3">
 <a name="ncm-vector-lt.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -3541,7 +3565,7 @@ of <em class="parameter"><code>cv1</code></em>
 .</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-lteq"></a><h3>ncm_vector_lteq ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
@@ -3555,11 +3579,11 @@ of <em class="parameter"><code>cv1</code></em>
 's.</p>
 <div class="refsect3">
 <a name="ncm-vector-lteq.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -3582,7 +3606,7 @@ of <em class="parameter"><code>cv1</code></em>
 .</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-between"></a><h3>ncm_vector_between ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
@@ -3605,11 +3629,11 @@ If type == 1, compare using <em class="parameter"><code>cv_lb</code></em>
 ;</p>
 <div class="refsect3">
 <a name="ncm-vector-between.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -3643,7 +3667,7 @@ and <em class="parameter"><code>cv_ub</code></em>
 .</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-get-absminmax"></a><h3>ncm_vector_get_absminmax ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -3654,11 +3678,11 @@ ncm_vector_get_absminmax (<em class="parameter"><code>const <a class="link" href
  components.</p>
 <div class="refsect3">
 <a name="ncm-vector-get-absminmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -3682,7 +3706,7 @@ ncm_vector_get_absminmax (<em class="parameter"><code>const <a class="link" href
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-find-closest-index"></a><h3>ncm_vector_find_closest_index ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -3694,11 +3718,11 @@ finds the largest index $i$ such the $x_i &lt; x$. It also assumes that
 $x_0 &lt; x &lt; x_{\mathrm{len} - 1}$.</p>
 <div class="refsect3">
 <a name="ncm-vector-find-closest-index.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -3716,7 +3740,7 @@ $x_0 &lt; x &lt; x_{\mathrm{len} - 1}$.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-dup"></a><h3>ncm_vector_dup ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
@@ -3725,11 +3749,11 @@ ncm_vector_dup (<em class="parameter"><code>const <a class="link" href="NcmVecto
  into the new <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
 <div class="refsect3">
 <a name="ncm-vector-dup.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3744,7 +3768,7 @@ ncm_vector_dup (<em class="parameter"><code>const <a class="link" href="NcmVecto
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-substitute"></a><h3>ncm_vector_substitute ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -3760,11 +3784,11 @@ If <em class="parameter"><code>check_size</code></em>
 same size.</p>
 <div class="refsect3">
 <a name="ncm-vector-substitute.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -3786,7 +3810,7 @@ same size.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-free"></a><h3>ncm_vector_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -3797,11 +3821,11 @@ all memory allocated by <em class="parameter"><code>cv</code></em>
  is released.</p>
 <div class="refsect3">
 <a name="ncm-vector-free.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3811,7 +3835,7 @@ all memory allocated by <em class="parameter"><code>cv</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-clear"></a><h3>ncm_vector_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -3824,11 +3848,11 @@ If the reference count drops to 0, all memory allocated by <em class="parameter"
  is set to NULL.</p>
 <div class="refsect3">
 <a name="ncm-vector-clear.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3838,7 +3862,7 @@ If the reference count drops to 0, all memory allocated by <em class="parameter"
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-vector-const-free"></a><h3>ncm_vector_const_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -3849,11 +3873,11 @@ all memory allocated by <em class="parameter"><code>cv</code></em>
  is released.</p>
 <div class="refsect3">
 <a name="ncm-vector-const-free.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>cv</p></td>
@@ -3867,15 +3891,21 @@ all memory allocated by <em class="parameter"><code>cv</code></em>
 <div class="refsect1">
 <a name="NcmVector.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
+<a name="NCM-TYPE-VECTOR:CAPS"></a><h3>NCM_TYPE_VECTOR</h3>
+<pre class="programlisting">#define NCM_TYPE_VECTOR (ncm_vector_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="NcmVectorInternal"></a><h3>enum NcmVectorInternal</h3>
 <p>This enumerator is only used internally. Only by developers.</p>
 <div class="refsect3">
 <a name="NcmVectorInternal.members"></a><h4>Members</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="300px" class="enum_members_name">
-<col class="enum_members_description">
-<col width="200px" class="enum_members_annotations">
+<col class="enum_members_name" width="300px"/>
+<col class="enum_members_description"/>
+<col class="enum_members_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -3917,6 +3947,11 @@ all memory allocated by <em class="parameter"><code>cv</code></em>
 </table></div>
 </div>
 </div>
+<hr/>
+<div class="refsect2">
+<a name="NcmVector-struct"></a><h3>struct NcmVector</h3>
+<pre class="programlisting">struct NcmVector;</pre>
+</div>
 </div>
 <div class="refsect1">
 <a name="NcmVector.property-details"></a><h2>Property Details</h2>
@@ -3926,12 +3961,12 @@ all memory allocated by <em class="parameter"><code>cv</code></em>
 <p>GVariant representation of the vector used to serialize the object.</p>
 <p>Owner: NcmVector</p>
 <p>Flags: Read / Write</p>
-<p>Allowed values: GVariant&lt;a*&gt;</p>
+<p>Allowed values: GVariant&lt;ad&gt;</p>
 <p>Default value: NULL</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

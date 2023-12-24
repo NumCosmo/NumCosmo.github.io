@@ -1,28 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NcmIntegral1d: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="NumCosmo Reference Manual">
-<link rel="up" href="ch02.html#id-1.3.2" title="Miscellaneous Objects">
-<link rel="prev" href="NcmObjArray.html" title="NcmObjArray">
-<link rel="next" href="NcmIntegral1dPtr.html" title="NcmIntegral1dPtr">
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
-<link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#NcmIntegral1d.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#NcmIntegral1d.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#NcmIntegral1d.properties" class="shortcut">Properties</a></span>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch02.html#id-1.3.2" rel="up" title="Miscellaneous Objects"/>
+<link href="NcmObjArray.html" rel="prev" title="NcmObjArray"/>
+<link href="NcmIntegral1dPtr.html" rel="next" title="NcmIntegral1dPtr"/>
+<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmIntegral1d.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmIntegral1d.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmIntegral1d.properties">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch02.html#id-1.3.2"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="NcmObjArray.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="NcmIntegral1dPtr.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch02.html#id-1.3.2"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcmObjArray.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcmIntegral1dPtr.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcmIntegral1d"></a><div class="titlepage"></div>
@@ -31,7 +45,7 @@
 <h2><span class="refentrytitle"><a name="NcmIntegral1d.top_of_page"></a>NcmIntegral1d</span></h2>
 <p>NcmIntegral1d — One dimensional integration object.</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td align="right" class="gallery_image" valign="top"></td>
 </tr></table></div>
 <div class="refsect1">
 <a name="NcmIntegral1d.stability-level"></a><h2>Stability Level</h2>
@@ -45,10 +59,10 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmIntegral1d.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="functions_proto_type">
-<col class="functions_proto_name">
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -232,11 +246,11 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmIntegral1d.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
+<div class="informaltable"><table border="0" class="informaltable">
 <colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -264,12 +278,20 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmIntegral1d.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="other_proto_type">
-<col class="other_proto_name">
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
 </colgroup>
 <tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmIntegral1d.html#NCM-TYPE-INTEGRAL1D:CAPS" title="NCM_TYPE_INTEGRAL1D">NCM_TYPE_INTEGRAL1D</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmIntegral1d.html#NcmIntegral1dClass" title="struct NcmIntegral1dClass">NcmIntegral1dClass</a></td>
+</tr>
 <tr>
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="NcmIntegral1d.html#NCM-INTEGRAL1D-DEFAULT-PARTITION:CAPS" title="NCM_INTEGRAL1D_DEFAULT_PARTITION">NCM_INTEGRAL1D_DEFAULT_PARTITION</a></td>
@@ -285,6 +307,10 @@ justifications.
 <tr>
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="NcmIntegral1d.html#NCM-INTEGRAL1D-DEFAULT-ABSTOL:CAPS" title="NCM_INTEGRAL1D_DEFAULT_ABSTOL">NCM_INTEGRAL1D_DEFAULT_ABSTOL</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcmIntegral1d.html#NcmIntegral1d-struct" title="NcmIntegral1d">NcmIntegral1d</a></td>
 </tr>
 </tbody>
 </table></div>
@@ -314,7 +340,7 @@ justifications.
                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> w</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-ref"></a><h3>ncm_integral1d_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="returnvalue">NcmIntegral1d</span></a> *
@@ -323,11 +349,11 @@ ncm_integral1d_ref (<em class="parameter"><code><a class="link" href="NcmIntegra
  by one.</p>
 <div class="refsect3">
 <a name="ncm-integral1d-ref.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>int1d</p></td>
@@ -343,7 +369,7 @@ ncm_integral1d_ref (<em class="parameter"><code><a class="link" href="NcmIntegra
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-free"></a><h3>ncm_integral1d_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -352,11 +378,11 @@ ncm_integral1d_free (<em class="parameter"><code><a class="link" href="NcmIntegr
  by one.</p>
 <div class="refsect3">
 <a name="ncm-integral1d-free.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>int1d</p></td>
@@ -366,7 +392,7 @@ ncm_integral1d_free (<em class="parameter"><code><a class="link" href="NcmIntegr
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-clear"></a><h3>ncm_integral1d_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -378,11 +404,11 @@ count of *<em class="parameter"><code>int1d</code></em>
  to NULL.</p>
 <div class="refsect3">
 <a name="ncm-integral1d-clear.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>int1d</p></td>
@@ -392,7 +418,7 @@ count of *<em class="parameter"><code>int1d</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-set-partition"></a><h3>ncm_integral1d_set_partition ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -402,11 +428,11 @@ ncm_integral1d_set_partition (<em class="parameter"><code><a class="link" href="
 .</p>
 <div class="refsect3">
 <a name="ncm-integral1d-set-partition.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -423,7 +449,7 @@ ncm_integral1d_set_partition (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-set-rule"></a><h3>ncm_integral1d_set_rule ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -433,11 +459,11 @@ ncm_integral1d_set_rule (<em class="parameter"><code><a class="link" href="NcmIn
  to use.</p>
 <div class="refsect3">
 <a name="ncm-integral1d-set-rule.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -454,7 +480,7 @@ ncm_integral1d_set_rule (<em class="parameter"><code><a class="link" href="NcmIn
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-set-reltol"></a><h3>ncm_integral1d_set_reltol ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -464,11 +490,11 @@ ncm_integral1d_set_reltol (<em class="parameter"><code><a class="link" href="Ncm
  to use.</p>
 <div class="refsect3">
 <a name="ncm-integral1d-set-reltol.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -485,7 +511,7 @@ ncm_integral1d_set_reltol (<em class="parameter"><code><a class="link" href="Ncm
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-set-abstol"></a><h3>ncm_integral1d_set_abstol ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -495,11 +521,11 @@ ncm_integral1d_set_abstol (<em class="parameter"><code><a class="link" href="Ncm
  to use.</p>
 <div class="refsect3">
 <a name="ncm-integral1d-set-abstol.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -516,18 +542,18 @@ ncm_integral1d_set_abstol (<em class="parameter"><code><a class="link" href="Ncm
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-get-partition"></a><h3>ncm_integral1d_get_partition ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 ncm_integral1d_get_partition (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-integral1d-get-partition.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>int1d</p></td>
@@ -541,18 +567,18 @@ ncm_integral1d_get_partition (<em class="parameter"><code><a class="link" href="
 <p> the maximum number of subdivisions used.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-get-rule"></a><h3>ncm_integral1d_get_rule ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 ncm_integral1d_get_rule (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-integral1d-get-rule.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>int1d</p></td>
@@ -566,18 +592,18 @@ ncm_integral1d_get_rule (<em class="parameter"><code><a class="link" href="NcmIn
 <p> the Gauss-Kronrod rule used.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-get-reltol"></a><h3>ncm_integral1d_get_reltol ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_integral1d_get_reltol (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-integral1d-get-reltol.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>int1d</p></td>
@@ -591,18 +617,18 @@ ncm_integral1d_get_reltol (<em class="parameter"><code><a class="link" href="Ncm
 <p> the relative tolerance used.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-get-abstol"></a><h3>ncm_integral1d_get_abstol ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_integral1d_get_abstol (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-integral1d-get-abstol.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>int1d</p></td>
@@ -616,15 +642,47 @@ ncm_integral1d_get_abstol (<em class="parameter"><code><a class="link" href="Ncm
 <p> the absolute tolerance used.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-integrand"></a><h3>ncm_integral1d_integrand ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_integral1d_integrand (<em class="parameter"><code><a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a> *int1d</code></em>,
                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> w</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-integral1d-integrand.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>int1d</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmIntegral1d.html" title="NcmIntegral1d"><span class="type">NcmIntegral1d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>integration variable</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>w</p></td>
+<td class="parameter_description"><p>integration weight</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
 </div>
-<hr>
+<div class="refsect3">
+<a name="ncm-integral1d-integrand.returns"></a><h4>Returns</h4>
+<p> the value of the integrand at <em class="parameter"><code>x</code></em>
+.</p>
+</div>
+</div>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-eval"></a><h3>ncm_integral1d_eval ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -635,11 +693,11 @@ ncm_integral1d_eval (<em class="parameter"><code><a class="link" href="NcmIntegr
 <p>Evaluated the integral $I_F(x_i, x_f) = \int_{x_i}^{x_f}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
 <a name="ncm-integral1d-eval.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -670,7 +728,7 @@ ncm_integral1d_eval (<em class="parameter"><code><a class="link" href="NcmIntegr
 <p> the value of the integral $I_F(x_i, x_f)$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-eval-gauss-hermite-p"></a><h3>ncm_integral1d_eval_gauss_hermite_p ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -679,11 +737,11 @@ ncm_integral1d_eval_gauss_hermite_p (<em class="parameter"><code><a class="link"
 <p>Evaluated the integral $H^p_F = \int_{0}^{\infty}e^{-x^2/2}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
 <a name="ncm-integral1d-eval-gauss-hermite-p.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -704,7 +762,7 @@ ncm_integral1d_eval_gauss_hermite_p (<em class="parameter"><code><a class="link"
 <p> the value of the integral $H^p_F$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-eval-gauss-hermite"></a><h3>ncm_integral1d_eval_gauss_hermite ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -713,11 +771,11 @@ ncm_integral1d_eval_gauss_hermite (<em class="parameter"><code><a class="link" h
 <p>Evaluated the integral $H_F = \int_{-\infty}^{\infty}e^{-x^2/2}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
 <a name="ncm-integral1d-eval-gauss-hermite.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -738,7 +796,7 @@ ncm_integral1d_eval_gauss_hermite (<em class="parameter"><code><a class="link" h
 <p> the value of the integral $H_F$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-eval-gauss-hermite-r-p"></a><h3>ncm_integral1d_eval_gauss_hermite_r_p ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -748,11 +806,11 @@ ncm_integral1d_eval_gauss_hermite_r_p (<em class="parameter"><code><a class="lin
 <p>Evaluated the integral $H^p_F = \int_{0}^{\infty}e^{-x^2r^2/2}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
 <a name="ncm-integral1d-eval-gauss-hermite-r-p.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -778,7 +836,7 @@ ncm_integral1d_eval_gauss_hermite_r_p (<em class="parameter"><code><a class="lin
 <p> the value of the integral $H^p_F$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-eval-gauss-hermite-mur"></a><h3>ncm_integral1d_eval_gauss_hermite_mur ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -789,11 +847,11 @@ ncm_integral1d_eval_gauss_hermite_mur (<em class="parameter"><code><a class="lin
 <p>Evaluated the integral $H_F = \int_{-\infty}^{\infty}e^{-(x-\mu)^2r^2/2}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
 <a name="ncm-integral1d-eval-gauss-hermite-mur.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -824,7 +882,7 @@ ncm_integral1d_eval_gauss_hermite_mur (<em class="parameter"><code><a class="lin
 <p> the value of the integral $H_F$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-eval-gauss-hermite1-p"></a><h3>ncm_integral1d_eval_gauss_hermite1_p ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -833,11 +891,11 @@ ncm_integral1d_eval_gauss_hermite1_p (<em class="parameter"><code><a class="link
 <p>Evaluated the integral $H^p_F = \int_{0}^{\infty}xe^{-x^2/2}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
 <a name="ncm-integral1d-eval-gauss-hermite1-p.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -858,7 +916,7 @@ ncm_integral1d_eval_gauss_hermite1_p (<em class="parameter"><code><a class="link
 <p> the value of the integral $H^p_F$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-eval-gauss-hermite1-r-p"></a><h3>ncm_integral1d_eval_gauss_hermite1_r_p ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -869,11 +927,11 @@ ncm_integral1d_eval_gauss_hermite1_r_p
 <p>Evaluated the integral $H^p_F = \int_{0}^{\infty}xe^{-x^2r^2/2}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
 <a name="ncm-integral1d-eval-gauss-hermite1-r-p.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -899,7 +957,7 @@ ncm_integral1d_eval_gauss_hermite1_r_p
 <p> the value of the integral $H^p_F$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-eval-gauss-laguerre"></a><h3>ncm_integral1d_eval_gauss_laguerre ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -908,11 +966,11 @@ ncm_integral1d_eval_gauss_laguerre (<em class="parameter"><code><a class="link" 
 <p>Evaluated the integral $L_F = \int_{0}^{\infty}e^{-x}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
 <a name="ncm-integral1d-eval-gauss-laguerre.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -933,7 +991,7 @@ ncm_integral1d_eval_gauss_laguerre (<em class="parameter"><code><a class="link" 
 <p> the value of the integral $L_F$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-integral1d-eval-gauss-laguerre-r"></a><h3>ncm_integral1d_eval_gauss_laguerre_r ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -943,11 +1001,11 @@ ncm_integral1d_eval_gauss_laguerre_r (<em class="parameter"><code><a class="link
 <p>Evaluated the integral $L_F = \int_{0}^{\infty}e^{-xr}F(x)\mathrm{d}x$.</p>
 <div class="refsect3">
 <a name="ncm-integral1d-eval-gauss-laguerre-r.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -977,27 +1035,45 @@ ncm_integral1d_eval_gauss_laguerre_r (<em class="parameter"><code><a class="link
 <div class="refsect1">
 <a name="NcmIntegral1d.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
+<a name="NCM-TYPE-INTEGRAL1D:CAPS"></a><h3>NCM_TYPE_INTEGRAL1D</h3>
+<pre class="programlisting">#define NCM_TYPE_INTEGRAL1D (ncm_integral1d_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcmIntegral1dClass"></a><h3>struct NcmIntegral1dClass</h3>
+<pre class="programlisting">struct NcmIntegral1dClass {
+};
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="NCM-INTEGRAL1D-DEFAULT-PARTITION:CAPS"></a><h3>NCM_INTEGRAL1D_DEFAULT_PARTITION</h3>
 <pre class="programlisting">#define NCM_INTEGRAL1D_DEFAULT_PARTITION 100000
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-INTEGRAL1D-DEFAULT-ALG:CAPS"></a><h3>NCM_INTEGRAL1D_DEFAULT_ALG</h3>
 <pre class="programlisting">#define NCM_INTEGRAL1D_DEFAULT_ALG 6
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-INTEGRAL1D-DEFAULT-RELTOL:CAPS"></a><h3>NCM_INTEGRAL1D_DEFAULT_RELTOL</h3>
 <pre class="programlisting">#define NCM_INTEGRAL1D_DEFAULT_RELTOL 1e-13
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-INTEGRAL1D-DEFAULT-ABSTOL:CAPS"></a><h3>NCM_INTEGRAL1D_DEFAULT_ABSTOL</h3>
 <pre class="programlisting">#define NCM_INTEGRAL1D_DEFAULT_ABSTOL 0.0
 </pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcmIntegral1d-struct"></a><h3>NcmIntegral1d</h3>
+<pre class="programlisting">typedef struct _NcmIntegral1d NcmIntegral1d;</pre>
 </div>
 </div>
 <div class="refsect1">
@@ -1011,7 +1087,7 @@ ncm_integral1d_eval_gauss_laguerre_r (<em class="parameter"><code><a class="link
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmIntegral1d--partition"></a><h3>The <code class="literal">“partition”</code> property</h3>
 <pre class="programlisting">  “partition”                <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
@@ -1021,7 +1097,7 @@ ncm_integral1d_eval_gauss_laguerre_r (<em class="parameter"><code><a class="link
 <p>Allowed values: &gt;= 10</p>
 <p>Default value: 100000</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmIntegral1d--reltol"></a><h3>The <code class="literal">“reltol”</code> property</h3>
 <pre class="programlisting">  “reltol”                   <span class="type">double</span></pre>
@@ -1031,7 +1107,7 @@ ncm_integral1d_eval_gauss_laguerre_r (<em class="parameter"><code><a class="link
 <p>Allowed values: [0,1]</p>
 <p>Default value: 1e-13</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmIntegral1d--rule"></a><h3>The <code class="literal">“rule”</code> property</h3>
 <pre class="programlisting">  “rule”                     <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
@@ -1044,6 +1120,6 @@ ncm_integral1d_eval_gauss_laguerre_r (<em class="parameter"><code><a class="link
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

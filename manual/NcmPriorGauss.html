@@ -1,28 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NcmPriorGauss: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="NumCosmo Reference Manual">
-<link rel="up" href="ch02s13.html" title="Statistical Analysis">
-<link rel="prev" href="NcmPrior.html" title="NcmPrior">
-<link rel="next" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam">
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
-<link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#NcmPriorGauss.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#NcmPriorGauss.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#NcmPriorGauss.properties" class="shortcut">Properties</a></span>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch02s12.html" rel="up" title="Statistical Analysis"/>
+<link href="NcmPrior.html" rel="prev" title="NcmPrior"/>
+<link href="NcmPriorGaussParam.html" rel="next" title="NcmPriorGaussParam"/>
+<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmPriorGauss.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmPriorGauss.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmPriorGauss.properties">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch02s13.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="NcmPrior.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="NcmPriorGaussParam.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch02s12.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcmPrior.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcmPriorGaussParam.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcmPriorGauss"></a><div class="titlepage"></div>
@@ -31,14 +45,14 @@
 <h2><span class="refentrytitle"><a name="NcmPriorGauss.top_of_page"></a>NcmPriorGauss</span></h2>
 <p>NcmPriorGauss — A gaussian prior for NcmLikelihood</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td align="right" class="gallery_image" valign="top"></td>
 </tr></table></div>
 <div class="refsect1">
 <a name="NcmPriorGauss.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="functions_proto_type">
-<col class="functions_proto_name">
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -73,16 +87,64 @@
 <a class="link" href="NcmPriorGauss.html#ncm-prior-gauss-clear" title="ncm_prior_gauss_clear ()">ncm_prior_gauss_clear</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPriorGauss.html#ncm-prior-gauss-set-mean" title="ncm_prior_gauss_set_mean ()">ncm_prior_gauss_set_mean</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPriorGauss.html#ncm-prior-gauss-set-sigma" title="ncm_prior_gauss_set_sigma ()">ncm_prior_gauss_set_sigma</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPriorGauss.html#ncm-prior-gauss-set-var" title="ncm_prior_gauss_set_var ()">ncm_prior_gauss_set_var</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPriorGauss.html#ncm-prior-gauss-get-mean" title="ncm_prior_gauss_get_mean ()">ncm_prior_gauss_get_mean</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPriorGauss.html#ncm-prior-gauss-get-sigma" title="ncm_prior_gauss_get_sigma ()">ncm_prior_gauss_get_sigma</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPriorGauss.html#ncm-prior-gauss-get-var" title="ncm_prior_gauss_get_var ()">ncm_prior_gauss_get_var</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="NcmPriorGauss.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
+<div class="informaltable"><table border="0" class="informaltable">
 <colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -104,6 +166,29 @@
 </table></div>
 </div>
 <div class="refsect1">
+<a name="NcmPriorGauss.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmPriorGauss.html#NCM-TYPE-PRIOR-GAUSS:CAPS" title="NCM_TYPE_PRIOR_GAUSS">NCM_TYPE_PRIOR_GAUSS</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmPriorGauss.html#NcmPriorGaussClass" title="struct NcmPriorGaussClass">NcmPriorGaussClass</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcmPriorGauss.html#NcmPriorGauss-struct" title="NcmPriorGauss">NcmPriorGauss</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
 <a name="NcmPriorGauss.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmMSetFunc.html" title="NcmMSetFunc">NcmMSetFunc</a>
@@ -115,7 +200,19 @@
 </div>
 <div class="refsect1">
 <a name="NcmPriorGauss.description"></a><h2>Description</h2>
-<p>FIXME</p>
+<p>This object is a subclass of <a class="link" href="NcmPrior.html" title="NcmPrior"><span class="type">NcmPrior</span></a>, serving as a base class for Gaussian priors
+used by NcmLikelihood. These objects describe Gaussian prior distributions
+applicable to parameters or any derived quantity.</p>
+<p>The Gaussian prior is defined as:
+$$
+-2\ln P(x) = \frac{\left(x - \mu\right)^2}{\sigma},
+$$
+where $\mu$ is the mean and $\sigma$ is the standard deviation. This Gaussian prior
+places higher probability density around the mean and decreases exponentially as the
+parameter deviates from the mean.</p>
+<p>The prior is not normalized. It is particularly useful for defining a Gaussian prior
+when the analysis benefits from a smooth and symmetric distribution around the mean.
+Additionally, it is compatible with least-squares based analysis.</p>
 </div>
 <div class="refsect1">
 <a name="NcmPriorGauss.functions_details"></a><h2>Functions</h2>
@@ -125,7 +222,7 @@
 <span class="c_punctuation">(</span>*NcmPriorGaussMean<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcmPriorGauss.html" title="NcmPriorGauss"><span class="type">NcmPriorGauss</span></a> *pg</code></em>,
                       <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-prior-gauss-ref"></a><h3>ncm_prior_gauss_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcmPriorGauss.html" title="NcmPriorGauss"><span class="returnvalue">NcmPriorGauss</span></a> *
@@ -134,11 +231,11 @@ ncm_prior_gauss_ref (<em class="parameter"><code><a class="link" href="NcmPriorG
  atomically.</p>
 <div class="refsect3">
 <a name="ncm-prior-gauss-ref.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pg</p></td>
@@ -154,7 +251,7 @@ ncm_prior_gauss_ref (<em class="parameter"><code><a class="link" href="NcmPriorG
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-prior-gauss-free"></a><h3>ncm_prior_gauss_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -163,11 +260,11 @@ ncm_prior_gauss_free (<em class="parameter"><code><a class="link" href="NcmPrior
  atomically.</p>
 <div class="refsect3">
 <a name="ncm-prior-gauss-free.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pg</p></td>
@@ -177,7 +274,7 @@ ncm_prior_gauss_free (<em class="parameter"><code><a class="link" href="NcmPrior
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-prior-gauss-clear"></a><h3>ncm_prior_gauss_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -187,11 +284,11 @@ ncm_prior_gauss_clear (<em class="parameter"><code><a class="link" href="NcmPrio
  to NULL.</p>
 <div class="refsect3">
 <a name="ncm-prior-gauss-clear.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pg</p></td>
@@ -200,6 +297,197 @@ ncm_prior_gauss_clear (<em class="parameter"><code><a class="link" href="NcmPrio
 </tr></tbody>
 </table></div>
 </div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-prior-gauss-set-mean"></a><h3>ncm_prior_gauss_set_mean ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_prior_gauss_set_mean (<em class="parameter"><code><a class="link" href="NcmPriorGauss.html" title="NcmPriorGauss"><span class="type">NcmPriorGauss</span></a> *pg</code></em>,
+                          <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mean</code></em>);</pre>
+<p>Sets the mean of <em class="parameter"><code>pg</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-prior-gauss-set-mean.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>pg</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPriorGauss.html" title="NcmPriorGauss"><span class="type">NcmPriorGauss</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mean</p></td>
+<td class="parameter_description"><p>mean</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-prior-gauss-set-sigma"></a><h3>ncm_prior_gauss_set_sigma ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_prior_gauss_set_sigma (<em class="parameter"><code><a class="link" href="NcmPriorGauss.html" title="NcmPriorGauss"><span class="type">NcmPriorGauss</span></a> *pg</code></em>,
+                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma</code></em>);</pre>
+<p>Sets the standard deviation of <em class="parameter"><code>pg</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-prior-gauss-set-sigma.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>pg</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPriorGauss.html" title="NcmPriorGauss"><span class="type">NcmPriorGauss</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sigma</p></td>
+<td class="parameter_description"><p>standard deviation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-prior-gauss-set-var"></a><h3>ncm_prior_gauss_set_var ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_prior_gauss_set_var (<em class="parameter"><code><a class="link" href="NcmPriorGauss.html" title="NcmPriorGauss"><span class="type">NcmPriorGauss</span></a> *pg</code></em>,
+                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> var</code></em>);</pre>
+<p>Sets the variable of <em class="parameter"><code>pg</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-prior-gauss-set-var.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>pg</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPriorGauss.html" title="NcmPriorGauss"><span class="type">NcmPriorGauss</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>var</p></td>
+<td class="parameter_description"><p>variable</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-prior-gauss-get-mean"></a><h3>ncm_prior_gauss_get_mean ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_prior_gauss_get_mean (<em class="parameter"><code><a class="link" href="NcmPriorGauss.html" title="NcmPriorGauss"><span class="type">NcmPriorGauss</span></a> *pg</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-prior-gauss-get-mean.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pg</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPriorGauss.html" title="NcmPriorGauss"><span class="type">NcmPriorGauss</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-prior-gauss-get-mean.returns"></a><h4>Returns</h4>
+<p> the mean of <em class="parameter"><code>pg</code></em>
+.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-prior-gauss-get-sigma"></a><h3>ncm_prior_gauss_get_sigma ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_prior_gauss_get_sigma (<em class="parameter"><code><a class="link" href="NcmPriorGauss.html" title="NcmPriorGauss"><span class="type">NcmPriorGauss</span></a> *pg</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-prior-gauss-get-sigma.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pg</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPriorGauss.html" title="NcmPriorGauss"><span class="type">NcmPriorGauss</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-prior-gauss-get-sigma.returns"></a><h4>Returns</h4>
+<p> the standard deviation of <em class="parameter"><code>pg</code></em>
+.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-prior-gauss-get-var"></a><h3>ncm_prior_gauss_get_var ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_prior_gauss_get_var (<em class="parameter"><code><a class="link" href="NcmPriorGauss.html" title="NcmPriorGauss"><span class="type">NcmPriorGauss</span></a> *pg</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-prior-gauss-get-var.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pg</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPriorGauss.html" title="NcmPriorGauss"><span class="type">NcmPriorGauss</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-prior-gauss-get-var.returns"></a><h4>Returns</h4>
+<p> the variable of <em class="parameter"><code>pg</code></em>
+.</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmPriorGauss.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NCM-TYPE-PRIOR-GAUSS:CAPS"></a><h3>NCM_TYPE_PRIOR_GAUSS</h3>
+<pre class="programlisting">#define NCM_TYPE_PRIOR_GAUSS (ncm_prior_gauss_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcmPriorGaussClass"></a><h3>struct NcmPriorGaussClass</h3>
+<pre class="programlisting">struct NcmPriorGaussClass {
+};
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcmPriorGauss-struct"></a><h3>NcmPriorGauss</h3>
+<pre class="programlisting">typedef struct _NcmPriorGauss NcmPriorGauss;</pre>
 </div>
 </div>
 <div class="refsect1">
@@ -212,7 +500,7 @@ ncm_prior_gauss_clear (<em class="parameter"><code><a class="link" href="NcmPrio
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: 0</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmPriorGauss--sigma"></a><h3>The <code class="literal">“sigma”</code> property</h3>
 <pre class="programlisting">  “sigma”                    <span class="type">double</span></pre>
@@ -221,7 +509,7 @@ ncm_prior_gauss_clear (<em class="parameter"><code><a class="link" href="NcmPrio
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: 1</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmPriorGauss--variable"></a><h3>The <code class="literal">“variable”</code> property</h3>
 <pre class="programlisting">  “variable”                 <span class="type">double</span></pre>
@@ -233,6 +521,6 @@ ncm_prior_gauss_clear (<em class="parameter"><code><a class="link" href="NcmPrio
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

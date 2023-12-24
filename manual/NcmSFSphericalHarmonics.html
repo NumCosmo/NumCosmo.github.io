@@ -1,28 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NcmSFSphericalHarmonics: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="NumCosmo Reference Manual">
-<link rel="up" href="ch02s09.html" title="Special Functions">
-<link rel="prev" href="numcosmo-NcmSFSBessel.html" title="NcmSFSBessel">
-<link rel="next" href="ch02s10.html" title="Models and Parameters">
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
-<link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#NcmSFSphericalHarmonics.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#NcmSFSphericalHarmonics.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#NcmSFSphericalHarmonics.properties" class="shortcut">Properties</a></span>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch02s08.html" rel="up" title="Special Functions"/>
+<link href="numcosmo-NcmSFSBessel.html" rel="prev" title="NcmSFSBessel"/>
+<link href="ch02s09.html" rel="next" title="Models and Parameters"/>
+<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmSFSphericalHarmonics.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmSFSphericalHarmonics.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmSFSphericalHarmonics.properties">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch02s09.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="numcosmo-NcmSFSBessel.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="ch02s10.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch02s08.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="numcosmo-NcmSFSBessel.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="ch02s09.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcmSFSphericalHarmonics"></a><div class="titlepage"></div>
@@ -31,14 +45,14 @@
 <h2><span class="refentrytitle"><a name="NcmSFSphericalHarmonics.top_of_page"></a>NcmSFSphericalHarmonics</span></h2>
 <p>NcmSFSphericalHarmonics — Spherical Harmonics object</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td align="right" class="gallery_image" valign="top"></td>
 </tr></table></div>
 <div class="refsect1">
 <a name="NcmSFSphericalHarmonics.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="functions_proto_type">
-<col class="functions_proto_name">
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -348,11 +362,11 @@
 </div>
 <div class="refsect1">
 <a name="NcmSFSphericalHarmonics.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
+<div class="informaltable"><table border="0" class="informaltable">
 <colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="property_type"><span class="type">int</span></td>
@@ -363,15 +377,23 @@
 </div>
 <a name="NcmSFSphericalHarmonicsY"></a><a name="NcmSFSphericalHarmonicsYArray"></a><div class="refsect1">
 <a name="NcmSFSphericalHarmonics.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="other_proto_type">
-<col class="other_proto_name">
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmSFSphericalHarmonics.html#NCM-TYPE-SF-SPHERICAL-HARMONICS:CAPS" title="NCM_TYPE_SF_SPHERICAL_HARMONICS">NCM_TYPE_SF_SPHERICAL_HARMONICS</a></td>
+</tr>
+<tr>
 <td class="datatype_keyword">struct</td>
 <td class="function_name"><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsK" title="struct NcmSFSphericalHarmonicsK">NcmSFSphericalHarmonicsK</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonics-struct" title="struct NcmSFSphericalHarmonics">NcmSFSphericalHarmonics</a></td>
 </tr>
 <tr>
 <td class="datatype_keyword">struct</td>
@@ -483,7 +505,8 @@
 </div>
 <div class="refsect1">
 <a name="NcmSFSphericalHarmonics.description"></a><h2>Description</h2>
-<p>FIXME</p>
+<p>Object to compute the spherical harmonics $\bar{Y}_l^m (x)$ and its derivatives
+$\bar{Y}_{l+1}^m (x)$ and $\bar{Y}_{l+2}^m (x)$, where $x = \cos \theta$.</p>
 </div>
 <div class="refsect1">
 <a name="NcmSFSphericalHarmonics.functions_details"></a><h2>Functions</h2>
@@ -492,14 +515,14 @@
 <pre class="programlisting"><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsY"><span class="returnvalue">NcmSFSphericalHarmonicsY</span></a> *
 ncm_sf_spherical_harmonics_Y_new (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html" title="NcmSFSphericalHarmonics"><span class="type">NcmSFSphericalHarmonics</span></a> *spha</code></em>,
                                   <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> abstol</code></em>);</pre>
-<p>FIXME</p>
+<p>Creates a new <a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsY"><span class="type">NcmSFSphericalHarmonicsY</span></a> object.</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -517,22 +540,22 @@ ncm_sf_spherical_harmonics_Y_new (<em class="parameter"><code><a class="link" hr
 </div>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-new.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> a new <a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsY"><span class="type">NcmSFSphericalHarmonicsY</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-dup"></a><h3>ncm_sf_spherical_harmonics_Y_dup ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsY"><span class="returnvalue">NcmSFSphericalHarmonicsY</span></a> *
 ncm_sf_spherical_harmonics_Y_dup (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsY"><span class="type">NcmSFSphericalHarmonicsY</span></a> *sphaY</code></em>);</pre>
-<p>FIXME</p>
+<p>Duplicates a <a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsY"><span class="type">NcmSFSphericalHarmonicsY</span></a> object.</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-dup.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sphaY</p></td>
@@ -543,23 +566,24 @@ ncm_sf_spherical_harmonics_Y_dup (<em class="parameter"><code><a class="link" hr
 </div>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-dup.returns"></a><h4>Returns</h4>
-<p>FIXME. </p>
+<p>a copy of <em class="parameter"><code>sphaY</code></em>
+. </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-free"></a><h3>ncm_sf_spherical_harmonics_Y_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_sf_spherical_harmonics_Y_free (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsY"><span class="type">NcmSFSphericalHarmonicsY</span></a> *sphaY</code></em>);</pre>
-<p>FIXME</p>
+<p>Frees a <a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsY"><span class="type">NcmSFSphericalHarmonicsY</span></a> object.</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-free.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sphaY</p></td>
@@ -569,18 +593,18 @@ ncm_sf_spherical_harmonics_Y_free (<em class="parameter"><code><a class="link" h
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-get-lm"></a><h3>ncm_sf_spherical_harmonics_Y_get_lm ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_sf_spherical_harmonics_Y_get_lm (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsY"><span class="type">NcmSFSphericalHarmonicsY</span></a> *sphaY</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-get-lm.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sphaY</p></td>
@@ -594,18 +618,18 @@ ncm_sf_spherical_harmonics_Y_get_lm (<em class="parameter"><code><a class="link"
 <p> the current value of $\bar{Y}_l^m (x)$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-get-lp1m"></a><h3>ncm_sf_spherical_harmonics_Y_get_lp1m ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_sf_spherical_harmonics_Y_get_lp1m (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsY"><span class="type">NcmSFSphericalHarmonicsY</span></a> *sphaY</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-get-lp1m.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sphaY</p></td>
@@ -619,18 +643,18 @@ ncm_sf_spherical_harmonics_Y_get_lp1m (<em class="parameter"><code><a class="lin
 <p> the current value of $\bar{Y}_{l+1}^m (x)$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-get-x"></a><h3>ncm_sf_spherical_harmonics_Y_get_x ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 ncm_sf_spherical_harmonics_Y_get_x (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsY"><span class="type">NcmSFSphericalHarmonicsY</span></a> *sphaY</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-get-x.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sphaY</p></td>
@@ -644,18 +668,18 @@ ncm_sf_spherical_harmonics_Y_get_x (<em class="parameter"><code><a class="link" 
 <p> the current value of $x$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-get-l"></a><h3>ncm_sf_spherical_harmonics_Y_get_l ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
 ncm_sf_spherical_harmonics_Y_get_l (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsY"><span class="type">NcmSFSphericalHarmonicsY</span></a> *sphaY</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-get-l.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sphaY</p></td>
@@ -669,18 +693,18 @@ ncm_sf_spherical_harmonics_Y_get_l (<em class="parameter"><code><a class="link" 
 <p> the current value of $l$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-get-m"></a><h3>ncm_sf_spherical_harmonics_Y_get_m ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
 ncm_sf_spherical_harmonics_Y_get_m (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsY"><span class="type">NcmSFSphericalHarmonicsY</span></a> *sphaY</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-get-m.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sphaY</p></td>
@@ -694,7 +718,7 @@ ncm_sf_spherical_harmonics_Y_get_m (<em class="parameter"><code><a class="link" 
 <p> the current value of $m$.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-next-l"></a><h3>ncm_sf_spherical_harmonics_Y_next_l ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -702,11 +726,11 @@ ncm_sf_spherical_harmonics_Y_next_l (<em class="parameter"><code><a class="link"
 <p>Move the recursion for $x$ to $l = l + 1$.</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-next-l.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sphaY</p></td>
@@ -716,7 +740,7 @@ ncm_sf_spherical_harmonics_Y_next_l (<em class="parameter"><code><a class="link"
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-next-l2"></a><h3>ncm_sf_spherical_harmonics_Y_next_l2 ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -725,11 +749,11 @@ ncm_sf_spherical_harmonics_Y_next_l2 (<em class="parameter"><code><a class="link
 <p>Move the recursion for $x$ to $l = l + 2$.</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-next-l2.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -746,7 +770,7 @@ ncm_sf_spherical_harmonics_Y_next_l2 (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-next-l4"></a><h3>ncm_sf_spherical_harmonics_Y_next_l4 ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -755,11 +779,11 @@ ncm_sf_spherical_harmonics_Y_next_l4 (<em class="parameter"><code><a class="link
 <p>Move the recursion for $x$ to $l = l + 4$.</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-next-l4.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -776,7 +800,7 @@ ncm_sf_spherical_harmonics_Y_next_l4 (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-next-l2pn"></a><h3>ncm_sf_spherical_harmonics_Y_next_l2pn ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -785,7 +809,7 @@ ncm_sf_spherical_harmonics_Y_next_l2pn
                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict Yblm</code></em>,
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-next-m"></a><h3>ncm_sf_spherical_harmonics_Y_next_m ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -795,11 +819,11 @@ If the value of $Ybll &lt; a$ where $a$ is the absolute tolerance,
 advance $l$ until the tolerance is reached.</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-next-m.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sphaY</p></td>
@@ -809,13 +833,13 @@ advance $l$ until the tolerance is reached.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-reset"></a><h3>ncm_sf_spherical_harmonics_Y_reset ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_sf_spherical_harmonics_Y_reset (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsY"><span class="type">NcmSFSphericalHarmonicsY</span></a> *sphaY</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-array-new"></a><h3>ncm_sf_spherical_harmonics_Y_array_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsYArray"><span class="returnvalue">NcmSFSphericalHarmonicsYArray</span></a> *
@@ -823,14 +847,17 @@ ncm_sf_spherical_harmonics_Y_array_new
                                (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html" title="NcmSFSphericalHarmonics"><span class="type">NcmSFSphericalHarmonics</span></a> *spha</code></em>,
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> len</code></em>,
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> abstol</code></em>);</pre>
-<p>FIXME</p>
+<p>Creates a new <a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsYArray"><span class="type">NcmSFSphericalHarmonicsYArray</span></a> object. This object is used to
+contain the results of the computation of the spherical harmonics for an
+array of angles $\theta_i$ with length <em class="parameter"><code>len</code></em>
+.</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-array-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -853,23 +880,23 @@ ncm_sf_spherical_harmonics_Y_array_new
 </div>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-array-new.returns"></a><h4>Returns</h4>
-<p> FIXME</p>
+<p> a new <a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsYArray"><span class="type">NcmSFSphericalHarmonicsYArray</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-array-dup"></a><h3>ncm_sf_spherical_harmonics_Y_array_dup ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsYArray"><span class="returnvalue">NcmSFSphericalHarmonicsYArray</span></a> *
 ncm_sf_spherical_harmonics_Y_array_dup
                                (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsYArray"><span class="type">NcmSFSphericalHarmonicsYArray</span></a> *sphaYa</code></em>);</pre>
-<p>FIXME</p>
+<p>Duplicates a <a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsYArray"><span class="type">NcmSFSphericalHarmonicsYArray</span></a> object.</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-array-dup.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sphaYa</p></td>
@@ -880,24 +907,25 @@ ncm_sf_spherical_harmonics_Y_array_dup
 </div>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-array-dup.returns"></a><h4>Returns</h4>
-<p>FIXME. </p>
+<p>a copy of <em class="parameter"><code>sphaYa</code></em>
+. </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-array-free"></a><h3>ncm_sf_spherical_harmonics_Y_array_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_sf_spherical_harmonics_Y_array_free
                                (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsYArray"><span class="type">NcmSFSphericalHarmonicsYArray</span></a> *sphaYa</code></em>);</pre>
-<p>FIXME</p>
+<p>Frees a <a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsYArray"><span class="type">NcmSFSphericalHarmonicsYArray</span></a> object.</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-Y-array-free.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sphaYa</p></td>
@@ -907,7 +935,7 @@ ncm_sf_spherical_harmonics_Y_array_free
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-array-get-lm"></a><h3>ncm_sf_spherical_harmonics_Y_array_get_lm ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -916,7 +944,7 @@ ncm_sf_spherical_harmonics_Y_array_get_lm
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> len</code></em>,
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> i</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-array-get-lp1m"></a><h3>ncm_sf_spherical_harmonics_Y_array_get_lp1m ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -925,7 +953,7 @@ ncm_sf_spherical_harmonics_Y_array_get_lp1m
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> len</code></em>,
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> i</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-array-get-x"></a><h3>ncm_sf_spherical_harmonics_Y_array_get_x ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -933,21 +961,21 @@ ncm_sf_spherical_harmonics_Y_array_get_x
                                (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsYArray"><span class="type">NcmSFSphericalHarmonicsYArray</span></a> *sphaYa</code></em>,
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> i</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-array-get-l"></a><h3>ncm_sf_spherical_harmonics_Y_array_get_l ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
 ncm_sf_spherical_harmonics_Y_array_get_l
                                (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsYArray"><span class="type">NcmSFSphericalHarmonicsYArray</span></a> *sphaYa</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-array-get-m"></a><h3>ncm_sf_spherical_harmonics_Y_array_get_m ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
 ncm_sf_spherical_harmonics_Y_array_get_m
                                (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsYArray"><span class="type">NcmSFSphericalHarmonicsYArray</span></a> *sphaYa</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-array-next-l"></a><h3>ncm_sf_spherical_harmonics_Y_array_next_l ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -955,7 +983,7 @@ ncm_sf_spherical_harmonics_Y_array_next_l
                                (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsYArray"><span class="type">NcmSFSphericalHarmonicsYArray</span></a> *sphaYa</code></em>,
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> len</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-array-next-l2"></a><h3>ncm_sf_spherical_harmonics_Y_array_next_l2 ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -964,7 +992,7 @@ ncm_sf_spherical_harmonics_Y_array_next_l2
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> len</code></em>,
                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict Yblm</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-array-next-l4"></a><h3>ncm_sf_spherical_harmonics_Y_array_next_l4 ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -973,7 +1001,7 @@ ncm_sf_spherical_harmonics_Y_array_next_l4
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> len</code></em>,
                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict Yblm</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-array-next-l2pn"></a><h3>ncm_sf_spherical_harmonics_Y_array_next_l2pn ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -983,7 +1011,7 @@ ncm_sf_spherical_harmonics_Y_array_next_l2pn
                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> * restrict Yblm</code></em>,
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-array-next-m"></a><h3>ncm_sf_spherical_harmonics_Y_array_next_m ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -991,7 +1019,7 @@ ncm_sf_spherical_harmonics_Y_array_next_m
                                (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsYArray"><span class="type">NcmSFSphericalHarmonicsYArray</span></a> *sphaYa</code></em>,
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> len</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-Y-array-reset"></a><h3>ncm_sf_spherical_harmonics_Y_array_reset ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -999,7 +1027,7 @@ ncm_sf_spherical_harmonics_Y_array_reset
                                (<em class="parameter"><code><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsYArray"><span class="type">NcmSFSphericalHarmonicsYArray</span></a> *sphaYa</code></em>,
                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> len</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-new"></a><h3>ncm_sf_spherical_harmonics_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSFSphericalHarmonics.html" title="NcmSFSphericalHarmonics"><span class="returnvalue">NcmSFSphericalHarmonics</span></a> *
@@ -1007,11 +1035,11 @@ ncm_sf_spherical_harmonics_new (<em class="parameter"><code>const <a href="../gl
 <p>Creates a new <a class="link" href="NcmSFSphericalHarmonics.html" title="NcmSFSphericalHarmonics"><span class="type">NcmSFSphericalHarmonics</span></a> object.</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>lmax</p></td>
@@ -1025,7 +1053,7 @@ ncm_sf_spherical_harmonics_new (<em class="parameter"><code>const <a href="../gl
 <p> a new <a class="link" href="NcmSFSphericalHarmonics.html" title="NcmSFSphericalHarmonics"><span class="type">NcmSFSphericalHarmonics</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-ref"></a><h3>ncm_sf_spherical_harmonics_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSFSphericalHarmonics.html" title="NcmSFSphericalHarmonics"><span class="returnvalue">NcmSFSphericalHarmonics</span></a> *
@@ -1034,11 +1062,11 @@ ncm_sf_spherical_harmonics_ref (<em class="parameter"><code><a class="link" href
  by one.</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-ref.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>spha</p></td>
@@ -1054,7 +1082,7 @@ ncm_sf_spherical_harmonics_ref (<em class="parameter"><code><a class="link" href
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-free"></a><h3>ncm_sf_spherical_harmonics_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1063,11 +1091,11 @@ ncm_sf_spherical_harmonics_free (<em class="parameter"><code><a class="link" hre
  by one.</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-free.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>spha</p></td>
@@ -1077,7 +1105,7 @@ ncm_sf_spherical_harmonics_free (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-clear"></a><h3>ncm_sf_spherical_harmonics_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1088,11 +1116,11 @@ ncm_sf_spherical_harmonics_clear (<em class="parameter"><code><a class="link" hr
 NULL.</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-clear.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>spha</p></td>
@@ -1102,7 +1130,7 @@ NULL.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-set-lmax"></a><h3>ncm_sf_spherical_harmonics_set_lmax ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1112,11 +1140,11 @@ ncm_sf_spherical_harmonics_set_lmax (<em class="parameter"><code><a class="link"
 .</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-set-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1133,7 +1161,7 @@ ncm_sf_spherical_harmonics_set_lmax (<em class="parameter"><code><a class="link"
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-get-lmax"></a><h3>ncm_sf_spherical_harmonics_get_lmax ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -1142,11 +1170,11 @@ ncm_sf_spherical_harmonics_get_lmax (<em class="parameter"><code><a class="link"
 .</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-get-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>spha</p></td>
@@ -1160,7 +1188,7 @@ ncm_sf_spherical_harmonics_get_lmax (<em class="parameter"><code><a class="link"
 <p> the currently used lmax.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-start-rec"></a><h3>ncm_sf_spherical_harmonics_start_rec ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1170,11 +1198,11 @@ ncm_sf_spherical_harmonics_start_rec (<em class="parameter"><code><a class="link
 <p>Start recursion for $\theta$ at $l = 0,\; m = 0$.</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-start-rec.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1196,7 +1224,7 @@ ncm_sf_spherical_harmonics_start_rec (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-start-rec-array"></a><h3>ncm_sf_spherical_harmonics_start_rec_array ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1211,11 +1239,11 @@ length <em class="parameter"><code>len</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-start-rec-array.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1242,7 +1270,7 @@ length <em class="parameter"><code>len</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-sf-spherical-harmonics-get-Klm"></a><h3>ncm_sf_spherical_harmonics_get_Klm ()</h3>
 <pre class="programlisting"><a class="link" href="NcmSFSphericalHarmonics.html#NcmSFSphericalHarmonicsK" title="struct NcmSFSphericalHarmonicsK"><span class="returnvalue">NcmSFSphericalHarmonicsK</span></a> *
@@ -1254,11 +1282,11 @@ necessary to move the recurence from $(l_0, m)\; \to\; (l_\mathrm{max}, m)$.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-sf-spherical-harmonics-get-Klm.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1285,7 +1313,7 @@ necessary to move the recurence from $(l_0, m)\; \to\; (l_\mathrm{max}, m)$.</p>
 <p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> NcmSFSphericalHarmonicsK]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SF-SPHERICAL-HARMONICS-ARRAY-INDEX:CAPS"></a><h3>NCM_SF_SPHERICAL_HARMONICS_ARRAY_INDEX()</h3>
 <pre class="programlisting">#define NCM_SF_SPHERICAL_HARMONICS_ARRAY_INDEX(ai, li, len) ((li) * (len) + (ai))
@@ -1294,6 +1322,12 @@ necessary to move the recurence from $(l_0, m)\; \to\; (l_\mathrm{max}, m)$.</p>
 </div>
 <div class="refsect1">
 <a name="NcmSFSphericalHarmonics.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NCM-TYPE-SF-SPHERICAL-HARMONICS:CAPS"></a><h3>NCM_TYPE_SF_SPHERICAL_HARMONICS</h3>
+<pre class="programlisting">#define NCM_TYPE_SF_SPHERICAL_HARMONICS             (ncm_sf_spherical_harmonics_get_type ())
+</pre>
+</div>
+<hr/>
 <div class="refsect2">
 <a name="NcmSFSphericalHarmonicsK"></a><h3>struct NcmSFSphericalHarmonicsK</h3>
 <pre class="programlisting">struct NcmSFSphericalHarmonicsK {
@@ -1304,11 +1338,11 @@ necessary to move the recurence from $(l_0, m)\; \to\; (l_\mathrm{max}, m)$.</p>
 <p>Recurrence coefficients.</p>
 <div class="refsect3">
 <a name="NcmSFSphericalHarmonicsK.members"></a><h4>Members</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="300px" class="struct_members_name">
-<col class="struct_members_description">
-<col width="200px" class="struct_members_annotations">
+<col class="struct_members_name" width="300px"/>
+<col class="struct_members_description"/>
+<col class="struct_members_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1325,7 +1359,12 @@ necessary to move the recurence from $(l_0, m)\; \to\; (l_\mathrm{max}, m)$.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
+<div class="refsect2">
+<a name="NcmSFSphericalHarmonics-struct"></a><h3>struct NcmSFSphericalHarmonics</h3>
+<pre class="programlisting">struct NcmSFSphericalHarmonics;</pre>
+</div>
+<hr/>
 <div class="refsect2">
 <a name="NcmSFSphericalHarmonicsP"></a><h3>struct NcmSFSphericalHarmonicsP</h3>
 <pre class="programlisting">struct NcmSFSphericalHarmonicsP {
@@ -1340,11 +1379,11 @@ necessary to move the recurence from $(l_0, m)\; \to\; (l_\mathrm{max}, m)$.</p>
 <p>Boxed P values.</p>
 <div class="refsect3">
 <a name="NcmSFSphericalHarmonicsP.members"></a><h4>Members</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="300px" class="struct_members_name">
-<col class="struct_members_description">
-<col width="200px" class="struct_members_annotations">
+<col class="struct_members_name" width="300px"/>
+<col class="struct_members_description"/>
+<col class="struct_members_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1381,139 +1420,139 @@ necessary to move the recurence from $(l_0, m)\; \to\; (l_\mathrm{max}, m)$.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SF-SPHERICAL-HARMONICS-MAX-LEN:CAPS"></a><h3>NCM_SF_SPHERICAL_HARMONICS_MAX_LEN</h3>
 <pre class="programlisting">#define NCM_SF_SPHERICAL_HARMONICS_MAX_LEN 6
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SF-SPHERICAL-HARMONICS-DEFAULT-ABSTOL:CAPS"></a><h3>NCM_SF_SPHERICAL_HARMONICS_DEFAULT_ABSTOL</h3>
 <pre class="programlisting">#define NCM_SF_SPHERICAL_HARMONICS_DEFAULT_ABSTOL (1.0e-20)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SF-SPHERICAL-HARMONICS-ARRAY-DEFAULT-ABSTOL:CAPS"></a><h3>NCM_SF_SPHERICAL_HARMONICS_ARRAY_DEFAULT_ABSTOL</h3>
 <pre class="programlisting">#define NCM_SF_SPHERICAL_HARMONICS_ARRAY_DEFAULT_ABSTOL (1.0e-40)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SF-SPHERICAL-HARMONICS-EPS:CAPS"></a><h3>NCM_SF_SPHERICAL_HARMONICS_EPS</h3>
 <pre class="programlisting">#define NCM_SF_SPHERICAL_HARMONICS_EPS (1.0e-280)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SF-SPHERICAL-HARMONICS-LATERAL-MOVE:CAPS"></a><h3>NCM_SF_SPHERICAL_HARMONICS_LATERAL_MOVE</h3>
 <pre class="programlisting">#define NCM_SF_SPHERICAL_HARMONICS_LATERAL_MOVE 1
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="sn-2l0-5"></a><h3>sn_2l0_5</h3>
 <pre class="programlisting">    const gdouble sn_2l0_5   = _SN (2 * l0 + 5);
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="snm1-2l0-2"></a><h3>snm1_2l0_2</h3>
 <pre class="programlisting">    const gdouble snm1_2l0_2 = _SNM1 (2 * l0 + 2);
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="sqrt1mx2"></a><h3>sqrt1mx2</h3>
 <pre class="programlisting">      const gdouble sqrt1mx2 = sphaYa-&gt;sqrt1mx2[i];
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="x"></a><h3>x</h3>
 <pre class="programlisting">      const gdouble x        = sphaYa-&gt;x[i];
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="l0"></a><h3>l0</h3>
 <pre class="programlisting">    const gint l0      = sphaYa-&gt;l0;
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="m"></a><h3>m</h3>
 <pre class="programlisting">    const gint m       = sphaYa-&gt;m;
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="twol0"></a><h3>twol0</h3>
 <pre class="programlisting">    const gint twol0   = 2 * l0;
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="l0mm"></a><h3>l0mm</h3>
 <pre class="programlisting">    const gint l0mm    = l0 - m;
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="l0pm"></a><h3>l0pm</h3>
 <pre class="programlisting">    const gint l0pm    = l0 + m;
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="Llp1"></a><h3>Llp1</h3>
 <pre class="programlisting">    const gdouble Llp1 = _SN (twol0 + 1) * _SN (l0mm + 1)   * _SNM1 (twol0 + 3) * _SNM1 (l0mm);
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="Ll"></a><h3>Ll</h3>
 <pre class="programlisting">    const gdouble Ll   = _SN (l0pm + 1)  * _SNM1 (l0mm);
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="Mlp1"></a><h3>Mlp1</h3>
 <pre class="programlisting">    const gdouble Mlp1 = _SN (l0mm + 1)  * _SNM1 (l0pm + 2);
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="Ml"></a><h3>Ml</h3>
 <pre class="programlisting">    const gdouble Ml   = _SN (twol0 + 3) * _SN (l0pm + 1) * _SNM1 (twol0 + 1) * _SNM1 (l0pm + 2);
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="Pl0m"></a><h3>Pl0m</h3>
 <pre class="programlisting">      const gdouble Pl0m     = sphaYa-&gt;Yl0m[NCM_SF_SPHERICAL_HARMONICS_ARRAY_INDEX (i, 0, len)];
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="Pl0p1m"></a><h3>Pl0p1m</h3>
 <pre class="programlisting">      const gdouble Pl0p1m   = sphaYa-&gt;Yl0m[NCM_SF_SPHERICAL_HARMONICS_ARRAY_INDEX (i, 1, len)];
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="min-Plm"></a><h3>min_Plm</h3>
 <pre class="programlisting">    gdouble min_Plm = GSL_POSINF;
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="abs-Plm"></a><h3>abs_Plm</h3>
 <pre class="programlisting">      const gdouble abs_Plm = fabs (sphaYa-&gt;Ylm[NCM_SF_SPHERICAL_HARMONICS_ARRAY_INDEX (i, 0, len)]);
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="lmax"></a><h3>lmax</h3>
 <pre class="programlisting">      const gint lmax = ncm_sf_spherical_harmonics_get_lmax (spha);
@@ -1534,6 +1573,6 @@ necessary to move the recurence from $(l_0, m)\; \to\; (l_\mathrm{max}, m)$.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

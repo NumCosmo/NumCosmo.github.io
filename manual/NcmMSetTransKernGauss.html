@@ -1,28 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NcmMSetTransKernGauss: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="NumCosmo Reference Manual">
-<link rel="up" href="ch02s13.html" title="Statistical Analysis">
-<link rel="prev" href="NcmMSetTransKernFlat.html" title="NcmMSetTransKernFlat">
-<link rel="next" href="NcmMSetTransKernCat.html" title="NcmMSetTransKernCat">
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
-<link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#NcmMSetTransKernGauss.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#NcmMSetTransKernGauss.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#NcmMSetTransKernGauss.properties" class="shortcut">Properties</a></span>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch02s12.html" rel="up" title="Statistical Analysis"/>
+<link href="NcmMSetTransKernFlat.html" rel="prev" title="NcmMSetTransKernFlat"/>
+<link href="NcmMSetTransKernCat.html" rel="next" title="NcmMSetTransKernCat"/>
+<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmMSetTransKernGauss.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmMSetTransKernGauss.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmMSetTransKernGauss.properties">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch02s13.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="NcmMSetTransKernFlat.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="NcmMSetTransKernCat.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch02s12.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcmMSetTransKernFlat.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcmMSetTransKernCat.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcmMSetTransKernGauss"></a><div class="titlepage"></div>
@@ -31,14 +45,14 @@
 <h2><span class="refentrytitle"><a name="NcmMSetTransKernGauss.top_of_page"></a>NcmMSetTransKernGauss</span></h2>
 <p>NcmMSetTransKernGauss — A multivariate gaussian sampler.</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td align="right" class="gallery_image" valign="top"></td>
 </tr></table></div>
 <div class="refsect1">
 <a name="NcmMSetTransKernGauss.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="functions_proto_type">
-<col class="functions_proto_name">
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -110,11 +124,11 @@
 </div>
 <div class="refsect1">
 <a name="NcmMSetTransKernGauss.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
+<div class="informaltable"><table border="0" class="informaltable">
 <colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -132,6 +146,25 @@
 </table></div>
 </div>
 <div class="refsect1">
+<a name="NcmMSetTransKernGauss.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmMSetTransKernGauss.html#NCM-TYPE-MSET-TRANS-KERN-GAUSS:CAPS" title="NCM_TYPE_MSET_TRANS_KERN_GAUSS">NCM_TYPE_MSET_TRANS_KERN_GAUSS</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcmMSetTransKernGauss.html#NcmMSetTransKernGauss-struct" title="NcmMSetTransKernGauss">NcmMSetTransKernGauss</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
 <a name="NcmMSetTransKernGauss.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmMSetTransKern.html" title="NcmMSetTransKern">NcmMSetTransKern</a>
@@ -140,7 +173,35 @@
 </div>
 <div class="refsect1">
 <a name="NcmMSetTransKernGauss.description"></a><h2>Description</h2>
-<p>FIXME</p>
+<p>This object subclasses NcmMSetTransKern and implements a multivariate gaussian
+sampler.</p>
+<p>Implementation of a multivariate Gaussian sampler, providing a straightforward
+method for generating random parameter vectors with multivariate parameters. This
+sampler generates vectors with a normal distribution. The covariance of parameters
+can be configured directly using <a class="link" href="NcmMSetTransKernGauss.html#ncm-mset-trans-kern-gauss-set-cov" title="ncm_mset_trans_kern_gauss_set_cov ()"><code class="function">ncm_mset_trans_kern_gauss_set_cov()</code></a> or by
+specifying individual standard deviations as parameter scales, assuming zero
+correlation.</p>
+<p>**Key Functionality:**</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Generates random parameter vectors with multivariate parameters.</p></li>
+<li class="listitem"><p>Utilizes a multivariate Gaussian distribution for sampling.</p></li>
+<li class="listitem"><p>Allows direct setting of covariance using <a class="link" href="NcmMSetTransKernGauss.html#ncm-mset-trans-kern-gauss-set-cov" title="ncm_mset_trans_kern_gauss_set_cov ()"><code class="function">ncm_mset_trans_kern_gauss_set_cov()</code></a>.</p></li>
+<li class="listitem">
+<p>Supports alternative methods:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem"><p>Using <a class="link" href="NcmMSetTransKernGauss.html#ncm-mset-trans-kern-gauss-set-cov-from-scale" title="ncm_mset_trans_kern_gauss_set_cov_from_scale ()"><code class="function">ncm_mset_trans_kern_gauss_set_cov_from_scale()</code></a> sets covariance using
+the scale property of parameters as standard deviation with zero correlation.</p></li>
+<li class="listitem"><p>Using <a class="link" href="NcmMSetTransKernGauss.html#ncm-mset-trans-kern-gauss-set-cov-from-rescale" title="ncm_mset_trans_kern_gauss_set_cov_from_rescale ()"><code class="function">ncm_mset_trans_kern_gauss_set_cov_from_rescale()</code></a> sets covariance using
+the scale property of parameters times <em class="parameter"><code>epsilon</code></em>
+ as standard deviation with zero
+correlation.</p></li>
+</ul></div>
+</li>
+</ul></div>
+<p>This implementation is particularly useful when a Gaussian sampling approach is
+required for generating random parameter vectors with multivariate parameters,
+offering flexibility in specifying covariance through direct settings or individual
+standard deviations.</p>
 </div>
 <div class="refsect1">
 <a name="NcmMSetTransKernGauss.functions_details"></a><h2>Functions</h2>
@@ -152,11 +213,11 @@ ncm_mset_trans_kern_gauss_new (<em class="parameter"><code><a href="../glib/glib
  multivariate gaussian.</p>
 <div class="refsect3">
 <a name="ncm-mset-trans-kern-gauss-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>len</p></td>
@@ -171,7 +232,7 @@ ncm_mset_trans_kern_gauss_new (<em class="parameter"><code><a href="../glib/glib
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-mset-trans-kern-gauss-set-size"></a><h3>ncm_mset_trans_kern_gauss_set_size ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -180,11 +241,11 @@ ncm_mset_trans_kern_gauss_set_size (<em class="parameter"><code><a class="link" 
 <p>Sets size of <a class="link" href="NcmMSetTransKernGauss.html" title="NcmMSetTransKernGauss"><span class="type">NcmMSetTransKernGauss</span></a>.</p>
 <div class="refsect3">
 <a name="ncm-mset-trans-kern-gauss-set-size.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -201,7 +262,7 @@ ncm_mset_trans_kern_gauss_set_size (<em class="parameter"><code><a class="link" 
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-mset-trans-kern-gauss-get-size"></a><h3>ncm_mset_trans_kern_gauss_get_size ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -209,11 +270,11 @@ ncm_mset_trans_kern_gauss_get_size (<em class="parameter"><code><a class="link" 
 <p>Gets size of <a class="link" href="NcmMSetTransKernGauss.html" title="NcmMSetTransKernGauss"><span class="type">NcmMSetTransKernGauss</span></a>.</p>
 <div class="refsect3">
 <a name="ncm-mset-trans-kern-gauss-get-size.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>tkerng</p></td>
@@ -227,7 +288,7 @@ ncm_mset_trans_kern_gauss_get_size (<em class="parameter"><code><a class="link" 
 <p> size of the gaussian multivariate.</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-mset-trans-kern-gauss-set-cov"></a><h3>ncm_mset_trans_kern_gauss_set_cov ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -237,11 +298,11 @@ ncm_mset_trans_kern_gauss_set_cov (<em class="parameter"><code><a class="link" h
 .</p>
 <div class="refsect3">
 <a name="ncm-mset-trans-kern-gauss-set-cov.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -258,7 +319,7 @@ ncm_mset_trans_kern_gauss_set_cov (<em class="parameter"><code><a class="link" h
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-mset-trans-kern-gauss-set-cov-variant"></a><h3>ncm_mset_trans_kern_gauss_set_cov_variant ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -269,11 +330,11 @@ ncm_mset_trans_kern_gauss_set_cov_variant
 .</p>
 <div class="refsect3">
 <a name="ncm-mset-trans-kern-gauss-set-cov-variant.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -290,7 +351,7 @@ ncm_mset_trans_kern_gauss_set_cov_variant
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-mset-trans-kern-gauss-get-cov"></a><h3>ncm_mset_trans_kern_gauss_get_cov ()</h3>
 <pre class="programlisting"><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="returnvalue">NcmMatrix</span></a> *
@@ -298,11 +359,11 @@ ncm_mset_trans_kern_gauss_get_cov (<em class="parameter"><code><a class="link" h
 <p>Gets the covariance.</p>
 <div class="refsect3">
 <a name="ncm-mset-trans-kern-gauss-get-cov.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>tkerng</p></td>
@@ -317,7 +378,7 @@ ncm_mset_trans_kern_gauss_get_cov (<em class="parameter"><code><a class="link" h
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-mset-trans-kern-gauss-set-cov-from-scale"></a><h3>ncm_mset_trans_kern_gauss_set_cov_from_scale ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -327,11 +388,11 @@ ncm_mset_trans_kern_gauss_set_cov_from_scale
 standard deviation and zero correlation.</p>
 <div class="refsect3">
 <a name="ncm-mset-trans-kern-gauss-set-cov-from-scale.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>tkerng</p></td>
@@ -341,7 +402,7 @@ standard deviation and zero correlation.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-mset-trans-kern-gauss-set-cov-from-rescale"></a><h3>ncm_mset_trans_kern_gauss_set_cov_from_rescale ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -353,11 +414,11 @@ ncm_mset_trans_kern_gauss_set_cov_from_rescale
  as standard deviation and zero correlation.</p>
 <div class="refsect3">
 <a name="ncm-mset-trans-kern-gauss-set-cov-from-rescale.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -376,6 +437,19 @@ ncm_mset_trans_kern_gauss_set_cov_from_rescale
 </div>
 </div>
 <div class="refsect1">
+<a name="NcmMSetTransKernGauss.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NCM-TYPE-MSET-TRANS-KERN-GAUSS:CAPS"></a><h3>NCM_TYPE_MSET_TRANS_KERN_GAUSS</h3>
+<pre class="programlisting">#define NCM_TYPE_MSET_TRANS_KERN_GAUSS (ncm_mset_trans_kern_gauss_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcmMSetTransKernGauss-struct"></a><h3>NcmMSetTransKernGauss</h3>
+<pre class="programlisting">typedef struct _NcmMSetTransKernGauss NcmMSetTransKernGauss;</pre>
+</div>
+</div>
+<div class="refsect1">
 <a name="NcmMSetTransKernGauss.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="NcmMSetTransKernGauss--cov"></a><h3>The <code class="literal">“cov”</code> property</h3>
@@ -384,7 +458,7 @@ ncm_mset_trans_kern_gauss_set_cov_from_rescale
 <p>Owner: NcmMSetTransKernGauss</p>
 <p>Flags: Read / Write</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmMSetTransKernGauss--length"></a><h3>The <code class="literal">“length”</code> property</h3>
 <pre class="programlisting">  “length”                   <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
@@ -396,6 +470,6 @@ ncm_mset_trans_kern_gauss_set_cov_from_rescale
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

@@ -1,27 +1,41 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NcmSplineFunc: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="NumCosmo Reference Manual">
-<link rel="up" href="ch02s05.html" title="Splines 1D">
-<link rel="prev" href="NcmSplineRBF.html" title="NcmSplineRBF">
-<link rel="next" href="NcmSplineFuncTest.html" title="NcmSplineFuncTest">
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
-<link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#numcosmo-NcmSplineFunc.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#numcosmo-NcmSplineFunc.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch02s04.html" rel="up" title="Splines 1D"/>
+<link href="NcmSplineRBF.html" rel="prev" title="NcmSplineRBF"/>
+<link href="NcmSplineFuncTest.html" rel="next" title="NcmSplineFuncTest"/>
+<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#numcosmo-NcmSplineFunc.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#numcosmo-NcmSplineFunc.object-hierarchy">Object Hierarchy</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch02s05.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="NcmSplineRBF.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="NcmSplineFuncTest.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch02s04.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcmSplineRBF.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcmSplineFuncTest.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="numcosmo-NcmSplineFunc"></a><div class="titlepage"></div>
@@ -30,7 +44,7 @@
 <h2><span class="refentrytitle"><a name="numcosmo-NcmSplineFunc.top_of_page"></a>NcmSplineFunc</span></h2>
 <p>NcmSplineFunc — Automatic generation of the knots for a spline.</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td align="right" class="gallery_image" valign="top"></td>
 </tr></table></div>
 <div class="refsect1">
 <a name="numcosmo-NcmSplineFunc.stability-level"></a><h2>Stability Level</h2>
@@ -44,10 +58,10 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="numcosmo-NcmSplineFunc.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="functions_proto_type">
-<col class="functions_proto_name">
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -103,10 +117,10 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="numcosmo-NcmSplineFunc.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="other_proto_type">
-<col class="other_proto_name">
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -175,7 +189,7 @@ Therefore, the tests are always applied on three knots at a time.
 This procedure is repeated until the desired accuracy is met across the whole range [<em class="parameter"><code>xi</code></em>
 , <em class="parameter"><code>xf</code></em>
 ]. Note that it will most probably create a inhomogeneous set of knots.</p>
-<img src="spline_func_knots_evolution.png" align="right" width="529">
+<img align="right" src="spline_func_knots_evolution.png" width="529"/>
 
 
 The figure shows a schematically evolution of the methodology for choosing the knots.
@@ -208,7 +222,7 @@ but there are other options listed at <a class="link" href="numcosmo-NcmSplineFu
 <span class="c_punctuation">(</span>*NcmSplineFuncF<span class="c_punctuation">)</span> (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
                    <em class="parameter"><code><a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-set-func"></a><h3>ncm_spline_set_func ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -228,11 +242,11 @@ ncm_spline_set_func (<em class="parameter"><code><a class="link" href="NcmSpline
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-spline-set-func.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -274,7 +288,7 @@ ncm_spline_set_func (<em class="parameter"><code><a class="link" href="NcmSpline
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-set-func-scale"></a><h3>ncm_spline_set_func_scale ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -297,11 +311,11 @@ ncm_spline_set_func_scale (<em class="parameter"><code><a class="link" href="Ncm
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-spline-set-func-scale.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -358,7 +372,7 @@ ncm_spline_set_func_scale (<em class="parameter"><code><a class="link" href="Ncm
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-set-func1"></a><h3>ncm_spline_set_func1 ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -378,11 +392,11 @@ ncm_spline_set_func1 (<em class="parameter"><code><a class="link" href="NcmSplin
 .</p>
 <div class="refsect3">
 <a name="ncm-spline-set-func1.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -430,7 +444,7 @@ ncm_spline_set_func1 (<em class="parameter"><code><a class="link" href="NcmSplin
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-set-func-grid1"></a><h3>ncm_spline_set_func_grid1 ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -454,11 +468,11 @@ Here, it uses a <a class="link" href="numcosmo-NcmSplineFunc.html#NcmSplineFuncF
 This function is more suitable to be used within Python.</p>
 <div class="refsect3">
 <a name="ncm-spline-set-func-grid1.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -503,7 +517,7 @@ This function is more suitable to be used within Python.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-spline-set-func-grid"></a><h3>ncm_spline_set_func_grid ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -523,11 +537,11 @@ in a uniform grid within the range [<em class="parameter"><code>xi</code></em>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="ncm-spline-set-func-grid.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -584,11 +598,11 @@ The interpolation knots, $\mathbf{x}$, are automatically defined internally by t
 For more details see <a class="link" href="numcosmo-NcmSplineFunc.html#numcosmo-NcmSplineFunc.description" title="Description">description</a> above.</p>
 <div class="refsect3">
 <a name="NcmSplineFuncType.members"></a><h4>Members</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="300px" class="enum_members_name">
-<col class="enum_members_description">
-<col width="200px" class="enum_members_annotations">
+<col class="enum_members_name" width="300px"/>
+<col class="enum_members_description"/>
+<col class="enum_members_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -641,13 +655,13 @@ For more details see <a class="link" href="numcosmo-NcmSplineFunc.html#numcosmo-
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SPLINE-FUNC-DEFAULT-MAX-NODES:CAPS"></a><h3>NCM_SPLINE_FUNC_DEFAULT_MAX_NODES</h3>
 <pre class="programlisting">#define NCM_SPLINE_FUNC_DEFAULT_MAX_NODES 10000000
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NCM-SPLINE-KNOT-DIFF-TOL:CAPS"></a><h3>NCM_SPLINE_KNOT_DIFF_TOL</h3>
 <pre class="programlisting">#define NCM_SPLINE_KNOT_DIFF_TOL (GSL_DBL_EPSILON * 1.0e2)
@@ -656,6 +670,6 @@ For more details see <a class="link" href="numcosmo-NcmSplineFunc.html#numcosmo-
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

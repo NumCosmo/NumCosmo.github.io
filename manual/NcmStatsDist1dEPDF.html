@@ -1,28 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NcmStatsDist1dEPDF: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="NumCosmo Reference Manual">
-<link rel="up" href="ch02s13.html" title="Statistical Analysis">
-<link rel="prev" href="NcmStatsDist1dSpline.html" title="NcmStatsDist1dSpline">
-<link rel="next" href="NcmStatsDist2d.html" title="NcmStatsDist2d">
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
-<link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#NcmStatsDist1dEPDF.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#NcmStatsDist1dEPDF.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#NcmStatsDist1dEPDF.properties" class="shortcut">Properties</a></span>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch02s12.html" rel="up" title="Statistical Analysis"/>
+<link href="NcmStatsDist1dSpline.html" rel="prev" title="NcmStatsDist1dSpline"/>
+<link href="NcmStatsDist2d.html" rel="next" title="NcmStatsDist2d"/>
+<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmStatsDist1dEPDF.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmStatsDist1dEPDF.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmStatsDist1dEPDF.properties">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch02s13.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="NcmStatsDist1dSpline.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="NcmStatsDist2d.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch02s12.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcmStatsDist1dSpline.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcmStatsDist2d.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcmStatsDist1dEPDF"></a><div class="titlepage"></div>
@@ -31,14 +45,14 @@
 <h2><span class="refentrytitle"><a name="NcmStatsDist1dEPDF.top_of_page"></a>NcmStatsDist1dEPDF</span></h2>
 <p>NcmStatsDist1dEPDF — One dimensional probability distribution based on an EPDF</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td align="right" class="gallery_image" valign="top"></td>
 </tr></table></div>
 <div class="refsect1">
 <a name="NcmStatsDist1dEPDF.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="functions_proto_type">
-<col class="functions_proto_name">
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -102,6 +116,22 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
+<a class="link" href="NcmStatsDist1dEPDF.html#ncm-stats-dist1d-epdf-set-h-fixed" title="ncm_stats_dist1d_epdf_set_h_fixed ()">ncm_stats_dist1d_epdf_set_h_fixed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmStatsDist1dEPDF.html#ncm-stats-dist1d-epdf-get-h-fixed" title="ncm_stats_dist1d_epdf_get_h_fixed ()">ncm_stats_dist1d_epdf_get_h_fixed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
 <a class="link" href="NcmStatsDist1dEPDF.html#ncm-stats-dist1d-epdf-add-obs-weight" title="ncm_stats_dist1d_epdf_add_obs_weight ()">ncm_stats_dist1d_epdf_add_obs_weight</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -150,11 +180,11 @@
 </div>
 <div class="refsect1">
 <a name="NcmStatsDist1dEPDF.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
+<div class="informaltable"><table border="0" class="informaltable">
 <colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -192,15 +222,25 @@
 </div>
 <div class="refsect1">
 <a name="NcmStatsDist1dEPDF.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="other_proto_type">
-<col class="other_proto_name">
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmStatsDist1dEPDF.html#NCM-TYPE-STATS-DIST1D-EPDF:CAPS" title="NCM_TYPE_STATS_DIST1D_EPDF">NCM_TYPE_STATS_DIST1D_EPDF</a></td>
+</tr>
+<tr>
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="NcmStatsDist1dEPDF.html#NcmStatsDist1dEPDFBw" title="enum NcmStatsDist1dEPDFBw">NcmStatsDist1dEPDFBw</a></td>
-</tr></tbody>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcmStatsDist1dEPDF.html#NcmStatsDist1dEPDF-struct" title="NcmStatsDist1dEPDF">NcmStatsDist1dEPDF</a></td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect1">
@@ -214,7 +254,8 @@
 </div>
 <div class="refsect1">
 <a name="NcmStatsDist1dEPDF.description"></a><h2>Description</h2>
-<p>Reconstruction of an arbitrary one dimensional probability distribution based on a Empirical Probability Distribution Function (EPDF).</p>
+<p>Reconstruction of an arbitrary one dimensional probability distribution based on a
+Empirical Probability Distribution Function (EPDF).</p>
 </div>
 <div class="refsect1">
 <a name="NcmStatsDist1dEPDF.functions_details"></a><h2>Functions</h2>
@@ -229,11 +270,11 @@ ncm_stats_dist1d_epdf_new_full (<em class="parameter"><code><a href="../glib/gli
 PDF from the observations.</p>
 <div class="refsect3">
 <a name="ncm-stats-dist1d-epdf-new-full.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -265,7 +306,7 @@ PDF from the observations.</p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-stats-dist1d-epdf-new"></a><h3>ncm_stats_dist1d_epdf_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcmStatsDist1dEPDF.html" title="NcmStatsDist1dEPDF"><span class="returnvalue">NcmStatsDist1dEPDF</span></a> *
@@ -274,11 +315,11 @@ ncm_stats_dist1d_epdf_new (<em class="parameter"><code><a href="../glib/glib-Bas
 PDF from the observations.</p>
 <div class="refsect3">
 <a name="ncm-stats-dist1d-epdf-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>sd_min_scale</p></td>
@@ -293,7 +334,7 @@ PDF from the observations.</p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-stats-dist1d-epdf-ref"></a><h3>ncm_stats_dist1d_epdf_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcmStatsDist1dEPDF.html" title="NcmStatsDist1dEPDF"><span class="returnvalue">NcmStatsDist1dEPDF</span></a> *
@@ -302,11 +343,11 @@ ncm_stats_dist1d_epdf_ref (<em class="parameter"><code><a class="link" href="Ncm
  by one.</p>
 <div class="refsect3">
 <a name="ncm-stats-dist1d-epdf-ref.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>epdf1d</p></td>
@@ -322,7 +363,7 @@ ncm_stats_dist1d_epdf_ref (<em class="parameter"><code><a class="link" href="Ncm
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-stats-dist1d-epdf-free"></a><h3>ncm_stats_dist1d_epdf_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -333,11 +374,11 @@ all memory allocated by <em class="parameter"><code>epdf1d</code></em>
  is released.</p>
 <div class="refsect3">
 <a name="ncm-stats-dist1d-epdf-free.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>epdf1d</p></td>
@@ -347,7 +388,7 @@ all memory allocated by <em class="parameter"><code>epdf1d</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-stats-dist1d-epdf-clear"></a><h3>ncm_stats_dist1d_epdf_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -358,11 +399,11 @@ all memory allocated by <em class="parameter"><code>epdf1d</code></em>
  is released. Set the pointer to NULL;</p>
 <div class="refsect3">
 <a name="ncm-stats-dist1d-epdf-clear.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>epdf1d</p></td>
@@ -372,7 +413,7 @@ all memory allocated by <em class="parameter"><code>epdf1d</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-stats-dist1d-epdf-set-bw-type"></a><h3>ncm_stats_dist1d_epdf_set_bw_type ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -383,11 +424,11 @@ ncm_stats_dist1d_epdf_set_bw_type (<em class="parameter"><code><a class="link" h
 must be (re)prepared after the call to this method to be used.</p>
 <div class="refsect3">
 <a name="ncm-stats-dist1d-epdf-set-bw-type.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -404,18 +445,18 @@ must be (re)prepared after the call to this method to be used.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-stats-dist1d-epdf-get-bw-type"></a><h3>ncm_stats_dist1d_epdf_get_bw_type ()</h3>
 <pre class="programlisting"><a class="link" href="NcmStatsDist1dEPDF.html#NcmStatsDist1dEPDFBw" title="enum NcmStatsDist1dEPDFBw"><span class="returnvalue">NcmStatsDist1dEPDFBw</span></a>
 ncm_stats_dist1d_epdf_get_bw_type (<em class="parameter"><code><a class="link" href="NcmStatsDist1dEPDF.html" title="NcmStatsDist1dEPDF"><span class="type">NcmStatsDist1dEPDF</span></a> *epdf1d</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-stats-dist1d-epdf-get-bw-type.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>epdf1d</p></td>
@@ -429,7 +470,66 @@ ncm_stats_dist1d_epdf_get_bw_type (<em class="parameter"><code><a class="link" h
 <p> the current bandwidth computation type <a class="link" href="NcmStatsDist1dEPDF.html#NcmStatsDist1dEPDFBw" title="enum NcmStatsDist1dEPDFBw"><span class="type">NcmStatsDist1dEPDFBw</span></a>.</p>
 </div>
 </div>
-<hr>
+<hr/>
+<div class="refsect2">
+<a name="ncm-stats-dist1d-epdf-set-h-fixed"></a><h3>ncm_stats_dist1d_epdf_set_h_fixed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_stats_dist1d_epdf_set_h_fixed (<em class="parameter"><code><a class="link" href="NcmStatsDist1dEPDF.html" title="NcmStatsDist1dEPDF"><span class="type">NcmStatsDist1dEPDF</span></a> *epdf1d</code></em>,
+                                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> h_fixed</code></em>);</pre>
+<p>Sets the fixed bandwidth to <em class="parameter"><code>h_fixed</code></em>
+. The object
+must be (re)prepared after the call to this method to be used.
+This value is used only if the bandwidth computation type is
+<a class="link" href="NcmStatsDist1dEPDF.html#NCM-STATS-DIST1D-EPDF-BW-FIXED:CAPS"><span class="type">NCM_STATS_DIST1D_EPDF_BW_FIXED</span></a>.</p>
+<div class="refsect3">
+<a name="ncm-stats-dist1d-epdf-set-h-fixed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>epdf1d</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDist1dEPDF.html" title="NcmStatsDist1dEPDF"><span class="type">NcmStatsDist1dEPDF</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>h_fixed</p></td>
+<td class="parameter_description"><p>fixed bandwidth</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-stats-dist1d-epdf-get-h-fixed"></a><h3>ncm_stats_dist1d_epdf_get_h_fixed ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_stats_dist1d_epdf_get_h_fixed (<em class="parameter"><code><a class="link" href="NcmStatsDist1dEPDF.html" title="NcmStatsDist1dEPDF"><span class="type">NcmStatsDist1dEPDF</span></a> *epdf1d</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-stats-dist1d-epdf-get-h-fixed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>epdf1d</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmStatsDist1dEPDF.html" title="NcmStatsDist1dEPDF"><span class="type">NcmStatsDist1dEPDF</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-stats-dist1d-epdf-get-h-fixed.returns"></a><h4>Returns</h4>
+<p> the current fixed bandwidth.</p>
+</div>
+</div>
+<hr/>
 <div class="refsect2">
 <a name="ncm-stats-dist1d-epdf-add-obs-weight"></a><h3>ncm_stats_dist1d_epdf_add_obs_weight ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -443,11 +543,11 @@ ncm_stats_dist1d_epdf_add_obs_weight (<em class="parameter"><code><a class="link
 the internal approximation of the EPDF when necessary.</p>
 <div class="refsect3">
 <a name="ncm-stats-dist1d-epdf-add-obs-weight.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -469,7 +569,7 @@ the internal approximation of the EPDF when necessary.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-stats-dist1d-epdf-add-obs"></a><h3>ncm_stats_dist1d_epdf_add_obs ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -481,11 +581,11 @@ ncm_stats_dist1d_epdf_add_obs (<em class="parameter"><code><a class="link" href=
 the internal approximation of the EPDF when necessary.</p>
 <div class="refsect3">
 <a name="ncm-stats-dist1d-epdf-add-obs.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -502,7 +602,7 @@ the internal approximation of the EPDF when necessary.</p>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-stats-dist1d-epdf-reset"></a><h3>ncm_stats_dist1d_epdf_reset ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -511,11 +611,11 @@ ncm_stats_dist1d_epdf_reset (<em class="parameter"><code><a class="link" href="N
  discarding all observations.</p>
 <div class="refsect3">
 <a name="ncm-stats-dist1d-epdf-reset.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>epdf1d</p></td>
@@ -525,7 +625,7 @@ ncm_stats_dist1d_epdf_reset (<em class="parameter"><code><a class="link" href="N
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-stats-dist1d-epdf-set-min"></a><h3>ncm_stats_dist1d_epdf_set_min ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -536,11 +636,11 @@ with value smaller than <em class="parameter"><code>min</code></em>
  is added.</p>
 <div class="refsect3">
 <a name="ncm-stats-dist1d-epdf-set-min.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -557,7 +657,7 @@ with value smaller than <em class="parameter"><code>min</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-stats-dist1d-epdf-set-max"></a><h3>ncm_stats_dist1d_epdf_set_max ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -568,11 +668,11 @@ with value larger than <em class="parameter"><code>max</code></em>
  is added.</p>
 <div class="refsect3">
 <a name="ncm-stats-dist1d-epdf-set-max.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -589,7 +689,7 @@ with value larger than <em class="parameter"><code>max</code></em>
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="ncm-stats-dist1d-epdf-get-obs-mean"></a><h3>ncm_stats_dist1d_epdf_get_obs_mean ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -597,11 +697,11 @@ ncm_stats_dist1d_epdf_get_obs_mean (<em class="parameter"><code><a class="link" 
 <p>Calculates the mean value of the observations.</p>
 <div class="refsect3">
 <a name="ncm-stats-dist1d-epdf-get-obs-mean.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>epdf1d</p></td>
@@ -619,15 +719,21 @@ ncm_stats_dist1d_epdf_get_obs_mean (<em class="parameter"><code><a class="link" 
 <div class="refsect1">
 <a name="NcmStatsDist1dEPDF.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
+<a name="NCM-TYPE-STATS-DIST1D-EPDF:CAPS"></a><h3>NCM_TYPE_STATS_DIST1D_EPDF</h3>
+<pre class="programlisting">#define NCM_TYPE_STATS_DIST1D_EPDF (ncm_stats_dist1d_epdf_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="NcmStatsDist1dEPDFBw"></a><h3>enum NcmStatsDist1dEPDFBw</h3>
 <p>Gaussian kernel bandwidth type.</p>
 <div class="refsect3">
 <a name="NcmStatsDist1dEPDFBw.members"></a><h4>Members</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="300px" class="enum_members_name">
-<col class="enum_members_description">
-<col width="200px" class="enum_members_annotations">
+<col class="enum_members_name" width="300px"/>
+<col class="enum_members_description"/>
+<col class="enum_members_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -655,6 +761,11 @@ ncm_stats_dist1d_epdf_get_obs_mean (<em class="parameter"><code><a class="link" 
 </table></div>
 </div>
 </div>
+<hr/>
+<div class="refsect2">
+<a name="NcmStatsDist1dEPDF-struct"></a><h3>NcmStatsDist1dEPDF</h3>
+<pre class="programlisting">typedef struct _NcmStatsDist1dEPDF NcmStatsDist1dEPDF;</pre>
+</div>
 </div>
 <div class="refsect1">
 <a name="NcmStatsDist1dEPDF.property-details"></a><h2>Property Details</h2>
@@ -666,7 +777,7 @@ ncm_stats_dist1d_epdf_get_obs_mean (<em class="parameter"><code><a class="link" 
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: NCM_STATS_DIST1D_EPDF_BW_AUTO</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmStatsDist1dEPDF--h-fixed"></a><h3>The <code class="literal">“h-fixed”</code> property</h3>
 <pre class="programlisting">  “h-fixed”                  <span class="type">double</span></pre>
@@ -676,7 +787,7 @@ ncm_stats_dist1d_epdf_get_obs_mean (<em class="parameter"><code><a class="link" 
 <p>Allowed values: [1e-05,100000]</p>
 <p>Default value: 0.1</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmStatsDist1dEPDF--max-obs"></a><h3>The <code class="literal">“max-obs”</code> property</h3>
 <pre class="programlisting">  “max-obs”                  <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
@@ -686,7 +797,7 @@ ncm_stats_dist1d_epdf_get_obs_mean (<em class="parameter"><code><a class="link" 
 <p>Allowed values: &gt;= 10</p>
 <p>Default value: 100000</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmStatsDist1dEPDF--n-obs"></a><h3>The <code class="literal">“n-obs”</code> property</h3>
 <pre class="programlisting">  “n-obs”                    <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
@@ -695,7 +806,7 @@ ncm_stats_dist1d_epdf_get_obs_mean (<em class="parameter"><code><a class="link" 
 <p>Flags: Read</p>
 <p>Default value: 0</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmStatsDist1dEPDF--outliers-threshold"></a><h3>The <code class="literal">“outliers-threshold”</code> property</h3>
 <pre class="programlisting">  “outliers-threshold”       <span class="type">double</span></pre>
@@ -705,7 +816,7 @@ ncm_stats_dist1d_epdf_get_obs_mean (<em class="parameter"><code><a class="link" 
 <p>Allowed values: [1,1000]</p>
 <p>Default value: 20</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcmStatsDist1dEPDF--sd-min-scale"></a><h3>The <code class="literal">“sd-min-scale”</code> property</h3>
 <pre class="programlisting">  “sd-min-scale”             <span class="type">double</span></pre>
@@ -718,6 +829,6 @@ ncm_stats_dist1d_epdf_get_obs_mean (<em class="parameter"><code><a class="link" 
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

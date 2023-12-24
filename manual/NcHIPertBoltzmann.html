@@ -1,28 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NcHIPertBoltzmann: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="NumCosmo Reference Manual">
-<link rel="up" href="ch07.html" title="Perturbations">
-<link rel="prev" href="NcHIPertTwoFluids.html" title="NcHIPertTwoFluids">
-<link rel="next" href="NcHIPertBoltzmannStd.html" title="NcHIPertBoltzmannStd">
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
-<link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#NcHIPertBoltzmann.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#NcHIPertBoltzmann.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#NcHIPertBoltzmann.properties" class="shortcut">Properties</a></span>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch07.html" rel="up" title="Perturbations"/>
+<link href="NcHIPertTwoFluids.html" rel="prev" title="NcHIPertTwoFluids"/>
+<link href="NcHIPertBoltzmannStd.html" rel="next" title="NcHIPertBoltzmannStd"/>
+<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcHIPertBoltzmann.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcHIPertBoltzmann.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcHIPertBoltzmann.properties">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch07.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="NcHIPertTwoFluids.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="NcHIPertBoltzmannStd.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch07.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcHIPertTwoFluids.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcHIPertBoltzmannStd.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcHIPertBoltzmann"></a><div class="titlepage"></div>
@@ -31,14 +45,14 @@
 <h2><span class="refentrytitle"><a name="NcHIPertBoltzmann.top_of_page"></a>NcHIPertBoltzmann</span></h2>
 <p>NcHIPertBoltzmann — Abstract class for perturbative Boltzmann hierarchy.</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td align="right" class="gallery_image" valign="top"></td>
 </tr></table></div>
 <div class="refsect1">
 <a name="NcHIPertBoltzmann.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="functions_proto_type">
-<col class="functions_proto_name">
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -430,11 +444,11 @@
 </div>
 <div class="refsect1">
 <a name="NcHIPertBoltzmann.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
+<div class="informaltable"><table border="0" class="informaltable">
 <colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -503,10 +517,10 @@
 </div>
 <div class="refsect1">
 <a name="NcHIPertBoltzmann.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="other_proto_type">
-<col class="other_proto_name">
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -564,33 +578,33 @@
 <span class="c_punctuation">(</span>*NcHIPertBoltzmannCreate<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann"><span class="type">NcHIPertBoltzmann</span></a> *pb</code></em>,
                             <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmannPrepare"></a><h3>NcHIPertBoltzmannPrepare ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 <span class="c_punctuation">(</span>*NcHIPertBoltzmannPrepare<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann"><span class="type">NcHIPertBoltzmann</span></a> *pb</code></em>,
                              <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmannConf"></a><h3>NcHIPertBoltzmannConf ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 <span class="c_punctuation">(</span>*NcHIPertBoltzmannConf<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann"><span class="type">NcHIPertBoltzmann</span></a> *pb</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmannEvol"></a><h3>NcHIPertBoltzmannEvol ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 <span class="c_punctuation">(</span>*NcHIPertBoltzmannEvol<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann"><span class="type">NcHIPertBoltzmann</span></a> *pb</code></em>,
                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> g</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmannTest"></a><h3>NcHIPertBoltzmannTest ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 <span class="c_punctuation">(</span>*NcHIPertBoltzmannTest<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann"><span class="type">NcHIPertBoltzmann</span></a> *pb</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmannSources"></a><h3>NcHIPertBoltzmannSources ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -599,39 +613,39 @@
                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *S1</code></em>,
                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *S2</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmannGet"></a><h3>NcHIPertBoltzmannGet ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 <span class="c_punctuation">(</span>*NcHIPertBoltzmannGet<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann"><span class="type">NcHIPertBoltzmann</span></a> *pb</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmannGetN"></a><h3>NcHIPertBoltzmannGetN ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 <span class="c_punctuation">(</span>*NcHIPertBoltzmannGetN<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann"><span class="type">NcHIPertBoltzmann</span></a> *pb</code></em>,
                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmannGetCl"></a><h3>NcHIPertBoltzmannGetCl ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 <span class="c_punctuation">(</span>*NcHIPertBoltzmannGetCl<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann"><span class="type">NcHIPertBoltzmann</span></a> *pb</code></em>,
                            <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *Cls</code></em>);</pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HIPERT-BOLTZMANN-THETA:CAPS"></a><h3>NC_HIPERT_BOLTZMANN_THETA()</h3>
 <pre class="programlisting">#define NC_HIPERT_BOLTZMANN_THETA(n)   ((n &lt;= 2) ? (_itheta_table[n])   : (NC_HIPERT_BOLTZMANN_THETA_P2 + 1) + (2 * (n - 3)))
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HIPERT-BOLTZMANN-THETA-P:CAPS"></a><h3>NC_HIPERT_BOLTZMANN_THETA_P()</h3>
 <pre class="programlisting">#define NC_HIPERT_BOLTZMANN_THETA_P(n) ((n &lt;= 2) ? (_itheta_p_table[n]) : (NC_HIPERT_BOLTZMANN_THETA_P2 + 1) + (2 * (n - 3) + 1))
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-ref"></a><h3>nc_hipert_boltzmann_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann"><span class="returnvalue">NcHIPertBoltzmann</span></a> *
@@ -640,11 +654,11 @@ nc_hipert_boltzmann_ref (<em class="parameter"><code><a class="link" href="NcHIP
 .</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-ref.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pb</p></td>
@@ -660,7 +674,7 @@ nc_hipert_boltzmann_ref (<em class="parameter"><code><a class="link" href="NcHIP
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-free"></a><h3>nc_hipert_boltzmann_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -669,11 +683,11 @@ nc_hipert_boltzmann_free (<em class="parameter"><code><a class="link" href="NcHI
 .</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-free.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pb</p></td>
@@ -683,7 +697,7 @@ nc_hipert_boltzmann_free (<em class="parameter"><code><a class="link" href="NcHI
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-clear"></a><h3>nc_hipert_boltzmann_clear ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -693,11 +707,11 @@ nc_hipert_boltzmann_clear (<em class="parameter"><code><a class="link" href="NcH
  to NULL.</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-clear.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pb</p></td>
@@ -707,7 +721,7 @@ nc_hipert_boltzmann_clear (<em class="parameter"><code><a class="link" href="NcH
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-set-recomb"></a><h3>nc_hipert_boltzmann_set_recomb ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -716,11 +730,11 @@ nc_hipert_boltzmann_set_recomb (<em class="parameter"><code><a class="link" href
 <p>Sets the <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> object to be used in the Boltzmann evolution.</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-set-recomb.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -737,7 +751,7 @@ nc_hipert_boltzmann_set_recomb (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-set-target-Cls"></a><h3>nc_hipert_boltzmann_set_target_Cls ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -746,11 +760,11 @@ nc_hipert_boltzmann_set_target_Cls (<em class="parameter"><code><a class="link" 
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-set-target-Cls.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -767,7 +781,7 @@ nc_hipert_boltzmann_set_target_Cls (<em class="parameter"><code><a class="link" 
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-append-target-Cls"></a><h3>nc_hipert_boltzmann_append_target_Cls ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -776,11 +790,11 @@ nc_hipert_boltzmann_append_target_Cls (<em class="parameter"><code><a class="lin
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-append-target-Cls.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -797,7 +811,7 @@ nc_hipert_boltzmann_append_target_Cls (<em class="parameter"><code><a class="lin
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-target-Cls"></a><h3>nc_hipert_boltzmann_get_target_Cls ()</h3>
 <pre class="programlisting"><a class="link" href="numcosmo-NcDataCMB.html#NcDataCMBDataType" title="enum NcDataCMBDataType"><span class="returnvalue">NcDataCMBDataType</span></a>
@@ -805,11 +819,11 @@ nc_hipert_boltzmann_get_target_Cls (<em class="parameter"><code><a class="link" 
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-target-Cls.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pb</p></td>
@@ -823,7 +837,7 @@ nc_hipert_boltzmann_get_target_Cls (<em class="parameter"><code><a class="link" 
 <p> FIXME</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-set-calc-transfer"></a><h3>nc_hipert_boltzmann_set_calc_transfer ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -832,11 +846,11 @@ nc_hipert_boltzmann_set_calc_transfer (<em class="parameter"><code><a class="lin
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-set-calc-transfer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -853,7 +867,7 @@ nc_hipert_boltzmann_set_calc_transfer (<em class="parameter"><code><a class="lin
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-calc-transfer"></a><h3>nc_hipert_boltzmann_get_calc_transfer ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
@@ -861,11 +875,11 @@ nc_hipert_boltzmann_get_calc_transfer (<em class="parameter"><code><a class="lin
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-calc-transfer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pb</p></td>
@@ -879,7 +893,7 @@ nc_hipert_boltzmann_get_calc_transfer (<em class="parameter"><code><a class="lin
 <p> FIXME</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-set-lensed-Cls"></a><h3>nc_hipert_boltzmann_set_lensed_Cls ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -888,11 +902,11 @@ nc_hipert_boltzmann_set_lensed_Cls (<em class="parameter"><code><a class="link" 
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-set-lensed-Cls.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -909,7 +923,7 @@ nc_hipert_boltzmann_set_lensed_Cls (<em class="parameter"><code><a class="link" 
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-lensed-Cls"></a><h3>nc_hipert_boltzmann_lensed_Cls ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
@@ -917,11 +931,11 @@ nc_hipert_boltzmann_lensed_Cls (<em class="parameter"><code><a class="link" href
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-lensed-Cls.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pb</p></td>
@@ -935,7 +949,7 @@ nc_hipert_boltzmann_lensed_Cls (<em class="parameter"><code><a class="link" href
 <p> FIXME</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-set-tensor"></a><h3>nc_hipert_boltzmann_set_tensor ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -944,11 +958,11 @@ nc_hipert_boltzmann_set_tensor (<em class="parameter"><code><a class="link" href
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-set-tensor.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -965,7 +979,7 @@ nc_hipert_boltzmann_set_tensor (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-tensor"></a><h3>nc_hipert_boltzmann_tensor ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
@@ -973,11 +987,11 @@ nc_hipert_boltzmann_tensor (<em class="parameter"><code><a class="link" href="Nc
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-tensor.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pb</p></td>
@@ -991,7 +1005,7 @@ nc_hipert_boltzmann_tensor (<em class="parameter"><code><a class="link" href="Nc
 <p> FIXME</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-set-PHIPHI-lmax"></a><h3>nc_hipert_boltzmann_set_PHIPHI_lmax ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1000,11 +1014,11 @@ nc_hipert_boltzmann_set_PHIPHI_lmax (<em class="parameter"><code><a class="link"
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-set-PHIPHI-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1021,7 +1035,7 @@ nc_hipert_boltzmann_set_PHIPHI_lmax (<em class="parameter"><code><a class="link"
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-set-TT-lmax"></a><h3>nc_hipert_boltzmann_set_TT_lmax ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1030,11 +1044,11 @@ nc_hipert_boltzmann_set_TT_lmax (<em class="parameter"><code><a class="link" hre
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-set-TT-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1051,7 +1065,7 @@ nc_hipert_boltzmann_set_TT_lmax (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-set-EE-lmax"></a><h3>nc_hipert_boltzmann_set_EE_lmax ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1060,11 +1074,11 @@ nc_hipert_boltzmann_set_EE_lmax (<em class="parameter"><code><a class="link" hre
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-set-EE-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1081,7 +1095,7 @@ nc_hipert_boltzmann_set_EE_lmax (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-set-BB-lmax"></a><h3>nc_hipert_boltzmann_set_BB_lmax ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1090,11 +1104,11 @@ nc_hipert_boltzmann_set_BB_lmax (<em class="parameter"><code><a class="link" hre
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-set-BB-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1111,7 +1125,7 @@ nc_hipert_boltzmann_set_BB_lmax (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-set-TE-lmax"></a><h3>nc_hipert_boltzmann_set_TE_lmax ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1120,11 +1134,11 @@ nc_hipert_boltzmann_set_TE_lmax (<em class="parameter"><code><a class="link" hre
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-set-TE-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1141,7 +1155,7 @@ nc_hipert_boltzmann_set_TE_lmax (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-set-TB-lmax"></a><h3>nc_hipert_boltzmann_set_TB_lmax ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1150,11 +1164,11 @@ nc_hipert_boltzmann_set_TB_lmax (<em class="parameter"><code><a class="link" hre
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-set-TB-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1171,7 +1185,7 @@ nc_hipert_boltzmann_set_TB_lmax (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-set-EB-lmax"></a><h3>nc_hipert_boltzmann_set_EB_lmax ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1180,11 +1194,11 @@ nc_hipert_boltzmann_set_EB_lmax (<em class="parameter"><code><a class="link" hre
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-set-EB-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1201,7 +1215,7 @@ nc_hipert_boltzmann_set_EB_lmax (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-PHIPHI-lmax"></a><h3>nc_hipert_boltzmann_get_PHIPHI_lmax ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -1209,11 +1223,11 @@ nc_hipert_boltzmann_get_PHIPHI_lmax (<em class="parameter"><code><a class="link"
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-PHIPHI-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pb</p></td>
@@ -1227,7 +1241,7 @@ nc_hipert_boltzmann_get_PHIPHI_lmax (<em class="parameter"><code><a class="link"
 <p> FIXME</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-TT-lmax"></a><h3>nc_hipert_boltzmann_get_TT_lmax ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -1235,11 +1249,11 @@ nc_hipert_boltzmann_get_TT_lmax (<em class="parameter"><code><a class="link" hre
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-TT-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pb</p></td>
@@ -1253,7 +1267,7 @@ nc_hipert_boltzmann_get_TT_lmax (<em class="parameter"><code><a class="link" hre
 <p> FIXME</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-EE-lmax"></a><h3>nc_hipert_boltzmann_get_EE_lmax ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -1261,11 +1275,11 @@ nc_hipert_boltzmann_get_EE_lmax (<em class="parameter"><code><a class="link" hre
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-EE-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pb</p></td>
@@ -1279,7 +1293,7 @@ nc_hipert_boltzmann_get_EE_lmax (<em class="parameter"><code><a class="link" hre
 <p> FIXME</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-BB-lmax"></a><h3>nc_hipert_boltzmann_get_BB_lmax ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -1287,11 +1301,11 @@ nc_hipert_boltzmann_get_BB_lmax (<em class="parameter"><code><a class="link" hre
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-BB-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pb</p></td>
@@ -1305,7 +1319,7 @@ nc_hipert_boltzmann_get_BB_lmax (<em class="parameter"><code><a class="link" hre
 <p> FIXME</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-TE-lmax"></a><h3>nc_hipert_boltzmann_get_TE_lmax ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -1313,11 +1327,11 @@ nc_hipert_boltzmann_get_TE_lmax (<em class="parameter"><code><a class="link" hre
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-TE-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pb</p></td>
@@ -1331,7 +1345,7 @@ nc_hipert_boltzmann_get_TE_lmax (<em class="parameter"><code><a class="link" hre
 <p> FIXME</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-TB-lmax"></a><h3>nc_hipert_boltzmann_get_TB_lmax ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -1339,11 +1353,11 @@ nc_hipert_boltzmann_get_TB_lmax (<em class="parameter"><code><a class="link" hre
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-TB-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pb</p></td>
@@ -1357,7 +1371,7 @@ nc_hipert_boltzmann_get_TB_lmax (<em class="parameter"><code><a class="link" hre
 <p> FIXME</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-EB-lmax"></a><h3>nc_hipert_boltzmann_get_EB_lmax ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
@@ -1365,11 +1379,11 @@ nc_hipert_boltzmann_get_EB_lmax (<em class="parameter"><code><a class="link" hre
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-EB-lmax.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>pb</p></td>
@@ -1383,7 +1397,7 @@ nc_hipert_boltzmann_get_EB_lmax (<em class="parameter"><code><a class="link" hre
 <p> FIXME</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-prepare"></a><h3>nc_hipert_boltzmann_prepare ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1393,11 +1407,11 @@ nc_hipert_boltzmann_prepare (<em class="parameter"><code><a class="link" href="N
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> prepare]</span></p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-prepare.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1414,7 +1428,7 @@ nc_hipert_boltzmann_prepare (<em class="parameter"><code><a class="link" href="N
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-prepare-if-needed"></a><h3>nc_hipert_boltzmann_prepare_if_needed ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1425,11 +1439,11 @@ nc_hipert_boltzmann_prepare_if_needed (<em class="parameter"><code><a class="lin
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> prepare_if_needed]</span></p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-prepare-if-needed.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1446,7 +1460,7 @@ nc_hipert_boltzmann_prepare_if_needed (<em class="parameter"><code><a class="lin
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-PHIPHI-Cls"></a><h3>nc_hipert_boltzmann_get_PHIPHI_Cls ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1456,11 +1470,11 @@ nc_hipert_boltzmann_get_PHIPHI_Cls (<em class="parameter"><code><a class="link" 
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_PHIPHI_Cls]</span></p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-PHIPHI-Cls.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1477,7 +1491,7 @@ nc_hipert_boltzmann_get_PHIPHI_Cls (<em class="parameter"><code><a class="link" 
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-TT-Cls"></a><h3>nc_hipert_boltzmann_get_TT_Cls ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1487,11 +1501,11 @@ nc_hipert_boltzmann_get_TT_Cls (<em class="parameter"><code><a class="link" href
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_TT_Cls]</span></p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-TT-Cls.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1508,7 +1522,7 @@ nc_hipert_boltzmann_get_TT_Cls (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-EE-Cls"></a><h3>nc_hipert_boltzmann_get_EE_Cls ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1518,11 +1532,11 @@ nc_hipert_boltzmann_get_EE_Cls (<em class="parameter"><code><a class="link" href
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_EE_Cls]</span></p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-EE-Cls.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1539,7 +1553,7 @@ nc_hipert_boltzmann_get_EE_Cls (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-BB-Cls"></a><h3>nc_hipert_boltzmann_get_BB_Cls ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1549,11 +1563,11 @@ nc_hipert_boltzmann_get_BB_Cls (<em class="parameter"><code><a class="link" href
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_BB_Cls]</span></p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-BB-Cls.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1570,7 +1584,7 @@ nc_hipert_boltzmann_get_BB_Cls (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-TE-Cls"></a><h3>nc_hipert_boltzmann_get_TE_Cls ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1580,11 +1594,11 @@ nc_hipert_boltzmann_get_TE_Cls (<em class="parameter"><code><a class="link" href
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_TE_Cls]</span></p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-TE-Cls.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1601,7 +1615,7 @@ nc_hipert_boltzmann_get_TE_Cls (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-TB-Cls"></a><h3>nc_hipert_boltzmann_get_TB_Cls ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1611,11 +1625,11 @@ nc_hipert_boltzmann_get_TB_Cls (<em class="parameter"><code><a class="link" href
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_TB_Cls]</span></p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-TB-Cls.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1632,7 +1646,7 @@ nc_hipert_boltzmann_get_TB_Cls (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hipert-boltzmann-get-EB-Cls"></a><h3>nc_hipert_boltzmann_get_EB_Cls ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -1642,11 +1656,11 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_EB_Cls]</span></p>
 <div class="refsect3">
 <a name="nc-hipert-boltzmann-get-EB-Cls.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1663,13 +1677,13 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HIPERT-BOLTZMANN-LAMBDA2X:CAPS"></a><h3>NC_HIPERT_BOLTZMANN_LAMBDA2X()</h3>
 <pre class="programlisting">#define NC_HIPERT_BOLTZMANN_LAMBDA2X(lambda) (exp (-(lambda)))
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HIPERT-BOLTZMANN-X2LAMBDA:CAPS"></a><h3>NC_HIPERT_BOLTZMANN_X2LAMBDA()</h3>
 <pre class="programlisting">#define NC_HIPERT_BOLTZMANN_X2LAMBDA(x) (-log (x))
@@ -1683,11 +1697,11 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 <p>FIXME</p>
 <div class="refsect3">
 <a name="NcHIPertBoltzmannVars.members"></a><h4>Members</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="300px" class="enum_members_name">
-<col class="enum_members_description">
-<col width="200px" class="enum_members_annotations">
+<col class="enum_members_name" width="300px"/>
+<col class="enum_members_description"/>
+<col class="enum_members_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -1771,37 +1785,37 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HIPERT-BOLTZMANN-BASE-SIZE:CAPS"></a><h3>NC_HIPERT_BOLTZMANN_BASE_SIZE</h3>
 <pre class="programlisting">#define NC_HIPERT_BOLTZMANN_BASE_SIZE (NC_HIPERT_BOLTZMANN_THETA2 + 1)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HIPERT-BOLTZMANN-dB0"></a><h3>NC_HIPERT_BOLTZMANN_dB0</h3>
 <pre class="programlisting">#define NC_HIPERT_BOLTZMANN_dB0     NC_HIPERT_BOLTZMANN_B0
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HIPERT-BOLTZMANN-V:CAPS"></a><h3>NC_HIPERT_BOLTZMANN_V</h3>
 <pre class="programlisting">#define NC_HIPERT_BOLTZMANN_V       NC_HIPERT_BOLTZMANN_C1
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HIPERT-BOLTZMANN-T:CAPS"></a><h3>NC_HIPERT_BOLTZMANN_T</h3>
 <pre class="programlisting">#define NC_HIPERT_BOLTZMANN_T       NC_HIPERT_BOLTZMANN_B1
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HIPERT-BOLTZMANN-dTHETA0"></a><h3>NC_HIPERT_BOLTZMANN_dTHETA0</h3>
 <pre class="programlisting">#define NC_HIPERT_BOLTZMANN_dTHETA0 NC_HIPERT_BOLTZMANN_THETA0
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HIPERT-BOLTZMANN-U:CAPS"></a><h3>NC_HIPERT_BOLTZMANN_U</h3>
 <pre class="programlisting">#define NC_HIPERT_BOLTZMANN_U       NC_HIPERT_BOLTZMANN_THETA1
@@ -1819,7 +1833,7 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 <p>Allowed values: &gt;= 4</p>
 <p>Default value: 4</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmann--EB-l-max"></a><h3>The <code class="literal">“EB-l-max”</code> property</h3>
 <pre class="programlisting">  “EB-l-max”                 <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
@@ -1829,7 +1843,7 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 <p>Allowed values: &gt;= 4</p>
 <p>Default value: 4</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmann--EE-l-max"></a><h3>The <code class="literal">“EE-l-max”</code> property</h3>
 <pre class="programlisting">  “EE-l-max”                 <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
@@ -1839,7 +1853,7 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 <p>Allowed values: &gt;= 4</p>
 <p>Default value: 4</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmann--PHIPHI-l-max"></a><h3>The <code class="literal">“PHIPHI-l-max”</code> property</h3>
 <pre class="programlisting">  “PHIPHI-l-max”             <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
@@ -1849,7 +1863,7 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 <p>Allowed values: &gt;= 4</p>
 <p>Default value: 4</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmann--TB-l-max"></a><h3>The <code class="literal">“TB-l-max”</code> property</h3>
 <pre class="programlisting">  “TB-l-max”                 <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
@@ -1859,7 +1873,7 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 <p>Allowed values: &gt;= 4</p>
 <p>Default value: 4</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmann--TE-l-max"></a><h3>The <code class="literal">“TE-l-max”</code> property</h3>
 <pre class="programlisting">  “TE-l-max”                 <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
@@ -1869,7 +1883,7 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 <p>Allowed values: &gt;= 4</p>
 <p>Default value: 4</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmann--TT-l-max"></a><h3>The <code class="literal">“TT-l-max”</code> property</h3>
 <pre class="programlisting">  “TT-l-max”                 <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
@@ -1879,7 +1893,7 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 <p>Allowed values: &gt;= 4</p>
 <p>Default value: 30</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmann--calc-transfer"></a><h3>The <code class="literal">“calc-transfer”</code> property</h3>
 <pre class="programlisting">  “calc-transfer”            <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
@@ -1888,7 +1902,7 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: FALSE</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmann--recomb"></a><h3>The <code class="literal">“recomb”</code> property</h3>
 <pre class="programlisting">  “recomb”                   <a class="link" href="NcRecomb.html" title="NcRecomb"><span class="type">NcRecomb</span></a> *</pre>
@@ -1896,7 +1910,7 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 <p>Owner: NcHIPertBoltzmann</p>
 <p>Flags: Read / Write</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmann--target-Cls"></a><h3>The <code class="literal">“target-Cls”</code> property</h3>
 <pre class="programlisting">  “target-Cls”               <a class="link" href="numcosmo-NcDataCMB.html#NcDataCMBDataType" title="enum NcDataCMBDataType"><span class="type">NcDataCMBDataType</span></a></pre>
@@ -1905,7 +1919,7 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: NC_DATA_CMB_TYPE_TT</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmann--use-lensed-Cls"></a><h3>The <code class="literal">“use-lensed-Cls”</code> property</h3>
 <pre class="programlisting">  “use-lensed-Cls”           <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
@@ -1914,7 +1928,7 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: TRUE</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHIPertBoltzmann--use-tensor"></a><h3>The <code class="literal">“use-tensor”</code> property</h3>
 <pre class="programlisting">  “use-tensor”               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
@@ -1926,6 +1940,6 @@ nc_hipert_boltzmann_get_EB_Cls (<em class="parameter"><code><a class="link" href
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

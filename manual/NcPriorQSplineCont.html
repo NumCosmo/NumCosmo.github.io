@@ -1,28 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <title>NcHICosmoQSpline: NumCosmo Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="NumCosmo Reference Manual">
-<link rel="up" href="ch03s03.html" title="Kinematic Models">
-<link rel="prev" href="NcHICosmoQLinear.html" title="NcHICosmoQLinear">
-<link rel="next" href="NcHICosmoQRBFRprior.html" title="NcHICosmoQRBF">
-<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
-<link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#NcPriorQSplineCont.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#NcPriorQSplineCont.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#NcPriorQSplineCont.properties" class="shortcut">Properties</a></span>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch03s03.html" rel="up" title="Kinematic Models"/>
+<link href="NcHICosmoQLinear.html" rel="prev" title="NcHICosmoQLinear"/>
+<link href="NcHICosmoQRBFRprior.html" rel="next" title="NcHICosmoQRBF"/>
+<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcPriorQSplineCont.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcPriorQSplineCont.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcPriorQSplineCont.properties">Properties</a></span>
 </td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch03s03.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="NcHICosmoQLinear.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="NcHICosmoQRBFRprior.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch03s03.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcHICosmoQLinear.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcHICosmoQRBFRprior.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcPriorQSplineCont"></a><div class="titlepage"></div>
@@ -31,14 +45,14 @@
 <h2><span class="refentrytitle"><a name="NcPriorQSplineCont.top_of_page"></a>NcHICosmoQSpline</span></h2>
 <p>NcHICosmoQSpline — Kinetic model -- Spline deceleration function</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td align="right" class="gallery_image" valign="top"></td>
 </tr></table></div>
 <div class="refsect1">
 <a name="NcPriorQSplineCont.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="functions_proto_type">
-<col class="functions_proto_name">
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -134,11 +148,11 @@
 </div>
 <div class="refsect1">
 <a name="NcPriorQSplineCont.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
+<div class="informaltable"><table border="0" class="informaltable">
 <colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -231,10 +245,10 @@
 </div>
 <a name="NcHICosmoQSpline"></a><a name="NcHICosmoQSplineContPrior"></a><div class="refsect1">
 <a name="NcPriorQSplineCont.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="other_proto_type">
-<col class="other_proto_name">
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
 </colgroup>
 <tbody>
 <tr>
@@ -306,11 +320,11 @@ nc_hicosmo_qspline_new (<em class="parameter"><code><a class="link" href="NcmSpl
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hicosmo-qspline-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -336,7 +350,7 @@ nc_hicosmo_qspline_new (<em class="parameter"><code><a class="link" href="NcmSpl
 <p> FIXME</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hicosmo-qspline-add-continuity-priors"></a><h3>nc_hicosmo_qspline_add_continuity_priors ()</h3>
 <pre class="programlisting"><a class="link" href="NcPriorQSplineCont.html#NcHICosmoQSplineContPrior"><span class="returnvalue">NcHICosmoQSplineContPrior</span></a> *
@@ -348,11 +362,11 @@ nc_hicosmo_qspline_add_continuity_priors
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hicosmo-qspline-add-continuity-priors.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -384,7 +398,7 @@ nc_hicosmo_qspline_add_continuity_priors
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hicosmo-qspline-cont-prior-new"></a><h3>nc_hicosmo_qspline_cont_prior_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcPriorQSplineCont.html#NcHICosmoQSplineContPrior"><span class="returnvalue">NcHICosmoQSplineContPrior</span></a> *
@@ -392,11 +406,11 @@ nc_hicosmo_qspline_cont_prior_new (<em class="parameter"><code><a href="../glib/
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hicosmo-qspline-cont-prior-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>npriors</p></td>
@@ -411,7 +425,7 @@ nc_hicosmo_qspline_cont_prior_new (<em class="parameter"><code><a href="../glib/
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hicosmo-qspline-cont-prior-ref"></a><h3>nc_hicosmo_qspline_cont_prior_ref ()</h3>
 <pre class="programlisting"><a class="link" href="NcPriorQSplineCont.html#NcHICosmoQSplineContPrior"><span class="returnvalue">NcHICosmoQSplineContPrior</span></a> *
@@ -419,11 +433,11 @@ nc_hicosmo_qspline_cont_prior_ref (<em class="parameter"><code><a class="link" h
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hicosmo-qspline-cont-prior-ref.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>qspline_cp</p></td>
@@ -438,7 +452,7 @@ nc_hicosmo_qspline_cont_prior_ref (<em class="parameter"><code><a class="link" h
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hicosmo-qspline-cont-prior-free"></a><h3>nc_hicosmo_qspline_cont_prior_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -446,11 +460,11 @@ nc_hicosmo_qspline_cont_prior_free (<em class="parameter"><code><a class="link" 
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hicosmo-qspline-cont-prior-free.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>qspline_cp</p></td>
@@ -460,7 +474,7 @@ nc_hicosmo_qspline_cont_prior_free (<em class="parameter"><code><a class="link" 
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hicosmo-qspline-cont-prior-set-lnsigma"></a><h3>nc_hicosmo_qspline_cont_prior_set_lnsigma ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -471,11 +485,11 @@ nc_hicosmo_qspline_cont_prior_set_lnsigma
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hicosmo-qspline-cont-prior-set-lnsigma.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -497,7 +511,7 @@ nc_hicosmo_qspline_cont_prior_set_lnsigma
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hicosmo-qspline-cont-prior-set-all-lnsigma"></a><h3>nc_hicosmo_qspline_cont_prior_set_all_lnsigma ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -507,11 +521,11 @@ nc_hicosmo_qspline_cont_prior_set_all_lnsigma
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hicosmo-qspline-cont-prior-set-all-lnsigma.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -528,7 +542,7 @@ nc_hicosmo_qspline_cont_prior_set_all_lnsigma
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hicosmo-qspline-cont-prior-get-lnsigma"></a><h3>nc_hicosmo_qspline_cont_prior_get_lnsigma ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -538,11 +552,11 @@ nc_hicosmo_qspline_cont_prior_get_lnsigma
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hicosmo-qspline-cont-prior-get-lnsigma.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -563,7 +577,7 @@ nc_hicosmo_qspline_cont_prior_get_lnsigma
 <p> FIXME</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hicosmo-qspline-cont-prior-set-abstol"></a><h3>nc_hicosmo_qspline_cont_prior_set_abstol ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -573,11 +587,11 @@ nc_hicosmo_qspline_cont_prior_set_abstol
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hicosmo-qspline-cont-prior-set-abstol.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -594,7 +608,7 @@ nc_hicosmo_qspline_cont_prior_set_abstol
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-hicosmo-qspline-cont-prior-get-abstol"></a><h3>nc_hicosmo_qspline_cont_prior_get_abstol ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
@@ -603,11 +617,11 @@ nc_hicosmo_qspline_cont_prior_get_abstol
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-hicosmo-qspline-cont-prior-get-abstol.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>qspline_cp</p></td>
@@ -621,7 +635,7 @@ nc_hicosmo_qspline_cont_prior_get_abstol
 <p> FIXME</p>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="nc-prior-qspline-cont-new"></a><h3>nc_prior_qspline_cont_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcPriorQSplineCont.html" title="NcHICosmoQSpline"><span class="returnvalue">NcPriorQSplineCont</span></a> *
@@ -640,11 +654,11 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <a name="NcHICosmoQSplineSParams"></a><h3>enum NcHICosmoQSplineSParams</h3>
 <div class="refsect3">
 <a name="NcHICosmoQSplineSParams.members"></a><h4>Members</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="300px" class="enum_members_name">
-<col class="enum_members_description">
-<col width="200px" class="enum_members_annotations">
+<col class="enum_members_name" width="300px"/>
+<col class="enum_members_description"/>
+<col class="enum_members_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
@@ -672,16 +686,16 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSplineVParams"></a><h3>enum NcHICosmoQSplineVParams</h3>
 <div class="refsect3">
 <a name="NcHICosmoQSplineVParams.members"></a><h4>Members</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col width="300px" class="enum_members_name">
-<col class="enum_members_description">
-<col width="200px" class="enum_members_annotations">
+<col class="enum_members_name" width="300px"/>
+<col class="enum_members_description"/>
+<col class="enum_members_annotations" width="200px"/>
 </colgroup>
 <tbody><tr>
 <td class="enum_member_name"><p><a name="NC-HICOSMO-QSPLINE-Q:CAPS"></a>NC_HICOSMO_QSPLINE_Q</p></td>
@@ -693,43 +707,43 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 </table></div>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HICOSMO-QSPLINE-DEFAULT-H0:CAPS"></a><h3>NC_HICOSMO_QSPLINE_DEFAULT_H0</h3>
 <pre class="programlisting">#define NC_HICOSMO_QSPLINE_DEFAULT_H0      ncm_c_hubble_cte_planck6_base ()
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HICOSMO-QSPLINE-DEFAULT-OMEGA-T:CAPS"></a><h3>NC_HICOSMO_QSPLINE_DEFAULT_OMEGA_T</h3>
 <pre class="programlisting">#define NC_HICOSMO_QSPLINE_DEFAULT_OMEGA_T ( 1.0)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HICOSMO-QSPLINE-DEFAULT-AS-DRAG:CAPS"></a><h3>NC_HICOSMO_QSPLINE_DEFAULT_AS_DRAG</h3>
 <pre class="programlisting">#define NC_HICOSMO_QSPLINE_DEFAULT_AS_DRAG ( 0.035)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HICOSMO-QSPLINE-DEFAULT-Q:CAPS"></a><h3>NC_HICOSMO_QSPLINE_DEFAULT_Q</h3>
 <pre class="programlisting">#define NC_HICOSMO_QSPLINE_DEFAULT_Q       (-0.5)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HICOSMO-QSPLINE-DEFAULT-Q-LEN:CAPS"></a><h3>NC_HICOSMO_QSPLINE_DEFAULT_Q_LEN</h3>
 <pre class="programlisting">#define NC_HICOSMO_QSPLINE_DEFAULT_Q_LEN   (3)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HICOSMO-QSPLINE-CONT-PRIOR-ABSTOL:CAPS"></a><h3>NC_HICOSMO_QSPLINE_CONT_PRIOR_ABSTOL</h3>
 <pre class="programlisting">#define NC_HICOSMO_QSPLINE_CONT_PRIOR_ABSTOL (0)
 </pre>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NC-HICOSMO-QSPLINE-CONT-PRIOR-LNSIGMA:CAPS"></a><h3>NC_HICOSMO_QSPLINE_CONT_PRIOR_LNSIGMA</h3>
 <pre class="programlisting">#define NC_HICOSMO_QSPLINE_CONT_PRIOR_LNSIGMA (0)
@@ -746,7 +760,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <p>Flags: Read / Write</p>
 <p>Default value: 67.36</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSpline--H0-fit"></a><h3>The <code class="literal">“H0-fit”</code> property</h3>
 <pre class="programlisting">  “H0-fit”                   <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
@@ -755,7 +769,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSpline--Omegat"></a><h3>The <code class="literal">“Omegat”</code> property</h3>
 <pre class="programlisting">  “Omegat”                   <span class="type">double</span></pre>
@@ -764,7 +778,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <p>Flags: Read / Write</p>
 <p>Default value: 1</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSpline--Omegat-fit"></a><h3>The <code class="literal">“Omegat-fit”</code> property</h3>
 <pre class="programlisting">  “Omegat-fit”               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
@@ -773,7 +787,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSpline--asdrag"></a><h3>The <code class="literal">“asdrag”</code> property</h3>
 <pre class="programlisting">  “asdrag”                   <span class="type">double</span></pre>
@@ -782,7 +796,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <p>Flags: Read / Write</p>
 <p>Default value: 0.035</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSpline--asdrag-fit"></a><h3>The <code class="literal">“asdrag-fit”</code> property</h3>
 <pre class="programlisting">  “asdrag-fit”               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
@@ -791,7 +805,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSpline--qparam"></a><h3>The <code class="literal">“qparam”</code> property</h3>
 <pre class="programlisting">  “qparam”                   <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
@@ -799,7 +813,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <p>Owner: NcHICosmoQSpline</p>
 <p>Flags: Read / Write</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSpline--qparam-fit"></a><h3>The <code class="literal">“qparam-fit”</code> property</h3>
 <pre class="programlisting">  “qparam-fit”               <a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *</pre>
@@ -809,7 +823,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <p>Allowed values: GVariant&lt;a*&gt;</p>
 <p>Default value: NULL</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSpline--qparam-length"></a><h3>The <code class="literal">“qparam-length”</code> property</h3>
 <pre class="programlisting">  “qparam-length”            <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
@@ -818,7 +832,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <p>Flags: Read / Write / Construct Only</p>
 <p>Default value: 3</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSpline--spline"></a><h3>The <code class="literal">“spline”</code> property</h3>
 <pre class="programlisting">  “spline”                   <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *</pre>
@@ -826,7 +840,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <p>Owner: NcHICosmoQSpline</p>
 <p>Flags: Read / Write / Construct Only</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSpline--zf"></a><h3>The <code class="literal">“zf”</code> property</h3>
 <pre class="programlisting">  “zf”                       <span class="type">double</span></pre>
@@ -836,7 +850,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <p>Allowed values: [0,100]</p>
 <p>Default value: 1</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSplineContPrior--abstol"></a><h3>The <code class="literal">“abstol”</code> property</h3>
 <pre class="programlisting">  “abstol”                   <span class="type">double</span></pre>
@@ -845,7 +859,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <p>Flags: Read / Write</p>
 <p>Default value: 0.1</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSplineContPrior--abstol-fit"></a><h3>The <code class="literal">“abstol-fit”</code> property</h3>
 <pre class="programlisting">  “abstol-fit”               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
@@ -854,7 +868,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <p>Flags: Read / Write</p>
 <p>Default value: TRUE</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSplineContPrior--lnsigma"></a><h3>The <code class="literal">“lnsigma”</code> property</h3>
 <pre class="programlisting">  “lnsigma”                  <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *</pre>
@@ -862,7 +876,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <p>Owner: NcHICosmoQSplineContPrior</p>
 <p>Flags: Read / Write</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSplineContPrior--lnsigma-fit"></a><h3>The <code class="literal">“lnsigma-fit”</code> property</h3>
 <pre class="programlisting">  “lnsigma-fit”              <a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *</pre>
@@ -872,7 +886,7 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 <p>Allowed values: GVariant&lt;a*&gt;</p>
 <p>Default value: NULL</p>
 </div>
-<hr>
+<hr/>
 <div class="refsect2">
 <a name="NcHICosmoQSplineContPrior--lnsigma-length"></a><h3>The <code class="literal">“lnsigma-length”</code> property</h3>
 <pre class="programlisting">  “lnsigma-length”           <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
@@ -884,6 +898,6 @@ nc_prior_qspline_cont_new (<em class="parameter"><code><span class="type">void</
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>
