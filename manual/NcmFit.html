@@ -560,6 +560,14 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmFit.html#ncm-fit-fisher-bias" title="ncm_fit_fisher_bias ()">ncm_fit_fisher_bias</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -651,46 +659,6 @@ messageStyle: "none"
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
-<a class="link" href="NcmFit.html#ncm-fit-lr-test-range" title="ncm_fit_lr_test_range ()">ncm_fit_lr_test_range</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="NcmFit.html#ncm-fit-dprob" title="ncm_fit_dprob ()">ncm_fit_dprob</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="NcmFit.html#ncm-fit-lr-test" title="ncm_fit_lr_test ()">ncm_fit_lr_test</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="NcmFit.html#ncm-fit-prob" title="ncm_fit_prob ()">ncm_fit_prob</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="NcmFit.html#ncm-fit-chisq-test" title="ncm_fit_chisq_test ()">ncm_fit_chisq_test</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
 <a class="link" href="NcmFit.html#ncm-fit-reset" title="ncm_fit_reset ()">ncm_fit_reset</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -712,10 +680,26 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="returnvalue">NcmMatrix</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmFit.html#ncm-fit-lr-test-range" title="ncm_fit_lr_test_range ()">ncm_fit_lr_test_range</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
 </td>
 <td class="function_name">
-<a class="link" href="NcmFit.html#ncm-fit-type-constrain-error" title="ncm_fit_type_constrain_error ()">ncm_fit_type_constrain_error</a> <span class="c_punctuation">()</span>
+<a class="link" href="NcmFit.html#ncm-fit-lr-test" title="ncm_fit_lr_test ()">ncm_fit_lr_test</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmFit.html#ncm-fit-chisq-test" title="ncm_fit_chisq_test ()">ncm_fit_chisq_test</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -2674,6 +2658,52 @@ always uses the accurate numerical differentiation methods implemented in the
 </div>
 <hr/>
 <div class="refsect2">
+<a name="ncm-fit-fisher-bias"></a><h3>ncm_fit_fisher_bias ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+ncm_fit_fisher_bias (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
+                     <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *f_true</code></em>);</pre>
+<p>Calculates the covariance from the Fisher matrix and the bias vector, see
+<a class="link" href="NcmDataset.html#ncm-dataset-fisher-matrix-bias" title="ncm_dataset_fisher_matrix_bias ()"><code class="function">ncm_dataset_fisher_matrix_bias()</code></a>. The bias vector is calculated using the
+the theory vector <em class="parameter"><code>f_true</code></em>
+ as the true model expectation values.</p>
+<p>Note that this function does not use the gradient defined in the <em class="parameter"><code>fit</code></em>
+ object, it
+always uses the accurate numerical differentiation methods implemented in the
+<a class="link" href="NcmDiff.html" title="NcmDiff"><span class="type">NcmDiff</span></a> object.</p>
+<p>It sets the covariance matrix in the <a class="link" href="NcmFitState.html" title="NcmFitState"><span class="type">NcmFitState</span></a> object associated to the
+<em class="parameter"><code>fit</code></em>
+ object. Moreover, it computes the final bias vector, that is, the inverse
+of the Fisher matrix times the bias vector returns it.</p>
+<div class="refsect3">
+<a name="ncm-fit-fisher-bias.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fit</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>f_true</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-fisher-bias.returns"></a><h4>Returns</h4>
+<p>the bias vector. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="ncm-fit-numdiff-m2lnL-covar"></a><h3>ncm_fit_numdiff_m2lnL_covar ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_numdiff_m2lnL_covar (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>);</pre>
@@ -3142,253 +3172,6 @@ and <em class="parameter"><code>fpdi2</code></em>
 </div>
 <hr/>
 <div class="refsect2">
-<a name="ncm-fit-lr-test-range"></a><h3>ncm_fit_lr_test_range ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-ncm_fit_lr_test_range (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
-                       <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
-                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>,
-                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> start</code></em>,
-                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> stop</code></em>,
-                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> step</code></em>);</pre>
-<p>Computes the likelihood ratio test for the parameter <em class="parameter"><code>pid</code></em>
- of the model <em class="parameter"><code>mid</code></em>
-
-in the interval [<em class="parameter"><code>start</code></em>
-, <em class="parameter"><code>stop</code></em>
-] with a step <em class="parameter"><code>step</code></em>
-. The result is printed
-to the log.</p>
-<div class="refsect3">
-<a name="ncm-fit-lr-test-range.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table border="0" class="informaltable" width="100%">
-<colgroup>
-<col class="parameters_name" width="150px"/>
-<col class="parameters_description"/>
-<col class="parameters_annotations" width="200px"/>
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>fit</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>mid</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a>.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>pid</p></td>
-<td class="parameter_description"><p>the parameter id</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>start</p></td>
-<td class="parameter_description"><p>starting value</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>stop</p></td>
-<td class="parameter_description"><p>ending value</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>step</p></td>
-<td class="parameter_description"><p>step size</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="ncm-fit-dprob"></a><h3>ncm_fit_dprob ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-ncm_fit_dprob (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
-               <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
-               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>,
-               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> a</code></em>,
-               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> b</code></em>,
-               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> step</code></em>,
-               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> norm</code></em>);</pre>
-<p>Computes the probability density of the parameter <em class="parameter"><code>pid</code></em>
- of the model <em class="parameter"><code>mid</code></em>
-
-in the interval [<em class="parameter"><code>a</code></em>
-, <em class="parameter"><code>b</code></em>
-] with a step <em class="parameter"><code>step</code></em>
-.</p>
-<div class="refsect3">
-<a name="ncm-fit-dprob.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table border="0" class="informaltable" width="100%">
-<colgroup>
-<col class="parameters_name" width="150px"/>
-<col class="parameters_description"/>
-<col class="parameters_annotations" width="200px"/>
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>fit</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>mid</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>pid</p></td>
-<td class="parameter_description"><p>a parameter id</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>a</p></td>
-<td class="parameter_description"><p>probability lower limit</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>b</p></td>
-<td class="parameter_description"><p>probability upper limit</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>step</p></td>
-<td class="parameter_description"><p>probability density step</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>norm</p></td>
-<td class="parameter_description"><p>normalization factor</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="ncm-fit-lr-test"></a><h3>ncm_fit_lr_test ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-ncm_fit_lr_test (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
-                 <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
-                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>,
-                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> val</code></em>,
-                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> dof</code></em>);</pre>
-<p>Computes the likelihood ratio test for the parameter <em class="parameter"><code>pid</code></em>
- of the model <em class="parameter"><code>mid</code></em>
-
-with the value <em class="parameter"><code>val</code></em>
-.</p>
-<div class="refsect3">
-<a name="ncm-fit-lr-test.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table border="0" class="informaltable" width="100%">
-<colgroup>
-<col class="parameters_name" width="150px"/>
-<col class="parameters_description"/>
-<col class="parameters_annotations" width="200px"/>
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>fit</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a>.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>mid</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a>.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>pid</p></td>
-<td class="parameter_description"><p>the parameter id</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>val</p></td>
-<td class="parameter_description"><p>the parameter value</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>dof</p></td>
-<td class="parameter_description"><p>degrees of freedom</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="ncm-fit-lr-test.returns"></a><h4>Returns</h4>
-<p> the probability of the null hypothesis.</p>
-</div>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="ncm-fit-prob"></a><h3>ncm_fit_prob ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-ncm_fit_prob (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
-              <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
-              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>,
-              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> a</code></em>,
-              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> b</code></em>);</pre>
-<p>Computes the probability of the parameter <em class="parameter"><code>pid</code></em>
- of the model <em class="parameter"><code>mid</code></em>
-
-to be in the interval [<em class="parameter"><code>a</code></em>
-, <em class="parameter"><code>b</code></em>
-].</p>
-<div class="refsect3">
-<a name="ncm-fit-prob.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table border="0" class="informaltable" width="100%">
-<colgroup>
-<col class="parameters_name" width="150px"/>
-<col class="parameters_description"/>
-<col class="parameters_annotations" width="200px"/>
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>fit</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>mid</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>pid</p></td>
-<td class="parameter_description"><p>a parameter id</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>a</p></td>
-<td class="parameter_description"><p>probability lower limit</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>b</p></td>
-<td class="parameter_description"><p>probability upper limit</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="ncm-fit-prob.returns"></a><h4>Returns</h4>
-<p> the probability</p>
-</div>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="ncm-fit-chisq-test"></a><h3>ncm_fit_chisq_test ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-ncm_fit_chisq_test (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
-                    <em class="parameter"><code><span class="type">size_t</span> bins</code></em>);</pre>
-</div>
-<hr/>
-<div class="refsect2">
 <a name="ncm-fit-reset"></a><h3>ncm_fit_reset ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_reset (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>);</pre>
@@ -3501,15 +3284,150 @@ $$ m2lnL_{i-1} - m2lnL_i &lt; \mathrm{abstol} + \mathrm{reltol}\vert m2lnL_{i-1}
 </div>
 <hr/>
 <div class="refsect2">
-<a name="ncm-fit-type-constrain-error"></a><h3>ncm_fit_type_constrain_error ()</h3>
+<a name="ncm-fit-lr-test-range"></a><h3>ncm_fit_lr_test_range ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="returnvalue">NcmMatrix</span></a> *
+ncm_fit_lr_test_range (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
+                       <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> start</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> stop</code></em>,
+                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> nsteps</code></em>);</pre>
+<p>Computes the likelihood ratio test for the parameter <em class="parameter"><code>pid</code></em>
+ of the model <em class="parameter"><code>mid</code></em>
+
+in the interval [<em class="parameter"><code>start</code></em>
+, <em class="parameter"><code>stop</code></em>
+] subdivided by <em class="parameter"><code>nsteps</code></em>
+. The function returns a
+<a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> with the following columns:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem"><p>Parameter value.</p></li>
+<li class="listitem"><p>The difference in -2 times the natural logarithm of the likelihood
+ between the full model and the model with the parameter <em class="parameter"><code>pid</code></em>
+ fixed to the
+ value in the first column.</p></li>
+<li class="listitem"><p>The probability density of the difference in -2 times the natural logarithm
+ of the likelihood between the full model and the model with the parameter
+ <em class="parameter"><code>pid</code></em>
+ fixed to the value in the first column, assuming a chi-squared distribution
+ with one degree of freedom.</p></li>
+<li class="listitem"><p>Cumulative probability (two-sides) of the difference (Column 3).</p></li>
+</ol></div>
+<div class="refsect3">
+<a name="ncm-fit-lr-test-range.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fit</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>the parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start</p></td>
+<td class="parameter_description"><p>starting value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>stop</p></td>
+<td class="parameter_description"><p>ending value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>nsteps</p></td>
+<td class="parameter_description"><p>step size</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-lr-test-range.returns"></a><h4>Returns</h4>
+<p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> with the results. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-fit-lr-test"></a><h3>ncm_fit_lr_test ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-ncm_fit_type_constrain_error (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
-                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> p</code></em>,
-                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> nu</code></em>,
-                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> dir</code></em>,
-                              <em class="parameter"><code><a class="link" href="NcmMSetFunc.html" title="NcmMSetFunc"><span class="type">NcmMSetFunc</span></a> *func</code></em>,
-                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> z</code></em>,
-                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> walk</code></em>);</pre>
+ncm_fit_lr_test (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
+                 <em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>,
+                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> val</code></em>,
+                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> dof</code></em>);</pre>
+<p>Computes the likelihood ratio test for the parameter <em class="parameter"><code>pid</code></em>
+ of the model <em class="parameter"><code>mid</code></em>
+
+with the value <em class="parameter"><code>val</code></em>
+. The function returns the probability of the null hypothesis
+assuming a chi-squared distribution with <em class="parameter"><code>dof</code></em>
+ degrees of freedom. That is,
+it computes the left tail of the chi-squared distribution with <em class="parameter"><code>dof</code></em>
+ degrees of
+freedom.</p>
+<div class="refsect3">
+<a name="ncm-fit-lr-test.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fit</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mid</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pid</p></td>
+<td class="parameter_description"><p>the parameter id</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>val</p></td>
+<td class="parameter_description"><p>the parameter value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dof</p></td>
+<td class="parameter_description"><p>degrees of freedom</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-lr-test.returns"></a><h4>Returns</h4>
+<p> the probability of the null hypothesis.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-fit-chisq-test"></a><h3>ncm_fit_chisq_test ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+ncm_fit_chisq_test (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
+                    <em class="parameter"><code><span class="type">size_t</span> bins</code></em>);</pre>
 </div>
 <hr/>
 <div class="refsect2">
@@ -3518,7 +3436,6 @@ ncm_fit_type_constrain_error (<em class="parameter"><code><a class="link" href="
 ncm_fit_function_error (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
                         <em class="parameter"><code><a class="link" href="NcmMSetFunc.html" title="NcmMSetFunc"><span class="type">NcmMSetFunc</span></a> *func</code></em>,
                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *x</code></em>,
-                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> pretty_print</code></em>,
                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *f</code></em>,
                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *sigma_f</code></em>);</pre>
 <p>Propagates the errors in the free parameters to the function <em class="parameter"><code>func</code></em>
@@ -3550,11 +3467,6 @@ function. Otherwise, it will raise an error.</p>
 <tr>
 <td class="parameter_name"><p>x</p></td>
 <td class="parameter_description"><p>the argument for the function</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>pretty_print</p></td>
-<td class="parameter_description"><p>whether to print the result to the log</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>

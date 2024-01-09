@@ -267,7 +267,23 @@ messageStyle: "none"
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-inv-cov-Uf" title="ncm_data_inv_cov_Uf ()">ncm_data_inv_cov_Uf</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
 <a class="link" href="NcmData.html#ncm-data-fisher-matrix" title="ncm_data_fisher_matrix ()">ncm_data_fisher_matrix</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmData.html#ncm-data-fisher-matrix-bias" title="ncm_data_fisher_matrix_bias ()">ncm_data_fisher_matrix_bias</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 </tbody>
@@ -1123,8 +1139,8 @@ ncm_data_sigma_vector (<em class="parameter"><code><a class="link" href="NcmData
 ncm_data_inv_cov_UH (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
                      <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
                      <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *H</code></em>);</pre>
-<p>Given the Cholesky decomposition of the inverse covariance $C^{-1} = L\cdotU$
-this function returns in-place the product $U\cdotH$.</p>
+<p>Given the Cholesky decomposition of the inverse covariance $C^{-1} = L\cdot U$
+this function returns in-place the product $U\cdot H$.</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> inv_cov_UH]</span></p>
 <div class="refsect3">
 <a name="ncm-data-inv-cov-UH.parameters"></a><h4>Parameters</h4>
@@ -1156,13 +1172,53 @@ this function returns in-place the product $U\cdotH$.</p>
 </div>
 <hr/>
 <div class="refsect2">
+<a name="ncm-data-inv-cov-Uf"></a><h3>ncm_data_inv_cov_Uf ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_inv_cov_Uf (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                     <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                     <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *f</code></em>);</pre>
+<p>Given the Cholesky decomposition of the inverse covariance $C^{-1} = L\cdot U$
+this function returns in-place the product $U\cdot\vec{f}$.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> inv_cov_Uf]</span></p>
+<div class="refsect3">
+<a name="ncm-data-inv-cov-Uf.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>f</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="ncm-data-fisher-matrix"></a><h3>ncm_data_fisher_matrix ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_data_fisher_matrix (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
                         <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
                         <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> **IM</code></em>);</pre>
 <p>Calculates the Fisher-information matrix <em class="parameter"><code>I</code></em>
-.</p>
+. Note that this is an
+additive quantity, i.e., the Fisher-information matrix of different
+and uncorrrelated data sets can be added.</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> fisher_matrix]</span></p>
 <div class="refsect3">
 <a name="ncm-data-fisher-matrix.parameters"></a><h4>Parameters</h4>
@@ -1186,6 +1242,61 @@ ncm_data_fisher_matrix (<em class="parameter"><code><a class="link" href="NcmDat
 <tr>
 <td class="parameter_name"><p>IM</p></td>
 <td class="parameter_description"><p>The fisher matrix. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-data-fisher-matrix-bias"></a><h3>ncm_data_fisher_matrix_bias ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_fisher_matrix_bias (<em class="parameter"><code><a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a> *data</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *f_true</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> **IM</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> **delta_theta</code></em>);</pre>
+<p>Calculates the Fisher-information matrix <em class="parameter"><code>I</code></em>
+ and the bias vector <em class="parameter"><code>f</code></em>
+
+assuming that the true theoretical model is <em class="parameter"><code>f_true</code></em>
+. Note that these
+are additive quantities, i.e., the Fisher-information matrix and
+the bias vector of different and uncorrrelated data sets can be added.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> fisher_matrix_bias]</span></p>
+<div class="refsect3">
+<a name="ncm-data-fisher-matrix-bias.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmData.html" title="NcmData"><span class="type">NcmData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>f_true</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>IM</p></td>
+<td class="parameter_description"><p>The fisher matrix. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>delta_theta</p></td>
+<td class="parameter_description"><p>The shift parameter vector. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
 </tr>
 </tbody>
