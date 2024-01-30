@@ -153,8 +153,25 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="property_type">
-<a href="../gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> *</td>
-<td class="property_name"><a class="link" href="NcmModelBuilder.html#NcmModelBuilder--parent-type" title="The “parent-type” property">parent-type</a></td>
+<span class="type">char</span> *</td>
+<td class="property_name"><a class="link" href="NcmModelBuilder.html#NcmModelBuilder--parent-type-string" title="The “parent-type-string” property">parent-type-string</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmModelBuilder.html#NcmModelBuilder--sparams" title="The “sparams” property">sparams</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="NcmModelBuilder.html#NcmModelBuilder--stackable" title="The “stackable” property">stackable</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmModelBuilder.html#NcmModelBuilder--vparams" title="The “vparams” property">vparams</a></td>
 <td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 </tbody>
@@ -486,7 +503,8 @@ ncm_model_builder_add_vparam (<em class="parameter"><code><a class="link" href="
 ncm_model_builder_create (<em class="parameter"><code><a class="link" href="NcmModelBuilder.html" title="NcmModelBuilder"><span class="type">NcmModelBuilder</span></a> *mb</code></em>);</pre>
 <p>Creates a new object type using the scalar and vector parameters defined
 in <em class="parameter"><code>mb</code></em>
-.</p>
+. If the object type was already created, this function just returns
+the type.</p>
 <div class="refsect3">
 <a name="ncm-model-builder-create.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table border="0" class="informaltable" width="100%">
@@ -501,6 +519,10 @@ in <em class="parameter"><code>mb</code></em>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-model-builder-create.returns"></a><h4>Returns</h4>
+<p> the new object type.</p>
 </div>
 </div>
 <hr/>
@@ -597,12 +619,37 @@ ncm_model_builder_get_sparams (<em class="parameter"><code><a class="link" href=
 </div>
 <hr/>
 <div class="refsect2">
-<a name="NcmModelBuilder--parent-type"></a><h3>The <code class="literal">“parent-type”</code> property</h3>
-<pre class="programlisting">  “parent-type”              <a href="../gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> *</pre>
-<p>Parent type.</p>
+<a name="NcmModelBuilder--parent-type-string"></a><h3>The <code class="literal">“parent-type-string”</code> property</h3>
+<pre class="programlisting">  “parent-type-string”       <span class="type">char</span> *</pre>
+<p>Parent type name.</p>
 <p>Owner: NcmModelBuilder</p>
 <p>Flags: Read / Write / Construct Only</p>
-<p>Allowed values: NcmModel</p>
+<p>Default value: "NcmModel"</p>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcmModelBuilder--sparams"></a><h3>The <code class="literal">“sparams”</code> property</h3>
+<pre class="programlisting">  “sparams”                  <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</pre>
+<p>Scalar parameters.</p>
+<p>Owner: NcmModelBuilder</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcmModelBuilder--stackable"></a><h3>The <code class="literal">“stackable”</code> property</h3>
+<pre class="programlisting">  “stackable”                <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Stackable.</p>
+<p>Owner: NcmModelBuilder</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: FALSE</p>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcmModelBuilder--vparams"></a><h3>The <code class="literal">“vparams”</code> property</h3>
+<pre class="programlisting">  “vparams”                  <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</pre>
+<p>Vector parameters.</p>
+<p>Owner: NcmModelBuilder</p>
+<p>Flags: Read / Write / Construct Only</p>
 </div>
 </div>
 </div>

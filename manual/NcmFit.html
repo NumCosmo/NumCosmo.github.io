@@ -89,6 +89,30 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="NcmFit.html#NcmFitWriter" title="NcmFitWriter ()">*NcmFitWriter</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="NcmFit.html#NcmFitUpdater" title="NcmFitUpdater ()">*NcmFitUpdater</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="NcmFit.html#NcmFitUpdateChange" title="NcmFitUpdateChange ()">*NcmFitUpdateChange</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="NcmFit.html" title="NcmFit"><span class="returnvalue">NcmFit</span></a> *
 </td>
 <td class="function_name">
@@ -419,6 +443,14 @@ messageStyle: "none"
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
+<a class="link" href="NcmFit.html#ncm-fit-set-logger" title="ncm_fit_set_logger ()">ncm_fit_set_logger</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
 <a class="link" href="NcmFit.html#ncm-fit-log-info" title="ncm_fit_log_info ()">ncm_fit_log_info</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -672,7 +704,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">void</span>
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="NcmFit.html#ncm-fit-run-restart" title="ncm_fit_run_restart ()">ncm_fit_run_restart</a> <span class="c_punctuation">()</span>
@@ -901,6 +933,27 @@ messageStyle: "none"
 </div>
 <hr/>
 <div class="refsect2">
+<a name="NcmFitWriter"></a><h3>NcmFitWriter ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*NcmFitWriter<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
+                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *msg</code></em>);</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcmFitUpdater"></a><h3>NcmFitUpdater ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*NcmFitUpdater<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
+                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n</code></em>);</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcmFitUpdateChange"></a><h3>NcmFitUpdateChange ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*NcmFitUpdateChange<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
+                       <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *msg</code></em>);</pre>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="ncm-fit-factory"></a><h3>ncm_fit_factory ()</h3>
 <pre class="programlisting"><a class="link" href="NcmFit.html" title="NcmFit"><span class="returnvalue">NcmFit</span></a> *
 ncm_fit_factory (<em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitType" title="enum NcmFitType"><span class="type">NcmFitType</span></a> ftype</code></em>,
@@ -925,8 +978,8 @@ ncm_fit_factory (<em class="parameter"><code><a class="link" href="NcmFit.html#N
 </tr>
 <tr>
 <td class="parameter_name"><p>algo_name</p></td>
-<td class="parameter_description"><p>name of the algorithm to be used</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p>name of the algorithm to be used. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lh</p></td>
@@ -2140,6 +2193,61 @@ ncm_fit_get_desc (<em class="parameter"><code><a class="link" href="NcmFit.html"
 </div>
 <hr/>
 <div class="refsect2">
+<a name="ncm-fit-set-logger"></a><h3>ncm_fit_set_logger ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_fit_set_logger (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
+                    <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitWriter" title="NcmFitWriter ()"><span class="type">NcmFitWriter</span></a> writer</code></em>,
+                    <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitUpdater" title="NcmFitUpdater ()"><span class="type">NcmFitUpdater</span></a> updater</code></em>,
+                    <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitUpdateChange" title="NcmFitUpdateChange ()"><span class="type">NcmFitUpdateChange</span></a> start_update</code></em>,
+                    <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitUpdateChange" title="NcmFitUpdateChange ()"><span class="type">NcmFitUpdateChange</span></a> end_update</code></em>);</pre>
+<p>Sets the logger functions. The <em class="parameter"><code>writer</code></em>
+ function is called to write the
+messages to the log. The <em class="parameter"><code>updater</code></em>
+ function is called to update the
+parameters. The <em class="parameter"><code>start_update</code></em>
+ is called before the minimization starts and
+the <em class="parameter"><code>end_update</code></em>
+ is called after the minimization ends.</p>
+<div class="refsect3">
+<a name="ncm-fit-set-logger.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fit</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>writer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html#NcmFitWriter" title="NcmFitWriter ()"><span class="type">NcmFitWriter</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>updater</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html#NcmFitUpdater" title="NcmFitUpdater ()"><span class="type">NcmFitUpdater</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_update</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html#NcmFitUpdateChange" title="NcmFitUpdateChange ()"><span class="type">NcmFitUpdateChange</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>end_update</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmFit.html#NcmFitUpdateChange" title="NcmFitUpdateChange ()"><span class="type">NcmFitUpdateChange</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="ncm-fit-log-info"></a><h3>ncm_fit_log_info ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_log_info (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>);</pre>
@@ -3229,7 +3337,7 @@ ncm_fit_run (<em class="parameter"><code><a class="link" href="NcmFit.html" titl
 <hr/>
 <div class="refsect2">
 <a name="ncm-fit-run-restart"></a><h3>ncm_fit_run_restart ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 ncm_fit_run_restart (<em class="parameter"><code><a class="link" href="NcmFit.html" title="NcmFit"><span class="type">NcmFit</span></a> *fit</code></em>,
                      <em class="parameter"><code><a class="link" href="NcmFit.html#NcmFitRunMsgs" title="enum NcmFitRunMsgs"><span class="type">NcmFitRunMsgs</span></a> mtype</code></em>,
                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> abstol</code></em>,
@@ -3280,6 +3388,10 @@ $$ m2lnL_{i-1} - m2lnL_i &lt; \mathrm{abstol} + \mathrm{reltol}\vert m2lnL_{i-1}
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-fit-run-restart.returns"></a><h4>Returns</h4>
+<p> TRUE if the minimization went through.</p>
 </div>
 </div>
 <hr/>

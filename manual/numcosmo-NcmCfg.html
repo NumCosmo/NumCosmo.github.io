@@ -344,6 +344,14 @@ messageStyle: "none"
 <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 </td>
 <td class="function_name">
+<a class="link" href="numcosmo-NcmCfg.html#ncm-cfg-get-data-directory" title="ncm_cfg_get_data_directory ()">ncm_cfg_get_data_directory</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
 <a class="link" href="numcosmo-NcmCfg.html#ncm-cfg-command-line" title="ncm_cfg_command_line ()">ncm_cfg_command_line</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -1367,6 +1375,21 @@ is not found.</p></td>
 <a name="ncm-cfg-get-data-filename.returns"></a><h4>Returns</h4>
 <p>Full path for <em class="parameter"><code>filename</code></em>
 . </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-cfg-get-data-directory"></a><h3>ncm_cfg_get_data_directory ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_cfg_get_data_directory (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Gets the data directory path. It first checks the environment variable
+NCM_CFG_DATA_DIR_ENV, then the package data directory and finally the
+package source directory. If none of these directories exists, it raises
+an error.</p>
+<div class="refsect3">
+<a name="ncm-cfg-get-data-directory.returns"></a><h4>Returns</h4>
+<p>Full path for the data directory. </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>

@@ -68,14 +68,6 @@ messageStyle: "none"
 <a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="returnvalue">NcmPriorGaussParam</span></a> *
 </td>
 <td class="function_name">
-<a class="link" href="NcmPriorGaussParam.html#ncm-prior-gauss-param-new-pindex" title="ncm_prior_gauss_param_new_pindex ()">ncm_prior_gauss_param_new_pindex</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="returnvalue">NcmPriorGaussParam</span></a> *
-</td>
-<td class="function_name">
 <a class="link" href="NcmPriorGaussParam.html#ncm-prior-gauss-param-new-name" title="ncm_prior_gauss_param_new_name ()">ncm_prior_gauss_param_new_name</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -103,6 +95,52 @@ messageStyle: "none"
 <a class="link" href="NcmPriorGaussParam.html#ncm-prior-gauss-param-clear" title="ncm_prior_gauss_param_clear ()">ncm_prior_gauss_param_clear</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPriorGaussParam.html#ncm-prior-gauss-param-set-model-ns" title="ncm_prior_gauss_param_set_model_ns ()">ncm_prior_gauss_param_set_model_ns</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPriorGaussParam.html#ncm-prior-gauss-param-set-stack-pos" title="ncm_prior_gauss_param_set_stack_pos ()">ncm_prior_gauss_param_set_stack_pos</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPriorGaussParam.html#ncm-prior-gauss-param-set-param-name" title="ncm_prior_gauss_param_set_param_name ()">ncm_prior_gauss_param_set_param_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmPriorGaussParam.html#ncm-prior-gauss-param-peek-model-ns" title="ncm_prior_gauss_param_peek_model_ns ()">ncm_prior_gauss_param_peek_model_ns</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmPriorGaussParam.html#ncm-prior-gauss-param-peek-param-name" title="ncm_prior_gauss_param_peek_param_name ()">ncm_prior_gauss_param_peek_param_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPriorGaussParam.html#ncm-prior-gauss-param-get-stack-pos" title="ncm_prior_gauss_param_get_stack_pos ()">ncm_prior_gauss_param_get_stack_pos</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -116,13 +154,20 @@ messageStyle: "none"
 </colgroup>
 <tbody>
 <tr>
-<td class="property_type"><span class="type">int</span></td>
-<td class="property_name"><a class="link" href="NcmPriorGaussParam.html#NcmPriorGaussParam--mid" title="The “mid” property">mid</a></td>
+<td class="property_type">
+<span class="type">char</span> *</td>
+<td class="property_name"><a class="link" href="NcmPriorGaussParam.html#NcmPriorGaussParam--model-ns" title="The “model-ns” property">model-ns</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<span class="type">char</span> *</td>
+<td class="property_name"><a class="link" href="NcmPriorGaussParam.html#NcmPriorGaussParam--parameter-name" title="The “parameter-name” property">parameter-name</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
 <td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
-<td class="property_name"><a class="link" href="NcmPriorGaussParam.html#NcmPriorGaussParam--pid" title="The “pid” property">pid</a></td>
+<td class="property_name"><a class="link" href="NcmPriorGaussParam.html#NcmPriorGaussParam--stack-pos" title="The “stack-pos” property">stack-pos</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 </tbody>
@@ -174,12 +219,12 @@ user-specified mean and standard deviation parameters.</p>
 <div class="refsect2">
 <a name="ncm-prior-gauss-param-new"></a><h3>ncm_prior_gauss_param_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="returnvalue">NcmPriorGaussParam</span></a> *
-ncm_prior_gauss_param_new (<em class="parameter"><code><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> mid</code></em>,
+ncm_prior_gauss_param_new (<em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> pid</code></em>,
                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mu</code></em>,
                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma</code></em>);</pre>
 <p>Creates a new Gaussian prior for parameter <em class="parameter"><code>pid</code></em>
- of model <em class="parameter"><code>mid</code></em>
+ of <em class="parameter"><code>model</code></em>
 .</p>
 <div class="refsect3">
 <a name="ncm-prior-gauss-param-new.parameters"></a><h4>Parameters</h4>
@@ -191,8 +236,8 @@ ncm_prior_gauss_param_new (<em class="parameter"><code><a class="link" href="Ncm
 </colgroup>
 <tbody>
 <tr>
-<td class="parameter_name"><p>mid</p></td>
-<td class="parameter_description"><p>model id</p></td>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -222,59 +267,15 @@ ncm_prior_gauss_param_new (<em class="parameter"><code><a class="link" href="Ncm
 </div>
 <hr/>
 <div class="refsect2">
-<a name="ncm-prior-gauss-param-new-pindex"></a><h3>ncm_prior_gauss_param_new_pindex ()</h3>
-<pre class="programlisting"><a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="returnvalue">NcmPriorGaussParam</span></a> *
-ncm_prior_gauss_param_new_pindex (<em class="parameter"><code>const <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a> *pi</code></em>,
-                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mu</code></em>,
-                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma</code></em>);</pre>
-<p>Creates a new Gaussian prior for parameter <em class="parameter"><code>pid</code></em>
- of model <em class="parameter"><code>mid</code></em>
-.</p>
-<div class="refsect3">
-<a name="ncm-prior-gauss-param-new-pindex.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table border="0" class="informaltable" width="100%">
-<colgroup>
-<col class="parameters_name" width="150px"/>
-<col class="parameters_description"/>
-<col class="parameters_annotations" width="200px"/>
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>pi</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html#NcmMSetPIndex"><span class="type">NcmMSetPIndex</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>mu</p></td>
-<td class="parameter_description"><p>mean</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>sigma</p></td>
-<td class="parameter_description"><p>standard deviation</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="ncm-prior-gauss-param-new-pindex.returns"></a><h4>Returns</h4>
-<p><em class="parameter"><code>pgp</code></em>
-. </p>
-<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
-</div>
-</div>
-<hr/>
-<div class="refsect2">
 <a name="ncm-prior-gauss-param-new-name"></a><h3>ncm_prior_gauss_param_new_name ()</h3>
 <pre class="programlisting"><a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="returnvalue">NcmPriorGaussParam</span></a> *
-ncm_prior_gauss_param_new_name (<em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
-                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+ncm_prior_gauss_param_new_name (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> mu</code></em>,
                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> sigma</code></em>);</pre>
 <p>Creates a new Gaussian prior for parameter named <em class="parameter"><code>name</code></em>
  in <em class="parameter"><code>mset</code></em>
-.</p>
+. See
+<a class="link" href="NcmMSet.html#ncm-mset-split-full-name" title="ncm_mset_split_full_name ()"><code class="function">ncm_mset_split_full_name()</code></a> for details on the parameter name format.</p>
 <div class="refsect3">
 <a name="ncm-prior-gauss-param-new-name.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table border="0" class="informaltable" width="100%">
@@ -284,11 +285,6 @@ ncm_prior_gauss_param_new_name (<em class="parameter"><code><a class="link" href
 <col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
-<tr>
-<td class="parameter_name"><p>mset</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
 <tr>
 <td class="parameter_name"><p>name</p></td>
 <td class="parameter_description"><p>parameter name</p></td>
@@ -390,6 +386,183 @@ ncm_prior_gauss_param_clear (<em class="parameter"><code><a class="link" href="N
 </table></div>
 </div>
 </div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-prior-gauss-param-set-model-ns"></a><h3>ncm_prior_gauss_param_set_model_ns ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_prior_gauss_param_set_model_ns (<em class="parameter"><code><a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="type">NcmPriorGaussParam</span></a> *pgp</code></em>,
+                                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *model_ns</code></em>);</pre>
+<p>Sets the model namespace of <em class="parameter"><code>pgp</code></em>
+ to <em class="parameter"><code>model_ns</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-prior-gauss-param-set-model-ns.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>pgp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="type">NcmPriorGaussParam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model_ns</p></td>
+<td class="parameter_description"><p>model namespace</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-prior-gauss-param-set-stack-pos"></a><h3>ncm_prior_gauss_param_set_stack_pos ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_prior_gauss_param_set_stack_pos (<em class="parameter"><code><a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="type">NcmPriorGaussParam</span></a> *pgp</code></em>,
+                                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> stack_pos</code></em>);</pre>
+<p>Sets the stack position of <em class="parameter"><code>pgp</code></em>
+ to <em class="parameter"><code>stack_pos</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-prior-gauss-param-set-stack-pos.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>pgp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="type">NcmPriorGaussParam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>stack_pos</p></td>
+<td class="parameter_description"><p>stack position</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-prior-gauss-param-set-param-name"></a><h3>ncm_prior_gauss_param_set_param_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_prior_gauss_param_set_param_name (<em class="parameter"><code><a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="type">NcmPriorGaussParam</span></a> *pgp</code></em>,
+                                      <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *param_name</code></em>);</pre>
+<p>Sets the parameter name of <em class="parameter"><code>pgp</code></em>
+ to <em class="parameter"><code>param_name</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-prior-gauss-param-set-param-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>pgp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="type">NcmPriorGaussParam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param_name</p></td>
+<td class="parameter_description"><p>parameter name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-prior-gauss-param-peek-model-ns"></a><h3>ncm_prior_gauss_param_peek_model_ns ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_prior_gauss_param_peek_model_ns (<em class="parameter"><code><a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="type">NcmPriorGaussParam</span></a> *pgp</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-prior-gauss-param-peek-model-ns.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pgp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="type">NcmPriorGaussParam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-prior-gauss-param-peek-model-ns.returns"></a><h4>Returns</h4>
+<p>the model namespace of <em class="parameter"><code>pgp</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-prior-gauss-param-peek-param-name"></a><h3>ncm_prior_gauss_param_peek_param_name ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+ncm_prior_gauss_param_peek_param_name (<em class="parameter"><code><a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="type">NcmPriorGaussParam</span></a> *pgp</code></em>);</pre>
+<div class="refsect3">
+<a name="ncm-prior-gauss-param-peek-param-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pgp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="type">NcmPriorGaussParam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-prior-gauss-param-peek-param-name.returns"></a><h4>Returns</h4>
+<p>the parameter name of <em class="parameter"><code>pgp</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-prior-gauss-param-get-stack-pos"></a><h3>ncm_prior_gauss_param_get_stack_pos ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+ncm_prior_gauss_param_get_stack_pos (<em class="parameter"><code><a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="type">NcmPriorGaussParam</span></a> *pgp</code></em>);</pre>
+<p>Gets the stack position of the parameter.</p>
+<div class="refsect3">
+<a name="ncm-prior-gauss-param-get-stack-pos.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pgp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPriorGaussParam.html" title="NcmPriorGaussParam"><span class="type">NcmPriorGaussParam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-prior-gauss-param-get-stack-pos.returns"></a><h4>Returns</h4>
+<p> the stack position of <em class="parameter"><code>pgp</code></em>
+.</p>
+</div>
+</div>
 </div>
 <div class="refsect1">
 <a name="NcmPriorGaussParam.other_details"></a><h2>Types and Values</h2>
@@ -407,19 +580,27 @@ ncm_prior_gauss_param_clear (<em class="parameter"><code><a class="link" href="N
 <div class="refsect1">
 <a name="NcmPriorGaussParam.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="NcmPriorGaussParam--mid"></a><h3>The <code class="literal">“mid”</code> property</h3>
-<pre class="programlisting">  “mid”                      <span class="type">int</span></pre>
-<p>model id.</p>
+<a name="NcmPriorGaussParam--model-ns"></a><h3>The <code class="literal">“model-ns”</code> property</h3>
+<pre class="programlisting">  “model-ns”                 <span class="type">char</span> *</pre>
+<p>model namespace.</p>
 <p>Owner: NcmPriorGaussParam</p>
 <p>Flags: Read / Write / Construct</p>
-<p>Allowed values: &gt;= 0</p>
-<p>Default value: 0</p>
+<p>Default value: NULL</p>
 </div>
 <hr/>
 <div class="refsect2">
-<a name="NcmPriorGaussParam--pid"></a><h3>The <code class="literal">“pid”</code> property</h3>
-<pre class="programlisting">  “pid”                      <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>parameter id.</p>
+<a name="NcmPriorGaussParam--parameter-name"></a><h3>The <code class="literal">“parameter-name”</code> property</h3>
+<pre class="programlisting">  “parameter-name”           <span class="type">char</span> *</pre>
+<p>parameter name.</p>
+<p>Owner: NcmPriorGaussParam</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: NULL</p>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcmPriorGaussParam--stack-pos"></a><h3>The <code class="literal">“stack-pos”</code> property</h3>
+<pre class="programlisting">  “stack-pos”                <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>stack position.</p>
 <p>Owner: NcmPriorGaussParam</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: 0</p>
