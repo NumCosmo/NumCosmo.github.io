@@ -9,7 +9,7 @@
 <link href="ch02s11.html" rel="up" title="Data Objects"/>
 <link href="NcmDataGaussDiag.html" rel="prev" title="NcmDataGaussDiag"/>
 <link href="NcmDataPoisson.html" rel="next" title="NcmDataPoisson"/>
-<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 <link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
 //<![CDATA[
@@ -65,7 +65,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<span class="returnvalue">guint</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcmDataGaussCov.html#ncm-data-gauss-cov-get-size" title="ncm_data_gauss_cov_get_size ()">ncm_data_gauss_cov_get_size</a> <span class="c_punctuation">()</span>
@@ -89,6 +89,14 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGaussCov.html#ncm-data-gauss-cov-set-cov" title="ncm_data_gauss_cov_set_cov ()">ncm_data_gauss_cov_set_cov</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
 </td>
 <td class="function_name">
@@ -105,7 +113,23 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="returnvalue">NcmMatrix</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGaussCov.html#ncm-data-gauss-cov-compute-cov" title="ncm_data_gauss_cov_compute_cov ()">ncm_data_gauss_cov_compute_cov</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmDataGaussCov.html#ncm-data-gauss-cov-compute-mean" title="ncm_data_gauss_cov_compute_mean ()">ncm_data_gauss_cov_compute_mean</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcmDataGaussCov.html#ncm-data-gauss-cov-get-log-norma" title="ncm_data_gauss_cov_get_log_norma ()">ncm_data_gauss_cov_get_log_norma</a> <span class="c_punctuation">()</span>
@@ -144,12 +168,12 @@ messageStyle: "none"
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_type"><span class="type">guint</span></td>
 <td class="property_name"><a class="link" href="NcmDataGaussCov.html#NcmDataGaussCov--n-points" title="The “n-points” property">n-points</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_type"><span class="type">gboolean</span></td>
 <td class="property_name"><a class="link" href="NcmDataGaussCov.html#NcmDataGaussCov--use-norma" title="The “use-norma” property">use-norma</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -181,12 +205,13 @@ messageStyle: "none"
 </div>
 <div class="refsect1">
 <a name="NcmDataGaussCov.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+<pre class="screen">    GObject
     <span class="lineart">╰──</span> <a class="link" href="NcmData.html" title="NcmData">NcmData</a>
         <span class="lineart">╰──</span> NcmDataGaussCov
             <span class="lineart">├──</span> <a class="link" href="NcDataBaoDHrDAr.html" title="NcDataBaoDHrDAr">NcDataBaoDHrDAr</a>
             <span class="lineart">├──</span> <a class="link" href="NcDataBaoDMrHr.html" title="NcDataBaoDMrHr">NcDataBaoDMrHr</a>
             <span class="lineart">├──</span> <a class="link" href="NcDataBaoDtrDHr.html" title="NcDataBaoDtrDHr">NcDataBaoDtrDHr</a>
+            <span class="lineart">├──</span> <a class="link" href="NcDataClusterNCountsGauss.html" title="NcDataClusterNCountsGauss">NcDataClusterNCountsGauss</a>
             <span class="lineart">├──</span> <a class="link" href="NcDataSNIACov.html" title="NcDataSNIACov">NcDataSNIACov</a>
             <span class="lineart">├──</span> <a class="link" href="NcDataXcor.html" title="NcDataXcor">NcDataXcor</a>
             <span class="lineart">╰──</span> <a class="link" href="NcmDataGaussCovMVND.html" title="NcmDataGaussCovMVND">NcmDataGaussCovMVND</a>
@@ -202,7 +227,7 @@ messageStyle: "none"
 <a name="ncm-data-gauss-cov-set-size"></a><h3>ncm_data_gauss_cov_set_size ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_data_gauss_cov_set_size (<em class="parameter"><code><a class="link" href="NcmDataGaussCov.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCov</span></a> *gauss</code></em>,
-                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> np</code></em>);</pre>
+                             <em class="parameter"><code><span class="type">guint</span> np</code></em>);</pre>
 <p>Sets the data size to <em class="parameter"><code>np</code></em>
 .</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> set_size]</span></p>
@@ -232,7 +257,7 @@ ncm_data_gauss_cov_set_size (<em class="parameter"><code><a class="link" href="N
 <hr/>
 <div class="refsect2">
 <a name="ncm-data-gauss-cov-get-size"></a><h3>ncm_data_gauss_cov_get_size ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<pre class="programlisting"><span class="returnvalue">guint</span>
 ncm_data_gauss_cov_get_size (<em class="parameter"><code><a class="link" href="NcmDataGaussCov.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCov</span></a> *gauss</code></em>);</pre>
 <p>Gets the data size.</p>
 <p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_size]</span></p>
@@ -261,7 +286,7 @@ ncm_data_gauss_cov_get_size (<em class="parameter"><code><a class="link" href="N
 <a name="ncm-data-gauss-cov-use-norma"></a><h3>ncm_data_gauss_cov_use_norma ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_data_gauss_cov_use_norma (<em class="parameter"><code><a class="link" href="NcmDataGaussCov.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCov</span></a> *gauss</code></em>,
-                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_norma</code></em>);</pre>
+                              <em class="parameter"><code><span class="type">gboolean</span> use_norma</code></em>);</pre>
 <p>Sets whether the value of $-2\ln(L)$ will be properly normalized.</p>
 <div class="refsect3">
 <a name="ncm-data-gauss-cov-use-norma.parameters"></a><h4>Parameters</h4>
@@ -311,6 +336,36 @@ ncm_data_gauss_cov_replace_mean (<em class="parameter"><code><a class="link" hre
 <tr>
 <td class="parameter_name"><p>mean</p></td>
 <td class="parameter_description"><p>new mean <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-data-gauss-cov-set-cov"></a><h3>ncm_data_gauss_cov_set_cov ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_data_gauss_cov_set_cov (<em class="parameter"><code><a class="link" href="NcmDataGaussCov.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCov</span></a> *gauss</code></em>,
+                            <em class="parameter"><code><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> *cov</code></em>);</pre>
+<p>Sets a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a> representing the covariance matrix in each bin.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-set-cov.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gauss</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDataGaussCov.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cov</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -371,8 +426,88 @@ ncm_data_gauss_cov_peek_cov (<em class="parameter"><code><a class="link" href="N
 </div>
 <hr/>
 <div class="refsect2">
+<a name="ncm-data-gauss-cov-compute-cov"></a><h3>ncm_data_gauss_cov_compute_cov ()</h3>
+<pre class="programlisting"><a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="returnvalue">NcmMatrix</span></a> *
+ncm_data_gauss_cov_compute_cov (<em class="parameter"><code><a class="link" href="NcmDataGaussCov.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCov</span></a> *gauss</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                <em class="parameter"><code><span class="type">gboolean</span> *updated</code></em>);</pre>
+<p>Computes the covariance matrix based on the models in <em class="parameter"><code>mset</code></em>
+. If
+the <span class="type">“cov_func”</span> is not set, returns <code class="literal">NULL</code>.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-compute-cov.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gauss</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDataGaussCov.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>updated</p></td>
+<td class="parameter_description"><p>a <span class="type">gboolean</span>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-compute-cov.returns"></a><h4>Returns</h4>
+<p>the current data covariance <a class="link" href="NcmMatrix.html" title="NcmMatrix"><span class="type">NcmMatrix</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-data-gauss-cov-compute-mean"></a><h3>ncm_data_gauss_cov_compute_mean ()</h3>
+<pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
+ncm_data_gauss_cov_compute_mean (<em class="parameter"><code><a class="link" href="NcmDataGaussCov.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCov</span></a> *gauss</code></em>,
+                                 <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
+<p>Computes the mean vector based on the models in <em class="parameter"><code>mset</code></em>
+. If
+the <span class="type">“mean_func”</span> is not set, returns <code class="literal">NULL</code>.</p>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-compute-mean.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gauss</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmDataGaussCov.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCov</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-data-gauss-cov-compute-mean.returns"></a><h4>Returns</h4>
+<p>the current data mean <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="ncm-data-gauss-cov-get-log-norma"></a><h3>ncm_data_gauss_cov_get_log_norma ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 ncm_data_gauss_cov_get_log_norma (<em class="parameter"><code><a class="link" href="NcmDataGaussCov.html" title="NcmDataGaussCov"><span class="type">NcmDataGaussCov</span></a> *gauss</code></em>,
                                   <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>);</pre>
 <div class="refsect3">
@@ -489,7 +624,7 @@ is done in bulk, i.e., all the data is resampled at once.</p>
 <hr/>
 <div class="refsect2">
 <a name="NcmDataGaussCov--n-points"></a><h3>The <code class="literal">“n-points”</code> property</h3>
-<pre class="programlisting">  “n-points”                 <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<pre class="programlisting">  “n-points”                 <span class="type">guint</span></pre>
 <p>Data sample size.</p>
 <p>Owner: NcmDataGaussCov</p>
 <p>Flags: Read / Write / Construct</p>
@@ -498,7 +633,7 @@ is done in bulk, i.e., all the data is resampled at once.</p>
 <hr/>
 <div class="refsect2">
 <a name="NcmDataGaussCov--use-norma"></a><h3>The <code class="literal">“use-norma”</code> property</h3>
-<pre class="programlisting">  “use-norma”                <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<pre class="programlisting">  “use-norma”                <span class="type">gboolean</span></pre>
 <p>Use the likelihood normalization to calculate -2lnL.</p>
 <p>Owner: NcmDataGaussCov</p>
 <p>Flags: Read / Write</p>
@@ -507,6 +642,6 @@ is done in bulk, i.e., all the data is resampled at once.</p>
 </div>
 </div>
 <div class="footer">
-<hr/>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.34.0</div>
 </body>
 </html>

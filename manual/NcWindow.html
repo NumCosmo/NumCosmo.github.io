@@ -9,7 +9,7 @@
 <link href="ch08.html#id-1.9.2" rel="up" title="Window Function"/>
 <link href="ch08.html" rel="prev" title="Large Scale Structure"/>
 <link href="NcWindowTophat.html" rel="next" title="NcWindowTophat"/>
-<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 <link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
 //<![CDATA[
@@ -66,7 +66,7 @@ justifications.
 <tbody>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcWindow.html#nc-window-volume" title="nc_window_volume ()">nc_window_volume</a> <span class="c_punctuation">()</span>
@@ -74,7 +74,7 @@ justifications.
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcWindow.html#nc-window-eval-fourier" title="nc_window_eval_fourier ()">nc_window_eval_fourier</a> <span class="c_punctuation">()</span>
@@ -82,7 +82,7 @@ justifications.
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcWindow.html#nc-window-deriv-fourier" title="nc_window_deriv_fourier ()">nc_window_deriv_fourier</a> <span class="c_punctuation">()</span>
@@ -90,7 +90,7 @@ justifications.
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcWindow.html#nc-window-eval-realspace" title="nc_window_eval_realspace ()">nc_window_eval_realspace</a> <span class="c_punctuation">()</span>
@@ -117,7 +117,7 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcWindow.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+<pre class="screen">    GObject
     <span class="lineart">╰──</span> NcWindow
         <span class="lineart">├──</span> <a class="link" href="NcWindowGaussian.html" title="NcWindowGaussian">NcWindowGaussian</a>
         <span class="lineart">╰──</span> <a class="link" href="NcWindowTophat.html" title="NcWindowTophat">NcWindowTophat</a>
@@ -141,7 +141,7 @@ contrast at scale $R$, we convolve the window function in the Fourier space with
 <a name="NcWindow.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
 <a name="nc-window-volume"></a><h3>nc_window_volume ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 nc_window_volume (<em class="parameter"><code><a class="link" href="NcWindow.html" title="NcWindow"><span class="type">NcWindow</span></a> *wf</code></em>);</pre>
 <p>This function returns the volume of the region (with radius 1) defined by the window function.</p>
 <p>Top-hat volume: <a class="link" href="NcWindowTophat.html#NC-WINDOW-VOLUME-TOPHAT:CAPS" title="NC_WINDOW_VOLUME_TOPHAT"><span class="type">NC_WINDOW_VOLUME_TOPHAT</span></a>.</p>
@@ -170,10 +170,10 @@ nc_window_volume (<em class="parameter"><code><a class="link" href="NcWindow.htm
 <hr/>
 <div class="refsect2">
 <a name="nc-window-eval-fourier"></a><h3>nc_window_eval_fourier ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 nc_window_eval_fourier (<em class="parameter"><code>const <a class="link" href="NcWindow.html" title="NcWindow"><span class="type">NcWindow</span></a> *wf</code></em>,
-                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>,
-                        <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> R</code></em>);</pre>
+                        <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>,
+                        <em class="parameter"><code>const <span class="type">gdouble</span> R</code></em>);</pre>
 <p>This function computes the window function in the Fourier space.</p>
 <div class="refsect3">
 <a name="nc-window-eval-fourier.parameters"></a><h4>Parameters</h4>
@@ -211,10 +211,10 @@ nc_window_eval_fourier (<em class="parameter"><code>const <a class="link" href="
 <hr/>
 <div class="refsect2">
 <a name="nc-window-deriv-fourier"></a><h3>nc_window_deriv_fourier ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 nc_window_deriv_fourier (<em class="parameter"><code>const <a class="link" href="NcWindow.html" title="NcWindow"><span class="type">NcWindow</span></a> *wf</code></em>,
-                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>,
-                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> R</code></em>);</pre>
+                         <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>,
+                         <em class="parameter"><code>const <span class="type">gdouble</span> R</code></em>);</pre>
 <p>This function returns the derivative with respect to <em class="parameter"><code>R</code></em>
  of the window function
 in the Fourier space.</p>
@@ -254,10 +254,10 @@ in the Fourier space.</p>
 <hr/>
 <div class="refsect2">
 <a name="nc-window-eval-realspace"></a><h3>nc_window_eval_realspace ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 nc_window_eval_realspace (<em class="parameter"><code>const <a class="link" href="NcWindow.html" title="NcWindow"><span class="type">NcWindow</span></a> *wf</code></em>,
-                          <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> r</code></em>,
-                          <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> R</code></em>);</pre>
+                          <em class="parameter"><code>const <span class="type">gdouble</span> r</code></em>,
+                          <em class="parameter"><code>const <span class="type">gdouble</span> R</code></em>);</pre>
 <p>This function computes the window function in real space.</p>
 <div class="refsect3">
 <a name="nc-window-eval-realspace.parameters"></a><h4>Parameters</h4>
@@ -345,6 +345,6 @@ all memory allocated by <em class="parameter"><code>wf</code></em>
 </div>
 </div>
 <div class="footer">
-<hr/>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.34.0</div>
 </body>
 </html>

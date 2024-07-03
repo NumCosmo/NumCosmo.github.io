@@ -7,9 +7,9 @@
 <meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
 <link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
 <link href="ch07.html" rel="up" title="Perturbations"/>
-<link href="NcHIPertBoltzmannStd.html" rel="prev" title="NcHIPertBoltzmannStd"/>
-<link href="NcHIPertGrav.html" rel="next" title="NcHIPertGrav"/>
-<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="NcHIPertIEM.html" rel="prev" title="NcHIPertEM"/>
+<link href="NcHIPertIGW.html" rel="next" title="NcHIPertGW"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 <link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
 //<![CDATA[
@@ -35,8 +35,8 @@ messageStyle: "none"
 </td>
 <td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
 <td><a accesskey="u" href="ch07.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
-<td><a accesskey="p" href="NcHIPertBoltzmannStd.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
-<td><a accesskey="n" href="NcHIPertGrav.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcHIPertIEM.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcHIPertIGW.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcHIPertFirstOrder"></a><div class="titlepage"></div>
@@ -129,7 +129,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-get-reltol" title="nc_hipert_first_order_get_reltol ()">nc_hipert_first_order_get_reltol</a> <span class="c_punctuation">()</span>
@@ -137,7 +137,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcHIPertFirstOrder.html#nc-hipert-first-order-get-abstol" title="nc_hipert_first_order_get_abstol ()">nc_hipert_first_order_get_abstol</a> <span class="c_punctuation">()</span>
@@ -281,7 +281,7 @@ messageStyle: "none"
 <a name="NcHIPertFirstOrder.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
     <span class="lineart">╰──</span> NcHIPertFirstOrderInteg
-    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    GObject
     <span class="lineart">╰──</span> <a class="link" href="NcHIPert.html" title="NcHIPert">NcHIPert</a>
         <span class="lineart">╰──</span> <a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann">NcHIPertBoltzmann</a>
             <span class="lineart">╰──</span> NcHIPertFirstOrder
@@ -484,7 +484,7 @@ nc_hipert_first_order_get_gauge (<em class="parameter"><code><a class="link" hre
 <a name="nc-hipert-first-order-set-reltol"></a><h3>nc_hipert_first_order_set_reltol ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_hipert_first_order_set_reltol (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>,
-                                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>);</pre>
+                                  <em class="parameter"><code>const <span class="type">gdouble</span> reltol</code></em>);</pre>
 <p>Sets the relative tolerance to <em class="parameter"><code>reltol</code></em>
 .</p>
 <div class="refsect3">
@@ -515,7 +515,7 @@ nc_hipert_first_order_set_reltol (<em class="parameter"><code><a class="link" hr
 <a name="nc-hipert-first-order-set-abstol"></a><h3>nc_hipert_first_order_set_abstol ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_hipert_first_order_set_abstol (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>,
-                                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> abstol</code></em>);</pre>
+                                  <em class="parameter"><code>const <span class="type">gdouble</span> abstol</code></em>);</pre>
 <p>Sets the absolute tolerance to <em class="parameter"><code>abstol</code></em>
 .</p>
 <div class="refsect3">
@@ -544,7 +544,7 @@ nc_hipert_first_order_set_abstol (<em class="parameter"><code><a class="link" hr
 <hr/>
 <div class="refsect2">
 <a name="nc-hipert-first-order-get-reltol"></a><h3>nc_hipert_first_order_get_reltol ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 nc_hipert_first_order_get_reltol (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>);</pre>
 <p>Gets the relative tolerance.</p>
 <div class="refsect3">
@@ -570,7 +570,7 @@ nc_hipert_first_order_get_reltol (<em class="parameter"><code><a class="link" hr
 <hr/>
 <div class="refsect2">
 <a name="nc-hipert-first-order-get-abstol"></a><h3>nc_hipert_first_order_get_abstol ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 nc_hipert_first_order_get_abstol (<em class="parameter"><code><a class="link" href="NcHIPertFirstOrder.html" title="NcHIPertFirstOrder"><span class="type">NcHIPertFirstOrder</span></a> *fo</code></em>);</pre>
 <p>Gets the absolute tolerance.</p>
 <div class="refsect3">
@@ -914,6 +914,6 @@ nc_hipert_first_order_prepare (<em class="parameter"><code><a class="link" href=
 </div>
 </div>
 <div class="footer">
-<hr/>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.34.0</div>
 </body>
 </html>

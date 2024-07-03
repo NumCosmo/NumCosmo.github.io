@@ -9,7 +9,7 @@
 <link href="ch10.html" rel="up" title="Mathematical Utilities"/>
 <link href="NcmFunctionCache.html" rel="prev" title="NcmFunctionCache"/>
 <link href="numcosmo-NcmIntegral.html" rel="next" title="NcmIntegral"/>
-<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 <link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
 //<![CDATA[
@@ -55,7 +55,7 @@ messageStyle: "none"
 <tbody>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+<span class="returnvalue">gpointer</span>
 </td>
 <td class="function_name">
 <span class="c_punctuation">(</span><a class="link" href="numcosmo-NcmMemoryPool.html#NcmMemoryPoolAlloc" title="NcmMemoryPoolAlloc ()">*NcmMemoryPoolAlloc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
@@ -79,7 +79,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<span class="returnvalue">guint</span>
 </td>
 <td class="function_name">
 <a class="link" href="numcosmo-NcmMemoryPool.html#ncm-memory-pool-empty" title="ncm_memory_pool_empty ()">ncm_memory_pool_empty</a> <span class="c_punctuation">()</span>
@@ -103,7 +103,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+<span class="returnvalue">gpointer</span>
 </td>
 <td class="function_name">
 <a class="link" href="numcosmo-NcmMemoryPool.html#ncm-memory-pool-get" title="ncm_memory_pool_get ()">ncm_memory_pool_get</a> <span class="c_punctuation">()</span>
@@ -150,16 +150,16 @@ These functions are thread safe.</p>
 <a name="numcosmo-NcmMemoryPool.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
 <a name="NcmMemoryPoolAlloc"></a><h3>NcmMemoryPoolAlloc ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
-<span class="c_punctuation">(</span>*NcmMemoryPoolAlloc<span class="c_punctuation">)</span> (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> userdata</code></em>);</pre>
+<pre class="programlisting"><span class="returnvalue">gpointer</span>
+<span class="c_punctuation">(</span>*NcmMemoryPoolAlloc<span class="c_punctuation">)</span> (<em class="parameter"><code><span class="type">gpointer</span> userdata</code></em>);</pre>
 </div>
 <hr/>
 <div class="refsect2">
 <a name="ncm-memory-pool-new"></a><h3>ncm_memory_pool_new ()</h3>
 <pre class="programlisting"><a class="link" href="numcosmo-NcmMemoryPool.html#NcmMemoryPool" title="struct NcmMemoryPool"><span class="returnvalue">NcmMemoryPool</span></a> *
 ncm_memory_pool_new (<em class="parameter"><code><a class="link" href="numcosmo-NcmMemoryPool.html#NcmMemoryPoolAlloc" title="NcmMemoryPoolAlloc ()"><span class="type">NcmMemoryPoolAlloc</span></a> mp_alloc</code></em>,
-                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> userdata</code></em>,
-                     <em class="parameter"><code><a href="../glib/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> mp_free</code></em>);</pre>
+                     <em class="parameter"><code><span class="type">gpointer</span> userdata</code></em>,
+                     <em class="parameter"><code><span class="type">GDestroyNotify</span> mp_free</code></em>);</pre>
 <p>This function prepare a memory pool which allocate memory
 using mp_alloc and save it for future use, the memory must
 be returned to the pool using <a class="link" href="numcosmo-NcmMemoryPool.html#ncm-memory-pool-return" title="ncm_memory_pool_return ()"><span class="type">ncm_memory_pool_return</span></a>.
@@ -203,7 +203,7 @@ function.</p></td>
 <a name="ncm-memory-pool-free"></a><h3>ncm_memory_pool_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_memory_pool_free (<em class="parameter"><code><a class="link" href="numcosmo-NcmMemoryPool.html#NcmMemoryPool" title="struct NcmMemoryPool"><span class="type">NcmMemoryPool</span></a> *mp</code></em>,
-                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> free_slices</code></em>);</pre>
+                      <em class="parameter"><code><span class="type">gboolean</span> free_slices</code></em>);</pre>
 <p>This function free the memory pool and also
 the slices if free_slices == TRUE and the
 pool was built with a free function</p>
@@ -233,9 +233,9 @@ pool was built with a free function</p>
 <hr/>
 <div class="refsect2">
 <a name="ncm-memory-pool-empty"></a><h3>ncm_memory_pool_empty ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<pre class="programlisting"><span class="returnvalue">guint</span>
 ncm_memory_pool_empty (<em class="parameter"><code><a class="link" href="numcosmo-NcmMemoryPool.html#NcmMemoryPool" title="struct NcmMemoryPool"><span class="type">NcmMemoryPool</span></a> *mp</code></em>,
-                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> free_slices</code></em>);</pre>
+                       <em class="parameter"><code><span class="type">gboolean</span> free_slices</code></em>);</pre>
 <p>This function free all the slices in the pool and also
 the slices if free_slices == TRUE and the
 pool was built with a free function</p>
@@ -271,7 +271,7 @@ pool was built with a free function</p>
 <a name="ncm-memory-pool-set-min-size"></a><h3>ncm_memory_pool_set_min_size ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_memory_pool_set_min_size (<em class="parameter"><code><a class="link" href="numcosmo-NcmMemoryPool.html#NcmMemoryPool" title="struct NcmMemoryPool"><span class="type">NcmMemoryPool</span></a> *mp</code></em>,
-                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> n</code></em>);</pre>
+                              <em class="parameter"><code><span class="type">gsize</span> n</code></em>);</pre>
 <p>if n grater than number of slices then allocate new slices until
 n == slices.</p>
 <div class="refsect3">
@@ -302,7 +302,7 @@ n == slices.</p>
 <a name="ncm-memory-pool-add"></a><h3>ncm_memory_pool_add ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_memory_pool_add (<em class="parameter"><code><a class="link" href="numcosmo-NcmMemoryPool.html#NcmMemoryPool" title="struct NcmMemoryPool"><span class="type">NcmMemoryPool</span></a> *mp</code></em>,
-                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> p</code></em>);</pre>
+                     <em class="parameter"><code><span class="type">gpointer</span> p</code></em>);</pre>
 <p>Adds an already allocated pointer <em class="parameter"><code>p</code></em>
  to the pool. It will be freed with
 <a class="link" href="numcosmo-NcmMemoryPool.html#NcmMemoryPool" title="struct NcmMemoryPool"><span class="type">NcmMemoryPool</span></a>-&gt;free during the pool destruction.</p>
@@ -332,7 +332,7 @@ ncm_memory_pool_add (<em class="parameter"><code><a class="link" href="numcosmo-
 <hr/>
 <div class="refsect2">
 <a name="ncm-memory-pool-get"></a><h3>ncm_memory_pool_get ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+<pre class="programlisting"><span class="returnvalue">gpointer</span>
 ncm_memory_pool_get (<em class="parameter"><code><a class="link" href="numcosmo-NcmMemoryPool.html#NcmMemoryPool" title="struct NcmMemoryPool"><span class="type">NcmMemoryPool</span></a> *mp</code></em>);</pre>
 <p>Search in the pool for a non used slice
 and return the first finded. If none
@@ -363,7 +363,7 @@ return it.</p>
 <div class="refsect2">
 <a name="ncm-memory-pool-return"></a><h3>ncm_memory_pool_return ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-ncm_memory_pool_return (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> p</code></em>);</pre>
+ncm_memory_pool_return (<em class="parameter"><code><span class="type">gpointer</span> p</code></em>);</pre>
 <p>Put the slice pointed by slice back to the pool.</p>
 <div class="refsect3">
 <a name="ncm-memory-pool-return.parameters"></a><h4>Parameters</h4>
@@ -410,12 +410,12 @@ ncm_memory_pool_return (<em class="parameter"><code><a href="../glib/glib-Basic-
 </colgroup>
 <tbody>
 <tr>
-<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> <em class="structfield"><code><a name="NcmMemoryPoolSlice.p"></a>p</code></em>;</p></td>
+<td class="struct_member_name"><p><span class="type">gpointer</span> <em class="structfield"><code><a name="NcmMemoryPoolSlice.p"></a>p</code></em>;</p></td>
 <td class="struct_member_description"><p>Pointer to the actual slice.</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
 <tr>
-<td class="struct_member_name"><p><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> <em class="structfield"><code><a name="NcmMemoryPoolSlice.in-use"></a>in_use</code></em>;</p></td>
+<td class="struct_member_name"><p><span class="type">gboolean</span> <em class="structfield"><code><a name="NcmMemoryPoolSlice.in-use"></a>in_use</code></em>;</p></td>
 <td class="struct_member_description"><p>Boolean determining if the slice is in use.</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
@@ -431,6 +431,6 @@ ncm_memory_pool_return (<em class="parameter"><code><a href="../glib/glib-Basic-
 </div>
 </div>
 <div class="footer">
-<hr/>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.34.0</div>
 </body>
 </html>

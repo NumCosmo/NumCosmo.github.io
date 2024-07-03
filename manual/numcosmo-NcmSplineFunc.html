@@ -9,7 +9,7 @@
 <link href="ch02s04.html" rel="up" title="Splines 1D"/>
 <link href="NcmSplineRBF.html" rel="prev" title="NcmSplineRBF"/>
 <link href="NcmSplineFuncTest.html" rel="next" title="NcmSplineFuncTest"/>
-<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 <link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
 //<![CDATA[
@@ -66,7 +66,7 @@ justifications.
 <tbody>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <span class="c_punctuation">(</span><a class="link" href="numcosmo-NcmSplineFunc.html#NcmSplineFuncF" title="NcmSplineFuncF ()">*NcmSplineFuncF</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
@@ -218,9 +218,9 @@ but there are other options listed at <a class="link" href="numcosmo-NcmSplineFu
 <a name="numcosmo-NcmSplineFunc.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
 <a name="NcmSplineFuncF"></a><h3>NcmSplineFuncF ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-<span class="c_punctuation">(</span>*NcmSplineFuncF<span class="c_punctuation">)</span> (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
-                   <em class="parameter"><code><a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>);</pre>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+<span class="c_punctuation">(</span>*NcmSplineFuncF<span class="c_punctuation">)</span> (<em class="parameter"><code><span class="type">gdouble</span> x</code></em>,
+                   <em class="parameter"><code><span class="type">GObject</span> *obj</code></em>);</pre>
 </div>
 <hr/>
 <div class="refsect2">
@@ -229,10 +229,10 @@ but there are other options listed at <a class="link" href="numcosmo-NcmSplineFu
 ncm_spline_set_func (<em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>,
                      <em class="parameter"><code><a class="link" href="numcosmo-NcmSplineFunc.html#NcmSplineFuncType" title="enum NcmSplineFuncType"><span class="type">NcmSplineFuncType</span></a> ftype</code></em>,
                      <em class="parameter"><code><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-function" title="gsl_function"><span class="type">gsl_function</span></a> *F</code></em>,
-                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>,
-                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>,
-                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> max_nodes</code></em>,
-                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> rel_error</code></em>);</pre>
+                     <em class="parameter"><code>const <span class="type">gdouble</span> xi</code></em>,
+                     <em class="parameter"><code>const <span class="type">gdouble</span> xf</code></em>,
+                     <em class="parameter"><code><span class="type">gsize</span> max_nodes</code></em>,
+                     <em class="parameter"><code>const <span class="type">gdouble</span> rel_error</code></em>);</pre>
 <p>This function automatically determines the knots of <em class="parameter"><code>s</code></em>
  in the interval [<em class="parameter"><code>xi</code></em>
 , <em class="parameter"><code>xf</code></em>
@@ -295,13 +295,13 @@ ncm_spline_set_func (<em class="parameter"><code><a class="link" href="NcmSpline
 ncm_spline_set_func_scale (<em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>,
                            <em class="parameter"><code><a class="link" href="numcosmo-NcmSplineFunc.html#NcmSplineFuncType" title="enum NcmSplineFuncType"><span class="type">NcmSplineFuncType</span></a> ftype</code></em>,
                            <em class="parameter"><code><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-function" title="gsl_function"><span class="type">gsl_function</span></a> *F</code></em>,
-                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>,
-                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>,
-                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> max_nodes</code></em>,
-                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> rel_error</code></em>,
-                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> scale</code></em>,
-                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> refine</code></em>,
-                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> refine_ns</code></em>);</pre>
+                           <em class="parameter"><code>const <span class="type">gdouble</span> xi</code></em>,
+                           <em class="parameter"><code>const <span class="type">gdouble</span> xf</code></em>,
+                           <em class="parameter"><code><span class="type">gsize</span> max_nodes</code></em>,
+                           <em class="parameter"><code>const <span class="type">gdouble</span> rel_error</code></em>,
+                           <em class="parameter"><code>const <span class="type">gdouble</span> scale</code></em>,
+                           <em class="parameter"><code><span class="type">gint</span> refine</code></em>,
+                           <em class="parameter"><code><span class="type">gdouble</span> refine_ns</code></em>);</pre>
 <p>This function automatically determines the knots of <em class="parameter"><code>s</code></em>
  in the interval [<em class="parameter"><code>xi</code></em>
 , <em class="parameter"><code>xf</code></em>
@@ -379,11 +379,11 @@ ncm_spline_set_func_scale (<em class="parameter"><code><a class="link" href="Ncm
 ncm_spline_set_func1 (<em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>,
                       <em class="parameter"><code><a class="link" href="numcosmo-NcmSplineFunc.html#NcmSplineFuncType" title="enum NcmSplineFuncType"><span class="type">NcmSplineFuncType</span></a> ftype</code></em>,
                       <em class="parameter"><code><a class="link" href="numcosmo-NcmSplineFunc.html#NcmSplineFuncF" title="NcmSplineFuncF ()"><span class="type">NcmSplineFuncF</span></a> F</code></em>,
-                      <em class="parameter"><code><a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>,
-                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>,
-                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>,
-                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> max_nodes</code></em>,
-                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> rel_error</code></em>);</pre>
+                      <em class="parameter"><code><span class="type">GObject</span> *obj</code></em>,
+                      <em class="parameter"><code><span class="type">gdouble</span> xi</code></em>,
+                      <em class="parameter"><code><span class="type">gdouble</span> xf</code></em>,
+                      <em class="parameter"><code><span class="type">gsize</span> max_nodes</code></em>,
+                      <em class="parameter"><code><span class="type">gdouble</span> rel_error</code></em>);</pre>
 <p>This function automatically determines the knots of <em class="parameter"><code>s</code></em>
  in the interval [<em class="parameter"><code>xi</code></em>
 , <em class="parameter"><code>xf</code></em>
@@ -416,7 +416,7 @@ ncm_spline_set_func1 (<em class="parameter"><code><a class="link" href="NcmSplin
 </tr>
 <tr>
 <td class="parameter_name"><p>obj</p></td>
-<td class="parameter_description"><p><a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> used by the function <em class="parameter"><code>F</code></em>
+<td class="parameter_description"><p><span class="type">GObject</span> used by the function <em class="parameter"><code>F</code></em>
 . </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
@@ -451,10 +451,10 @@ ncm_spline_set_func1 (<em class="parameter"><code><a class="link" href="NcmSplin
 ncm_spline_set_func_grid1 (<em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>,
                            <em class="parameter"><code><a class="link" href="numcosmo-NcmSplineFunc.html#NcmSplineFuncType" title="enum NcmSplineFuncType"><span class="type">NcmSplineFuncType</span></a> ftype</code></em>,
                            <em class="parameter"><code><a class="link" href="numcosmo-NcmSplineFunc.html#NcmSplineFuncF" title="NcmSplineFuncF ()"><span class="type">NcmSplineFuncF</span></a> F</code></em>,
-                           <em class="parameter"><code><a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *obj</code></em>,
-                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>,
-                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>,
-                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> nnodes</code></em>);</pre>
+                           <em class="parameter"><code><span class="type">GObject</span> *obj</code></em>,
+                           <em class="parameter"><code><span class="type">gdouble</span> xi</code></em>,
+                           <em class="parameter"><code><span class="type">gdouble</span> xf</code></em>,
+                           <em class="parameter"><code><span class="type">gsize</span> nnodes</code></em>);</pre>
 <p>This function fills the spline <em class="parameter"><code>s</code></em>
  with the function <em class="parameter"><code>F</code></em>
  values
@@ -492,7 +492,7 @@ This function is more suitable to be used within Python.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>obj</p></td>
-<td class="parameter_description"><p><a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> used by the function <em class="parameter"><code>F</code></em>
+<td class="parameter_description"><p><span class="type">GObject</span> used by the function <em class="parameter"><code>F</code></em>
 . </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
@@ -524,9 +524,9 @@ This function is more suitable to be used within Python.</p>
 ncm_spline_set_func_grid (<em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>,
                           <em class="parameter"><code><a class="link" href="numcosmo-NcmSplineFunc.html#NcmSplineFuncType" title="enum NcmSplineFuncType"><span class="type">NcmSplineFuncType</span></a> ftype</code></em>,
                           <em class="parameter"><code><a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-function" title="gsl_function"><span class="type">gsl_function</span></a> *F</code></em>,
-                          <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>,
-                          <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>,
-                          <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> nnodes</code></em>);</pre>
+                          <em class="parameter"><code>const <span class="type">gdouble</span> xi</code></em>,
+                          <em class="parameter"><code>const <span class="type">gdouble</span> xf</code></em>,
+                          <em class="parameter"><code><span class="type">gsize</span> nnodes</code></em>);</pre>
 <p>This function fills the spline <em class="parameter"><code>s</code></em>
  with the function <em class="parameter"><code>F</code></em>
  values
@@ -587,14 +587,11 @@ in a uniform grid within the range [<em class="parameter"><code>xi</code></em>
 <a name="NcmSplineFuncType"></a><h3>enum NcmSplineFuncType</h3>
 <p>Enumeration to choose which of the functions to be applied when interpolating the input <a class="link" href="numcosmo-Gir-Scanning-Compatibility.html#gsl-function" title="gsl_function"><span class="type">gsl_function</span></a> *<em class="parameter"><code>F</code></em>
 , $f$,
-
 with the desired <em class="parameter"><code>rel_error</code></em>
  in the range [<em class="parameter"><code>xi</code></em>
 , <em class="parameter"><code>xf</code></em>
 ].
-
 The interpolation knots, $\mathbf{x}$, are automatically defined internally by the functions.
-
 For more details see <a class="link" href="numcosmo-NcmSplineFunc.html#numcosmo-NcmSplineFunc.description" title="Description">description</a> above.</p>
 <div class="refsect3">
 <a name="NcmSplineFuncType.members"></a><h4>Members</h4>
@@ -608,14 +605,14 @@ For more details see <a class="link" href="numcosmo-NcmSplineFunc.html#numcosmo-
 <tr>
 <td class="enum_member_name"><p><a name="NCM-SPLINE-FUNCTION-4POINTS:CAPS"></a>NCM_SPLINE_FUNCTION_4POINTS</p></td>
 <td class="enum_member_description">
-<p>FIXME </p>
+<p>FIXME</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="NCM-SPLINE-FUNCTION-SPLINE:CAPS"></a>NCM_SPLINE_FUNCTION_SPLINE</p></td>
 <td class="enum_member_description">
-<p>The knots are evenly distributed on a linear base at each step. The test points are place at $\overline{\mathbf{x}} = \frac{\mathbf{x}^{i+1} + \mathbf{x}^{i}}{2}$. </p>
+<p>The knots are evenly distributed on a linear base at each step. The test points are place at $\overline{\mathbf{x}} = \frac{\mathbf{x}^{i+1} + \mathbf{x}^{i}}{2}$.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -647,7 +644,7 @@ For more details see <a class="link" href="numcosmo-NcmSplineFunc.html#numcosmo-
 <td class="enum_member_description">
 <p>The knots are evenly distributed on a natural logarithmic base in the entire range [<em class="parameter"><code>xi</code></em>
  &gt; 0, <em class="parameter"><code>xf</code></em>
- &gt; xi &gt; 0]. </p>
+ &gt; xi &gt; 0].</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -670,6 +667,6 @@ For more details see <a class="link" href="numcosmo-NcmSplineFunc.html#numcosmo-
 </div>
 </div>
 <div class="footer">
-<hr/>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.34.0</div>
 </body>
 </html>

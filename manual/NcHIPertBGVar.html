@@ -7,9 +7,9 @@
 <meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
 <link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
 <link href="ch07.html" rel="up" title="Perturbations"/>
-<link href="NcHIPert.html" rel="prev" title="NcHIPert"/>
-<link href="NcHIPertWKB.html" rel="next" title="NcHIPertWKB"/>
-<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="NcHIPertIAdiab.html" rel="prev" title="NcHIPertAdiab"/>
+<link href="NcHIPertBoltzmannStd.html" rel="next" title="NcHIPertBoltzmannStd"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 <link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
 //<![CDATA[
@@ -35,8 +35,8 @@ messageStyle: "none"
 </td>
 <td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
 <td><a accesskey="u" href="ch07.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
-<td><a accesskey="p" href="NcHIPert.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
-<td><a accesskey="n" href="NcHIPertWKB.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcHIPertIAdiab.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcHIPertBoltzmannStd.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcHIPertBGVar"></a><div class="titlepage"></div>
@@ -123,7 +123,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-ydy-get-y-i" title="nc_hipert_bg_var_ydy_get_y_i ()">nc_hipert_bg_var_ydy_get_y_i</a> <span class="c_punctuation">()</span>
@@ -139,7 +139,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-ydy-get-dy-i" title="nc_hipert_bg_var_ydy_get_dy_i ()">nc_hipert_bg_var_ydy_get_dy_i</a> <span class="c_punctuation">()</span>
@@ -283,7 +283,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-get-zf" title="nc_hipert_bg_var_get_zf ()">nc_hipert_bg_var_get_zf</a> <span class="c_punctuation">()</span>
@@ -291,7 +291,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<span class="returnvalue">guint</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcHIPertBGVar.html#nc-hipert-bg-var-len" title="nc_hipert_bg_var_len ()">nc_hipert_bg_var_len</a> <span class="c_punctuation">()</span>
@@ -382,7 +382,7 @@ messageStyle: "none"
 <a name="NcHIPertBGVar.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
     <span class="lineart">╰──</span> NcHIPertBGVarYDY
-    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    GObject
     <span class="lineart">╰──</span> NcHIPertBGVar
 </pre>
 </div>
@@ -395,10 +395,10 @@ messageStyle: "none"
 <div class="refsect2">
 <a name="nc-hipert-bg-var-class-register-id"></a><h3>nc_hipert_bg_var_class_register_id ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-nc_hipert_bg_var_class_register_id (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *ns</code></em>,
-                                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *desc</code></em>,
-                                    <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *long_desc</code></em>,
-                                    <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> cstruct_size</code></em>);</pre>
+nc_hipert_bg_var_class_register_id (<em class="parameter"><code>const <span class="type">gchar</span> *ns</code></em>,
+                                    <em class="parameter"><code>const <span class="type">gchar</span> *desc</code></em>,
+                                    <em class="parameter"><code>const <span class="type">gchar</span> *long_desc</code></em>,
+                                    <em class="parameter"><code><span class="type">guint</span> cstruct_size</code></em>);</pre>
 <p>FIXME</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
@@ -439,7 +439,7 @@ nc_hipert_bg_var_class_register_id (<em class="parameter"><code>const <a href=".
 <a name="nc-hipert-bg-var-class-get-id-by-gtype"></a><h3>nc_hipert_bg_var_class_get_id_by_gtype ()</h3>
 <pre class="programlisting"><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarID" title="NcHIPertBGVarID"><span class="returnvalue">NcHIPertBGVarID</span></a>
 nc_hipert_bg_var_class_get_id_by_gtype
-                               (<em class="parameter"><code><a href="../gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> gt</code></em>);</pre>
+                               (<em class="parameter"><code><span class="type">GType</span> gt</code></em>);</pre>
 <p>Gets the id associated with the GType <em class="parameter"><code>gt</code></em>
 .</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
@@ -453,7 +453,7 @@ nc_hipert_bg_var_class_get_id_by_gtype
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>gt</p></td>
-<td class="parameter_description"><p>a <a href="../gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a></p></td>
+<td class="parameter_description"><p>a <span class="type">GType</span></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -468,7 +468,7 @@ nc_hipert_bg_var_class_get_id_by_gtype
 <div class="refsect2">
 <a name="nc-hipert-bg-var-class-get-id-by-ns"></a><h3>nc_hipert_bg_var_class_get_id_by_ns ()</h3>
 <pre class="programlisting"><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarID" title="NcHIPertBGVarID"><span class="returnvalue">NcHIPertBGVarID</span></a>
-nc_hipert_bg_var_class_get_id_by_ns (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *ns</code></em>);</pre>
+nc_hipert_bg_var_class_get_id_by_ns (<em class="parameter"><code>const <span class="type">gchar</span> *ns</code></em>);</pre>
 <p>Gets the id associated with the namespace <em class="parameter"><code>ns</code></em>
 .</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
@@ -635,9 +635,9 @@ nc_hipert_bg_var_ydy_free (<em class="parameter"><code><a class="link" href="NcH
 <hr/>
 <div class="refsect2">
 <a name="nc-hipert-bg-var-ydy-get-y-i"></a><h3>nc_hipert_bg_var_ydy_get_y_i ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 nc_hipert_bg_var_ydy_get_y_i (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="type">NcHIPertBGVarYDY</span></a> *ydy</code></em>,
-                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
+                              <em class="parameter"><code><span class="type">guint</span> i</code></em>);</pre>
 <p>Gets the <em class="parameter"><code>i</code></em>
 -th variable.</p>
 <div class="refsect3">
@@ -673,8 +673,8 @@ nc_hipert_bg_var_ydy_get_y_i (<em class="parameter"><code><a class="link" href="
 <a name="nc-hipert-bg-var-ydy-set-dy-i"></a><h3>nc_hipert_bg_var_ydy_set_dy_i ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_hipert_bg_var_ydy_set_dy_i (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="type">NcHIPertBGVarYDY</span></a> *ydy</code></em>,
-                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>,
-                               <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> dy_i</code></em>);</pre>
+                               <em class="parameter"><code><span class="type">guint</span> i</code></em>,
+                               <em class="parameter"><code>const <span class="type">gdouble</span> dy_i</code></em>);</pre>
 <p>Sets the <em class="parameter"><code>i</code></em>
 -th variable derivative to <em class="parameter"><code>dy_i</code></em>
 .</p>
@@ -710,9 +710,9 @@ nc_hipert_bg_var_ydy_set_dy_i (<em class="parameter"><code><a class="link" href=
 <hr/>
 <div class="refsect2">
 <a name="nc-hipert-bg-var-ydy-get-dy-i"></a><h3>nc_hipert_bg_var_ydy_get_dy_i ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 nc_hipert_bg_var_ydy_get_dy_i (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html#NcHIPertBGVarYDY"><span class="type">NcHIPertBGVarYDY</span></a> *ydy</code></em>,
-                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
+                               <em class="parameter"><code><span class="type">guint</span> i</code></em>);</pre>
 <p>Gets the <em class="parameter"><code>i</code></em>
 -th variable derivative.</p>
 <div class="refsect3">
@@ -1164,7 +1164,7 @@ nc_hipert_bg_var_peek_scalefactor (<em class="parameter"><code><a class="link" h
 <a name="nc-hipert-bg-var-set-zf"></a><h3>nc_hipert_bg_var_set_zf ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_hipert_bg_var_set_zf (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>,
-                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zf</code></em>);</pre>
+                         <em class="parameter"><code>const <span class="type">gdouble</span> zf</code></em>);</pre>
 <p>Requires the maximum redshift for computations to be <em class="parameter"><code>zf</code></em>
 .</p>
 <div class="refsect3">
@@ -1193,7 +1193,7 @@ nc_hipert_bg_var_set_zf (<em class="parameter"><code><a class="link" href="NcHIP
 <hr/>
 <div class="refsect2">
 <a name="nc-hipert-bg-var-get-zf"></a><h3>nc_hipert_bg_var_get_zf ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 nc_hipert_bg_var_get_zf (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>);</pre>
 <div class="refsect3">
 <a name="nc-hipert-bg-var-get-zf.parameters"></a><h4>Parameters</h4>
@@ -1219,7 +1219,7 @@ nc_hipert_bg_var_get_zf (<em class="parameter"><code><a class="link" href="NcHIP
 <hr/>
 <div class="refsect2">
 <a name="nc-hipert-bg-var-len"></a><h3>nc_hipert_bg_var_len ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<pre class="programlisting"><span class="returnvalue">guint</span>
 nc_hipert_bg_var_len (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>);</pre>
 <div class="refsect3">
 <a name="nc-hipert-bg-var-len.parameters"></a><h4>Parameters</h4>
@@ -1279,7 +1279,7 @@ the list ... must end with a -1 signaling the end of the list.</p>
 <a name="nc-hipert-bg-var-activate-id-array"></a><h3>nc_hipert_bg_var_activate_id_array ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_hipert_bg_var_activate_id_array (<em class="parameter"><code><a class="link" href="NcHIPertBGVar.html" title="NcHIPertComp"><span class="type">NcHIPertBGVar</span></a> *bg_var</code></em>,
-                                    <em class="parameter"><code><a href="../glib/glib-Arrays.html#GArray"><span class="type">GArray</span></a> *ids</code></em>);</pre>
+                                    <em class="parameter"><code><span class="type">GArray</span> *ids</code></em>);</pre>
 <p>Register which components that will use the object <em class="parameter"><code>bg_var</code></em>
 .
 the list ... must end with a -1 signaling the end of the list.</p>
@@ -1374,6 +1374,6 @@ the list ... must end with a -1 signaling the end of the list.</p>
 </div>
 </div>
 <div class="footer">
-<hr/>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.34.0</div>
 </body>
 </html>

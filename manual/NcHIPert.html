@@ -8,8 +8,8 @@
 <link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
 <link href="ch07.html" rel="up" title="Perturbations"/>
 <link href="ch07.html" rel="prev" title="Perturbations"/>
-<link href="NcHIPertBGVar.html" rel="next" title="NcHIPertComp"/>
-<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<link href="NcHIPertIAdiab.html" rel="next" title="NcHIPertAdiab"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 <link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
 //<![CDATA[
@@ -36,7 +36,7 @@ messageStyle: "none"
 <td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
 <td><a accesskey="u" href="ch07.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
 <td><a accesskey="p" href="ch07.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
-<td><a accesskey="n" href="NcHIPertBGVar.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcHIPertIAdiab.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcHIPert"></a><div class="titlepage"></div>
@@ -81,7 +81,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcHIPert.html#nc-hipert-get-reltol" title="nc_hipert_get_reltol ()">nc_hipert_get_reltol</a> <span class="c_punctuation">()</span>
@@ -89,7 +89,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcHIPert.html#nc-hipert-get-abstol" title="nc_hipert_get_abstol ()">nc_hipert_get_abstol</a> <span class="c_punctuation">()</span>
@@ -97,7 +97,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcHIPert.html#nc-hipert-get-mode-k" title="nc_hipert_get_mode_k ()">nc_hipert_get_mode_k</a> <span class="c_punctuation">()</span>
@@ -105,7 +105,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="returnvalue">gboolean</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcHIPert.html#nc-hipert-prepared" title="nc_hipert_prepared ()">nc_hipert_prepared</a> <span class="c_punctuation">()</span>
@@ -176,7 +176,7 @@ messageStyle: "none"
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_type"><span class="type">guint</span></td>
 <td class="property_name"><a class="link" href="NcHIPert.html#NcHIPert--sys-size" title="The “sys-size” property">sys-size</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -185,7 +185,7 @@ messageStyle: "none"
 </div>
 <div class="refsect1">
 <a name="NcHIPert.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+<pre class="screen">    GObject
     <span class="lineart">╰──</span> NcHIPert
         <span class="lineart">├──</span> <a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann">NcHIPertBoltzmann</a>
         <span class="lineart">├──</span> <a class="link" href="NcHIPertTwoFluids.html" title="NcHIPertTwoFluids">NcHIPertTwoFluids</a>
@@ -202,7 +202,7 @@ messageStyle: "none"
 <a name="nc-hipert-set-mode-k"></a><h3>nc_hipert_set_mode_k ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_hipert_set_mode_k (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>,
-                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> k</code></em>);</pre>
+                      <em class="parameter"><code><span class="type">gdouble</span> k</code></em>);</pre>
 <p>Sets the value of the mode to be computed.</p>
 <div class="refsect3">
 <a name="nc-hipert-set-mode-k.parameters"></a><h4>Parameters</h4>
@@ -232,7 +232,7 @@ nc_hipert_set_mode_k (<em class="parameter"><code><a class="link" href="NcHIPert
 <a name="nc-hipert-set-reltol"></a><h3>nc_hipert_set_reltol ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_hipert_set_reltol (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>,
-                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>);</pre>
+                      <em class="parameter"><code><span class="type">gdouble</span> reltol</code></em>);</pre>
 <p>Sets the value of the relative tolerance.</p>
 <div class="refsect3">
 <a name="nc-hipert-set-reltol.parameters"></a><h4>Parameters</h4>
@@ -262,7 +262,7 @@ nc_hipert_set_reltol (<em class="parameter"><code><a class="link" href="NcHIPert
 <a name="nc-hipert-set-abstol"></a><h3>nc_hipert_set_abstol ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_hipert_set_abstol (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>,
-                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> abstol</code></em>);</pre>
+                      <em class="parameter"><code><span class="type">gdouble</span> abstol</code></em>);</pre>
 <p>Sets the value of the absolute tolerance.</p>
 <div class="refsect3">
 <a name="nc-hipert-set-abstol.parameters"></a><h4>Parameters</h4>
@@ -290,7 +290,7 @@ nc_hipert_set_abstol (<em class="parameter"><code><a class="link" href="NcHIPert
 <hr/>
 <div class="refsect2">
 <a name="nc-hipert-get-reltol"></a><h3>nc_hipert_get_reltol ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 nc_hipert_get_reltol (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>);</pre>
 <p>Gets the value of the relative tolerance.</p>
 <div class="refsect3">
@@ -316,7 +316,7 @@ nc_hipert_get_reltol (<em class="parameter"><code><a class="link" href="NcHIPert
 <hr/>
 <div class="refsect2">
 <a name="nc-hipert-get-abstol"></a><h3>nc_hipert_get_abstol ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 nc_hipert_get_abstol (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>);</pre>
 <p>Gets the value of the relative tolerance.</p>
 <div class="refsect3">
@@ -342,7 +342,7 @@ nc_hipert_get_abstol (<em class="parameter"><code><a class="link" href="NcHIPert
 <hr/>
 <div class="refsect2">
 <a name="nc-hipert-get-mode-k"></a><h3>nc_hipert_get_mode_k ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 nc_hipert_get_mode_k (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>);</pre>
 <p>Gets the value of the mode $k$.</p>
 <div class="refsect3">
@@ -368,7 +368,7 @@ nc_hipert_get_mode_k (<em class="parameter"><code><a class="link" href="NcHIPert
 <hr/>
 <div class="refsect2">
 <a name="nc-hipert-prepared"></a><h3>nc_hipert_prepared ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
 nc_hipert_prepared (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>);</pre>
 <div class="refsect3">
 <a name="nc-hipert-prepared.parameters"></a><h4>Parameters</h4>
@@ -395,7 +395,7 @@ nc_hipert_prepared (<em class="parameter"><code><a class="link" href="NcHIPert.h
 <a name="nc-hipert-set-prepared"></a><h3>nc_hipert_set_prepared ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_hipert_set_prepared (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>,
-                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> prepared</code></em>);</pre>
+                        <em class="parameter"><code><span class="type">gboolean</span> prepared</code></em>);</pre>
 <p>Sets the object to <em class="parameter"><code>prepared</code></em>
 .</p>
 <div class="refsect3">
@@ -426,7 +426,7 @@ nc_hipert_set_prepared (<em class="parameter"><code><a class="link" href="NcHIPe
 <a name="nc-hipert-set-sys-size"></a><h3>nc_hipert_set_sys_size ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_hipert_set_sys_size (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>,
-                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sys_size</code></em>);</pre>
+                        <em class="parameter"><code><span class="type">guint</span> sys_size</code></em>);</pre>
 <p>Sets the system size.</p>
 <div class="refsect3">
 <a name="nc-hipert-set-sys-size.parameters"></a><h4>Parameters</h4>
@@ -456,7 +456,7 @@ nc_hipert_set_sys_size (<em class="parameter"><code><a class="link" href="NcHIPe
 <a name="nc-hipert-set-stiff-solver"></a><h3>nc_hipert_set_stiff_solver ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 nc_hipert_set_stiff_solver (<em class="parameter"><code><a class="link" href="NcHIPert.html" title="NcHIPert"><span class="type">NcHIPert</span></a> *pert</code></em>,
-                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> stiff</code></em>);</pre>
+                            <em class="parameter"><code><span class="type">gboolean</span> stiff</code></em>);</pre>
 <p>Sets the ode algorithm to use.</p>
 <div class="refsect3">
 <a name="nc-hipert-set-stiff-solver.parameters"></a><h4>Parameters</h4>
@@ -547,7 +547,7 @@ nc_hipert_reset_solver (<em class="parameter"><code><a class="link" href="NcHIPe
 <hr/>
 <div class="refsect2">
 <a name="NcHIPert--sys-size"></a><h3>The <code class="literal">“sys-size”</code> property</h3>
-<pre class="programlisting">  “sys-size”                 <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<pre class="programlisting">  “sys-size”                 <span class="type">guint</span></pre>
 <p>System size.</p>
 <p>Owner: NcHIPert</p>
 <p>Flags: Read / Write</p>
@@ -557,6 +557,6 @@ nc_hipert_reset_solver (<em class="parameter"><code><a class="link" href="NcHIPe
 </div>
 </div>
 <div class="footer">
-<hr/>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.34.0</div>
 </body>
 </html>

@@ -1,0 +1,685 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>NcHIPertGW: NumCosmo Reference Manual</title>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch07.html" rel="up" title="Perturbations"/>
+<link href="NcHIPertFirstOrder.html" rel="prev" title="NcHIPertFirstOrder"/>
+<link href="NcHIPertTwoFluids.html" rel="next" title="NcHIPertTwoFluids"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcHIPertIGW.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcHIPertIGW.object-hierarchy">Object Hierarchy</a></span><span id="nav_prerequisites">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcHIPertIGW.prerequisites">Prerequisites</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcHIPertIGW.properties">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch07.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcHIPertFirstOrder.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcHIPertTwoFluids.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcHIPertIGW"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcHIPertIGW.top_of_page"></a>NcHIPertGW</span></h2>
+<p>NcHIPertGW — Perturbation object for gravitational wave mode.</p>
+</td>
+<td align="right" class="gallery_image" valign="top"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcHIPertIGW.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIGW.html#nc-hipert-igw-eval-xi" title="nc_hipert_igw_eval_xi ()">nc_hipert_igw_eval_xi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIGW.html#nc-hipert-igw-eval-F1" title="nc_hipert_igw_eval_F1 ()">nc_hipert_igw_eval_F1</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIGW.html#nc-hipert-igw-eval-nu" title="nc_hipert_igw_eval_nu ()">nc_hipert_igw_eval_nu</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIGW.html#nc-hipert-igw-eval-m" title="nc_hipert_igw_eval_m ()">nc_hipert_igw_eval_m</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIGW.html#nc-hipert-igw-eval-unit" title="nc_hipert_igw_eval_unit ()">nc_hipert_igw_eval_unit</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIGW.html#nc-hipert-igw-eval-x" title="nc_hipert_igw_eval_x ()">nc_hipert_igw_eval_x</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="returnvalue">NcHIPertGW</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIGW.html#nc-hipert-gw-new" title="nc_hipert_gw_new ()">nc_hipert_gw_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="returnvalue">NcHIPertGW</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIGW.html#nc-hipert-gw-ref" title="nc_hipert_gw_ref ()">nc_hipert_gw_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIGW.html#nc-hipert-gw-free" title="nc_hipert_gw_free ()">nc_hipert_gw_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIGW.html#nc-hipert-gw-clear" title="nc_hipert_gw_clear ()">nc_hipert_gw_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIGW.html#nc-hipert-gw-set-k" title="nc_hipert_gw_set_k ()">nc_hipert_gw_set_k</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIGW.html#nc-hipert-gw-get-k" title="nc_hipert_gw_get_k ()">nc_hipert_gw_get_k</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertIGW.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0" class="informaltable">
+<colgroup>
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcHIPertIGW.html#NcHIPertGW--k" title="The “k” property">k</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr></tbody>
+</table></div>
+</div>
+<a name="NcHIPertGW"></a><div class="refsect1">
+<a name="NcHIPertIGW.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcHIPertIGW.html#NC-TYPE-HIPERT-IGW:CAPS" title="NC_TYPE_HIPERT_IGW">NC_TYPE_HIPERT_IGW</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcHIPertIGW.html#NC-TYPE-HIPERT-GW:CAPS" title="NC_TYPE_HIPERT_GW">NC_TYPE_HIPERT_GW</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcHIPertIGW.html#NcHIPertIGWInterface" title="struct NcHIPertIGWInterface">NcHIPertIGWInterface</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcHIPertIGW.html#NcHIPertGWVars" title="enum NcHIPertGWVars">NcHIPertGWVars</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcHIPertIGW.html#NcHIPertGW-struct" title="NcHIPertGW">NcHIPertGW</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcHIPertIGW.html#NcHIPertIGW-struct" title="NcHIPertIGW">NcHIPertIGW</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertIGW.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcHIPertGWVars
+    <a href="/usr/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
+    <span class="lineart">╰──</span> NcHIPertIGW
+    GObject
+    <span class="lineart">╰──</span> <a class="link" href="NcmCSQ1D.html" title="NcmCSQ1D">NcmCSQ1D</a>
+        <span class="lineart">╰──</span> NcHIPertGW
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcHIPertIGW.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+NcHIPertIGW requires
+ GObject.</p>
+</div>
+<div class="refsect1">
+<a name="NcHIPertIGW.description"></a><h2>Description</h2>
+<p>This object provides the computation of the gravitational wave mode for the
+cosmological perturbations. It solves the equation of motion for the gauge invariant
+variable $h$.</p>
+</div>
+<div class="refsect1">
+<a name="NcHIPertIGW.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="nc-hipert-igw-eval-xi"></a><h3>nc_hipert_igw_eval_xi ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_igw_eval_xi (<em class="parameter"><code><a class="link" href="NcHIPertIGW.html" title="NcHIPertGW"><span class="type">NcHIPertIGW</span></a> *igw</code></em>,
+                       <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>,
+                       <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>);</pre>
+<p>Computes the value of $\xi = \ln(m\nu)$</p>
+<div class="refsect3">
+<a name="nc-hipert-igw-eval-xi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>igw</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIGW.html" title="NcHIPertGW"><span class="type">NcHIPertIGW</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-igw-eval-xi.returns"></a><h4>Returns</h4>
+<p> $\xi$.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-igw-eval-F1"></a><h3>nc_hipert_igw_eval_F1 ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_igw_eval_F1 (<em class="parameter"><code><a class="link" href="NcHIPertIGW.html" title="NcHIPertGW"><span class="type">NcHIPertIGW</span></a> *igw</code></em>,
+                       <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>,
+                       <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>);</pre>
+<p>Computes the value of $F_1 = \dot{\xi}/(2\nu)$.</p>
+<div class="refsect3">
+<a name="nc-hipert-igw-eval-F1.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>igw</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIGW.html" title="NcHIPertGW"><span class="type">NcHIPertIGW</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-igw-eval-F1.returns"></a><h4>Returns</h4>
+<p> $F_1$.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-igw-eval-nu"></a><h3>nc_hipert_igw_eval_nu ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_igw_eval_nu (<em class="parameter"><code><a class="link" href="NcHIPertIGW.html" title="NcHIPertGW"><span class="type">NcHIPertIGW</span></a> *igw</code></em>,
+                       <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>,
+                       <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>);</pre>
+<p>Computes the value of $\nu$.</p>
+<div class="refsect3">
+<a name="nc-hipert-igw-eval-nu.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>igw</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIGW.html" title="NcHIPertGW"><span class="type">NcHIPertIGW</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-igw-eval-nu.returns"></a><h4>Returns</h4>
+<p> $\nu$.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-igw-eval-m"></a><h3>nc_hipert_igw_eval_m ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_igw_eval_m (<em class="parameter"><code><a class="link" href="NcHIPertIGW.html" title="NcHIPertGW"><span class="type">NcHIPertIGW</span></a> *igw</code></em>,
+                      <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>,
+                      <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>);</pre>
+<p>Computes the value of $m$.</p>
+<div class="refsect3">
+<a name="nc-hipert-igw-eval-m.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>igw</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIGW.html" title="NcHIPertGW"><span class="type">NcHIPertIGW</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-igw-eval-m.returns"></a><h4>Returns</h4>
+<p> $m$.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-igw-eval-unit"></a><h3>nc_hipert_igw_eval_unit ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_igw_eval_unit (<em class="parameter"><code><a class="link" href="NcHIPertIGW.html" title="NcHIPertGW"><span class="type">NcHIPertIGW</span></a> *igw</code></em>);</pre>
+<p>FIXME</p>
+<div class="refsect3">
+<a name="nc-hipert-igw-eval-unit.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>igw</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIGW.html" title="NcHIPertGW"><span class="type">NcHIPertIGW</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-igw-eval-unit.returns"></a><h4>Returns</h4>
+<p> FIXME.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-igw-eval-x"></a><h3>nc_hipert_igw_eval_x ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_igw_eval_x (<em class="parameter"><code><a class="link" href="NcHIPertIGW.html" title="NcHIPertGW"><span class="type">NcHIPertIGW</span></a> *igw</code></em>,
+                      <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>);</pre>
+<p>Evaluates the value of $x = a_0 / a$ at a given time $\tau$.</p>
+<div class="refsect3">
+<a name="nc-hipert-igw-eval-x.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>igw</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIGW.html" title="NcHIPertGW"><span class="type">NcHIPertIGW</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-gw-new"></a><h3>nc_hipert_gw_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="returnvalue">NcHIPertGW</span></a> *
+nc_hipert_gw_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="type">NcHIPertGW</span></a> object.</p>
+<div class="refsect3">
+<a name="nc-hipert-gw-new.returns"></a><h4>Returns</h4>
+<p>a new <a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="type">NcHIPertGW</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-gw-ref"></a><h3>nc_hipert_gw_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="returnvalue">NcHIPertGW</span></a> *
+nc_hipert_gw_ref (<em class="parameter"><code><a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="type">NcHIPertGW</span></a> *pgw</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>pgw</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-gw-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pgw</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="type">NcHIPertGW</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-gw-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>pgw</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-gw-free"></a><h3>nc_hipert_gw_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_gw_free (<em class="parameter"><code><a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="type">NcHIPertGW</span></a> *pgw</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>pgw</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-gw-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pgw</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="type">NcHIPertGW</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-gw-clear"></a><h3>nc_hipert_gw_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_gw_clear (<em class="parameter"><code><a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="type">NcHIPertGW</span></a> **pgw</code></em>);</pre>
+<p>Decreases the reference count of *<em class="parameter"><code>pgw</code></em>
+ and sets *<em class="parameter"><code>pgw</code></em>
+ to NULL.</p>
+<div class="refsect3">
+<a name="nc-hipert-gw-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pgw</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="type">NcHIPertGW</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-gw-set-k"></a><h3>nc_hipert_gw_set_k ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_gw_set_k (<em class="parameter"><code><a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="type">NcHIPertGW</span></a> *pgw</code></em>,
+                    <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>);</pre>
+<p>Sets the mode $k$ for the gravitational wave perturbation mode.</p>
+<div class="refsect3">
+<a name="nc-hipert-gw-set-k.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>pgw</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="type">NcHIPertGW</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>the mode $k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-gw-get-k"></a><h3>nc_hipert_gw_get_k ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_gw_get_k (<em class="parameter"><code><a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="type">NcHIPertGW</span></a> *pgw</code></em>);</pre>
+<p>Returns the mode $k$ for the gravitational wave perturbation mode.</p>
+<div class="refsect3">
+<a name="nc-hipert-gw-get-k.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pgw</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIGW.html#NcHIPertGW"><span class="type">NcHIPertGW</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-gw-get-k.returns"></a><h4>Returns</h4>
+<p> the mode $k$.</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertIGW.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NC-TYPE-HIPERT-IGW:CAPS"></a><h3>NC_TYPE_HIPERT_IGW</h3>
+<pre class="programlisting">#define NC_TYPE_HIPERT_IGW (nc_hipert_igw_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NC-TYPE-HIPERT-GW:CAPS"></a><h3>NC_TYPE_HIPERT_GW</h3>
+<pre class="programlisting">#define NC_TYPE_HIPERT_GW (nc_hipert_gw_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcHIPertIGWInterface"></a><h3>struct NcHIPertIGWInterface</h3>
+<pre class="programlisting">struct NcHIPertIGWInterface {
+};
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcHIPertGWVars"></a><h3>enum NcHIPertGWVars</h3>
+<p>Perturbation variables enumerator.</p>
+<div class="refsect3">
+<a name="NcHIPertGWVars.members"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="enum_members_name" width="300px"/>
+<col class="enum_members_description"/>
+<col class="enum_members_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HIPERT-GW-RE-H:CAPS"></a>NC_HIPERT_GW_RE_H</p></td>
+<td class="enum_member_description">
+<p>$\text{Re}(\zeta)$</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HIPERT-GW-IM-H:CAPS"></a>NC_HIPERT_GW_IM_H</p></td>
+<td class="enum_member_description">
+<p>$\text{Im}(\zeta)$</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HIPERT-GW-RE-PH:CAPS"></a>NC_HIPERT_GW_RE_PH</p></td>
+<td class="enum_member_description">
+<p>$\text{Re}(P_\zeta)$</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HIPERT-GW-IM-PH:CAPS"></a>NC_HIPERT_GW_IM_PH</p></td>
+<td class="enum_member_description">
+<p>$\text{Im}(P_\zeta)$</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcHIPertGW-struct"></a><h3>NcHIPertGW</h3>
+<pre class="programlisting">typedef struct _NcHIPertGW NcHIPertGW;</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcHIPertIGW-struct"></a><h3>NcHIPertIGW</h3>
+<pre class="programlisting">typedef struct _NcHIPertIGW NcHIPertIGW;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertIGW.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcHIPertGW--k"></a><h3>The <code class="literal">“k”</code> property</h3>
+<pre class="programlisting">  “k”                        <span class="type">double</span></pre>
+<p>Wave number.</p>
+<p>Owner: NcHIPertGW</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 1</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr/>Generated by GTK-Doc V1.34.0</div>
+</body>
+</html>

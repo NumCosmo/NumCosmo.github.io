@@ -7,7 +7,7 @@
 <meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
 <link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
 <link href="ch01.html" rel="next" title="NumCosmo Overview"/>
-<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 <link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
 //<![CDATA[
@@ -29,7 +29,7 @@ messageStyle: "none"
 <div>
 <div><table cellpadding="2" cellspacing="0" class="navigation" id="top" width="100%"><tr><th valign="middle"><p class="title">NumCosmo Reference Manual</p></th></tr></table></div>
 <div><p class="releaseinfo">
-    for NumCosmo 0.21.2.
+    for NumCosmo 0.22.0.
     The latest version of this documentation can be found on-line at
     <a class="ulink" href="https://numcosmo.github.io/manual/" target="_top">https://numcosmo.github.io/manual/</a>,      
     <a class="ulink" href="https://numcosmo.github.io/" target="_top">NumCosmo website</a>.
@@ -202,13 +202,16 @@ messageStyle: "none"
 <span class="refentrytitle"><a href="NcmPowspec.html">NcmPowspec</a></span><span class="refpurpose"> — Abstrac class for power spectrum implementation.</span>
 </dt>
 <dt>
+<span class="refentrytitle"><a href="NcmPowspecCorr3d.html">NcmPowspecCorr3d</a></span><span class="refpurpose"> — Class to compute filtered power spectrum</span>
+</dt>
+<dt>
 <span class="refentrytitle"><a href="NcmPowspecFilter.html">NcmPowspecFilter</a></span><span class="refpurpose"> — Class to compute filtered power spectrum</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcmPowspecSphereProj.html">NcmPowspecSphereProj</a></span><span class="refpurpose"> — Class to compute spherical projection of power spectra</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcmPowspecCorr3d.html">NcmPowspecCorr3d</a></span><span class="refpurpose"> — Class to compute filtered power spectrum</span>
+<span class="refentrytitle"><a href="NcmPowspecSpline2d.html">NcmPowspecSpline2d</a></span><span class="refpurpose"> — Power spectrum implementation using a 2D spline</span>
 </dt>
 </dl></dd>
 <dt><span class="section"><a href="ch02s07.html">Harmonic Oscillator</a></span></dt>
@@ -529,7 +532,8 @@ An N-dimensional Gaussian kernel used to compute the kernel density estimation f
 <dt><span class="section"><a href="ch03s02.html">Quantum Gravity Bounce</a></span></dt>
 <dd><dl>
 <dt>
-<span class="refentrytitle"><a href="NcHICosmoQGRW.html">NcHICosmoQGRW</a></span><span class="refpurpose"> — Radiation plus $w$-fluid model with a quantum generated bounce phase model.</span>
+<span class="refentrytitle"><a href="NcHICosmoQGRW.html">NcHICosmoQGRW</a></span><span class="refpurpose"> — Radiation plus $w$-fluid model with a quantum generated bounce
+phase model.</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcHICosmoVexp.html">NcHICosmoVexp</a></span><span class="refpurpose"> — Single scalar field with an exponential potential</span>
@@ -572,6 +576,9 @@ An N-dimensional Gaussian kernel used to compute the kernel density estimation f
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcHIPrimSBPL.html">NcHIPrimSBPL</a></span><span class="refpurpose"> — Smooth Broken power law modification of the power law primordial spectrum</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPrimTwoFluids.html">NcHIPrimTwoFluids</a></span><span class="refpurpose"> — Two Fluids implementation for primordial spectra.</span>
 </dt>
 </dl></dd>
 </dl></dd>
@@ -630,30 +637,33 @@ An N-dimensional Gaussian kernel used to compute the kernel density estimation f
 <span class="refentrytitle"><a href="NcHIPert.html">NcHIPert</a></span><span class="refpurpose"> — Abstract class for perturbation in homogeneous and isotropic cosmologies.</span>
 </dt>
 <dt>
+<span class="refentrytitle"><a href="NcHIPertIAdiab.html">NcHIPertAdiab</a></span><span class="refpurpose"> — Perturbation object for adiabatic mode only.</span>
+</dt>
+<dt>
 <span class="refentrytitle"><a href="NcHIPertBGVar.html">NcHIPertComp</a></span><span class="refpurpose"> — Perturbation background variables transport object</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="NcHIPertWKB.html">NcHIPertWKB</a></span><span class="refpurpose"> — WKB perturbation object.</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="NcHIPertAdiab.html">NcHIPertAdiab</a></span><span class="refpurpose"> — Perturbation object for adiabatic mode only.</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="NcHIPertGW.html">NcHIPertGW</a></span><span class="refpurpose"> — Perturbation object for gwatic mode only.</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="NcHIPertTwoFluids.html">NcHIPertTwoFluids</a></span><span class="refpurpose"> — Perturbation object for a two fluids system.</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="NcHIPertBoltzmann.html">NcHIPertBoltzmann</a></span><span class="refpurpose"> — Abstract class for perturbative Boltzmann hierarchy.</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcHIPertBoltzmannStd.html">NcHIPertBoltzmannStd</a></span><span class="refpurpose"> — Perturbations object for standard Boltzmann hierarchy model.</span>
 </dt>
 <dt>
+<span class="refentrytitle"><a href="NcHIPertBoltzmann.html">NcHIPertBoltzmann</a></span><span class="refpurpose"> — Abstract class for perturbative Boltzmann hierarchy.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertIEM.html">NcHIPertEM</a></span><span class="refpurpose"> — Perturbation object for electromagnetic mode.</span>
+</dt>
+<dt>
 <span class="refentrytitle"><a href="NcHIPertFirstOrder.html">NcHIPertFirstOrder</a></span><span class="refpurpose"> — Base object for implementing first order perturbation in a Friedmann background.</span>
 </dt>
-<dt><span class="section"><a href="ch07.html#id-1.8.11">Gravitational theories</a></span></dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertIGW.html">NcHIPertGW</a></span><span class="refpurpose"> — Perturbation object for gravitational wave mode.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertTwoFluids.html">NcHIPertTwoFluids</a></span><span class="refpurpose"> — Perturbation object for a two fluids system.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHIPertWKB.html">NcHIPertWKB</a></span><span class="refpurpose"> — WKB perturbation object.</span>
+</dt>
+<dt><span class="section"><a href="ch07.html#id-1.8.12">Gravitational theories</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcHIPertGrav.html">NcHIPertGrav</a></span><span class="refpurpose"> — Abstract class describing a general first order gravitation theory.</span>
@@ -726,13 +736,13 @@ An N-dimensional Gaussian kernel used to compute the kernel density estimation f
 <span class="refentrytitle"><a href="NcPowspecML.html">NcPowspecML</a></span><span class="refpurpose"> — Abstract class for linear matter power spectrum implementation.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcPowspecMLFixSpline.html">NcPowspecMLFixSpline</a></span><span class="refpurpose"> — Class for linear matter power spectrum from a fixed spline.</span>
+<span class="refentrytitle"><a href="NcPowspecMLCBE.html">NcPowspecMLCBE</a></span><span class="refpurpose"> — linear matter power spectrum from CLASS backend.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcPowspecMLSpline.html">NcPowspecMLSpline</a></span><span class="refpurpose"> — Class for linear matter power spectrum from a 1d-spline.</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcPowspecMLTransfer.html">NcPowspecMLTransfer</a></span><span class="refpurpose"> — Class for linear matter power spectrum from a transfer function.</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="NcPowspecMLCBE.html">NcPowspecMLCBE</a></span><span class="refpurpose"> — linear matter power spectrum from CLASS backend.</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcPowspecMNL.html">NcPowspecMNL</a></span><span class="refpurpose"> — Abstrac class for non-linear matter power spectrum implementation.</span>
@@ -1001,6 +1011,9 @@ An N-dimensional Gaussian kernel used to compute the kernel density estimation f
 <span class="refentrytitle"><a href="NcDataClusterNCount.html">NcDataClusterNCount</a></span><span class="refpurpose"> — Cluster number count data.</span>
 </dt>
 <dt>
+<span class="refentrytitle"><a href="NcDataClusterNCountsGauss.html">NcDataClusterNCountsGauss</a></span><span class="refpurpose"> — Cluster number count data gaussian likelihood.</span>
+</dt>
+<dt>
 <span class="refentrytitle"><a href="NcDataClusterPseudoCounts.html">NcDataClusterPseudoCounts</a></span><span class="refpurpose"> — Galaxy clusters data -- pseudo number counts likelihood.</span>
 </dt>
 <dt>
@@ -1015,7 +1028,7 @@ An N-dimensional Gaussian kernel used to compute the kernel density estimation f
 <dt>
 <span class="refentrytitle"><a href="NcDataXcor.html">NcDataXcor</a></span><span class="refpurpose"> — cross-correlation data object.</span>
 </dt>
-<dt><span class="section"><a href="ch09.html#id-1.10.26">ABC analysis</a></span></dt>
+<dt><span class="section"><a href="ch09.html#id-1.10.27">ABC analysis</a></span></dt>
 <dd><dl><dt>
 <span class="refentrytitle"><a href="NcABCClusterNCount.html">NcABCClusterNCount</a></span><span class="refpurpose"> — Object implementing Approximate Bayesian Computation (ABC) for cluster number counts.</span>
 </dt></dl></dd>
@@ -1051,6 +1064,6 @@ An N-dimensional Gaussian kernel used to compute the kernel density estimation f
 </dl></div>
 </div>
 <div class="footer">
-<hr/>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.34.0</div>
 </body>
 </html>

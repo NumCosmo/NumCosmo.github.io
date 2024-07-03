@@ -9,7 +9,7 @@
 <link href="ch09.html" rel="up" title="Cosmological Data"/>
 <link href="NcDataReducedShearClusterMass.html" rel="prev" title="NcDataReducedShearClusterMass"/>
 <link href="NcDataXcor.html" rel="next" title="NcDataXcor"/>
-<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 <link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
 //<![CDATA[
@@ -72,7 +72,15 @@ messageStyle: "none"
 </td>
 </tr>
 <tr>
-<td class="function_type">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+<td class="function_type">
+<a class="link" href="NcDataPlanckLKL.html" title="NcDataPlanckLKL"><span class="returnvalue">NcDataPlanckLKL</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataPlanckLKL.html#nc-data-planck-lkl-full-new-id" title="nc_data_planck_lkl_full_new_id ()">nc_data_planck_lkl_full_new_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">gchar</span> *
 </td>
 <td class="function_name">
 <a class="link" href="NcDataPlanckLKL.html#nc-data-planck-lkl-get-param-name" title="nc_data_planck_lkl_get_param_name ()">nc_data_planck_lkl_get_param_name</a> <span class="c_punctuation">()</span>
@@ -80,7 +88,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+<span class="returnvalue">gchar</span> **
 </td>
 <td class="function_name">
 <a class="link" href="NcDataPlanckLKL.html#nc-data-planck-lkl-get-param-names" title="nc_data_planck_lkl_get_param_names ()">nc_data_planck_lkl_get_param_names</a> <span class="c_punctuation">()</span>
@@ -92,6 +100,14 @@ messageStyle: "none"
 </td>
 <td class="function_name">
 <a class="link" href="NcDataPlanckLKL.html#nc-data-planck-lkl-set-hipert-boltzmann" title="nc_data_planck_lkl_set_hipert_boltzmann ()">nc_data_planck_lkl_set_hipert_boltzmann</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataPlanckLKL.html#nc-data-planck-lkl-download-baseline" title="nc_data_planck_lkl_download_baseline ()">nc_data_planck_lkl_download_baseline</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 </tbody>
@@ -125,12 +141,12 @@ messageStyle: "none"
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_type"><span class="type">gboolean</span></td>
 <td class="property_name"><a class="link" href="NcDataPlanckLKL.html#NcDataPlanckLKL--is-lensing" title="The “is-lensing” property">is-lensing</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
-<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_type"><span class="type">guint</span></td>
 <td class="property_name"><a class="link" href="NcDataPlanckLKL.html#NcDataPlanckLKL--nparams" title="The “nparams” property">nparams</a></td>
 <td class="property_flags">Read</td>
 </tr>
@@ -138,22 +154,48 @@ messageStyle: "none"
 </table></div>
 </div>
 <div class="refsect1">
+<a name="NcDataPlanckLKL.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataPlanckLKL.html#NC-TYPE-DATA-PLANCK-LKL:CAPS" title="NC_TYPE_DATA_PLANCK_LKL">NC_TYPE_DATA_PLANCK_LKL</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcDataPlanckLKL.html#NcDataPlanckLKLType" title="enum NcDataPlanckLKLType">NcDataPlanckLKLType</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcDataPlanckLKL.html#NcDataPlanckLKL-struct" title="NcDataPlanckLKL">NcDataPlanckLKL</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
 <a name="NcDataPlanckLKL.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcDataPlanckLKLType
+    GObject
     <span class="lineart">╰──</span> <a class="link" href="NcmData.html" title="NcmData">NcmData</a>
         <span class="lineart">╰──</span> NcDataPlanckLKL
 </pre>
 </div>
 <div class="refsect1">
 <a name="NcDataPlanckLKL.description"></a><h2>Description</h2>
-<p>FIXME</p>
+<p>Interface to Planck likelihoods from the Planck Legacy Archive.
+This class is a wrapper to the Planck likelihoods code from the Planck Legacy Archive.</p>
 </div>
 <div class="refsect1">
 <a name="NcDataPlanckLKL.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
 <a name="nc-data-planck-lkl-new"></a><h3>nc_data_planck_lkl_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcDataPlanckLKL.html" title="NcDataPlanckLKL"><span class="returnvalue">NcDataPlanckLKL</span></a> *
-nc_data_planck_lkl_new (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>);</pre>
+nc_data_planck_lkl_new (<em class="parameter"><code>const <span class="type">gchar</span> *filename</code></em>);</pre>
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-data-planck-lkl-new.parameters"></a><h4>Parameters</h4>
@@ -179,7 +221,7 @@ nc_data_planck_lkl_new (<em class="parameter"><code>const <a href="../glib/glib-
 <div class="refsect2">
 <a name="nc-data-planck-lkl-full-new"></a><h3>nc_data_planck_lkl_full_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcDataPlanckLKL.html" title="NcDataPlanckLKL"><span class="returnvalue">NcDataPlanckLKL</span></a> *
-nc_data_planck_lkl_full_new (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *filename</code></em>,
+nc_data_planck_lkl_full_new (<em class="parameter"><code>const <span class="type">gchar</span> *filename</code></em>,
                              <em class="parameter"><code><a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann"><span class="type">NcHIPertBoltzmann</span></a> *pb</code></em>);</pre>
 <p>FIXME</p>
 <div class="refsect3">
@@ -211,10 +253,45 @@ nc_data_planck_lkl_full_new (<em class="parameter"><code>const <a href="../glib/
 </div>
 <hr/>
 <div class="refsect2">
+<a name="nc-data-planck-lkl-full-new-id"></a><h3>nc_data_planck_lkl_full_new_id ()</h3>
+<pre class="programlisting"><a class="link" href="NcDataPlanckLKL.html" title="NcDataPlanckLKL"><span class="returnvalue">NcDataPlanckLKL</span></a> *
+nc_data_planck_lkl_full_new_id (<em class="parameter"><code><a class="link" href="NcDataPlanckLKL.html#NcDataPlanckLKLType" title="enum NcDataPlanckLKLType"><span class="type">NcDataPlanckLKLType</span></a> id</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann"><span class="type">NcHIPertBoltzmann</span></a> *pb</code></em>);</pre>
+<p>Create a new <a class="link" href="NcDataPlanckLKL.html" title="NcDataPlanckLKL"><span class="type">NcDataPlanckLKL</span></a> object from the given id and <a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann"><span class="type">NcHIPertBoltzmann</span></a>.
+If the Planck likelihood file is not found, it will be downloaded.</p>
+<div class="refsect3">
+<a name="nc-data-planck-lkl-full-new-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>id</p></td>
+<td class="parameter_description"><p>a Planck likelihood file id <a class="link" href="NcDataPlanckLKL.html#NcDataPlanckLKLType" title="enum NcDataPlanckLKLType"><span class="type">NcDataPlanckLKLType</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pb</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertBoltzmann.html" title="NcHIPertBoltzmann"><span class="type">NcHIPertBoltzmann</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-planck-lkl-full-new-id.returns"></a><h4>Returns</h4>
+<p> a new <a class="link" href="NcDataPlanckLKL.html" title="NcDataPlanckLKL"><span class="type">NcDataPlanckLKL</span></a></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="nc-data-planck-lkl-get-param-name"></a><h3>nc_data_planck_lkl_get_param_name ()</h3>
-<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
 nc_data_planck_lkl_get_param_name (<em class="parameter"><code><a class="link" href="NcDataPlanckLKL.html" title="NcDataPlanckLKL"><span class="type">NcDataPlanckLKL</span></a> *plik</code></em>,
-                                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> i</code></em>);</pre>
+                                   <em class="parameter"><code><span class="type">guint</span> i</code></em>);</pre>
 <p>FIXME</p>
 <div class="refsect3">
 <a name="nc-data-planck-lkl-get-param-name.parameters"></a><h4>Parameters</h4>
@@ -247,7 +324,7 @@ nc_data_planck_lkl_get_param_name (<em class="parameter"><code><a class="link" h
 <hr/>
 <div class="refsect2">
 <a name="nc-data-planck-lkl-get-param-names"></a><h3>nc_data_planck_lkl_get_param_names ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+<pre class="programlisting"><span class="returnvalue">gchar</span> **
 nc_data_planck_lkl_get_param_names (<em class="parameter"><code><a class="link" href="NcDataPlanckLKL.html" title="NcDataPlanckLKL"><span class="type">NcDataPlanckLKL</span></a> *plik</code></em>);</pre>
 <p>FIXME</p>
 <div class="refsect3">
@@ -302,6 +379,131 @@ nc_data_planck_lkl_set_hipert_boltzmann
 </table></div>
 </div>
 </div>
+<hr/>
+<div class="refsect2">
+<a name="nc-data-planck-lkl-download-baseline"></a><h3>nc_data_planck_lkl_download_baseline ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_planck_lkl_download_baseline (<em class="parameter"><code>const <span class="type">gchar</span> *dir</code></em>);</pre>
+<p>Download the Planck baseline likelihood data to the given directory.
+This function will download the file `COM_Likelihood_Data-baseline_R3.00.tar.gz'
+from the Planck Legacy Archive and extract it to the given directory.</p>
+<p>It requires the <code class="literal">wget' and </code>tar' commands to be available in the system.</p>
+<div class="refsect3">
+<a name="nc-data-planck-lkl-download-baseline.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>dir</p></td>
+<td class="parameter_description"><p>a directory</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcDataPlanckLKL.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NC-TYPE-DATA-PLANCK-LKL:CAPS"></a><h3>NC_TYPE_DATA_PLANCK_LKL</h3>
+<pre class="programlisting">#define NC_TYPE_DATA_PLANCK_LKL (nc_data_planck_lkl_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcDataPlanckLKLType"></a><h3>enum NcDataPlanckLKLType</h3>
+<p>The Planck likelihood types.</p>
+<div class="refsect3">
+<a name="NcDataPlanckLKLType.members"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="enum_members_name" width="300px"/>
+<col class="enum_members_description"/>
+<col class="enum_members_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-PLANCK-LKL-TYPE-BASELINE-18-LOWL-TT:CAPS"></a>NC_DATA_PLANCK_LKL_TYPE_BASELINE_18_LOWL_TT</p></td>
+<td class="enum_member_description">
+<p>Planck 2018 baseline low-ell likelihood for TT.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-PLANCK-LKL-TYPE-BASELINE-18-LOWL-EE:CAPS"></a>NC_DATA_PLANCK_LKL_TYPE_BASELINE_18_LOWL_EE</p></td>
+<td class="enum_member_description">
+<p>Planck 2018 baseline low-ell likelihood for EE.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-PLANCK-LKL-TYPE-BASELINE-18-LOWL-BB:CAPS"></a>NC_DATA_PLANCK_LKL_TYPE_BASELINE_18_LOWL_BB</p></td>
+<td class="enum_member_description">
+<p>Planck 2018 baseline low-ell likelihood for BB.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-PLANCK-LKL-TYPE-BASELINE-18-LOWL-EEBB:CAPS"></a>NC_DATA_PLANCK_LKL_TYPE_BASELINE_18_LOWL_EEBB</p></td>
+<td class="enum_member_description">
+<p>Planck 2018 baseline low-ell likelihood for TE.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-PLANCK-LKL-TYPE-BASELINE-18-HIGHL-TT:CAPS"></a>NC_DATA_PLANCK_LKL_TYPE_BASELINE_18_HIGHL_TT</p></td>
+<td class="enum_member_description">
+<p>Planck 2018 baseline high-ell likelihood for TT.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-PLANCK-LKL-TYPE-BASELINE-18-HIGHL-TTTEEE:CAPS"></a>NC_DATA_PLANCK_LKL_TYPE_BASELINE_18_HIGHL_TTTEEE</p></td>
+<td class="enum_member_description">
+<p>Planck 2018 baseline high-ell likelihood for TT, TE and EE.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-PLANCK-LKL-TYPE-BASELINE-18-HIGHL-TT-LITE:CAPS"></a>NC_DATA_PLANCK_LKL_TYPE_BASELINE_18_HIGHL_TT_LITE</p></td>
+<td class="enum_member_description">
+<p>Planck 2018 baseline high-ell likelihood for TT (lite).</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-PLANCK-LKL-TYPE-BASELINE-18-HIGHL-TTTEEE-LITE:CAPS"></a>NC_DATA_PLANCK_LKL_TYPE_BASELINE_18_HIGHL_TTTEEE_LITE</p></td>
+<td class="enum_member_description">
+<p>Planck 2018 baseline high-ell likelihood for TT, TE and EE (lite).</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-PLANCK-LKL-TYPE-BASELINE-18-LENSING:CAPS"></a>NC_DATA_PLANCK_LKL_TYPE_BASELINE_18_LENSING</p></td>
+<td class="enum_member_description">
+<p>Planck 2018 baseline lensing likelihood.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-DATA-PLANCK-LKL-TYPE-BASELINE-18-LENSING-CMB-MARGINALIZED:CAPS"></a>NC_DATA_PLANCK_LKL_TYPE_BASELINE_18_LENSING_CMB_MARGINALIZED</p></td>
+<td class="enum_member_description">
+<p>Planck 2018 baseline lensing likelihood with CMB marginalized.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcDataPlanckLKL-struct"></a><h3>NcDataPlanckLKL</h3>
+<pre class="programlisting">typedef struct _NcDataPlanckLKL NcDataPlanckLKL;</pre>
+</div>
 </div>
 <div class="refsect1">
 <a name="NcDataPlanckLKL.property-details"></a><h2>Property Details</h2>
@@ -333,7 +535,7 @@ nc_data_planck_lkl_set_hipert_boltzmann
 <hr/>
 <div class="refsect2">
 <a name="NcDataPlanckLKL--is-lensing"></a><h3>The <code class="literal">“is-lensing”</code> property</h3>
-<pre class="programlisting">  “is-lensing”               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<pre class="programlisting">  “is-lensing”               <span class="type">gboolean</span></pre>
 <p>Whether the likelihood has lensing.</p>
 <p>Owner: NcDataPlanckLKL</p>
 <p>Flags: Read</p>
@@ -342,7 +544,7 @@ nc_data_planck_lkl_set_hipert_boltzmann
 <hr/>
 <div class="refsect2">
 <a name="NcDataPlanckLKL--nparams"></a><h3>The <code class="literal">“nparams”</code> property</h3>
-<pre class="programlisting">  “nparams”                  <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<pre class="programlisting">  “nparams”                  <span class="type">guint</span></pre>
 <p>Number of expected params.</p>
 <p>Owner: NcDataPlanckLKL</p>
 <p>Flags: Read</p>
@@ -351,6 +553,6 @@ nc_data_planck_lkl_set_hipert_boltzmann
 </div>
 </div>
 <div class="footer">
-<hr/>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.34.0</div>
 </body>
 </html>

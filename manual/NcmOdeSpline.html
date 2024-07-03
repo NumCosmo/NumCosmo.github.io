@@ -9,7 +9,7 @@
 <link href="ch02s04.html" rel="up" title="Splines 1D"/>
 <link href="NcmSplineFuncTest.html" rel="prev" title="NcmSplineFuncTest"/>
 <link href="ch02s05.html" rel="next" title="Splines 2D"/>
-<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 <link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
 //<![CDATA[
@@ -67,7 +67,7 @@ justifications.
 <tbody>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <span class="c_punctuation">(</span><a class="link" href="NcmOdeSpline.html#NcmOdeSplineDydx" title="NcmOdeSplineDydx ()">*NcmOdeSplineDydx</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
@@ -187,7 +187,7 @@ justifications.
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcmOdeSpline.html#ncm-ode-spline-get-ini-step" title="ncm_ode_spline_get_ini_step ()">ncm_ode_spline_get_ini_step</a> <span class="c_punctuation">()</span>
@@ -219,12 +219,12 @@ justifications.
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_type"><span class="type">gboolean</span></td>
 <td class="property_name"><a class="link" href="NcmOdeSpline.html#NcmOdeSpline--auto-abstol" title="The “auto-abstol” property">auto-abstol</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
+<td class="property_type"><span class="type">gpointer</span></td>
 <td class="property_name"><a class="link" href="NcmOdeSpline.html#NcmOdeSpline--dydx" title="The “dydx” property">dydx</a></td>
 <td class="property_flags">Read / Write / Construct Only</td>
 </tr>
@@ -245,7 +245,7 @@ justifications.
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_type"><span class="type">gboolean</span></td>
 <td class="property_name"><a class="link" href="NcmOdeSpline.html#NcmOdeSpline--stop-hnil" title="The “stop-hnil” property">stop-hnil</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -305,7 +305,7 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmOdeSpline.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+<pre class="screen">    GObject
     <span class="lineart">╰──</span> NcmOdeSpline
 </pre>
 </div>
@@ -323,10 +323,10 @@ from the solution.</p>
 <a name="NcmOdeSpline.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
 <a name="NcmOdeSplineDydx"></a><h3>NcmOdeSplineDydx ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-<span class="c_punctuation">(</span>*NcmOdeSplineDydx<span class="c_punctuation">)</span> (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> y</code></em>,
-                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>,
-                     <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> userdata</code></em>);</pre>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+<span class="c_punctuation">(</span>*NcmOdeSplineDydx<span class="c_punctuation">)</span> (<em class="parameter"><code><span class="type">gdouble</span> y</code></em>,
+                     <em class="parameter"><code><span class="type">gdouble</span> x</code></em>,
+                     <em class="parameter"><code><span class="type">gpointer</span> userdata</code></em>);</pre>
 </div>
 <hr/>
 <div class="refsect2">
@@ -368,9 +368,9 @@ ncm_ode_spline_new (<em class="parameter"><code><a class="link" href="NcmSpline.
 <pre class="programlisting"><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="returnvalue">NcmOdeSpline</span></a> *
 ncm_ode_spline_new_full (<em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> *s</code></em>,
                          <em class="parameter"><code><a class="link" href="NcmOdeSpline.html#NcmOdeSplineDydx" title="NcmOdeSplineDydx ()"><span class="type">NcmOdeSplineDydx</span></a> dydx</code></em>,
-                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> yi</code></em>,
-                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>,
-                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>);</pre>
+                         <em class="parameter"><code><span class="type">gdouble</span> yi</code></em>,
+                         <em class="parameter"><code><span class="type">gdouble</span> xi</code></em>,
+                         <em class="parameter"><code><span class="type">gdouble</span> xf</code></em>);</pre>
 <p>This function creates a new <a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> setting all its members.</p>
 <div class="refsect3">
 <a name="ncm-ode-spline-new-full.parameters"></a><h4>Parameters</h4>
@@ -419,7 +419,7 @@ ncm_ode_spline_new_full (<em class="parameter"><code><a class="link" href="NcmSp
 <a name="ncm-ode-spline-prepare"></a><h3>ncm_ode_spline_prepare ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_ode_spline_prepare (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
-                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> userdata</code></em>);</pre>
+                        <em class="parameter"><code><span class="type">gpointer</span> userdata</code></em>);</pre>
 <p>This function prepares the <a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> <em class="parameter"><code>os</code></em>
  and fills its internal <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> with the evaluated ode's solution.</p>
 <div class="refsect3">
@@ -497,9 +497,9 @@ ncm_ode_spline_clear (<em class="parameter"><code><a class="link" href="NcmOdeSp
 <a name="ncm-ode-spline-set-interval"></a><h3>ncm_ode_spline_set_interval ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_ode_spline_set_interval (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
-                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> yi</code></em>,
-                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>,
-                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>);</pre>
+                             <em class="parameter"><code><span class="type">gdouble</span> yi</code></em>,
+                             <em class="parameter"><code><span class="type">gdouble</span> xi</code></em>,
+                             <em class="parameter"><code><span class="type">gdouble</span> xf</code></em>);</pre>
 <p>This function sets <em class="parameter"><code>os</code></em>
  interval [<em class="parameter"><code>xi</code></em>
 , <em class="parameter"><code>xf</code></em>
@@ -543,7 +543,7 @@ ncm_ode_spline_set_interval (<em class="parameter"><code><a class="link" href="N
 <a name="ncm-ode-spline-set-reltol"></a><h3>ncm_ode_spline_set_reltol ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_ode_spline_set_reltol (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
-                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>);</pre>
+                           <em class="parameter"><code><span class="type">gdouble</span> reltol</code></em>);</pre>
 <p>This functions sets the relative tolerance, <em class="parameter"><code>reltol</code></em>
 , of the edo integrator.</p>
 <div class="refsect3">
@@ -574,7 +574,7 @@ ncm_ode_spline_set_reltol (<em class="parameter"><code><a class="link" href="Ncm
 <a name="ncm-ode-spline-set-abstol"></a><h3>ncm_ode_spline_set_abstol ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_ode_spline_set_abstol (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
-                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> abstol</code></em>);</pre>
+                           <em class="parameter"><code><span class="type">gdouble</span> abstol</code></em>);</pre>
 <p>This functions sets the absolute tolerance, <em class="parameter"><code>abstol</code></em>
 , of the edo integrator.</p>
 <div class="refsect3">
@@ -605,7 +605,7 @@ ncm_ode_spline_set_abstol (<em class="parameter"><code><a class="link" href="Ncm
 <a name="ncm-ode-spline-set-xi"></a><h3>ncm_ode_spline_set_xi ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_ode_spline_set_xi (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
-                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xi</code></em>);</pre>
+                       <em class="parameter"><code><span class="type">gdouble</span> xi</code></em>);</pre>
 <p>This function sets the initial point, <em class="parameter"><code>xi</code></em>
 , to integrate the edo.</p>
 <div class="refsect3">
@@ -636,7 +636,7 @@ ncm_ode_spline_set_xi (<em class="parameter"><code><a class="link" href="NcmOdeS
 <a name="ncm-ode-spline-set-xf"></a><h3>ncm_ode_spline_set_xf ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_ode_spline_set_xf (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
-                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> xf</code></em>);</pre>
+                       <em class="parameter"><code><span class="type">gdouble</span> xf</code></em>);</pre>
 <p>This function sets the final point, <em class="parameter"><code>xf</code></em>
 , to integrate the edo.
 Note that if <em class="parameter"><code>yf</code></em>
@@ -670,7 +670,7 @@ Note that if <em class="parameter"><code>yf</code></em>
 <a name="ncm-ode-spline-set-yi"></a><h3>ncm_ode_spline_set_yi ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_ode_spline_set_yi (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
-                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> yi</code></em>);</pre>
+                       <em class="parameter"><code><span class="type">gdouble</span> yi</code></em>);</pre>
 <p>This function sets the initial value of the function to be evaluated.</p>
 <div class="refsect3">
 <a name="ncm-ode-spline-set-yi.parameters"></a><h4>Parameters</h4>
@@ -700,7 +700,7 @@ ncm_ode_spline_set_yi (<em class="parameter"><code><a class="link" href="NcmOdeS
 <a name="ncm-ode-spline-set-yf"></a><h3>ncm_ode_spline_set_yf ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_ode_spline_set_yf (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
-                       <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> yf</code></em>);</pre>
+                       <em class="parameter"><code><span class="type">gdouble</span> yf</code></em>);</pre>
 <p>This function sets the final value of the function to be evaluated.
 When <em class="parameter"><code>yf</code></em>
  is reached, the edo's integration is stopped.
@@ -735,7 +735,7 @@ Note that if <em class="parameter"><code>xf</code></em>
 <a name="ncm-ode-spline-auto-abstol"></a><h3>ncm_ode_spline_auto_abstol ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_ode_spline_auto_abstol (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
-                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> on</code></em>);</pre>
+                            <em class="parameter"><code><span class="type">gboolean</span> on</code></em>);</pre>
 <p>If <em class="parameter"><code>on</code></em>
  is TRUE, the object uses the value of $\mathrm{d}y_i$ to estimate the
 abstol as $T_\mathrm{abs} = \dot{y}_i \mathrm{d}t_m T_\mathrm{rel}$,
@@ -769,7 +769,7 @@ minimum time step <a class="link" href="NcmOdeSpline.html#NCM-ODE-SPLINE-MIN-STE
 <a name="ncm-ode-spline-set-ini-step"></a><h3>ncm_ode_spline_set_ini_step ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_ode_spline_set_ini_step (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
-                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> ini_step</code></em>);</pre>
+                             <em class="parameter"><code><span class="type">gdouble</span> ini_step</code></em>);</pre>
 <p>Sets a guess for the initial step size. If <em class="parameter"><code>ini_step</code></em>
  is
 zero it uses the automatic determination based on the
@@ -800,7 +800,7 @@ tolerances.</p>
 <hr/>
 <div class="refsect2">
 <a name="ncm-ode-spline-get-ini-step"></a><h3>ncm_ode_spline_get_ini_step ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 ncm_ode_spline_get_ini_step (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>);</pre>
 <p>Gets the current guess for the initial step size.</p>
 <div class="refsect3">
@@ -896,7 +896,7 @@ ncm_ode_spline_peek_spline (<em class="parameter"><code><a class="link" href="Nc
 <hr/>
 <div class="refsect2">
 <a name="NcmOdeSpline--auto-abstol"></a><h3>The <code class="literal">“auto-abstol”</code> property</h3>
-<pre class="programlisting">  “auto-abstol”              <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<pre class="programlisting">  “auto-abstol”              <span class="type">gboolean</span></pre>
 <p>Boolean to set whether or not the absolute tolerance is going to be estimated internally by the ode integrator.</p>
 <p>Owner: NcmOdeSpline</p>
 <p>Flags: Read / Write / Construct</p>
@@ -905,7 +905,7 @@ ncm_ode_spline_peek_spline (<em class="parameter"><code><a class="link" href="Nc
 <hr/>
 <div class="refsect2">
 <a name="NcmOdeSpline--dydx"></a><h3>The <code class="literal">“dydx”</code> property</h3>
-<pre class="programlisting">  “dydx”                     <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
+<pre class="programlisting">  “dydx”                     <span class="type">gpointer</span></pre>
 <p>A pointer to the dydx function, a.k.a. the jacobian.</p>
 <p>Owner: NcmOdeSpline</p>
 <p>Flags: Read / Write / Construct Only</p>
@@ -941,7 +941,7 @@ ncm_ode_spline_peek_spline (<em class="parameter"><code><a class="link" href="Nc
 <hr/>
 <div class="refsect2">
 <a name="NcmOdeSpline--stop-hnil"></a><h3>The <code class="literal">“stop-hnil”</code> property</h3>
-<pre class="programlisting">  “stop-hnil”                <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<pre class="programlisting">  “stop-hnil”                <span class="type">gboolean</span></pre>
 <p>Whether treat hnil as error.</p>
 <p>Owner: NcmOdeSpline</p>
 <p>Flags: Read / Write / Construct</p>
@@ -986,6 +986,6 @@ ncm_ode_spline_peek_spline (<em class="parameter"><code><a class="link" href="Nc
 </div>
 </div>
 <div class="footer">
-<hr/>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.34.0</div>
 </body>
 </html>

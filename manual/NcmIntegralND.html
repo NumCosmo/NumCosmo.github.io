@@ -9,7 +9,7 @@
 <link href="ch02.html#id-1.3.2" rel="up" title="Miscellaneous Objects"/>
 <link href="NcmIntegral1dPtr.html" rel="prev" title="NcmIntegral1dPtr"/>
 <link href="numcosmo-NcmLapack.html" rel="next" title="NcmLapack"/>
-<meta content="GTK-Doc V1.33.1 (XML mode)" name="generator"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 <link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
 //<![CDATA[
@@ -163,7 +163,7 @@ justifications.
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<span class="returnvalue">guint</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegralND.html#ncm-integral-nd-get-maxeval" title="ncm_integral_nd_get_maxeval ()">ncm_integral_nd_get_maxeval</a> <span class="c_punctuation">()</span>
@@ -171,7 +171,7 @@ justifications.
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegralND.html#ncm-integral-nd-get-reltol" title="ncm_integral_nd_get_reltol ()">ncm_integral_nd_get_reltol</a> <span class="c_punctuation">()</span>
@@ -179,7 +179,7 @@ justifications.
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
 <a class="link" href="NcmIntegralND.html#ncm-integral-nd-get-abstol" title="ncm_integral_nd_get_abstol ()">ncm_integral_nd_get_abstol</a> <span class="c_punctuation">()</span>
@@ -228,7 +228,7 @@ justifications.
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
-<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_type"><span class="type">guint</span></td>
 <td class="property_name"><a class="link" href="NcmIntegralND.html#NcmIntegralND--maxeval" title="The “maxeval” property">maxeval</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -289,7 +289,7 @@ justifications.
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
     <span class="lineart">├──</span> NcmIntegralNDError
     <span class="lineart">╰──</span> NcmIntegralNDMethod
-    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    GObject
     <span class="lineart">╰──</span> NcmIntegralND
 </pre>
 </div>
@@ -352,9 +352,9 @@ If these functions are not called, default parameters are chosen.</p>
 <pre class="programlisting"><span class="returnvalue">void</span>
 <span class="c_punctuation">(</span>*NcmIntegralNDF<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcmIntegralND.html" title="NcmIntegralND"><span class="type">NcmIntegralND</span></a> *intnd</code></em>,
                    <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *x</code></em>,
-                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> dim</code></em>,
-                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> npoints</code></em>,
-                   <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> fdim</code></em>,
+                   <em class="parameter"><code><span class="type">guint</span> dim</code></em>,
+                   <em class="parameter"><code><span class="type">guint</span> npoints</code></em>,
+                   <em class="parameter"><code><span class="type">guint</span> fdim</code></em>,
                    <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *fval</code></em>);</pre>
 <p>The type of the function that must be implemented by a subclass of <a class="link" href="NcmIntegralND.html" title="NcmIntegralND"><span class="type">NcmIntegralND</span></a>.</p>
 <p>This function receives <em class="parameter"><code>npoints</code></em>
@@ -432,8 +432,8 @@ values of the integrand at all points in <em class="parameter"><code>x</code></e
 <a name="NcmIntegralNDGetDimensions"></a><h3>NcmIntegralNDGetDimensions ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 <span class="c_punctuation">(</span>*NcmIntegralNDGetDimensions<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="NcmIntegralND.html" title="NcmIntegralND"><span class="type">NcmIntegralND</span></a> *intnd</code></em>,
-                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *dim</code></em>,
-                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *fdim</code></em>);</pre>
+                               <em class="parameter"><code><span class="type">guint</span> *dim</code></em>,
+                               <em class="parameter"><code><span class="type">guint</span> *fdim</code></em>);</pre>
 <p>The type of the function that must be implemented by a subclass of <a class="link" href="NcmIntegralND.html" title="NcmIntegralND"><span class="type">NcmIntegralND</span></a>.</p>
 <p>This function returns the dimension of the integral argument and the dimension of
 the function to be integrated.</p>
@@ -608,7 +608,7 @@ ncm_integral_nd_set_error (<em class="parameter"><code><a class="link" href="Ncm
 <a name="ncm-integral-nd-set-maxeval"></a><h3>ncm_integral_nd_set_maxeval ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_integral_nd_set_maxeval (<em class="parameter"><code><a class="link" href="NcmIntegralND.html" title="NcmIntegralND"><span class="type">NcmIntegralND</span></a> *intnd</code></em>,
-                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> maxeval</code></em>);</pre>
+                             <em class="parameter"><code><span class="type">guint</span> maxeval</code></em>);</pre>
 <p>Sets the maximum number of function evaluations to use.
 Zero means unlimited.</p>
 <div class="refsect3">
@@ -639,7 +639,7 @@ Zero means unlimited.</p>
 <a name="ncm-integral-nd-set-reltol"></a><h3>ncm_integral_nd_set_reltol ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_integral_nd_set_reltol (<em class="parameter"><code><a class="link" href="NcmIntegralND.html" title="NcmIntegralND"><span class="type">NcmIntegralND</span></a> *intnd</code></em>,
-                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> reltol</code></em>);</pre>
+                            <em class="parameter"><code><span class="type">gdouble</span> reltol</code></em>);</pre>
 <p>Sets the relative tolerance <em class="parameter"><code>reltol</code></em>
  to use.</p>
 <div class="refsect3">
@@ -670,7 +670,7 @@ ncm_integral_nd_set_reltol (<em class="parameter"><code><a class="link" href="Nc
 <a name="ncm-integral-nd-set-abstol"></a><h3>ncm_integral_nd_set_abstol ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_integral_nd_set_abstol (<em class="parameter"><code><a class="link" href="NcmIntegralND.html" title="NcmIntegralND"><span class="type">NcmIntegralND</span></a> *intnd</code></em>,
-                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> abstol</code></em>);</pre>
+                            <em class="parameter"><code><span class="type">gdouble</span> abstol</code></em>);</pre>
 <p>Sets the absolute tolerance <em class="parameter"><code>reltol</code></em>
  to use.</p>
 <div class="refsect3">
@@ -749,7 +749,7 @@ ncm_integral_nd_get_error (<em class="parameter"><code><a class="link" href="Ncm
 <hr/>
 <div class="refsect2">
 <a name="ncm-integral-nd-get-maxeval"></a><h3>ncm_integral_nd_get_maxeval ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<pre class="programlisting"><span class="returnvalue">guint</span>
 ncm_integral_nd_get_maxeval (<em class="parameter"><code><a class="link" href="NcmIntegralND.html" title="NcmIntegralND"><span class="type">NcmIntegralND</span></a> *intnd</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-integral-nd-get-maxeval.parameters"></a><h4>Parameters</h4>
@@ -774,7 +774,7 @@ ncm_integral_nd_get_maxeval (<em class="parameter"><code><a class="link" href="N
 <hr/>
 <div class="refsect2">
 <a name="ncm-integral-nd-get-reltol"></a><h3>ncm_integral_nd_get_reltol ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 ncm_integral_nd_get_reltol (<em class="parameter"><code><a class="link" href="NcmIntegralND.html" title="NcmIntegralND"><span class="type">NcmIntegralND</span></a> *intnd</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-integral-nd-get-reltol.parameters"></a><h4>Parameters</h4>
@@ -799,7 +799,7 @@ ncm_integral_nd_get_reltol (<em class="parameter"><code><a class="link" href="Nc
 <hr/>
 <div class="refsect2">
 <a name="ncm-integral-nd-get-abstol"></a><h3>ncm_integral_nd_get_abstol ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
 ncm_integral_nd_get_abstol (<em class="parameter"><code><a class="link" href="NcmIntegralND.html" title="NcmIntegralND"><span class="type">NcmIntegralND</span></a> *intnd</code></em>);</pre>
 <div class="refsect3">
 <a name="ncm-integral-nd-get-abstol.parameters"></a><h4>Parameters</h4>
@@ -1140,7 +1140,7 @@ Possibly better for smooth integrands in low dimensions.</p>
 <hr/>
 <div class="refsect2">
 <a name="NcmIntegralND--maxeval"></a><h3>The <code class="literal">“maxeval”</code> property</h3>
-<pre class="programlisting">  “maxeval”                  <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<pre class="programlisting">  “maxeval”                  <span class="type">guint</span></pre>
 <p>Maximum number of function evaluations (0 means unlimited).</p>
 <p>Owner: NcmIntegralND</p>
 <p>Flags: Read / Write / Construct</p>
@@ -1168,6 +1168,6 @@ Possibly better for smooth integrands in low dimensions.</p>
 </div>
 </div>
 <div class="footer">
-<hr/>Generated by GTK-Doc V1.33.1</div>
+<hr/>Generated by GTK-Doc V1.34.0</div>
 </body>
 </html>
