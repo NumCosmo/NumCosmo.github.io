@@ -28,15 +28,15 @@ jobs:
       - name: Setup miniforge
         uses: conda-incubator/setup-miniconda@v3
         with:
+          auto-activate-base: true
+          activate-environment: ""
           auto-update-conda: true
-          activate-environment: numcosmo
           python-version: ${{ matrix.python-version }}
           miniforge-variant: Mambaforge
           show-channel-urls: true
           use-mamba: true
       - name: Create environment
-        run: |
-          mamba create -v -q -n numcosmo numcosmo jupyter nbformat
+        run: mamba install numcosmo jupyter nbformat
       - name: Activate environment
         run: conda activate numcosmo
       - name: Render and Publish
