@@ -36,8 +36,6 @@ jobs:
           use-mamba: true
       - name: Create environment
         run: mamba install numcosmo jupyter nbformat
-      - name: Activate environment
-        run: conda activate numcosmo
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
