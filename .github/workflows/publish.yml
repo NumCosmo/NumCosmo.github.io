@@ -1,0 +1,46 @@
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+
+name: NumCosmo Quarto Publish
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: ["ubuntu"]
+        python-version: ["3.10"]
+    defaults:
+      run:
+        shell: bash -el {0}
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - uses: actions/checkout@v3
+      - name: Setup miniforge
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-update-conda: true
+          activate-environment: numcosmo
+          python-version: ${{ matrix.python-version }}
+          miniforge-variant: Mambaforge
+          show-channel-urls: true
+          use-mamba: true
+      - name: Update environment
+        run: |
+          mamba create -v -q -n numcosmo numcosmo
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          

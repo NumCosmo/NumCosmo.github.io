@@ -1,0 +1,66 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - about.qmd
+    - install.qmd
+    - manual.qmd
+    - gobject.qmd
+    - curve_tutorial.qmd
+    - example_snia.qmd
+
+website:
+  title: "The Numerical Cosmology Library"
+  favicon: favicon_numcosmo.png
+  navbar:
+    search: true
+    tools:
+      - icon: github
+        menu:
+          - text: "Source Code"
+            href: https://github.com/NumCosmo/NumCosmo
+          - text: "Issues"
+            href: https://github.com/NumCosmo/NumCosmo/issues
+    left:
+      - about.qmd
+      - install.qmd
+      - text: "Manual"
+        href: manual.qmd
+  sidebar:
+      style: "docked"
+      logo: numcosmo_logo.png
+      collapse-level: 2
+      contents:
+        - section: "Programming Tutorials"
+          contents:
+            - section: "C Tutorials"
+              contents:                
+              - href: gobject.qmd
+                text: "GObject Tutorial"
+              - href: curve_tutorial.qmd
+                text: "Model Fit Tutorial"
+        - section: "Examples"
+          contents:
+            - section: "Data Analysis"
+              contents:
+              - href: example_snia.qmd
+                text: "SN Ia Fitting"
+
+resources:
+  - manual/**
+
+format:
+  html:
+    theme: [serif, custom.scss]
+    toc: true
+    code-overflow: wrap
+    grid:
+      body-width: 1200px
+
+reference-location: margin
+citation-location: margin
+authors:
+  - NumCosmo developers
+jupyter: python3
+version: 0.22.0
