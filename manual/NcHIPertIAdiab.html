@@ -1,0 +1,1405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>NcHIPertAdiab: NumCosmo Reference Manual</title>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch07.html" rel="up" title="Perturbations"/>
+<link href="NcHIPert.html" rel="prev" title="NcHIPert"/>
+<link href="NcHIPertBGVar.html" rel="next" title="NcHIPertComp"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcHIPertIAdiab.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcHIPertIAdiab.object-hierarchy">Object Hierarchy</a></span><span id="nav_prerequisites">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcHIPertIAdiab.prerequisites">Prerequisites</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcHIPertIAdiab.properties">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch07.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcHIPert.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcHIPertBGVar.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcHIPertIAdiab"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcHIPertIAdiab.top_of_page"></a>NcHIPertAdiab</span></h2>
+<p>NcHIPertAdiab — Perturbation object for adiabatic mode only.</p>
+</td>
+<td align="right" class="gallery_image" valign="top"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcHIPertIAdiab.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-iadiab-eval-xi" title="nc_hipert_iadiab_eval_xi ()">nc_hipert_iadiab_eval_xi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-iadiab-eval-F1" title="nc_hipert_iadiab_eval_F1 ()">nc_hipert_iadiab_eval_F1</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-iadiab-eval-nu" title="nc_hipert_iadiab_eval_nu ()">nc_hipert_iadiab_eval_nu</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-iadiab-eval-m" title="nc_hipert_iadiab_eval_m ()">nc_hipert_iadiab_eval_m</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-iadiab-eval-unit" title="nc_hipert_iadiab_eval_unit ()">nc_hipert_iadiab_eval_unit</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-iadiab-eval-x" title="nc_hipert_iadiab_eval_x ()">nc_hipert_iadiab_eval_x</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-iadiab-eval-p2Psi" title="nc_hipert_iadiab_eval_p2Psi ()">nc_hipert_iadiab_eval_p2Psi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-iadiab-eval-p2drho" title="nc_hipert_iadiab_eval_p2drho ()">nc_hipert_iadiab_eval_p2drho</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-iadiab-eval-lapse" title="nc_hipert_iadiab_eval_lapse ()">nc_hipert_iadiab_eval_lapse</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-iadiab-eval-tau-hubble" title="nc_hipert_iadiab_eval_tau_hubble ()">nc_hipert_iadiab_eval_tau_hubble</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-iadiab-eval-tau-jeans" title="nc_hipert_iadiab_eval_tau_jeans ()">nc_hipert_iadiab_eval_tau_jeans</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-iadiab-eval-hubble" title="nc_hipert_iadiab_eval_hubble ()">nc_hipert_iadiab_eval_hubble</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="returnvalue">NcHIPertAdiab</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-adiab-new" title="nc_hipert_adiab_new ()">nc_hipert_adiab_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="returnvalue">NcHIPertAdiab</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-adiab-ref" title="nc_hipert_adiab_ref ()">nc_hipert_adiab_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-adiab-free" title="nc_hipert_adiab_free ()">nc_hipert_adiab_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-adiab-clear" title="nc_hipert_adiab_clear ()">nc_hipert_adiab_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-adiab-set-k" title="nc_hipert_adiab_set_k ()">nc_hipert_adiab_set_k</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-adiab-get-k" title="nc_hipert_adiab_get_k ()">nc_hipert_adiab_get_k</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-adiab-eval-cosmic-time" title="nc_hipert_adiab_eval_cosmic_time ()">nc_hipert_adiab_eval_cosmic_time</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-adiab-eval-delta-critial" title="nc_hipert_adiab_eval_delta_critial ()">nc_hipert_adiab_eval_delta_critial</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-adiab-eval-powspec-zeta-at" title="nc_hipert_adiab_eval_powspec_zeta_at ()">nc_hipert_adiab_eval_powspec_zeta_at</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-adiab-eval-powspec-Psi-at" title="nc_hipert_adiab_eval_powspec_Psi_at ()">nc_hipert_adiab_eval_powspec_Psi_at</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-adiab-eval-powspec-drho-at" title="nc_hipert_adiab_eval_powspec_drho_at ()">nc_hipert_adiab_eval_powspec_drho_at</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-adiab-prepare-spectrum" title="nc_hipert_adiab_prepare_spectrum ()">nc_hipert_adiab_prepare_spectrum</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="returnvalue">NcmPowspecSpline2d</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-adiab-eval-powspec-zeta" title="nc_hipert_adiab_eval_powspec_zeta ()">nc_hipert_adiab_eval_powspec_zeta</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="returnvalue">NcmPowspecSpline2d</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-adiab-eval-powspec-Psi" title="nc_hipert_adiab_eval_powspec_Psi ()">nc_hipert_adiab_eval_powspec_Psi</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="returnvalue">NcmPowspecSpline2d</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIAdiab.html#nc-hipert-adiab-eval-powspec-drho" title="nc_hipert_adiab_eval_powspec_drho ()">nc_hipert_adiab_eval_powspec_drho</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertIAdiab.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0" class="informaltable">
+<colgroup>
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab--k" title="The “k” property">k</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr></tbody>
+</table></div>
+</div>
+<a name="NcHIPertAdiab"></a><div class="refsect1">
+<a name="NcHIPertIAdiab.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcHIPertIAdiab.html#NC-TYPE-HIPERT-ADIAB:CAPS" title="NC_TYPE_HIPERT_ADIAB">NC_TYPE_HIPERT_ADIAB</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcHIPertIAdiab.html#NC-TYPE-HIPERT-IADIAB:CAPS" title="NC_TYPE_HIPERT_IADIAB">NC_TYPE_HIPERT_IADIAB</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcHIPertIAdiab.html#NcHIPertIAdiabInterface" title="struct NcHIPertIAdiabInterface">NcHIPertIAdiabInterface</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiabVars" title="enum NcHIPertAdiabVars">NcHIPertAdiabVars</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab-struct" title="NcHIPertAdiab">NcHIPertAdiab</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcHIPertIAdiab.html#NcHIPertIAdiab-struct" title="NcHIPertIAdiab">NcHIPertIAdiab</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertIAdiab.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcHIPertAdiabVars
+    <a href="/usr/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
+    <span class="lineart">╰──</span> NcHIPertIAdiab
+    GObject
+    <span class="lineart">╰──</span> <a class="link" href="NcmCSQ1D.html" title="NcmCSQ1D">NcmCSQ1D</a>
+        <span class="lineart">╰──</span> NcHIPertAdiab
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcHIPertIAdiab.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+NcHIPertIAdiab requires
+ GObject.</p>
+</div>
+<div class="refsect1">
+<a name="NcHIPertIAdiab.description"></a><h2>Description</h2>
+<p>This object provides the computation of the adiabatic mode for the cosmological
+perturbations. It solves the equation of motion for the gauge invariant variable
+(see <a class="link" href="refs.html#XVitenti2013">Vitenti (2013)</a> for notation and details)
+$$
+\zeta \equiv \Psi - \frac{2\bar{K}}{\kappa(\bar{\rho} + \bar{p})} + H\mathcal{V}.
+$$
+Its conjugated
+momentum is give by
+\begin{split}
+P_\zeta &amp;= \frac{2\bar{D}^2_\bar{K}\Psi}{x^3H},
+\end{split}</p>
+<p>The equations of motion in their first order form are
+\begin{align}
+\zeta^\prime &amp;= \frac{P_\zeta}{m_\zeta}, \\
+P_\zeta^\prime &amp;= -m_\zeta\mu_\zeta^2\zeta. \end{align} The mass $m_\zeta$ and the
+frequency $\mu_\zeta$ are defined by
+\begin{align}
+m_\zeta &amp;= \frac{3\Delta_\bar{K}(\bar{\rho} + \bar{p})}{\rho_\text{crit0} N x^3
+c_s^2 E^2},
+\\
+\mu_\zeta^2 &amp;= x^2N^2c_s^2k^2,
+\end{align}
+where $\bar{\rho} + \bar{p}$ is the background total energy density plus pressure,
+$E^2 = H^2/H_0^2$ is the dimensionless Hubble function squared (<a class="link" href="NcHICosmo.html#nc-hicosmo-E2" title="nc_hicosmo_E2 ()"><code class="function">nc_hicosmo_E2()</code></a>),
+$c_s^2$ the speed of sound, $N$ is the lapse function that in this case (using
+$\alpha$ as time variable) is $N \equiv \vert{}E\vert^{-1}$, $\rho_\text{crit0}$ is
+the critical density today defined by $\rho_\text{crit0} \equiv 3H_0^2/\kappa$ and
+$$
+\Delta_\bar{K} \equiv \frac{k^2}{k^2 + \Omega_{k0}}.
+$$</p>
+</div>
+<div class="refsect1">
+<a name="NcHIPertIAdiab.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-xi"></a><h3>nc_hipert_iadiab_eval_xi ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_iadiab_eval_xi (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                          <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>,
+                          <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>);</pre>
+<p>Computes the value of $\xi = \ln(m\nu)$.</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-xi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-xi.returns"></a><h4>Returns</h4>
+<p> $\xi$.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-F1"></a><h3>nc_hipert_iadiab_eval_F1 ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_iadiab_eval_F1 (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                          <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>,
+                          <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>);</pre>
+<p>Computes the value of $F_1 = \dot{\xi}/(2\nu)$.</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-F1.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-F1.returns"></a><h4>Returns</h4>
+<p> $F_1$.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-nu"></a><h3>nc_hipert_iadiab_eval_nu ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_iadiab_eval_nu (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                          <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>,
+                          <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>);</pre>
+<p>Computes the value of $\nu$.</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-nu.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-nu.returns"></a><h4>Returns</h4>
+<p> $\nu$.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-m"></a><h3>nc_hipert_iadiab_eval_m ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_iadiab_eval_m (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                         <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>,
+                         <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>);</pre>
+<p>Computes the value of $m$.</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-m.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-m.returns"></a><h4>Returns</h4>
+<p> $m$.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-unit"></a><h3>nc_hipert_iadiab_eval_unit ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_iadiab_eval_unit (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>);</pre>
+<p>Numerical factor for the power spectrum of the adiabatic mode.</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-unit.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-unit.returns"></a><h4>Returns</h4>
+<p> the numerical factor for the power spectrum of the adiabatic mode.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-x"></a><h3>nc_hipert_iadiab_eval_x ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_iadiab_eval_x (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                         <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>);</pre>
+<p>Evaluates the value of $x = a_0/a$ at a given time $\tau$.</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-x.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-x.returns"></a><h4>Returns</h4>
+<p> $x$.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-p2Psi"></a><h3>nc_hipert_iadiab_eval_p2Psi ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_iadiab_eval_p2Psi (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                             <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>,
+                             <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>);</pre>
+<p>Evaluates the conversion factor to convert the momentum of the adiabatic mode to the
+gauge invariant variable $\Psi$.</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-p2Psi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-p2Psi.returns"></a><h4>Returns</h4>
+<p> the conversion factor.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-p2drho"></a><h3>nc_hipert_iadiab_eval_p2drho ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_iadiab_eval_p2drho (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                              <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>,
+                              <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>);</pre>
+<p>Evaluates the conversion factor to convert the momentum of the adiabatic mode to the
+gauge invariant variable $\delta\rho$.</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-p2drho.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-p2drho.returns"></a><h4>Returns</h4>
+<p> the conversion factor.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-lapse"></a><h3>nc_hipert_iadiab_eval_lapse ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_iadiab_eval_lapse (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                             <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>);</pre>
+<p>Evaluates the lapse function at a given time $\tau$.</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-lapse.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-lapse.returns"></a><h4>Returns</h4>
+<p> the lapse function.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-tau-hubble"></a><h3>nc_hipert_iadiab_eval_tau_hubble ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_iadiab_eval_tau_hubble (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                                  <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>);</pre>
+<p>Evaluates the time at where the Hubble radius is equal to the wave number $k$.</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-tau-hubble.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-tau-hubble.returns"></a><h4>Returns</h4>
+<p> the time at where the Hubble radius is equal to the wave number $k$.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-tau-jeans"></a><h3>nc_hipert_iadiab_eval_tau_jeans ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_iadiab_eval_tau_jeans (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                                 <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>);</pre>
+<p>Evaluates the time at where the Jeans scale is equal to the wave number $k$.</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-tau-jeans.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-tau-jeans.returns"></a><h4>Returns</h4>
+<p> the time at where the Jeans scale is equal to the wave number $k$.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-iadiab-eval-hubble"></a><h3>nc_hipert_iadiab_eval_hubble ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_iadiab_eval_hubble (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a> *iad</code></em>,
+                              <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>);</pre>
+<p>Evaluates the Hubble function at a given time $\tau$.</p>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-hubble.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>iad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html" title="NcHIPertAdiab"><span class="type">NcHIPertIAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-iadiab-eval-hubble.returns"></a><h4>Returns</h4>
+<p> the Hubble function.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-adiab-new"></a><h3>nc_hipert_adiab_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="returnvalue">NcHIPertAdiab</span></a> *
+nc_hipert_adiab_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> object.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-new.returns"></a><h4>Returns</h4>
+<p>a new <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-adiab-ref"></a><h3>nc_hipert_adiab_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="returnvalue">NcHIPertAdiab</span></a> *
+nc_hipert_adiab_ref (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> *pa</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>pa</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pa</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-adiab-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>pa</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-adiab-free"></a><h3>nc_hipert_adiab_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_adiab_free (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> *pa</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>pa</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pa</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-adiab-clear"></a><h3>nc_hipert_adiab_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_adiab_clear (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> **pa</code></em>);</pre>
+<p>Decreases the reference count of *<em class="parameter"><code>pa</code></em>
+ and sets *<em class="parameter"><code>pa</code></em>
+ to NULL.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>pa</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-adiab-set-k"></a><h3>nc_hipert_adiab_set_k ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_adiab_set_k (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> *adiab</code></em>,
+                       <em class="parameter"><code>const <span class="type">gdouble</span> k</code></em>);</pre>
+<p>Sets the wave number $k$.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-set-k.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>adiab</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k</p></td>
+<td class="parameter_description"><p>$k$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-adiab-get-k"></a><h3>nc_hipert_adiab_get_k ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_adiab_get_k (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> *adiab</code></em>);</pre>
+<p>Gets the wave number $k$.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-get-k.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>adiab</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-adiab-get-k.returns"></a><h4>Returns</h4>
+<p> $k$</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-adiab-eval-cosmic-time"></a><h3>nc_hipert_adiab_eval_cosmic_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_adiab_eval_cosmic_time (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> *adiab</code></em>,
+                                  <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
+                                  <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>);</pre>
+<p>Evaluates the cosmic time at a given conformal time $\tau$.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-cosmic-time.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>adiab</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-cosmic-time.returns"></a><h4>Returns</h4>
+<p> the cosmic time.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-adiab-eval-delta-critial"></a><h3>nc_hipert_adiab_eval_delta_critial ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_adiab_eval_delta_critial (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> *adiab</code></em>,
+                                    <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
+                                    <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>);</pre>
+<p>Evaluates the critical density contrast at a given conformal time $\tau$.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-delta-critial.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>adiab</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-delta-critial.returns"></a><h4>Returns</h4>
+<p> the critical density contrast.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-adiab-eval-powspec-zeta-at"></a><h3>nc_hipert_adiab_eval_powspec_zeta_at ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_adiab_eval_powspec_zeta_at (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> *adiab</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
+                                      <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>);</pre>
+<p>Evaluates the power spectrum of the gauge invariant variable $\zeta$ at a given time
+$\tau$. The power spectrum is given by
+$$
+P_\zeta = u^2\frac{2\pi^2}{k^3} \frac{J_{11}}{2}.
+$$
+where $u$ is the numerical factor for the power spectrum of the adiabatic mode, $k$ is
+the wave number.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-powspec-zeta-at.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>adiab</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-powspec-zeta-at.returns"></a><h4>Returns</h4>
+<p> the power spectrum of the gauge invariant variable $\zeta$.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-adiab-eval-powspec-Psi-at"></a><h3>nc_hipert_adiab_eval_powspec_Psi_at ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_adiab_eval_powspec_Psi_at (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> *adiab</code></em>,
+                                     <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
+                                     <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>);</pre>
+<p>Evaluates the power spectrum of the gauge invariant variable $\Psi$ at a given time
+$\tau$. The power spectrum is given by
+$$
+P_\Psi = u^2\frac{2\pi^2}{k^3} \frac{J_{22}}{2}.
+$$</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-powspec-Psi-at.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>adiab</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-powspec-Psi-at.returns"></a><h4>Returns</h4>
+<p> the power spectrum of the gauge invariant variable $\Psi$.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-adiab-eval-powspec-drho-at"></a><h3>nc_hipert_adiab_eval_powspec_drho_at ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+nc_hipert_adiab_eval_powspec_drho_at (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> *adiab</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
+                                      <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>);</pre>
+<p>Evaluates the power spectrum of the gauge invariant variable $\delta\rho$ at a given time
+$\tau$. The power spectrum is given by
+$$
+P_{\delta\rho} = u^2\frac{2\pi^2}{k^3} \frac{J_{22}}{2}.
+$$</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-powspec-drho-at.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>adiab</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau</p></td>
+<td class="parameter_description"><p>$\tau$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-powspec-drho-at.returns"></a><h4>Returns</h4>
+<p> the power spectrum of the gauge invariant variable $\delta\rho$.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-adiab-prepare-spectrum"></a><h3>nc_hipert_adiab_prepare_spectrum ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_adiab_prepare_spectrum (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> *adiab</code></em>,
+                                  <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
+                                  <em class="parameter"><code><span class="type">GArray</span> *k_array</code></em>,
+                                  <em class="parameter"><code><span class="type">GArray</span> *tau_array</code></em>);</pre>
+<p>Prepares the computation of the power spectrum of the adiabatic mode.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-prepare-spectrum.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>adiab</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k_array</p></td>
+<td class="parameter_description"><p>array of wave numbers. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau_array</p></td>
+<td class="parameter_description"><p>array of times to evaluate the power spectrum. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-adiab-eval-powspec-zeta"></a><h3>nc_hipert_adiab_eval_powspec_zeta ()</h3>
+<pre class="programlisting"><a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="returnvalue">NcmPowspecSpline2d</span></a> *
+nc_hipert_adiab_eval_powspec_zeta (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> *adiab</code></em>,
+                                   <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>);</pre>
+<p>Evaluates the power spectrum for the gauge invariant variable $\zeta$.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-powspec-zeta.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>adiab</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-powspec-zeta.returns"></a><h4>Returns</h4>
+<p>the power spectrum of $\zeta$. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-adiab-eval-powspec-Psi"></a><h3>nc_hipert_adiab_eval_powspec_Psi ()</h3>
+<pre class="programlisting"><a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="returnvalue">NcmPowspecSpline2d</span></a> *
+nc_hipert_adiab_eval_powspec_Psi (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> *adiab</code></em>,
+                                  <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>);</pre>
+<p>Evaluates the power spectrum for the gauge invariant variable $\Psi$.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-powspec-Psi.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>adiab</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-powspec-Psi.returns"></a><h4>Returns</h4>
+<p>the power spectrum of $\Psi$. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-adiab-eval-powspec-drho"></a><h3>nc_hipert_adiab_eval_powspec_drho ()</h3>
+<pre class="programlisting"><a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="returnvalue">NcmPowspecSpline2d</span></a> *
+nc_hipert_adiab_eval_powspec_drho (<em class="parameter"><code><a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a> *adiab</code></em>,
+                                   <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>);</pre>
+<p>Evaluates the power spectrum for the gauge invariant variable $\delta\rho$.</p>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-powspec-drho.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>adiab</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIAdiab.html#NcHIPertAdiab"><span class="type">NcHIPertAdiab</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-hipert-adiab-eval-powspec-drho.returns"></a><h4>Returns</h4>
+<p>the power spectrum of $\delta\rho$. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertIAdiab.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NC-TYPE-HIPERT-ADIAB:CAPS"></a><h3>NC_TYPE_HIPERT_ADIAB</h3>
+<pre class="programlisting">#define NC_TYPE_HIPERT_ADIAB (nc_hipert_adiab_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NC-TYPE-HIPERT-IADIAB:CAPS"></a><h3>NC_TYPE_HIPERT_IADIAB</h3>
+<pre class="programlisting">#define NC_TYPE_HIPERT_IADIAB (nc_hipert_iadiab_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcHIPertIAdiabInterface"></a><h3>struct NcHIPertIAdiabInterface</h3>
+<pre class="programlisting">struct NcHIPertIAdiabInterface {
+};
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcHIPertAdiabVars"></a><h3>enum NcHIPertAdiabVars</h3>
+<p>Perturbation variables enumerator.</p>
+<div class="refsect3">
+<a name="NcHIPertAdiabVars.members"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="enum_members_name" width="300px"/>
+<col class="enum_members_description"/>
+<col class="enum_members_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HIPERT-ADIAB-RE-ZETA:CAPS"></a>NC_HIPERT_ADIAB_RE_ZETA</p></td>
+<td class="enum_member_description">
+<p>$\text{Re}(\zeta)$</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HIPERT-ADIAB-IM-ZETA:CAPS"></a>NC_HIPERT_ADIAB_IM_ZETA</p></td>
+<td class="enum_member_description">
+<p>$\text{Im}(\zeta)$</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HIPERT-ADIAB-RE-PZETA:CAPS"></a>NC_HIPERT_ADIAB_RE_PZETA</p></td>
+<td class="enum_member_description">
+<p>$\text{Re}(P_\zeta)$</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NC-HIPERT-ADIAB-IM-PZETA:CAPS"></a>NC_HIPERT_ADIAB_IM_PZETA</p></td>
+<td class="enum_member_description">
+<p>$\text{Im}(P_\zeta)$</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcHIPertAdiab-struct"></a><h3>NcHIPertAdiab</h3>
+<pre class="programlisting">typedef struct _NcHIPertAdiab NcHIPertAdiab;</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcHIPertIAdiab-struct"></a><h3>NcHIPertIAdiab</h3>
+<pre class="programlisting">typedef struct _NcHIPertIAdiab NcHIPertIAdiab;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcHIPertIAdiab.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcHIPertAdiab--k"></a><h3>The <code class="literal">“k”</code> property</h3>
+<pre class="programlisting">  “k”                        <span class="type">double</span></pre>
+<p>Wave number.</p>
+<p>Owner: NcHIPertAdiab</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 1</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr/>Generated by GTK-Doc V1.34.0</div>
+</body>
+</html>

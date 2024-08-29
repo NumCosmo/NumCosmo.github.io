@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>NcmModel tutorial – The Numerical Cosmology Library</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./favicon_numcosmo.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">The Numerical Cosmology Library</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About NumCosmo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./install.html"> 
+<span class="menu-text">Installation Instructions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./manual.html"> 
+<span class="menu-text">Manual</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/NumCosmo/NumCosmo">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/NumCosmo/NumCosmo/issues">
+            Issues
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Programming Tutorials</li><li class="breadcrumb-item"><a href="./gobject.html">C Tutorials</a></li><li class="breadcrumb-item"><a href="./curve_tutorial.html">Model Fit Tutorial</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./numcosmo_logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Programming Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">C Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gobject.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GObject Tutorial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./curve_tutorial.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Model Fit Tutorial</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Examples</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Data Analysis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./example_snia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SN Ia Fitting</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#our-abstract-model" id="toc-our-abstract-model" class="nav-link" data-scroll-target="#our-abstract-model">Our abstract model</a></li>
+  <li><a href="#abstract-model-header" id="toc-abstract-model-header" class="nav-link" data-scroll-target="#abstract-model-header">Abstract model header</a>
+  <ul class="collapse">
+  <li><a href="#virtual-method-type" id="toc-virtual-method-type" class="nav-link" data-scroll-target="#virtual-method-type">Virtual method type</a></li>
+  <li><a href="#object-class" id="toc-object-class" class="nav-link" data-scroll-target="#object-class">Object class</a></li>
+  <li><a href="#implementation-enumerator" id="toc-implementation-enumerator" class="nav-link" data-scroll-target="#implementation-enumerator">Implementation enumerator</a></li>
+  <li><a href="#defining-the-class-id-prototype" id="toc-defining-the-class-id-prototype" class="nav-link" data-scroll-target="#defining-the-class-id-prototype">Defining the class id prototype</a></li>
+  <li><a href="#method-prototypes" id="toc-method-prototypes" class="nav-link" data-scroll-target="#method-prototypes">Method prototypes</a></li>
+  </ul></li>
+  <li><a href="#abstract-model-source" id="toc-abstract-model-source" class="nav-link" data-scroll-target="#abstract-model-source">Abstract model source</a>
+  <ul class="collapse">
+  <li><a href="#private-properties" id="toc-private-properties" class="nav-link" data-scroll-target="#private-properties">Private properties</a></li>
+  <li><a href="#property-enumerator" id="toc-property-enumerator" class="nav-link" data-scroll-target="#property-enumerator">Property enumerator</a></li>
+  <li><a href="#object-defining-macro" id="toc-object-defining-macro" class="nav-link" data-scroll-target="#object-defining-macro">Object defining macro</a></li>
+  <li><a href="#object-initialization" id="toc-object-initialization" class="nav-link" data-scroll-target="#object-initialization">Object initialization</a></li>
+  <li><a href="#setget-hooks" id="toc-setget-hooks" class="nav-link" data-scroll-target="#setget-hooks">Set/Get hooks</a></li>
+  <li><a href="#defining-the-id-function" id="toc-defining-the-id-function" class="nav-link" data-scroll-target="#defining-the-id-function">Defining the id function</a></li>
+  <li><a href="#the-class-initialization-hook" id="toc-the-class-initialization-hook" class="nav-link" data-scroll-target="#the-class-initialization-hook">The class initialization hook</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
+  </ul></li>
+  <li><a href="#example-sources" id="toc-example-sources" class="nav-link" data-scroll-target="#example-sources">Example sources</a>
+  <ul class="collapse">
+  <li><a href="#header" id="toc-header" class="nav-link" data-scroll-target="#header">Header</a></li>
+  <li><a href="#source" id="toc-source" class="nav-link" data-scroll-target="#source">Source</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Programming Tutorials</li><li class="breadcrumb-item"><a href="./gobject.html">C Tutorials</a></li><li class="breadcrumb-item"><a href="./curve_tutorial.html">Model Fit Tutorial</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">NcmModel tutorial</h1>
+<p class="subtitle lead">Curve fitting tutorial</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>NumCosmo developers </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p><strong>NumCosmo: Defining Models in an Object-Oriented Framework</strong></p>
+<p>One of the key objectives of NumCosmo is to provide a comprehensive framework for model fitting. In this tutorial, we will explore the process of defining models within this framework. When modeling a phenomenon, the first step is to identify the key quantities associated with the model and determine how to describe them. In the NumCosmo framework, these aspects are expressed using an Object-Oriented (OO) approach.</p>
+<p>The framework encourages the creation of an abstract model that defines only the fundamental quantities. The specific details of these quantities are left to the implementations of the abstract model. Although this separation might initially seem complex, it offers several long-term advantages, including reduced code complexity. Key benefits include:</p>
+<ul>
+<li><strong>Abstract Interface Consistency</strong>: Functions and objects that rely on the abstract model can be developed using a standard interface, without concern for specific implementations.</li>
+<li><strong>Clear Model Definition</strong>: The approach compels programmers and scientists to clearly distinguish between fundamental quantities of the model and the choices made during implementation.</li>
+<li><strong>Modularity</strong>: The framework naturally supports modularity, allowing specific implementations to be modified or replaced without affecting the broader codebase.</li>
+<li><strong>Facilitated Collaboration</strong>: Once the abstract model is defined, different groups can independently develop their implementations, simplifying collaborative efforts.</li>
+</ul>
+<p>In this tutorial, we will guide you through the process of writing an abstract model in <strong>C</strong>. While this tutorial focuses on <strong>C</strong>, writing models in Python is also possible and will be covered in a separate tutorial.</p>
+</section>
+<section id="our-abstract-model" class="level2">
+<h2 class="anchored" data-anchor-id="our-abstract-model">Our abstract model</h2>
+<p>In this tutorial, we consider the case where we are modeling a phenomenon described by a curve <span class="math inline">\(f(x)\)</span>. In this simple example, it is clear that the only fundamental quantities are the curve <span class="math inline">\(f(x)\)</span> itself and its domain <span class="math inline">\([x_l,\; x_u]\)</span>. Note that we are not including any specific functional form for <span class="math inline">\(f(x)\)</span> or any parametrization; these choices are left to the specific implementations of our model.</p>
+<p>If you are not familiar with the GObject framework, take a look at <a href="./gobject.html">this tutorial</a>.</p>
+<p>To translate this to an OO framework, we will define an abstract object <code>NcCurve</code> (subclass of <a href="manual/NcmModel.html"><code>NcmModel</code></a> to represent the fundamental quantities. The function <span class="math inline">\(f(x)\)</span> is represented by the virtual method called <code>nc_curve_f</code>, and the interval by two properties called <code>xl</code> and <code>xu</code>, which represent <span class="math inline">\(x_l\)</span> and <span class="math inline">\(x_u\)</span>, respectively.</p>
+</section>
+<section id="abstract-model-header" class="level2">
+<h2 class="anchored" data-anchor-id="abstract-model-header">Abstract model header</h2>
+<p>We include the full header below; however, first, we will highlight the main steps:</p>
+<section id="virtual-method-type" class="level3">
+<h3 class="anchored" data-anchor-id="virtual-method-type">Virtual method type</h3>
+<p>This line determines the prototype of our virtual function. While this step is not strictly necessary – since one could use this prototype directly in the class structure – defining a type improves readability.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">typedef</span> gdouble <span class="op">(*</span>NcCurveF<span class="op">)</span> <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">,</span> <span class="dt">const</span> gdouble x<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="object-class" class="level3">
+<h3 class="anchored" data-anchor-id="object-class">Object class</h3>
+<p>In the GObject framework, virtual functions are defined as function pointers in the class structure. In this simple example, there is a single virtual function, which we call <code>f</code> using the type defined above. The class structure is defined as follows:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">struct</span> _NcCurveClass</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*&lt; private &gt;*/</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  NcmModelClass parent_class<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  NcCurveF f<span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="op">};</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="implementation-enumerator" class="level3">
+<h3 class="anchored" data-anchor-id="implementation-enumerator">Implementation enumerator</h3>
+<p>The <a href="manual/NcmModel.html"><code>NcmModel</code></a> framework is designed to support complex models that may involve several virtual methods. Some of these methods may not be required by every implementation. For this reason in introduced the implementation enumerator, this way, the object that use the model may ask if that model implements a specific virtual method. In our example we have a single virtual method, so the enumerator is given by:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">typedef</span> <span class="kw">enum</span> _NcCurveImpl</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  NC_CURVE_IMPL_f <span class="op">=</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> NcCurveImpl<span class="op">;</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The enumerator above states that the first bit in the implementation enumerator controls if the child implements this method.</p>
+</section>
+<section id="defining-the-class-id-prototype" class="level3">
+<h3 class="anchored" data-anchor-id="defining-the-class-id-prototype">Defining the class id prototype</h3>
+<p>In order to be able to analyze different models, we need an object to aggregate all necessary models. In NumCosmo this task is performed by the <a href="manual/NcmMSet.html"><code>NcmMSet</code></a> (model set) object. We use the <code>NCM_MSET_MODEL_DECLARE_ID</code> macro to declare the id function <code>nc_curve_id</code> in the <a href="manual/NcmMSet.html"><code>NcmMSet</code></a> framework.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>NCM_MSET_MODEL_DECLARE_ID <span class="op">(</span>nc_curve<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="method-prototypes" class="level3">
+<h3 class="anchored" data-anchor-id="method-prototypes">Method prototypes</h3>
+<p>Finally we declare the two methods necessary to close the implementation (apart from the default ones).</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> nc_curve_set_f_impl <span class="op">(</span>NcCurveClass <span class="op">*</span>curve_class<span class="op">,</span> NcCurveF f<span class="op">);</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>gdouble nc_curve_f <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">,</span> <span class="dt">const</span> gdouble x<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The first one just declare the class method that will be used to set the virtual method <code>f</code>. It is necessary because it has two jobs, it sets the function pointer to the member <code>f</code> of the <a href="#object-class">class structure</a> and updates the implementation flags to assert that child implements this method.</p>
+</section>
+</section>
+<section id="abstract-model-source" class="level2">
+<h2 class="anchored" data-anchor-id="abstract-model-source">Abstract model source</h2>
+<p>We include the full <strong>C</strong> file below, however, first we are going to highlight the main steps:</p>
+<section id="private-properties" class="level3">
+<h3 class="anchored" data-anchor-id="private-properties">Private properties</h3>
+<p>The first declaration in our code is the definition of the private struct</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">struct</span> _NcCurvePrivate</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  gdouble xl<span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  gdouble xu<span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In principle we could have added these members directly to the <code>NcCurve</code> struct, however, this would allow users to modify it directly. By hiding it in the compilation unit we avoid this, the only way to modify these values will be through the exported methods. This is important since these methods will perform consistency checks and call all necessary hooks that update the model.</p>
+<p>As a rule of thumb, if the access to the struct member is not part of computationally heavy part of the code (here these members are likely to be set just once in the beginning and stay constant throughout all computations), then it just me hidden in the private struct for the reasons described above. Nevertheless, if the member will be accessed constantly during the computations we would attribute it to the object struct and include a inline method to access it, this technique will be discussed in detail in a future tutorial.</p>
+</section>
+<section id="property-enumerator" class="level3">
+<h3 class="anchored" data-anchor-id="property-enumerator">Property enumerator</h3>
+<p>The property enumerator is the part of the GObject framework used to define properties. Here the <code>PROP_0</code> member is required by the GObject implementation and do not correspond to any actual property. The following members <code>PROP_XL</code> and <code>PROP_XU</code> correspond respectively to <span class="math inline">\(x_l\)</span> and <span class="math inline">\(x_u\)</span>. Finally, <code>PROP_SIZE*</code> is a convenience member (that we use by convention in NumCosmo) used to count the number of properties, in this case <code>PROP_SIZE == 3</code> (an enumerator always assign 0 to its first member and +1 to the subsequent, this can be changes by explicitly assigning values).</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">enum</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  PROP_0<span class="op">,</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  PROP_XL<span class="op">,</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  PROP_XU<span class="op">,</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  PROP_SIZE<span class="op">,</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="object-defining-macro" class="level3">
+<h3 class="anchored" data-anchor-id="object-defining-macro">Object defining macro</h3>
+<p>The first step in creating the object is to call the <code>GObject</code> macro G_DEFINE_ABSTRACT_TYPE. This macro creates an abstract object (that cannot be instantiated) that is a child of <a href="manual/NcmModel.html"><code>NcmModel</code></a>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>G_DEFINE_ABSTRACT_TYPE <span class="op">(</span>NcCurve<span class="op">,</span> nc_curve<span class="op">,</span> NCM_TYPE_MODEL<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This macro assumes that two functions will be implemented: - <code>nc_curve_init</code>: this function should make all necessary initialization to the object that happens before any property is set. This usually consists of assign null or zero value for all struct members. - <code>nc_curve_class_init</code>: the class method must define all object’s properties and virtual methods.</p>
+</section>
+<section id="object-initialization" class="level3">
+<h3 class="anchored" data-anchor-id="object-initialization">Object initialization</h3>
+<p>In this example, the initialization function <code>nc_curve_init</code> has two tasks, getting the pointer to its private struct and assign the initial values for the properties. Our convention is that if both <code>xl</code> and <code>xu</code> are equal to zero then the object is in the initial state.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">static</span> <span class="dt">void</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>nc_curve_init <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">)</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  curve<span class="op">-&gt;</span>priv <span class="op">=</span> G_TYPE_INSTANCE_GET_PRIVATE <span class="op">(</span>curve<span class="op">,</span> NC_TYPE_CURVE<span class="op">,</span> NcCurvePrivate<span class="op">);</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xl <span class="op">=</span> <span class="fl">0.0</span><span class="op">;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xu <span class="op">=</span> <span class="fl">0.0</span><span class="op">;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="setget-hooks" class="level3">
+<h3 class="anchored" data-anchor-id="setget-hooks">Set/Get hooks</h3>
+<p>In the GObject framework all properties are modified through the set/get hooks. Here we have a two properties, for both we delegate the set/get job to methods implemented below. We could implement it directly inside the enumerators below, however, implementing it in separated functions improve readability.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">static</span> <span class="dt">void</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>_nc_curve_set_property <span class="op">(</span>GObject <span class="op">*</span>object<span class="op">,</span> guint prop_id<span class="op">,</span> <span class="dt">const</span> GValue <span class="op">*</span>value<span class="op">,</span> GParamSpec <span class="op">*</span>pspec<span class="op">)</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  NcCurve <span class="op">*</span>curve <span class="op">=</span> NC_CURVE <span class="op">(</span>object<span class="op">);</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  g_return_if_fail <span class="op">(</span>NC_IS_CURVE <span class="op">(</span>object<span class="op">));</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">switch</span> <span class="op">(</span>prop_id<span class="op">)</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> PROP_XL<span class="op">:</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>      nc_curve_set_xl <span class="op">(</span>curve<span class="op">,</span> g_value_get_double <span class="op">(</span>value<span class="op">));</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> PROP_XU<span class="op">:</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>      nc_curve_set_xu <span class="op">(</span>curve<span class="op">,</span> g_value_get_double <span class="op">(</span>value<span class="op">));</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">default</span><span class="op">:</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>      G_OBJECT_WARN_INVALID_PROPERTY_ID <span class="op">(</span>object<span class="op">,</span> prop_id<span class="op">,</span> pspec<span class="op">);</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="dt">static</span> <span class="dt">void</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>_nc_curve_get_property <span class="op">(</span>GObject <span class="op">*</span>object<span class="op">,</span> guint prop_id<span class="op">,</span> GValue <span class="op">*</span>value<span class="op">,</span> GParamSpec <span class="op">*</span>pspec<span class="op">)</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  NcCurve <span class="op">*</span>curve <span class="op">=</span> NC_CURVE <span class="op">(</span>object<span class="op">);</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>  g_return_if_fail <span class="op">(</span>NC_IS_CURVE <span class="op">(</span>object<span class="op">));</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">switch</span> <span class="op">(</span>prop_id<span class="op">)</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> PROP_XL<span class="op">:</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>      g_value_set_double <span class="op">(</span>value<span class="op">,</span> nc_curve_get_xl <span class="op">(</span>curve<span class="op">));</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> PROP_XU<span class="op">:</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>      g_value_set_double <span class="op">(</span>value<span class="op">,</span> nc_curve_get_xu <span class="op">(</span>curve<span class="op">));</span></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">default</span><span class="op">:</span></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>      G_OBJECT_WARN_INVALID_PROPERTY_ID <span class="op">(</span>object<span class="op">,</span> prop_id<span class="op">,</span> pspec<span class="op">);</span></span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="defining-the-id-function" class="level3">
+<h3 class="anchored" data-anchor-id="defining-the-id-function">Defining the id function</h3>
+<p>The <a href="manual/NcmMSet.html"><code>NcmMSet</code></a> framework provides the macro <em>NCM_MSET_MODEL_REGISTER_ID</em> that should be used in the object code to create the <em>nc_curve_id</em> function. This function will return the unique ID defined in the <a href="manual/NcmMSet.html"><code>NcmMSet</code></a> type list.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>NCM_MSET_MODEL_REGISTER_ID <span class="op">(</span>nc_curve<span class="op">,</span> NC_TYPE_CURVE<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="the-class-initialization-hook" class="level3">
+<h3 class="anchored" data-anchor-id="the-class-initialization-hook">The class initialization hook</h3>
+<section id="attributing-the-setget-hooks" class="level4">
+<h4 class="anchored" data-anchor-id="attributing-the-setget-hooks">Attributing the Set/Get hooks</h4>
+<p>In the class initialization hook one must define the object related hooks, as the set/get functions. Since we are using the <a href="manual/NcmModel.html"><code>NcmModel</code></a> framework, we need to attribute the set/get hooks to the <code>NcmModelClass</code> struct. This is necessary since the framework takes care in organizing all model parameters and only the additional properties are handled by the set/get hooks defined here.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>  GObjectClass<span class="op">*</span> object_class <span class="op">=</span> G_OBJECT_CLASS <span class="op">(</span>klass<span class="op">);</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  NcmModelClass <span class="op">*</span>model_class <span class="op">=</span> NCM_MODEL_CLASS <span class="op">(</span>klass<span class="op">);</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">...</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  model_class<span class="op">-&gt;</span>set_property <span class="op">=</span> <span class="op">&amp;</span>_nc_curve_set_property<span class="op">;</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  model_class<span class="op">-&gt;</span>get_property <span class="op">=</span> <span class="op">&amp;</span>_nc_curve_get_property<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The next step is to initialize the model parameters.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ncm_model_class_set_name_nick <span class="op">(</span>model_class<span class="op">,</span> <span class="st">"Curve-f"</span><span class="op">,</span> <span class="st">"NcCurve"</span><span class="op">);</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>ncm_model_class_add_params <span class="op">(</span>model_class<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> PROP_SIZE<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>These functions set the model name and nick and tells the framework that it requires <code>0</code> scalar parameters and <code>0</code> vector parameters and it has additionally <code>PROP_SIZE</code> properties. It is usually the case that the abstract model has no parameters, this happens because the parameters are usually connected to the specific implementations and not to the abstract definitions.</p>
+</section>
+<section id="registering-the-id-in-ncmmset" class="level4">
+<h4 class="anchored" data-anchor-id="registering-the-id-in-ncmmset">Registering the ID in <a href="manual/NcmMSet.html"><code>NcmMSet</code></a></h4>
+<div class="sourceCode" id="cb14"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>  ncm_mset_model_register_id <span class="op">(</span>model_class<span class="op">,</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"NcCurve"</span><span class="op">,</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Curve model."</span><span class="op">,</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>                              NULL<span class="op">,</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>                              FALSE<span class="op">,</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>                              NCM_MSET_MODEL_MAIN<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This functions call takes care in registering the <code>NcCurve</code> type in the <a href="manual/NcmMSet.html"><code>NcmMSet</code></a> type list. This is necessary to set/get objects of this type from a <a href="manual/NcmMSet.html"><code>NcmMSet</code></a>.</p>
+</section>
+<section id="registering-the-properties" class="level4">
+<h4 class="anchored" data-anchor-id="registering-the-properties">Registering the properties</h4>
+<p>As discussed above, the properties <span class="math inline">\(x_l\)</span> and <span class="math inline">\(x_u\)</span> will not be part of the model parameters and will be taken as fixed numbers, in this case, we include them as usual <code>GObject</code> properties.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>  g_object_class_install_property <span class="op">(</span>object_class<span class="op">,</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                                   PROP_XL<span class="op">,</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                                   g_param_spec_double <span class="op">(</span><span class="st">"xl"</span><span class="op">,</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>                                                        NULL<span class="op">,</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                                                        <span class="st">"x lower bound"</span><span class="op">,</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>                                                        <span class="op">-</span>G_MAXDOUBLE<span class="op">,</span> G_MAXDOUBLE<span class="op">,</span> <span class="fl">0.0</span><span class="op">,</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>                                                        G_PARAM_READWRITE <span class="op">|</span> G_PARAM_CONSTRUCT <span class="op">|</span> G_PARAM_STATIC_NAME <span class="op">|</span> G_PARAM_STATIC_BLURB<span class="op">));</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  g_object_class_install_property <span class="op">(</span>object_class<span class="op">,</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>                                   PROP_XU<span class="op">,</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>                                   g_param_spec_double <span class="op">(</span><span class="st">"xu"</span><span class="op">,</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>                                                        NULL<span class="op">,</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>                                                        <span class="st">"x upper bound"</span><span class="op">,</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>                                                        <span class="op">-</span>G_MAXDOUBLE<span class="op">,</span> G_MAXDOUBLE<span class="op">,</span> <span class="fl">1.0</span><span class="op">,</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>                                                        G_PARAM_READWRITE <span class="op">|</span> G_PARAM_CONSTRUCT <span class="op">|</span> G_PARAM_STATIC_NAME <span class="op">|</span> G_PARAM_STATIC_BLURB<span class="op">));</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="checking-parameters-implementation" class="level4">
+<h4 class="anchored" data-anchor-id="checking-parameters-implementation">Checking parameters implementation</h4>
+<p>The function call below asserts that all required scalar and vector parameters were implemented correctly. In this case, none were required.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>  ncm_model_class_check_params_info <span class="op">(</span>model_class<span class="op">);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="setting-a-default-implementation-for-the-virtual-function" class="level4">
+<h4 class="anchored" data-anchor-id="setting-a-default-implementation-for-the-virtual-function">Setting a default implementation for the virtual function</h4>
+<p>This line sets the default implementation for the virtual function <code>f</code>.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>  curve_class <span class="op">=</span> <span class="op">&amp;</span>_nc_curve_f<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="methods" class="level3">
+<h3 class="anchored" data-anchor-id="methods">Methods</h3>
+<p>Our implementation of the virtual function <code>f</code> here is just a placeholder that raises an error if called.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="dt">static</span> gdouble </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>_nc_curve_f <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">,</span> <span class="dt">const</span> gdouble x<span class="op">)</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  g_error <span class="op">(</span><span class="st">"nc_curve_f: model `</span><span class="sc">%s</span><span class="st">' does not implement this function."</span><span class="op">,</span> </span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>           G_OBJECT_TYPE_NAME <span class="op">(</span>curve<span class="op">));</span> </span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fl">0.0</span><span class="op">;</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We use the <code>NCM_MODEL_SET_IMPL_FUNC</code> to generate the code for the implementation function <code>nc_curve_set_f_impl</code>. This class method, when called by the child implementations will attribute the function to the class struct and enable the implementation flag for this method.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>NCM_MODEL_SET_IMPL_FUNC <span class="op">(</span>NC_CURVE<span class="op">,</span> NcCurve<span class="op">,</span> nc_curve<span class="op">,</span> NcCurveF<span class="op">,</span> f<span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="example-sources" class="level2">
+<h2 class="anchored" data-anchor-id="example-sources">Example sources</h2>
+<section id="header" class="level3">
+<h3 class="anchored" data-anchor-id="header">Header</h3>
+<div class="sourceCode" id="cb20"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">/***************************************************************************</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"> *            nc_curve.h</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"> *  Tue July 11 16:30:36 2017</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co"> *  Copyright  2017  Sandro Dias Pinto Vitenti</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co"> *  &lt;vitenti@uel.br&gt;</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co"> ****************************************************************************/</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="co"> * nc_curve.h</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="co"> * Copyright (C) 2017 Sandro Dias Pinto Vitenti &lt;vitenti@uel.br&gt;</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="co"> * numcosmo is free software: you can redistribute it and/or modify it</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="co"> * under the terms of the GNU General Public License as published by the</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="co"> * Free Software Foundation, either version 3 of the License, or</span></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="co"> * (at your option) any later version.</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a><span class="co"> * numcosmo is distributed in the hope that it will be useful, but</span></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a><span class="co"> * WITHOUT ANY WARRANTY; without even the implied warranty of</span></span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a><span class="co"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</span></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="co"> * See the GNU General Public License for more details.</span></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a><span class="co"> * You should have received a copy of the GNU General Public License along</span></span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a><span class="co"> * with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a><span class="pp">#ifndef _NC_CURVE_H_</span></span>
+<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a><span class="pp">#define _NC_CURVE_H_</span></span>
+<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;glib.h&gt;</span></span>
+<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;glib-object.h&gt;</span></span>
+<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;numcosmo/build_cfg.h&gt;</span></span>
+<span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a><span class="co"> * Here we are writing an object external to NumCosmo so we must use</span></span>
+<span id="cb20-35"><a href="#cb20-35" aria-hidden="true" tabindex="-1"></a><span class="co"> * the full header numcosmo/numcosmo.h. Otherwise we could include</span></span>
+<span id="cb20-36"><a href="#cb20-36" aria-hidden="true" tabindex="-1"></a><span class="co"> * only the actual header we need, i.e.,</span></span>
+<span id="cb20-37"><a href="#cb20-37" aria-hidden="true" tabindex="-1"></a><span class="co"> * #include &lt;numcosmo/math/ncm_model.h&gt;</span></span>
+<span id="cb20-38"><a href="#cb20-38" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-39"><a href="#cb20-39" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb20-40"><a href="#cb20-40" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;numcosmo/numcosmo.h&gt;</span></span>
+<span id="cb20-41"><a href="#cb20-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-42"><a href="#cb20-42" aria-hidden="true" tabindex="-1"></a>G_BEGIN_DECLS</span>
+<span id="cb20-43"><a href="#cb20-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-44"><a href="#cb20-44" aria-hidden="true" tabindex="-1"></a><span class="co">/* These are the basic macros useful for the GObject framework */</span></span>
+<span id="cb20-45"><a href="#cb20-45" aria-hidden="true" tabindex="-1"></a><span class="pp">#define NC_TYPE_CURVE             </span><span class="op">(</span><span class="pp">nc_curve_get_type </span><span class="op">())</span></span>
+<span id="cb20-46"><a href="#cb20-46" aria-hidden="true" tabindex="-1"></a><span class="pp">#define NC_CURVE</span><span class="op">(</span><span class="pp">obj</span><span class="op">)</span><span class="pp">             </span><span class="op">(</span><span class="pp">G_TYPE_CHECK_INSTANCE_CAST </span><span class="op">((</span><span class="pp">obj</span><span class="op">),</span><span class="pp"> NC_TYPE_CURVE</span><span class="op">,</span><span class="pp"> NcCurve</span><span class="op">))</span></span>
+<span id="cb20-47"><a href="#cb20-47" aria-hidden="true" tabindex="-1"></a><span class="pp">#define NC_CURVE_CLASS</span><span class="op">(</span><span class="pp">klass</span><span class="op">)</span><span class="pp">     </span><span class="op">(</span><span class="pp">G_TYPE_CHECK_CLASS_CAST </span><span class="op">((</span><span class="pp">klass</span><span class="op">),</span><span class="pp"> NC_TYPE_CURVE</span><span class="op">,</span><span class="pp"> NcCurveClass</span><span class="op">))</span></span>
+<span id="cb20-48"><a href="#cb20-48" aria-hidden="true" tabindex="-1"></a><span class="pp">#define NC_IS_CURVE</span><span class="op">(</span><span class="pp">obj</span><span class="op">)</span><span class="pp">          </span><span class="op">(</span><span class="pp">G_TYPE_CHECK_INSTANCE_TYPE </span><span class="op">((</span><span class="pp">obj</span><span class="op">),</span><span class="pp"> NC_TYPE_CURVE</span><span class="op">))</span></span>
+<span id="cb20-49"><a href="#cb20-49" aria-hidden="true" tabindex="-1"></a><span class="pp">#define NC_IS_CURVE_CLASS</span><span class="op">(</span><span class="pp">klass</span><span class="op">)</span><span class="pp">  </span><span class="op">(</span><span class="pp">G_TYPE_CHECK_CLASS_TYPE </span><span class="op">((</span><span class="pp">klass</span><span class="op">),</span><span class="pp"> NC_TYPE_CURVE</span><span class="op">))</span></span>
+<span id="cb20-50"><a href="#cb20-50" aria-hidden="true" tabindex="-1"></a><span class="pp">#define NC_CURVE_GET_CLASS</span><span class="op">(</span><span class="pp">obj</span><span class="op">)</span><span class="pp">   </span><span class="op">(</span><span class="pp">G_TYPE_INSTANCE_GET_CLASS </span><span class="op">((</span><span class="pp">obj</span><span class="op">),</span><span class="pp"> NC_TYPE_CURVE</span><span class="op">,</span><span class="pp"> NcCurveClass</span><span class="op">))</span></span>
+<span id="cb20-51"><a href="#cb20-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-52"><a href="#cb20-52" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb20-53"><a href="#cb20-53" aria-hidden="true" tabindex="-1"></a><span class="co"> * This is the class struct, it will contains everything that is</span></span>
+<span id="cb20-54"><a href="#cb20-54" aria-hidden="true" tabindex="-1"></a><span class="co"> * that is defined across instances.</span></span>
+<span id="cb20-55"><a href="#cb20-55" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-56"><a href="#cb20-56" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb20-57"><a href="#cb20-57" aria-hidden="true" tabindex="-1"></a><span class="kw">typedef</span> <span class="kw">struct</span> _NcCurveClass NcCurveClass<span class="op">;</span></span>
+<span id="cb20-58"><a href="#cb20-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-59"><a href="#cb20-59" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb20-60"><a href="#cb20-60" aria-hidden="true" tabindex="-1"></a><span class="co"> * This is the instance struct, it will contains everything pertaining</span></span>
+<span id="cb20-61"><a href="#cb20-61" aria-hidden="true" tabindex="-1"></a><span class="co"> * to a given instance.</span></span>
+<span id="cb20-62"><a href="#cb20-62" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-63"><a href="#cb20-63" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb20-64"><a href="#cb20-64" aria-hidden="true" tabindex="-1"></a><span class="kw">typedef</span> <span class="kw">struct</span> _NcCurve NcCurve<span class="op">;</span></span>
+<span id="cb20-65"><a href="#cb20-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-66"><a href="#cb20-66" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb20-67"><a href="#cb20-67" aria-hidden="true" tabindex="-1"></a><span class="co"> * This is the instance private struct, it will contains everything</span></span>
+<span id="cb20-68"><a href="#cb20-68" aria-hidden="true" tabindex="-1"></a><span class="co"> * pertaining that should never be seen outside of the compilation unit.</span></span>
+<span id="cb20-69"><a href="#cb20-69" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-70"><a href="#cb20-70" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb20-71"><a href="#cb20-71" aria-hidden="true" tabindex="-1"></a><span class="kw">typedef</span> <span class="kw">struct</span> _NcCurvePrivate NcCurvePrivate<span class="op">;</span></span>
+<span id="cb20-72"><a href="#cb20-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-73"><a href="#cb20-73" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb20-74"><a href="#cb20-74" aria-hidden="true" tabindex="-1"></a><span class="co"> * Here we define a type to describe the virtual function which represets</span></span>
+<span id="cb20-75"><a href="#cb20-75" aria-hidden="true" tabindex="-1"></a><span class="co"> * the actual f(x).</span></span>
+<span id="cb20-76"><a href="#cb20-76" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-77"><a href="#cb20-77" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb20-78"><a href="#cb20-78" aria-hidden="true" tabindex="-1"></a><span class="kw">typedef</span> gdouble <span class="op">(*</span>NcCurveF<span class="op">)</span> <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">,</span> <span class="dt">const</span> gdouble x<span class="op">);</span></span>
+<span id="cb20-79"><a href="#cb20-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-80"><a href="#cb20-80" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb20-81"><a href="#cb20-81" aria-hidden="true" tabindex="-1"></a><span class="co"> * The class struct contains just one element `f' that must be assigned</span></span>
+<span id="cb20-82"><a href="#cb20-82" aria-hidden="true" tabindex="-1"></a><span class="co"> * by implementations. The first item is just the parent class structure.</span></span>
+<span id="cb20-83"><a href="#cb20-83" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-84"><a href="#cb20-84" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb20-85"><a href="#cb20-85" aria-hidden="true" tabindex="-1"></a><span class="kw">struct</span> _NcCurveClass</span>
+<span id="cb20-86"><a href="#cb20-86" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb20-87"><a href="#cb20-87" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*&lt; private &gt;*/</span></span>
+<span id="cb20-88"><a href="#cb20-88" aria-hidden="true" tabindex="-1"></a>  NcmModelClass parent_class<span class="op">;</span></span>
+<span id="cb20-89"><a href="#cb20-89" aria-hidden="true" tabindex="-1"></a>  NcCurveF f<span class="op">;</span></span>
+<span id="cb20-90"><a href="#cb20-90" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span>
+<span id="cb20-91"><a href="#cb20-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-92"><a href="#cb20-92" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb20-93"><a href="#cb20-93" aria-hidden="true" tabindex="-1"></a><span class="co"> * No elements needed apart from our private struct.</span></span>
+<span id="cb20-94"><a href="#cb20-94" aria-hidden="true" tabindex="-1"></a><span class="co"> * The first item is just the parent object structure.</span></span>
+<span id="cb20-95"><a href="#cb20-95" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-96"><a href="#cb20-96" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb20-97"><a href="#cb20-97" aria-hidden="true" tabindex="-1"></a><span class="kw">struct</span> _NcCurve</span>
+<span id="cb20-98"><a href="#cb20-98" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb20-99"><a href="#cb20-99" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*&lt; private &gt;*/</span></span>
+<span id="cb20-100"><a href="#cb20-100" aria-hidden="true" tabindex="-1"></a>  NcmModel parent_instance<span class="op">;</span></span>
+<span id="cb20-101"><a href="#cb20-101" aria-hidden="true" tabindex="-1"></a>  NcCurvePrivate <span class="op">*</span>priv<span class="op">;</span></span>
+<span id="cb20-102"><a href="#cb20-102" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span>
+<span id="cb20-103"><a href="#cb20-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-104"><a href="#cb20-104" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb20-105"><a href="#cb20-105" aria-hidden="true" tabindex="-1"></a><span class="co"> * NcCurveImpl:</span></span>
+<span id="cb20-106"><a href="#cb20-106" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@NC_CURVE_F:</span><span class="co"> The curve function $f(x)$.</span></span>
+<span id="cb20-107"><a href="#cb20-107" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-108"><a href="#cb20-108" aria-hidden="true" tabindex="-1"></a><span class="co"> * These flags are used to control which functions each child</span></span>
+<span id="cb20-109"><a href="#cb20-109" aria-hidden="true" tabindex="-1"></a><span class="co"> * implement. In this case the object is very simple and has</span></span>
+<span id="cb20-110"><a href="#cb20-110" aria-hidden="true" tabindex="-1"></a><span class="co"> * only one function that may be implement. In more complex cases</span></span>
+<span id="cb20-111"><a href="#cb20-111" aria-hidden="true" tabindex="-1"></a><span class="co"> * a child could implement only partially the abstract model</span></span>
+<span id="cb20-112"><a href="#cb20-112" aria-hidden="true" tabindex="-1"></a><span class="co"> * and it would the enumerator to inform which functions are</span></span>
+<span id="cb20-113"><a href="#cb20-113" aria-hidden="true" tabindex="-1"></a><span class="co"> * actually implement.</span></span>
+<span id="cb20-114"><a href="#cb20-114" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-115"><a href="#cb20-115" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb20-116"><a href="#cb20-116" aria-hidden="true" tabindex="-1"></a><span class="kw">typedef</span> <span class="kw">enum</span> _NcCurveImpl</span>
+<span id="cb20-117"><a href="#cb20-117" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb20-118"><a href="#cb20-118" aria-hidden="true" tabindex="-1"></a>  NC_CURVE_IMPL_f <span class="op">=</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb20-119"><a href="#cb20-119" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> NcCurveImpl<span class="op">;</span></span>
+<span id="cb20-120"><a href="#cb20-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-121"><a href="#cb20-121" aria-hidden="true" tabindex="-1"></a><span class="pp">#define NC_CURVE_IMPL_ALL NCM_MODEL_CLASS_IMPL_ALL</span></span>
+<span id="cb20-122"><a href="#cb20-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-123"><a href="#cb20-123" aria-hidden="true" tabindex="-1"></a>GType nc_curve_get_type <span class="op">(</span><span class="dt">void</span><span class="op">)</span> G_GNUC_CONST<span class="op">;</span></span>
+<span id="cb20-124"><a href="#cb20-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-125"><a href="#cb20-125" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb20-126"><a href="#cb20-126" aria-hidden="true" tabindex="-1"></a><span class="co"> * Since this is a abstract model we need to define its ID</span></span>
+<span id="cb20-127"><a href="#cb20-127" aria-hidden="true" tabindex="-1"></a><span class="co"> * in order to allow it to be found inside of a #NcmMSet</span></span>
+<span id="cb20-128"><a href="#cb20-128" aria-hidden="true" tabindex="-1"></a><span class="co"> * object.</span></span>
+<span id="cb20-129"><a href="#cb20-129" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-130"><a href="#cb20-130" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb20-131"><a href="#cb20-131" aria-hidden="true" tabindex="-1"></a>NCM_MSET_MODEL_DECLARE_ID <span class="op">(</span>nc_curve<span class="op">);</span></span>
+<span id="cb20-132"><a href="#cb20-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-133"><a href="#cb20-133" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb20-134"><a href="#cb20-134" aria-hidden="true" tabindex="-1"></a><span class="co"> * This function must be used by implementations to set the virtual function f.</span></span>
+<span id="cb20-135"><a href="#cb20-135" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-136"><a href="#cb20-136" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb20-137"><a href="#cb20-137" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> nc_curve_set_f_impl <span class="op">(</span>NcCurveClass <span class="op">*</span>curve_class<span class="op">,</span> NcCurveF f<span class="op">);</span></span>
+<span id="cb20-138"><a href="#cb20-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-139"><a href="#cb20-139" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb20-140"><a href="#cb20-140" aria-hidden="true" tabindex="-1"></a><span class="co"> * The default methods that all objects should implement.</span></span>
+<span id="cb20-141"><a href="#cb20-141" aria-hidden="true" tabindex="-1"></a><span class="co"> * We also chose to implement a constructor nc_curve_new_from_name()</span></span>
+<span id="cb20-142"><a href="#cb20-142" aria-hidden="true" tabindex="-1"></a><span class="co"> * to allow creating any child directly.</span></span>
+<span id="cb20-143"><a href="#cb20-143" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-144"><a href="#cb20-144" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb20-145"><a href="#cb20-145" aria-hidden="true" tabindex="-1"></a>NcCurve <span class="op">*</span>nc_curve_new_from_name <span class="op">(</span><span class="dt">const</span> gchar <span class="op">*</span>curve_name<span class="op">);</span></span>
+<span id="cb20-146"><a href="#cb20-146" aria-hidden="true" tabindex="-1"></a>NcCurve <span class="op">*</span>nc_curve_ref <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">);</span></span>
+<span id="cb20-147"><a href="#cb20-147" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> nc_curve_free <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">);</span></span>
+<span id="cb20-148"><a href="#cb20-148" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> nc_curve_clear <span class="op">(</span>NcCurve <span class="op">**</span>curve<span class="op">);</span></span>
+<span id="cb20-149"><a href="#cb20-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-150"><a href="#cb20-150" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb20-151"><a href="#cb20-151" aria-hidden="true" tabindex="-1"></a><span class="co"> * Property accessors prototypes.</span></span>
+<span id="cb20-152"><a href="#cb20-152" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-153"><a href="#cb20-153" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb20-154"><a href="#cb20-154" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> nc_curve_set_xl <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">,</span> <span class="dt">const</span> gdouble xl<span class="op">);</span></span>
+<span id="cb20-155"><a href="#cb20-155" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> nc_curve_set_xu <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">,</span> <span class="dt">const</span> gdouble xu<span class="op">);</span></span>
+<span id="cb20-156"><a href="#cb20-156" aria-hidden="true" tabindex="-1"></a>gdouble nc_curve_get_xl <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">);</span></span>
+<span id="cb20-157"><a href="#cb20-157" aria-hidden="true" tabindex="-1"></a>gdouble nc_curve_get_xu <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">);</span></span>
+<span id="cb20-158"><a href="#cb20-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-159"><a href="#cb20-159" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb20-160"><a href="#cb20-160" aria-hidden="true" tabindex="-1"></a><span class="co"> * The only quantity calculated by this model is the value</span></span>
+<span id="cb20-161"><a href="#cb20-161" aria-hidden="true" tabindex="-1"></a><span class="co"> * of $f(x)$, which is represented by the following virtual</span></span>
+<span id="cb20-162"><a href="#cb20-162" aria-hidden="true" tabindex="-1"></a><span class="co"> * method.</span></span>
+<span id="cb20-163"><a href="#cb20-163" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb20-164"><a href="#cb20-164" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb20-165"><a href="#cb20-165" aria-hidden="true" tabindex="-1"></a>gdouble nc_curve_f <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">,</span> <span class="dt">const</span> gdouble x<span class="op">);</span></span>
+<span id="cb20-166"><a href="#cb20-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-167"><a href="#cb20-167" aria-hidden="true" tabindex="-1"></a>G_END_DECLS</span>
+<span id="cb20-168"><a href="#cb20-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-169"><a href="#cb20-169" aria-hidden="true" tabindex="-1"></a><span class="pp">#endif </span><span class="co">/* _NC_CURVE_H_ */</span></span>
+<span id="cb20-170"><a href="#cb20-170" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="source" class="level3">
+<h3 class="anchored" data-anchor-id="source">Source</h3>
+<div class="sourceCode" id="cb21"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">/***************************************************************************</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"> *            nc_curve.c</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"> *  Tue July 11 16:30:26 2017</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co"> *  Copyright  2017  Sandro Dias Pinto Vitenti</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co"> *  &lt;vitenti@uel.br&gt;</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co"> ****************************************************************************/</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="co"> * nc_curve.c</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="co"> * Copyright (C) 2017 Sandro Dias Pinto Vitenti &lt;vitenti@uel.br&gt;</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="co"> * numcosmo is free software: you can redistribute it and/or modify it</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="co"> * under the terms of the GNU General Public License as published by the</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="co"> * Free Software Foundation, either version 3 of the License, or</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="co"> * (at your option) any later version.</span></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="co"> * numcosmo is distributed in the hope that it will be useful, but</span></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="co"> * WITHOUT ANY WARRANTY; without even the implied warranty of</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a><span class="co"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</span></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a><span class="co"> * See the GNU General Public License for more details.</span></span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a><span class="co"> * You should have received a copy of the GNU General Public License along</span></span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a><span class="co"> * with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a><span class="co"> * SECTION:nc_curve</span></span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@title:</span><span class="co"> NcCurve</span></span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@short_description:</span><span class="co"> Abstract class for curves!</span></span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a><span class="co"> * NcCurve is the abstract class designed to include the functions</span></span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a><span class="co"> * that any simple curve should implement, see NcCurveImpl.</span></span>
+<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a><span class="co"> * Its parent_class is NcmModel.</span></span>
+<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-35"><a href="#cb21-35" aria-hidden="true" tabindex="-1"></a><span class="co"> * (This is a gtk-doc comment, which always start with two **)</span></span>
+<span id="cb21-36"><a href="#cb21-36" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-37"><a href="#cb21-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-38"><a href="#cb21-38" aria-hidden="true" tabindex="-1"></a><span class="pp">#ifdef HAVE_CONFIG_H</span></span>
+<span id="cb21-39"><a href="#cb21-39" aria-hidden="true" tabindex="-1"></a><span class="pp">#  include </span><span class="im">"config.h"</span></span>
+<span id="cb21-40"><a href="#cb21-40" aria-hidden="true" tabindex="-1"></a><span class="pp">#endif </span><span class="co">/* HAVE_CONFIG_H */</span></span>
+<span id="cb21-41"><a href="#cb21-41" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"build_cfg.h"</span></span>
+<span id="cb21-42"><a href="#cb21-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-43"><a href="#cb21-43" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"nc_curve.h"</span></span>
+<span id="cb21-44"><a href="#cb21-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-45"><a href="#cb21-45" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-46"><a href="#cb21-46" aria-hidden="true" tabindex="-1"></a><span class="co"> * All implementations of NcCurve will required the function interval.</span></span>
+<span id="cb21-47"><a href="#cb21-47" aria-hidden="true" tabindex="-1"></a><span class="co"> * We could have let the interval itself as model parameters in order</span></span>
+<span id="cb21-48"><a href="#cb21-48" aria-hidden="true" tabindex="-1"></a><span class="co"> * to allow it to be fit too, this approach will be presented in a more</span></span>
+<span id="cb21-49"><a href="#cb21-49" aria-hidden="true" tabindex="-1"></a><span class="co"> * advanced example.</span></span>
+<span id="cb21-50"><a href="#cb21-50" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-51"><a href="#cb21-51" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-52"><a href="#cb21-52" aria-hidden="true" tabindex="-1"></a><span class="kw">struct</span> _NcCurvePrivate</span>
+<span id="cb21-53"><a href="#cb21-53" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-54"><a href="#cb21-54" aria-hidden="true" tabindex="-1"></a>  gdouble xl<span class="op">;</span></span>
+<span id="cb21-55"><a href="#cb21-55" aria-hidden="true" tabindex="-1"></a>  gdouble xu<span class="op">;</span></span>
+<span id="cb21-56"><a href="#cb21-56" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span>
+<span id="cb21-57"><a href="#cb21-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-58"><a href="#cb21-58" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-59"><a href="#cb21-59" aria-hidden="true" tabindex="-1"></a><span class="co"> * Properties enumerator, note that we added a last item PROP_SIZE,</span></span>
+<span id="cb21-60"><a href="#cb21-60" aria-hidden="true" tabindex="-1"></a><span class="co"> * this is useful to obtain the actual number of properties in the</span></span>
+<span id="cb21-61"><a href="#cb21-61" aria-hidden="true" tabindex="-1"></a><span class="co"> * object without hard coding it. PROP_0 is a special property of</span></span>
+<span id="cb21-62"><a href="#cb21-62" aria-hidden="true" tabindex="-1"></a><span class="co"> * the GObject system we should always be there.</span></span>
+<span id="cb21-63"><a href="#cb21-63" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-64"><a href="#cb21-64" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-65"><a href="#cb21-65" aria-hidden="true" tabindex="-1"></a><span class="kw">enum</span></span>
+<span id="cb21-66"><a href="#cb21-66" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-67"><a href="#cb21-67" aria-hidden="true" tabindex="-1"></a>  PROP_0<span class="op">,</span></span>
+<span id="cb21-68"><a href="#cb21-68" aria-hidden="true" tabindex="-1"></a>  PROP_XL<span class="op">,</span></span>
+<span id="cb21-69"><a href="#cb21-69" aria-hidden="true" tabindex="-1"></a>  PROP_XU<span class="op">,</span></span>
+<span id="cb21-70"><a href="#cb21-70" aria-hidden="true" tabindex="-1"></a>  PROP_SIZE<span class="op">,</span></span>
+<span id="cb21-71"><a href="#cb21-71" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span>
+<span id="cb21-72"><a href="#cb21-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-73"><a href="#cb21-73" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-74"><a href="#cb21-74" aria-hidden="true" tabindex="-1"></a><span class="co"> * Here we define the object GType using the macro G_DEFINE_ABSTRACT_TYPE.</span></span>
+<span id="cb21-75"><a href="#cb21-75" aria-hidden="true" tabindex="-1"></a><span class="co"> * This macro basically defines the function nc_curve_get_type (void) and</span></span>
+<span id="cb21-76"><a href="#cb21-76" aria-hidden="true" tabindex="-1"></a><span class="co"> * everything necessary to define an object in the GLib type system. The</span></span>
+<span id="cb21-77"><a href="#cb21-77" aria-hidden="true" tabindex="-1"></a><span class="co"> * ABSTRACT version of the macro creates a GType that cannot be instantiated</span></span>
+<span id="cb21-78"><a href="#cb21-78" aria-hidden="true" tabindex="-1"></a><span class="co"> * this means that to use this object we *must* define a child.</span></span>
+<span id="cb21-79"><a href="#cb21-79" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-80"><a href="#cb21-80" aria-hidden="true" tabindex="-1"></a><span class="co"> * The last argument provides the GType of the parent object.</span></span>
+<span id="cb21-81"><a href="#cb21-81" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-82"><a href="#cb21-82" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-83"><a href="#cb21-83" aria-hidden="true" tabindex="-1"></a>G_DEFINE_ABSTRACT_TYPE <span class="op">(</span>NcCurve<span class="op">,</span> nc_curve<span class="op">,</span> NCM_TYPE_MODEL<span class="op">);</span></span>
+<span id="cb21-84"><a href="#cb21-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-85"><a href="#cb21-85" aria-hidden="true" tabindex="-1"></a><span class="dt">static</span> <span class="dt">void</span></span>
+<span id="cb21-86"><a href="#cb21-86" aria-hidden="true" tabindex="-1"></a>nc_curve_init <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">)</span></span>
+<span id="cb21-87"><a href="#cb21-87" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-88"><a href="#cb21-88" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-89"><a href="#cb21-89" aria-hidden="true" tabindex="-1"></a><span class="co">   * The first step is the creation of the private structure, all allocation and</span></span>
+<span id="cb21-90"><a href="#cb21-90" aria-hidden="true" tabindex="-1"></a><span class="co">   * de-allocation is automatically performed by the GObject framework.</span></span>
+<span id="cb21-91"><a href="#cb21-91" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-92"><a href="#cb21-92" aria-hidden="true" tabindex="-1"></a>  curve<span class="op">-&gt;</span>priv <span class="op">=</span> G_TYPE_INSTANCE_GET_PRIVATE <span class="op">(</span>curve<span class="op">,</span> NC_TYPE_CURVE<span class="op">,</span> NcCurvePrivate<span class="op">);</span></span>
+<span id="cb21-93"><a href="#cb21-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-94"><a href="#cb21-94" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-95"><a href="#cb21-95" aria-hidden="true" tabindex="-1"></a><span class="co">   * Here we initialize all structure member to null/zero.</span></span>
+<span id="cb21-96"><a href="#cb21-96" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-97"><a href="#cb21-97" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-98"><a href="#cb21-98" aria-hidden="true" tabindex="-1"></a>  curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xl <span class="op">=</span> <span class="fl">0.0</span><span class="op">;</span></span>
+<span id="cb21-99"><a href="#cb21-99" aria-hidden="true" tabindex="-1"></a>  curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xu <span class="op">=</span> <span class="fl">0.0</span><span class="op">;</span></span>
+<span id="cb21-100"><a href="#cb21-100" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-101"><a href="#cb21-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-102"><a href="#cb21-102" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-103"><a href="#cb21-103" aria-hidden="true" tabindex="-1"></a><span class="co"> * Here we call all property accessors in order to set property values.</span></span>
+<span id="cb21-104"><a href="#cb21-104" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-105"><a href="#cb21-105" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-106"><a href="#cb21-106" aria-hidden="true" tabindex="-1"></a><span class="dt">static</span> <span class="dt">void</span></span>
+<span id="cb21-107"><a href="#cb21-107" aria-hidden="true" tabindex="-1"></a>_nc_curve_set_property <span class="op">(</span>GObject <span class="op">*</span>object<span class="op">,</span> guint prop_id<span class="op">,</span> <span class="dt">const</span> GValue <span class="op">*</span>value<span class="op">,</span> GParamSpec <span class="op">*</span>pspec<span class="op">)</span></span>
+<span id="cb21-108"><a href="#cb21-108" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-109"><a href="#cb21-109" aria-hidden="true" tabindex="-1"></a>  NcCurve <span class="op">*</span>curve <span class="op">=</span> NC_CURVE <span class="op">(</span>object<span class="op">);</span></span>
+<span id="cb21-110"><a href="#cb21-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-111"><a href="#cb21-111" aria-hidden="true" tabindex="-1"></a>  g_return_if_fail <span class="op">(</span>NC_IS_CURVE <span class="op">(</span>object<span class="op">));</span></span>
+<span id="cb21-112"><a href="#cb21-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-113"><a href="#cb21-113" aria-hidden="true" tabindex="-1"></a>  <span class="cf">switch</span> <span class="op">(</span>prop_id<span class="op">)</span></span>
+<span id="cb21-114"><a href="#cb21-114" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb21-115"><a href="#cb21-115" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> PROP_XL<span class="op">:</span></span>
+<span id="cb21-116"><a href="#cb21-116" aria-hidden="true" tabindex="-1"></a>      nc_curve_set_xl <span class="op">(</span>curve<span class="op">,</span> g_value_get_double <span class="op">(</span>value<span class="op">));</span></span>
+<span id="cb21-117"><a href="#cb21-117" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb21-118"><a href="#cb21-118" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> PROP_XU<span class="op">:</span></span>
+<span id="cb21-119"><a href="#cb21-119" aria-hidden="true" tabindex="-1"></a>      nc_curve_set_xu <span class="op">(</span>curve<span class="op">,</span> g_value_get_double <span class="op">(</span>value<span class="op">));</span></span>
+<span id="cb21-120"><a href="#cb21-120" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb21-121"><a href="#cb21-121" aria-hidden="true" tabindex="-1"></a>    <span class="cf">default</span><span class="op">:</span></span>
+<span id="cb21-122"><a href="#cb21-122" aria-hidden="true" tabindex="-1"></a>      G_OBJECT_WARN_INVALID_PROPERTY_ID <span class="op">(</span>object<span class="op">,</span> prop_id<span class="op">,</span> pspec<span class="op">);</span></span>
+<span id="cb21-123"><a href="#cb21-123" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb21-124"><a href="#cb21-124" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb21-125"><a href="#cb21-125" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-126"><a href="#cb21-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-127"><a href="#cb21-127" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-128"><a href="#cb21-128" aria-hidden="true" tabindex="-1"></a><span class="co"> * Here we call all property accessors in order to get property values.</span></span>
+<span id="cb21-129"><a href="#cb21-129" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-130"><a href="#cb21-130" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-131"><a href="#cb21-131" aria-hidden="true" tabindex="-1"></a><span class="dt">static</span> <span class="dt">void</span></span>
+<span id="cb21-132"><a href="#cb21-132" aria-hidden="true" tabindex="-1"></a>_nc_curve_get_property <span class="op">(</span>GObject <span class="op">*</span>object<span class="op">,</span> guint prop_id<span class="op">,</span> GValue <span class="op">*</span>value<span class="op">,</span> GParamSpec <span class="op">*</span>pspec<span class="op">)</span></span>
+<span id="cb21-133"><a href="#cb21-133" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-134"><a href="#cb21-134" aria-hidden="true" tabindex="-1"></a>  NcCurve <span class="op">*</span>curve <span class="op">=</span> NC_CURVE <span class="op">(</span>object<span class="op">);</span></span>
+<span id="cb21-135"><a href="#cb21-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-136"><a href="#cb21-136" aria-hidden="true" tabindex="-1"></a>  g_return_if_fail <span class="op">(</span>NC_IS_CURVE <span class="op">(</span>object<span class="op">));</span></span>
+<span id="cb21-137"><a href="#cb21-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-138"><a href="#cb21-138" aria-hidden="true" tabindex="-1"></a>  <span class="cf">switch</span> <span class="op">(</span>prop_id<span class="op">)</span></span>
+<span id="cb21-139"><a href="#cb21-139" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb21-140"><a href="#cb21-140" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> PROP_XL<span class="op">:</span></span>
+<span id="cb21-141"><a href="#cb21-141" aria-hidden="true" tabindex="-1"></a>      g_value_set_double <span class="op">(</span>value<span class="op">,</span> nc_curve_get_xl <span class="op">(</span>curve<span class="op">));</span></span>
+<span id="cb21-142"><a href="#cb21-142" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb21-143"><a href="#cb21-143" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> PROP_XU<span class="op">:</span></span>
+<span id="cb21-144"><a href="#cb21-144" aria-hidden="true" tabindex="-1"></a>      g_value_set_double <span class="op">(</span>value<span class="op">,</span> nc_curve_get_xu <span class="op">(</span>curve<span class="op">));</span></span>
+<span id="cb21-145"><a href="#cb21-145" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb21-146"><a href="#cb21-146" aria-hidden="true" tabindex="-1"></a>    <span class="cf">default</span><span class="op">:</span></span>
+<span id="cb21-147"><a href="#cb21-147" aria-hidden="true" tabindex="-1"></a>      G_OBJECT_WARN_INVALID_PROPERTY_ID <span class="op">(</span>object<span class="op">,</span> prop_id<span class="op">,</span> pspec<span class="op">);</span></span>
+<span id="cb21-148"><a href="#cb21-148" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb21-149"><a href="#cb21-149" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb21-150"><a href="#cb21-150" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-151"><a href="#cb21-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-152"><a href="#cb21-152" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-153"><a href="#cb21-153" aria-hidden="true" tabindex="-1"></a><span class="co"> * Here we must de-allocate any memory allocated *inside* gobject framework,</span></span>
+<span id="cb21-154"><a href="#cb21-154" aria-hidden="true" tabindex="-1"></a><span class="co"> * i.e., we must unref any outside object contained in our object.</span></span>
+<span id="cb21-155"><a href="#cb21-155" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-156"><a href="#cb21-156" aria-hidden="true" tabindex="-1"></a><span class="co"> * Nothing to do!</span></span>
+<span id="cb21-157"><a href="#cb21-157" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-158"><a href="#cb21-158" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-159"><a href="#cb21-159" aria-hidden="true" tabindex="-1"></a><span class="dt">static</span> <span class="dt">void</span></span>
+<span id="cb21-160"><a href="#cb21-160" aria-hidden="true" tabindex="-1"></a>_nc_curve_dispose <span class="op">(</span>GObject <span class="op">*</span>object<span class="op">)</span></span>
+<span id="cb21-161"><a href="#cb21-161" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-162"><a href="#cb21-162" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-163"><a href="#cb21-163" aria-hidden="true" tabindex="-1"></a><span class="co">   * The following comment is always included to remark that at this point the parent</span></span>
+<span id="cb21-164"><a href="#cb21-164" aria-hidden="true" tabindex="-1"></a><span class="co">   * method must be called, chaining down the function call, i.e., first we finalize</span></span>
+<span id="cb21-165"><a href="#cb21-165" aria-hidden="true" tabindex="-1"></a><span class="co">   * the properties of the child, if any, then the parent and parent's parent, etc.</span></span>
+<span id="cb21-166"><a href="#cb21-166" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-167"><a href="#cb21-167" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-168"><a href="#cb21-168" aria-hidden="true" tabindex="-1"></a>  <span class="co">/* Chain up : end */</span></span>
+<span id="cb21-169"><a href="#cb21-169" aria-hidden="true" tabindex="-1"></a>  G_OBJECT_CLASS <span class="op">(</span>nc_curve_parent_class<span class="op">)-&gt;</span>dispose <span class="op">(</span>object<span class="op">);</span></span>
+<span id="cb21-170"><a href="#cb21-170" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-171"><a href="#cb21-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-172"><a href="#cb21-172" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-173"><a href="#cb21-173" aria-hidden="true" tabindex="-1"></a><span class="co"> * Here we must de-allocate any memory allocated *outside* gobject framework.</span></span>
+<span id="cb21-174"><a href="#cb21-174" aria-hidden="true" tabindex="-1"></a><span class="co"> * Nothing to do!</span></span>
+<span id="cb21-175"><a href="#cb21-175" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-176"><a href="#cb21-176" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-177"><a href="#cb21-177" aria-hidden="true" tabindex="-1"></a><span class="dt">static</span> <span class="dt">void</span></span>
+<span id="cb21-178"><a href="#cb21-178" aria-hidden="true" tabindex="-1"></a>_nc_curve_finalize <span class="op">(</span>GObject <span class="op">*</span>object<span class="op">)</span></span>
+<span id="cb21-179"><a href="#cb21-179" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-180"><a href="#cb21-180" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-181"><a href="#cb21-181" aria-hidden="true" tabindex="-1"></a><span class="co">   * The following comment is always included to remark that at this point the parent</span></span>
+<span id="cb21-182"><a href="#cb21-182" aria-hidden="true" tabindex="-1"></a><span class="co">   * method must be called, chaining down the function call, i.e., first we finalize</span></span>
+<span id="cb21-183"><a href="#cb21-183" aria-hidden="true" tabindex="-1"></a><span class="co">   * the properties of the child, if any, then the parent and parent's parent, etc.</span></span>
+<span id="cb21-184"><a href="#cb21-184" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-185"><a href="#cb21-185" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-186"><a href="#cb21-186" aria-hidden="true" tabindex="-1"></a>  <span class="co">/* Chain up : end */</span></span>
+<span id="cb21-187"><a href="#cb21-187" aria-hidden="true" tabindex="-1"></a>  G_OBJECT_CLASS <span class="op">(</span>nc_curve_parent_class<span class="op">)-&gt;</span>finalize <span class="op">(</span>object<span class="op">);</span></span>
+<span id="cb21-188"><a href="#cb21-188" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-189"><a href="#cb21-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-190"><a href="#cb21-190" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-191"><a href="#cb21-191" aria-hidden="true" tabindex="-1"></a><span class="co"> * Registry the ID in NumCosmo model system.</span></span>
+<span id="cb21-192"><a href="#cb21-192" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-193"><a href="#cb21-193" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-194"><a href="#cb21-194" aria-hidden="true" tabindex="-1"></a>NCM_MSET_MODEL_REGISTER_ID <span class="op">(</span>nc_curve<span class="op">,</span> NC_TYPE_CURVE<span class="op">);</span></span>
+<span id="cb21-195"><a href="#cb21-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-196"><a href="#cb21-196" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-197"><a href="#cb21-197" aria-hidden="true" tabindex="-1"></a><span class="co"> * Prototype of the default implementation.</span></span>
+<span id="cb21-198"><a href="#cb21-198" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-199"><a href="#cb21-199" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-200"><a href="#cb21-200" aria-hidden="true" tabindex="-1"></a><span class="dt">static</span> gdouble _nc_curve_f <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">,</span> <span class="dt">const</span> gdouble x<span class="op">);</span></span>
+<span id="cb21-201"><a href="#cb21-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-202"><a href="#cb21-202" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-203"><a href="#cb21-203" aria-hidden="true" tabindex="-1"></a><span class="co"> * At _class_init we will define all properties and parameters we should</span></span>
+<span id="cb21-204"><a href="#cb21-204" aria-hidden="true" tabindex="-1"></a><span class="co"> * also include a default implementation for our virtual function `f'.</span></span>
+<span id="cb21-205"><a href="#cb21-205" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-206"><a href="#cb21-206" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-207"><a href="#cb21-207" aria-hidden="true" tabindex="-1"></a><span class="dt">static</span> <span class="dt">void</span></span>
+<span id="cb21-208"><a href="#cb21-208" aria-hidden="true" tabindex="-1"></a>nc_curve_class_init <span class="op">(</span>NcCurveClass <span class="op">*</span>klass<span class="op">)</span></span>
+<span id="cb21-209"><a href="#cb21-209" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-210"><a href="#cb21-210" aria-hidden="true" tabindex="-1"></a>  GObjectClass <span class="op">*</span>object_class <span class="op">=</span> G_OBJECT_CLASS <span class="op">(</span>klass<span class="op">);</span></span>
+<span id="cb21-211"><a href="#cb21-211" aria-hidden="true" tabindex="-1"></a>  NcmModelClass <span class="op">*</span>model_class <span class="op">=</span> NCM_MODEL_CLASS <span class="op">(</span>klass<span class="op">);</span></span>
+<span id="cb21-212"><a href="#cb21-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-213"><a href="#cb21-213" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-214"><a href="#cb21-214" aria-hidden="true" tabindex="-1"></a><span class="co">   * Tells the type system that we have a private struct</span></span>
+<span id="cb21-215"><a href="#cb21-215" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-216"><a href="#cb21-216" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-217"><a href="#cb21-217" aria-hidden="true" tabindex="-1"></a>  g_type_class_add_private <span class="op">(</span>klass<span class="op">,</span> <span class="kw">sizeof</span> <span class="op">(</span>NcCurvePrivate<span class="op">));</span></span>
+<span id="cb21-218"><a href="#cb21-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-219"><a href="#cb21-219" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-220"><a href="#cb21-220" aria-hidden="true" tabindex="-1"></a><span class="co">   * The NcmModel class takes cares of the parameters, thus,</span></span>
+<span id="cb21-221"><a href="#cb21-221" aria-hidden="true" tabindex="-1"></a><span class="co">   * the set/get functions above must be set in NcmModelClass</span></span>
+<span id="cb21-222"><a href="#cb21-222" aria-hidden="true" tabindex="-1"></a><span class="co">   * structure.</span></span>
+<span id="cb21-223"><a href="#cb21-223" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-224"><a href="#cb21-224" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-225"><a href="#cb21-225" aria-hidden="true" tabindex="-1"></a>  model_class<span class="op">-&gt;</span>set_property <span class="op">=</span> <span class="op">&amp;</span>_nc_curve_set_property<span class="op">;</span></span>
+<span id="cb21-226"><a href="#cb21-226" aria-hidden="true" tabindex="-1"></a>  model_class<span class="op">-&gt;</span>get_property <span class="op">=</span> <span class="op">&amp;</span>_nc_curve_get_property<span class="op">;</span></span>
+<span id="cb21-227"><a href="#cb21-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-228"><a href="#cb21-228" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-229"><a href="#cb21-229" aria-hidden="true" tabindex="-1"></a><span class="co">   * The other functions are the usual GObject hooks and</span></span>
+<span id="cb21-230"><a href="#cb21-230" aria-hidden="true" tabindex="-1"></a><span class="co">   * must be assigned to GObjectClass.</span></span>
+<span id="cb21-231"><a href="#cb21-231" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-232"><a href="#cb21-232" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-233"><a href="#cb21-233" aria-hidden="true" tabindex="-1"></a>  object_class<span class="op">-&gt;</span>dispose  <span class="op">=</span> <span class="op">&amp;</span>_nc_curve_dispose<span class="op">;</span></span>
+<span id="cb21-234"><a href="#cb21-234" aria-hidden="true" tabindex="-1"></a>  object_class<span class="op">-&gt;</span>finalize <span class="op">=</span> <span class="op">&amp;</span>_nc_curve_finalize<span class="op">;</span></span>
+<span id="cb21-235"><a href="#cb21-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-236"><a href="#cb21-236" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-237"><a href="#cb21-237" aria-hidden="true" tabindex="-1"></a><span class="co">   * First we set the model nick `Curve-f' and its name</span></span>
+<span id="cb21-238"><a href="#cb21-238" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-239"><a href="#cb21-239" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-240"><a href="#cb21-240" aria-hidden="true" tabindex="-1"></a>  ncm_model_class_set_name_nick <span class="op">(</span>model_class<span class="op">,</span> <span class="st">"Curve-f"</span><span class="op">,</span> <span class="st">"NcCurve"</span><span class="op">);</span></span>
+<span id="cb21-241"><a href="#cb21-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-242"><a href="#cb21-242" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-243"><a href="#cb21-243" aria-hidden="true" tabindex="-1"></a><span class="co">   * Now we inform that we have 0 scalar parameters and 0 vector parameters.</span></span>
+<span id="cb21-244"><a href="#cb21-244" aria-hidden="true" tabindex="-1"></a><span class="co">   * Note that here we should include parameters that *all* implementations</span></span>
+<span id="cb21-245"><a href="#cb21-245" aria-hidden="true" tabindex="-1"></a><span class="co">   * would share, here we have none. Finallt, with the last argument we assert</span></span>
+<span id="cb21-246"><a href="#cb21-246" aria-hidden="true" tabindex="-1"></a><span class="co">   * that we have PROP_SIZE == 2 additional properties.</span></span>
+<span id="cb21-247"><a href="#cb21-247" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-248"><a href="#cb21-248" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-249"><a href="#cb21-249" aria-hidden="true" tabindex="-1"></a>  ncm_model_class_add_params <span class="op">(</span>model_class<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> PROP_SIZE<span class="op">);</span></span>
+<span id="cb21-250"><a href="#cb21-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-251"><a href="#cb21-251" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-252"><a href="#cb21-252" aria-hidden="true" tabindex="-1"></a><span class="co">   * Next step is to register the object in NumCosmo's model set object class.</span></span>
+<span id="cb21-253"><a href="#cb21-253" aria-hidden="true" tabindex="-1"></a><span class="co">   * We don't include a long description (first NULL below). The last arguments</span></span>
+<span id="cb21-254"><a href="#cb21-254" aria-hidden="true" tabindex="-1"></a><span class="co">   * FALSE and NCM_MSET_MODEL_MAIN determines that this object in non-stackable</span></span>
+<span id="cb21-255"><a href="#cb21-255" aria-hidden="true" tabindex="-1"></a><span class="co">   * and it is a MAIN model, both concepts will be discussed in an advanced example.</span></span>
+<span id="cb21-256"><a href="#cb21-256" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-257"><a href="#cb21-257" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-258"><a href="#cb21-258" aria-hidden="true" tabindex="-1"></a>  ncm_mset_model_register_id <span class="op">(</span>model_class<span class="op">,</span></span>
+<span id="cb21-259"><a href="#cb21-259" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"NcCurve"</span><span class="op">,</span></span>
+<span id="cb21-260"><a href="#cb21-260" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Curve model."</span><span class="op">,</span></span>
+<span id="cb21-261"><a href="#cb21-261" aria-hidden="true" tabindex="-1"></a>                              NULL<span class="op">,</span></span>
+<span id="cb21-262"><a href="#cb21-262" aria-hidden="true" tabindex="-1"></a>                              FALSE<span class="op">,</span></span>
+<span id="cb21-263"><a href="#cb21-263" aria-hidden="true" tabindex="-1"></a>                              NCM_MSET_MODEL_MAIN<span class="op">);</span></span>
+<span id="cb21-264"><a href="#cb21-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-265"><a href="#cb21-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-266"><a href="#cb21-266" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-267"><a href="#cb21-267" aria-hidden="true" tabindex="-1"></a><span class="co">   * The property PROP_XL is allowed in range [-G_MAXDOUBLE, G_MAXDOUBLE]</span></span>
+<span id="cb21-268"><a href="#cb21-268" aria-hidden="true" tabindex="-1"></a><span class="co">   * and its default value is 0.0. This property can be set only during</span></span>
+<span id="cb21-269"><a href="#cb21-269" aria-hidden="true" tabindex="-1"></a><span class="co">   * the object construction.</span></span>
+<span id="cb21-270"><a href="#cb21-270" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-271"><a href="#cb21-271" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-272"><a href="#cb21-272" aria-hidden="true" tabindex="-1"></a>  g_object_class_install_property <span class="op">(</span>object_class<span class="op">,</span></span>
+<span id="cb21-273"><a href="#cb21-273" aria-hidden="true" tabindex="-1"></a>                                   PROP_XL<span class="op">,</span></span>
+<span id="cb21-274"><a href="#cb21-274" aria-hidden="true" tabindex="-1"></a>                                   g_param_spec_double <span class="op">(</span><span class="st">"xl"</span><span class="op">,</span></span>
+<span id="cb21-275"><a href="#cb21-275" aria-hidden="true" tabindex="-1"></a>                                                        NULL<span class="op">,</span></span>
+<span id="cb21-276"><a href="#cb21-276" aria-hidden="true" tabindex="-1"></a>                                                        <span class="st">"x lower bound"</span><span class="op">,</span></span>
+<span id="cb21-277"><a href="#cb21-277" aria-hidden="true" tabindex="-1"></a>                                                        <span class="op">-</span>G_MAXDOUBLE<span class="op">,</span> G_MAXDOUBLE<span class="op">,</span> <span class="fl">0.0</span><span class="op">,</span></span>
+<span id="cb21-278"><a href="#cb21-278" aria-hidden="true" tabindex="-1"></a>                                                        G_PARAM_READWRITE <span class="op">|</span> G_PARAM_CONSTRUCT <span class="op">|</span> G_PARAM_STATIC_NAME <span class="op">|</span> G_PARAM_STATIC_BLURB<span class="op">));</span></span>
+<span id="cb21-279"><a href="#cb21-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-280"><a href="#cb21-280" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-281"><a href="#cb21-281" aria-hidden="true" tabindex="-1"></a><span class="co">   * The property PROP_XU is allowed in range [-G_MAXDOUBLE, G_MAXDOUBLE]</span></span>
+<span id="cb21-282"><a href="#cb21-282" aria-hidden="true" tabindex="-1"></a><span class="co">   * and its default value is 1.0. This property can be set only during</span></span>
+<span id="cb21-283"><a href="#cb21-283" aria-hidden="true" tabindex="-1"></a><span class="co">   * the object construction.</span></span>
+<span id="cb21-284"><a href="#cb21-284" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-285"><a href="#cb21-285" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-286"><a href="#cb21-286" aria-hidden="true" tabindex="-1"></a>  g_object_class_install_property <span class="op">(</span>object_class<span class="op">,</span></span>
+<span id="cb21-287"><a href="#cb21-287" aria-hidden="true" tabindex="-1"></a>                                   PROP_XU<span class="op">,</span></span>
+<span id="cb21-288"><a href="#cb21-288" aria-hidden="true" tabindex="-1"></a>                                   g_param_spec_double <span class="op">(</span><span class="st">"xu"</span><span class="op">,</span></span>
+<span id="cb21-289"><a href="#cb21-289" aria-hidden="true" tabindex="-1"></a>                                                        NULL<span class="op">,</span></span>
+<span id="cb21-290"><a href="#cb21-290" aria-hidden="true" tabindex="-1"></a>                                                        <span class="st">"x upper bound"</span><span class="op">,</span></span>
+<span id="cb21-291"><a href="#cb21-291" aria-hidden="true" tabindex="-1"></a>                                                        <span class="op">-</span>G_MAXDOUBLE<span class="op">,</span> G_MAXDOUBLE<span class="op">,</span> <span class="fl">1.0</span><span class="op">,</span></span>
+<span id="cb21-292"><a href="#cb21-292" aria-hidden="true" tabindex="-1"></a>                                                        G_PARAM_READWRITE <span class="op">|</span> G_PARAM_CONSTRUCT <span class="op">|</span> G_PARAM_STATIC_NAME <span class="op">|</span> G_PARAM_STATIC_BLURB<span class="op">));</span></span>
+<span id="cb21-293"><a href="#cb21-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-294"><a href="#cb21-294" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-295"><a href="#cb21-295" aria-hidden="true" tabindex="-1"></a><span class="co">   * Check for errors in parameters initialization.</span></span>
+<span id="cb21-296"><a href="#cb21-296" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-297"><a href="#cb21-297" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-298"><a href="#cb21-298" aria-hidden="true" tabindex="-1"></a>  ncm_model_class_check_params_info <span class="op">(</span>model_class<span class="op">);</span></span>
+<span id="cb21-299"><a href="#cb21-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-300"><a href="#cb21-300" aria-hidden="true" tabindex="-1"></a>  curve_class <span class="op">=</span> <span class="op">&amp;</span>_nc_curve_f<span class="op">;</span></span>
+<span id="cb21-301"><a href="#cb21-301" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-302"><a href="#cb21-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-303"><a href="#cb21-303" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-304"><a href="#cb21-304" aria-hidden="true" tabindex="-1"></a><span class="co"> * Default implementation. It raises an error if the method is called</span></span>
+<span id="cb21-305"><a href="#cb21-305" aria-hidden="true" tabindex="-1"></a><span class="co"> * and the child didn't implement it.</span></span>
+<span id="cb21-306"><a href="#cb21-306" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-307"><a href="#cb21-307" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-308"><a href="#cb21-308" aria-hidden="true" tabindex="-1"></a><span class="dt">static</span> gdouble</span>
+<span id="cb21-309"><a href="#cb21-309" aria-hidden="true" tabindex="-1"></a>_nc_curve_f <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">,</span> <span class="dt">const</span> gdouble x<span class="op">)</span></span>
+<span id="cb21-310"><a href="#cb21-310" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-311"><a href="#cb21-311" aria-hidden="true" tabindex="-1"></a>  g_error <span class="op">(</span><span class="st">"nc_curve_f: model `</span><span class="sc">%s</span><span class="st">' does not implement this function."</span><span class="op">,</span></span>
+<span id="cb21-312"><a href="#cb21-312" aria-hidden="true" tabindex="-1"></a>           G_OBJECT_TYPE_NAME <span class="op">(</span>curve<span class="op">));</span></span>
+<span id="cb21-313"><a href="#cb21-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-314"><a href="#cb21-314" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fl">0.0</span><span class="op">;</span></span>
+<span id="cb21-315"><a href="#cb21-315" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-316"><a href="#cb21-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-317"><a href="#cb21-317" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-318"><a href="#cb21-318" aria-hidden="true" tabindex="-1"></a><span class="co"> * This creates a function to be used by the children to</span></span>
+<span id="cb21-319"><a href="#cb21-319" aria-hidden="true" tabindex="-1"></a><span class="co"> * implement this method.</span></span>
+<span id="cb21-320"><a href="#cb21-320" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-321"><a href="#cb21-321" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-322"><a href="#cb21-322" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb21-323"><a href="#cb21-323" aria-hidden="true" tabindex="-1"></a><span class="co"> * nc_curve_set_f_impl: (skip)</span></span>
+<span id="cb21-324"><a href="#cb21-324" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@curve_class:</span><span class="co"> a #NcCurveClass</span></span>
+<span id="cb21-325"><a href="#cb21-325" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@f:</span><span class="co"> function $f(x)$</span></span>
+<span id="cb21-326"><a href="#cb21-326" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-327"><a href="#cb21-327" aria-hidden="true" tabindex="-1"></a><span class="co"> * Sets the implementation of the curve $f(x)$.</span></span>
+<span id="cb21-328"><a href="#cb21-328" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-329"><a href="#cb21-329" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-330"><a href="#cb21-330" aria-hidden="true" tabindex="-1"></a>NCM_MODEL_SET_IMPL_FUNC <span class="op">(</span>NC_CURVE<span class="op">,</span> NcCurve<span class="op">,</span> nc_curve<span class="op">,</span> NcCurveF<span class="op">,</span> f<span class="op">)</span></span>
+<span id="cb21-331"><a href="#cb21-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-332"><a href="#cb21-332" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-333"><a href="#cb21-333" aria-hidden="true" tabindex="-1"></a><span class="co"> * This defines a generic constructor for the subclasses</span></span>
+<span id="cb21-334"><a href="#cb21-334" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-335"><a href="#cb21-335" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-336"><a href="#cb21-336" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb21-337"><a href="#cb21-337" aria-hidden="true" tabindex="-1"></a><span class="co"> * nc_curve_new_from_name:</span></span>
+<span id="cb21-338"><a href="#cb21-338" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@curve_name:</span><span class="co"> #NcCurve child type name</span></span>
+<span id="cb21-339"><a href="#cb21-339" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-340"><a href="#cb21-340" aria-hidden="true" tabindex="-1"></a><span class="co"> * Creates a new #NcCurve of the type described by </span><span class="an">@curve_name.</span></span>
+<span id="cb21-341"><a href="#cb21-341" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-342"><a href="#cb21-342" aria-hidden="true" tabindex="-1"></a><span class="co"> * Returns: (transfer full): a new #NcCurve</span></span>
+<span id="cb21-343"><a href="#cb21-343" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-344"><a href="#cb21-344" aria-hidden="true" tabindex="-1"></a>NcCurve <span class="op">*</span></span>
+<span id="cb21-345"><a href="#cb21-345" aria-hidden="true" tabindex="-1"></a>nc_curve_new_from_name <span class="op">(</span><span class="dt">const</span> gchar <span class="op">*</span>curve_name<span class="op">)</span></span>
+<span id="cb21-346"><a href="#cb21-346" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-347"><a href="#cb21-347" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-348"><a href="#cb21-348" aria-hidden="true" tabindex="-1"></a><span class="co">   * We use the serialization object to transform a string into an instance.</span></span>
+<span id="cb21-349"><a href="#cb21-349" aria-hidden="true" tabindex="-1"></a><span class="co">   * This also allows us to chose the parameters through the string.</span></span>
+<span id="cb21-350"><a href="#cb21-350" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-351"><a href="#cb21-351" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-352"><a href="#cb21-352" aria-hidden="true" tabindex="-1"></a>  GObject <span class="op">*</span>obj <span class="op">=</span> ncm_serialize_global_from_string <span class="op">(</span>curve_name<span class="op">);</span></span>
+<span id="cb21-353"><a href="#cb21-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-354"><a href="#cb21-354" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-355"><a href="#cb21-355" aria-hidden="true" tabindex="-1"></a><span class="co">   * This gets the GType of this new instance.</span></span>
+<span id="cb21-356"><a href="#cb21-356" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-357"><a href="#cb21-357" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-358"><a href="#cb21-358" aria-hidden="true" tabindex="-1"></a>  GType curve_type <span class="op">=</span> G_OBJECT_TYPE <span class="op">(</span>obj<span class="op">);</span></span>
+<span id="cb21-359"><a href="#cb21-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-360"><a href="#cb21-360" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-361"><a href="#cb21-361" aria-hidden="true" tabindex="-1"></a><span class="co">   * Check if the string represent an actual child of #NcCurve.</span></span>
+<span id="cb21-362"><a href="#cb21-362" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-363"><a href="#cb21-363" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-364"><a href="#cb21-364" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(!</span>g_type_is_a <span class="op">(</span>curve_type<span class="op">,</span> NC_TYPE_CLUSTER_MASS<span class="op">))</span></span>
+<span id="cb21-365"><a href="#cb21-365" aria-hidden="true" tabindex="-1"></a>    g_error <span class="op">(</span><span class="st">"nc_curve_new_from_name: NcCurve `</span><span class="sc">%s</span><span class="st">' do not descend from `</span><span class="sc">%s</span><span class="st">'."</span><span class="op">,</span></span>
+<span id="cb21-366"><a href="#cb21-366" aria-hidden="true" tabindex="-1"></a>             curve_name<span class="op">,</span> g_type_name <span class="op">(</span>NC_TYPE_CURVE<span class="op">));</span></span>
+<span id="cb21-367"><a href="#cb21-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-368"><a href="#cb21-368" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-369"><a href="#cb21-369" aria-hidden="true" tabindex="-1"></a><span class="co">   * Returns the correct cast.</span></span>
+<span id="cb21-370"><a href="#cb21-370" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-371"><a href="#cb21-371" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-372"><a href="#cb21-372" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> NC_CURVE <span class="op">(</span>obj<span class="op">);</span></span>
+<span id="cb21-373"><a href="#cb21-373" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-374"><a href="#cb21-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-375"><a href="#cb21-375" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-376"><a href="#cb21-376" aria-hidden="true" tabindex="-1"></a><span class="co"> * The reference increasing function</span></span>
+<span id="cb21-377"><a href="#cb21-377" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-378"><a href="#cb21-378" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-379"><a href="#cb21-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-380"><a href="#cb21-380" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb21-381"><a href="#cb21-381" aria-hidden="true" tabindex="-1"></a><span class="co"> * nc_curve_ref:</span></span>
+<span id="cb21-382"><a href="#cb21-382" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@curve:</span><span class="co"> a #NcCurve</span></span>
+<span id="cb21-383"><a href="#cb21-383" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-384"><a href="#cb21-384" aria-hidden="true" tabindex="-1"></a><span class="co"> * Increase reference count by one.</span></span>
+<span id="cb21-385"><a href="#cb21-385" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-386"><a href="#cb21-386" aria-hidden="true" tabindex="-1"></a><span class="co"> * Returns: (transfer full): </span><span class="an">@curve.</span></span>
+<span id="cb21-387"><a href="#cb21-387" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-388"><a href="#cb21-388" aria-hidden="true" tabindex="-1"></a>NcCurve <span class="op">*</span></span>
+<span id="cb21-389"><a href="#cb21-389" aria-hidden="true" tabindex="-1"></a>nc_curve_ref <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">)</span></span>
+<span id="cb21-390"><a href="#cb21-390" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-391"><a href="#cb21-391" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> g_object_ref <span class="op">(</span>curve<span class="op">);</span></span>
+<span id="cb21-392"><a href="#cb21-392" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-393"><a href="#cb21-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-394"><a href="#cb21-394" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-395"><a href="#cb21-395" aria-hidden="true" tabindex="-1"></a><span class="co"> * The reference decreasing function</span></span>
+<span id="cb21-396"><a href="#cb21-396" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-397"><a href="#cb21-397" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-398"><a href="#cb21-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-399"><a href="#cb21-399" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb21-400"><a href="#cb21-400" aria-hidden="true" tabindex="-1"></a><span class="co"> * nc_curve_free:</span></span>
+<span id="cb21-401"><a href="#cb21-401" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@curve:</span><span class="co"> a #NcCurve</span></span>
+<span id="cb21-402"><a href="#cb21-402" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-403"><a href="#cb21-403" aria-hidden="true" tabindex="-1"></a><span class="co"> * Decrease reference count by one.</span></span>
+<span id="cb21-404"><a href="#cb21-404" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-405"><a href="#cb21-405" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-406"><a href="#cb21-406" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span></span>
+<span id="cb21-407"><a href="#cb21-407" aria-hidden="true" tabindex="-1"></a>nc_curve_free <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">)</span></span>
+<span id="cb21-408"><a href="#cb21-408" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-409"><a href="#cb21-409" aria-hidden="true" tabindex="-1"></a>  g_object_unref <span class="op">(</span>curve<span class="op">);</span></span>
+<span id="cb21-410"><a href="#cb21-410" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-411"><a href="#cb21-411" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-412"><a href="#cb21-412" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-413"><a href="#cb21-413" aria-hidden="true" tabindex="-1"></a><span class="co"> * This function decreases the reference count</span></span>
+<span id="cb21-414"><a href="#cb21-414" aria-hidden="true" tabindex="-1"></a><span class="co"> * by one only if *curve != NULL, and in that case</span></span>
+<span id="cb21-415"><a href="#cb21-415" aria-hidden="true" tabindex="-1"></a><span class="co"> * it sets *curve to NULL after decreasing the</span></span>
+<span id="cb21-416"><a href="#cb21-416" aria-hidden="true" tabindex="-1"></a><span class="co"> * reference count. It is useful to use these</span></span>
+<span id="cb21-417"><a href="#cb21-417" aria-hidden="true" tabindex="-1"></a><span class="co"> * functions in the dispose hooks.</span></span>
+<span id="cb21-418"><a href="#cb21-418" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-419"><a href="#cb21-419" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-420"><a href="#cb21-420" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-421"><a href="#cb21-421" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-422"><a href="#cb21-422" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb21-423"><a href="#cb21-423" aria-hidden="true" tabindex="-1"></a><span class="co"> * nc_curve_clear:</span></span>
+<span id="cb21-424"><a href="#cb21-424" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@curve:</span><span class="co"> a #NcCurve</span></span>
+<span id="cb21-425"><a href="#cb21-425" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-426"><a href="#cb21-426" aria-hidden="true" tabindex="-1"></a><span class="co"> * Decrease reference count by one if *</span><span class="an">@curve</span><span class="co"> != NULL</span></span>
+<span id="cb21-427"><a href="#cb21-427" aria-hidden="true" tabindex="-1"></a><span class="co"> * and sets </span><span class="an">@curve</span><span class="co"> to NULL.</span></span>
+<span id="cb21-428"><a href="#cb21-428" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-429"><a href="#cb21-429" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-430"><a href="#cb21-430" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span></span>
+<span id="cb21-431"><a href="#cb21-431" aria-hidden="true" tabindex="-1"></a>nc_curve_clear <span class="op">(</span>NcCurve <span class="op">**</span>curve<span class="op">)</span></span>
+<span id="cb21-432"><a href="#cb21-432" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-433"><a href="#cb21-433" aria-hidden="true" tabindex="-1"></a>  g_clear_object <span class="op">(</span>curve<span class="op">);</span></span>
+<span id="cb21-434"><a href="#cb21-434" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-435"><a href="#cb21-435" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-436"><a href="#cb21-436" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-437"><a href="#cb21-437" aria-hidden="true" tabindex="-1"></a><span class="co"> * Below we implement the accessor functions.</span></span>
+<span id="cb21-438"><a href="#cb21-438" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-439"><a href="#cb21-439" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-440"><a href="#cb21-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-441"><a href="#cb21-441" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb21-442"><a href="#cb21-442" aria-hidden="true" tabindex="-1"></a><span class="co"> * nc_curve_set_xl:</span></span>
+<span id="cb21-443"><a href="#cb21-443" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@curve:</span><span class="co"> a #NcCurve</span></span>
+<span id="cb21-444"><a href="#cb21-444" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@xl:</span><span class="co"> new $x$ lower bound</span></span>
+<span id="cb21-445"><a href="#cb21-445" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-446"><a href="#cb21-446" aria-hidden="true" tabindex="-1"></a><span class="co"> * Sets $x$ lower bound to </span><span class="an">@xl.</span></span>
+<span id="cb21-447"><a href="#cb21-447" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-448"><a href="#cb21-448" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-449"><a href="#cb21-449" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span></span>
+<span id="cb21-450"><a href="#cb21-450" aria-hidden="true" tabindex="-1"></a>nc_curve_set_xl <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">,</span> <span class="dt">const</span> gdouble xl<span class="op">)</span></span>
+<span id="cb21-451"><a href="#cb21-451" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-452"><a href="#cb21-452" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-453"><a href="#cb21-453" aria-hidden="true" tabindex="-1"></a><span class="co">   * Checking if the object is still in the unintitalized state,</span></span>
+<span id="cb21-454"><a href="#cb21-454" aria-hidden="true" tabindex="-1"></a><span class="co">   * if that's the case just assign the value to the private</span></span>
+<span id="cb21-455"><a href="#cb21-455" aria-hidden="true" tabindex="-1"></a><span class="co">   * struct.</span></span>
+<span id="cb21-456"><a href="#cb21-456" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-457"><a href="#cb21-457" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-458"><a href="#cb21-458" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">((</span>curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xl <span class="op">==</span> <span class="fl">0.0</span><span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="op">(</span>curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xl <span class="op">==</span> curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xu<span class="op">))</span></span>
+<span id="cb21-459"><a href="#cb21-459" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb21-460"><a href="#cb21-460" aria-hidden="true" tabindex="-1"></a>    curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xl <span class="op">=</span> xl<span class="op">;</span></span>
+<span id="cb21-461"><a href="#cb21-461" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb21-462"><a href="#cb21-462" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span></span>
+<span id="cb21-463"><a href="#cb21-463" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb21-464"><a href="#cb21-464" aria-hidden="true" tabindex="-1"></a>    <span class="co">/*</span></span>
+<span id="cb21-465"><a href="#cb21-465" aria-hidden="true" tabindex="-1"></a><span class="co">     * Otherwise assert that xl will be less than xu.</span></span>
+<span id="cb21-466"><a href="#cb21-466" aria-hidden="true" tabindex="-1"></a><span class="co">     *</span></span>
+<span id="cb21-467"><a href="#cb21-467" aria-hidden="true" tabindex="-1"></a><span class="co">     */</span></span>
+<span id="cb21-468"><a href="#cb21-468" aria-hidden="true" tabindex="-1"></a>    g_assert_cmpfloat <span class="op">(</span>xl<span class="op">,</span> <span class="op">&lt;,</span> curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xu<span class="op">);</span></span>
+<span id="cb21-469"><a href="#cb21-469" aria-hidden="true" tabindex="-1"></a>    curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xl <span class="op">=</span> xl<span class="op">;</span></span>
+<span id="cb21-470"><a href="#cb21-470" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb21-471"><a href="#cb21-471" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-472"><a href="#cb21-472" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-473"><a href="#cb21-473" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb21-474"><a href="#cb21-474" aria-hidden="true" tabindex="-1"></a><span class="co"> * nc_curve_set_xu:</span></span>
+<span id="cb21-475"><a href="#cb21-475" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@curve:</span><span class="co"> a #NcCurve</span></span>
+<span id="cb21-476"><a href="#cb21-476" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@xu:</span><span class="co"> new $x$ upper bound</span></span>
+<span id="cb21-477"><a href="#cb21-477" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-478"><a href="#cb21-478" aria-hidden="true" tabindex="-1"></a><span class="co"> * Sets $x$ upper bound to </span><span class="an">@xu.</span></span>
+<span id="cb21-479"><a href="#cb21-479" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-480"><a href="#cb21-480" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-481"><a href="#cb21-481" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span></span>
+<span id="cb21-482"><a href="#cb21-482" aria-hidden="true" tabindex="-1"></a>nc_curve_set_xu <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">,</span> <span class="dt">const</span> gdouble xu<span class="op">)</span></span>
+<span id="cb21-483"><a href="#cb21-483" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-484"><a href="#cb21-484" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-485"><a href="#cb21-485" aria-hidden="true" tabindex="-1"></a><span class="co">   * Checking if the object is still in the unintitalized state,</span></span>
+<span id="cb21-486"><a href="#cb21-486" aria-hidden="true" tabindex="-1"></a><span class="co">   * if that's the case just assign the value to the private</span></span>
+<span id="cb21-487"><a href="#cb21-487" aria-hidden="true" tabindex="-1"></a><span class="co">   * struct.</span></span>
+<span id="cb21-488"><a href="#cb21-488" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-489"><a href="#cb21-489" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-490"><a href="#cb21-490" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">((</span>curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xl <span class="op">==</span> <span class="fl">0.0</span><span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="op">(</span>curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xl <span class="op">==</span> curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xu<span class="op">))</span></span>
+<span id="cb21-491"><a href="#cb21-491" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb21-492"><a href="#cb21-492" aria-hidden="true" tabindex="-1"></a>    curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xu <span class="op">=</span> xu<span class="op">;</span></span>
+<span id="cb21-493"><a href="#cb21-493" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb21-494"><a href="#cb21-494" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span></span>
+<span id="cb21-495"><a href="#cb21-495" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb21-496"><a href="#cb21-496" aria-hidden="true" tabindex="-1"></a>    <span class="co">/*</span></span>
+<span id="cb21-497"><a href="#cb21-497" aria-hidden="true" tabindex="-1"></a><span class="co">     * Otherwise assert that xl will be less than xu.</span></span>
+<span id="cb21-498"><a href="#cb21-498" aria-hidden="true" tabindex="-1"></a><span class="co">     *</span></span>
+<span id="cb21-499"><a href="#cb21-499" aria-hidden="true" tabindex="-1"></a><span class="co">     */</span></span>
+<span id="cb21-500"><a href="#cb21-500" aria-hidden="true" tabindex="-1"></a>    g_assert_cmpfloat <span class="op">(</span>curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xl<span class="op">,</span> <span class="op">&lt;,</span> xu<span class="op">);</span></span>
+<span id="cb21-501"><a href="#cb21-501" aria-hidden="true" tabindex="-1"></a>    curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xu <span class="op">=</span> xu<span class="op">;</span></span>
+<span id="cb21-502"><a href="#cb21-502" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb21-503"><a href="#cb21-503" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-504"><a href="#cb21-504" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-505"><a href="#cb21-505" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb21-506"><a href="#cb21-506" aria-hidden="true" tabindex="-1"></a><span class="co"> * nc_curve_get_xl:</span></span>
+<span id="cb21-507"><a href="#cb21-507" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@curve:</span><span class="co"> a #NcCurve</span></span>
+<span id="cb21-508"><a href="#cb21-508" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-509"><a href="#cb21-509" aria-hidden="true" tabindex="-1"></a><span class="co"> * Sets $x$ lower bound.</span></span>
+<span id="cb21-510"><a href="#cb21-510" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-511"><a href="#cb21-511" aria-hidden="true" tabindex="-1"></a><span class="co"> * Returns: $x_l$.</span></span>
+<span id="cb21-512"><a href="#cb21-512" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-513"><a href="#cb21-513" aria-hidden="true" tabindex="-1"></a>gdouble</span>
+<span id="cb21-514"><a href="#cb21-514" aria-hidden="true" tabindex="-1"></a>nc_curve_get_xl <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">)</span></span>
+<span id="cb21-515"><a href="#cb21-515" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-516"><a href="#cb21-516" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xl<span class="op">;</span></span>
+<span id="cb21-517"><a href="#cb21-517" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-518"><a href="#cb21-518" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-519"><a href="#cb21-519" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb21-520"><a href="#cb21-520" aria-hidden="true" tabindex="-1"></a><span class="co"> * nc_curve_get_xu:</span></span>
+<span id="cb21-521"><a href="#cb21-521" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@curve:</span><span class="co"> a #NcCurve</span></span>
+<span id="cb21-522"><a href="#cb21-522" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-523"><a href="#cb21-523" aria-hidden="true" tabindex="-1"></a><span class="co"> * Sets $x$ lower bound.</span></span>
+<span id="cb21-524"><a href="#cb21-524" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-525"><a href="#cb21-525" aria-hidden="true" tabindex="-1"></a><span class="co"> * Returns: $x_l$.</span></span>
+<span id="cb21-526"><a href="#cb21-526" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-527"><a href="#cb21-527" aria-hidden="true" tabindex="-1"></a>gdouble</span>
+<span id="cb21-528"><a href="#cb21-528" aria-hidden="true" tabindex="-1"></a>nc_curve_get_xu <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">)</span></span>
+<span id="cb21-529"><a href="#cb21-529" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-530"><a href="#cb21-530" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> curve<span class="op">-&gt;</span>priv<span class="op">-&gt;</span>xu<span class="op">;</span></span>
+<span id="cb21-531"><a href="#cb21-531" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-532"><a href="#cb21-532" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-533"><a href="#cb21-533" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb21-534"><a href="#cb21-534" aria-hidden="true" tabindex="-1"></a><span class="co"> * Finally, we implement the generic caller for the</span></span>
+<span id="cb21-535"><a href="#cb21-535" aria-hidden="true" tabindex="-1"></a><span class="co"> * virtual function `f'.</span></span>
+<span id="cb21-536"><a href="#cb21-536" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-537"><a href="#cb21-537" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-538"><a href="#cb21-538" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-539"><a href="#cb21-539" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb21-540"><a href="#cb21-540" aria-hidden="true" tabindex="-1"></a><span class="co"> * nc_curve_f: (virtual f)</span></span>
+<span id="cb21-541"><a href="#cb21-541" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@curve:</span><span class="co"> a #NcCurve</span></span>
+<span id="cb21-542"><a href="#cb21-542" aria-hidden="true" tabindex="-1"></a><span class="co"> * </span><span class="an">@x:</span><span class="co"> $x$</span></span>
+<span id="cb21-543"><a href="#cb21-543" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-544"><a href="#cb21-544" aria-hidden="true" tabindex="-1"></a><span class="co"> * Computes $f(x)$.</span></span>
+<span id="cb21-545"><a href="#cb21-545" aria-hidden="true" tabindex="-1"></a><span class="co"> *</span></span>
+<span id="cb21-546"><a href="#cb21-546" aria-hidden="true" tabindex="-1"></a><span class="co"> * Returns: the value of $f(x)$.</span></span>
+<span id="cb21-547"><a href="#cb21-547" aria-hidden="true" tabindex="-1"></a><span class="co"> */</span></span>
+<span id="cb21-548"><a href="#cb21-548" aria-hidden="true" tabindex="-1"></a>gdouble</span>
+<span id="cb21-549"><a href="#cb21-549" aria-hidden="true" tabindex="-1"></a>nc_curve_f <span class="op">(</span>NcCurve <span class="op">*</span>curve<span class="op">,</span> <span class="dt">const</span> gdouble x<span class="op">)</span></span>
+<span id="cb21-550"><a href="#cb21-550" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-551"><a href="#cb21-551" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*</span></span>
+<span id="cb21-552"><a href="#cb21-552" aria-hidden="true" tabindex="-1"></a><span class="co">   * This function call by pointer guarantees that</span></span>
+<span id="cb21-553"><a href="#cb21-553" aria-hidden="true" tabindex="-1"></a><span class="co">   * the correct virtual function will be called.</span></span>
+<span id="cb21-554"><a href="#cb21-554" aria-hidden="true" tabindex="-1"></a><span class="co">   *</span></span>
+<span id="cb21-555"><a href="#cb21-555" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb21-556"><a href="#cb21-556" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> NC_CURVE_GET_CLASS <span class="op">(</span>curve<span class="op">)-&gt;</span>f <span class="op">(</span>curve<span class="op">,</span> x<span class="op">);</span></span>
+<span id="cb21-557"><a href="#cb21-557" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-558"><a href="#cb21-558" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

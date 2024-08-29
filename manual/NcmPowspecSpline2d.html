@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>NcmPowspecSpline2d: NumCosmo Reference Manual</title>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch02s06.html" rel="up" title="Power spectrum functions"/>
+<link href="NcmPowspecSphereProj.html" rel="prev" title="NcmPowspecSphereProj"/>
+<link href="ch02s07.html" rel="next" title="Harmonic Oscillator"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmPowspecSpline2d.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmPowspecSpline2d.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcmPowspecSpline2d.properties">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch02s06.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcmPowspecSphereProj.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="ch02s07.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcmPowspecSpline2d"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcmPowspecSpline2d.top_of_page"></a>NcmPowspecSpline2d</span></h2>
+<p>NcmPowspecSpline2d — Power spectrum implementation using a 2D spline</p>
+</td>
+<td align="right" class="gallery_image" valign="top"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcmPowspecSpline2d.stability-level"></a><h2>Stability Level</h2>
+<acronym title="The intention of a Stable interface is to enable arbitrary third parties to
+develop applications to these interfaces, release them, and have confidence that
+they will run on all minor releases of the product (after the one in which the
+interface was introduced, and within the same major release). Even at a major
+release, incompatible changes are expected to be rare, and to have strong
+justifications.
+"><span class="acronym">Stable</span></acronym>, unless otherwise indicated
+</div>
+<div class="refsect1">
+<a name="NcmPowspecSpline2d.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="returnvalue">NcmPowspecSpline2d</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecSpline2d.html#ncm-powspec-spline2d-new" title="ncm_powspec_spline2d_new ()">ncm_powspec_spline2d_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="returnvalue">NcmPowspecSpline2d</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecSpline2d.html#ncm-powspec-spline2d-ref" title="ncm_powspec_spline2d_ref ()">ncm_powspec_spline2d_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecSpline2d.html#ncm-powspec-spline2d-free" title="ncm_powspec_spline2d_free ()">ncm_powspec_spline2d_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecSpline2d.html#ncm-powspec-spline2d-clear" title="ncm_powspec_spline2d_clear ()">ncm_powspec_spline2d_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecSpline2d.html#ncm-powspec-spline2d-set-spline2d" title="ncm_powspec_spline2d_set_spline2d ()">ncm_powspec_spline2d_set_spline2d</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="returnvalue">NcmSpline2d</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmPowspecSpline2d.html#ncm-powspec-spline2d-peek-spline2d" title="ncm_powspec_spline2d_peek_spline2d ()">ncm_powspec_spline2d_peek_spline2d</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecSpline2d.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0" class="informaltable">
+<colgroup>
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="property_type">
+<a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="type">NcmSpline2d</span></a> *</td>
+<td class="property_name"><a class="link" href="NcmPowspecSpline2d.html#NcmPowspecSpline2d--spline2d" title="The “spline2d” property">spline2d</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecSpline2d.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmPowspecSpline2d.html#NCM-TYPE-POWSPEC-SPLINE2D:CAPS" title="NCM_TYPE_POWSPEC_SPLINE2D">NCM_TYPE_POWSPEC_SPLINE2D</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcmPowspecSpline2d.html#NcmPowspecSpline2d-struct" title="NcmPowspecSpline2d">NcmPowspecSpline2d</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecSpline2d.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> <a class="link" href="NcmPowspec.html" title="NcmPowspec">NcmPowspec</a>
+        <span class="lineart">╰──</span> NcmPowspecSpline2d
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecSpline2d.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;numcosmo/math/ncm_powspec_spline2d.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecSpline2d.description"></a><h2>Description</h2>
+<p><a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="type">NcmPowspecSpline2d</span></a> is a power spectrum implementation using a 2D spline.</p>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecSpline2d.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="ncm-powspec-spline2d-new"></a><h3>ncm_powspec_spline2d_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="returnvalue">NcmPowspecSpline2d</span></a> *
+ncm_powspec_spline2d_new (<em class="parameter"><code><a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="type">NcmSpline2d</span></a> *spline2d</code></em>);</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-powspec-spline2d-ref"></a><h3>ncm_powspec_spline2d_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="returnvalue">NcmPowspecSpline2d</span></a> *
+ncm_powspec_spline2d_ref (<em class="parameter"><code><a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="type">NcmPowspecSpline2d</span></a> *ps_s2d</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>ps_s2d</code></em>
+ by one atomically.</p>
+<div class="refsect3">
+<a name="ncm-powspec-spline2d-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ps_s2d</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="type">NcmPowspecSpline2d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-powspec-spline2d-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>ps_s2d</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-powspec-spline2d-free"></a><h3>ncm_powspec_spline2d_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_powspec_spline2d_free (<em class="parameter"><code><a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="type">NcmPowspecSpline2d</span></a> *ps_s2d</code></em>);</pre>
+<p>Atomically decrements the reference count of <em class="parameter"><code>ps_s2d</code></em>
+ by one.
+If the reference count drops to 0,
+all memory allocated by <em class="parameter"><code>ps_s2d</code></em>
+ is released.</p>
+<div class="refsect3">
+<a name="ncm-powspec-spline2d-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ps_s2d</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="type">NcmPowspecSpline2d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-powspec-spline2d-clear"></a><h3>ncm_powspec_spline2d_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_powspec_spline2d_clear (<em class="parameter"><code><a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="type">NcmPowspecSpline2d</span></a> **ps_s2d</code></em>);</pre>
+<p>If <em class="parameter"><code>ps_s2d</code></em>
+ is different from NULL,
+atomically decrements the reference count of <em class="parameter"><code>powspec</code></em>
+ by one.
+If the reference count drops to 0,
+all memory allocated by <em class="parameter"><code>powspec</code></em>
+ is released and <em class="parameter"><code>powspec</code></em>
+ is set to NULL.</p>
+<div class="refsect3">
+<a name="ncm-powspec-spline2d-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ps_s2d</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="type">NcmPowspecSpline2d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-powspec-spline2d-set-spline2d"></a><h3>ncm_powspec_spline2d_set_spline2d ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_powspec_spline2d_set_spline2d (<em class="parameter"><code><a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="type">NcmPowspecSpline2d</span></a> *ps_s2d</code></em>,
+                                   <em class="parameter"><code><a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="type">NcmSpline2d</span></a> *spline2d</code></em>);</pre>
+<p>Sets the <a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="type">NcmSpline2d</span></a> to <em class="parameter"><code>spline2d</code></em>
+.</p>
+<div class="refsect3">
+<a name="ncm-powspec-spline2d-set-spline2d.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ps_s2d</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="type">NcmPowspecSpline2d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>spline2d</p></td>
+<td class="parameter_description"><p>a NcmSpline2d</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-powspec-spline2d-peek-spline2d"></a><h3>ncm_powspec_spline2d_peek_spline2d ()</h3>
+<pre class="programlisting"><a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="returnvalue">NcmSpline2d</span></a> *
+ncm_powspec_spline2d_peek_spline2d (<em class="parameter"><code><a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="type">NcmPowspecSpline2d</span></a> *ps_s2d</code></em>);</pre>
+<p>Peeks the current <a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="type">NcmSpline2d</span></a>.</p>
+<div class="refsect3">
+<a name="ncm-powspec-spline2d-peek-spline2d.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ps_s2d</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="type">NcmPowspecSpline2d</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-powspec-spline2d-peek-spline2d.returns"></a><h4>Returns</h4>
+<p>the current <a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="type">NcmSpline2d</span></a>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecSpline2d.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NCM-TYPE-POWSPEC-SPLINE2D:CAPS"></a><h3>NCM_TYPE_POWSPEC_SPLINE2D</h3>
+<pre class="programlisting">#define NCM_TYPE_POWSPEC_SPLINE2D (ncm_powspec_spline2d_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcmPowspecSpline2d-struct"></a><h3>NcmPowspecSpline2d</h3>
+<pre class="programlisting">typedef struct _NcmPowspecSpline2d NcmPowspecSpline2d;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcmPowspecSpline2d.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcmPowspecSpline2d--spline2d"></a><h3>The <code class="literal">“spline2d”</code> property</h3>
+<pre class="programlisting">  “spline2d”                 <a class="link" href="NcmSpline2d.html" title="NcmSpline2d"><span class="type">NcmSpline2d</span></a> *</pre>
+<p>Spline2d representing the values of the power-spectrum.</p>
+<p>Owner: NcmPowspecSpline2d</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr/>Generated by GTK-Doc V1.34.0</div>
+</body>
+</html>
