@@ -5,6 +5,9 @@ project:
     - about.qmd
     - install.qmd
     - manual.qmd
+    - gobject.qmd
+    - curve_tutorial.qmd
+    - example_snia.qmd
 
 website:
   title: "The Numerical Cosmology Library"
@@ -26,11 +29,22 @@ website:
   sidebar:
       style: "docked"
       logo: numcosmo_logo.png
+      collapse-level: 2
       contents:
-        - section: "Basics"
+        - section: "Programming Tutorials"
           contents:
-            - href: about.qmd
-              text: "Introduction"
+            - section: "C Tutorials"
+              contents:                
+              - href: gobject.qmd
+                text: "GObject Tutorial"
+              - href: curve_tutorial.qmd
+                text: "Model Fit Tutorial"
+        - section: "Examples"
+          contents:
+            - section: "Data Analysis"
+              contents:
+              - href: example_snia.qmd
+                text: "SN Ia Fitting"
 
 resources:
   - manual/**
