@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
   push:
-    branches: main
+    branches: master
 
 name: NumCosmo Quarto Publish
 
@@ -34,9 +34,11 @@ jobs:
           miniforge-variant: Mambaforge
           show-channel-urls: true
           use-mamba: true
-      - name: Update environment
+      - name: Create environment
         run: |
           mamba create -v -q -n numcosmo numcosmo jupyter
+      - name: Activate environment
+        run: conda activate numcosmo
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
