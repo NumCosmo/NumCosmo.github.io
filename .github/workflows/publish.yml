@@ -13,7 +13,7 @@ jobs:
         python-version: ["3.11"]
     defaults:
       run:
-        shell: bash -el {0}
+        shell: bash -l {0}
     permissions:
       contents: write
     steps:
@@ -34,7 +34,9 @@ jobs:
           show-channel-urls: true
           use-mamba: true
       - name: Create environment
-        run: mamba create -v -q -n numcosmo numcosmo jupyter nbformat
+        run: |
+          mamba create -v -q -n numcosmo numcosmo jupyter nbformat
+          mamba info
       - name: Activate Conda Environment
         run: conda activate numcosmo
       - name: Render and Publish
