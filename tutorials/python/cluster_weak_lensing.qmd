@@ -1,0 +1,432 @@
+---
+title: "Using NumCosmo Cluster Weak Lensing Tools"
+format: html
+---
+
+{{< include /_functions.qmd >}}
+
+## Purpose {#sec-purpose}
+
+This document serves as a guide for utilizing NumCosmo's cluster weak lensing tools to analyze the weak lensing signal produced by galaxy clusters.
+Weak lensing is a powerful technique for studying the mass distribution of galaxy clusters and constraining cosmological parameters.
+In this tutorial, we demonstrate how to generate mock weak lensing data for galaxy clusters and fit a model to the data using NumCosmo.
+
+## Defining Theoretical Models
+### Cosmological Model
+
+To begin, we define a cosmological model using NumCosmo's background cosmology models. 
+We also create a `Nc.Distance` object to compute the cosmological distances required for the weak lensing analysis.
+For this example, we consider a Lambda Cold Dark Matter ($\Lambda$CDM) cosmology with the following parameters:
+
+- $\Omega_{c0} = 0.25$: Cold dark matter density parameter at present
+- $\Omega_{b0} = 0.05$: Baryon density parameter at present
+- $\Omega_{k0} = 0$: Curvature density parameter at present
+- $H_0 = 70.0$: Hubble constant in km/s/Mpc
+
+```{python}
+import numpy as np
+import pandas as pd
+from plotnine import *
+
+from numcosmo_py import Nc, Ncm
+from numcosmo_py.plotting.tools import add_ellipse_from_ellipticity
+
+Ncm.cfg_init()
+
+Omega_b = 0.05
+Omega_c = 0.25
+Omega_k = 0.0
+H0 = 70.0
+
+# Create a cosmology object
+cosmo = Nc.HICosmoDEXcdm.new()
+cosmo.omega_x2omega_k()
+cosmo.param_set_by_name("Omegab", Omega_b)
+cosmo.param_set_by_name("Omegac", Omega_c)
+cosmo.param_set_by_name("Omegak", Omega_k)
+cosmo.param_set_by_name("H0", H0)
+cosmo.param_set_by_name("w", -1.0)
+
+dist = Nc.Distance.new(100.0)
+dist.prepare(cosmo)
+
+```
+
+### Cluster Profile Model
+
+Next, we define a model for the cluster density profile.
+For this example, we consider the NFW profile, which is a widely used model for the density profile of galaxy clusters.
+Since we taking into account the miscentering effect, we also need to define a model for the cluster position.
+We also create a `Nc.WLSurfaceMassDensity` object to compute the shear produced by the cluster.
+
+We define the mass overdensity $\Delta = 200$ and the redshift uncertainty $\sigma_z = 0.05$.
+The minimum and maximum radii for the weak lensing analysis are set to $0.3$ and $3.0$ Mpc, respectively.
+
+```{python}
+
+# Set parametners
+mass_delta = 200
+sigma_z = 5.0e-2
+min_r, max_r = 0.3, 3.0
+
+cluster_ra, cluster_dec = 12.34, -55.123
+cluster_ang_dist = 0.15
+cluster_ra0 = cluster_ra - cluster_ang_dist
+cluster_ra1 = cluster_ra + cluster_ang_dist
+cluster_dec0 = cluster_dec - cluster_ang_dist
+cluster_dec1 = cluster_dec + cluster_ang_dist
+
+cluster_z = 0.2
+cluster_c = 4.0
+cluster_M = 2.0e16
+
+density_profile = Nc.HaloDensityProfileNFW.new(
+    Nc.HaloDensityProfileMassDef.CRITICAL, mass_delta
+)
+surface_mass_density = Nc.WLSurfaceMassDensity.new(dist)
+halo_position = Nc.HaloPosition.new(dist)
+
+density_profile.param_set_by_name("cDelta", cluster_c)
+density_profile.param_set_by_name("log10MDelta", np.log10(cluster_M))
+
+halo_position.param_set_by_name("ra", cluster_ra)
+halo_position.param_set_by_name("dec", cluster_dec)
+halo_position.param_set_by_name("z", cluster_z)
+
+surface_mass_density.prepare(cosmo)
+halo_position.prepare(cosmo)
+
+```
+
+### Galaxy Distribution Model
+
+We also need to define a model for the galaxy distribution around the clusters.
+For this example, we consider a flat distribution in the sky position.
+For the redshift distribution, we use the LSST Science Requirements Document (SRD) true redshift distribution.
+And we assume a Gaussian distribution for the observed redshifts.
+We also define a Gaussian model for the galaxy shape distribution.
+The redshift range is set from $z = 0$ to $z = 5.0$.
+The angular position range is set from $-0.2$ to $0.2$ degrees in both right ascension and declination.
+
+```{python}
+p_dist = Nc.GalaxySDPositionFlat.new(
+    cluster_ra0, cluster_ra1, cluster_dec0, cluster_dec1
+)
+z_true = Nc.GalaxySDTrueRedshiftLSSTSRD.new(0.7, 0.9)
+z_dist = Nc.GalaxySDObsRedshiftGauss.new(z_true)
+s_dist = Nc.GalaxySDShapeGauss.new()
+
+s_dist.param_set_by_name("e-rms", 1.0e-18)
+s_dist.param_set_by_name("e-sigma", 1.0e-18)
+
+s_dist.set_models(cosmo, halo_position)
+```
+
+### Weak Lensing Model
+
+Finally, we define the likelihood model for the weak lensing analysis.
+
+```{python}
+# Create cluster object
+cluster = Nc.DataClusterWL.new(s_dist, z_dist, p_dist)
+cluster.set_cut(min_r, max_r)
+```
+
+### Model-Set
+
+We create a `Nc.MSet` object to encapsulate the models defined above.
+The `MSet` object serves as the main container for all models in a given analysis.
+We add the cosmological model, the cluster profile model, the galaxy distribution model, and the weak lensing model to the model set.
+
+```{python}
+mset = Ncm.MSet.new_array(
+    [
+        cosmo,
+        density_profile,
+        surface_mass_density,
+        halo_position,
+        s_dist,
+        z_true,
+        z_dist,
+    ]
+)
+
+mset.pretty_log()
+```
+
+## Generating Mock Data
+
+To generate mock weak lensing data, we use the `Nc.DataClusterWL` object created above.
+We set the number of galaxies to $10^5$ and generate the mock data.
+We also create a random number generator with a specific seed for reproducibility.
+We also specify the coordinate system for the observed galaxy positions.
+We use the `CELESTIAL` coordinate system, which corresponds to the right ascension and declination in degrees.
+
+
+```{python}
+rng = Ncm.RNG.seeded_new("mt19937", 1235)
+
+n_galaxies = 200
+
+cluster.gen_obs(
+    cosmo,
+    density_profile,
+    surface_mass_density,
+    halo_position,
+    n_galaxies,
+    rng,
+    Nc.GalaxyWLObsCoord.EUCLIDEAN,
+)
+```
+
+The mock data is now stored in the `cluster` object and can be used for further analysis.
+We can access the observed galaxy positions, redshifts, and shapes using the appropriate methods.
+
+```{python}
+obs = cluster.peek_obs()
+columns = obs.peek_columns()
+
+obs_dict = {}
+
+for col in columns:
+    obs_dict[col] = []
+
+    for i in range(int(obs.len())):
+        obs_dict[col].append(obs.get(col, i))
+
+obs_df = pd.DataFrame(obs_dict)
+obs_df
+```
+
+The `obs_df` DataFrame contains the observed galaxy positions, redshifts, and shapes. It can be used for further analysis and visualization.
+However, it includes all the galaxies, including those that are too close to the cluster center and should be excluded from the analysis.
+We can filter the galaxies based on their distance from the cluster center and create a new DataFrame with the filtered data.
+
+```{python}
+
+include_galaxies = [
+    halo_position.projected_radius_from_ra_dec(cosmo, gal_ra, gal_dec) > min_r
+    for gal_ra, gal_dec in zip(obs_df["ra"], obs_df["dec"])
+]
+
+obs_df = obs_df[include_galaxies]
+```
+
+We can plot the galaxy distribution around the cluster to visualize the mock data.
+In order to plot ellipses representing the galaxy shapes, we use that all the galaxies have the same area, so we can use the ellipticity to calculate the major and minor axes of the ellipse.
+```{python}
+# | label: fig-galaxy-distribution
+# | fig-cap: Galaxy distribution around the cluster. The blue ellipses represent the observed galaxy shapes, while the red ellipses represent the intrinsic galaxy shapes. The black cross indicates the true cluster position.
+# | fig-cap-location: margin
+# | fig-width: 100%
+# | code-fold: true
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.patches import Ellipse
+
+fig, ax = plt.subplots(figsize=(6, 6))
+
+add_ellipse_from_ellipticity(
+    ax,
+    obs_df["ra"],
+    obs_df["dec"],
+    obs_df["e1_int"],
+    obs_df["e2_int"],
+    ellipse_scale=0.005,
+    edgecolor="red",
+)
+
+add_ellipse_from_ellipticity(
+    ax,
+    obs_df["ra"],
+    obs_df["dec"],
+    obs_df["e1"],
+    obs_df["e2"],
+    ellipse_scale=0.005,
+    edgecolor="blue",
+)
+
+ax.scatter(
+    [halo_position.props.ra],
+    [halo_position.props.dec],
+    color="black",
+    marker="o",
+    s=100,
+)
+
+angle_border = 0.01
+ax.set_xlabel("RA")
+ax.set_ylabel("Dec")
+ax.set_xlim(cluster_ra0 - angle_border, cluster_ra1 + angle_border)
+ax.set_ylim(cluster_dec0 - angle_border, cluster_dec1 + angle_border)
+ax.set_aspect("equal")
+
+plt.show()
+
+```
+
+## Varying the Cluster Mass and Position
+
+We also define a function to generate the galaxy distribution given the halo position and mass.
+```{python}
+# | code-fold: true
+
+
+def gen_galaxies(halo_ra: float, halo_dec: float, halo_mass: float) -> pd.DataFrame:
+    halo_position.param_set_by_name("ra", halo_ra)
+    halo_position.param_set_by_name("dec", halo_dec)
+    density_profile.param_set_by_name("log10MDelta", np.log10(halo_mass))
+
+    surface_mass_density.prepare(cosmo)
+    halo_position.prepare(cosmo)
+
+    rng = Ncm.RNG.seeded_new("mt19937", 1235)
+    cluster.gen_obs(
+        cosmo,
+        density_profile,
+        surface_mass_density,
+        halo_position,
+        n_galaxies,
+        rng,
+        Nc.GalaxyWLObsCoord.EUCLIDEAN,
+    )
+
+    obs = cluster.peek_obs()
+    columns = obs.peek_columns()
+
+    obs_dict = {}
+
+    for col in columns:
+        obs_dict[col] = []
+
+        for i in range(int(obs.len())):
+            obs_dict[col].append(obs.get(col, i))
+
+    obs_df = pd.DataFrame(obs_dict)
+
+    include_galaxies = [
+        halo_position.projected_radius_from_ra_dec(cosmo, gal_ra, gal_dec) > min_r
+        for gal_ra, gal_dec in zip(obs_df["ra"], obs_df["dec"])
+    ]
+
+    return obs_df[include_galaxies]
+```
+
+### Varying Halo Position
+
+We can now generate mock data for different halo positions and visualize the galaxy distribution around the halo.
+We plot the same distribution for nine different halo positions.
+The central panel shows the true original halo position, while the other panels show same cluster shifted in right ascension and declination
+by a constant factor of $0.05$ degrees respectively.
+
+```{python}
+# | label: fig-cluster-mass-position
+# | fig-cap: Galaxy distribution around the cluster for different cluster positions. The blue ellipses represent the observed galaxy shapes. The black cross indicates the true cluster position.
+# | fig-cap-location: margin
+# | fig-width: 100%
+# | code-fold: true
+
+ra_shifts = [-0.05, 0.0, 0.05]
+dec_shifts = [0.05, 0.0, -0.05]
+fig, axes = plt.subplots(
+    3,
+    3,
+    figsize=(10, 10),
+    sharex=True,
+    sharey=True,
+    gridspec_kw={"wspace": 0, "hspace": 0},
+)
+
+for i, ra_shift in enumerate(ra_shifts):
+    for j, dec_shift in enumerate(dec_shifts):
+        obs_df = gen_galaxies(cluster_ra + ra_shift, cluster_dec + dec_shift, cluster_M)
+        ax = axes[j, i]
+
+        add_ellipse_from_ellipticity(
+            ax,
+            obs_df["ra"],
+            obs_df["dec"],
+            obs_df["e1"],
+            obs_df["e2"],
+            ellipse_scale=0.005,
+            edgecolor="blue",
+        )
+
+        ax.scatter(
+            [halo_position.props.ra],
+            [halo_position.props.dec],
+            color="black",
+            marker="o",
+            s=100,
+        )
+
+        if j == 2:
+            ax.set_xlabel("RA")
+        if i == 0:
+            ax.set_ylabel("Dec")
+
+        ax.set_xlim(cluster_ra0 - angle_border, cluster_ra1 + angle_border)
+        ax.set_ylim(cluster_dec0 - angle_border, cluster_dec1 + angle_border)
+        ax.set_aspect("equal")
+
+plt.show()
+
+```
+
+### Varying Halo Mass
+
+We can also generate mock data for different halo masses and visualize the galaxy distribution around the halo.
+We plot the same distribution for nine different halo masses.
+The panels show the galaxy distribution with increasing cluster masses, ranging from $10^{-1}$ to $10^{0}$ times the original cluster mass.
+
+```{python}
+# | label: fig-cluster-mass-mass
+# | fig-cap: Galaxy distribution around the cluster for different cluster masses. The blue ellipses represent the observed galaxy shapes. The black dot indicates the true cluster position, with the size of the dot proportional to the cluster mass.
+# | fig-cap-location: margin
+# | fig-width: 100%
+# | code-fold: true
+
+mass_shifts = np.geomspace(10.0 ** (-1.0), 1.0, 9)
+fig, axes = plt.subplots(
+    3,
+    3,
+    figsize=(10, 10),
+    sharex=True,
+    sharey=True,
+    gridspec_kw={"wspace": 0, "hspace": 0},
+)
+
+for i, mass_shift in enumerate(mass_shifts):
+    obs_df = gen_galaxies(cluster_ra, cluster_dec, cluster_M * mass_shift)
+    ax = axes[i // 3, i % 3]
+
+    add_ellipse_from_ellipticity(
+        ax,
+        obs_df["ra"],
+        obs_df["dec"],
+        obs_df["e1"],
+        obs_df["e2"],
+        ellipse_scale=0.005,
+        edgecolor="blue",
+    )
+
+    ax.scatter(
+        [halo_position.props.ra],
+        [halo_position.props.dec],
+        color="black",
+        marker="o",
+        s=100 * mass_shift,
+    )
+
+    if i // 3 == 2:
+        ax.set_xlabel("RA")
+    if i % 3 == 0:
+        ax.set_ylabel("Dec")
+
+    ax.set_xlim(cluster_ra0 - angle_border, cluster_ra1 + angle_border)
+    ax.set_ylim(cluster_dec0 - angle_border, cluster_dec1 + angle_border)
+    ax.set_aspect("equal")
+
+plt.show()
+```
+
