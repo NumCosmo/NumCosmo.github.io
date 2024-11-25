@@ -35,6 +35,7 @@ from numcosmo_py.plotting.tools import add_ellipse_from_ellipticity
 
 Ncm.cfg_init()
 
+
 Omega_b = 0.05
 Omega_c = 0.25
 Omega_k = 0.0
@@ -43,11 +44,11 @@ H0 = 70.0
 # Create a cosmology object
 cosmo = Nc.HICosmoDEXcdm.new()
 cosmo.omega_x2omega_k()
-cosmo.param_set_by_name("Omegab", Omega_b)
-cosmo.param_set_by_name("Omegac", Omega_c)
-cosmo.param_set_by_name("Omegak", Omega_k)
-cosmo.param_set_by_name("H0", H0)
-cosmo.param_set_by_name("w", -1.0)
+cosmo["Omegab"] = Omega_b
+cosmo["Omegac"] = Omega_c
+cosmo["Omegak"] = Omega_k
+cosmo["H0"] = H0
+cosmo["w"] = -1.0
 
 dist = Nc.Distance.new(100.0)
 dist.prepare(cosmo)
@@ -80,7 +81,7 @@ The cluster's right ascension (RA) and declination (Dec) are set to $12.34^\circ
 
 ```{python}
 
-# Set parametners
+# Set parameters
 mass_delta = 200
 cluster_M = 2.0e16
 cluster_c = 4.0
@@ -94,12 +95,12 @@ density_profile = Nc.HaloDensityProfileNFW.new(
 surface_mass_density = Nc.WLSurfaceMassDensity.new(dist)
 halo_position = Nc.HaloPosition.new(dist)
 
-density_profile.param_set_by_name("cDelta", cluster_c)
-density_profile.param_set_by_name("log10MDelta", np.log10(cluster_M))
+density_profile["cDelta"] = cluster_c
+density_profile["log10MDelta"] = np.log10(cluster_M)
 
-halo_position.param_set_by_name("ra", cluster_ra)
-halo_position.param_set_by_name("dec", cluster_dec)
-halo_position.param_set_by_name("z", cluster_z)
+halo_position["ra"] = cluster_ra
+halo_position["dec"] = cluster_dec
+halo_position["z"] = cluster_z
 
 surface_mass_density.prepare(cosmo)
 halo_position.prepare(cosmo)
@@ -127,7 +128,7 @@ The specific values are as follows:
   - Declination (Dec): $[-55.273^\circ, -54.973^\circ]$
 - **Galaxy shape distribution**:
     - **Intrinsic ellipticity dispersion**: $1.0 \times 10^{-8}$
-    - **Ellipticity mesurement error**: $1.0 \times 10^{-8}$
+    - **Ellipticity measurement error**: $1.0 \times 10^{-8}$
 
 ```{python}
 
@@ -150,10 +151,7 @@ z_true = Nc.GalaxySDTrueRedshiftLSSTSRD.new(galaxy_true_z_min, galaxy_true_z_max
 z_dist = Nc.GalaxySDObsRedshiftGauss.new(z_true)
 s_dist = Nc.GalaxySDShapeGauss.new()
 
-s_dist.param_set_by_name("e-rms", galaxy_shape_e_rms)
-s_dist.param_set_by_name("e-sigma", galaxy_shape_e_sigma)
-
-s_dist.set_models(cosmo, halo_position)
+s_dist["e-rms"] = galaxy_shape_e_rms
 
 pass
 ```
@@ -167,14 +165,14 @@ We then set the minimum and maximum radii for the weak lensing analysis to focus
 
 ```{python}
 min_r, max_r = 0.3, 3.0
-cluster = Nc.DataClusterWL.new(s_dist, z_dist, p_dist)
+cluster = Nc.DataClusterWL.new()
 cluster.set_cut(min_r, max_r)
 ```
 ### Model-Set
 
 We create an `Nc.MSet` object to encapsulate the models defined above. 
 The `MSet` object serves as the main container for all models in a given analysis. 
-We add the cosmological model, the cluster profile and positon models, the galaxy distribution models, and the weak lensing model to the model set.
+We add the cosmological model, the cluster profile and position models, the galaxy distribution models, and the weak lensing model to the model set.
 
 This comprehensive model set allows us to manage and run simulations, ensuring that all components interact correctly to produce the desired weak lensing data.
 
@@ -186,8 +184,8 @@ mset = Ncm.MSet.new_array(
         surface_mass_density,
         halo_position,
         s_dist,
-        z_true,
         z_dist,
+        p_dist,
     ]
 )
 
@@ -207,18 +205,32 @@ The mock data, consisting of $200$ galaxies around the cluster, is then generate
 ```{python}
 seed = 1235
 n_galaxies = 200
+sigma_z = 0.03
 
 rng = Ncm.RNG.seeded_new("mt19937", seed)
 
-cluster.gen_obs(
-    cosmo,
-    density_profile,
-    surface_mass_density,
-    halo_position,
-    n_galaxies,
-    rng,
-    Nc.GalaxyWLObsCoord.EUCLIDEAN,
+z_data = Nc.GalaxySDObsRedshiftData.new(z_dist)
+p_data = Nc.GalaxySDPositionData.new(p_dist, z_data)
+s_data = Nc.GalaxySDShapeData.new(s_dist, p_data)
+
+obs = Nc.GalaxyWLObs.new(
+    Nc.GalaxyWLObsCoord.EUCLIDEAN, n_galaxies, list(s_data.required_columns())
 )
+
+for i in range(n_galaxies):
+    z_dist.gen(mset, z_data, sigma_z, rng)
+    p_dist.gen(mset, p_data, rng)
+    s_dist.gen(
+        mset,
+        s_data,
+        galaxy_shape_e_sigma,
+        galaxy_shape_e_sigma,
+        Nc.GalaxyWLObsCoord.EUCLIDEAN,
+        rng,
+    )
+    s_data.write_row(obs, i)
+
+cluster.set_obs(obs)
 ```
 
 The mock data can be retrieved from the `cluster` object and used for further analysis. 
@@ -277,8 +289,8 @@ add_ellipse_from_ellipticity(
     ax,
     obs_df["ra"],
     obs_df["dec"],
-    obs_df["e1_int"],
-    obs_df["e2_int"],
+    obs_df["epsilon_int_1"],
+    obs_df["epsilon_int_2"],
     ellipse_scale=0.005,
     edgecolor="red",
 )
@@ -287,8 +299,8 @@ add_ellipse_from_ellipticity(
     ax,
     obs_df["ra"],
     obs_df["dec"],
-    obs_df["e1"],
-    obs_df["e2"],
+    obs_df["epsilon_obs_1"],
+    obs_df["epsilon_obs_2"],
     ellipse_scale=0.005,
     edgecolor="blue",
 )
@@ -321,25 +333,31 @@ This allows us to explore how changes in these properties affect the weak lensin
 
 
 def gen_galaxies(halo_ra: float, halo_dec: float, halo_mass: float) -> pd.DataFrame:
-    halo_position.param_set_by_name("ra", halo_ra)
-    halo_position.param_set_by_name("dec", halo_dec)
-    density_profile.param_set_by_name("log10MDelta", np.log10(halo_mass))
+    rng = Ncm.RNG.seeded_new("mt19937", 1235)
+    halo_position["ra"] = halo_ra
+    halo_position["dec"] = halo_dec
+    density_profile["log10MDelta"] = np.log10(halo_mass)
 
     surface_mass_density.prepare(cosmo)
     halo_position.prepare(cosmo)
 
-    rng = Ncm.RNG.seeded_new("mt19937", 1235)
-    cluster.gen_obs(
-        cosmo,
-        density_profile,
-        surface_mass_density,
-        halo_position,
-        n_galaxies,
-        rng,
-        Nc.GalaxyWLObsCoord.EUCLIDEAN,
+    obs = Nc.GalaxyWLObs.new(
+        Nc.GalaxyWLObsCoord.EUCLIDEAN, n_galaxies, list(s_data.required_columns())
     )
 
-    obs = cluster.peek_obs()
+    for i in range(n_galaxies):
+        z_dist.gen(mset, z_data, sigma_z, rng)
+        p_dist.gen(mset, p_data, rng)
+        s_dist.gen(
+            mset,
+            s_data,
+            galaxy_shape_e_sigma,
+            galaxy_shape_e_sigma,
+            Nc.GalaxyWLObsCoord.EUCLIDEAN,
+            rng,
+        )
+        s_data.write_row(obs, i)
+
     columns = obs.peek_columns()
 
     obs_dict = {}
@@ -393,8 +411,8 @@ for i, ra_shift in enumerate(ra_shifts):
             ax,
             obs_df["ra"],
             obs_df["dec"],
-            obs_df["e1"],
-            obs_df["e2"],
+            obs_df["epsilon_obs_1"],
+            obs_df["epsilon_obs_2"],
             ellipse_scale=0.005,
             edgecolor="blue",
         )
@@ -452,8 +470,8 @@ for i, mass_shift in enumerate(mass_shifts):
         ax,
         obs_df["ra"],
         obs_df["dec"],
-        obs_df["e1"],
-        obs_df["e2"],
+        obs_df["epsilon_obs_1"],
+        obs_df["epsilon_obs_2"],
         ellipse_scale=0.005,
         edgecolor="blue",
     )
