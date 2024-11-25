@@ -89,14 +89,13 @@ cluster_z = 0.2
 
 cluster_ra, cluster_dec = 12.34, -55.123
 
-density_profile = Nc.HaloDensityProfileNFW.new(
-    Nc.HaloDensityProfileMassDef.CRITICAL, mass_delta
-)
+mass_summary = Nc.HaloMCParam.new(Nc.HaloMassSummaryMassDef.CRITICAL, mass_delta)
+density_profile = Nc.HaloDensityProfileNFW.new(mass_summary)
 surface_mass_density = Nc.WLSurfaceMassDensity.new(dist)
 halo_position = Nc.HaloPosition.new(dist)
 
-density_profile["cDelta"] = cluster_c
-density_profile["log10MDelta"] = np.log10(cluster_M)
+mass_summary["cDelta"] = cluster_c
+mass_summary["log10MDelta"] = np.log10(cluster_M)
 
 halo_position["ra"] = cluster_ra
 halo_position["dec"] = cluster_dec
@@ -147,7 +146,7 @@ galaxy_shape_e_sigma = 1.0e-8
 p_dist = Nc.GalaxySDPositionFlat.new(
     galaxies_ra0, galaxies_ra1, galaxies_dec0, galaxies_dec1
 )
-z_true = Nc.GalaxySDTrueRedshiftLSSTSRD.new(galaxy_true_z_min, galaxy_true_z_max)
+z_true = Nc.GalaxySDTrueRedshiftLSSTSRD.new()
 z_dist = Nc.GalaxySDObsRedshiftGauss.new(z_true)
 s_dist = Nc.GalaxySDShapeGauss.new()
 
@@ -336,7 +335,7 @@ def gen_galaxies(halo_ra: float, halo_dec: float, halo_mass: float) -> pd.DataFr
     rng = Ncm.RNG.seeded_new("mt19937", 1235)
     halo_position["ra"] = halo_ra
     halo_position["dec"] = halo_dec
-    density_profile["log10MDelta"] = np.log10(halo_mass)
+    mass_summary["log10MDelta"] = np.log10(halo_mass)
 
     surface_mass_density.prepare(cosmo)
     halo_position.prepare(cosmo)
