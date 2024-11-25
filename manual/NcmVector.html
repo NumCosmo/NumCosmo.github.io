@@ -222,7 +222,7 @@ justifications.
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GVariant</span> *
+<a class="link" href="refs.html#GVariant" title="GVariant"><span class="returnvalue">GVariant</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="NcmVector.html#ncm-vector-get-variant" title="ncm_vector_get_variant ()">ncm_vector_get_variant</a> <span class="c_punctuation">()</span>
@@ -230,7 +230,7 @@ justifications.
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GVariant</span> *
+<a class="link" href="refs.html#GVariant" title="GVariant"><span class="returnvalue">GVariant</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="NcmVector.html#ncm-vector-peek-variant" title="ncm_vector_peek_variant ()">ncm_vector_peek_variant</a> <span class="c_punctuation">()</span>
@@ -564,7 +564,7 @@ justifications.
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GArray</span> *
+<a class="link" href="refs.html#GArray" title="GArray"><span class="returnvalue">GArray</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="NcmVector.html#ncm-vector-get-array" title="ncm_vector_get_array ()">ncm_vector_get_array</a> <span class="c_punctuation">()</span>
@@ -572,7 +572,7 @@ justifications.
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GArray</span> *
+<a class="link" href="refs.html#GArray" title="GArray"><span class="returnvalue">GArray</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="NcmVector.html#ncm-vector-dup-array" title="ncm_vector_dup_array ()">ncm_vector_dup_array</a> <span class="c_punctuation">()</span>
@@ -599,6 +599,14 @@ justifications.
 </td>
 <td class="function_name">
 <a class="link" href="NcmVector.html#ncm-vector-replace-data" title="ncm_vector_replace_data ()">ncm_vector_replace_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmVector.html#ncm-vector-replace-data-full" title="ncm_vector_replace_data_full ()">ncm_vector_replace_data_full</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -781,7 +789,7 @@ justifications.
 </colgroup>
 <tbody><tr>
 <td class="property_type">
-<span class="type">GVariant</span> *</td>
+<a class="link" href="refs.html#GVariant" title="GVariant"><span class="type">GVariant</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmVector.html#NcmVector--values" title="The “values” property">values</a></td>
 <td class="property_flags">Read / Write</td>
 </tr></tbody>
@@ -814,7 +822,7 @@ justifications.
 <a name="NcmVector.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
     <span class="lineart">╰──</span> NcmVectorInternal
-    GObject
+    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
     <span class="lineart">╰──</span> NcmVector
 </pre>
 </div>
@@ -879,7 +887,7 @@ ncm_vector_new_full (<em class="parameter"><code><span class="type">gdouble</spa
                      <em class="parameter"><code><span class="type">gsize</span> size</code></em>,
                      <em class="parameter"><code><span class="type">gsize</span> stride</code></em>,
                      <em class="parameter"><code><span class="type">gpointer</span> pdata</code></em>,
-                     <em class="parameter"><code><span class="type">GDestroyNotify</span> pfree</code></em>);</pre>
+                     <em class="parameter"><code><a class="link" href="refs.html#GDestroyNotify" title="GDestroyNotify"><span class="type">GDestroyNotify</span></a> pfree</code></em>);</pre>
 <p>This function returns a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> of the array <em class="parameter"><code>d</code></em>
 .
 This function saves <em class="parameter"><code>userdata</code></em>
@@ -1021,7 +1029,7 @@ The <em class="parameter"><code>gv</code></em>
 <div class="refsect2">
 <a name="ncm-vector-new-array"></a><h3>ncm_vector_new_array ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
-ncm_vector_new_array (<em class="parameter"><code><span class="type">GArray</span> *a</code></em>);</pre>
+ncm_vector_new_array (<em class="parameter"><code><a class="link" href="refs.html#GArray" title="GArray"><span class="type">GArray</span></a> *a</code></em>);</pre>
 <p>This function saves <em class="parameter"><code>a</code></em>
  internally and frees it when it is no longer necessary.
 The <em class="parameter"><code>a</code></em>
@@ -1229,8 +1237,8 @@ It allocate a new vector and copy the contents of <em class="parameter"><code>d<
 <div class="refsect2">
 <a name="ncm-vector-new-variant"></a><h3>ncm_vector_new_variant ()</h3>
 <pre class="programlisting"><a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
-ncm_vector_new_variant (<em class="parameter"><code><span class="type">GVariant</span> *var</code></em>);</pre>
-<p>This function convert a <span class="type">GVariant</span> array to a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> allocating new
+ncm_vector_new_variant (<em class="parameter"><code><a class="link" href="refs.html#GVariant" title="GVariant"><span class="type">GVariant</span></a> *var</code></em>);</pre>
+<p>This function convert a <a class="link" href="refs.html#GVariant" title="GVariant"><span class="type">GVariant</span></a> array to a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> allocating new
 memory for the vector.</p>
 <div class="refsect3">
 <a name="ncm-vector-new-variant.parameters"></a><h4>Parameters</h4>
@@ -1242,7 +1250,7 @@ memory for the vector.</p>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>var</p></td>
-<td class="parameter_description"><p>a <span class="type">GVariant</span> of the type "ad"</p></td>
+<td class="parameter_description"><p>a <a class="link" href="refs.html#GVariant" title="GVariant"><span class="type">GVariant</span></a> of the type "ad"</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -1314,8 +1322,8 @@ ncm_vector_const_ref (<em class="parameter"><code>const <a class="link" href="Nc
 <div class="refsect2">
 <a name="ncm-vector-const-new-variant"></a><h3>ncm_vector_const_new_variant ()</h3>
 <pre class="programlisting">const <a class="link" href="NcmVector.html" title="NcmVector"><span class="returnvalue">NcmVector</span></a> *
-ncm_vector_const_new_variant (<em class="parameter"><code><span class="type">GVariant</span> *var</code></em>);</pre>
-<p>This function convert a <span class="type">GVariant</span> array to a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>. Since it returns
+ncm_vector_const_new_variant (<em class="parameter"><code><a class="link" href="refs.html#GVariant" title="GVariant"><span class="type">GVariant</span></a> *var</code></em>);</pre>
+<p>This function convert a <a class="link" href="refs.html#GVariant" title="GVariant"><span class="type">GVariant</span></a> array to a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>. Since it returns
 a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> it uses the same memory of <em class="parameter"><code>var</code></em>
 .</p>
 <div class="refsect3">
@@ -1328,7 +1336,7 @@ a constant <a class="link" href="NcmVector.html" title="NcmVector"><span class="
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>var</p></td>
-<td class="parameter_description"><p>a <span class="type">GVariant</span> of the type "ad"</p></td>
+<td class="parameter_description"><p>a <a class="link" href="refs.html#GVariant" title="GVariant"><span class="type">GVariant</span></a> of the type "ad"</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -1538,7 +1546,7 @@ The new vector has <em class="parameter"><code>size</code></em>
 <hr/>
 <div class="refsect2">
 <a name="ncm-vector-get-variant"></a><h3>ncm_vector_get_variant ()</h3>
-<pre class="programlisting"><span class="returnvalue">GVariant</span> *
+<pre class="programlisting"><a class="link" href="refs.html#GVariant" title="GVariant"><span class="returnvalue">GVariant</span></a> *
 ncm_vector_get_variant (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>);</pre>
 <p>Convert <em class="parameter"><code>cv</code></em>
  to a GVariant of the type "ad" without destroying the
@@ -1561,14 +1569,14 @@ original vector <em class="parameter"><code>cv</code></em>
 </div>
 <div class="refsect3">
 <a name="ncm-vector-get-variant.returns"></a><h4>Returns</h4>
-<p>A <span class="type">GVariant</span> of the type "ad". </p>
+<p>A <a class="link" href="refs.html#GVariant" title="GVariant"><span class="type">GVariant</span></a> of the type "ad". </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr/>
 <div class="refsect2">
 <a name="ncm-vector-peek-variant"></a><h3>ncm_vector_peek_variant ()</h3>
-<pre class="programlisting"><span class="returnvalue">GVariant</span> *
+<pre class="programlisting"><a class="link" href="refs.html#GVariant" title="GVariant"><span class="returnvalue">GVariant</span></a> *
 ncm_vector_peek_variant (<em class="parameter"><code>const <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>);</pre>
 <p>Convert <em class="parameter"><code>cv</code></em>
  to a GVariant of the type "ad" using the same memory space.
@@ -1592,7 +1600,7 @@ If the vector has stride != 1 then <a class="link" href="NcmVector.html#ncm-vect
 </div>
 <div class="refsect3">
 <a name="ncm-vector-peek-variant.returns"></a><h4>Returns</h4>
-<p>A <span class="type">GVariant</span> of the type "ad". </p>
+<p>A <a class="link" href="refs.html#GVariant" title="GVariant"><span class="type">GVariant</span></a> of the type "ad". </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
@@ -1752,7 +1760,7 @@ ncm_vector_log_vals_func (<em class="parameter"><code>const <a class="link" href
 <a name="ncm-vector-set-from-variant"></a><h3>ncm_vector_set_from_variant ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_vector_set_from_variant (<em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>,
-                             <em class="parameter"><code><span class="type">GVariant</span> *var</code></em>);</pre>
+                             <em class="parameter"><code><a class="link" href="refs.html#GVariant" title="GVariant"><span class="type">GVariant</span></a> *var</code></em>);</pre>
 <p>Sets the values of <em class="parameter"><code>cv</code></em>
  using the variant <em class="parameter"><code>var</code></em>
 . This function fails
@@ -1775,7 +1783,7 @@ if <em class="parameter"><code>cv</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>var</p></td>
-<td class="parameter_description"><p>a <span class="type">GVariant</span> of type ad</p></td>
+<td class="parameter_description"><p>a <a class="link" href="refs.html#GVariant" title="GVariant"><span class="type">GVariant</span></a> of type ad</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2715,7 +2723,7 @@ ncm_vector_set_data (<em class="parameter"><code><a class="link" href="NcmVector
 <a name="ncm-vector-set-array"></a><h3>ncm_vector_set_array ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_vector_set_array (<em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>,
-                      <em class="parameter"><code><span class="type">GArray</span> *array</code></em>);</pre>
+                      <em class="parameter"><code><a class="link" href="refs.html#GArray" title="GArray"><span class="type">GArray</span></a> *array</code></em>);</pre>
 <p>This function sets all the components of the vector <em class="parameter"><code>cv</code></em>
  using the data array <em class="parameter"><code>array</code></em>
 .
@@ -2737,7 +2745,7 @@ ncm_vector_set_array (<em class="parameter"><code><a class="link" href="NcmVecto
 </tr>
 <tr>
 <td class="parameter_name"><p>array</p></td>
-<td class="parameter_description"><p>a pointer to a double <span class="type">GArray</span>. </p></td>
+<td class="parameter_description"><p>a pointer to a double GArray. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> double]</span></td>
 </tr>
 </tbody>
@@ -3056,7 +3064,7 @@ It is useful for vectors with different sizes.</p>
 <hr/>
 <div class="refsect2">
 <a name="ncm-vector-get-array"></a><h3>ncm_vector_get_array ()</h3>
-<pre class="programlisting"><span class="returnvalue">GArray</span> *
+<pre class="programlisting"><a class="link" href="refs.html#GArray" title="GArray"><span class="returnvalue">GArray</span></a> *
 ncm_vector_get_array (<em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>);</pre>
 <p>This function returns the array of <em class="parameter"><code>cv</code></em>
 . It is only applied if the vector <em class="parameter"><code>cv</code></em>
@@ -3085,7 +3093,7 @@ ncm_vector_get_array (<em class="parameter"><code><a class="link" href="NcmVecto
 <hr/>
 <div class="refsect2">
 <a name="ncm-vector-dup-array"></a><h3>ncm_vector_dup_array ()</h3>
-<pre class="programlisting"><span class="returnvalue">GArray</span> *
+<pre class="programlisting"><a class="link" href="refs.html#GArray" title="GArray"><span class="returnvalue">GArray</span></a> *
 ncm_vector_dup_array (<em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>);</pre>
 <p>This function allocates a new array and copy the contents of the vector <em class="parameter"><code>cv</code></em>
  into it. The array must not be freed.</p>
@@ -3200,6 +3208,56 @@ and that the original data was statically allocated.</p>
 <tr>
 <td class="parameter_name"><p>data</p></td>
 <td class="parameter_description"><p>a pointer to the new data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-vector-replace-data-full"></a><h3>ncm_vector_replace_data_full ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_vector_replace_data_full (<em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *cv</code></em>,
+                              <em class="parameter"><code><span class="type">gdouble</span> *data</code></em>,
+                              <em class="parameter"><code><span class="type">guint</span> size</code></em>,
+                              <em class="parameter"><code><span class="type">guint</span> stride</code></em>);</pre>
+<p>This function replaces the data of the vector <em class="parameter"><code>cv</code></em>
+ by <em class="parameter"><code>data</code></em>
+.
+It does not make any check on the size of the new data.
+It assumes that the new data has the same size of the vector <em class="parameter"><code>cv</code></em>
+
+and that the original data was statically allocated.</p>
+<p>It is useful when one needs to convert a data pointer to a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a>.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="ncm-vector-replace-data-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cv</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a pointer to the new data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>the size of the new data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>stride</p></td>
+<td class="parameter_description"><p>the step-size from one element to the next in physical memory, measured in units of double</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -3957,7 +4015,7 @@ all memory allocated by <em class="parameter"><code>cv</code></em>
 <a name="NcmVector.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="NcmVector--values"></a><h3>The <code class="literal">“values”</code> property</h3>
-<pre class="programlisting">  “values”                   <span class="type">GVariant</span> *</pre>
+<pre class="programlisting">  “values”                   <a class="link" href="refs.html#GVariant" title="GVariant"><span class="type">GVariant</span></a> *</pre>
 <p>GVariant representation of the vector used to serialize the object.</p>
 <p>Owner: NcmVector</p>
 <p>Flags: Read / Write</p>

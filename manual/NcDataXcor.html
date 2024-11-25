@@ -158,7 +158,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="property_type">
-<a class="link" href="NcXcor.html" title="Cross-correlations"><span class="type">NcXcor</span></a> *</td>
+<a class="link" href="numcosmo-Cross-correlations.html#NcXcor"><span class="type">NcXcor</span></a> *</td>
 <td class="property_name"><a class="link" href="NcDataXcor.html#NcDataXcor--xc" title="The “xc” property">xc</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -181,18 +181,26 @@ messageStyle: "none"
 <tbody>
 <tr>
 <td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataXcor.html#NC-TYPE-DATA-XCOR:CAPS" title="NC_TYPE_DATA_XCOR">NC_TYPE_DATA_XCOR</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="NcDataXcor.html#NC-DATA-XCOR-MAX:CAPS" title="NC_DATA_XCOR_MAX">NC_DATA_XCOR_MAX</a></td>
 </tr>
 <tr>
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="NcDataXcor.html#NC-DATA-XCOR-DL:CAPS" title="NC_DATA_XCOR_DL">NC_DATA_XCOR_DL</a></td>
 </tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcDataXcor.html#NcDataXcor-struct" title="NcDataXcor">NcDataXcor</a></td>
+</tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="NcDataXcor.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
+<pre class="screen">    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmData.html" title="NcmData">NcmData</a>
         <span class="lineart">╰──</span> <a class="link" href="NcmDataGaussCov.html" title="NcmDataGaussCov">NcmDataGaussCov</a>
             <span class="lineart">╰──</span> NcDataXcor
@@ -221,7 +229,7 @@ D_{\ell}^{AB} = \left{
 <a name="nc-data-xcor-new-full"></a><h3>nc_data_xcor_new_full ()</h3>
 <pre class="programlisting"><a class="link" href="NcDataXcor.html" title="NcDataXcor"><span class="returnvalue">NcDataXcor</span></a> *
 nc_data_xcor_new_full (<em class="parameter"><code>const <span class="type">guint</span> nobs</code></em>,
-                       <em class="parameter"><code><a class="link" href="NcXcor.html" title="Cross-correlations"><span class="type">NcXcor</span></a> *xc</code></em>,
+                       <em class="parameter"><code><a class="link" href="numcosmo-Cross-correlations.html#NcXcor"><span class="type">NcXcor</span></a> *xc</code></em>,
                        <em class="parameter"><code><span class="type">gboolean</span> use_norma</code></em>);</pre>
 <p>FIXME</p>
 <div class="refsect3">
@@ -240,7 +248,7 @@ nc_data_xcor_new_full (<em class="parameter"><code>const <span class="type">guin
 </tr>
 <tr>
 <td class="parameter_name"><p>xc</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcXcor.html" title="Cross-correlations"><span class="type">NcXcor</span></a> to perform the computation of theoretical power spectra.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="numcosmo-Cross-correlations.html#NcXcor"><span class="type">NcXcor</span></a> to perform the computation of theoretical power spectra.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -553,6 +561,12 @@ nc_data_xcor_cov_func_abcd (<em class="parameter"><code><a class="link" href="Nc
 <div class="refsect1">
 <a name="NcDataXcor.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
+<a name="NC-TYPE-DATA-XCOR:CAPS"></a><h3>NC_TYPE_DATA_XCOR</h3>
+<pre class="programlisting">#define NC_TYPE_DATA_XCOR (nc_data_xcor_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="NC-DATA-XCOR-MAX:CAPS"></a><h3>NC_DATA_XCOR_MAX</h3>
 <pre class="programlisting">#define NC_DATA_XCOR_MAX (5)
 </pre>
@@ -562,6 +576,11 @@ nc_data_xcor_cov_func_abcd (<em class="parameter"><code><a class="link" href="Nc
 <a name="NC-DATA-XCOR-DL:CAPS"></a><h3>NC_DATA_XCOR_DL</h3>
 <pre class="programlisting">#define NC_DATA_XCOR_DL 10
 </pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcDataXcor-struct"></a><h3>NcDataXcor</h3>
+<pre class="programlisting">typedef struct _NcDataXcor NcDataXcor;</pre>
 </div>
 </div>
 <div class="refsect1">
@@ -594,7 +613,7 @@ nc_data_xcor_cov_func_abcd (<em class="parameter"><code><a class="link" href="Nc
 <hr/>
 <div class="refsect2">
 <a name="NcDataXcor--xc"></a><h3>The <code class="literal">“xc”</code> property</h3>
-<pre class="programlisting">  “xc”                       <a class="link" href="NcXcor.html" title="Cross-correlations"><span class="type">NcXcor</span></a> *</pre>
+<pre class="programlisting">  “xc”                       <a class="link" href="numcosmo-Cross-correlations.html#NcXcor"><span class="type">NcXcor</span></a> *</pre>
 <p>Xcor object to compute theoretical spectra.</p>
 <p>Owner: NcDataXcor</p>
 <p>Flags: Read / Write</p>

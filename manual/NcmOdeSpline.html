@@ -195,6 +195,14 @@ justifications.
 </tr>
 <tr>
 <td class="function_type">
+<span class="returnvalue">gdouble</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmOdeSpline.html#ncm-ode-spline-get-yf-attained" title="ncm_ode_spline_get_yf_attained ()">ncm_ode_spline_get_yf_attained</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="NcmSpline.html" title="NcmSpline"><span class="returnvalue">NcmSpline</span></a> *
 </td>
 <td class="function_name">
@@ -305,7 +313,7 @@ justifications.
 </div>
 <div class="refsect1">
 <a name="NcmOdeSpline.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
+<pre class="screen">    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
     <span class="lineart">╰──</span> NcmOdeSpline
 </pre>
 </div>
@@ -701,12 +709,12 @@ ncm_ode_spline_set_yi (<em class="parameter"><code><a class="link" href="NcmOdeS
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_ode_spline_set_yf (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>,
                        <em class="parameter"><code><span class="type">gdouble</span> yf</code></em>);</pre>
-<p>This function sets the final value of the function to be evaluated.
-When <em class="parameter"><code>yf</code></em>
- is reached, the edo's integration is stopped.
-Note that if <em class="parameter"><code>xf</code></em>
+<p>This function sets the final value of the function to be evaluated. When <em class="parameter"><code>yf</code></em>
+ is
+reached, the edo's integration is stopped. Note that if <em class="parameter"><code>xf</code></em>
  is also set, <em class="parameter"><code>yf</code></em>
- will take precedence.</p>
+ will
+take precedence.</p>
 <div class="refsect3">
 <a name="ncm-ode-spline-set-yf.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table border="0" class="informaltable" width="100%">
@@ -821,6 +829,32 @@ ncm_ode_spline_get_ini_step (<em class="parameter"><code><a class="link" href="N
 <div class="refsect3">
 <a name="ncm-ode-spline-get-ini-step.returns"></a><h4>Returns</h4>
 <p> the current value of the initial guess (zero means disabled).</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-ode-spline-get-yf-attained"></a><h3>ncm_ode_spline_get_yf_attained ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>
+ncm_ode_spline_get_yf_attained (<em class="parameter"><code><a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a> *os</code></em>);</pre>
+<p>Gets the last value of the function attained during the integration.</p>
+<div class="refsect3">
+<a name="ncm-ode-spline-get-yf-attained.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>os</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmOdeSpline.html" title="NcmOdeSpline"><span class="type">NcmOdeSpline</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-ode-spline-get-yf-attained.returns"></a><h4>Returns</h4>
+<p> the last value of the function attained during the integration.</p>
 </div>
 </div>
 <hr/>

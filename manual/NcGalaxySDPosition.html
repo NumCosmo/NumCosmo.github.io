@@ -1,0 +1,783 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>NcGalaxySDPosition: NumCosmo Reference Manual</title>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch08s10.html" rel="up" title="Galaxy Distribution"/>
+<link href="NcGalaxySDObsRedshiftSpec.html" rel="prev" title="NcGalaxySDObsRedshiftSpec"/>
+<link href="NcGalaxySDPositionFlat.html" rel="next" title="NcGalaxySDPositionFlat"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcGalaxySDPosition.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcGalaxySDPosition.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcGalaxySDPosition.properties">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch08s10.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcGalaxySDObsRedshiftSpec.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcGalaxySDPositionFlat.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcGalaxySDPosition"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcGalaxySDPosition.top_of_page"></a>NcGalaxySDPosition</span></h2>
+<p>NcGalaxySDPosition — Class describing galaxy sample position distributions.</p>
+</td>
+<td align="right" class="gallery_image" valign="top"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcGalaxySDPosition.stability-level"></a><h2>Stability Level</h2>
+<acronym title="Unstable interfaces are experimental or transitional. They are typically used to
+give outside developers early access to new or rapidly changing technology, or
+to provide an interim solution to a problem where a more general solution is
+anticipated. No claims are made about either source or binary compatibility from
+one minor release to the next.
+
+The Unstable interface level is a warning that these interfaces are  subject to
+change without warning and should not be used in unbundled products.
+
+Given such caveats, customer impact need not be a factor when considering
+incompatible changes to an Unstable interface in a major or minor release.
+Nonetheless, when such changes are introduced, the changes should still be
+mentioned in the release notes for the affected release.
+"><span class="acronym">Unstable</span></acronym>, unless otherwise indicated
+</div>
+<div class="refsect1">
+<a name="NcGalaxySDPosition.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="returnvalue">NcGalaxySDPositionData</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDPosition.html#nc-galaxy-sd-position-data-ref" title="nc_galaxy_sd_position_data_ref ()">nc_galaxy_sd_position_data_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDPosition.html#nc-galaxy-sd-position-data-unref" title="nc_galaxy_sd_position_data_unref ()">nc_galaxy_sd_position_data_unref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDPosition.html#nc-galaxy-sd-position-data-read-row" title="nc_galaxy_sd_position_data_read_row ()">nc_galaxy_sd_position_data_read_row</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDPosition.html#nc-galaxy-sd-position-data-write-row" title="nc_galaxy_sd_position_data_write_row ()">nc_galaxy_sd_position_data_write_row</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDPosition.html#nc-galaxy-sd-position-data-required-columns" title="nc_galaxy_sd_position_data_required_columns ()">nc_galaxy_sd_position_data_required_columns</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="returnvalue">NcGalaxySDPosition</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDPosition.html#nc-galaxy-sd-position-ref" title="nc_galaxy_sd_position_ref ()">nc_galaxy_sd_position_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDPosition.html#nc-galaxy-sd-position-free" title="nc_galaxy_sd_position_free ()">nc_galaxy_sd_position_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDPosition.html#nc-galaxy-sd-position-clear" title="nc_galaxy_sd_position_clear ()">nc_galaxy_sd_position_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDPosition.html#nc-galaxy-sd-position-set-ra-lim" title="nc_galaxy_sd_position_set_ra_lim ()">nc_galaxy_sd_position_set_ra_lim</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDPosition.html#nc-galaxy-sd-position-get-ra-lim" title="nc_galaxy_sd_position_get_ra_lim ()">nc_galaxy_sd_position_get_ra_lim</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDPosition.html#nc-galaxy-sd-position-set-dec-lim" title="nc_galaxy_sd_position_set_dec_lim ()">nc_galaxy_sd_position_set_dec_lim</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDPosition.html#nc-galaxy-sd-position-get-dec-lim" title="nc_galaxy_sd_position_get_dec_lim ()">nc_galaxy_sd_position_get_dec_lim</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">NcGalaxySDPositionIntegrand</span> *
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDPosition.html#nc-galaxy-sd-position-integ" title="nc_galaxy_sd_position_integ ()">nc_galaxy_sd_position_integ</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="returnvalue">NcGalaxySDPositionData</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDPosition.html#nc-galaxy-sd-position-data-new" title="nc_galaxy_sd_position_data_new ()">nc_galaxy_sd_position_data_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcGalaxySDPosition.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0" class="informaltable">
+<colgroup>
+<col class="properties_type" width="150px"/>
+<col class="properties_name" width="300px"/>
+<col class="properties_flags" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a class="link" href="numcosmo-NcmDTuple.html#NcmDTuple2"><span class="type">NcmDTuple2</span></a> *</td>
+<td class="property_name"><a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPosition--dec-lim" title="The “dec-lim” property">dec-lim</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="numcosmo-NcmDTuple.html#NcmDTuple2"><span class="type">NcmDTuple2</span></a> *</td>
+<td class="property_name"><a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPosition--ra-lim" title="The “ra-lim” property">ra-lim</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="NcGalaxySDPositionData"></a><div class="refsect1">
+<a name="NcGalaxySDPosition.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcGalaxySDPosition.html#NC-TYPE-GALAXY-SD-POSITION:CAPS" title="NC_TYPE_GALAXY_SD_POSITION">NC_TYPE_GALAXY_SD_POSITION</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcGalaxySDPosition.html#NC-TYPE-GALAXY-SD-POSITION-INTEGRAND:CAPS" title="NC_TYPE_GALAXY_SD_POSITION_INTEGRAND">NC_TYPE_GALAXY_SD_POSITION_INTEGRAND</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionClass" title="struct NcGalaxySDPositionClass">NcGalaxySDPositionClass</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcGalaxySDPosition.html#NC-GALAXY-SD-POSITION-COL-RA:CAPS" title="NC_GALAXY_SD_POSITION_COL_RA">NC_GALAXY_SD_POSITION_COL_RA</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcGalaxySDPosition.html#NC-GALAXY-SD-POSITION-COL-DEC:CAPS" title="NC_GALAXY_SD_POSITION_COL_DEC">NC_GALAXY_SD_POSITION_COL_DEC</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPosition-struct" title="NcGalaxySDPosition">NcGalaxySDPosition</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcGalaxySDPosition.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
+    <span class="lineart">╰──</span> NcGalaxySDPositionData
+    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcmModel.html" title="NcmModel">NcmModel</a>
+        <span class="lineart">╰──</span> NcGalaxySDPosition
+            <span class="lineart">╰──</span> <a class="link" href="NcGalaxySDPositionFlat.html" title="NcGalaxySDPositionFlat">NcGalaxySDPositionFlat</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcGalaxySDPosition.description"></a><h2>Description</h2>
+<p>This class describes a galaxy sample position distributions.</p>
+</div>
+<div class="refsect1">
+<a name="NcGalaxySDPosition.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="nc-galaxy-sd-position-data-ref"></a><h3>nc_galaxy_sd_position_data_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="returnvalue">NcGalaxySDPositionData</span></a> *
+nc_galaxy_sd_position_data_ref (<em class="parameter"><code><a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="type">NcGalaxySDPositionData</span></a> *data</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>data</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-data-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="type">NcGalaxySDPositionData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-data-ref.returns"></a><h4>Returns</h4>
+<p>a copy of <em class="parameter"><code>data</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-position-data-unref"></a><h3>nc_galaxy_sd_position_data_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_galaxy_sd_position_data_unref (<em class="parameter"><code><a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="type">NcGalaxySDPositionData</span></a> *data</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>data</code></em>
+ by one. If the reference count reaches 0, the
+data is freed.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-data-unref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="type">NcGalaxySDPositionData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-position-data-read-row"></a><h3>nc_galaxy_sd_position_data_read_row ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_galaxy_sd_position_data_read_row (<em class="parameter"><code><a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="type">NcGalaxySDPositionData</span></a> *data</code></em>,
+                                     <em class="parameter"><code><a class="link" href="NcGalaxyWLObs.html" title="NcGalaxyWLObs"><span class="type">NcGalaxyWLObs</span></a> *obs</code></em>,
+                                     <em class="parameter"><code>const <span class="type">guint</span> i</code></em>);</pre>
+<p>Reads the row <em class="parameter"><code>i</code></em>
+ from the galaxy position data.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-data-read-row.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="type">NcGalaxySDPositionData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obs</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxyWLObs.html" title="NcGalaxyWLObs"><span class="type">NcGalaxyWLObs</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>the row index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-position-data-write-row"></a><h3>nc_galaxy_sd_position_data_write_row ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_galaxy_sd_position_data_write_row (<em class="parameter"><code><a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="type">NcGalaxySDPositionData</span></a> *data</code></em>,
+                                      <em class="parameter"><code><a class="link" href="NcGalaxyWLObs.html" title="NcGalaxyWLObs"><span class="type">NcGalaxyWLObs</span></a> *obs</code></em>,
+                                      <em class="parameter"><code>const <span class="type">guint</span> i</code></em>);</pre>
+<p>Writes the galaxy position data to the observation.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-data-write-row.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="type">NcGalaxySDPositionData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obs</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxyWLObs.html" title="NcGalaxyWLObs"><span class="type">NcGalaxyWLObs</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>the row index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-position-data-required-columns"></a><h3>nc_galaxy_sd_position_data_required_columns ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+nc_galaxy_sd_position_data_required_columns
+                               (<em class="parameter"><code><a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="type">NcGalaxySDPositionData</span></a> *data</code></em>);</pre>
+<p>Gets the required columns for the galaxy position data.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-data-required-columns.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="type">NcGalaxySDPositionData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-data-required-columns.returns"></a><h4>Returns</h4>
+<p>the required columns for the galaxy position data. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-position-ref"></a><h3>nc_galaxy_sd_position_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="returnvalue">NcGalaxySDPosition</span></a> *
+nc_galaxy_sd_position_ref (<em class="parameter"><code><a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a> *gsdp</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>gsdp</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>gsdp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>gsdp</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-position-free"></a><h3>nc_galaxy_sd_position_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_galaxy_sd_position_free (<em class="parameter"><code><a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a> *gsdp</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>gsdp</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>gsdp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-position-clear"></a><h3>nc_galaxy_sd_position_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_galaxy_sd_position_clear (<em class="parameter"><code><a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a> **gsdp</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>gsdp</code></em>
+ by one, and sets the pointer *<em class="parameter"><code>gsdp</code></em>
+ to
+NULL.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>gsdp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-position-set-ra-lim"></a><h3>nc_galaxy_sd_position_set_ra_lim ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+nc_galaxy_sd_position_set_ra_lim (<em class="parameter"><code><a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a> *gsdp</code></em>,
+                                  <em class="parameter"><code>const <span class="type">gdouble</span> ra_min</code></em>,
+                                  <em class="parameter"><code>const <span class="type">gdouble</span> ra_max</code></em>);</pre>
+<p>Sets the right ascension limits of the distribution.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> set_ra_lim]</span></p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-set-ra-lim.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gsdp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ra_min</p></td>
+<td class="parameter_description"><p>the minimum right ascension</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ra_max</p></td>
+<td class="parameter_description"><p>the maximum right ascension</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-set-ra-lim.returns"></a><h4>Returns</h4>
+<p> TRUE if the limits were set successfully, FALSE otherwise.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-position-get-ra-lim"></a><h3>nc_galaxy_sd_position_get_ra_lim ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+nc_galaxy_sd_position_get_ra_lim (<em class="parameter"><code><a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a> *gsdp</code></em>,
+                                  <em class="parameter"><code><span class="type">gdouble</span> *ra_min</code></em>,
+                                  <em class="parameter"><code><span class="type">gdouble</span> *ra_max</code></em>);</pre>
+<p>Gets the right ascension limits of the distribution.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_ra_lim]</span></p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-get-ra-lim.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gsdp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ra_min</p></td>
+<td class="parameter_description"><p>the minimum right ascension. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ra_max</p></td>
+<td class="parameter_description"><p>the maximum right ascension. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-get-ra-lim.returns"></a><h4>Returns</h4>
+<p> TRUE if the limits were retrieved successfully, FALSE otherwise.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-position-set-dec-lim"></a><h3>nc_galaxy_sd_position_set_dec_lim ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+nc_galaxy_sd_position_set_dec_lim (<em class="parameter"><code><a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a> *gsdp</code></em>,
+                                   <em class="parameter"><code>const <span class="type">gdouble</span> dec_min</code></em>,
+                                   <em class="parameter"><code>const <span class="type">gdouble</span> dec_max</code></em>);</pre>
+<p>Sets the declination limits of the distribution.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> set_dec_lim]</span></p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-set-dec-lim.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gsdp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dec_min</p></td>
+<td class="parameter_description"><p>the minimum declination</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dec_max</p></td>
+<td class="parameter_description"><p>the maximum declination</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-set-dec-lim.returns"></a><h4>Returns</h4>
+<p> TRUE if the limits were set successfully, FALSE otherwise.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-position-get-dec-lim"></a><h3>nc_galaxy_sd_position_get_dec_lim ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+nc_galaxy_sd_position_get_dec_lim (<em class="parameter"><code><a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a> *gsdp</code></em>,
+                                   <em class="parameter"><code><span class="type">gdouble</span> *dec_min</code></em>,
+                                   <em class="parameter"><code><span class="type">gdouble</span> *dec_max</code></em>);</pre>
+<p>Gets the declination limits of the distribution.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> get_dec_lim]</span></p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-get-dec-lim.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gsdp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dec_min</p></td>
+<td class="parameter_description"><p>the minimum declination. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dec_max</p></td>
+<td class="parameter_description"><p>the maximum declination. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-get-dec-lim.returns"></a><h4>Returns</h4>
+<p> TRUE if the limits were retrieved successfully, FALSE otherwise.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-position-integ"></a><h3>nc_galaxy_sd_position_integ ()</h3>
+<pre class="programlisting"><span class="returnvalue">NcGalaxySDPositionIntegrand</span> *
+nc_galaxy_sd_position_integ (<em class="parameter"><code><a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a> *gsdp</code></em>);</pre>
+<p>Prepares the integrand for the galaxy position distribution.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> integ]</span></p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-integ.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>gsdp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-integ.returns"></a><h4>Returns</h4>
+<p>a new NcGalaxySDPositionIntegrand object. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-position-data-new"></a><h3>nc_galaxy_sd_position_data_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="returnvalue">NcGalaxySDPositionData</span></a> *
+nc_galaxy_sd_position_data_new (<em class="parameter"><code><a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a> *gsdp</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcGalaxySDObsRedshift.html#NcGalaxySDObsRedshiftData"><span class="type">NcGalaxySDObsRedshiftData</span></a> *sdz_data</code></em>);</pre>
+<p>Creates a new galaxy position data.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-data-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gsdp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition"><span class="type">NcGalaxySDPosition</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sdz_data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDObsRedshift.html#NcGalaxySDObsRedshiftData"><span class="type">NcGalaxySDObsRedshiftData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-galaxy-sd-position-data-new.returns"></a><h4>Returns</h4>
+<p>a new <a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="type">NcGalaxySDPositionData</span></a> object. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcGalaxySDPosition.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NC-TYPE-GALAXY-SD-POSITION:CAPS"></a><h3>NC_TYPE_GALAXY_SD_POSITION</h3>
+<pre class="programlisting">#define NC_TYPE_GALAXY_SD_POSITION (nc_galaxy_sd_position_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NC-TYPE-GALAXY-SD-POSITION-INTEGRAND:CAPS"></a><h3>NC_TYPE_GALAXY_SD_POSITION_INTEGRAND</h3>
+<pre class="programlisting">#define NC_TYPE_GALAXY_SD_POSITION_INTEGRAND (nc_galaxy_sd_position_integrand_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcGalaxySDPositionClass"></a><h3>struct NcGalaxySDPositionClass</h3>
+<pre class="programlisting">struct NcGalaxySDPositionClass {
+};
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NC-GALAXY-SD-POSITION-COL-RA:CAPS"></a><h3>NC_GALAXY_SD_POSITION_COL_RA</h3>
+<pre class="programlisting">#define NC_GALAXY_SD_POSITION_COL_RA "ra"
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NC-GALAXY-SD-POSITION-COL-DEC:CAPS"></a><h3>NC_GALAXY_SD_POSITION_COL_DEC</h3>
+<pre class="programlisting">#define NC_GALAXY_SD_POSITION_COL_DEC "dec"
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcGalaxySDPosition-struct"></a><h3>NcGalaxySDPosition</h3>
+<pre class="programlisting">typedef struct _NcGalaxySDPosition NcGalaxySDPosition;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcGalaxySDPosition.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcGalaxySDPosition--dec-lim"></a><h3>The <code class="literal">“dec-lim”</code> property</h3>
+<pre class="programlisting">  “dec-lim”                  <a class="link" href="numcosmo-NcmDTuple.html#NcmDTuple2"><span class="type">NcmDTuple2</span></a> *</pre>
+<p>Galaxy sample declination distribution limits.</p>
+<p>Owner: NcGalaxySDPosition</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcGalaxySDPosition--ra-lim"></a><h3>The <code class="literal">“ra-lim”</code> property</h3>
+<pre class="programlisting">  “ra-lim”                   <a class="link" href="numcosmo-NcmDTuple.html#NcmDTuple2"><span class="type">NcmDTuple2</span></a> *</pre>
+<p>Galaxy sample righ ascension distribution limits.</p>
+<p>Owner: NcGalaxySDPosition</p>
+<p>Flags: Read / Write</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr/>Generated by GTK-Doc V1.34.0</div>
+</body>
+</html>

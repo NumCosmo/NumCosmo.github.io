@@ -6,9 +6,9 @@
 <title>NcHaloDensityProfileHernquist: NumCosmo Reference Manual</title>
 <meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
 <link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
-<link href="ch08s04.html" rel="up" title="Density Profile"/>
+<link href="ch08s04.html" rel="up" title="Cluster Halo"/>
 <link href="NcHaloDensityProfileDK14.html" rel="prev" title="NcHaloDensityProfileDK14"/>
-<link href="ch08s05.html" rel="next" title="Multiplicity Function"/>
+<link href="NcHaloMassSummary.html" rel="next" title="NcHaloMassSummary"/>
 <meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 <link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
@@ -35,7 +35,7 @@ messageStyle: "none"
 <td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
 <td><a accesskey="u" href="ch08s04.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
 <td><a accesskey="p" href="NcHaloDensityProfileDK14.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
-<td><a accesskey="n" href="ch08s05.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcHaloMassSummary.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcHaloDensityProfileHernquist"></a><div class="titlepage"></div>
@@ -64,8 +64,27 @@ messageStyle: "none"
 </table></div>
 </div>
 <div class="refsect1">
+<a name="NcHaloDensityProfileHernquist.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcHaloDensityProfileHernquist.html#NC-TYPE-HALO-DENSITY-PROFILE-HERNQUIST:CAPS" title="NC_TYPE_HALO_DENSITY_PROFILE_HERNQUIST">NC_TYPE_HALO_DENSITY_PROFILE_HERNQUIST</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcHaloDensityProfileHernquist.html#NcHaloDensityProfileHernquist-struct" title="NcHaloDensityProfileHernquist">NcHaloDensityProfileHernquist</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
 <a name="NcHaloDensityProfileHernquist.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
+<pre class="screen">    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmModel.html" title="NcmModel">NcmModel</a>
         <span class="lineart">╰──</span> <a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile">NcHaloDensityProfile</a>
             <span class="lineart">╰──</span> NcHaloDensityProfileHernquist
@@ -106,13 +125,9 @@ Similar expressions in terms of $\mathrm{arctanh}$ and approximations, as descri
 <div class="refsect2">
 <a name="nc-halo-density-profile-hernquist-new"></a><h3>nc_halo_density_profile_hernquist_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcHaloDensityProfileHernquist.html" title="NcHaloDensityProfileHernquist"><span class="returnvalue">NcHaloDensityProfileHernquist</span></a> *
-nc_halo_density_profile_hernquist_new (<em class="parameter"><code>const <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfileMassDef" title="enum NcHaloDensityProfileMassDef"><span class="type">NcHaloDensityProfileMassDef</span></a> mdef</code></em>,
-                                       <em class="parameter"><code>const <span class="type">gdouble</span> Delta</code></em>);</pre>
+nc_halo_density_profile_hernquist_new (<em class="parameter"><code><a class="link" href="NcHaloMassSummary.html" title="NcHaloMassSummary"><span class="type">NcHaloMassSummary</span></a> *hms</code></em>);</pre>
 <p>This function returns the <a class="link" href="NcHaloDensityProfileHernquist.html" title="NcHaloDensityProfileHernquist"><span class="type">NcHaloDensityProfileHernquist</span></a> implementation of
-<a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> setting <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--mass-def" title="The “mass-def” property"><span class="type">“mass-def”</span></a> to <em class="parameter"><code>mdef</code></em>
-
-and <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--Delta" title="The “Delta” property"><span class="type">“Delta”</span></a> to <em class="parameter"><code>Delta</code></em>
-.</p>
+<a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> given <a class="link" href="NcHaloMassSummary.html" title="NcHaloMassSummary"><span class="type">NcHaloMassSummary</span></a>.</p>
 <div class="refsect3">
 <a name="nc-halo-density-profile-hernquist-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table border="0" class="informaltable" width="100%">
@@ -121,24 +136,30 @@ and <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--Delta"
 <col class="parameters_description"/>
 <col class="parameters_annotations" width="200px"/>
 </colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>mdef</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfileMassDef" title="enum NcHaloDensityProfileMassDef"><span class="type">NcHaloDensityProfileMassDef</span></a></p></td>
+<tbody><tr>
+<td class="parameter_name"><p>hms</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassSummary.html" title="NcHaloMassSummary"><span class="type">NcHaloMassSummary</span></a></p></td>
 <td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>Delta</p></td>
-<td class="parameter_description"><p>cluster threshold mass definition $\Delta$</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
+</tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="nc-halo-density-profile-hernquist-new.returns"></a><h4>Returns</h4>
 <p> a new instance of <a class="link" href="NcHaloDensityProfileHernquist.html" title="NcHaloDensityProfileHernquist"><span class="type">NcHaloDensityProfileHernquist</span></a>.</p>
 </div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcHaloDensityProfileHernquist.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NC-TYPE-HALO-DENSITY-PROFILE-HERNQUIST:CAPS"></a><h3>NC_TYPE_HALO_DENSITY_PROFILE_HERNQUIST</h3>
+<pre class="programlisting">#define NC_TYPE_HALO_DENSITY_PROFILE_HERNQUIST (nc_halo_density_profile_hernquist_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcHaloDensityProfileHernquist-struct"></a><h3>NcHaloDensityProfileHernquist</h3>
+<pre class="programlisting">typedef struct _NcHaloDensityProfileHernquist NcHaloDensityProfileHernquist;</pre>
 </div>
 </div>
 </div>

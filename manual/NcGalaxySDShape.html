@@ -1,0 +1,598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>NcGalaxySDShape: NumCosmo Reference Manual</title>
+<meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
+<link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
+<link href="ch08s10.html" rel="up" title="Galaxy Distribution"/>
+<link href="NcGalaxySDPositionFlat.html" rel="prev" title="NcGalaxySDPositionFlat"/>
+<link href="NcGalaxySDShapeGauss.html" rel="next" title="NcGalaxySDShapeGauss"/>
+<meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
+//<![CDATA[
+MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"],
+linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], 
+["\[", "\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+TeX: {  noUndefined: { 
+    attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" 
+    } },
+equationNumbers: { autoNumber: "AMS" } },
+messageStyle: "none"
+});
+//]]>
+        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script></head>
+<body alink="#0000FF" bgcolor="white" link="#0000FF" text="black" vlink="#840084">
+<table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcGalaxySDShape.description">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a class="shortcut" href="#NcGalaxySDShape.object-hierarchy">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
+<td><a accesskey="u" href="ch08s10.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcGalaxySDPositionFlat.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcGalaxySDShapeGauss.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
+</tr></table>
+<div class="refentry">
+<a name="NcGalaxySDShape"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="NcGalaxySDShape.top_of_page"></a>NcGalaxySDShape</span></h2>
+<p>NcGalaxySDShape — Class describing galaxy sample shape distribution.</p>
+</td>
+<td align="right" class="gallery_image" valign="top"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="NcGalaxySDShape.stability-level"></a><h2>Stability Level</h2>
+<acronym title="Unstable interfaces are experimental or transitional. They are typically used to
+give outside developers early access to new or rapidly changing technology, or
+to provide an interim solution to a problem where a more general solution is
+anticipated. No claims are made about either source or binary compatibility from
+one minor release to the next.
+
+The Unstable interface level is a warning that these interfaces are  subject to
+change without warning and should not be used in unbundled products.
+
+Given such caveats, customer impact need not be a factor when considering
+incompatible changes to an Unstable interface in a major or minor release.
+Nonetheless, when such changes are introduced, the changes should still be
+mentioned in the release notes for the affected release.
+"><span class="acronym">Unstable</span></acronym>, unless otherwise indicated
+</div>
+<div class="refsect1">
+<a name="NcGalaxySDShape.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="functions_proto_type" width="150px"/>
+<col class="functions_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="returnvalue">NcGalaxySDShapeData</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDShape.html#nc-galaxy-sd-shape-data-ref" title="nc_galaxy_sd_shape_data_ref ()">nc_galaxy_sd_shape_data_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDShape.html#nc-galaxy-sd-shape-data-unref" title="nc_galaxy_sd_shape_data_unref ()">nc_galaxy_sd_shape_data_unref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDShape.html#nc-galaxy-sd-shape-data-read-row" title="nc_galaxy_sd_shape_data_read_row ()">nc_galaxy_sd_shape_data_read_row</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDShape.html#nc-galaxy-sd-shape-data-write-row" title="nc_galaxy_sd_shape_data_write_row ()">nc_galaxy_sd_shape_data_write_row</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDShape.html#nc-galaxy-sd-shape-data-required-columns" title="nc_galaxy_sd_shape_data_required_columns ()">nc_galaxy_sd_shape_data_required_columns</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcGalaxySDShape.html" title="NcGalaxySDShape"><span class="returnvalue">NcGalaxySDShape</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDShape.html#nc-galaxy-sd-shape-ref" title="nc_galaxy_sd_shape_ref ()">nc_galaxy_sd_shape_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDShape.html#nc-galaxy-sd-shape-free" title="nc_galaxy_sd_shape_free ()">nc_galaxy_sd_shape_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDShape.html#nc-galaxy-sd-shape-clear" title="nc_galaxy_sd_shape_clear ()">nc_galaxy_sd_shape_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">NcGalaxySDShapeIntegrand</span> *
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDShape.html#nc-galaxy-sd-shape-integ" title="nc_galaxy_sd_shape_integ ()">nc_galaxy_sd_shape_integ</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDShape.html#nc-galaxy-sd-shape-prepare-data-array" title="nc_galaxy_sd_shape_prepare_data_array ()">nc_galaxy_sd_shape_prepare_data_array</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="returnvalue">NcGalaxySDShapeData</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcGalaxySDShape.html#nc-galaxy-sd-shape-data-new" title="nc_galaxy_sd_shape_data_new ()">nc_galaxy_sd_shape_data_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="NcGalaxySDShapeData"></a><div class="refsect1">
+<a name="NcGalaxySDShape.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcGalaxySDShape.html#NC-TYPE-GALAXY-SD-SHAPE:CAPS" title="NC_TYPE_GALAXY_SD_SHAPE">NC_TYPE_GALAXY_SD_SHAPE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcGalaxySDShape.html#NC-TYPE-GALAXY-SD-SHAPE-INTEGRAND:CAPS" title="NC_TYPE_GALAXY_SD_SHAPE_INTEGRAND">NC_TYPE_GALAXY_SD_SHAPE_INTEGRAND</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeClass" title="struct NcGalaxySDShapeClass">NcGalaxySDShapeClass</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcGalaxySDShape.html#NC-GALAXY-SD-SHAPE-COL-COORD:CAPS" title="NC_GALAXY_SD_SHAPE_COL_COORD">NC_GALAXY_SD_SHAPE_COL_COORD</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcGalaxySDShape.html#NC-GALAXY-SD-SHAPE-COL-EPSILON-INT-1:CAPS" title="NC_GALAXY_SD_SHAPE_COL_EPSILON_INT_1">NC_GALAXY_SD_SHAPE_COL_EPSILON_INT_1</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcGalaxySDShape.html#NC-GALAXY-SD-SHAPE-COL-EPSILON-INT-2:CAPS" title="NC_GALAXY_SD_SHAPE_COL_EPSILON_INT_2">NC_GALAXY_SD_SHAPE_COL_EPSILON_INT_2</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcGalaxySDShape.html#NcGalaxySDShape-struct" title="NcGalaxySDShape">NcGalaxySDShape</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="NcGalaxySDShape.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
+    <span class="lineart">╰──</span> NcGalaxySDShapeData
+    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
+    <span class="lineart">╰──</span> <a class="link" href="NcmModel.html" title="NcmModel">NcmModel</a>
+        <span class="lineart">╰──</span> NcGalaxySDShape
+            <span class="lineart">╰──</span> <a class="link" href="NcGalaxySDShapeGauss.html" title="NcGalaxySDShapeGauss">NcGalaxySDShapeGauss</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="NcGalaxySDShape.description"></a><h2>Description</h2>
+<p>This class describes a galaxy sample shape distribution.
+It is composed by a distribution $P(s)$.</p>
+</div>
+<div class="refsect1">
+<a name="NcGalaxySDShape.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="nc-galaxy-sd-shape-data-ref"></a><h3>nc_galaxy_sd_shape_data_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="returnvalue">NcGalaxySDShapeData</span></a> *
+nc_galaxy_sd_shape_data_ref (<em class="parameter"><code><a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="type">NcGalaxySDShapeData</span></a> *data</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>data</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-data-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="type">NcGalaxySDShapeData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-shape-data-unref"></a><h3>nc_galaxy_sd_shape_data_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_galaxy_sd_shape_data_unref (<em class="parameter"><code><a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="type">NcGalaxySDShapeData</span></a> *data</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>data</code></em>
+ by one. If the reference count reaches 0, the
+data is freed.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-data-unref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="type">NcGalaxySDShapeData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-shape-data-read-row"></a><h3>nc_galaxy_sd_shape_data_read_row ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_galaxy_sd_shape_data_read_row (<em class="parameter"><code><a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="type">NcGalaxySDShapeData</span></a> *data</code></em>,
+                                  <em class="parameter"><code><a class="link" href="NcGalaxyWLObs.html" title="NcGalaxyWLObs"><span class="type">NcGalaxyWLObs</span></a> *obs</code></em>,
+                                  <em class="parameter"><code>const <span class="type">guint</span> i</code></em>);</pre>
+<p>Reads the row <em class="parameter"><code>i</code></em>
+ from the galaxy shape data.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-data-read-row.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="type">NcGalaxySDShapeData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obs</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxyWLObs.html" title="NcGalaxyWLObs"><span class="type">NcGalaxyWLObs</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>the row index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-shape-data-write-row"></a><h3>nc_galaxy_sd_shape_data_write_row ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_galaxy_sd_shape_data_write_row (<em class="parameter"><code><a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="type">NcGalaxySDShapeData</span></a> *data</code></em>,
+                                   <em class="parameter"><code><a class="link" href="NcGalaxyWLObs.html" title="NcGalaxyWLObs"><span class="type">NcGalaxyWLObs</span></a> *obs</code></em>,
+                                   <em class="parameter"><code>const <span class="type">guint</span> i</code></em>);</pre>
+<p>Writes the row <em class="parameter"><code>i</code></em>
+ to the galaxy shape data.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-data-write-row.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="type">NcGalaxySDShapeData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obs</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxyWLObs.html" title="NcGalaxyWLObs"><span class="type">NcGalaxyWLObs</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>i</p></td>
+<td class="parameter_description"><p>the row index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-shape-data-required-columns"></a><h3>nc_galaxy_sd_shape_data_required_columns ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+nc_galaxy_sd_shape_data_required_columns
+                               (<em class="parameter"><code><a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="type">NcGalaxySDShapeData</span></a> *data</code></em>);</pre>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-data-required-columns.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="type">NcGalaxySDShapeData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-data-required-columns.returns"></a><h4>Returns</h4>
+<p>the required columns for the galaxy shape data. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-shape-ref"></a><h3>nc_galaxy_sd_shape_ref ()</h3>
+<pre class="programlisting"><a class="link" href="NcGalaxySDShape.html" title="NcGalaxySDShape"><span class="returnvalue">NcGalaxySDShape</span></a> *
+nc_galaxy_sd_shape_ref (<em class="parameter"><code><a class="link" href="NcGalaxySDShape.html" title="NcGalaxySDShape"><span class="type">NcGalaxySDShape</span></a> *gsds</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>gsds</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>gsds</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDShape.html" title="NcGalaxySDShape"><span class="type">NcGalaxySDShape</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-ref.returns"></a><h4>Returns</h4>
+<p><em class="parameter"><code>gsds</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-shape-free"></a><h3>nc_galaxy_sd_shape_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_galaxy_sd_shape_free (<em class="parameter"><code><a class="link" href="NcGalaxySDShape.html" title="NcGalaxySDShape"><span class="type">NcGalaxySDShape</span></a> *gsds</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>gsds</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>gsds</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDShape.html" title="NcGalaxySDShape"><span class="type">NcGalaxySDShape</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-shape-clear"></a><h3>nc_galaxy_sd_shape_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_galaxy_sd_shape_clear (<em class="parameter"><code><a class="link" href="NcGalaxySDShape.html" title="NcGalaxySDShape"><span class="type">NcGalaxySDShape</span></a> **gsds</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>gsds</code></em>
+ by one, and sets the pointer *<em class="parameter"><code>gsds</code></em>
+ to
+NULL.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>gsds</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDShape.html" title="NcGalaxySDShape"><span class="type">NcGalaxySDShape</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-shape-integ"></a><h3>nc_galaxy_sd_shape_integ ()</h3>
+<pre class="programlisting"><span class="returnvalue">NcGalaxySDShapeIntegrand</span> *
+nc_galaxy_sd_shape_integ (<em class="parameter"><code><a class="link" href="NcGalaxySDShape.html" title="NcGalaxySDShape"><span class="type">NcGalaxySDShape</span></a> *gsds</code></em>);</pre>
+<p>Creates a new galaxy shape integrand.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> integ]</span></p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-integ.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>gsds</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDShape.html" title="NcGalaxySDShape"><span class="type">NcGalaxySDShape</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-integ.returns"></a><h4>Returns</h4>
+<p>a new NcGalaxySDShapeIntegrand object. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-shape-prepare-data-array"></a><h3>nc_galaxy_sd_shape_prepare_data_array ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+nc_galaxy_sd_shape_prepare_data_array (<em class="parameter"><code><a class="link" href="NcGalaxySDShape.html" title="NcGalaxySDShape"><span class="type">NcGalaxySDShape</span></a> *gsds</code></em>,
+                                       <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
+                                       <em class="parameter"><code><a class="link" href="refs.html#GPtrArray" title="GPtrArray"><span class="type">GPtrArray</span></a> *data_array</code></em>);</pre>
+<p>Prepares the matrix to compute the probability density of the observaple shape.</p>
+<p><span class="annotation">[<acronym title="This is the invoker for a virtual method."><span class="acronym">virtual</span></acronym> prepare_data_array]</span></p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-prepare-data-array.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gsds</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDShape.html" title="NcGalaxySDShape"><span class="type">NcGalaxySDShape</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mset</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data_array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="refs.html#GPtrArray" title="GPtrArray"><span class="type">GPtrArray</span></a> of <a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="type">NcGalaxySDShapeData</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> NcGalaxySDShapeData]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-prepare-data-array.returns"></a><h4>Returns</h4>
+<p> TRUE if the matrix was prepared, FALSE otherwise.</p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-galaxy-sd-shape-data-new"></a><h3>nc_galaxy_sd_shape_data_new ()</h3>
+<pre class="programlisting"><a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="returnvalue">NcGalaxySDShapeData</span></a> *
+nc_galaxy_sd_shape_data_new (<em class="parameter"><code><a class="link" href="NcGalaxySDShape.html" title="NcGalaxySDShape"><span class="type">NcGalaxySDShape</span></a> *gsds</code></em>,
+                             <em class="parameter"><code><a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="type">NcGalaxySDPositionData</span></a> *sdpos_data</code></em>);</pre>
+<p>Creates a new galaxy shape data.</p>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-data-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gsds</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDShape.html" title="NcGalaxySDShape"><span class="type">NcGalaxySDShape</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sdpos_data</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxySDPosition.html#NcGalaxySDPositionData"><span class="type">NcGalaxySDPositionData</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-galaxy-sd-shape-data-new.returns"></a><h4>Returns</h4>
+<p>a new <a class="link" href="NcGalaxySDShape.html#NcGalaxySDShapeData"><span class="type">NcGalaxySDShapeData</span></a> object. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcGalaxySDShape.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NC-TYPE-GALAXY-SD-SHAPE:CAPS"></a><h3>NC_TYPE_GALAXY_SD_SHAPE</h3>
+<pre class="programlisting">#define NC_TYPE_GALAXY_SD_SHAPE (nc_galaxy_sd_shape_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NC-TYPE-GALAXY-SD-SHAPE-INTEGRAND:CAPS"></a><h3>NC_TYPE_GALAXY_SD_SHAPE_INTEGRAND</h3>
+<pre class="programlisting">#define NC_TYPE_GALAXY_SD_SHAPE_INTEGRAND (nc_galaxy_sd_shape_integrand_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcGalaxySDShapeClass"></a><h3>struct NcGalaxySDShapeClass</h3>
+<pre class="programlisting">struct NcGalaxySDShapeClass {
+};
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NC-GALAXY-SD-SHAPE-COL-COORD:CAPS"></a><h3>NC_GALAXY_SD_SHAPE_COL_COORD</h3>
+<pre class="programlisting">#define NC_GALAXY_SD_SHAPE_COL_COORD "coord"
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NC-GALAXY-SD-SHAPE-COL-EPSILON-INT-1:CAPS"></a><h3>NC_GALAXY_SD_SHAPE_COL_EPSILON_INT_1</h3>
+<pre class="programlisting">#define NC_GALAXY_SD_SHAPE_COL_EPSILON_INT_1 "epsilon_int_1"
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NC-GALAXY-SD-SHAPE-COL-EPSILON-INT-2:CAPS"></a><h3>NC_GALAXY_SD_SHAPE_COL_EPSILON_INT_2</h3>
+<pre class="programlisting">#define NC_GALAXY_SD_SHAPE_COL_EPSILON_INT_2 "epsilon_int_2"
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcGalaxySDShape-struct"></a><h3>NcGalaxySDShape</h3>
+<pre class="programlisting">typedef struct _NcGalaxySDShape NcGalaxySDShape;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr/>Generated by GTK-Doc V1.34.0</div>
+</body>
+</html>
