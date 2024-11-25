@@ -32,9 +32,11 @@ jobs:
           auto-update-conda: true
           activate-environment: numcosmo
           python-version: ${{ matrix.python-version }}
-          miniforge-variant: Mambaforge
+          mamba-version: "*"
           show-channel-urls: true
           use-mamba: true
+          conda-remove-defaults: true
+          miniforge-version: latest
       - name: Create environment
         run: mamba create -v -q -n numcosmo numcosmo jupyter nbformat pandas plotnine "getdist>=1.5.1"
       - name: Activate Conda Environment
