@@ -38,7 +38,7 @@ jobs:
           conda-remove-defaults: true
           miniforge-version: latest
       - name: Create environment
-        run: mamba create -v -q -n numcosmo numcosmo jupyter nbformat pandas plotnine "getdist>=1.5.1"
+        run: mamba create -v -q -n numcosmo "numcosmo>=0.23.0" jupyter nbformat pandas plotnine "getdist>=1.5.1"
       - name: Activate Conda Environment
         run: conda activate numcosmo
       - name: Quarto Render
