@@ -88,7 +88,7 @@ messageStyle: "none"
 <span class="refentrytitle"><a href="NcPowspecMNLHaloFit.html">NcPowspecMNLHaloFit</a></span><span class="refpurpose"> — nonlinear matter power spectrum from Halofit model.</span>
 </dt>
 </dl></dd>
-<dt><span class="section"><a href="ch08s04.html"> Density Profile</a></span></dt>
+<dt><span class="section"><a href="ch08s04.html">Cluster Halo</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="NcHaloDensityProfile.html">NcHaloDensityProfile</a></span><span class="refpurpose"> — Abstract class for density profile functions.</span>
@@ -104,6 +104,15 @@ messageStyle: "none"
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcHaloDensityProfileHernquist.html">NcHaloDensityProfileHernquist</a></span><span class="refpurpose"> — Density profile of Hernquist type.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloMassSummary.html">NcHaloMassSummary</a></span><span class="refpurpose"> — Class describing halo mass summary</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloMCParam.html">NcHaloMCParam</a></span><span class="refpurpose"> — Class defining mass and concentration as parameters</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcHaloPosition.html">NcHaloPosition</a></span><span class="refpurpose"> — A class to represent the center of a halo.</span>
 </dt>
 </dl></dd>
 <dt><span class="section"><a href="ch08s05.html">Multiplicity Function</a></span></dt>
@@ -208,7 +217,7 @@ messageStyle: "none"
 <dt><span class="section"><a href="ch08s09.html">Cross-correlations</a></span></dt>
 <dd><dl>
 <dt>
-<span class="refentrytitle"><a href="NcXcor.html">Cross-correlations</a></span><span class="refpurpose"> — Angular auto- and cross-spectra.</span>
+<span class="refentrytitle"><a href="numcosmo-Cross-correlations.html">Cross-correlations</a></span><span class="refpurpose"> — Angular auto- and cross-spectra.</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcXcorAB.html">NcXcorAB</a></span><span class="refpurpose"> — Cross-correlations data storage object.</span>
@@ -217,10 +226,16 @@ messageStyle: "none"
 <span class="refentrytitle"><a href="NcXcorLimberKernel.html">NcXcorLimberKernel</a></span><span class="refpurpose"> — Abstract object for the kernels of projected observables used in cross-correlations.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcXcorLimberKernelGal.html">NcXcorLimberKernelGal</a></span><span class="refpurpose"> — implementation of <span class="type">NcXcorLimberKernel</span> for galaxy density</span>
+<span class="refentrytitle"><a href="NcXcorLimberKernelCMBISW.html">NcXcorLimberKernelCMBISW</a></span><span class="refpurpose"> — implementation of <span class="type">NcXcorLimberKernel</span> for integrated Sachs-Wolfe (ISW)</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcXcorLimberKernelCMBLensing.html">NcXcorLimberKernelCMBLensing</a></span><span class="refpurpose"> — implementation of <span class="type">NcXcorLimberKernel</span> for CMB lensing</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcXcorLimberKernelGal.html">NcXcorLimberKernelGal</a></span><span class="refpurpose"> — implementation of <span class="type">NcXcorLimberKernel</span> for galaxy density</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcXcorLimberKerneltSZ.html">NcXcorLimberKerneltSZ</a></span><span class="refpurpose"> — Thermal Sunyaev Zel'dovich effect kernel</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="NcXcorLimberKernelWeakLensing.html">NcXcorLimberKernelWeakLensing</a></span><span class="refpurpose"> — implementation of <span class="type">NcXcorLimberKernel</span> for galaxy weak lensing</span>
@@ -235,19 +250,34 @@ messageStyle: "none"
 <dt>
 <span class="refentrytitle"><a href="NcCorClusterCmbLensLimber.html">NcCorClusterCmbLensLimber</a></span><span class="refpurpose"> — Cluster and CMB lensing correlation using halo model and Limber approximation.</span>
 </dt>
-<dt><span class="section"><a href="ch08s10.html">Galaxy Redshift</a></span></dt>
+<dt><span class="section"><a href="ch08s10.html">Galaxy Distribution</a></span></dt>
 <dd><dl>
 <dt>
-<span class="refentrytitle"><a href="NcGalaxyRedshift.html">NcGalaxyRedshift</a></span><span class="refpurpose"> — Abstract class describing galaxy redshifts.</span>
+<span class="refentrytitle"><a href="NcGalaxySDObsRedshift.html">NcGalaxySDObsRedshift</a></span><span class="refpurpose"> — Class describing galaxy sample observed redshift distribution.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcGalaxyRedshiftSpec.html">NcGalaxyRedshiftSpec</a></span><span class="refpurpose"> — Class describing spectroscopic galaxy redshifts.</span>
+<span class="refentrytitle"><a href="NcGalaxySDObsRedshiftGauss.html">NcGalaxySDObsRedshiftGauss</a></span><span class="refpurpose"> — Class describing photometric redshift observations with gaussian errors.</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcGalaxyRedshiftSpline.html">NcGalaxyRedshiftSpline</a></span><span class="refpurpose"> — Class describing spectroscopic galaxy redshifts.</span>
+<span class="refentrytitle"><a href="NcGalaxySDObsRedshiftSpec.html">NcGalaxySDObsRedshiftSpec</a></span><span class="refpurpose"> — Class describing spectroscopic redshift observations</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcGalaxyRedshiftGauss.html">NcGalaxyRedshiftGauss</a></span><span class="refpurpose"> — Class describing Gaussian photometric galaxy redshifts.</span>
+<span class="refentrytitle"><a href="NcGalaxySDPosition.html">NcGalaxySDPosition</a></span><span class="refpurpose"> — Class describing galaxy sample position distributions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxySDPositionFlat.html">NcGalaxySDPositionFlat</a></span><span class="refpurpose"> — Class describing galaxy sample position distributions with flat distribution</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxySDShape.html">NcGalaxySDShape</a></span><span class="refpurpose"> — Class describing galaxy sample shape distribution.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxySDShapeGauss.html">NcGalaxySDShapeGauss</a></span><span class="refpurpose"> — Class describing galaxy sample shape gaussian distribution</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxySDTrueRedshift.html">NcGalaxySDTrueRedshift</a></span><span class="refpurpose"> — Class describing galaxy sample redshift distributions.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="NcGalaxySDTrueRedshiftLSSTSRD.html">NcGalaxySDTrueRedshiftLSSTSRD</a></span><span class="refpurpose"> — Class describing galaxy sample redshift distributions as in LSST-SRD.</span>
 </dt>
 </dl></dd>
 <dt><span class="section"><a href="ch08s11.html">Weak Lensing</a></span></dt>
@@ -265,22 +295,7 @@ messageStyle: "none"
 <span class="refentrytitle"><a href="NcReducedShearCalibWtg.html">NcReducedShearCalibWtg</a></span><span class="refpurpose"> — Reduced Shear Calibration</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="NcGalaxyWL.html">NcGalaxyWL</a></span><span class="refpurpose"> — Class describing galaxy weak lensing distributions.</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="NcGalaxyWLDist.html">NcGalaxyWLDist</a></span><span class="refpurpose"> — Abstract class describing galaxy wl_dists.</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="NcGalaxyWLEllipticityGauss.html">NcGalaxyWLEllipticityGauss</a></span><span class="refpurpose"> — Abstract class describing galaxy weak lensing ellipticity Gaussian distribution</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="NcGalaxyWLEllipticityKDE.html">NcGalaxyWLEllipticityKDE</a></span><span class="refpurpose"> — Class describing galaxy weak lensing ellipticity with Kernel Density Estimation</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="NcGalaxyWLEllipticityBinned.html">NcGalaxyWLEllipticityBinned</a></span><span class="refpurpose"> — Class describing galaxy weak lensing ellipticity with binning</span>
-</dt>
-<dt>
-<span class="refentrytitle"><a href="NcGalaxyWLProj.html">NcGalaxyWLProj</a></span><span class="refpurpose"> — Abstract class describing galaxy weak lensing reduced shear Gaussian distribution</span>
+<span class="refentrytitle"><a href="NcGalaxyWLObs.html">NcGalaxyWLObs</a></span><span class="refpurpose"> — Galaxy weak lensing observation data.</span>
 </dt>
 </dl></dd>
 <dt><span class="section"><a href="ch08s12.html">Galaxy ACF</a></span></dt>
