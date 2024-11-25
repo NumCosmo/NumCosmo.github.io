@@ -160,6 +160,14 @@ messageStyle: "none"
 <a class="link" href="NcHIPertIEM.html#nc-hipert-em-eval-PE-PB" title="nc_hipert_em_eval_PE_PB ()">nc_hipert_em_eval_PE_PB</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHIPertIEM.html#nc-hipert-em-prepare-spectrum" title="nc_hipert_em_prepare_spectrum ()">nc_hipert_em_prepare_spectrum</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -219,7 +227,7 @@ messageStyle: "none"
     <span class="lineart">╰──</span> NcHIPertEMVars
     <a href="/usr/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
     <span class="lineart">╰──</span> NcHIPertIEM
-    GObject
+    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmCSQ1D.html" title="NcmCSQ1D">NcmCSQ1D</a>
         <span class="lineart">╰──</span> NcHIPertEM
 </pre>
@@ -228,7 +236,7 @@ messageStyle: "none"
 <a name="NcHIPertIEM.prerequisites"></a><h2>Prerequisites</h2>
 <p>
 NcHIPertIEM requires
- GObject.</p>
+ <a class="link" href="refs.html#GObject" title="GObject">GObject</a>.</p>
 </div>
 <div class="refsect1">
 <a name="NcHIPertIEM.description"></a><h2>Description</h2>
@@ -627,6 +635,11 @@ units of Gauss squared $G_\mathrm{s}^2$.</p>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
 <td class="parameter_name"><p>tau</p></td>
 <td class="parameter_description"><p>$\tau$</p></td>
 <td class="parameter_annotations"> </td>
@@ -640,6 +653,61 @@ units of Gauss squared $G_\mathrm{s}^2$.</p>
 <td class="parameter_name"><p>PB</p></td>
 <td class="parameter_description"><p>the magnetic field power spectrum. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-hipert-em-prepare-spectrum"></a><h3>nc_hipert_em_prepare_spectrum ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_hipert_em_prepare_spectrum (<em class="parameter"><code><a class="link" href="NcHIPertIEM.html#NcHIPertEM"><span class="type">NcHIPertEM</span></a> *pem</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
+                               <em class="parameter"><code><a class="link" href="refs.html#GArray" title="GArray"><span class="type">GArray</span></a> *k_array</code></em>,
+                               <em class="parameter"><code><a class="link" href="refs.html#GArray" title="GArray"><span class="type">GArray</span></a> *tau_array</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="type">NcmPowspecSpline2d</span></a> **ps_E</code></em>,
+                               <em class="parameter"><code><a class="link" href="NcmPowspecSpline2d.html" title="NcmPowspecSpline2d"><span class="type">NcmPowspecSpline2d</span></a> **ps_B</code></em>);</pre>
+<p>Prepares the electric and magnetic field power spectra in units of Gauss squared
+$G_\mathrm{s}^2$.</p>
+<div class="refsect3">
+<a name="nc-hipert-em-prepare-spectrum.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>pem</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHIPertIEM.html#NcHIPertEM"><span class="type">NcHIPertEM</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>k_array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="refs.html#GArray" title="GArray"><span class="type">GArray</span></a> with the wave numbers. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tau_array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="refs.html#GArray" title="GArray"><span class="type">GArray</span></a> with the times. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> gdouble]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ps_E</p></td>
+<td class="parameter_description"><p>the electric field power spectrum. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Out parameter, where callee must allocate storage."><span class="acronym">out callee-allocates</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ps_B</p></td>
+<td class="parameter_description"><p>the magnetic field power spectrum. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Out parameter, where callee must allocate storage."><span class="acronym">out callee-allocates</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>

@@ -7,7 +7,7 @@
 <meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
 <link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
 <link href="ch08s09.html" rel="up" title="Cross-correlations"/>
-<link href="NcXcorLimberKernelCMBLensing.html" rel="prev" title="NcXcorLimberKernelCMBLensing"/>
+<link href="NcXcorLimberKerneltSZ.html" rel="prev" title="NcXcorLimberKerneltSZ"/>
 <link href="NcClusterAbundance.html" rel="next" title="NcClusterAbundance"/>
 <meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
@@ -35,7 +35,7 @@ messageStyle: "none"
 </td>
 <td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
 <td><a accesskey="u" href="ch08s09.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
-<td><a accesskey="p" href="NcXcorLimberKernelCMBLensing.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="p" href="NcXcorLimberKerneltSZ.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
 <td><a accesskey="n" href="NcClusterAbundance.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
@@ -74,6 +74,11 @@ messageStyle: "none"
 </colgroup>
 <tbody>
 <tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcXcorLimberKernelWeakLensing.html#NcXcorLimberKernelWeakLensing--abstol" title="The “abstol” property">abstol</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
 <td class="property_type">
 <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *</td>
 <td class="property_name"><a class="link" href="NcXcorLimberKernelWeakLensing.html#NcXcorLimberKernelWeakLensing--dist" title="The “dist” property">dist</a></td>
@@ -95,6 +100,11 @@ messageStyle: "none"
 <td class="property_name"><a class="link" href="NcXcorLimberKernelWeakLensing.html#NcXcorLimberKernelWeakLensing--nbar" title="The “nbar” property">nbar</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcXcorLimberKernelWeakLensing.html#NcXcorLimberKernelWeakLensing--reltol" title="The “reltol” property">reltol</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -107,6 +117,10 @@ messageStyle: "none"
 </colgroup>
 <tbody>
 <tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcXcorLimberKernelWeakLensing.html#NC-TYPE-XCOR-LIMBER-KERNEL-WEAK-LENSING:CAPS" title="NC_TYPE_XCOR_LIMBER_KERNEL_WEAK_LENSING">NC_TYPE_XCOR_LIMBER_KERNEL_WEAK_LENSING</a></td>
+</tr>
+<tr>
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="NcXcorLimberKernelWeakLensing.html#NcXcorLimberKernelWeakLensingSParams" title="enum NcXcorLimberKernelWeakLensingSParams">NcXcorLimberKernelWeakLensingSParams</a></td>
 </tr>
@@ -118,6 +132,10 @@ messageStyle: "none"
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="NcXcorLimberKernelWeakLensing.html#NC-XCOR-LIMBER-KERNEL-WEAK-LENSING-DEFAULT-PARAMS-ABSTOL:CAPS" title="NC_XCOR_LIMBER_KERNEL_WEAK_LENSING_DEFAULT_PARAMS_ABSTOL">NC_XCOR_LIMBER_KERNEL_WEAK_LENSING_DEFAULT_PARAMS_ABSTOL</a></td>
 </tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcXcorLimberKernelWeakLensing.html#NcXcorLimberKernelWeakLensing-struct" title="NcXcorLimberKernelWeakLensing">NcXcorLimberKernelWeakLensing</a></td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -126,7 +144,7 @@ messageStyle: "none"
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
     <span class="lineart">├──</span> NcXcorLimberKernelWeakLensingSParams
     <span class="lineart">╰──</span> NcXcorLimberKernelWeakLensingVParams
-    GObject
+    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmModel.html" title="NcmModel">NcmModel</a>
         <span class="lineart">╰──</span> <a class="link" href="NcXcorLimberKernel.html" title="NcXcorLimberKernel">NcXcorLimberKernel</a>
             <span class="lineart">╰──</span> NcXcorLimberKernelWeakLensing
@@ -203,6 +221,12 @@ nc_xcor_limber_kernel_weak_lensing_new
 <div class="refsect1">
 <a name="NcXcorLimberKernelWeakLensing.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
+<a name="NC-TYPE-XCOR-LIMBER-KERNEL-WEAK-LENSING:CAPS"></a><h3>NC_TYPE_XCOR_LIMBER_KERNEL_WEAK_LENSING</h3>
+<pre class="programlisting">#define NC_TYPE_XCOR_LIMBER_KERNEL_WEAK_LENSING (nc_xcor_limber_kernel_weak_lensing_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="NcXcorLimberKernelWeakLensingSParams"></a><h3>enum NcXcorLimberKernelWeakLensingSParams</h3>
 <div class="refsect3">
 <a name="NcXcorLimberKernelWeakLensingSParams.members"></a><h4>Members</h4>
@@ -249,9 +273,24 @@ nc_xcor_limber_kernel_weak_lensing_new
 <pre class="programlisting">#define NC_XCOR_LIMBER_KERNEL_WEAK_LENSING_DEFAULT_PARAMS_ABSTOL (0.0)
 </pre>
 </div>
+<hr/>
+<div class="refsect2">
+<a name="NcXcorLimberKernelWeakLensing-struct"></a><h3>NcXcorLimberKernelWeakLensing</h3>
+<pre class="programlisting">typedef struct _NcXcorLimberKernelWeakLensing NcXcorLimberKernelWeakLensing;</pre>
+</div>
 </div>
 <div class="refsect1">
 <a name="NcXcorLimberKernelWeakLensing.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="NcXcorLimberKernelWeakLensing--abstol"></a><h3>The <code class="literal">“abstol”</code> property</h3>
+<pre class="programlisting">  “abstol”                   <span class="type">double</span></pre>
+<p>Absolute tolerance tolerance.</p>
+<p>Owner: NcXcorLimberKernelWeakLensing</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 1e-50</p>
+</div>
+<hr/>
 <div class="refsect2">
 <a name="NcXcorLimberKernelWeakLensing--dist"></a><h3>The <code class="literal">“dist”</code> property</h3>
 <pre class="programlisting">  “dist”                     <a class="link" href="NcDistance.html" title="NcDistance"><span class="type">NcDistance</span></a> *</pre>
@@ -286,6 +325,16 @@ nc_xcor_limber_kernel_weak_lensing_new
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: [0,inf]</p>
 <p>Default value: 0</p>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcXcorLimberKernelWeakLensing--reltol"></a><h3>The <code class="literal">“reltol”</code> property</h3>
+<pre class="programlisting">  “reltol”                   <span class="type">double</span></pre>
+<p>Relative tolerance.</p>
+<p>Owner: NcXcorLimberKernelWeakLensing</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: [2.22045e-16,1]</p>
+<p>Default value: 1e-13</p>
 </div>
 </div>
 </div>

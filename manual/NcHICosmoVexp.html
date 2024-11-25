@@ -229,16 +229,6 @@ messageStyle: "none"
 <tbody>
 <tr>
 <td class="property_type"><span class="type">double</span></td>
-<td class="property_name"><a class="link" href="NcHICosmoVexp.html#NcHICosmoVexp--Bem" title="The “Bem” property">Bem</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><span class="type">gboolean</span></td>
-<td class="property_name"><a class="link" href="NcHICosmoVexp.html#NcHICosmoVexp--Bem-fit" title="The “Bem-fit” property">Bem-fit</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcHICosmoVexp.html#NcHICosmoVexp--H0" title="The “H0” property">H0</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -275,6 +265,16 @@ messageStyle: "none"
 <tr>
 <td class="property_type"><span class="type">gboolean</span></td>
 <td class="property_name"><a class="link" href="NcHICosmoVexp.html#NcHICosmoVexp--alphab-fit" title="The “alphab-fit” property">alphab-fit</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">double</span></td>
+<td class="property_name"><a class="link" href="NcHICosmoVexp.html#NcHICosmoVexp--alphaem" title="The “alphaem” property">alphaem</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">gboolean</span></td>
+<td class="property_name"><a class="link" href="NcHICosmoVexp.html#NcHICosmoVexp--alphaem-fit" title="The “alphaem-fit” property">alphaem-fit</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
@@ -381,7 +381,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="define_keyword">#define</td>
-<td class="function_name"><a class="link" href="NcHICosmoVexp.html#NC-HICOSMO-VEXP-DEFAULT-EM-B:CAPS" title="NC_HICOSMO_VEXP_DEFAULT_EM_B">NC_HICOSMO_VEXP_DEFAULT_EM_B</a></td>
+<td class="function_name"><a class="link" href="NcHICosmoVexp.html#NC-HICOSMO-VEXP-DEFAULT-EM-ALPHA:CAPS" title="NC_HICOSMO_VEXP_DEFAULT_EM_ALPHA">NC_HICOSMO_VEXP_DEFAULT_EM_ALPHA</a></td>
 </tr>
 <tr>
 <td class="define_keyword">#define</td>
@@ -403,7 +403,7 @@ messageStyle: "none"
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
     <span class="lineart">├──</span> NcHICosmoVexpEMCoupling
     <span class="lineart">╰──</span> NcHICosmoVexpSParams
-    GObject
+    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmModel.html" title="NcmModel">NcmModel</a>
         <span class="lineart">╰──</span> <a class="link" href="NcHICosmo.html" title="NcHICosmo">NcHICosmo</a>
             <span class="lineart">╰──</span> NcHICosmoVexp
@@ -912,7 +912,7 @@ nc_hicosmo_Vexp_phi (<em class="parameter"><code><a class="link" href="NcHICosmo
 <pre class="programlisting"><span class="returnvalue">gdouble</span>
 nc_hicosmo_Vexp_E_tau (<em class="parameter"><code><a class="link" href="NcHICosmoVexp.html" title="NcHICosmoVexp"><span class="type">NcHICosmoVexp</span></a> *Vexp</code></em>,
                        <em class="parameter"><code>const <span class="type">gdouble</span> tau</code></em>);</pre>
-<p>FIXME</p>
+<p>Computes the value of $E(\tau)$, where $E(\tau) = H(\tau) / H_0$.</p>
 <div class="refsect3">
 <a name="nc-hicosmo-Vexp-E-tau.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table border="0" class="informaltable" width="100%">
@@ -1088,9 +1088,9 @@ NC_HICOSMO_VEXP_EM_COUPLING_CAUCHY.</p>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
-<td class="enum_member_name"><p><a name="NC-HICOSMO-VEXP-EM-B:CAPS"></a>NC_HICOSMO_VEXP_EM_B</p></td>
+<td class="enum_member_name"><p><a name="NC-HICOSMO-VEXP-EM-ALPHA:CAPS"></a>NC_HICOSMO_VEXP_EM_ALPHA</p></td>
 <td class="enum_member_description">
-<p>electromagnetic coupling amplitude</p>
+<p>electromagnetic coupling amplitude parameter</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1138,11 +1138,6 @@ NC_HICOSMO_VEXP_EM_COUPLING_CAUCHY.</p>
 <p>Cauchy coupling</p>
 </td>
 <td class="enum_member_annotations"> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="NC-HICOSMO-VEXP-EM-COUPLING-INVALID:CAPS"></a>NC_HICOSMO_VEXP_EM_COUPLING_INVALID</p></td>
-<td> </td>
-<td> </td>
 </tr>
 </tbody>
 </table></div>
@@ -1192,8 +1187,8 @@ NC_HICOSMO_VEXP_EM_COUPLING_CAUCHY.</p>
 </div>
 <hr/>
 <div class="refsect2">
-<a name="NC-HICOSMO-VEXP-DEFAULT-EM-B:CAPS"></a><h3>NC_HICOSMO_VEXP_DEFAULT_EM_B</h3>
-<pre class="programlisting">#define NC_HICOSMO_VEXP_DEFAULT_EM_B (1.0e-10)
+<a name="NC-HICOSMO-VEXP-DEFAULT-EM-ALPHA:CAPS"></a><h3>NC_HICOSMO_VEXP_DEFAULT_EM_ALPHA</h3>
+<pre class="programlisting">#define NC_HICOSMO_VEXP_DEFAULT_EM_ALPHA (13.6)
 </pre>
 </div>
 <hr/>
@@ -1217,24 +1212,6 @@ NC_HICOSMO_VEXP_EM_COUPLING_CAUCHY.</p>
 </div>
 <div class="refsect1">
 <a name="NcHICosmoVexp.property-details"></a><h2>Property Details</h2>
-<div class="refsect2">
-<a name="NcHICosmoVexp--Bem"></a><h3>The <code class="literal">“Bem”</code> property</h3>
-<pre class="programlisting">  “Bem”                      <span class="type">double</span></pre>
-<p>B_\mathrm{em}.</p>
-<p>Owner: NcHICosmoVexp</p>
-<p>Flags: Read / Write</p>
-<p>Default value: 1e-10</p>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="NcHICosmoVexp--Bem-fit"></a><h3>The <code class="literal">“Bem-fit”</code> property</h3>
-<pre class="programlisting">  “Bem-fit”                  <span class="type">gboolean</span></pre>
-<p>B_\mathrm{em}:fit.</p>
-<p>Owner: NcHICosmoVexp</p>
-<p>Flags: Read / Write</p>
-<p>Default value: FALSE</p>
-</div>
-<hr/>
 <div class="refsect2">
 <a name="NcHICosmoVexp--H0"></a><h3>The <code class="literal">“H0”</code> property</h3>
 <pre class="programlisting">  “H0”                       <span class="type">double</span></pre>
@@ -1308,12 +1285,30 @@ NC_HICOSMO_VEXP_EM_COUPLING_CAUCHY.</p>
 </div>
 <hr/>
 <div class="refsect2">
+<a name="NcHICosmoVexp--alphaem"></a><h3>The <code class="literal">“alphaem”</code> property</h3>
+<pre class="programlisting">  “alphaem”                  <span class="type">double</span></pre>
+<p>\alpha_{\mathrm{em}}.</p>
+<p>Owner: NcHICosmoVexp</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 13.6</p>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcHICosmoVexp--alphaem-fit"></a><h3>The <code class="literal">“alphaem-fit”</code> property</h3>
+<pre class="programlisting">  “alphaem-fit”              <span class="type">gboolean</span></pre>
+<p>\alpha_{\mathrm{em}}:fit.</p>
+<p>Owner: NcHICosmoVexp</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="NcHICosmoVexp--betaem"></a><h3>The <code class="literal">“betaem”</code> property</h3>
 <pre class="programlisting">  “betaem”                   <span class="type">double</span></pre>
 <p>\beta_\mathrm{em}.</p>
 <p>Owner: NcHICosmoVexp</p>
 <p>Flags: Read / Write</p>
-<p>Default value: 1e-10</p>
+<p>Default value: 0.1</p>
 </div>
 <hr/>
 <div class="refsect2">

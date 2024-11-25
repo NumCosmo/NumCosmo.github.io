@@ -8,7 +8,7 @@
 <link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
 <link href="ch09.html" rel="up" title="Cosmological Data"/>
 <link href="NcDataClusterPseudoCounts.html" rel="prev" title="NcDataClusterPseudoCounts"/>
-<link href="NcDataReducedShearClusterMass.html" rel="next" title="NcDataReducedShearClusterMass"/>
+<link href="NcDataPlanckLKL.html" rel="next" title="NcDataPlanckLKL"/>
 <meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
 <link href="container.css" rel="stylesheet" type="text/css"/><script type="text/x-mathjax-config">
@@ -36,7 +36,7 @@ messageStyle: "none"
 <td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
 <td><a accesskey="u" href="ch09.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
 <td><a accesskey="p" href="NcDataClusterPseudoCounts.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
-<td><a accesskey="n" href="NcDataReducedShearClusterMass.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
+<td><a accesskey="n" href="NcDataPlanckLKL.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
 <a name="NcDataClusterWL"></a><div class="titlepage"></div>
@@ -85,14 +85,6 @@ mentioned in the release notes for the affected release.
 <a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="returnvalue">NcDataClusterWL</span></a> *
 </td>
 <td class="function_name">
-<a class="link" href="NcDataClusterWL.html#nc-data-cluster-wl-new-from-file" title="nc_data_cluster_wl_new_from_file ()">nc_data_cluster_wl_new_from_file</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="returnvalue">NcDataClusterWL</span></a> *
-</td>
-<td class="function_name">
 <a class="link" href="NcDataClusterWL.html#nc-data-cluster-wl-ref" title="nc_data_cluster_wl_ref ()">nc_data_cluster_wl_ref</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -112,6 +104,38 @@ mentioned in the release notes for the affected release.
 <a class="link" href="NcDataClusterWL.html#nc-data-cluster-wl-clear" title="nc_data_cluster_wl_clear ()">nc_data_cluster_wl_clear</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataClusterWL.html#nc-data-cluster-wl-set-prec" title="nc_data_cluster_wl_set_prec ()">nc_data_cluster_wl_set_prec</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataClusterWL.html#nc-data-cluster-wl-set-obs" title="nc_data_cluster_wl_set_obs ()">nc_data_cluster_wl_set_obs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcDataClusterWL.html#nc-data-cluster-wl-set-cut" title="nc_data_cluster_wl_set_cut ()">nc_data_cluster_wl_set_cut</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="NcGalaxyWLObs.html" title="NcGalaxyWLObs"><span class="returnvalue">NcGalaxyWLObs</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcDataClusterWL.html#nc-data-cluster-wl-peek-obs" title="nc_data_cluster_wl_peek_obs ()">nc_data_cluster_wl_peek_obs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -125,30 +149,30 @@ mentioned in the release notes for the affected release.
 </colgroup>
 <tbody>
 <tr>
-<td class="property_type"><span class="type">double</span></td>
-<td class="property_name"><a class="link" href="NcDataClusterWL.html#NcDataClusterWL--dec-cluster" title="The “dec-cluster” property">dec-cluster</a></td>
-<td class="property_flags">Read / Write</td>
+<td class="property_type"><span class="type">guint</span></td>
+<td class="property_name"><a class="link" href="NcDataClusterWL.html#NcDataClusterWL--len" title="The “len” property">len</a></td>
+<td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
 <td class="property_type">
-<a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</td>
-<td class="property_name"><a class="link" href="NcDataClusterWL.html#NcDataClusterWL--galaxy-array" title="The “galaxy-array” property">galaxy-array</a></td>
+<a class="link" href="NcGalaxyWLObs.html" title="NcGalaxyWLObs"><span class="type">NcGalaxyWLObs</span></a> *</td>
+<td class="property_name"><a class="link" href="NcDataClusterWL.html#NcDataClusterWL--obs" title="The “obs” property">obs</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
 <td class="property_type"><span class="type">double</span></td>
-<td class="property_name"><a class="link" href="NcDataClusterWL.html#NcDataClusterWL--psf-size" title="The “psf-size” property">psf-size</a></td>
-<td class="property_flags">Read / Write</td>
+<td class="property_name"><a class="link" href="NcDataClusterWL.html#NcDataClusterWL--prec" title="The “prec” property">prec</a></td>
+<td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
 <td class="property_type"><span class="type">double</span></td>
-<td class="property_name"><a class="link" href="NcDataClusterWL.html#NcDataClusterWL--ra-cluster" title="The “ra-cluster” property">ra-cluster</a></td>
-<td class="property_flags">Read / Write</td>
+<td class="property_name"><a class="link" href="NcDataClusterWL.html#NcDataClusterWL--r-max" title="The “r-max” property">r-max</a></td>
+<td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
 <td class="property_type"><span class="type">double</span></td>
-<td class="property_name"><a class="link" href="NcDataClusterWL.html#NcDataClusterWL--z-cluster" title="The “z-cluster” property">z-cluster</a></td>
-<td class="property_flags">Read / Write</td>
+<td class="property_name"><a class="link" href="NcDataClusterWL.html#NcDataClusterWL--theta-min" title="The “theta-min” property">theta-min</a></td>
+<td class="property_flags">Read / Write / Construct</td>
 </tr>
 </tbody>
 </table></div>
@@ -160,24 +184,32 @@ mentioned in the release notes for the affected release.
 <col class="other_proto_type" width="150px"/>
 <col class="other_proto_name"/>
 </colgroup>
-<tbody><tr>
-<td class="datatype_keyword">enum</td>
-<td class="function_name"><a class="link" href="NcDataClusterWL.html#NcDataClusterWLObs" title="enum NcDataClusterWLObs">NcDataClusterWLObs</a></td>
-</tr></tbody>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcDataClusterWL.html#NC-TYPE-DATA-CLUSTER-WL:CAPS" title="NC_TYPE_DATA_CLUSTER_WL">NC_TYPE_DATA_CLUSTER_WL</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcDataClusterWL.html#NcDataClusterWL-struct" title="NcDataClusterWL">NcDataClusterWL</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcDataClusterWL.html#NcDataClusterWLPrivate" title="NcDataClusterWLPrivate">NcDataClusterWLPrivate</a></td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="NcDataClusterWL.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
-    <span class="lineart">╰──</span> NcDataClusterWLObs
-    GObject
+<pre class="screen">    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmData.html" title="NcmData">NcmData</a>
         <span class="lineart">╰──</span> NcDataClusterWL
 </pre>
 </div>
 <div class="refsect1">
 <a name="NcDataClusterWL.description"></a><h2>Description</h2>
-<p>FIXME</p>
+<p>This class implements the weak lensing likelihood for galaxy clusters.</p>
 </div>
 <div class="refsect1">
 <a name="NcDataClusterWL.functions_details"></a><h2>Functions</h2>
@@ -185,37 +217,10 @@ mentioned in the release notes for the affected release.
 <a name="nc-data-cluster-wl-new"></a><h3>nc_data_cluster_wl_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="returnvalue">NcDataClusterWL</span></a> *
 nc_data_cluster_wl_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>Creates a new <a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="type">NcDataClusterWL</span></a>.</p>
+<p>Creates a new galaxy weak lensing object.</p>
 <div class="refsect3">
 <a name="nc-data-cluster-wl-new.returns"></a><h4>Returns</h4>
-<p> the newly created <a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="type">NcDataClusterWL</span></a>.</p>
-</div>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="nc-data-cluster-wl-new-from-file"></a><h3>nc_data_cluster_wl_new_from_file ()</h3>
-<pre class="programlisting"><a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="returnvalue">NcDataClusterWL</span></a> *
-nc_data_cluster_wl_new_from_file (<em class="parameter"><code>const <span class="type">gchar</span> *filename</code></em>);</pre>
-<p>Creates a new <a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="type">NcDataClusterWL</span></a> from <em class="parameter"><code>filename</code></em>
-.</p>
-<div class="refsect3">
-<a name="nc-data-cluster-wl-new-from-file.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table border="0" class="informaltable" width="100%">
-<colgroup>
-<col class="parameters_name" width="150px"/>
-<col class="parameters_description"/>
-<col class="parameters_annotations" width="200px"/>
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>filename</p></td>
-<td class="parameter_description"><p>file containing a serialized <a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="type">NcDataClusterWL</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="nc-data-cluster-wl-new-from-file.returns"></a><h4>Returns</h4>
-<p>the newly created <a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="type">NcDataClusterWL</span></a>. </p>
+<p>a new NcDataClusterWL. </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
@@ -296,92 +301,194 @@ nc_data_cluster_wl_clear (<em class="parameter"><code><a class="link" href="NcDa
 </table></div>
 </div>
 </div>
-</div>
-<div class="refsect1">
-<a name="NcDataClusterWL.other_details"></a><h2>Types and Values</h2>
+<hr/>
 <div class="refsect2">
-<a name="NcDataClusterWLObs"></a><h3>enum NcDataClusterWLObs</h3>
+<a name="nc-data-cluster-wl-set-prec"></a><h3>nc_data_cluster_wl_set_prec ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_cluster_wl_set_prec (<em class="parameter"><code><a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="type">NcDataClusterWL</span></a> *dcwl</code></em>,
+                             <em class="parameter"><code><span class="type">gdouble</span> prec</code></em>);</pre>
+<p>Sets the number of samples ndata.</p>
 <div class="refsect3">
-<a name="NcDataClusterWLObs.members"></a><h4>Members</h4>
+<a name="nc-data-cluster-wl-set-prec.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table border="0" class="informaltable" width="100%">
 <colgroup>
-<col class="enum_members_name" width="300px"/>
-<col class="enum_members_description"/>
-<col class="enum_members_annotations" width="200px"/>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
 </colgroup>
 <tbody>
 <tr>
-<td class="enum_member_name"><p><a name="NC-DATA-CLUSTER-WL-ZCLUSTER:CAPS"></a>NC_DATA_CLUSTER_WL_ZCLUSTER</p></td>
-<td class="enum_member_description">
-<p>cluster redshift</p>
-</td>
-<td class="enum_member_annotations"> </td>
+<td class="parameter_name"><p>dcwl</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="type">NcDataClusterWL</span></a></p></td>
+<td class="parameter_annotations"> </td>
 </tr>
 <tr>
-<td class="enum_member_name"><p><a name="NC-DATA-CLUSTER-WL-GOBS:CAPS"></a>NC_DATA_CLUSTER_WL_GOBS</p></td>
-<td class="enum_member_description">
-<p>measured reduced shear</p>
-</td>
-<td class="enum_member_annotations"> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="NC-DATA-CLUSTER-WL-PZ:CAPS"></a>NC_DATA_CLUSTER_WL_PZ</p></td>
-<td class="enum_member_description">
-<p>redshift distribution (photometric)</p>
-</td>
-<td class="enum_member_annotations"> </td>
+<td class="parameter_name"><p>prec</p></td>
+<td class="parameter_description"><p>precision for integral</p></td>
+<td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 </div>
+<hr/>
+<div class="refsect2">
+<a name="nc-data-cluster-wl-set-obs"></a><h3>nc_data_cluster_wl_set_obs ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_cluster_wl_set_obs (<em class="parameter"><code><a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="type">NcDataClusterWL</span></a> *dcwl</code></em>,
+                            <em class="parameter"><code><a class="link" href="NcGalaxyWLObs.html" title="NcGalaxyWLObs"><span class="type">NcGalaxyWLObs</span></a> *obs</code></em>);</pre>
+<p>Sets the observables matrix <em class="parameter"><code>obs</code></em>
+.</p>
+<div class="refsect3">
+<a name="nc-data-cluster-wl-set-obs.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dcwl</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="type">NcDataClusterWL</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>obs</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcGalaxyWLObs.html" title="NcGalaxyWLObs"><span class="type">NcGalaxyWLObs</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-data-cluster-wl-set-cut"></a><h3>nc_data_cluster_wl_set_cut ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_data_cluster_wl_set_cut (<em class="parameter"><code><a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="type">NcDataClusterWL</span></a> *dcwl</code></em>,
+                            <em class="parameter"><code>const <span class="type">gdouble</span> r_min</code></em>,
+                            <em class="parameter"><code>const <span class="type">gdouble</span> r_max</code></em>);</pre>
+<p>Sets the radial cut in the observables.</p>
+<div class="refsect3">
+<a name="nc-data-cluster-wl-set-cut.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dcwl</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="type">NcDataClusterWL</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>r_min</p></td>
+<td class="parameter_description"><p>minimum angular radius $\theta_\mathrm{min}$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>r_max</p></td>
+<td class="parameter_description"><p>maximum angular radius $\theta_\mathrm{max}$</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="nc-data-cluster-wl-peek-obs"></a><h3>nc_data_cluster_wl_peek_obs ()</h3>
+<pre class="programlisting"><a class="link" href="NcGalaxyWLObs.html" title="NcGalaxyWLObs"><span class="returnvalue">NcGalaxyWLObs</span></a> *
+nc_data_cluster_wl_peek_obs (<em class="parameter"><code><a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="type">NcDataClusterWL</span></a> *dcwl</code></em>);</pre>
+<p>Gets the observables matrix.</p>
+<div class="refsect3">
+<a name="nc-data-cluster-wl-peek-obs.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>dcwl</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcDataClusterWL.html" title="NcDataClusterWL"><span class="type">NcDataClusterWL</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-data-cluster-wl-peek-obs.returns"></a><h4>Returns</h4>
+<p>the observables matrix. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcDataClusterWL.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NC-TYPE-DATA-CLUSTER-WL:CAPS"></a><h3>NC_TYPE_DATA_CLUSTER_WL</h3>
+<pre class="programlisting">#define NC_TYPE_DATA_CLUSTER_WL (nc_data_cluster_wl_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcDataClusterWL-struct"></a><h3>NcDataClusterWL</h3>
+<pre class="programlisting">typedef struct _NcDataClusterWL NcDataClusterWL;</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcDataClusterWLPrivate"></a><h3>NcDataClusterWLPrivate</h3>
+<pre class="programlisting">typedef struct _NcDataClusterWLPrivate NcDataClusterWLPrivate;</pre>
+</div>
 </div>
 <div class="refsect1">
 <a name="NcDataClusterWL.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="NcDataClusterWL--dec-cluster"></a><h3>The <code class="literal">“dec-cluster”</code> property</h3>
-<pre class="programlisting">  “dec-cluster”              <span class="type">double</span></pre>
-<p>Cluster (halo) DEC.</p>
+<a name="NcDataClusterWL--len"></a><h3>The <code class="literal">“len”</code> property</h3>
+<pre class="programlisting">  “len”                      <span class="type">guint</span></pre>
+<p>Number of galaxies.</p>
 <p>Owner: NcDataClusterWL</p>
-<p>Flags: Read / Write</p>
-<p>Allowed values: [-360,360]</p>
+<p>Flags: Read / Write / Construct</p>
 <p>Default value: 0</p>
 </div>
 <hr/>
 <div class="refsect2">
-<a name="NcDataClusterWL--galaxy-array"></a><h3>The <code class="literal">“galaxy-array”</code> property</h3>
-<pre class="programlisting">  “galaxy-array”             <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</pre>
-<p>Array of galaxy weak lensing objects.</p>
+<a name="NcDataClusterWL--obs"></a><h3>The <code class="literal">“obs”</code> property</h3>
+<pre class="programlisting">  “obs”                      <a class="link" href="NcGalaxyWLObs.html" title="NcGalaxyWLObs"><span class="type">NcGalaxyWLObs</span></a> *</pre>
+<p>Galaxy weak lensing observables.</p>
 <p>Owner: NcDataClusterWL</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr/>
 <div class="refsect2">
-<a name="NcDataClusterWL--psf-size"></a><h3>The <code class="literal">“psf-size”</code> property</h3>
-<pre class="programlisting">  “psf-size”                 <span class="type">double</span></pre>
-<p>PSF size.</p>
+<a name="NcDataClusterWL--prec"></a><h3>The <code class="literal">“prec”</code> property</h3>
+<pre class="programlisting">  “prec”                     <span class="type">double</span></pre>
+<p>Precision for integral.</p>
 <p>Owner: NcDataClusterWL</p>
-<p>Flags: Read / Write</p>
+<p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 0</p>
-<p>Default value: 0</p>
+<p>Default value: 1e-06</p>
 </div>
 <hr/>
 <div class="refsect2">
-<a name="NcDataClusterWL--ra-cluster"></a><h3>The <code class="literal">“ra-cluster”</code> property</h3>
-<pre class="programlisting">  “ra-cluster”               <span class="type">double</span></pre>
-<p>Cluster (halo) RA.</p>
+<a name="NcDataClusterWL--r-max"></a><h3>The <code class="literal">“r-max”</code> property</h3>
+<pre class="programlisting">  “r-max”                    <span class="type">double</span></pre>
+<p>Maximum radius of the weak lensing observables.</p>
 <p>Owner: NcDataClusterWL</p>
-<p>Flags: Read / Write</p>
-<p>Allowed values: [-360,360]</p>
-<p>Default value: 0</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 10</p>
 </div>
 <hr/>
 <div class="refsect2">
-<a name="NcDataClusterWL--z-cluster"></a><h3>The <code class="literal">“z-cluster”</code> property</h3>
-<pre class="programlisting">  “z-cluster”                <span class="type">double</span></pre>
-<p>Cluster (halo) redshift.</p>
+<a name="NcDataClusterWL--theta-min"></a><h3>The <code class="literal">“theta-min”</code> property</h3>
+<pre class="programlisting">  “theta-min”                <span class="type">double</span></pre>
+<p>Minimum radius of the weak lensing observables.</p>
 <p>Owner: NcDataClusterWL</p>
-<p>Flags: Read / Write</p>
+<p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 0</p>
 <p>Default value: 0</p>
 </div>

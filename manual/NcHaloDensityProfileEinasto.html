@@ -6,7 +6,7 @@
 <title>NcHaloDensityProfileEinasto: NumCosmo Reference Manual</title>
 <meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
 <link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
-<link href="ch08s04.html" rel="up" title="Density Profile"/>
+<link href="ch08s04.html" rel="up" title="Cluster Halo"/>
 <link href="NcHaloDensityProfileNFW.html" rel="prev" title="NcHaloDensityProfileNFW"/>
 <link href="NcHaloDensityProfileDK14.html" rel="next" title="NcHaloDensityProfileDK14"/>
 <meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
@@ -95,6 +95,10 @@ messageStyle: "none"
 </colgroup>
 <tbody>
 <tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcHaloDensityProfileEinasto.html#NC-TYPE-HALO-DENSITY-PROFILE-EINASTO:CAPS" title="NC_TYPE_HALO_DENSITY_PROFILE_EINASTO">NC_TYPE_HALO_DENSITY_PROFILE_EINASTO</a></td>
+</tr>
+<tr>
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="NcHaloDensityProfileEinasto.html#NcHaloDensityProfileEinastoParams" title="enum NcHaloDensityProfileEinastoParams">NcHaloDensityProfileEinastoParams</a></td>
 </tr>
@@ -110,6 +114,10 @@ messageStyle: "none"
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="NcHaloDensityProfileEinasto.html#NC-HALO-DENSITY-PROFILE-EINASTO-DEFAULT-PARAMS-ABSTOL:CAPS" title="NC_HALO_DENSITY_PROFILE_EINASTO_DEFAULT_PARAMS_ABSTOL">NC_HALO_DENSITY_PROFILE_EINASTO_DEFAULT_PARAMS_ABSTOL</a></td>
 </tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcHaloDensityProfileEinasto.html#NcHaloDensityProfileEinasto-struct" title="NcHaloDensityProfileEinasto">NcHaloDensityProfileEinasto</a></td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -117,7 +125,7 @@ messageStyle: "none"
 <a name="NcHaloDensityProfileEinasto.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
     <span class="lineart">╰──</span> NcHaloDensityProfileEinastoParams
-    GObject
+    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmModel.html" title="NcmModel">NcmModel</a>
         <span class="lineart">╰──</span> <a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile">NcHaloDensityProfile</a>
             <span class="lineart">╰──</span> NcHaloDensityProfileEinasto
@@ -150,13 +158,9 @@ Dutton \&amp; Maccio (2014) https://academic.oup.com/mnras/article/441/4/3359/12
 <div class="refsect2">
 <a name="nc-halo-density-profile-einasto-new"></a><h3>nc_halo_density_profile_einasto_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcHaloDensityProfileEinasto.html" title="NcHaloDensityProfileEinasto"><span class="returnvalue">NcHaloDensityProfileEinasto</span></a> *
-nc_halo_density_profile_einasto_new (<em class="parameter"><code>const <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfileMassDef" title="enum NcHaloDensityProfileMassDef"><span class="type">NcHaloDensityProfileMassDef</span></a> mdef</code></em>,
-                                     <em class="parameter"><code>const <span class="type">gdouble</span> Delta</code></em>);</pre>
+nc_halo_density_profile_einasto_new (<em class="parameter"><code><a class="link" href="NcHaloMassSummary.html" title="NcHaloMassSummary"><span class="type">NcHaloMassSummary</span></a> *hms</code></em>);</pre>
 <p>This function returns the <a class="link" href="NcHaloDensityProfileEinasto.html" title="NcHaloDensityProfileEinasto"><span class="type">NcHaloDensityProfileEinasto</span></a> implementation of
-<a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> setting <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--mass-def" title="The “mass-def” property"><span class="type">“mass-def”</span></a> to <em class="parameter"><code>mdef</code></em>
-
-and <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--Delta" title="The “Delta” property"><span class="type">“Delta”</span></a> to <em class="parameter"><code>Delta</code></em>
-.</p>
+<a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> given <a class="link" href="NcHaloMassSummary.html" title="NcHaloMassSummary"><span class="type">NcHaloMassSummary</span></a>.</p>
 <div class="refsect3">
 <a name="nc-halo-density-profile-einasto-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table border="0" class="informaltable" width="100%">
@@ -165,18 +169,11 @@ and <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--Delta"
 <col class="parameters_description"/>
 <col class="parameters_annotations" width="200px"/>
 </colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>mdef</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfileMassDef" title="enum NcHaloDensityProfileMassDef"><span class="type">NcHaloDensityProfileMassDef</span></a></p></td>
+<tbody><tr>
+<td class="parameter_name"><p>hms</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassSummary.html" title="NcHaloMassSummary"><span class="type">NcHaloMassSummary</span></a></p></td>
 <td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>Delta</p></td>
-<td class="parameter_description"><p>cluster threshold mass definition $\Delta$</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
+</tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
@@ -187,6 +184,12 @@ and <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--Delta"
 </div>
 <div class="refsect1">
 <a name="NcHaloDensityProfileEinasto.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NC-TYPE-HALO-DENSITY-PROFILE-EINASTO:CAPS"></a><h3>NC_TYPE_HALO_DENSITY_PROFILE_EINASTO</h3>
+<pre class="programlisting">#define NC_TYPE_HALO_DENSITY_PROFILE_EINASTO (nc_halo_density_profile_einasto_get_type ())
+</pre>
+</div>
+<hr/>
 <div class="refsect2">
 <a name="NcHaloDensityProfileEinastoParams"></a><h3>enum NcHaloDensityProfileEinastoParams</h3>
 <p>FIXME</p>
@@ -211,7 +214,7 @@ and <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--Delta"
 <hr/>
 <div class="refsect2">
 <a name="NC-HALO-DENSITY-PROFILE-EINASTO-LOCAL-SPARAM-LEN:CAPS"></a><h3>NC_HALO_DENSITY_PROFILE_EINASTO_LOCAL_SPARAM_LEN</h3>
-<pre class="programlisting">#define NC_HALO_DENSITY_PROFILE_EINASTO_LOCAL_SPARAM_LEN (NC_HALO_DENSITY_PROFILE_EINASTO_SPARAM_LEN - NC_HALO_DENSITY_PROFILE_SPARAM_LEN)
+<pre class="programlisting">#define NC_HALO_DENSITY_PROFILE_EINASTO_LOCAL_SPARAM_LEN (NC_HALO_DENSITY_PROFILE_EINASTO_SPARAM_LEN - 0)
 </pre>
 </div>
 <hr/>
@@ -225,6 +228,11 @@ and <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--Delta"
 <a name="NC-HALO-DENSITY-PROFILE-EINASTO-DEFAULT-PARAMS-ABSTOL:CAPS"></a><h3>NC_HALO_DENSITY_PROFILE_EINASTO_DEFAULT_PARAMS_ABSTOL</h3>
 <pre class="programlisting">#define NC_HALO_DENSITY_PROFILE_EINASTO_DEFAULT_PARAMS_ABSTOL (0.0)
 </pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcHaloDensityProfileEinasto-struct"></a><h3>NcHaloDensityProfileEinasto</h3>
+<pre class="programlisting">typedef struct _NcHaloDensityProfileEinasto NcHaloDensityProfileEinasto;</pre>
 </div>
 </div>
 <div class="refsect1">

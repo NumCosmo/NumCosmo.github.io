@@ -7,7 +7,7 @@
 <meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
 <link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
 <link href="ch08s09.html" rel="up" title="Cross-correlations"/>
-<link href="NcXcor.html" rel="prev" title="Cross-correlations"/>
+<link href="numcosmo-Cross-correlations.html" rel="prev" title="Cross-correlations"/>
 <link href="NcXcorLimberKernel.html" rel="next" title="NcXcorLimberKernel"/>
 <meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
@@ -35,7 +35,7 @@ messageStyle: "none"
 </td>
 <td><a accesskey="h" href="index.html"><img alt="Home" border="0" height="16" src="home.png" width="16"/></a></td>
 <td><a accesskey="u" href="ch08s09.html"><img alt="Up" border="0" height="16" src="up.png" width="16"/></a></td>
-<td><a accesskey="p" href="NcXcor.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
+<td><a accesskey="p" href="numcosmo-Cross-correlations.html"><img alt="Prev" border="0" height="16" src="left.png" width="16"/></a></td>
 <td><a accesskey="n" href="NcXcorLimberKernel.html"><img alt="Next" border="0" height="16" src="right.png" width="16"/></a></td>
 </tr></table>
 <div class="refentry">
@@ -152,15 +152,25 @@ messageStyle: "none"
 <col class="other_proto_type" width="150px"/>
 <col class="other_proto_name"/>
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcXcorAB.html#NC-TYPE-XCOR-AB:CAPS" title="NC_TYPE_XCOR_AB">NC_TYPE_XCOR_AB</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcXcorAB.html#NcXcorAB-struct" title="struct NcXcorAB">NcXcorAB</a></td>
+</tr>
+<tr>
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="NcXcorAB.html#H0-c-3" title="H0_c_3">H0_c_3</a></td>
-</tr></tbody>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="NcXcorAB.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
+<pre class="screen">    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
     <span class="lineart">╰──</span> NcXcorAB
 </pre>
 </div>
@@ -218,13 +228,13 @@ nc_xcor_AB_new (<em class="parameter"><code><span class="type">guint</span> a</c
 </tr>
 <tr>
 <td class="parameter_name"><p>clobs_filename</p></td>
-<td class="parameter_description"><p>a <span class="type">gchar</span>, the name of the file containing the observed pseudo spectrum (should start at zero, even if not used in the likelihod)</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p>a <span class="type">gchar</span>, the name of the file containing the observed pseudo spectrum (should start at zero, even if not used in the likelihood). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>mixing_filename</p></td>
-<td class="parameter_description"><p>a <span class="type">gchar</span>, the name of the file containing the mixing matrix</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p>a <span class="type">gchar</span>, the name of the file containing the mixing matrix. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>mixing_filelength</p></td>
@@ -317,6 +327,17 @@ nc_xcor_AB_clear (<em class="parameter"><code><a class="link" href="NcXcorAB.htm
 </div>
 <div class="refsect1">
 <a name="NcXcorAB.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NC-TYPE-XCOR-AB:CAPS"></a><h3>NC_TYPE_XCOR_AB</h3>
+<pre class="programlisting">#define NC_TYPE_XCOR_AB (nc_xcor_AB_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcXcorAB-struct"></a><h3>struct NcXcorAB</h3>
+<pre class="programlisting">struct NcXcorAB;</pre>
+</div>
+<hr/>
 <div class="refsect2">
 <a name="H0-c-3"></a><h3>H0_c_3</h3>
 <pre class="programlisting">#define H0_c_3 (gsl_pow_3 (1e5 / ncm_c_c ()))

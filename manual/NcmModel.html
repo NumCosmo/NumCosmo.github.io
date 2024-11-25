@@ -113,6 +113,14 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="refs.html#GQuark" title="GQuark"><span class="returnvalue">GQuark</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="NcmModel.html#ncm-model-error-quark" title="ncm_model_error_quark ()">ncm_model_error_quark</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -659,7 +667,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GPtrArray</span> *
+<a class="link" href="refs.html#GPtrArray" title="GPtrArray"><span class="returnvalue">GPtrArray</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="NcmModel.html#ncm-model-param-names" title="ncm_model_param_names ()">ncm_model_param_names</a> <span class="c_punctuation">()</span>
@@ -815,6 +823,22 @@ messageStyle: "none"
 </td>
 <td class="function_name">
 <a class="link" href="NcmModel.html#ncm-model-params-set-default-ftype" title="ncm_model_params_set_default_ftype ()">ncm_model_params_set_default_ftype</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="refs.html#GHashTable" title="GHashTable"><span class="returnvalue">GHashTable</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcmModel.html#ncm-model-param-get-desc" title="ncm_model_param_get_desc ()">ncm_model_param_get_desc</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcmModel.html#ncm-model-param-set-desc" title="ncm_model_param_set_desc ()">ncm_model_param_set_desc</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -1002,7 +1026,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="property_type">
-<span class="type">GArray</span> *</td>
+<a class="link" href="refs.html#GArray" title="GArray"><span class="type">GArray</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmModel.html#NcmModel--params-types" title="The “params-types” property">params-types</a></td>
 <td class="property_flags">Read</td>
 </tr>
@@ -1027,7 +1051,7 @@ messageStyle: "none"
 <td class="property_type">
 <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</td>
 <td class="property_name"><a class="link" href="NcmModel.html#NcmModel--submodel-array" title="The “submodel-array” property">submodel-array</a></td>
-<td class="property_flags">Read / Write</td>
+<td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
 <td class="property_type"><span class="type">guint</span></td>
@@ -1062,6 +1086,14 @@ messageStyle: "none"
 <td class="function_name"><a class="link" href="NcmModel.html#NCM-MODEL-MAX-STATES:CAPS" title="NCM_MODEL_MAX_STATES">NCM_MODEL_MAX_STATES</a></td>
 </tr>
 <tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="NcmModel.html#NcmModelError" title="enum NcmModelError">NcmModelError</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcmModel.html#NCM-MODEL-ERROR:CAPS" title="NCM_MODEL_ERROR">NCM_MODEL_ERROR</a></td>
+</tr>
+<tr>
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="NcmModel.html#NCM-MODEL-CLASS-IMPL-ALL:CAPS" title="NCM_MODEL_CLASS_IMPL_ALL">NCM_MODEL_CLASS_IMPL_ALL</a></td>
 </tr>
@@ -1074,12 +1106,20 @@ messageStyle: "none"
 </div>
 <div class="refsect1">
 <a name="NcmModel.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">╰──</span> NcmModelError
+    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
     <span class="lineart">╰──</span> NcmModel
         <span class="lineart">├──</span> <a class="link" href="NcClusterMass.html" title="NcClusterMass">NcClusterMass</a>
         <span class="lineart">├──</span> <a class="link" href="NcClusterRedshift.html" title="NcClusterRedshift">NcClusterRedshift</a>
         <span class="lineart">├──</span> <a class="link" href="NcClusterPseudoCounts.html" title="NcClusterPseudoCounts">NcClusterPseudoCounts</a>
+        <span class="lineart">├──</span> <a class="link" href="NcGalaxySDObsRedshift.html" title="NcGalaxySDObsRedshift">NcGalaxySDObsRedshift</a>
+        <span class="lineart">├──</span> <a class="link" href="NcGalaxySDPosition.html" title="NcGalaxySDPosition">NcGalaxySDPosition</a>
+        <span class="lineart">├──</span> <a class="link" href="NcGalaxySDShape.html" title="NcGalaxySDShape">NcGalaxySDShape</a>
+        <span class="lineart">├──</span> <a class="link" href="NcGalaxySDTrueRedshift.html" title="NcGalaxySDTrueRedshift">NcGalaxySDTrueRedshift</a>
         <span class="lineart">├──</span> <a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile">NcHaloDensityProfile</a>
+        <span class="lineart">├──</span> <a class="link" href="NcHaloMassSummary.html" title="NcHaloMassSummary">NcHaloMassSummary</a>
+        <span class="lineart">├──</span> <a class="link" href="NcHaloPosition.html" title="NcHaloPosition">NcHaloPosition</a>
         <span class="lineart">├──</span> <a class="link" href="NcHICosmo.html" title="NcHICosmo">NcHICosmo</a>
         <span class="lineart">├──</span> <a class="link" href="NcPriorQSplineCont.html#NcHICosmoQSplineContPrior">NcHICosmoQSplineContPrior</a>
         <span class="lineart">├──</span> <a class="link" href="NcHIPrim.html" title="NcHIPrim">NcHIPrim</a>
@@ -1156,6 +1196,12 @@ This allows multiples models types to be used simultaneously.</p>
                    <em class="parameter"><code>const <span class="type">guint</span> n</code></em>,
                    <em class="parameter"><code>const <span class="type">gdouble</span> x</code></em>,
                    <em class="parameter"><code>const <span class="type">gdouble</span> y</code></em>);</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-model-error-quark"></a><h3>ncm_model_error_quark ()</h3>
+<pre class="programlisting"><a class="link" href="refs.html#GQuark" title="GQuark"><span class="returnvalue">GQuark</span></a>
+ncm_model_error_quark (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 </div>
 <hr/>
 <div class="refsect2">
@@ -1693,7 +1739,8 @@ all memory allocated by <em class="parameter"><code>model</code></em>
 <a name="ncm-model-set-reparam"></a><h3>ncm_model_set_reparam ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_model_set_reparam (<em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
-                       <em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>);</pre>
+                       <em class="parameter"><code><a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a> *reparam</code></em>,
+                       <em class="parameter"><code><a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Sets the reparametrization of <em class="parameter"><code>model</code></em>
  to <em class="parameter"><code>reparam</code></em>
 .</p>
@@ -1714,6 +1761,11 @@ ncm_model_set_reparam (<em class="parameter"><code><a class="link" href="NcmMode
 <tr>
 <td class="parameter_name"><p>reparam</p></td>
 <td class="parameter_description"><p>a <a class="link" href="NcmReparam.html" title="NcmReparam"><span class="type">NcmReparam</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1783,7 +1835,8 @@ ncm_model_id (<em class="parameter"><code><a class="link" href="NcmModel.html" t
 <div class="refsect2">
 <a name="ncm-model-id-by-type"></a><h3>ncm_model_id_by_type ()</h3>
 <pre class="programlisting"><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="returnvalue">NcmModelID</span></a>
-ncm_model_id_by_type (<em class="parameter"><code><span class="type">GType</span> model_type</code></em>);</pre>
+ncm_model_id_by_type (<em class="parameter"><code><a class="link" href="refs.html#GType" title="GType"><span class="type">GType</span></a> model_type</code></em>,
+                      <em class="parameter"><code><a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Gets the model id of a model type. It is an error to call this function
 with a type that is not a subclass of <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a>.</p>
 <div class="refsect3">
@@ -1794,11 +1847,18 @@ with a type that is not a subclass of <a class="link" href="NcmModel.html" title
 <col class="parameters_description"/>
 <col class="parameters_annotations" width="200px"/>
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
 <td class="parameter_name"><p>model_type</p></td>
-<td class="parameter_description"><p>a <span class="type">GType</span></p></td>
+<td class="parameter_description"><p>a GType</p></td>
 <td class="parameter_annotations"> </td>
-</tr></tbody>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect3">
@@ -3260,7 +3320,8 @@ is found in the <em class="parameter"><code>model</code></em>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>
 ncm_model_param_index_from_name (<em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
                                  <em class="parameter"><code>const <span class="type">gchar</span> *param_name</code></em>,
-                                 <em class="parameter"><code><span class="type">guint</span> *i</code></em>);</pre>
+                                 <em class="parameter"><code><span class="type">guint</span> *i</code></em>,
+                                 <em class="parameter"><code><a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Looks for parameter named <em class="parameter"><code>param_name</code></em>
  in <em class="parameter"><code>model</code></em>
  and puts its index in <em class="parameter"><code>i</code></em>
@@ -3289,6 +3350,11 @@ and returns TRUE if found.</p>
 <td class="parameter_name"><p>i</p></td>
 <td class="parameter_description"><p>parameter index. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a></p></td>
+<td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
@@ -3331,7 +3397,7 @@ ncm_model_param_symbol (<em class="parameter"><code><a class="link" href="NcmMod
 <hr/>
 <div class="refsect2">
 <a name="ncm-model-param-names"></a><h3>ncm_model_param_names ()</h3>
-<pre class="programlisting"><span class="returnvalue">GPtrArray</span> *
+<pre class="programlisting"><a class="link" href="refs.html#GPtrArray" title="GPtrArray"><span class="returnvalue">GPtrArray</span></a> *
 ncm_model_param_names (<em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>);</pre>
 <p>Gets an array containing the parameters names.</p>
 <div class="refsect3">
@@ -3352,7 +3418,7 @@ ncm_model_param_names (<em class="parameter"><code><a class="link" href="NcmMode
 <div class="refsect3">
 <a name="ncm-model-param-names.returns"></a><h4>Returns</h4>
 <p>an array containing the parameters names. </p>
-<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data container, but not the data inside it."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span></p>
 </div>
 </div>
 <hr/>
@@ -3361,7 +3427,8 @@ ncm_model_param_names (<em class="parameter"><code><a class="link" href="NcmMode
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_model_param_set_by_name (<em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
                              <em class="parameter"><code>const <span class="type">gchar</span> *param_name</code></em>,
-                             <em class="parameter"><code><span class="type">gdouble</span> val</code></em>);</pre>
+                             <em class="parameter"><code><span class="type">gdouble</span> val</code></em>,
+                             <em class="parameter"><code><a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Sets the parameter value <em class="parameter"><code>val</code></em>
  by <em class="parameter"><code>param_name</code></em>
 .</p>
@@ -3389,6 +3456,11 @@ ncm_model_param_set_by_name (<em class="parameter"><code><a class="link" href="N
 <td class="parameter_description"><p>parameter value</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -3399,7 +3471,8 @@ ncm_model_param_set_by_name (<em class="parameter"><code><a class="link" href="N
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_model_orig_param_set_by_name (<em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
                                   <em class="parameter"><code>const <span class="type">gchar</span> *param_name</code></em>,
-                                  <em class="parameter"><code><span class="type">gdouble</span> val</code></em>);</pre>
+                                  <em class="parameter"><code><span class="type">gdouble</span> val</code></em>,
+                                  <em class="parameter"><code><a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Sets the parameter value <em class="parameter"><code>val</code></em>
  by <em class="parameter"><code>param_name</code></em>
 .</p>
@@ -3427,6 +3500,11 @@ ncm_model_orig_param_set_by_name (<em class="parameter"><code><a class="link" hr
 <td class="parameter_description"><p>parameter value</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -3436,7 +3514,8 @@ ncm_model_orig_param_set_by_name (<em class="parameter"><code><a class="link" hr
 <a name="ncm-model-param-get-by-name"></a><h3>ncm_model_param_get_by_name ()</h3>
 <pre class="programlisting"><span class="returnvalue">gdouble</span>
 ncm_model_param_get_by_name (<em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
-                             <em class="parameter"><code>const <span class="type">gchar</span> *param_name</code></em>);</pre>
+                             <em class="parameter"><code>const <span class="type">gchar</span> *param_name</code></em>,
+                             <em class="parameter"><code><a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Gets the parameter value by <em class="parameter"><code>param_name</code></em>
 .</p>
 <div class="refsect3">
@@ -3458,6 +3537,11 @@ ncm_model_param_get_by_name (<em class="parameter"><code><a class="link" href="N
 <td class="parameter_description"><p>parameter name</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -3471,7 +3555,8 @@ ncm_model_param_get_by_name (<em class="parameter"><code><a class="link" href="N
 <a name="ncm-model-orig-param-get-by-name"></a><h3>ncm_model_orig_param_get_by_name ()</h3>
 <pre class="programlisting"><span class="returnvalue">gdouble</span>
 ncm_model_orig_param_get_by_name (<em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
-                                  <em class="parameter"><code>const <span class="type">gchar</span> *param_name</code></em>);</pre>
+                                  <em class="parameter"><code>const <span class="type">gchar</span> *param_name</code></em>,
+                                  <em class="parameter"><code><a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Gets the original parameter value by <em class="parameter"><code>param_name</code></em>
 .</p>
 <div class="refsect3">
@@ -3491,6 +3576,11 @@ ncm_model_orig_param_get_by_name (<em class="parameter"><code><a class="link" hr
 <tr>
 <td class="parameter_name"><p>param_name</p></td>
 <td class="parameter_description"><p>parameter name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -4039,6 +4129,115 @@ ncm_model_params_set_default_ftype (<em class="parameter"><code><a class="link" 
 </div>
 <hr/>
 <div class="refsect2">
+<a name="ncm-model-param-get-desc"></a><h3>ncm_model_param_get_desc ()</h3>
+<pre class="programlisting"><a class="link" href="refs.html#GHashTable" title="GHashTable"><span class="returnvalue">GHashTable</span></a> *
+ncm_model_param_get_desc (<em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
+                          <em class="parameter"><code><span class="type">gchar</span> *param</code></em>,
+                          <em class="parameter"><code><a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Gets the description of the parameter <em class="parameter"><code>param</code></em>
+. The output is a GHashTable which
+contains the following keys:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>"name": the name of the parameter.</p></li>
+<li class="listitem"><p>"symbol": the symbol of the parameter.</p></li>
+<li class="listitem"><p>"scale": the scale of the parameter.</p></li>
+<li class="listitem"><p>"lower-bound": the lower bound of the parameter.</p></li>
+<li class="listitem"><p>"upper-bound": the upper bound of the parameter.</p></li>
+<li class="listitem"><p>"abstol": the absolute tolerance of the parameter.</p></li>
+<li class="listitem"><p>"fit": whether the parameter is a fitting parameter.</p></li>
+<li class="listitem"><p>"value": the current value of the parameter.</p></li>
+</ul></div>
+<div class="refsect3">
+<a name="ncm-model-param-get-desc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param</p></td>
+<td class="parameter_description"><p>parameter name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="ncm-model-param-get-desc.returns"></a><h4>Returns</h4>
+<p>the description of the parameter <em class="parameter"><code>param</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8 GValue]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="ncm-model-param-set-desc"></a><h3>ncm_model_param_set_desc ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+ncm_model_param_set_desc (<em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
+                          <em class="parameter"><code><span class="type">gchar</span> *param</code></em>,
+                          <em class="parameter"><code><a class="link" href="refs.html#GHashTable" title="GHashTable"><span class="type">GHashTable</span></a> *desc</code></em>,
+                          <em class="parameter"><code><a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Sets the description of the parameter <em class="parameter"><code>param</code></em>
+. The input is a GHashTable which
+may contain the following keys:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>"name": the name of the parameter.</p></li>
+<li class="listitem"><p>"symbol": the symbol of the parameter.</p></li>
+<li class="listitem"><p>"scale": the scale of the parameter.</p></li>
+<li class="listitem"><p>"lower-bound": the lower bound of the parameter.</p></li>
+<li class="listitem"><p>"upper-bound": the upper bound of the parameter.</p></li>
+<li class="listitem"><p>"abstol": the absolute tolerance of the parameter.</p></li>
+<li class="listitem"><p>"fit": whether the parameter is a fitting parameter.</p></li>
+<li class="listitem"><p>"value": the current value of the parameter.</p></li>
+</ul></div>
+<p>Other keys are ignored.</p>
+<div class="refsect3">
+<a name="ncm-model-param-set-desc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>model</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param</p></td>
+<td class="parameter_description"><p>parameter name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>desc</p></td>
+<td class="parameter_description"><p>a GHashTable. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8 GValue]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a> pointer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="ncm-model-is-submodel"></a><h3>ncm_model_is_submodel ()</h3>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>
 ncm_model_is_submodel (<em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>);</pre>
@@ -4266,7 +4465,7 @@ position or -1 if not found.</p>
 <div class="refsect2">
 <a name="ncm-model-type-is-submodel"></a><h3>ncm_model_type_is_submodel ()</h3>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>
-ncm_model_type_is_submodel (<em class="parameter"><code><span class="type">GType</span> model_type</code></em>);</pre>
+ncm_model_type_is_submodel (<em class="parameter"><code><a class="link" href="refs.html#GType" title="GType"><span class="type">GType</span></a> model_type</code></em>);</pre>
 <p>Tests if <em class="parameter"><code>model_type</code></em>
  is a submodel of other model class.</p>
 <div class="refsect3">
@@ -4279,7 +4478,7 @@ ncm_model_type_is_submodel (<em class="parameter"><code><span class="type">GType
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>model_type</p></td>
-<td class="parameter_description"><p>a <span class="type">GType</span></p></td>
+<td class="parameter_description"><p>a GType</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -4294,7 +4493,7 @@ is a submodel of other model class.</p>
 <div class="refsect2">
 <a name="ncm-model-type-main-model"></a><h3>ncm_model_type_main_model ()</h3>
 <pre class="programlisting"><a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="returnvalue">NcmModelID</span></a>
-ncm_model_type_main_model (<em class="parameter"><code><span class="type">GType</span> model_type</code></em>);</pre>
+ncm_model_type_main_model (<em class="parameter"><code><a class="link" href="refs.html#GType" title="GType"><span class="type">GType</span></a> model_type</code></em>);</pre>
 <p>If <em class="parameter"><code>model_type</code></em>
  is a submodel returns the <a class="link" href="NcmModel.html#NcmModelID" title="NcmModelID"><span class="type">NcmModelID</span></a> of its
 main model, otherwise returns -1.</p>
@@ -4308,7 +4507,7 @@ main model, otherwise returns -1.</p>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>model_type</p></td>
-<td class="parameter_description"><p>a <span class="type">GType</span></p></td>
+<td class="parameter_description"><p>a GType</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -4324,7 +4523,7 @@ main model, otherwise returns -1.</p>
 <pre class="programlisting"><span class="returnvalue">gdouble</span>
 ncm_model___getitem__ (<em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
                        <em class="parameter"><code><span class="type">gchar</span> *param</code></em>,
-                       <em class="parameter"><code><span class="type">GError</span> **err</code></em>);</pre>
+                       <em class="parameter"><code><a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Gets the parameter by name.</p>
 <div class="refsect3">
 <a name="ncm-model---getitem--.parameters"></a><h4>Parameters</h4>
@@ -4346,8 +4545,8 @@ ncm_model___getitem__ (<em class="parameter"><code><a class="link" href="NcmMode
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
-<td class="parameter_name"><p>err</p></td>
-<td class="parameter_description"><p>a <span class="type">GError</span></p></td>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a GError</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -4365,7 +4564,7 @@ ncm_model___getitem__ (<em class="parameter"><code><a class="link" href="NcmMode
 ncm_model___setitem__ (<em class="parameter"><code><a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> *model</code></em>,
                        <em class="parameter"><code><span class="type">gchar</span> *param</code></em>,
                        <em class="parameter"><code><span class="type">gdouble</span> val</code></em>,
-                       <em class="parameter"><code><span class="type">GError</span> **err</code></em>);</pre>
+                       <em class="parameter"><code><a class="link" href="refs.html#GError" title="GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Sets the parameter by name.</p>
 <div class="refsect3">
 <a name="ncm-model---setitem--.parameters"></a><h4>Parameters</h4>
@@ -4392,8 +4591,8 @@ ncm_model___setitem__ (<em class="parameter"><code><a class="link" href="NcmMode
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
-<td class="parameter_name"><p>err</p></td>
-<td class="parameter_description"><p>a pointer for <span class="type">GError</span></p></td>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a pointer for GError</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -4488,6 +4687,85 @@ ncm_model___setitem__ (<em class="parameter"><code><a class="link" href="NcmMode
 </div>
 <hr/>
 <div class="refsect2">
+<a name="NcmModelError"></a><h3>enum NcmModelError</h3>
+<p>Error codes returned by the <a class="link" href="NcmModel.html" title="NcmModel"><span class="type">NcmModel</span></a> class.</p>
+<div class="refsect3">
+<a name="NcmModelError.members"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="enum_members_name" width="300px"/>
+<col class="enum_members_description"/>
+<col class="enum_members_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MODEL-ERROR-PARAM-NAME-NOT-FOUND:CAPS"></a>NCM_MODEL_ERROR_PARAM_NAME_NOT_FOUND</p></td>
+<td class="enum_member_description">
+<p>The parameter name was not found.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MODEL-ERROR-PARAM-ID-OUT-OF-RANGE:CAPS"></a>NCM_MODEL_ERROR_PARAM_ID_OUT_OF_RANGE</p></td>
+<td class="enum_member_description">
+<p>The parameter id is out of range.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MODEL-ERROR-PARAM-INVALID-TYPE:CAPS"></a>NCM_MODEL_ERROR_PARAM_INVALID_TYPE</p></td>
+<td class="enum_member_description">
+<p>The parameter type is invalid.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MODEL-ERROR-PARAM-INVALID-KEY:CAPS"></a>NCM_MODEL_ERROR_PARAM_INVALID_KEY</p></td>
+<td class="enum_member_description">
+<p>The parameter key is invalid.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MODEL-ERROR-ORIG-PARAM-NAME-NOT-FOUND:CAPS"></a>NCM_MODEL_ERROR_ORIG_PARAM_NAME_NOT_FOUND</p></td>
+<td class="enum_member_description">
+<p>The original parameter name was not found.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MODEL-ERROR-REPARAM-INCOMPATIBLE:CAPS"></a>NCM_MODEL_ERROR_REPARAM_INCOMPATIBLE</p></td>
+<td class="enum_member_description">
+<p>The reparam is incompatible.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MODEL-ERROR-INVALID-TYPE:CAPS"></a>NCM_MODEL_ERROR_INVALID_TYPE</p></td>
+<td class="enum_member_description">
+<p>The type is invalid.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="NCM-MODEL-ERROR-PARAM-CHANGED:CAPS"></a>NCM_MODEL_ERROR_PARAM_CHANGED</p></td>
+<td class="enum_member_description">
+<p>The parameter was changed.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NCM-MODEL-ERROR:CAPS"></a><h3>NCM_MODEL_ERROR</h3>
+<pre class="programlisting">#define NCM_MODEL_ERROR (ncm_model_error_quark ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="NCM-MODEL-CLASS-IMPL-ALL:CAPS"></a><h3>NCM_MODEL_CLASS_IMPL_ALL</h3>
 <pre class="programlisting">#define NCM_MODEL_CLASS_IMPL_ALL ((guint64) (~((guint64) 0)))
 </pre>
@@ -4529,7 +4807,7 @@ ncm_model___setitem__ (<em class="parameter"><code><a class="link" href="NcmMode
 <hr/>
 <div class="refsect2">
 <a name="NcmModel--params-types"></a><h3>The <code class="literal">“params-types”</code> property</h3>
-<pre class="programlisting">  “params-types”             <span class="type">GArray</span> *</pre>
+<pre class="programlisting">  “params-types”             <a class="link" href="refs.html#GArray" title="GArray"><span class="type">GArray</span></a> *</pre>
 <p>Parameters' types.</p>
 <p>Owner: NcmModel</p>
 <p>Flags: Read</p>
@@ -4565,7 +4843,7 @@ ncm_model___setitem__ (<em class="parameter"><code><a class="link" href="NcmMode
 <pre class="programlisting">  “submodel-array”           <a class="link" href="NcmObjArray.html" title="NcmObjArray"><span class="type">NcmObjArray</span></a> *</pre>
 <p>NcmModel array of submodels.</p>
 <p>Owner: NcmModel</p>
-<p>Flags: Read / Write</p>
+<p>Flags: Read / Write / Construct</p>
 </div>
 <hr/>
 <div class="refsect2">

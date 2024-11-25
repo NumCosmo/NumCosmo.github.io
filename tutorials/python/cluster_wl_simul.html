@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Simulating Galaxy Shapes with NumCosmo Cluster Weak Lensing Tools – The Numerical Cosmology Library</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon_numcosmo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">The Numerical Cosmology Library</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About NumCosmo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../install.html"> 
+<span class="menu-text">Installation Instructions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../manual.html"> 
+<span class="menu-text">Manual</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/NumCosmo/NumCosmo">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/NumCosmo/NumCosmo/issues">
+            Issues
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Programming Tutorials</li><li class="breadcrumb-item"><a href="../../tutorials/python/cluster_wl_simul.html">Python Tutorials</a></li><li class="breadcrumb-item"><a href="../../tutorials/python/cluster_wl_simul.html">Cluster WL Simulation</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../numcosmo_logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Programming Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">C Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/c/gobject.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GObject Tutorial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/c/curve_tutorial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Model Fit Tutorial</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Python Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/python/cluster_wl_simul.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Cluster WL Simulation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Examples</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Data Analysis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../examples/data_analysis/snia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SN Ia Fitting</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-purpose" id="toc-sec-purpose" class="nav-link active" data-scroll-target="#sec-purpose">Purpose</a></li>
+  <li><a href="#defining-theoretical-models" id="toc-defining-theoretical-models" class="nav-link" data-scroll-target="#defining-theoretical-models">Defining Theoretical Models</a>
+  <ul class="collapse">
+  <li><a href="#cosmological-model" id="toc-cosmological-model" class="nav-link" data-scroll-target="#cosmological-model">Cosmological Model</a></li>
+  <li><a href="#cluster-profile-model" id="toc-cluster-profile-model" class="nav-link" data-scroll-target="#cluster-profile-model">Cluster Profile Model</a></li>
+  <li><a href="#galaxy-distribution-model" id="toc-galaxy-distribution-model" class="nav-link" data-scroll-target="#galaxy-distribution-model">Galaxy Distribution Model</a></li>
+  <li><a href="#weak-lensing-model" id="toc-weak-lensing-model" class="nav-link" data-scroll-target="#weak-lensing-model">Weak Lensing Model</a></li>
+  <li><a href="#model-set" id="toc-model-set" class="nav-link" data-scroll-target="#model-set">Model-Set</a></li>
+  </ul></li>
+  <li><a href="#generating-mock-data" id="toc-generating-mock-data" class="nav-link" data-scroll-target="#generating-mock-data">Generating Mock Data</a></li>
+  <li><a href="#varying-the-cluster-mass-and-position" id="toc-varying-the-cluster-mass-and-position" class="nav-link" data-scroll-target="#varying-the-cluster-mass-and-position">Varying the Cluster Mass and Position</a>
+  <ul class="collapse">
+  <li><a href="#varying-halo-position" id="toc-varying-halo-position" class="nav-link" data-scroll-target="#varying-halo-position">Varying Halo Position</a></li>
+  <li><a href="#varying-halo-mass" id="toc-varying-halo-mass" class="nav-link" data-scroll-target="#varying-halo-mass">Varying Halo Mass</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Programming Tutorials</li><li class="breadcrumb-item"><a href="../../tutorials/python/cluster_wl_simul.html">Python Tutorials</a></li><li class="breadcrumb-item"><a href="../../tutorials/python/cluster_wl_simul.html">Cluster WL Simulation</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Simulating Galaxy Shapes with NumCosmo Cluster Weak Lensing Tools</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>NumCosmo developers </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="hidden">
+<div id="8a0aeb95" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> doc_theme():</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> theme_minimal() <span class="op">+</span> theme(</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        panel_grid_minor<span class="op">=</span>element_line(color<span class="op">=</span><span class="st">"gray"</span>, linetype<span class="op">=</span><span class="st">"--"</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<section id="sec-purpose" class="level2">
+<h2 class="anchored" data-anchor-id="sec-purpose">Purpose</h2>
+<p>This document serves as a guide for utilizing NumCosmo’s cluster weak lensing tools to simulate the weak lensing signal produced by galaxy clusters. In this tutorial, we demonstrate how to generate mock weak lensing data for galaxy clusters, focusing on simulating galaxy shapes with varying cluster positions and masses using NumCosmo. These simulations provide insights into how weak lensing signal changes with cluster properties and can be used to test the performance of weak lensing analysis methods.</p>
+</section>
+<section id="defining-theoretical-models" class="level2">
+<h2 class="anchored" data-anchor-id="defining-theoretical-models">Defining Theoretical Models</h2>
+<section id="cosmological-model" class="level3">
+<h3 class="anchored" data-anchor-id="cosmological-model">Cosmological Model</h3>
+<p>To begin, we define a cosmological model using NumCosmo’s background cosmology models. We also create an <code>Nc.Distance</code> object to compute the cosmological distances required for the weak lensing analysis.</p>
+<p>For this example, we consider a Lambda Cold Dark Matter (<span class="math inline">\(\Lambda\)</span>CDM) cosmology with the following parameters:</p>
+<ul>
+<li><span class="math inline">\(\Omega_{c0} = 0.25\)</span>: Cold dark matter density parameter at present</li>
+<li><span class="math inline">\(\Omega_{b0} = 0.05\)</span>: Baryon density parameter at present</li>
+<li><span class="math inline">\(\Omega_{k0} = 0\)</span>: Curvature density parameter at present</li>
+<li><span class="math inline">\(H_0 = 70.0\)</span>: Hubble constant in km/s/Mpc</li>
+</ul>
+<div id="57ae42fb" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numcosmo_py <span class="im">import</span> Nc, Ncm</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numcosmo_py.plotting.tools <span class="im">import</span> add_ellipse_from_ellipticity</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>Ncm.cfg_init()</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>Omega_b <span class="op">=</span> <span class="fl">0.05</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>Omega_c <span class="op">=</span> <span class="fl">0.25</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>Omega_k <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>H0 <span class="op">=</span> <span class="fl">70.0</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a cosmology object</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>cosmo <span class="op">=</span> Nc.HICosmoDEXcdm.new()</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>cosmo.omega_x2omega_k()</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>cosmo[<span class="st">"Omegab"</span>] <span class="op">=</span> Omega_b</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>cosmo[<span class="st">"Omegac"</span>] <span class="op">=</span> Omega_c</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>cosmo[<span class="st">"Omegak"</span>] <span class="op">=</span> Omega_k</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>cosmo[<span class="st">"H0"</span>] <span class="op">=</span> H0</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>cosmo[<span class="st">"w"</span>] <span class="op">=</span> <span class="op">-</span><span class="fl">1.0</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>dist <span class="op">=</span> Nc.Distance.new(<span class="fl">100.0</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>dist.prepare(cosmo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="cluster-profile-model" class="level3">
+<h3 class="anchored" data-anchor-id="cluster-profile-model">Cluster Profile Model</h3>
+<p>Next, we define a model for the cluster density profile. For this example, we consider the NFW (Navarro-Frenk-White) profile, a widely used model for the density profile of galaxy clusters. Since we are taking into account the miscentering effect, we also need to define a model for the cluster position. Additionally, we create an <code>Nc.WLSurfaceMassDensity</code> object to compute the shear produced by the cluster.</p>
+<p>For our simulation, we define the following parameters:</p>
+<ul>
+<li><code>Nc.HaloDensityProfile</code>:
+<ul>
+<li><strong>Halo density profile</strong>: NFW</li>
+<li><strong>Mass overdensity</strong>: <span class="math inline">\(\Delta = 200\)</span></li>
+<li><strong>Mass definition</strong>: Critical density</li>
+<li><strong>Mass of the cluster</strong>: <span class="math inline">\(M = 2.0 \times 10^{16} M_\odot\)</span></li>
+<li><strong>Concentration parameter</strong>: <span class="math inline">\(c = 4.0\)</span></li>
+</ul></li>
+<li><code>Nc.HaloPosition</code>:
+<ul>
+<li><strong>Right ascension (RA)</strong>: <span class="math inline">\(12.34^\circ\)</span></li>
+<li><strong>Declination (Dec)</strong>: <span class="math inline">\(-55.123^\circ\)</span></li>
+<li><strong>Redshift of the cluster</strong>: <span class="math inline">\(z = 0.2\)</span></li>
+</ul></li>
+</ul>
+<p>We choose a cluster with a halo mass that is an exceptionally large mass, selected deliberately to make the lensing effect very visible in our simulations.</p>
+<p>The cluster’s right ascension (RA) and declination (Dec) are set to <span class="math inline">\(12.34^\circ\)</span> and <span class="math inline">\(-55.123^\circ\)</span>, respectively.</p>
+<div id="c14fb4bf" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set parameters</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mass_delta <span class="op">=</span> <span class="dv">200</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>cluster_M <span class="op">=</span> <span class="fl">2.0e16</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>cluster_c <span class="op">=</span> <span class="fl">4.0</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>cluster_z <span class="op">=</span> <span class="fl">0.2</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>cluster_ra, cluster_dec <span class="op">=</span> <span class="fl">12.34</span>, <span class="op">-</span><span class="fl">55.123</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>mass_summary <span class="op">=</span> Nc.HaloMCParam.new(Nc.HaloMassSummaryMassDef.CRITICAL, mass_delta)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>density_profile <span class="op">=</span> Nc.HaloDensityProfileNFW.new(mass_summary)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>surface_mass_density <span class="op">=</span> Nc.WLSurfaceMassDensity.new(dist)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>halo_position <span class="op">=</span> Nc.HaloPosition.new(dist)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>mass_summary[<span class="st">"cDelta"</span>] <span class="op">=</span> cluster_c</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>mass_summary[<span class="st">"log10MDelta"</span>] <span class="op">=</span> np.log10(cluster_M)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>halo_position[<span class="st">"ra"</span>] <span class="op">=</span> cluster_ra</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>halo_position[<span class="st">"dec"</span>] <span class="op">=</span> cluster_dec</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>halo_position[<span class="st">"z"</span>] <span class="op">=</span> cluster_z</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>surface_mass_density.prepare(cosmo)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>halo_position.prepare(cosmo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="galaxy-distribution-model" class="level3">
+<h3 class="anchored" data-anchor-id="galaxy-distribution-model">Galaxy Distribution Model</h3>
+<p>We also need to define a model for the galaxy distribution around the clusters. For this example, we consider a flat distribution in the sky position, meaning that galaxies are evenly distributed across the angular range.</p>
+<p>For the redshift distribution, we use the LSST Science Requirements Document (SRD) true redshift distribution, assuming a Gaussian distribution for the observed redshifts to account for measurement uncertainties. Additionally, we define a Gaussian model for the galaxy shape distribution to represent the intrinsic ellipticities of the galaxies.</p>
+<p>To ensure a stronger lensing signal, we set the following redshift range to focusing on galaxies that are more likely to exhibit a significant shear effect due to the cluster’s mass. The angular position range for galaxies is set to be within <span class="math inline">\(0.15^\circ\)</span> from the cluster’s center. We also set the intrinsic ellipticity dispersion and ellipticity measurement error to <span class="math inline">\(1.0 \times 10^{-8}\)</span>. By making these errors very small, all galaxies are assumed to have the same shape (a disc) and size. This uniformity ensures that the lensing effect is highly visible in our simulations. The specific values are as follows:</p>
+<ul>
+<li><strong>Redshift range</strong>: <span class="math inline">\(z = 0.7\)</span> to <span class="math inline">\(z = 0.9\)</span></li>
+<li><strong>Angular position range</strong>:
+<ul>
+<li>Right ascension (RA): <span class="math inline">\([12.19^\circ, 12.49^\circ]\)</span></li>
+<li>Declination (Dec): <span class="math inline">\([-55.273^\circ, -54.973^\circ]\)</span></li>
+</ul></li>
+<li><strong>Galaxy shape distribution</strong>:
+<ul>
+<li><strong>Intrinsic ellipticity dispersion</strong>: <span class="math inline">\(1.0 \times 10^{-8}\)</span></li>
+<li><strong>Ellipticity measurement error</strong>: <span class="math inline">\(1.0 \times 10^{-8}\)</span></li>
+</ul></li>
+</ul>
+<div id="05113636" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>galaxy_true_z_min <span class="op">=</span> <span class="fl">0.7</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>galaxy_true_z_max <span class="op">=</span> <span class="fl">0.9</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>galaxies_ang_dist <span class="op">=</span> <span class="fl">0.15</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>galaxies_ra0 <span class="op">=</span> cluster_ra <span class="op">-</span> galaxies_ang_dist</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>galaxies_ra1 <span class="op">=</span> cluster_ra <span class="op">+</span> galaxies_ang_dist</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>galaxies_dec0 <span class="op">=</span> cluster_dec <span class="op">-</span> galaxies_ang_dist</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>galaxies_dec1 <span class="op">=</span> cluster_dec <span class="op">+</span> galaxies_ang_dist</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>galaxy_shape_e_rms <span class="op">=</span> <span class="fl">1.0e-8</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>galaxy_shape_e_sigma <span class="op">=</span> <span class="fl">1.0e-8</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>p_dist <span class="op">=</span> Nc.GalaxySDPositionFlat.new(</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    galaxies_ra0, galaxies_ra1, galaxies_dec0, galaxies_dec1</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>z_true <span class="op">=</span> Nc.GalaxySDTrueRedshiftLSSTSRD.new()</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>z_dist <span class="op">=</span> Nc.GalaxySDObsRedshiftGauss.new(z_true)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>s_dist <span class="op">=</span> Nc.GalaxySDShapeGauss.new()</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>s_dist[<span class="st">"e-rms"</span>] <span class="op">=</span> galaxy_shape_e_rms</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="cf">pass</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="weak-lensing-model" class="level3">
+<h3 class="anchored" data-anchor-id="weak-lensing-model">Weak Lensing Model</h3>
+<p>Finally, we define the likelihood model for the weak lensing analysis.</p>
+<p>The <code>Nc.DataClusterWL</code> object is used to create a new cluster model, specifying the distribution of the source galaxies, the redshift distribution, and the position distribution. We then set the minimum and maximum radii for the weak lensing analysis to focus on the region around the cluster where the lensing effect is most significant and exclude galaxies that are too close to the cluster center.</p>
+<div id="b0e68755" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>min_r, max_r <span class="op">=</span> <span class="fl">0.3</span>, <span class="fl">3.0</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>cluster <span class="op">=</span> Nc.DataClusterWL.new()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>cluster.set_cut(min_r, max_r)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="model-set" class="level3">
+<h3 class="anchored" data-anchor-id="model-set">Model-Set</h3>
+<p>We create an <code>Nc.MSet</code> object to encapsulate the models defined above. The <code>MSet</code> object serves as the main container for all models in a given analysis. We add the cosmological model, the cluster profile and position models, the galaxy distribution models, and the weak lensing model to the model set.</p>
+<p>This comprehensive model set allows us to manage and run simulations, ensuring that all components interact correctly to produce the desired weak lensing data.</p>
+<div id="5cdaed8f" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mset <span class="op">=</span> Ncm.MSet.new_array(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    [</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        cosmo,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        density_profile,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        surface_mass_density,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        halo_position,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        s_dist,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        z_dist,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        p_dist,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>mset.pretty_log()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#----------------------------------------------------------------------------------
+# Model[03000]:
+#   - NcHICosmo : XCDM - Constant EOS
+#----------------------------------------------------------------------------------
+# Model parameters
+#   -          H0[00]:  70                  [FIXED]
+#   -      Omegac[01]:  0.25                [FIXED]
+#   -      Omegak[02]:  0                   [FIXED]
+#   -     Tgamma0[03]:  2.7245              [FIXED]
+#   -          Yp[04]:  0.24                [FIXED]
+#   -        ENnu[05]:  3.046               [FIXED]
+#   -      Omegab[06]:  0.05                [FIXED]
+#   -           w[07]: -1                   [FIXED]
+#----------------------------------------------------------------------------------
+# Model[06000]:
+#   - NcHaloPosition : Halo position
+#----------------------------------------------------------------------------------
+# Model parameters
+#   -          ra[00]:  12.34               [FIXED]
+#   -         dec[01]: -55.123              [FIXED]
+#   -           z[02]:  0.2                 [FIXED]
+#----------------------------------------------------------------------------------
+# Model[07000]:
+#   - NcHaloDensityProfile : NFW Density Profile
+#----------------------------------------------------------------------------------
+# Model parameters
+#----------------------------------------------------------------------------------
+# Model[08000]:
+#   - NcHaloMassSummary : Mass and concentration as parameters
+#----------------------------------------------------------------------------------
+# Model parameters
+#   -      cDelta[00]:  4                   [FIXED]
+#   - log10MDelta[01]:  16.301029995664     [FIXED]
+#----------------------------------------------------------------------------------
+# Model[12000]:
+#   - NcWLSurfaceMassDensity : WL Surface Mass Density
+#----------------------------------------------------------------------------------
+# Model parameters
+#   -         pcc[00]:  0.8                 [FIXED]
+#   -        Roff[01]:  1                   [FIXED]
+#----------------------------------------------------------------------------------
+# Model[15000]:
+#   - NcGalaxySDPosition : Flat Galaxy Distribution
+#----------------------------------------------------------------------------------
+# Model parameters
+#----------------------------------------------------------------------------------
+# Model[16000]:
+#   - NcGalaxySDObsRedshift : Gaussian Observed Redshift
+#----------------------------------------------------------------------------------
+# Model parameters
+#----------------------------------------------------------------------------------
+# Model[17000]:
+#   - NcGalaxySDTrueRedshift : LSST SRD Galaxy Distribution
+#----------------------------------------------------------------------------------
+# Model parameters
+#   -       alpha[00]:  0.78                [FIXED]
+#   -        beta[01]:  2                   [FIXED]
+#   -          z0[02]:  0.13                [FIXED]
+#----------------------------------------------------------------------------------
+# Model[18000]:
+#   - NcGalaxySDShape : Gaussian galaxy shape distribution
+#----------------------------------------------------------------------------------
+# Model parameters
+#   -       e-rms[00]:  1e-08               [FIXED]</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="generating-mock-data" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="generating-mock-data">Generating Mock Data</h2>
+<p>To generate mock weak lensing data, we use the <code>Nc.DataClusterWL</code> object created earlier. We set the number of galaxies to <span class="math inline">\(200\)</span> to focus on a manageable subset of the data for our example.</p>
+<p>To ensure reproducibility, we create a random number generator with the seed <code>1235</code>.</p>
+<p>We specify the coordinate system for the observed galaxy positions as <code>EUCLIDEAN</code>, which corresponds to right ascension and declination in degrees. The mock data, consisting of <span class="math inline">\(200\)</span> galaxies around the cluster, is then generated and stored in the <code>cluster</code> object.</p>
+<div id="c8f2c763" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="dv">1235</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>n_galaxies <span class="op">=</span> <span class="dv">200</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>sigma_z <span class="op">=</span> <span class="fl">0.03</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> Ncm.RNG.seeded_new(<span class="st">"mt19937"</span>, seed)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>z_data <span class="op">=</span> Nc.GalaxySDObsRedshiftData.new(z_dist)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>p_data <span class="op">=</span> Nc.GalaxySDPositionData.new(p_dist, z_data)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>s_data <span class="op">=</span> Nc.GalaxySDShapeData.new(s_dist, p_data)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>obs <span class="op">=</span> Nc.GalaxyWLObs.new(</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    Nc.GalaxyWLObsCoord.EUCLIDEAN, n_galaxies, <span class="bu">list</span>(s_data.required_columns())</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_galaxies):</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    z_dist.gen(mset, z_data, sigma_z, rng)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    p_dist.gen(mset, p_data, rng)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    s_dist.gen(</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>        mset,</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>        s_data,</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>        galaxy_shape_e_sigma,</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>        galaxy_shape_e_sigma,</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>        Nc.GalaxyWLObsCoord.EUCLIDEAN,</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>        rng,</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    s_data.write_row(obs, i)</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>cluster.set_obs(obs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The mock data can be retrieved from the <code>cluster</code> object and used for further analysis. You can access the observed galaxy positions, redshifts, and shapes using the appropriate methods provided by the <code>Nc.GalaxyWLObs</code> class.</p>
+<p>These data points will allow you to analyze the weak lensing effects, test models, and explore the properties of the simulated galaxy cluster.</p>
+<p>To facilitate visualization and analysis, we create a DataFrame, <code>obs_df</code>, to store the observed galaxy data. This DataFrame includes the positions, redshifts, and shapes of the galaxies.</p>
+<div id="ca6f7a3d" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>obs <span class="op">=</span> cluster.peek_obs()</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>columns <span class="op">=</span> obs.peek_columns()</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>obs_dict <span class="op">=</span> {}</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> columns:</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    obs_dict[col] <span class="op">=</span> []</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">int</span>(obs.<span class="bu">len</span>())):</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        obs_dict[col].append(obs.get(col, i))</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>obs_df <span class="op">=</span> pd.DataFrame(obs_dict)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>obs_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">epsilon_int_1</th>
+<th data-quarto-table-cell-role="th">epsilon_int_2</th>
+<th data-quarto-table-cell-role="th">epsilon_obs_1</th>
+<th data-quarto-table-cell-role="th">epsilon_obs_2</th>
+<th data-quarto-table-cell-role="th">sigma_obs_1</th>
+<th data-quarto-table-cell-role="th">sigma_obs_2</th>
+<th data-quarto-table-cell-role="th">ra</th>
+<th data-quarto-table-cell-role="th">dec</th>
+<th data-quarto-table-cell-role="th">z</th>
+<th data-quarto-table-cell-role="th">zp</th>
+<th data-quarto-table-cell-role="th">sigma_z</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1.475444e-08</td>
+<td>-6.676072e-09</td>
+<td>0.186870</td>
+<td>0.137763</td>
+<td>1.000000e-08</td>
+<td>1.000000e-08</td>
+<td>12.263752</td>
+<td>-54.989918</td>
+<td>1.725525</td>
+<td>1.813979</td>
+<td>0.03</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>-1.915601e-09</td>
+<td>1.515375e-09</td>
+<td>0.435403</td>
+<td>0.077971</td>
+<td>1.000000e-08</td>
+<td>1.000000e-08</td>
+<td>12.330111</td>
+<td>-55.059241</td>
+<td>0.990805</td>
+<td>1.038027</td>
+<td>0.03</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>4.842633e-09</td>
+<td>2.904124e-09</td>
+<td>0.024613</td>
+<td>-0.170945</td>
+<td>1.000000e-08</td>
+<td>1.000000e-08</td>
+<td>12.482022</td>
+<td>-55.028956</td>
+<td>0.536501</td>
+<td>0.556946</td>
+<td>0.03</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>-1.004300e-08</td>
+<td>9.824479e-09</td>
+<td>0.125443</td>
+<td>0.170308</td>
+<td>1.000000e-08</td>
+<td>1.000000e-08</td>
+<td>12.218000</td>
+<td>-54.984434</td>
+<td>1.818791</td>
+<td>1.820460</td>
+<td>0.03</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>-8.548621e-10</td>
+<td>9.759948e-09</td>
+<td>-0.270044</td>
+<td>-0.303476</td>
+<td>1.000000e-08</td>
+<td>1.000000e-08</td>
+<td>12.243192</td>
+<td>-55.147787</td>
+<td>0.749202</td>
+<td>0.627251</td>
+<td>0.03</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">195</td>
+<td>-2.272049e-09</td>
+<td>-4.595147e-09</td>
+<td>0.089207</td>
+<td>0.003349</td>
+<td>1.000000e-08</td>
+<td>1.000000e-08</td>
+<td>12.344713</td>
+<td>-55.266126</td>
+<td>0.326263</td>
+<td>0.315771</td>
+<td>0.03</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">196</td>
+<td>7.148487e-09</td>
+<td>1.984086e-08</td>
+<td>0.032855</td>
+<td>0.306816</td>
+<td>1.000000e-08</td>
+<td>1.000000e-08</td>
+<td>12.320971</td>
+<td>-55.110887</td>
+<td>0.530175</td>
+<td>0.522497</td>
+<td>0.03</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">197</td>
+<td>3.035583e-09</td>
+<td>-2.966990e-09</td>
+<td>0.125474</td>
+<td>0.147294</td>
+<td>1.000000e-08</td>
+<td>1.000000e-08</td>
+<td>12.240261</td>
+<td>-54.999072</td>
+<td>0.772935</td>
+<td>0.798747</td>
+<td>0.03</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">198</td>
+<td>3.556383e-09</td>
+<td>7.546131e-09</td>
+<td>-0.028773</td>
+<td>-0.322288</td>
+<td>1.000000e-08</td>
+<td>1.000000e-08</td>
+<td>12.222298</td>
+<td>-55.184411</td>
+<td>1.141341</td>
+<td>1.193811</td>
+<td>0.03</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">199</td>
+<td>8.706065e-09</td>
+<td>1.192715e-08</td>
+<td>0.138104</td>
+<td>-0.009616</td>
+<td>1.000000e-08</td>
+<td>1.000000e-08</td>
+<td>12.334068</td>
+<td>-55.220319</td>
+<td>0.357620</td>
+<td>0.363656</td>
+<td>0.03</td>
+</tr>
+</tbody>
+</table>
+
+<p>200 rows × 11 columns</p>
+</div>
+</div>
+</div>
+<p>However, the DataFrame contains all generated galaxies, including those that are too close to the cluster center and may not be suitable for the analysis. We filter out these galaxies based on their distance from the cluster center to mimic what will be done in a real analysis. We then create a new DataFrame with the filtered data.</p>
+<div id="256fd6dd" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>include_galaxies <span class="op">=</span> [</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    halo_position.projected_radius_from_ra_dec(cosmo, gal_ra, gal_dec) <span class="op">&gt;</span> min_r</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> gal_ra, gal_dec <span class="kw">in</span> <span class="bu">zip</span>(obs_df[<span class="st">"ra"</span>], obs_df[<span class="st">"dec"</span>])</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>obs_df <span class="op">=</span> obs_df[include_galaxies]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We can plot the galaxy distribution around the cluster to visualize the mock data. To represent the galaxy shapes, we use ellipses. For visualization purposes, we choose all galaxies to have the same area, which allows us to use the ellipticity to calculate the major and minor axes of each ellipse.</p>
+<p>By plotting these ellipses, we can visually assess the impact of the weak lensing effect and better understand the distribution and shapes of the galaxies in our simulation.</p>
+<div id="cell-fig-galaxy-distribution" class="cell page-columns page-full" data-fig-width="100%" data-execution_count="10">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11" data-cap-location="margin"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>add_ellipse_from_ellipticity(</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    ax,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    obs_df[<span class="st">"ra"</span>],</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    obs_df[<span class="st">"dec"</span>],</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    obs_df[<span class="st">"epsilon_int_1"</span>],</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    obs_df[<span class="st">"epsilon_int_2"</span>],</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    ellipse_scale<span class="op">=</span><span class="fl">0.005</span>,</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    edgecolor<span class="op">=</span><span class="st">"red"</span>,</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>add_ellipse_from_ellipticity(</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    ax,</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    obs_df[<span class="st">"ra"</span>],</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    obs_df[<span class="st">"dec"</span>],</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    obs_df[<span class="st">"epsilon_obs_1"</span>],</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    obs_df[<span class="st">"epsilon_obs_2"</span>],</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    ellipse_scale<span class="op">=</span><span class="fl">0.005</span>,</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    edgecolor<span class="op">=</span><span class="st">"blue"</span>,</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>ax.scatter(</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>    [halo_position.props.ra],</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>    [halo_position.props.dec],</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">"black"</span>,</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>    marker<span class="op">=</span><span class="st">"o"</span>,</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>    s<span class="op">=</span><span class="dv">100</span>,</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>angle_border <span class="op">=</span> <span class="fl">0.01</span></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"RA"</span>)</span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Dec"</span>)</span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(galaxies_ra0 <span class="op">-</span> angle_border, galaxies_ra1 <span class="op">+</span> angle_border)</span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(galaxies_dec0 <span class="op">-</span> angle_border, galaxies_dec1 <span class="op">+</span> angle_border)</span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">"equal"</span>)</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-galaxy-distribution" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-cap-location="margin">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-galaxy-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cluster_wl_simul_files/figure-html/fig-galaxy-distribution-output-1.png" width="559" height="503" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-galaxy-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Galaxy distribution around the cluster. The blue ellipses represent the observed galaxy shapes, while the red ellipses indicate the intrinsic galaxy shapes. The black dot marks the true cluster position.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="varying-the-cluster-mass-and-position" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="varying-the-cluster-mass-and-position">Varying the Cluster Mass and Position</h2>
+<p>We define a function to generate the galaxy distribution based on variations in the halo’s position and mass. This allows us to explore how changes in these properties affect the weak lensing signal and the overall galaxy distribution around the cluster.</p>
+<div id="bfa52d47" class="cell" data-execution_count="11">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gen_galaxies(halo_ra: <span class="bu">float</span>, halo_dec: <span class="bu">float</span>, halo_mass: <span class="bu">float</span>) <span class="op">-&gt;</span> pd.DataFrame:</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    rng <span class="op">=</span> Ncm.RNG.seeded_new(<span class="st">"mt19937"</span>, <span class="dv">1235</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    halo_position[<span class="st">"ra"</span>] <span class="op">=</span> halo_ra</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    halo_position[<span class="st">"dec"</span>] <span class="op">=</span> halo_dec</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    mass_summary[<span class="st">"log10MDelta"</span>] <span class="op">=</span> np.log10(halo_mass)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    surface_mass_density.prepare(cosmo)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    halo_position.prepare(cosmo)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    obs <span class="op">=</span> Nc.GalaxyWLObs.new(</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>        Nc.GalaxyWLObsCoord.EUCLIDEAN, n_galaxies, <span class="bu">list</span>(s_data.required_columns())</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_galaxies):</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>        z_dist.gen(mset, z_data, sigma_z, rng)</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>        p_dist.gen(mset, p_data, rng)</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>        s_dist.gen(</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>            mset,</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>            s_data,</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>            galaxy_shape_e_sigma,</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>            galaxy_shape_e_sigma,</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>            Nc.GalaxyWLObsCoord.EUCLIDEAN,</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>            rng,</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>        s_data.write_row(obs, i)</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>    columns <span class="op">=</span> obs.peek_columns()</span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>    obs_dict <span class="op">=</span> {}</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> col <span class="kw">in</span> columns:</span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>        obs_dict[col] <span class="op">=</span> []</span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">int</span>(obs.<span class="bu">len</span>())):</span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>            obs_dict[col].append(obs.get(col, i))</span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>    obs_df <span class="op">=</span> pd.DataFrame(obs_dict)</span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>    include_galaxies <span class="op">=</span> [</span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>        halo_position.projected_radius_from_ra_dec(cosmo, gal_ra, gal_dec) <span class="op">&gt;</span> min_r</span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> gal_ra, gal_dec <span class="kw">in</span> <span class="bu">zip</span>(obs_df[<span class="st">"ra"</span>], obs_df[<span class="st">"dec"</span>])</span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> obs_df[include_galaxies]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="varying-halo-position" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="varying-halo-position">Varying Halo Position</h3>
+<p>We can generate mock data for different halo positions and visualize the resulting galaxy distribution around each halo.</p>
+<p>We plot the galaxy distribution for nine different halo positions. The central panel displays the true original halo position, while the other panels show the same cluster shifted in right ascension and declination by a constant factor of <span class="math inline">\(0.05\)</span> degrees, respectively.</p>
+<div id="cell-fig-cluster-mass-position" class="cell page-columns page-full" data-fig-width="100%" data-execution_count="12">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13" data-cap-location="margin"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ra_shifts <span class="op">=</span> [<span class="op">-</span><span class="fl">0.05</span>, <span class="fl">0.0</span>, <span class="fl">0.05</span>]</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>dec_shifts <span class="op">=</span> [<span class="fl">0.05</span>, <span class="fl">0.0</span>, <span class="op">-</span><span class="fl">0.05</span>]</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="dv">3</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="dv">3</span>,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">10</span>),</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    sharex<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    sharey<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    gridspec_kw<span class="op">=</span>{<span class="st">"wspace"</span>: <span class="dv">0</span>, <span class="st">"hspace"</span>: <span class="dv">0</span>},</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ra_shift <span class="kw">in</span> <span class="bu">enumerate</span>(ra_shifts):</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j, dec_shift <span class="kw">in</span> <span class="bu">enumerate</span>(dec_shifts):</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>        obs_df <span class="op">=</span> gen_galaxies(cluster_ra <span class="op">+</span> ra_shift, cluster_dec <span class="op">+</span> dec_shift, cluster_M)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>        ax <span class="op">=</span> axes[j, i]</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>        add_ellipse_from_ellipticity(</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>            ax,</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>            obs_df[<span class="st">"ra"</span>],</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>            obs_df[<span class="st">"dec"</span>],</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>            obs_df[<span class="st">"epsilon_obs_1"</span>],</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>            obs_df[<span class="st">"epsilon_obs_2"</span>],</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>            ellipse_scale<span class="op">=</span><span class="fl">0.005</span>,</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>            edgecolor<span class="op">=</span><span class="st">"blue"</span>,</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>        ax.scatter(</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>            [halo_position.props.ra],</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>            [halo_position.props.dec],</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>            color<span class="op">=</span><span class="st">"black"</span>,</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>            marker<span class="op">=</span><span class="st">"o"</span>,</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>            s<span class="op">=</span><span class="dv">100</span>,</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> j <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>            ax.set_xlabel(<span class="st">"RA"</span>)</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>            ax.set_ylabel(<span class="st">"Dec"</span>)</span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>        ax.set_xlim(galaxies_ra0 <span class="op">-</span> angle_border, galaxies_ra1 <span class="op">+</span> angle_border)</span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>        ax.set_ylim(galaxies_dec0 <span class="op">-</span> angle_border, galaxies_dec1 <span class="op">+</span> angle_border)</span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>        ax.set_aspect(<span class="st">"equal"</span>)</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-cluster-mass-position" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-cap-location="margin">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-cluster-mass-position-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cluster_wl_simul_files/figure-html/fig-cluster-mass-position-output-1.png" width="854" height="799" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-cluster-mass-position-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Galaxy distribution around the cluster for different halo positions. The blue ellipses represent the observed galaxy shapes, while the black dot indicates the true halo position.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="varying-halo-mass" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="varying-halo-mass">Varying Halo Mass</h3>
+<p>We can also generate mock data for different halo masses and visualize the resulting galaxy distribution around the halo.</p>
+<p>We plot the galaxy distribution for nine different halo masses. The panels display the galaxy distribution with cluster masses varying from <span class="math inline">\(10^{-1}\)</span> to <span class="math inline">\(10^{0}\)</span> times the original cluster mass.</p>
+<div id="cell-fig-cluster-mass-mass" class="cell page-columns page-full" data-fig-width="100%" data-execution_count="13">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14" data-cap-location="margin"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>mass_shifts <span class="op">=</span> np.geomspace(<span class="fl">10.0</span> <span class="op">**</span> (<span class="op">-</span><span class="fl">1.0</span>), <span class="fl">1.0</span>, <span class="dv">9</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="dv">3</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="dv">3</span>,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">10</span>),</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    sharex<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    sharey<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    gridspec_kw<span class="op">=</span>{<span class="st">"wspace"</span>: <span class="dv">0</span>, <span class="st">"hspace"</span>: <span class="dv">0</span>},</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, mass_shift <span class="kw">in</span> <span class="bu">enumerate</span>(mass_shifts):</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    obs_df <span class="op">=</span> gen_galaxies(cluster_ra, cluster_dec, cluster_M <span class="op">*</span> mass_shift)</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> axes[i <span class="op">//</span> <span class="dv">3</span>, i <span class="op">%</span> <span class="dv">3</span>]</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    add_ellipse_from_ellipticity(</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>        ax,</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>        obs_df[<span class="st">"ra"</span>],</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>        obs_df[<span class="st">"dec"</span>],</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>        obs_df[<span class="st">"epsilon_obs_1"</span>],</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>        obs_df[<span class="st">"epsilon_obs_2"</span>],</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>        ellipse_scale<span class="op">=</span><span class="fl">0.005</span>,</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>        edgecolor<span class="op">=</span><span class="st">"blue"</span>,</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>    ax.scatter(</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>        [halo_position.props.ra],</span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>        [halo_position.props.dec],</span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">"black"</span>,</span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>        marker<span class="op">=</span><span class="st">"o"</span>,</span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>        s<span class="op">=</span><span class="dv">100</span> <span class="op">*</span> mass_shift,</span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">//</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">"RA"</span>)</span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">"Dec"</span>)</span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>    ax.set_xlim(galaxies_ra0 <span class="op">-</span> angle_border, galaxies_ra1 <span class="op">+</span> angle_border)</span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>    ax.set_ylim(galaxies_dec0 <span class="op">-</span> angle_border, galaxies_dec1 <span class="op">+</span> angle_border)</span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>    ax.set_aspect(<span class="st">"equal"</span>)</span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-cluster-mass-mass" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" data-cap-location="margin">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-cluster-mass-mass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cluster_wl_simul_files/figure-html/fig-cluster-mass-mass-output-1.png" width="854" height="799" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-cluster-mass-mass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Galaxy distribution around the cluster for different halo masses. The blue ellipses represent the observed galaxy shapes. The black dot indicates the true halo position, with the size of the dot proportional to the halo mass.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In this tutorial, we demonstrated how to simulate galaxy shapes around a galaxy cluster using NumCosmo’s cluster weak lensing tools. By defining theoretical models for cosmology, cluster profile, galaxy distribution, and weak lensing likelihood, we generated mock weak lensing data for a galaxy cluster and explored the impact of varying the cluster’s position and mass on the galaxy distribution.</p>
+<p>These simulations used very high-mass clusters and minimal galaxy shape errors to make the lensing effect highly visible. In a real analysis, clusters would typically have much lower masses, and galaxy shape errors would be larger, resulting in a less pronounced lensing effect. Consequently, a more statistical approach is usually necessary to analyze the data and extract the weak lensing signal. This topic is covered in more detail the analysis tutorials.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

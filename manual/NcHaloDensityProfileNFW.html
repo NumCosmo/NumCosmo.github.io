@@ -6,7 +6,7 @@
 <title>NcHaloDensityProfileNFW: NumCosmo Reference Manual</title>
 <meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
 <link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
-<link href="ch08s04.html" rel="up" title="Density Profile"/>
+<link href="ch08s04.html" rel="up" title="Cluster Halo"/>
 <link href="NcHaloDensityProfile.html" rel="prev" title="NcHaloDensityProfile"/>
 <link href="NcHaloDensityProfileEinasto.html" rel="next" title="NcHaloDensityProfileEinasto"/>
 <meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
@@ -74,8 +74,27 @@ messageStyle: "none"
 </table></div>
 </div>
 <div class="refsect1">
+<a name="NcHaloDensityProfileNFW.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="other_proto_type" width="150px"/>
+<col class="other_proto_name"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="NcHaloDensityProfileNFW.html#NC-TYPE-HALO-DENSITY-PROFILE-NFW:CAPS" title="NC_TYPE_HALO_DENSITY_PROFILE_NFW">NC_TYPE_HALO_DENSITY_PROFILE_NFW</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcHaloDensityProfileNFW.html#NcHaloDensityProfileNFW-struct" title="NcHaloDensityProfileNFW">NcHaloDensityProfileNFW</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
 <a name="NcHaloDensityProfileNFW.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
+<pre class="screen">    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmModel.html" title="NcmModel">NcmModel</a>
         <span class="lineart">╰──</span> <a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile">NcHaloDensityProfile</a>
             <span class="lineart">╰──</span> NcHaloDensityProfileNFW
@@ -141,13 +160,9 @@ It enforces the computations to be performed by numerical integration.</p>
 <div class="refsect2">
 <a name="nc-halo-density-profile-nfw-new"></a><h3>nc_halo_density_profile_nfw_new ()</h3>
 <pre class="programlisting"><a class="link" href="NcHaloDensityProfileNFW.html" title="NcHaloDensityProfileNFW"><span class="returnvalue">NcHaloDensityProfileNFW</span></a> *
-nc_halo_density_profile_nfw_new (<em class="parameter"><code>const <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfileMassDef" title="enum NcHaloDensityProfileMassDef"><span class="type">NcHaloDensityProfileMassDef</span></a> mdef</code></em>,
-                                 <em class="parameter"><code>const <span class="type">gdouble</span> Delta</code></em>);</pre>
+nc_halo_density_profile_nfw_new (<em class="parameter"><code><a class="link" href="NcHaloMassSummary.html" title="NcHaloMassSummary"><span class="type">NcHaloMassSummary</span></a> *hms</code></em>);</pre>
 <p>This function returns the <a class="link" href="NcHaloDensityProfileNFW.html" title="NcHaloDensityProfileNFW"><span class="type">NcHaloDensityProfileNFW</span></a> implementation of
-<a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> setting <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--mass-def" title="The “mass-def” property"><span class="type">“mass-def”</span></a> to <em class="parameter"><code>mdef</code></em>
-
-and <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--Delta" title="The “Delta” property"><span class="type">“Delta”</span></a> to <em class="parameter"><code>Delta</code></em>
-.</p>
+<a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> given a <a class="link" href="NcHaloMassSummary.html" title="NcHaloMassSummary"><span class="type">NcHaloMassSummary</span></a>.</p>
 <div class="refsect3">
 <a name="nc-halo-density-profile-nfw-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table border="0" class="informaltable" width="100%">
@@ -156,24 +171,30 @@ and <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--Delta"
 <col class="parameters_description"/>
 <col class="parameters_annotations" width="200px"/>
 </colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>mdef</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfileMassDef" title="enum NcHaloDensityProfileMassDef"><span class="type">NcHaloDensityProfileMassDef</span></a></p></td>
+<tbody><tr>
+<td class="parameter_name"><p>hms</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloMassSummary.html" title="NcHaloMassSummary"><span class="type">NcHaloMassSummary</span></a></p></td>
 <td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>Delta</p></td>
-<td class="parameter_description"><p>cluster threshold mass definition $\Delta$</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
+</tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
 <a name="nc-halo-density-profile-nfw-new.returns"></a><h4>Returns</h4>
 <p> a new instance of <a class="link" href="NcHaloDensityProfileNFW.html" title="NcHaloDensityProfileNFW"><span class="type">NcHaloDensityProfileNFW</span></a>.</p>
 </div>
+</div>
+</div>
+<div class="refsect1">
+<a name="NcHaloDensityProfileNFW.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="NC-TYPE-HALO-DENSITY-PROFILE-NFW:CAPS"></a><h3>NC_TYPE_HALO_DENSITY_PROFILE_NFW</h3>
+<pre class="programlisting">#define NC_TYPE_HALO_DENSITY_PROFILE_NFW (nc_halo_density_profile_nfw_get_type ())
+</pre>
+</div>
+<hr/>
+<div class="refsect2">
+<a name="NcHaloDensityProfileNFW-struct"></a><h3>NcHaloDensityProfileNFW</h3>
+<pre class="programlisting">typedef struct _NcHaloDensityProfileNFW NcHaloDensityProfileNFW;</pre>
 </div>
 </div>
 </div>

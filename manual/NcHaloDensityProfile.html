@@ -6,8 +6,8 @@
 <title>NcHaloDensityProfile: NumCosmo Reference Manual</title>
 <meta content="DocBook XSL Stylesheets Vsnapshot" name="generator"/>
 <link href="index.html" rel="home" title="NumCosmo Reference Manual"/>
-<link href="ch08s04.html" rel="up" title="Density Profile"/>
-<link href="ch08s04.html" rel="prev" title="Density Profile"/>
+<link href="ch08s04.html" rel="up" title="Cluster Halo"/>
+<link href="ch08s04.html" rel="prev" title="Cluster Halo"/>
 <link href="NcHaloDensityProfileNFW.html" rel="next" title="NcHaloDensityProfileNFW"/>
 <meta content="GTK-Doc V1.34.0 (XML mode)" name="generator"/>
 <link href="style.css" rel="stylesheet" type="text/css"/>
@@ -137,6 +137,14 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="NcHaloMassSummary.html" title="NcHaloMassSummary"><span class="returnvalue">NcHaloMassSummary</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloDensityProfile.html#nc-halo-density-profile-peek-mass-summary" title="nc_halo_density_profile_peek_mass_summary ()">nc_halo_density_profile_peek_mass_summary</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">gdouble</span>
 </td>
 <td class="function_name">
@@ -165,30 +173,6 @@ messageStyle: "none"
 </td>
 <td class="function_name">
 <a class="link" href="NcHaloDensityProfile.html#nc-halo-density-profile-eval-dl-cyl-mass" title="nc_halo_density_profile_eval_dl_cyl_mass ()">nc_halo_density_profile_eval_dl_cyl_mass</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">gdouble</span>
-</td>
-<td class="function_name">
-<a class="link" href="NcHaloDensityProfile.html#nc-halo-density-profile-Delta" title="nc_halo_density_profile_Delta ()">nc_halo_density_profile_Delta</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">gdouble</span>
-</td>
-<td class="function_name">
-<a class="link" href="NcHaloDensityProfile.html#nc-halo-density-profile-rho-bg" title="nc_halo_density_profile_rho_bg ()">nc_halo_density_profile_rho_bg</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">gdouble</span>
-</td>
-<td class="function_name">
-<a class="link" href="NcHaloDensityProfile.html#nc-halo-density-profile-Delta-rho-bg" title="nc_halo_density_profile_Delta_rho_bg ()">nc_halo_density_profile_Delta_rho_bg</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -249,7 +233,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GArray</span> *
+<a class="link" href="refs.html#GArray" title="GArray"><span class="returnvalue">GArray</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="NcHaloDensityProfile.html#nc-halo-density-profile-eval-density-array" title="nc_halo_density_profile_eval_density_array ()">nc_halo_density_profile_eval_density_array</a> <span class="c_punctuation">()</span>
@@ -257,7 +241,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GArray</span> *
+<a class="link" href="refs.html#GArray" title="GArray"><span class="returnvalue">GArray</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="NcHaloDensityProfile.html#nc-halo-density-profile-eval-2d-density-array" title="nc_halo_density_profile_eval_2d_density_array ()">nc_halo_density_profile_eval_2d_density_array</a> <span class="c_punctuation">()</span>
@@ -265,7 +249,7 @@ messageStyle: "none"
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">GArray</span> *
+<a class="link" href="refs.html#GArray" title="GArray"><span class="returnvalue">GArray</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="NcHaloDensityProfile.html#nc-halo-density-profile-eval-cyl-mass-array" title="nc_halo_density_profile_eval_cyl_mass_array ()">nc_halo_density_profile_eval_cyl_mass_array</a> <span class="c_punctuation">()</span>
@@ -295,6 +279,14 @@ messageStyle: "none"
 <a class="link" href="NcHaloDensityProfile.html#nc-halo-density-profile-eval-numint-dl-cyl-mass" title="nc_halo_density_profile_eval_numint_dl_cyl_mass ()">nc_halo_density_profile_eval_numint_dl_cyl_mass</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="NcHaloDensityProfile.html#nc-halo-density-profile-get-numint-splines" title="nc_halo_density_profile_get_numint_splines ()">nc_halo_density_profile_get_numint_splines</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -309,21 +301,6 @@ messageStyle: "none"
 <tbody>
 <tr>
 <td class="property_type"><span class="type">double</span></td>
-<td class="property_name"><a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--Delta" title="The “Delta” property">Delta</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
-</tr>
-<tr>
-<td class="property_type"><span class="type">double</span></td>
-<td class="property_name"><a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--cDelta" title="The “cDelta” property">cDelta</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><span class="type">gboolean</span></td>
-<td class="property_name"><a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--cDelta-fit" title="The “cDelta-fit” property">cDelta-fit</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--lnXf" title="The “lnXf” property">lnXf</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr>
@@ -331,21 +308,6 @@ messageStyle: "none"
 <td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--lnXi" title="The “lnXi” property">lnXi</a></td>
 <td class="property_flags">Read / Write / Construct</td>
-</tr>
-<tr>
-<td class="property_type"><span class="type">double</span></td>
-<td class="property_name"><a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--log10MDelta" title="The “log10MDelta” property">log10MDelta</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><span class="type">gboolean</span></td>
-<td class="property_name"><a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--log10MDelta-fit" title="The “log10MDelta-fit” property">log10MDelta-fit</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfileMassDef" title="enum NcHaloDensityProfileMassDef"><span class="type">NcHaloDensityProfileMassDef</span></a></td>
-<td class="property_name"><a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--mass-def" title="The “mass-def” property">mass-def</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
 </tr>
 <tr>
 <td class="property_type"><span class="type">double</span></td>
@@ -364,34 +326,23 @@ messageStyle: "none"
 </colgroup>
 <tbody>
 <tr>
-<td class="datatype_keyword">enum</td>
-<td class="function_name"><a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfileMassDef" title="enum NcHaloDensityProfileMassDef">NcHaloDensityProfileMassDef</a></td>
-</tr>
-<tr>
-<td class="datatype_keyword">enum</td>
-<td class="function_name"><a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfileSParams" title="enum NcHaloDensityProfileSParams">NcHaloDensityProfileSParams</a></td>
-</tr>
-<tr>
 <td class="define_keyword">#define</td>
-<td class="function_name"><a class="link" href="NcHaloDensityProfile.html#NC-HALO-DENSITY-PROFILE-DEFAULT-C-DELTA:CAPS" title="NC_HALO_DENSITY_PROFILE_DEFAULT_C_DELTA">NC_HALO_DENSITY_PROFILE_DEFAULT_C_DELTA</a></td>
+<td class="function_name"><a class="link" href="NcHaloDensityProfile.html#NC-TYPE-HALO-DENSITY-PROFILE:CAPS" title="NC_TYPE_HALO_DENSITY_PROFILE">NC_TYPE_HALO_DENSITY_PROFILE</a></td>
 </tr>
 <tr>
-<td class="define_keyword">#define</td>
-<td class="function_name"><a class="link" href="NcHaloDensityProfile.html#NC-HALO-DENSITY-PROFILE-DEFAULT-LOG10M-DELTA:CAPS" title="NC_HALO_DENSITY_PROFILE_DEFAULT_LOG10M_DELTA">NC_HALO_DENSITY_PROFILE_DEFAULT_LOG10M_DELTA</a></td>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfileClass" title="struct NcHaloDensityProfileClass">NcHaloDensityProfileClass</a></td>
 </tr>
 <tr>
-<td class="define_keyword">#define</td>
-<td class="function_name"><a class="link" href="NcHaloDensityProfile.html#NC-HALO-DENSITY-PROFILE-DEFAULT-PARAMS-ABSTOL:CAPS" title="NC_HALO_DENSITY_PROFILE_DEFAULT_PARAMS_ABSTOL">NC_HALO_DENSITY_PROFILE_DEFAULT_PARAMS_ABSTOL</a></td>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile-struct" title="NcHaloDensityProfile">NcHaloDensityProfile</a></td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="NcHaloDensityProfile.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
-    <span class="lineart">├──</span> NcHaloDensityProfileMassDef
-    <span class="lineart">╰──</span> NcHaloDensityProfileSParams
-    GObject
+<pre class="screen">    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="NcmModel.html" title="NcmModel">NcmModel</a>
         <span class="lineart">╰──</span> NcHaloDensityProfile
             <span class="lineart">├──</span> <a class="link" href="NcHaloDensityProfileDK14.html" title="NcHaloDensityProfileDK14">NcHaloDensityProfileDK14</a>
@@ -414,14 +365,10 @@ and $r_s$ the scale radius. This function corresponds to the virtual function
 <div class="refsect2">
 <a name="id-1.9.6.2.7.3"></a><h3>Parametrization</h3>
 <p>The two parameters $\rho_s$ and $r_s$ are described by the fundamental
-parametrization in terms of $M_\Delta$ (<a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--log10MDelta" title="The “log10MDelta” property"><span class="type">“log10MDelta”</span></a>)
-and the concentration $c_\Delta$ (<a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--cDelta" title="The “cDelta” property"><span class="type">“cDelta”</span></a>) given a mass
-defined by $\Delta$ (<a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--Delta" title="The “Delta” property"><span class="type">“Delta”</span></a>) and a background density
-$\rho_\mathrm{bg}$ (<a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--mass-def" title="The “mass-def” property"><span class="type">“mass-def”</span></a>). Strictly speaking,
-the object has two unmutable properties <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--Delta" title="The “Delta” property"><span class="type">“Delta”</span></a>
-and <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--mass-def" title="The “mass-def” property"><span class="type">“mass-def”</span></a> that defines the value of $\Delta$ and the
-background density $\rho_\mathrm{bg}$. Once these properties are defined,
-one can compute $(r_s,\;\rho_s)$ from $(M_\Delta,\; c_\Delta)$.</p>
+parametrization in terms of $M_\Delta$ and the concentration $c_\Delta$ given a mass
+defined by $\Delta$ and a background density $\rho_\mathrm{bg}$. These quantities are
+provided by the halo mass summary object, which is passed to the profile object at
+construction time.</p>
 <div class="refsect3">
 <a name="id-1.9.6.2.7.3.3"></a><h4>Computing $r_s$</h4>
 <p>The mass-radius relation defined in terms of the background density is
@@ -832,6 +779,34 @@ the numerical computation of the functions:</p>
 </div>
 <hr/>
 <div class="refsect2">
+<a name="nc-halo-density-profile-peek-mass-summary"></a><h3>nc_halo_density_profile_peek_mass_summary ()</h3>
+<pre class="programlisting"><a class="link" href="NcHaloMassSummary.html" title="NcHaloMassSummary"><span class="returnvalue">NcHaloMassSummary</span></a> *
+nc_halo_density_profile_peek_mass_summary
+                               (<em class="parameter"><code><a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> *dp</code></em>);</pre>
+<p>Peeks the <a class="link" href="NcHaloMassSummary.html" title="NcHaloMassSummary"><span class="type">NcHaloMassSummary</span></a> submodel.</p>
+<div class="refsect3">
+<a name="nc-halo-density-profile-peek-mass-summary.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>dp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="nc-halo-density-profile-peek-mass-summary.returns"></a><h4>Returns</h4>
+<p>the <a class="link" href="NcHaloMassSummary.html" title="NcHaloMassSummary"><span class="type">NcHaloMassSummary</span></a> submodel. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr/>
+<div class="refsect2">
 <a name="nc-halo-density-profile-eval-dl-density"></a><h3>nc_halo_density_profile_eval_dl_density ()</h3>
 <pre class="programlisting"><span class="returnvalue">gdouble</span>
 nc_halo_density_profile_eval_dl_density
@@ -976,129 +951,6 @@ see Eq. \eqref{eq:def:cylmass}.</p>
 <div class="refsect3">
 <a name="nc-halo-density-profile-eval-dl-cyl-mass.returns"></a><h4>Returns</h4>
 <p> the value of the dimensionless cylinder mass $\hat{\overline{\Sigma}}(X)$.</p>
-</div>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="nc-halo-density-profile-Delta"></a><h3>nc_halo_density_profile_Delta ()</h3>
-<pre class="programlisting"><span class="returnvalue">gdouble</span>
-nc_halo_density_profile_Delta (<em class="parameter"><code><a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> *dp</code></em>,
-                               <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                               <em class="parameter"><code>const <span class="type">gdouble</span> z</code></em>);</pre>
-<p>This function computes the overdensity with respect to the mass density $\Delta$.</p>
-<p>The virial overdensity in units of the critical density.
-Following Colossus code (Diemer 2018) INCLUIR REF!
-This function uses the fitting formula of Bryan &amp; Norman 1998 INCLUIR REF!</p>
-<div class="refsect3">
-<a name="nc-halo-density-profile-Delta.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table border="0" class="informaltable" width="100%">
-<colgroup>
-<col class="parameters_name" width="150px"/>
-<col class="parameters_description"/>
-<col class="parameters_annotations" width="200px"/>
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>dp</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift $z$</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="nc-halo-density-profile-Delta.returns"></a><h4>Returns</h4>
-<p> the value of $\Delta$.</p>
-</div>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="nc-halo-density-profile-rho-bg"></a><h3>nc_halo_density_profile_rho_bg ()</h3>
-<pre class="programlisting"><span class="returnvalue">gdouble</span>
-nc_halo_density_profile_rho_bg (<em class="parameter"><code><a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> *dp</code></em>,
-                                <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                                <em class="parameter"><code>const <span class="type">gdouble</span> z</code></em>);</pre>
-<p>This function computes the background mass density $\rho_\mathrm{bg}$ in $M_\odot\mathrm{Mpc}^{-3}$.</p>
-<div class="refsect3">
-<a name="nc-halo-density-profile-rho-bg.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table border="0" class="informaltable" width="100%">
-<colgroup>
-<col class="parameters_name" width="150px"/>
-<col class="parameters_description"/>
-<col class="parameters_annotations" width="200px"/>
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>dp</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift $z$</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="nc-halo-density-profile-rho-bg.returns"></a><h4>Returns</h4>
-<p> the value of $\rho_\mathrm{bg}\;\left[M_\odot\mathrm{Mpc}^{-3}\right]$.</p>
-</div>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="nc-halo-density-profile-Delta-rho-bg"></a><h3>nc_halo_density_profile_Delta_rho_bg ()</h3>
-<pre class="programlisting"><span class="returnvalue">gdouble</span>
-nc_halo_density_profile_Delta_rho_bg (<em class="parameter"><code><a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> *dp</code></em>,
-                                      <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                                      <em class="parameter"><code>const <span class="type">gdouble</span> z</code></em>);</pre>
-<p>This function computes the mass density threshold $\Delta\,\rho_bg$ in $M_\odot\mathrm{Mpc}^{-3}$.</p>
-<div class="refsect3">
-<a name="nc-halo-density-profile-Delta-rho-bg.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table border="0" class="informaltable" width="100%">
-<colgroup>
-<col class="parameters_name" width="150px"/>
-<col class="parameters_description"/>
-<col class="parameters_annotations" width="200px"/>
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>dp</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>cosmo</p></td>
-<td class="parameter_description"><p>a <a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>z</p></td>
-<td class="parameter_description"><p>redshift $z$</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="nc-halo-density-profile-Delta-rho-bg.returns"></a><h4>Returns</h4>
-<p> the value of $\Delta\,\rho_bg\;\left[M_\odot\mathrm{Mpc}^{-3}\right]$.</p>
 </div>
 </div>
 <hr/>
@@ -1418,11 +1270,11 @@ cylinder of radius $R$, see Eq. \eqref{}.</p>
 <hr/>
 <div class="refsect2">
 <a name="nc-halo-density-profile-eval-density-array"></a><h3>nc_halo_density_profile_eval_density_array ()</h3>
-<pre class="programlisting"><span class="returnvalue">GArray</span> *
+<pre class="programlisting"><a class="link" href="refs.html#GArray" title="GArray"><span class="returnvalue">GArray</span></a> *
 nc_halo_density_profile_eval_density_array
                                (<em class="parameter"><code><a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> *dp</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                                <em class="parameter"><code><span class="type">GArray</span> *r</code></em>,
+                                <em class="parameter"><code><a class="link" href="refs.html#GArray" title="GArray"><span class="type">GArray</span></a> *r</code></em>,
                                 <em class="parameter"><code><span class="type">gdouble</span> fin</code></em>,
                                 <em class="parameter"><code><span class="type">gdouble</span> fout</code></em>,
                                 <em class="parameter"><code>const <span class="type">gdouble</span> z</code></em>);</pre>
@@ -1478,11 +1330,11 @@ nc_halo_density_profile_eval_density_array
 <hr/>
 <div class="refsect2">
 <a name="nc-halo-density-profile-eval-2d-density-array"></a><h3>nc_halo_density_profile_eval_2d_density_array ()</h3>
-<pre class="programlisting"><span class="returnvalue">GArray</span> *
+<pre class="programlisting"><a class="link" href="refs.html#GArray" title="GArray"><span class="returnvalue">GArray</span></a> *
 nc_halo_density_profile_eval_2d_density_array
                                (<em class="parameter"><code><a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> *dp</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                                <em class="parameter"><code><span class="type">GArray</span> *R</code></em>,
+                                <em class="parameter"><code><a class="link" href="refs.html#GArray" title="GArray"><span class="type">GArray</span></a> *R</code></em>,
                                 <em class="parameter"><code><span class="type">gdouble</span> fin</code></em>,
                                 <em class="parameter"><code><span class="type">gdouble</span> fout</code></em>,
                                 <em class="parameter"><code>const <span class="type">gdouble</span> z</code></em>);</pre>
@@ -1539,11 +1391,11 @@ at radius $R$ and redshift $z$, see Eq. \eqref{}.</p>
 <hr/>
 <div class="refsect2">
 <a name="nc-halo-density-profile-eval-cyl-mass-array"></a><h3>nc_halo_density_profile_eval_cyl_mass_array ()</h3>
-<pre class="programlisting"><span class="returnvalue">GArray</span> *
+<pre class="programlisting"><a class="link" href="refs.html#GArray" title="GArray"><span class="returnvalue">GArray</span></a> *
 nc_halo_density_profile_eval_cyl_mass_array
                                (<em class="parameter"><code><a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> *dp</code></em>,
                                 <em class="parameter"><code><a class="link" href="NcHICosmo.html" title="NcHICosmo"><span class="type">NcHICosmo</span></a> *cosmo</code></em>,
-                                <em class="parameter"><code><span class="type">GArray</span> *R</code></em>,
+                                <em class="parameter"><code><a class="link" href="refs.html#GArray" title="GArray"><span class="type">GArray</span></a> *R</code></em>,
                                 <em class="parameter"><code><span class="type">gdouble</span> fin</code></em>,
                                 <em class="parameter"><code><span class="type">gdouble</span> fout</code></em>,
                                 <em class="parameter"><code>const <span class="type">gdouble</span> z</code></em>);</pre>
@@ -1711,137 +1563,67 @@ provides one. This interface is present for testing purpose.</p>
 <p> the value of the dimensionless cylinder mass $\hat{\overline{\Sigma}}(X)$.</p>
 </div>
 </div>
+<hr/>
+<div class="refsect2">
+<a name="nc-halo-density-profile-get-numint-splines"></a><h3>nc_halo_density_profile_get_numint_splines ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+nc_halo_density_profile_get_numint_splines
+                               (<em class="parameter"><code><a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a> *dp</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> **twod_density</code></em>,
+                                <em class="parameter"><code><a class="link" href="NcmSpline.html" title="NcmSpline"><span class="type">NcmSpline</span></a> **cyl_mass</code></em>);</pre>
+<p>This function provides the splines computed in this object, <a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a>:
+dl_2d_density_s and dl_cyl_mass_s.</p>
+<div class="refsect3">
+<a name="nc-halo-density-profile-get-numint-splines.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" class="informaltable" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"/>
+<col class="parameters_description"/>
+<col class="parameters_annotations" width="200px"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dp</p></td>
+<td class="parameter_description"><p>a <a class="link" href="NcHaloDensityProfile.html" title="NcHaloDensityProfile"><span class="type">NcHaloDensityProfile</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>twod_density</p></td>
+<td class="parameter_description"><p>size of the dl_2d_density_s spline. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cyl_mass</p></td>
+<td class="parameter_description"><p>size of the dl_cyl_mass_s spline. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
 </div>
 <div class="refsect1">
 <a name="NcHaloDensityProfile.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
-<a name="NcHaloDensityProfileMassDef"></a><h3>enum NcHaloDensityProfileMassDef</h3>
-<p>Spherical overdensity halo mass: $$M_\Delta = \frac{4\pi}{3} \Delta \rho_\mathrm{bg} r_\Delta^3,$$
-where $\rho_\mathrm{bg}$ is the background density of the universe at redshift z, $\rho_\mathrm{bg} (z)$.
-For <em class="parameter"><code>NC_HALO_DENSITY_PROFILE_MASS_DEF_VIRIAL</code></em>
-, the parameter <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--log10MDelta" title="The “log10MDelta” property"><span class="type">“log10MDelta”</span></a> is ignored and
-\begin{equation}\label{def:DVir}
-\Delta_\mathrm{Vir} = 18 \pi^2 + 82 x - 39 x^2, \quad x \equiv \Omega_m(z) - 1.
-\end{equation}</p>
-<div class="refsect3">
-<a name="NcHaloDensityProfileMassDef.members"></a><h4>Members</h4>
-<div class="informaltable"><table border="0" class="informaltable" width="100%">
-<colgroup>
-<col class="enum_members_name" width="300px"/>
-<col class="enum_members_description"/>
-<col class="enum_members_annotations" width="200px"/>
-</colgroup>
-<tbody>
-<tr>
-<td class="enum_member_name"><p><a name="NC-HALO-DENSITY-PROFILE-MASS-DEF-MEAN:CAPS"></a>NC_HALO_DENSITY_PROFILE_MASS_DEF_MEAN</p></td>
-<td class="enum_member_description">
-<p>halo mass defined in terms of the mean density $\rho_\mathrm{bg} = \rho_m(z)$</p>
-</td>
-<td class="enum_member_annotations"> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="NC-HALO-DENSITY-PROFILE-MASS-DEF-CRITICAL:CAPS"></a>NC_HALO_DENSITY_PROFILE_MASS_DEF_CRITICAL</p></td>
-<td class="enum_member_description">
-<p>halo mass defined in terms of the critical density $\rho_\mathrm{bg} = \rho_\mathrm{crit}(z)$</p>
-</td>
-<td class="enum_member_annotations"> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="NC-HALO-DENSITY-PROFILE-MASS-DEF-VIRIAL:CAPS"></a>NC_HALO_DENSITY_PROFILE_MASS_DEF_VIRIAL</p></td>
-<td class="enum_member_description">
-<p>halo mass defined in terms of virial overdensity times the critical density $\rho_\mathrm{bg} = \rho_\mathrm{crit}(z)$</p>
-</td>
-<td class="enum_member_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="NcHaloDensityProfileSParams"></a><h3>enum NcHaloDensityProfileSParams</h3>
-<p>Fundamental parametrization of the profile $\rho(r)$,
-any additional parameter must be included in the implementation
-of this class.</p>
-<div class="refsect3">
-<a name="NcHaloDensityProfileSParams.members"></a><h4>Members</h4>
-<div class="informaltable"><table border="0" class="informaltable" width="100%">
-<colgroup>
-<col class="enum_members_name" width="300px"/>
-<col class="enum_members_description"/>
-<col class="enum_members_annotations" width="200px"/>
-</colgroup>
-<tbody>
-<tr>
-<td class="enum_member_name"><p><a name="NC-HALO-DENSITY-PROFILE-C-DELTA:CAPS"></a>NC_HALO_DENSITY_PROFILE_C_DELTA</p></td>
-<td class="enum_member_description">
-<p>concentration parameter $r_\Delta$</p>
-</td>
-<td class="enum_member_annotations"> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="NC-HALO-DENSITY-PROFILE-LOG10M-DELTA:CAPS"></a>NC_HALO_DENSITY_PROFILE_LOG10M_DELTA</p></td>
-<td class="enum_member_description">
-<p>halo mass $\log_{10}(M_\Delta)$</p>
-</td>
-<td class="enum_member_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="NC-HALO-DENSITY-PROFILE-DEFAULT-C-DELTA:CAPS"></a><h3>NC_HALO_DENSITY_PROFILE_DEFAULT_C_DELTA</h3>
-<pre class="programlisting">#define NC_HALO_DENSITY_PROFILE_DEFAULT_C_DELTA (4.0)
+<a name="NC-TYPE-HALO-DENSITY-PROFILE:CAPS"></a><h3>NC_TYPE_HALO_DENSITY_PROFILE</h3>
+<pre class="programlisting">#define NC_TYPE_HALO_DENSITY_PROFILE (nc_halo_density_profile_get_type ())
 </pre>
 </div>
 <hr/>
 <div class="refsect2">
-<a name="NC-HALO-DENSITY-PROFILE-DEFAULT-LOG10M-DELTA:CAPS"></a><h3>NC_HALO_DENSITY_PROFILE_DEFAULT_LOG10M_DELTA</h3>
-<pre class="programlisting">#define NC_HALO_DENSITY_PROFILE_DEFAULT_LOG10M_DELTA (log10 (2.0e14))
+<a name="NcHaloDensityProfileClass"></a><h3>struct NcHaloDensityProfileClass</h3>
+<pre class="programlisting">struct NcHaloDensityProfileClass {
+};
 </pre>
 </div>
 <hr/>
 <div class="refsect2">
-<a name="NC-HALO-DENSITY-PROFILE-DEFAULT-PARAMS-ABSTOL:CAPS"></a><h3>NC_HALO_DENSITY_PROFILE_DEFAULT_PARAMS_ABSTOL</h3>
-<pre class="programlisting">#define NC_HALO_DENSITY_PROFILE_DEFAULT_PARAMS_ABSTOL (0.0)
-</pre>
+<a name="NcHaloDensityProfile-struct"></a><h3>NcHaloDensityProfile</h3>
+<pre class="programlisting">typedef struct _NcHaloDensityProfile NcHaloDensityProfile;</pre>
 </div>
 </div>
 <div class="refsect1">
 <a name="NcHaloDensityProfile.property-details"></a><h2>Property Details</h2>
-<div class="refsect2">
-<a name="NcHaloDensityProfile--Delta"></a><h3>The <code class="literal">“Delta”</code> property</h3>
-<pre class="programlisting">  “Delta”                    <span class="type">double</span></pre>
-<p>Constant that indicates the overdensity with respect to the background density $\rho_\mathrm{bg}$.
-See <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--mass-def" title="The “mass-def” property"><span class="type">“mass-def”</span></a>.</p>
-<p>Owner: NcHaloDensityProfile</p>
-<p>Flags: Read / Write / Construct Only</p>
-<p>Allowed values: [100,3200]</p>
-<p>Default value: 200</p>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="NcHaloDensityProfile--cDelta"></a><h3>The <code class="literal">“cDelta”</code> property</h3>
-<pre class="programlisting">  “cDelta”                   <span class="type">double</span></pre>
-<p>Concentration parameter, $c_\Delta$, see Eq \eqref{def:cDelta}.</p>
-<p>Owner: NcHaloDensityProfile</p>
-<p>Flags: Read / Write</p>
-<p>Default value: 4</p>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="NcHaloDensityProfile--cDelta-fit"></a><h3>The <code class="literal">“cDelta-fit”</code> property</h3>
-<pre class="programlisting">  “cDelta-fit”               <span class="type">gboolean</span></pre>
-<p>Boolean property that controls whether the parameter
-<a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--cDelta" title="The “cDelta” property"><span class="type">“cDelta”</span></a> should be included in
-a statistical analysis.</p>
-<p>Owner: NcHaloDensityProfile</p>
-<p>Flags: Read / Write</p>
-<p>Default value: FALSE</p>
-</div>
-<hr/>
 <div class="refsect2">
 <a name="NcHaloDensityProfile--lnXf"></a><h3>The <code class="literal">“lnXf”</code> property</h3>
 <pre class="programlisting">  “lnXf”                     <span class="type">double</span></pre>
@@ -1860,39 +1642,6 @@ the projected densities are computed $\ln(X_i)$.</p>
 <p>Owner: NcHaloDensityProfile</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Default value: -9.21034</p>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="NcHaloDensityProfile--log10MDelta"></a><h3>The <code class="literal">“log10MDelta”</code> property</h3>
-<pre class="programlisting">  “log10MDelta”              <span class="type">double</span></pre>
-<p>Logarithm base 10 of the cluster mass $M_\Delta$ in units of solar masses $M_\odot$
-(<a class="link" href="NcmC.html#ncm-c-mass-solar" title="ncm_c_mass_solar ()"><code class="function">ncm_c_mass_solar()</code></a>) within $r_\Delta$, where $\Delta$ is
-the over-density, see Eq. \eqref{eq:mrr}.</p>
-<p>Owner: NcHaloDensityProfile</p>
-<p>Flags: Read / Write</p>
-<p>Default value: 14.301</p>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="NcHaloDensityProfile--log10MDelta-fit"></a><h3>The <code class="literal">“log10MDelta-fit”</code> property</h3>
-<pre class="programlisting">  “log10MDelta-fit”          <span class="type">gboolean</span></pre>
-<p>Boolean property that controls whether the parameter
-<a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfile--log10MDelta" title="The “log10MDelta” property"><span class="type">“log10MDelta”</span></a> should be included in
-a statistical analysis.</p>
-<p>Owner: NcHaloDensityProfile</p>
-<p>Flags: Read / Write</p>
-<p>Default value: FALSE</p>
-</div>
-<hr/>
-<div class="refsect2">
-<a name="NcHaloDensityProfile--mass-def"></a><h3>The <code class="literal">“mass-def”</code> property</h3>
-<pre class="programlisting">  “mass-def”                 <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfileMassDef" title="enum NcHaloDensityProfileMassDef"><span class="type">NcHaloDensityProfileMassDef</span></a></pre>
-<p>Background density $\rho_\mathrm{bg}$ used in the mass definition \eqref{eq:mrr}.
-See the enumerator <a class="link" href="NcHaloDensityProfile.html#NcHaloDensityProfileMassDef" title="enum NcHaloDensityProfileMassDef"><span class="type">NcHaloDensityProfileMassDef</span></a> for more details about the
-background density definition.</p>
-<p>Owner: NcHaloDensityProfile</p>
-<p>Flags: Read / Write / Construct Only</p>
-<p>Default value: NC_HALO_DENSITY_PROFILE_MASS_DEF_MEAN</p>
 </div>
 <hr/>
 <div class="refsect2">

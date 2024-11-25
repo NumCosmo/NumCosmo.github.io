@@ -208,7 +208,7 @@ messageStyle: "none"
 </div>
 <div class="refsect1">
 <a name="NcmFitESMCMCWalker.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
+<pre class="screen">    <a class="link" href="refs.html#GObject" title="GObject">GObject</a>
     <span class="lineart">╰──</span> NcmFitESMCMCWalker
         <span class="lineart">├──</span> <a class="link" href="NcmFitESMCMCWalkerAPES.html" title="NcmFitESMCMCWalkerAPES">NcmFitESMCMCWalkerAPES</a>
         <span class="lineart">├──</span> <a class="link" href="NcmFitESMCMCWalkerStretch.html" title="NcmFitESMCMCWalkerStretch">NcmFitESMCMCWalkerStretch</a>
@@ -443,8 +443,8 @@ ncm_fit_esmcmc_walker_get_nparams (<em class="parameter"><code><a class="link" h
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_walker_setup (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker"><span class="type">NcmFitESMCMCWalker</span></a> *walker</code></em>,
                              <em class="parameter"><code><a class="link" href="NcmMSet.html" title="NcmMSet"><span class="type">NcmMSet</span></a> *mset</code></em>,
-                             <em class="parameter"><code><span class="type">GPtrArray</span> *theta</code></em>,
-                             <em class="parameter"><code><span class="type">GPtrArray</span> *m2lnL</code></em>,
+                             <em class="parameter"><code><a class="link" href="refs.html#GPtrArray" title="GPtrArray"><span class="type">GPtrArray</span></a> *theta</code></em>,
+                             <em class="parameter"><code><a class="link" href="refs.html#GPtrArray" title="GPtrArray"><span class="type">GPtrArray</span></a> *m2lnL</code></em>,
                              <em class="parameter"><code><span class="type">guint</span> ki</code></em>,
                              <em class="parameter"><code><span class="type">guint</span> kf</code></em>,
                              <em class="parameter"><code><a class="link" href="NcmRNG.html" title="NcmRNG"><span class="type">NcmRNG</span></a> *rng</code></em>);</pre>
@@ -506,8 +506,8 @@ ncm_fit_esmcmc_walker_setup (<em class="parameter"><code><a class="link" href="N
 <a name="ncm-fit-esmcmc-walker-step"></a><h3>ncm_fit_esmcmc_walker_step ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 ncm_fit_esmcmc_walker_step (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker"><span class="type">NcmFitESMCMCWalker</span></a> *walker</code></em>,
-                            <em class="parameter"><code><span class="type">GPtrArray</span> *theta</code></em>,
-                            <em class="parameter"><code><span class="type">GPtrArray</span> *m2lnL</code></em>,
+                            <em class="parameter"><code><a class="link" href="refs.html#GPtrArray" title="GPtrArray"><span class="type">GPtrArray</span></a> *theta</code></em>,
+                            <em class="parameter"><code><a class="link" href="refs.html#GPtrArray" title="GPtrArray"><span class="type">GPtrArray</span></a> *m2lnL</code></em>,
                             <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *thetastar</code></em>,
                             <em class="parameter"><code><span class="type">guint</span> k</code></em>);</pre>
 <p>Move the <em class="parameter"><code>k</code></em>
@@ -557,8 +557,8 @@ ncm_fit_esmcmc_walker_step (<em class="parameter"><code><a class="link" href="Nc
 <a name="ncm-fit-esmcmc-walker-prob"></a><h3>ncm_fit_esmcmc_walker_prob ()</h3>
 <pre class="programlisting"><span class="returnvalue">gdouble</span>
 ncm_fit_esmcmc_walker_prob (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker"><span class="type">NcmFitESMCMCWalker</span></a> *walker</code></em>,
-                            <em class="parameter"><code><span class="type">GPtrArray</span> *theta</code></em>,
-                            <em class="parameter"><code><span class="type">GPtrArray</span> *m2lnL</code></em>,
+                            <em class="parameter"><code><a class="link" href="refs.html#GPtrArray" title="GPtrArray"><span class="type">GPtrArray</span></a> *theta</code></em>,
+                            <em class="parameter"><code><a class="link" href="refs.html#GPtrArray" title="GPtrArray"><span class="type">GPtrArray</span></a> *m2lnL</code></em>,
                             <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *thetastar</code></em>,
                             <em class="parameter"><code><span class="type">guint</span> k</code></em>,
                             <em class="parameter"><code>const <span class="type">gdouble</span> m2lnL_cur</code></em>,
@@ -622,8 +622,8 @@ ncm_fit_esmcmc_walker_prob (<em class="parameter"><code><a class="link" href="Nc
 <a name="ncm-fit-esmcmc-walker-prob-norm"></a><h3>ncm_fit_esmcmc_walker_prob_norm ()</h3>
 <pre class="programlisting"><span class="returnvalue">gdouble</span>
 ncm_fit_esmcmc_walker_prob_norm (<em class="parameter"><code><a class="link" href="NcmFitESMCMCWalker.html" title="NcmFitESMCMCWalker"><span class="type">NcmFitESMCMCWalker</span></a> *walker</code></em>,
-                                 <em class="parameter"><code><span class="type">GPtrArray</span> *theta</code></em>,
-                                 <em class="parameter"><code><span class="type">GPtrArray</span> *m2lnL</code></em>,
+                                 <em class="parameter"><code><a class="link" href="refs.html#GPtrArray" title="GPtrArray"><span class="type">GPtrArray</span></a> *theta</code></em>,
+                                 <em class="parameter"><code><a class="link" href="refs.html#GPtrArray" title="GPtrArray"><span class="type">GPtrArray</span></a> *m2lnL</code></em>,
                                  <em class="parameter"><code><a class="link" href="NcmVector.html" title="NcmVector"><span class="type">NcmVector</span></a> *thetastar</code></em>,
                                  <em class="parameter"><code><span class="type">guint</span> k</code></em>);</pre>
 <p>Calculates the transition probability norm, this method is used in the MPI implementation.</p>
