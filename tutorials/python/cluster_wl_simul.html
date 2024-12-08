@@ -346,7 +346,7 @@ window.Quarto = {
 
 
 <div class="hidden">
-<div id="247a5f89" class="cell" data-execution_count="1">
+<div id="fbd0c897" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> doc_theme():</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> theme_minimal() <span class="op">+</span> theme(</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        panel_grid_minor<span class="op">=</span>element_line(color<span class="op">=</span><span class="st">"gray"</span>, linetype<span class="op">=</span><span class="st">"--"</span>),</span>
@@ -369,7 +369,7 @@ window.Quarto = {
 <li><span class="math inline">\(\Omega_{k0} = 0\)</span>: Curvature density parameter at present</li>
 <li><span class="math inline">\(H_0 = 70.0\)</span>: Hubble constant in km/s/Mpc</li>
 </ul>
-<div id="480ce2c5" class="cell" data-execution_count="2">
+<div id="1d3d43fd" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -420,7 +420,7 @@ window.Quarto = {
 </ul>
 <p>We choose a cluster with a halo mass that is an exceptionally large mass, selected deliberately to make the lensing effect very visible in our simulations.</p>
 <p>The cluster’s right ascension (RA) and declination (Dec) are set to <span class="math inline">\(12.34^\circ\)</span> and <span class="math inline">\(-55.123^\circ\)</span>, respectively.</p>
-<div id="541bb658" class="cell" data-execution_count="3">
+<div id="97f88bf5" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set parameters</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mass_delta <span class="op">=</span> <span class="dv">200</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>cluster_M <span class="op">=</span> <span class="fl">2.0e16</span></span>
@@ -463,7 +463,7 @@ window.Quarto = {
 <li><strong>Ellipticity measurement error</strong>: <span class="math inline">\(1.0 \times 10^{-8}\)</span></li>
 </ul></li>
 </ul>
-<div id="f601b9ca" class="cell" data-execution_count="4">
+<div id="cfaae6e7" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>galaxy_true_z_min <span class="op">=</span> <span class="fl">0.7</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>galaxy_true_z_max <span class="op">=</span> <span class="fl">0.9</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -492,7 +492,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="weak-lensing-model">Weak Lensing Model</h3>
 <p>Finally, we define the likelihood model for the weak lensing analysis.</p>
 <p>The <code>Nc.DataClusterWL</code> object is used to create a new cluster model, specifying the distribution of the source galaxies, the redshift distribution, and the position distribution. We then set the minimum and maximum radii for the weak lensing analysis to focus on the region around the cluster where the lensing effect is most significant and exclude galaxies that are too close to the cluster center.</p>
-<div id="af1b11d9" class="cell" data-execution_count="5">
+<div id="e0f2cfe7" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>min_r, max_r <span class="op">=</span> <span class="fl">0.3</span>, <span class="fl">3.0</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>cluster <span class="op">=</span> Nc.DataClusterWL.new()</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>cluster.set_cut(min_r, max_r)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -502,7 +502,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="model-set">Model-Set</h3>
 <p>We create an <code>Nc.MSet</code> object to encapsulate the models defined above. The <code>MSet</code> object serves as the main container for all models in a given analysis. We add the cosmological model, the cluster profile and position models, the galaxy distribution models, and the weak lensing model to the model set.</p>
 <p>This comprehensive model set allows us to manage and run simulations, ensuring that all components interact correctly to produce the desired weak lensing data.</p>
-<div id="fa92b5aa" class="cell" data-execution_count="6">
+<div id="944ef57a" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mset <span class="op">=</span> Ncm.MSet.new_array(</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    [</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        cosmo,</span>
@@ -590,7 +590,7 @@ window.Quarto = {
 <p>To generate mock weak lensing data, we use the <code>Nc.DataClusterWL</code> object created earlier. We set the number of galaxies to <span class="math inline">\(200\)</span> to focus on a manageable subset of the data for our example.</p>
 <p>To ensure reproducibility, we create a random number generator with the seed <code>1235</code>.</p>
 <p>We specify the coordinate system for the observed galaxy positions as <code>EUCLIDEAN</code>, which corresponds to right ascension and declination in degrees. The mock data, consisting of <span class="math inline">\(200\)</span> galaxies around the cluster, is then generated and stored in the <code>cluster</code> object.</p>
-<div id="fa7d511c" class="cell" data-execution_count="7">
+<div id="e181a486" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="dv">1235</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>n_galaxies <span class="op">=</span> <span class="dv">200</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>sigma_z <span class="op">=</span> <span class="fl">0.03</span></span>
@@ -623,7 +623,7 @@ window.Quarto = {
 <p>The mock data can be retrieved from the <code>cluster</code> object and used for further analysis. You can access the observed galaxy positions, redshifts, and shapes using the appropriate methods provided by the <code>Nc.GalaxyWLObs</code> class.</p>
 <p>These data points will allow you to analyze the weak lensing effects, test models, and explore the properties of the simulated galaxy cluster.</p>
 <p>To facilitate visualization and analysis, we create a DataFrame, <code>obs_df</code>, to store the observed galaxy data. This DataFrame includes the positions, redshifts, and shapes of the galaxies.</p>
-<div id="bcb750d3" class="cell" data-execution_count="8">
+<div id="896a617d" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>obs <span class="op">=</span> cluster.peek_obs()</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>columns <span class="op">=</span> obs.peek_columns()</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -821,7 +821,7 @@ window.Quarto = {
 </div>
 </div>
 <p>However, the DataFrame contains all generated galaxies, including those that are too close to the cluster center and may not be suitable for the analysis. We filter out these galaxies based on their distance from the cluster center to mimic what will be done in a real analysis. We then create a new DataFrame with the filtered data.</p>
-<div id="012bd89f" class="cell" data-execution_count="9">
+<div id="65349740" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>include_galaxies <span class="op">=</span> [</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    halo_position.projected_radius_from_ra_dec(cosmo, gal_ra, gal_dec) <span class="op">&gt;</span> min_r</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> gal_ra, gal_dec <span class="kw">in</span> <span class="bu">zip</span>(obs_df[<span class="st">"ra"</span>], obs_df[<span class="st">"dec"</span>])</span>
@@ -890,7 +890,7 @@ Figure&nbsp;1: Galaxy distribution around the cluster. The blue ellipses represe
 <section id="varying-the-cluster-mass-and-position" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="varying-the-cluster-mass-and-position">Varying the Cluster Mass and Position</h2>
 <p>We define a function to generate the galaxy distribution based on variations in the halo’s position and mass. This allows us to explore how changes in these properties affect the weak lensing signal and the overall galaxy distribution around the cluster.</p>
-<div id="260c307e" class="cell" data-execution_count="11">
+<div id="e63e269f" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gen_galaxies(halo_ra: <span class="bu">float</span>, halo_dec: <span class="bu">float</span>, halo_mass: <span class="bu">float</span>) <span class="op">-&gt;</span> pd.DataFrame:</span>
